@@ -1,0 +1,62 @@
+if [ ! -f /var/system/sysStarted ]; then
+
+BLUEZ_INCLUED=0
+
+mkdir /var/rygel-1.0
+mkdir /var/gstreamer-0.10
+cp -p /usr/Dlna_Rygel/config/rygel.conf /var/rygel-1.0/
+mkdir /var/rygel-1.0/Rygel
+cp -p /usr/Dlna_Rygel/config/Playbin.xml /var/rygel-1.0/Rygel
+
+mkdir /var/vlc_home/config -p
+mkdir /var/vlc_home/data -p
+mkdir /var/python
+mkdir /var/python/alexa
+
+export GST_PLUGIN_PATH=/etc/gstreamer-0.10
+export GST_REGISTRY_UPDATE=no
+export GST_REGISTRY=/var/gstreamer-0.10/gst-registry
+#export GST_REGISTRY=/etc/gstreamer-0.10/gst-registry
+export GST_PLUGIN_SCANNER=/bin/gst-plugin-scanner
+export XDG_CONFIG_HOME=/etc/rygel-1.0
+export XDG_DATA_HOME=/usr/Dlna_Rygel/
+export XDG_DATA_DIRS=/usr/Dlna_Rygel/share
+export XDG_CACHE_HOME=/etc/rygel-1.0/
+#export GST_DEBUG=playbin2:5
+#export G_MESSAGES_DEBUG=all
+export G_MESSAGES_DEBUG=
+
+
+if [ $BLUEZ_INCLUED = 1 ]; then
+export HOME=/var
+export PULSE_CONFIG_PATH=/var/pulse/.pulse
+export PULSE_STATE_PATH=/var/pulse/.pulse
+export PULSE_RUNTIME_PATH=/var/pulse/runtime
+export LD_LIBRARY_PATH=/lib:/etc/pulseaudio:/usr/Dlna_Rygel/lib/rygel-1.0
+mkdir /var/pulse/runtime -p
+fi
+
+/bin/init.sh ap all
+
+# start web server
+#echo "Start BOA"
+#/bin/boa
+
+
+
+
+export PATH=/bin:/usr/local/bin:/usr/bin:$PATH
+export LD_LIBRARY_PATH=/lib:/usr/local/lib:/usr/Dlna_Rygel/lib/rygel-1.0
+
+
+
+cp -p /bin/stop.mp3 -p /var
+cp -p /bin/error.mp3 -p /var
+cp -p /bin/alarm.mp3 -p /var
+ln -s /var/stop.mp3 /var/stopa.mp3
+ln -s /var/error.mp3 /var/errora.mp3
+ln -s /bin/avs_no_conn.mp3 /var/avs_no_conna.mp3
+
+echo done > /var/system/sysStarted
+
+fi

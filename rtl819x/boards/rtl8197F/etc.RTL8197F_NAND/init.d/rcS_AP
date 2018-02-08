@@ -1,0 +1,117 @@
+#!/bin/sh
+
+ifconfig lo 127.0.0.1
+CINIT=1
+hostname qvoice-linux
+
+mount -t proc proc /proc
+mount -t ramfs ramfs /var
+if [ -d "/hw_setting" ];then
+    mount -t yaffs2 -o tags-ecc-off -o inband-tags /dev/mtdblock1 /hw_setting
+fi
+mkdir /var/tmp
+mkdir /var/web
+mkdir /var/log
+mkdir /var/run
+mkdir /var/lock
+mkdir /var/system
+mkdir /var/dnrd
+mkdir /var/lib
+mkdir /var/lib/misc
+mkdir /var/home
+mkdir /var/root
+mkdir /var/tmp/net
+
+#smbd
+###mkdir /var/config
+###mkdir /var/private
+mkdir /var/tmp/usb
+
+cp -p /bin/silence1s.wav -p /var
+
+#cp -p /bin/avs_request.pcm -p /var
+#for console login
+###cp /etc/shadow.sample /var/shadow
+
+#extact web pages
+cd /web
+flash extr /web
+cd /
+ 
+mkdir -p /var/udhcpc
+mkdir -p /var/udhcpd
+cp /bin/init.sh /var/udhcpc/eth0.deconfig
+echo " " > /var/udhcpc/eth0.deconfig
+cp /bin/init.sh /var/udhcpc/eth1.deconfig
+echo " " > /var/udhcpc/eth1.deconfig
+cp /bin/init.sh /var/udhcpc/br0.deconfig
+echo " " > /var/udhcpc/br0.deconfig
+cp /bin/init.sh /var/udhcpc/wlan0.deconfig
+echo " " > /var/udhcpc/wlan0.deconfig
+cp /bin/init.sh /var/udhcpc/br0.bound
+echo " " > /var/udhcpc/br0.bound
+
+if [ "$CINIT" = 1 ]; then
+startup.sh
+fi
+#Jimmy+, for firewall protect
+iptables -F
+iptables -X
+iptables -Z
+iptables -P INPUT DROP
+iptables -A INPUT -i lo -j ACCEPT
+iptables -A INPUT -i br0 -p icmp -j ACCEPT
+iptables -A INPUT -i br0 -p tcp --dport 80 -j ACCEPT
+iptables -A INPUT -i br0 -p udp --dport 80 -j ACCEPT
+iptables -A INPUT -i br0 -p tcp --sport 80 -m state --state RELATED,ESTABLISHED -j ACCEPT
+iptables -A INPUT -i br0 -p udp --sport 80 -m state --state RELATED,ESTABLISHED -j ACCEPT
+iptables -A INPUT -i br0 -p tcp --dport 23 -j ACCEPT
+iptables -A INPUT -i br0 -p udp --dport 23 -j ACCEPT
+iptables -A INPUT -i br0 -p tcp --sport 24:79 -j ACCEPT
+iptables -A INPUT -i br0 -p udp --sport 24:79 -j ACCEPT
+iptables -A INPUT -i br0 -p tcp --sport 81:443 -j ACCEPT
+iptables -A INPUT -i br0 -p udp --sport 81:443 -j ACCEPT
+iptables -A INPUT -i br0 -p tcp --sport 1882 -j ACCEPT
+iptables -A INPUT -i br0 -p udp --sport 1882 -j ACCEPT
+iptables -A INPUT -i br0 -p udp --sport 1900 -j ACCEPT
+iptables -A INPUT -i br0 -p tcp --sport 2005 -j ACCEPT
+iptables -A INPUT -i br0 -p udp --sport 2005 -j ACCEPT
+iptables -A INPUT -i br0 -p tcp --sport 3000 -j ACCEPT
+iptables -A INPUT -i br0 -p udp --sport 3000 -j ACCEPT
+iptables -A INPUT -i br0 -p tcp --sport 58880 -j ACCEPT
+iptables -A INPUT -i br0 -p udp --sport 58888 -j ACCEPT
+# for wapi certs related
+###mkdir /var/myca
+# wapi cert(must done before init.sh)
+###cp -rf /usr/local/ssl/* /var/myca/ 2>/dev/null
+# loadWapiFiles >/dev/null 2>&1
+ 
+# for wireless client mode 802.1x
+###mkdir /var/1x
+###cp -rf /usr/1x/* /var/1x/ 2>/dev/null
+ 
+# Start system script
+#init.sh ap all
+
+# modify IRQ Affinity setting
+#echo "3" > /proc/irq/33/smp_affinity
+# start web server
+ls /bin/watchdog > /dev/null && watchdog 1000&
+webs&
+
+aplay -x 1 -f S16_LE -r 48000 -c 1 -D default /var/silence1s.wav
+
+### for telnetd service 
+mount -t devpts devpts /dev/pts
+cp /etc/passwd /var/passwd 
+cp /etc/group /var/group 
+sleep 1
+telnetd&
+echo "debug!! start telnetd service by  boards/rtl8197F/etc/init.d/rcS_AP"
+syslogd&
+klogd&
+
+# bring up bluetooth interface
+hciattach -n -s 115200 /dev/ttyS1 rtk_h5 115200&
+hciconfig hci0 up
+

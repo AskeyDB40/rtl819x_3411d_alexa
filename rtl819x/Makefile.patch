@@ -1,0 +1,16 @@
+--- Makefile	2018-02-06 23:51:00.549382386 +0800
++++ /home/jimmy/RTK_8197/shs0017w_20180201_3411B/rtl819x/Makefile	2018-02-06 18:05:39.637483000 +0800
+@@ -32,12 +32,8 @@
+ VAR_ARCH:= mips
+ CROSS_TARGET := mips-linux
+ CROSS_COMPILE:= msdk-linux-
+-else
+-VAR_ARCH:= rlx
+-CROSS_TARGET := rsdk-linux
+-CROSS_COMPILE := rsdk-linux-
+-endif
+ export VAR_ARCH CROSS_COMPILE CROSS_TARGET
++endif
+ 
+ ifeq ($(CONFIG_ARCH_CPU_EL),y)
+ VAR_ENDIAN := EL

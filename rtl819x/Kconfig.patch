@@ -1,0 +1,11 @@
+--- Kconfig	2018-02-06 23:58:19.666969912 +0800
++++ /home/jimmy/RTK_8197/shs0017w_20180201_3411B/rtl819x/Kconfig	2018-02-06 18:02:08.213483000 +0800
+@@ -62,6 +62,8 @@
+ 	bool "msdk-4.4.7-mips-EB-3.10-0.9.33-m32t-131227b"
+ config RSDK_msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827
+ 	bool "msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-140827"
++config RSDK_msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-160706
++	bool "msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-160706"
+ config RSDK_rsdk-4.6.4-4181-EB-3.10-u0.9.33-m32-150324
+ 	bool "rsdk-4.6.4-4181-EB-3.10-u0.9.33-m32-150324"
+ config RSDK_rsdk-4.6.4-5281-EB-3.10-0.9.33-m32ub-20141111

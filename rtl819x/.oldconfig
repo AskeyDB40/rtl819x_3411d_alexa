@@ -1,0 +1,6 @@
+OLD_LINUXDIR="linux-3.10"
+OLD_BOARDDIR="boards/rtl8197F"
+OLD_BZBOXDIR="users/busybox-1.13"
+OLD_RSDKDIR="toolchain/msdk-4.4.7-mips-EL-3.10-u0.9.33-m32t-160706"
+OLD_MODEL="RTL8197F_NAND"
+OLD_ROUTER=""
