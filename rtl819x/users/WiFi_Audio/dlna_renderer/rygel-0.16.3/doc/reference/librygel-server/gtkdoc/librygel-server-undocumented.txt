@@ -1,0 +1,79 @@
+77% symbol docs coverage.
+189 symbols documented.
+34 symbols incomplete.
+58 not documented.
+
+
+RYGEL_AUDIO_ITEM_UPNP_CLASS
+RYGEL_IMAGE_ITEM_UPNP_CLASS
+RYGEL_MEDIA_CONTAINER_ALBUM_SORT_CRITERIA
+RYGEL_MEDIA_CONTAINER_MUSIC_ALBUM
+RYGEL_MEDIA_CONTAINER_MUSIC_ARTIST
+RYGEL_MEDIA_CONTAINER_MUSIC_GENRE
+RYGEL_MEDIA_CONTAINER_STORAGE_FOLDER
+RYGEL_MEDIA_CONTAINER_UPNP_CLASS
+RYGEL_MEDIA_OBJECTS_SORT_CAPS
+RYGEL_MUSIC_ITEM_UPNP_CLASS
+RYGEL_PHOTO_ITEM_UPNP_CLASS
+RYGEL_VIDEO_ITEM_UPNP_CLASS
+RygelContentDirectoryError (<items>)
+RygelLogicalOperator (<items>)
+RygelMediaItemClass (add_resource, add_proxy_resources)
+RygelMediaObjectClass (serialize, compare_by_property, get_ocm_flags)
+RygelSearchExpressionClass (finalize)
+RygelSubtitleClass (finalize)
+RygelThumbnailClass (add_resource)
+rygel_audio_item_new (parent, title, id, upnp_class)
+rygel_image_item_new (parent, title, id, upnp_class)
+rygel_logical_expression_new
+rygel_media_art_store_find_media_art (simple, item)
+rygel_media_art_store_find_media_art_any (item)
+rygel_media_art_store_get_default
+rygel_media_art_store_get_media_art_file (simple, item, type)
+rygel_media_item_add_resources (allow_internal, didl_item)
+rygel_media_item_add_uri (uri)
+rygel_media_item_create_stream_source (host_ip)
+rygel_media_item_get_protocol_info (protocol, uri)
+rygel_media_item_is_live_stream
+rygel_media_item_streamable
+rygel_media_object_compare_int_props (prop2, prop1)
+rygel_media_object_compare_string_props (prop2, prop1)
+rygel_media_objects_new
+rygel_media_objects_sort_by_criteria (sort_criteria)
+rygel_media_server_new (title, root_container)
+rygel_music_item_lookup_album_art
+rygel_music_item_new (parent, title, id, upnp_class)
+rygel_photo_item_new (parent, title, id, upnp_class)
+rygel_relational_expression_compare_int (integer)
+rygel_relational_expression_compare_string (str)
+rygel_relational_expression_new
+rygel_search_expression_satisfied_by (media_object)
+rygel_search_expression_to_string
+rygel_searchable_container_search (sort_criteria)
+rygel_searchable_container_search_finish (total_matches)
+rygel_searchable_container_simple_search (sort_criteria)
+rygel_searchable_container_simple_search_finish (total_matches)
+rygel_simple_container_add_child_container (child)
+rygel_simple_container_remove_child (child)
+rygel_subtitle_new (caption_type, mime_type)
+rygel_thumbnail_new (file_extension, dlna_profile, mime_type)
+rygel_video_item_new (parent, title, id, upnp_class)
+
+
+rygel-audio-item:Long_Description
+rygel-content-directory:Long_Description
+rygel-content-directory:Short_Description
+rygel-image-item:Long_Description
+rygel-logical-expression:Long_Description
+rygel-media-art-store:Long_Description
+rygel-media-objects:Long_Description
+rygel-media-server-plugin:Long_Description
+rygel-music-item:Long_Description
+rygel-photo-item:Long_Description
+rygel-relational-expression:Long_Description
+rygel-search-expression:Long_Description
+rygel-simple-container:Long_Description
+rygel-subtitle:Long_Description
+rygel-thumbnail:Long_Description
+rygel-video-item:Long_Description
+rygel-visual-item:Long_Description

@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GUPnPDLNADiscoverer</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GUPnP DLNA Reference Manual">
+<link rel="up" href="ch01.html" title="GUPnP DLNA">
+<link rel="prev" href="ch01.html" title="GUPnP DLNA">
+<link rel="next" href="GUPnPDLNAInformation.html" title="GUPnPDLNAInformation">
+<meta name="generator" content="GTK-Doc V1.17.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ch01.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GUPnP DLNA Reference Manual</th>
+<td><a accesskey="n" href="GUPnPDLNAInformation.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GUPnPDLNADiscoverer.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#GUPnPDLNADiscoverer.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#GUPnPDLNADiscoverer.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#GUPnPDLNADiscoverer.properties" class="shortcut">Properties</a>
+                   | 
+                  <a href="#GUPnPDLNADiscoverer.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="GUPnPDLNADiscoverer"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GUPnPDLNADiscoverer.top_of_page"></a>GUPnPDLNADiscoverer</span></h2>
+<p>GUPnPDLNADiscoverer — Utility API for discovering DLNA profile/mime type and
+other metadata for given media.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="GUPnPDLNADiscoverer.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="GUPnPDLNADiscoverer.html#GUPnPDLNADiscoverer-struct" title="GUPnPDLNADiscoverer">GUPnPDLNADiscoverer</a>;
+<a class="link" href="GUPnPDLNADiscoverer.html" title="GUPnPDLNADiscoverer"><span class="returnvalue">GUPnPDLNADiscoverer</span></a> * <a class="link" href="GUPnPDLNADiscoverer.html#gupnp-dlna-discoverer-new" title="gupnp_dlna_discoverer_new ()">gupnp_dlna_discoverer_new</a>         (<em class="parameter"><code><a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gstreamer/html/GstClock.html#GstClockTime"><span class="type">GstClockTime</span></a> timeout</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> relaxed_mode</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> extended_mode</code></em>);
+#define             <a class="link" href="GUPnPDLNADiscoverer.html#gupnp-dlna-discoverer-start" title="gupnp_dlna_discoverer_start()">gupnp_dlna_discoverer_start</a>         (discoverer)
+#define             <a class="link" href="GUPnPDLNADiscoverer.html#gupnp-dlna-discoverer-stop" title="gupnp_dlna_discoverer_stop()">gupnp_dlna_discoverer_stop</a>          (discoverer)
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="GUPnPDLNADiscoverer.html#gupnp-dlna-discoverer-discover-uri" title="gupnp_dlna_discoverer_discover_uri ()">gupnp_dlna_discoverer_discover_uri</a>  (<em class="parameter"><code><a class="link" href="GUPnPDLNADiscoverer.html" title="GUPnPDLNADiscoverer"><span class="type">GUPnPDLNADiscoverer</span></a> *discoverer</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *uri</code></em>);
+<a class="link" href="GUPnPDLNAInformation.html" title="GUPnPDLNAInformation"><span class="returnvalue">GUPnPDLNAInformation</span></a> * <a class="link" href="GUPnPDLNADiscoverer.html#gupnp-dlna-discoverer-discover-uri-sync" title="gupnp_dlna_discoverer_discover_uri_sync ()">gupnp_dlna_discoverer_discover_uri_sync</a>
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDLNADiscoverer.html" title="GUPnPDLNADiscoverer"><span class="type">GUPnPDLNADiscoverer</span></a> *discoverer</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *uri</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **err</code></em>);
+<a class="link" href="GUPnPDLNAProfile.html" title="GUPnPDLNAProfile"><span class="returnvalue">GUPnPDLNAProfile</span></a> *  <a class="link" href="GUPnPDLNADiscoverer.html#gupnp-dlna-discoverer-get-profile" title="gupnp_dlna_discoverer_get_profile ()">gupnp_dlna_discoverer_get_profile</a>   (<em class="parameter"><code><a class="link" href="GUPnPDLNADiscoverer.html" title="GUPnPDLNADiscoverer"><span class="type">GUPnPDLNADiscoverer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *       <a class="link" href="GUPnPDLNADiscoverer.html#gupnp-dlna-discoverer-list-profiles" title="gupnp_dlna_discoverer_list_profiles ()">gupnp_dlna_discoverer_list_profiles</a> (<em class="parameter"><code><a class="link" href="GUPnPDLNADiscoverer.html" title="GUPnPDLNADiscoverer"><span class="type">GUPnPDLNADiscoverer</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="GUPnPDLNADiscoverer.html#gupnp-dlna-discoverer-get-relaxed-mode" title="gupnp_dlna_discoverer_get_relaxed_mode ()">gupnp_dlna_discoverer_get_relaxed_mode</a>
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDLNADiscoverer.html" title="GUPnPDLNADiscoverer"><span class="type">GUPnPDLNADiscoverer</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="GUPnPDLNADiscoverer.html#gupnp-dlna-discoverer-get-extended-mode" title="gupnp_dlna_discoverer_get_extended_mode ()">gupnp_dlna_discoverer_get_extended_mode</a>
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDLNADiscoverer.html" title="GUPnPDLNADiscoverer"><span class="type">GUPnPDLNADiscoverer</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="GUPnPDLNADiscoverer.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-base-libs/html/gst-plugins-base-libs-gstdiscoverer.html#GstDiscoverer">GstDiscoverer</a>
+         +----GUPnPDLNADiscoverer
+</pre>
+</div>
+<div class="refsect1">
+<a name="GUPnPDLNADiscoverer.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="GUPnPDLNADiscoverer.html#GUPnPDLNADiscoverer--extended-mode" title='The "extended-mode" property'>extended-mode</a>"            <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write / Construct Only
+  "<a class="link" href="GUPnPDLNADiscoverer.html#GUPnPDLNADiscoverer--relaxed-mode" title='The "relaxed-mode" property'>relaxed-mode</a>"             <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write / Construct Only
+</pre>
+</div>
+<div class="refsect1">
+<a name="GUPnPDLNADiscoverer.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="GUPnPDLNADiscoverer.html#GUPnPDLNADiscoverer-done" title='The "done" signal'>done</a>"                                           : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="GUPnPDLNADiscoverer.description"></a><h2>Description</h2>
+<p>
+The GUPnPDLNADiscoverer object provides a light-weight wrapper over the
+<a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-base-libs/html/gst-plugins-base-libs-gstdiscoverer.html#GstDiscoverer"><span class="type">GstDiscoverer</span></a> API. The latter provides a simple interface to discover
+media metadata given a URI. GUPnPDLNADiscoverer extends this API to also
+provide a DLNA profile name and mime type for the media.
+</p>
+<p>
+The API provided corresponds very closely to the API provided by
+<a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-base-libs/html/gst-plugins-base-libs-gstdiscoverer.html#GstDiscoverer"><span class="type">GstDiscoverer</span></a> - both synchronous and asynchronous discovery of metadata
+are possible.
+</p>
+<p>
+The asynchronous mode requires a running <a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GMainLoop"><span class="type">GMainLoop</span></a> in the default
+<a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GMainContext"><span class="type">GMainContext</span></a>, where one connects to the various signals, appends the
+URIs to be processed and then asks for the discovery to begin.
+</p>
+</div>
+<div class="refsect1">
+<a name="GUPnPDLNADiscoverer.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GUPnPDLNADiscoverer-struct"></a><h3>GUPnPDLNADiscoverer</h3>
+<pre class="programlisting">typedef struct _GUPnPDLNADiscoverer GUPnPDLNADiscoverer;</pre>
+<p>
+The top-level object used to for metadata extraction.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-dlna-discoverer-new"></a><h3>gupnp_dlna_discoverer_new ()</h3>
+<pre class="programlisting"><a class="link" href="GUPnPDLNADiscoverer.html" title="GUPnPDLNADiscoverer"><span class="returnvalue">GUPnPDLNADiscoverer</span></a> * gupnp_dlna_discoverer_new         (<em class="parameter"><code><a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gstreamer/html/GstClock.html#GstClockTime"><span class="type">GstClockTime</span></a> timeout</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> relaxed_mode</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> extended_mode</code></em>);</pre>
+<p>
+Creates a new <a class="link" href="GUPnPDLNADiscoverer.html" title="GUPnPDLNADiscoverer"><span class="type">GUPnPDLNADiscoverer</span></a> object with the given default timeout
+value.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>timeout</code></em> :</span></p></td>
+<td>default discovery timeout, in nanoseconds</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>relaxed_mode</code></em> :</span></p></td>
+<td>set to TRUE, to enable relaxed mode support. FALSE otherwise</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>extended_mode</code></em> :</span></p></td>
+<td>set to TRUE, to enable extended mode support. FALSE otherwise</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A new <a class="link" href="GUPnPDLNADiscoverer.html" title="GUPnPDLNADiscoverer"><span class="type">GUPnPDLNADiscoverer</span></a> object.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-dlna-discoverer-start"></a><h3>gupnp_dlna_discoverer_start()</h3>
+<pre class="programlisting">#define             gupnp_dlna_discoverer_start(discoverer)</pre>
+<p>
+Allows asynchronous discovery of URIs to begin.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>discoverer</code></em> :</span></p></td>
+<td>
+<a class="link" href="GUPnPDLNADiscoverer.html" title="GUPnPDLNADiscoverer"><span class="type">GUPnPDLNADiscoverer</span></a> object to start discovery on</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-dlna-discoverer-stop"></a><h3>gupnp_dlna_discoverer_stop()</h3>
+<pre class="programlisting">#define             gupnp_dlna_discoverer_stop(discoverer)</pre>
+<p>
+Stops asynchronous discovery of URIs.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>discoverer</code></em> :</span></p></td>
+<td>
+<a class="link" href="GUPnPDLNADiscoverer.html" title="GUPnPDLNADiscoverer"><span class="type">GUPnPDLNADiscoverer</span></a> object to stop discovery on</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-dlna-discoverer-discover-uri"></a><h3>gupnp_dlna_discoverer_discover_uri ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gupnp_dlna_discoverer_discover_uri  (<em class="parameter"><code><a class="link" href="GUPnPDLNADiscoverer.html" title="GUPnPDLNADiscoverer"><span class="type">GUPnPDLNADiscoverer</span></a> *discoverer</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *uri</code></em>);</pre>
+<p>
+Queues <em class="parameter"><code>uri</code></em> for metadata discovery. When discovery is completed, the
+"discovered" signal is emitted on <em class="parameter"><code>discoverer</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>discoverer</code></em> :</span></p></td>
+<td>
+<a class="link" href="GUPnPDLNADiscoverer.html" title="GUPnPDLNADiscoverer"><span class="type">GUPnPDLNADiscoverer</span></a> object to use for discovery</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uri</code></em> :</span></p></td>
+<td>URI to gather metadata for</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>TRUE if <em class="parameter"><code>uri</code></em> was successfully queued, FALSE otherwise.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-dlna-discoverer-discover-uri-sync"></a><h3>gupnp_dlna_discoverer_discover_uri_sync ()</h3>
+<pre class="programlisting"><a class="link" href="GUPnPDLNAInformation.html" title="GUPnPDLNAInformation"><span class="returnvalue">GUPnPDLNAInformation</span></a> * gupnp_dlna_discoverer_discover_uri_sync
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDLNADiscoverer.html" title="GUPnPDLNADiscoverer"><span class="type">GUPnPDLNADiscoverer</span></a> *discoverer</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *uri</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **err</code></em>);</pre>
+<p>
+Synchronously gathers metadata for <em class="parameter"><code>uri</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>discoverer</code></em> :</span></p></td>
+<td>
+<a class="link" href="GUPnPDLNADiscoverer.html" title="GUPnPDLNADiscoverer"><span class="type">GUPnPDLNADiscoverer</span></a> object to use for discovery</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uri</code></em> :</span></p></td>
+<td>URI to gather metadata for</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>err</code></em> :</span></p></td>
+<td>contains details of the error if discovery fails, else is NULL</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a class="link" href="GUPnPDLNAInformation.html" title="GUPnPDLNAInformation"><span class="type">GUPnPDLNAInformation</span></a> with the metadata for <em class="parameter"><code>uri</code></em>
+on success, NULL otherwise. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-dlna-discoverer-get-profile"></a><h3>gupnp_dlna_discoverer_get_profile ()</h3>
+<pre class="programlisting"><a class="link" href="GUPnPDLNAProfile.html" title="GUPnPDLNAProfile"><span class="returnvalue">GUPnPDLNAProfile</span></a> *  gupnp_dlna_discoverer_get_profile   (<em class="parameter"><code><a class="link" href="GUPnPDLNADiscoverer.html" title="GUPnPDLNADiscoverer"><span class="type">GUPnPDLNADiscoverer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
+<p>
+Given <em class="parameter"><code>name</code></em>, this finds the corresponding DLNA profile information (stored
+as a <a class="link" href="GUPnPDLNAProfile.html" title="GUPnPDLNAProfile"><span class="type">GUPnPDLNAProfile</span></a>).
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GUPnPDLNADiscoverer.html" title="GUPnPDLNADiscoverer"><span class="type">GUPnPDLNADiscoverer</span></a> object</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td>The name of the DLNA profile to be retrieved</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a class="link" href="GUPnPDLNAProfile.html" title="GUPnPDLNAProfile"><span class="type">GUPnPDLNAProfile</span></a> on success, NULL otherwise. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-dlna-discoverer-list-profiles"></a><h3>gupnp_dlna_discoverer_list_profiles ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *       gupnp_dlna_discoverer_list_profiles (<em class="parameter"><code><a class="link" href="GUPnPDLNADiscoverer.html" title="GUPnPDLNADiscoverer"><span class="type">GUPnPDLNADiscoverer</span></a> *self</code></em>);</pre>
+<p>
+Retuns a list of the all the DLNA profiles supported by <em class="parameter"><code>self</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GUPnPDLNADiscoverer.html" title="GUPnPDLNADiscoverer"><span class="type">GUPnPDLNADiscoverer</span></a> whose profile list is required</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> of
+<a class="link" href="GUPnPDLNAProfile.html" title="GUPnPDLNAProfile"><span class="type">GUPnPDLNAProfile</span></a> on success, NULL otherwise. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> GUPnPDLNAProfile*]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-dlna-discoverer-get-relaxed-mode"></a><h3>gupnp_dlna_discoverer_get_relaxed_mode ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gupnp_dlna_discoverer_get_relaxed_mode
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDLNADiscoverer.html" title="GUPnPDLNADiscoverer"><span class="type">GUPnPDLNADiscoverer</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GUPnPDLNADiscoverer.html" title="GUPnPDLNADiscoverer"><span class="type">GUPnPDLNADiscoverer</span></a> object</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>true if relaxed mode is set and false otherwise</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-dlna-discoverer-get-extended-mode"></a><h3>gupnp_dlna_discoverer_get_extended_mode ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gupnp_dlna_discoverer_get_extended_mode
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDLNADiscoverer.html" title="GUPnPDLNADiscoverer"><span class="type">GUPnPDLNADiscoverer</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GUPnPDLNADiscoverer.html" title="GUPnPDLNADiscoverer"><span class="type">GUPnPDLNADiscoverer</span></a> object</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>true if application is using extended mode and false otherwise</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="GUPnPDLNADiscoverer.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="GUPnPDLNADiscoverer--extended-mode"></a><h3>The <code class="literal">"extended-mode"</code> property</h3>
+<pre class="programlisting">  "extended-mode"            <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write / Construct Only</pre>
+<p>Indicates support for profiles that are not part of the DLNA specification.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GUPnPDLNADiscoverer--relaxed-mode"></a><h3>The <code class="literal">"relaxed-mode"</code> property</h3>
+<pre class="programlisting">  "relaxed-mode"             <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write / Construct Only</pre>
+<p>Indicates that profile matching shouldbe strictly compliant with the DLNA specification.</p>
+<p>Default value: FALSE</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GUPnPDLNADiscoverer.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="GUPnPDLNADiscoverer-done"></a><h3>The <code class="literal">"done"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="GUPnPDLNADiscoverer.html" title="GUPnPDLNADiscoverer"><span class="type">GUPnPDLNADiscoverer</span></a>  *discoverer,
+                                                        <a class="link" href="GUPnPDLNAInformation.html" title="GUPnPDLNAInformation"><span class="type">GUPnPDLNAInformation</span></a> *dlna,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>               *err,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>              user_data)       : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a></pre>
+<p>
+Will be emitted when all information on a URI could be discovered.
+</p>
+<p>
+The reciever must unref <em class="parameter"><code>dlna</code></em> with when done using it.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>discoverer</code></em> :</span></p></td>
+<td>the <a class="link" href="GUPnPDLNADiscoverer.html" title="GUPnPDLNADiscoverer"><span class="type">GUPnPDLNADiscoverer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dlna</code></em> :</span></p></td>
+<td>the results as <a class="link" href="GUPnPDLNAInformation.html" title="GUPnPDLNAInformation"><span class="type">GUPnPDLNAInformation</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>err</code></em> :</span></p></td>
+<td>contains details of the error if discovery fails, else is NULL</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17.1</div>
+</body>
+</html>

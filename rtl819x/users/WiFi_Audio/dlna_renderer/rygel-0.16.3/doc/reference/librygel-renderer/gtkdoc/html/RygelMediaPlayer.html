@@ -1,0 +1,727 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>RygelMediaPlayer</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="librygel-renderer Reference Manual">
+<link rel="up" href="ch01.html" title="librygel-renderer API Reference">
+<link rel="prev" href="RygelPlaybinPlugin.html" title="RygelPlaybinPlugin">
+<link rel="next" href="object-tree.html" title="Object Hierarchy">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="RygelPlaybinPlugin.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">librygel-renderer Reference Manual</th>
+<td><a accesskey="n" href="object-tree.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#RygelMediaPlayer.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#RygelMediaPlayer.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#RygelMediaPlayer.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#RygelMediaPlayer.prerequisites" class="shortcut">Prerequisites</a>
+                   | 
+                  <a href="#RygelMediaPlayer.implementations" class="shortcut">Known Implementations</a>
+                   | 
+                  <a href="#RygelMediaPlayer.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="RygelMediaPlayer"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="RygelMediaPlayer.top_of_page"></a>RygelMediaPlayer</span></h2>
+<p>RygelMediaPlayer — Interface for mapping AVTransport:2 methods to the specific implementation.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="RygelMediaPlayer.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="RygelMediaPlayer.html#rygel-media-player-seek" title="rygel_media_player_seek ()">rygel_media_player_seek</a>             (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gstreamer-0.10/GstClock.html#GstClockTime"><span class="type">GstClockTime</span></a> time</code></em>);
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **            <a class="link" href="RygelMediaPlayer.html#rygel-media-player-get-protocols" title="rygel_media_player_get_protocols ()">rygel_media_player_get_protocols</a>    (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> *result_length1</code></em>);
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **            <a class="link" href="RygelMediaPlayer.html#rygel-media-player-get-mime-types" title="rygel_media_player_get_mime_types ()">rygel_media_player_get_mime_types</a>   (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> *result_length1</code></em>);
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="RygelMediaPlayer.html#rygel-media-player-get-playback-state" title="rygel_media_player_get_playback_state ()">rygel_media_player_get_playback_state</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="RygelMediaPlayer.html#rygel-media-player-set-playback-state" title="rygel_media_player_set_playback_state ()">rygel_media_player_set_playback_state</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="RygelMediaPlayer.html#rygel-media-player-get-uri" title="rygel_media_player_get_uri ()">rygel_media_player_get_uri</a>          (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="RygelMediaPlayer.html#rygel-media-player-set-uri" title="rygel_media_player_set_uri ()">rygel_media_player_set_uri</a>          (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             <a class="link" href="RygelMediaPlayer.html#rygel-media-player-get-volume" title="rygel_media_player_get_volume ()">rygel_media_player_get_volume</a>       (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="RygelMediaPlayer.html#rygel-media-player-set-volume" title="rygel_media_player_set_volume ()">rygel_media_player_set_volume</a>       (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> value</code></em>);
+<span class="returnvalue">gint64</span>              <a class="link" href="RygelMediaPlayer.html#rygel-media-player-get-duration" title="rygel_media_player_get_duration ()">rygel_media_player_get_duration</a>     (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>);
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="RygelMediaPlayer.html#rygel-media-player-get-metadata" title="rygel_media_player_get_metadata ()">rygel_media_player_get_metadata</a>     (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="RygelMediaPlayer.html#rygel-media-player-set-metadata" title="rygel_media_player_set_metadata ()">rygel_media_player_set_metadata</a>     (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="RygelMediaPlayer.html#rygel-media-player-get-mime-type" title="rygel_media_player_get_mime_type ()">rygel_media_player_get_mime_type</a>    (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="RygelMediaPlayer.html#rygel-media-player-set-mime-type" title="rygel_media_player_set_mime_type ()">rygel_media_player_set_mime_type</a>    (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="RygelMediaPlayer.html#rygel-media-player-get-content-features" title="rygel_media_player_get_content_features ()">rygel_media_player_get_content_features</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="RygelMediaPlayer.html#rygel-media-player-set-content-features" title="rygel_media_player_set_content_features ()">rygel_media_player_set_content_features</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="RygelMediaPlayer.html#rygel-media-player-get-duration-as-str" title="rygel_media_player_get_duration_as_str ()">rygel_media_player_get_duration_as_str</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>);
+<span class="returnvalue">gint64</span>              <a class="link" href="RygelMediaPlayer.html#rygel-media-player-get-position" title="rygel_media_player_get_position ()">rygel_media_player_get_position</a>     (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>);
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="RygelMediaPlayer.html#rygel-media-player-get-position-as-str" title="rygel_media_player_get_position_as_str ()">rygel_media_player_get_position_as_str</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>);
+                    <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer-struct" title="RygelMediaPlayer">RygelMediaPlayer</a>;
+struct              <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayerIface" title="struct RygelMediaPlayerIface">RygelMediaPlayerIface</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelMediaPlayer.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GInterface
+   +----RygelMediaPlayer
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelMediaPlayer.prerequisites"></a><h2>Prerequisites</h2>
+<p>
+RygelMediaPlayer requires
+ <a href="../gobject/gobject-The-Base-Object-Type.html#GObject">GObject</a>.</p>
+</div>
+<div class="refsect1">
+<a name="RygelMediaPlayer.implementations"></a><h2>Known Implementations</h2>
+<p>
+RygelMediaPlayer is implemented by
+ <a class="link" href="RygelPlaybinPlayer.html" title="RygelPlaybinPlayer">RygelPlaybinPlayer</a>.</p>
+</div>
+<div class="refsect1">
+<a name="RygelMediaPlayer.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--content-features" title='The "content-features" property'>content-features</a>"         <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--duration" title='The "duration" property'>duration</a>"                 <span class="type">gint64</span>                : Read
+  "<a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--metadata" title='The "metadata" property'>metadata</a>"                 <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--mime-type" title='The "mime-type" property'>mime-type</a>"                <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--playback-state" title='The "playback-state" property'>playback-state</a>"           <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--position" title='The "position" property'>position</a>"                 <span class="type">gint64</span>                : Read
+  "<a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--uri" title='The "uri" property'>uri</a>"                      <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+  "<a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--volume" title='The "volume" property'>volume</a>"                   <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>               : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelMediaPlayer.description"></a><h2>Description</h2>
+<p>
+</p>
+<p>This class is useful only when implementing Rygel plugins.</p>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="RygelMediaPlayer.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="rygel-media-player-seek"></a><h3>rygel_media_player_seek ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            rygel_media_player_seek             (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gstreamer-0.10/GstClock.html#GstClockTime"><span class="type">GstClockTime</span></a> time</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> instance</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-media-player-get-protocols"></a><h3>rygel_media_player_get_protocols ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **            rygel_media_player_get_protocols    (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> *result_length1</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=result_length1]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-media-player-get-mime-types"></a><h3>rygel_media_player_get_mime_types ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **            rygel_media_player_get_mime_types   (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> *result_length1</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>. <span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=result_length1]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-media-player-get-playback-state"></a><h3>rygel_media_player_get_playback_state ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             rygel_media_player_get_playback_state
+                                                        (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>);</pre>
+<p>
+Get and return the current value of the <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--playback-state" title='The "playback-state" property'><span class="type">"playback-state"</span></a> property.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> instance to query</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the value of the <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--playback-state" title='The "playback-state" property'><span class="type">"playback-state"</span></a> property</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-media-player-set-playback-state"></a><h3>rygel_media_player_set_playback_state ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                rygel_media_player_set_playback_state
+                                                        (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<p>
+Set the value of the <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--playback-state" title='The "playback-state" property'><span class="type">"playback-state"</span></a> property to <em class="parameter"><code>value</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> instance to modify</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>the new value of the <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--playback-state" title='The "playback-state" property'><span class="type">"playback-state"</span></a> property</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-media-player-get-uri"></a><h3>rygel_media_player_get_uri ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             rygel_media_player_get_uri          (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>);</pre>
+<p>
+Get and return the current value of the <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--uri" title='The "uri" property'><span class="type">"uri"</span></a> property.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> instance to query</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the value of the <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--uri" title='The "uri" property'><span class="type">"uri"</span></a> property</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-media-player-set-uri"></a><h3>rygel_media_player_set_uri ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                rygel_media_player_set_uri          (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<p>
+Set the value of the <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--uri" title='The "uri" property'><span class="type">"uri"</span></a> property to <em class="parameter"><code>value</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> instance to modify</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>the new value of the <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--uri" title='The "uri" property'><span class="type">"uri"</span></a> property</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-media-player-get-volume"></a><h3>rygel_media_player_get_volume ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             rygel_media_player_get_volume       (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>);</pre>
+<p>
+Get and return the current value of the <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--volume" title='The "volume" property'><span class="type">"volume"</span></a> property.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> instance to query</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the value of the <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--volume" title='The "volume" property'><span class="type">"volume"</span></a> property</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-media-player-set-volume"></a><h3>rygel_media_player_set_volume ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                rygel_media_player_set_volume       (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> value</code></em>);</pre>
+<p>
+Set the value of the <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--volume" title='The "volume" property'><span class="type">"volume"</span></a> property to <em class="parameter"><code>value</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> instance to modify</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>the new value of the <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--volume" title='The "volume" property'><span class="type">"volume"</span></a> property</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-media-player-get-duration"></a><h3>rygel_media_player_get_duration ()</h3>
+<pre class="programlisting"><span class="returnvalue">gint64</span>              rygel_media_player_get_duration     (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>);</pre>
+<p>
+Get and return the current value of the <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--duration" title='The "duration" property'><span class="type">"duration"</span></a> property.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> instance to query</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the value of the <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--duration" title='The "duration" property'><span class="type">"duration"</span></a> property</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-media-player-get-metadata"></a><h3>rygel_media_player_get_metadata ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             rygel_media_player_get_metadata     (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>);</pre>
+<p>
+Get and return the current value of the <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--metadata" title='The "metadata" property'><span class="type">"metadata"</span></a> property.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> instance to query</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the value of the <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--metadata" title='The "metadata" property'><span class="type">"metadata"</span></a> property</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-media-player-set-metadata"></a><h3>rygel_media_player_set_metadata ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                rygel_media_player_set_metadata     (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<p>
+Set the value of the <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--metadata" title='The "metadata" property'><span class="type">"metadata"</span></a> property to <em class="parameter"><code>value</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> instance to modify</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>the new value of the <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--metadata" title='The "metadata" property'><span class="type">"metadata"</span></a> property</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-media-player-get-mime-type"></a><h3>rygel_media_player_get_mime_type ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             rygel_media_player_get_mime_type    (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>);</pre>
+<p>
+Get and return the current value of the <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--mime-type" title='The "mime-type" property'><span class="type">"mime-type"</span></a> property.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> instance to query</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the value of the <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--mime-type" title='The "mime-type" property'><span class="type">"mime-type"</span></a> property</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-media-player-set-mime-type"></a><h3>rygel_media_player_set_mime_type ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                rygel_media_player_set_mime_type    (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<p>
+Set the value of the <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--mime-type" title='The "mime-type" property'><span class="type">"mime-type"</span></a> property to <em class="parameter"><code>value</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> instance to modify</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>the new value of the <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--mime-type" title='The "mime-type" property'><span class="type">"mime-type"</span></a> property</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-media-player-get-content-features"></a><h3>rygel_media_player_get_content_features ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             rygel_media_player_get_content_features
+                                                        (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>);</pre>
+<p>
+Get and return the current value of the <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--content-features" title='The "content-features" property'><span class="type">"content-features"</span></a> property.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> instance to query</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the value of the <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--content-features" title='The "content-features" property'><span class="type">"content-features"</span></a> property</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-media-player-set-content-features"></a><h3>rygel_media_player_set_content_features ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                rygel_media_player_set_content_features
+                                                        (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<p>
+Set the value of the <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--content-features" title='The "content-features" property'><span class="type">"content-features"</span></a> property to <em class="parameter"><code>value</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> instance to modify</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>the new value of the <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--content-features" title='The "content-features" property'><span class="type">"content-features"</span></a> property</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-media-player-get-duration-as-str"></a><h3>rygel_media_player_get_duration_as_str ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             rygel_media_player_get_duration_as_str
+                                                        (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>);</pre>
+<p>
+Get and return the current value of the <span class="type">"duration-as-str"</span> property.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> instance to query</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the value of the <span class="type">"duration-as-str"</span> property</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-media-player-get-position"></a><h3>rygel_media_player_get_position ()</h3>
+<pre class="programlisting"><span class="returnvalue">gint64</span>              rygel_media_player_get_position     (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>);</pre>
+<p>
+Get and return the current value of the <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--position" title='The "position" property'><span class="type">"position"</span></a> property.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> instance to query</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the value of the <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--position" title='The "position" property'><span class="type">"position"</span></a> property</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-media-player-get-position-as-str"></a><h3>rygel_media_player_get_position_as_str ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             rygel_media_player_get_position_as_str
+                                                        (<em class="parameter"><code><a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> *self</code></em>);</pre>
+<p>
+Get and return the current value of the <span class="type">"position-as-str"</span> property.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> instance to query</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the value of the <span class="type">"position-as-str"</span> property</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelMediaPlayer-struct"></a><h3>RygelMediaPlayer</h3>
+<pre class="programlisting">typedef struct _RygelMediaPlayer RygelMediaPlayer;</pre>
+<p>
+Interface for mapping AVTransport:2 methods to the specific implementation.
+</p>
+<p>
+</p>
+<p>This class is useful only when implementing Rygel plugins.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelMediaPlayerIface"></a><h3>struct RygelMediaPlayerIface</h3>
+<pre class="programlisting">struct RygelMediaPlayerIface {
+	GTypeInterface parent_iface;
+	gboolean (*seek) (RygelMediaPlayer* self, GstClockTime time);
+	gchar** (*get_protocols) (RygelMediaPlayer* self, int* result_length1);
+	gchar** (*get_mime_types) (RygelMediaPlayer* self, int* result_length1);
+	gchar* (*get_playback_state) (RygelMediaPlayer* self);
+	void (*set_playback_state) (RygelMediaPlayer* self, const gchar* value);
+	gchar* (*get_uri) (RygelMediaPlayer* self);
+	void (*set_uri) (RygelMediaPlayer* self, const gchar* value);
+	gdouble (*get_volume) (RygelMediaPlayer* self);
+	void (*set_volume) (RygelMediaPlayer* self, gdouble value);
+	gint64 (*get_duration) (RygelMediaPlayer* self);
+	gchar* (*get_metadata) (RygelMediaPlayer* self);
+	void (*set_metadata) (RygelMediaPlayer* self, const gchar* value);
+	gchar* (*get_mime_type) (RygelMediaPlayer* self);
+	void (*set_mime_type) (RygelMediaPlayer* self, const gchar* value);
+	gchar* (*get_content_features) (RygelMediaPlayer* self);
+	void (*set_content_features) (RygelMediaPlayer* self, const gchar* value);
+	gint64 (*get_position) (RygelMediaPlayer* self);
+};
+</pre>
+<p>
+Interface for creating <a class="link" href="RygelMediaPlayer.html" title="RygelMediaPlayer"><span class="type">RygelMediaPlayer</span></a> implementations.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><a href="../gobject/gobject-Type-Information.html#GTypeInterface"><span class="type">GTypeInterface</span></a> <em class="structfield"><code><a name="RygelMediaPlayerIface.parent-iface"></a>parent_iface</code></em>;</span></p></td>
+<td>the parent interface structure</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelMediaPlayerIface.seek"></a>seek</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="RygelMediaPlayer.html#rygel-media-player-seek" title="rygel_media_player_seek ()"><code class="function"><a class="link" href="RygelMediaPlayer.html#rygel-media-player-seek" title="rygel_media_player_seek ()"><code class="function">rygel_media_player_seek()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelMediaPlayerIface.get-protocols"></a>get_protocols</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="RygelMediaPlayer.html#rygel-media-player-get-protocols" title="rygel_media_player_get_protocols ()"><code class="function"><a class="link" href="RygelMediaPlayer.html#rygel-media-player-get-protocols" title="rygel_media_player_get_protocols ()"><code class="function">rygel_media_player_get_protocols()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelMediaPlayerIface.get-mime-types"></a>get_mime_types</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="RygelMediaPlayer.html#rygel-media-player-get-mime-types" title="rygel_media_player_get_mime_types ()"><code class="function"><a class="link" href="RygelMediaPlayer.html#rygel-media-player-get-mime-types" title="rygel_media_player_get_mime_types ()"><code class="function">rygel_media_player_get_mime_types()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelMediaPlayerIface.get-playback-state"></a>get_playback_state</code></em> ()</span></p></td>
+<td>getter method for the abstract property <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--playback-state" title='The "playback-state" property'><span class="type">"playback-state"</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelMediaPlayerIface.set-playback-state"></a>set_playback_state</code></em> ()</span></p></td>
+<td>setter method for the abstract property <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--playback-state" title='The "playback-state" property'><span class="type">"playback-state"</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelMediaPlayerIface.get-uri"></a>get_uri</code></em> ()</span></p></td>
+<td>getter method for the abstract property <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--uri" title='The "uri" property'><span class="type">"uri"</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelMediaPlayerIface.set-uri"></a>set_uri</code></em> ()</span></p></td>
+<td>setter method for the abstract property <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--uri" title='The "uri" property'><span class="type">"uri"</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelMediaPlayerIface.get-volume"></a>get_volume</code></em> ()</span></p></td>
+<td>getter method for the abstract property <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--volume" title='The "volume" property'><span class="type">"volume"</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelMediaPlayerIface.set-volume"></a>set_volume</code></em> ()</span></p></td>
+<td>setter method for the abstract property <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--volume" title='The "volume" property'><span class="type">"volume"</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelMediaPlayerIface.get-duration"></a>get_duration</code></em> ()</span></p></td>
+<td>getter method for the abstract property <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--duration" title='The "duration" property'><span class="type">"duration"</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelMediaPlayerIface.get-metadata"></a>get_metadata</code></em> ()</span></p></td>
+<td>getter method for the abstract property <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--metadata" title='The "metadata" property'><span class="type">"metadata"</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelMediaPlayerIface.set-metadata"></a>set_metadata</code></em> ()</span></p></td>
+<td>setter method for the abstract property <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--metadata" title='The "metadata" property'><span class="type">"metadata"</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelMediaPlayerIface.get-mime-type"></a>get_mime_type</code></em> ()</span></p></td>
+<td>getter method for the abstract property <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--mime-type" title='The "mime-type" property'><span class="type">"mime-type"</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelMediaPlayerIface.set-mime-type"></a>set_mime_type</code></em> ()</span></p></td>
+<td>setter method for the abstract property <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--mime-type" title='The "mime-type" property'><span class="type">"mime-type"</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelMediaPlayerIface.get-content-features"></a>get_content_features</code></em> ()</span></p></td>
+<td>getter method for the abstract property <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--content-features" title='The "content-features" property'><span class="type">"content-features"</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelMediaPlayerIface.set-content-features"></a>set_content_features</code></em> ()</span></p></td>
+<td>setter method for the abstract property <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--content-features" title='The "content-features" property'><span class="type">"content-features"</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelMediaPlayerIface.get-position"></a>get_position</code></em> ()</span></p></td>
+<td>getter method for the abstract property <a class="link" href="RygelMediaPlayer.html#RygelMediaPlayer--position" title='The "position" property'><span class="type">"position"</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="RygelMediaPlayer.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="RygelMediaPlayer--content-features"></a><h3>The <code class="literal">"content-features"</code> property</h3>
+<pre class="programlisting">  "content-features"         <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>content-features.</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelMediaPlayer--duration"></a><h3>The <code class="literal">"duration"</code> property</h3>
+<pre class="programlisting">  "duration"                 <span class="type">gint64</span>                : Read</pre>
+<p>duration.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelMediaPlayer--metadata"></a><h3>The <code class="literal">"metadata"</code> property</h3>
+<pre class="programlisting">  "metadata"                 <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>metadata.</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelMediaPlayer--mime-type"></a><h3>The <code class="literal">"mime-type"</code> property</h3>
+<pre class="programlisting">  "mime-type"                <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>mime-type.</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelMediaPlayer--playback-state"></a><h3>The <code class="literal">"playback-state"</code> property</h3>
+<pre class="programlisting">  "playback-state"           <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>playback-state.</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelMediaPlayer--position"></a><h3>The <code class="literal">"position"</code> property</h3>
+<pre class="programlisting">  "position"                 <span class="type">gint64</span>                : Read</pre>
+<p>position.</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelMediaPlayer--uri"></a><h3>The <code class="literal">"uri"</code> property</h3>
+<pre class="programlisting">  "uri"                      <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>uri.</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelMediaPlayer--volume"></a><h3>The <code class="literal">"volume"</code> property</h3>
+<pre class="programlisting">  "volume"                   <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a>               : Read / Write</pre>
+<p>volume.</p>
+<p>Default value: 0</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>RygelPlaybinPlugin</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="librygel-renderer Reference Manual">
+<link rel="up" href="ch01.html" title="librygel-renderer API Reference">
+<link rel="prev" href="RygelPlaybinRenderer.html" title="RygelPlaybinRenderer">
+<link rel="next" href="RygelMediaPlayer.html" title="RygelMediaPlayer">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="RygelPlaybinRenderer.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">librygel-renderer Reference Manual</th>
+<td><a accesskey="n" href="RygelMediaPlayer.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#RygelPlaybinPlugin.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#RygelPlaybinPlugin.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#RygelPlaybinPlugin.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="RygelPlaybinPlugin"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="RygelPlaybinPlugin.top_of_page"></a>RygelPlaybinPlugin</span></h2>
+<p>RygelPlaybinPlugin — Implementation of RygelMediaRendererPlugin for GStreamer.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="RygelPlaybinPlugin.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">#define             <a class="link" href="RygelPlaybinPlugin.html#RYGEL-PLAYBIN-TYPE-PLUGIN:CAPS" title="RYGEL_PLAYBIN_TYPE_PLUGIN">RYGEL_PLAYBIN_TYPE_PLUGIN</a>
+#define             <a class="link" href="RygelPlaybinPlugin.html#RYGEL-PLAYBIN-PLUGIN-NAME:CAPS" title="RYGEL_PLAYBIN_PLUGIN_NAME">RYGEL_PLAYBIN_PLUGIN_NAME</a>
+<a class="link" href="RygelPlaybinPlugin.html" title="RygelPlaybinPlugin"><span class="returnvalue">RygelPlaybinPlugin</span></a> * <a class="link" href="RygelPlaybinPlugin.html#rygel-playbin-plugin-new" title="rygel_playbin_plugin_new ()">rygel_playbin_plugin_new</a>           (<em class="parameter"><code><span class="type">void</span></code></em>);
+struct              <a class="link" href="RygelPlaybinPlugin.html#RygelPlaybinPlugin-struct" title="struct RygelPlaybinPlugin">RygelPlaybinPlugin</a>;
+struct              <a class="link" href="RygelPlaybinPlugin.html#RygelPlaybinPluginClass" title="struct RygelPlaybinPluginClass">RygelPlaybinPluginClass</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelPlaybinPlugin.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="../gobject/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a href="../gupnp/GUPnPResourceFactory.html">GUPnPResourceFactory</a>
+         +----RygelPlugin
+               +----<a class="link" href="RygelMediaRendererPlugin.html" title="RygelMediaRendererPlugin">RygelMediaRendererPlugin</a>
+                     +----RygelPlaybinPlugin
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelPlaybinPlugin.description"></a><h2>Description</h2>
+<p>
+</p>
+<p>This class is useful only when implementing Rygel plugins.</p>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="RygelPlaybinPlugin.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="RYGEL-PLAYBIN-TYPE-PLUGIN:CAPS"></a><h3>RYGEL_PLAYBIN_TYPE_PLUGIN</h3>
+<pre class="programlisting">#define RYGEL_PLAYBIN_TYPE_PLUGIN (rygel_playbin_plugin_get_type ())
+</pre>
+<p>
+The type for <a class="link" href="RygelPlaybinPlugin.html" title="RygelPlaybinPlugin"><span class="type">RygelPlaybinPlugin</span></a>.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RYGEL-PLAYBIN-PLUGIN-NAME:CAPS"></a><h3>RYGEL_PLAYBIN_PLUGIN_NAME</h3>
+<pre class="programlisting">#define RYGEL_PLAYBIN_PLUGIN_NAME "Playbin"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-playbin-plugin-new"></a><h3>rygel_playbin_plugin_new ()</h3>
+<pre class="programlisting"><a class="link" href="RygelPlaybinPlugin.html" title="RygelPlaybinPlugin"><span class="returnvalue">RygelPlaybinPlugin</span></a> * rygel_playbin_plugin_new           (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelPlaybinPlugin-struct"></a><h3>struct RygelPlaybinPlugin</h3>
+<pre class="programlisting">struct RygelPlaybinPlugin;</pre>
+<p>
+Implementation of RygelMediaRendererPlugin for GStreamer.
+</p>
+<p>
+</p>
+<p>This class is useful only when implementing Rygel plugins.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelPlaybinPluginClass"></a><h3>struct RygelPlaybinPluginClass</h3>
+<pre class="programlisting">struct RygelPlaybinPluginClass {
+	RygelMediaRendererPluginClass parent_class;
+};
+</pre>
+<p>
+The class structure for <a class="link" href="RygelPlaybinPlugin.html#RYGEL-PLAYBIN-TYPE-PLUGIN:CAPS" title="RYGEL_PLAYBIN_TYPE_PLUGIN"><code class="literal">RYGEL_PLAYBIN_TYPE_PLUGIN</code></a>. All the fields in this structure are private and should never be accessed directly.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><a class="link" href="RygelMediaRendererPlugin.html#RygelMediaRendererPluginClass" title="struct RygelMediaRendererPluginClass"><span class="type">RygelMediaRendererPluginClass</span></a> <em class="structfield"><code><a name="RygelPlaybinPluginClass.parent-class"></a>parent_class</code></em>;</span></p></td>
+<td>the parent class structure</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

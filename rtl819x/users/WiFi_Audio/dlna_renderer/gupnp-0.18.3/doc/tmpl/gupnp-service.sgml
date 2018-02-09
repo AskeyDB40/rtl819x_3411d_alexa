@@ -1,0 +1,261 @@
+<!-- ##### SECTION Title ##### -->
+GUPnPService
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT GUPnPService ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL GUPnPService::action-invoked ##### -->
+<para>
+
+</para>
+
+@gupnpservice: the object which received the signal.
+@arg1: 
+
+<!-- ##### SIGNAL GUPnPService::notify-failed ##### -->
+<para>
+
+</para>
+
+@gupnpservice: the object which received the signal.
+@arg1: 
+@arg2: 
+
+<!-- ##### SIGNAL GUPnPService::query-variable ##### -->
+<para>
+
+</para>
+
+@gupnpservice: the object which received the signal.
+@arg1: 
+@arg2: 
+
+<!-- ##### ARG GUPnPService:root-device ##### -->
+<para>
+
+</para>
+
+<!-- ##### STRUCT GUPnPServiceAction ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION gupnp_service_action_get_name ##### -->
+<para>
+
+</para>
+
+@action: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_action_get_locales ##### -->
+<para>
+
+</para>
+
+@action: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_action_get ##### -->
+<para>
+
+</para>
+
+@action: 
+@...: 
+
+
+<!-- ##### FUNCTION gupnp_service_action_get_valist ##### -->
+<para>
+
+</para>
+
+@action: 
+@var_args: 
+
+
+<!-- ##### FUNCTION gupnp_service_action_get_value ##### -->
+<para>
+
+</para>
+
+@action: 
+@argument: 
+@value: 
+
+
+<!-- ##### FUNCTION gupnp_service_action_get_gvalue ##### -->
+<para>
+
+</para>
+
+@action: 
+@argument: 
+@type: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_action_get_values ##### -->
+<para>
+
+</para>
+
+@action: 
+@arg_names: 
+@arg_types: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_action_set ##### -->
+<para>
+
+</para>
+
+@action: 
+@...: 
+
+
+<!-- ##### FUNCTION gupnp_service_action_set_valist ##### -->
+<para>
+
+</para>
+
+@action: 
+@var_args: 
+
+
+<!-- ##### FUNCTION gupnp_service_action_set_value ##### -->
+<para>
+
+</para>
+
+@action: 
+@argument: 
+@value: 
+
+
+<!-- ##### FUNCTION gupnp_service_action_set_values ##### -->
+<para>
+
+</para>
+
+@action: 
+@arg_names: 
+@arg_values: 
+
+
+<!-- ##### FUNCTION gupnp_service_action_return ##### -->
+<para>
+
+</para>
+
+@action: 
+
+
+<!-- ##### FUNCTION gupnp_service_action_return_error ##### -->
+<para>
+
+</para>
+
+@action: 
+@error_code: 
+@error_description: 
+
+
+<!-- ##### FUNCTION gupnp_service_action_get_message ##### -->
+<para>
+
+</para>
+
+@action: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_action_get_argument_count ##### -->
+<para>
+
+</para>
+
+@action: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_notify ##### -->
+<para>
+
+</para>
+
+@service: 
+@...: 
+
+
+<!-- ##### FUNCTION gupnp_service_notify_valist ##### -->
+<para>
+
+</para>
+
+@service: 
+@var_args: 
+
+
+<!-- ##### FUNCTION gupnp_service_notify_value ##### -->
+<para>
+
+</para>
+
+@service: 
+@variable: 
+@value: 
+
+
+<!-- ##### FUNCTION gupnp_service_freeze_notify ##### -->
+<para>
+
+</para>
+
+@service: 
+
+
+<!-- ##### FUNCTION gupnp_service_thaw_notify ##### -->
+<para>
+
+</para>
+
+@service: 
+
+
+<!-- ##### FUNCTION gupnp_service_signals_autoconnect ##### -->
+<para>
+
+</para>
+
+@service: 
+@user_data: 
+@error: 
+
+

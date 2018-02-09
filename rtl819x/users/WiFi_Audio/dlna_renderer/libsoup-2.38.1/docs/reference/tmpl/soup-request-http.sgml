@@ -1,0 +1,39 @@
+<!-- ##### SECTION Title ##### -->
+SoupRequestHTTP
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT SoupRequestHTTP ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION soup_request_http_get_message ##### -->
+<para>
+
+</para>
+
+@http: 
+@Returns: 
+
+

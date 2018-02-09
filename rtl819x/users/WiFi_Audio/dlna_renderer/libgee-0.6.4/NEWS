@@ -1,0 +1,151 @@
+libgee 0.6.4
+============
+
+ * Fix compilation with vala master
+ * Fix creation of GObject introspection files
+
+libgee 0.6.3
+============
+
+ * Fix buffer underflow.
+
+libgee 0.6.2.1
+==============
+
+ * Add check-news to AM_INIT_AUTOMAKE
+
+libgee 0.6.2
+============
+
+ * Fix adding second element to priority queue.
+ * Fix problem with key used in range is freed.
+
+libgee 0.6.1
+============
+
+ * Fix memory leaks in LinkedList.
+
+libgee 0.6.0
+============
+
+ * Fix compiler warning.
+
+libgee 0.5.3
+============
+
+ * Fix memory leaks in TimSort and LinkedList.
+ * Bug fixes in TreeMap and TreeSet.
+
+libgee 0.5.2
+============
+
+ * Build system enhancements to conform Gnome's style.
+ * Bug fixes in TreeSet, TreeMap and Collection.to_array.
+ * Deprecated Map methods marked with [Deprecated].
+
+libgee 0.5.1
+============
+
+ * Bug fixes in HashMultiSet, TimSort, TreeMap, TreeMultiSet, and TreeSet.
+ * Fix build with Vala 0.8.0 and later.
+ * Fix build on Windows.
+ * Fix subprocess handling in test infrastructure.
+
+libgee 0.5.0
+============
+
+ * API changes
+   * Introduce Functions hash, equal and compare function factory
+   * Introduce Comparable<G> interface
+   * Implementations provides sane defaults when constructed without functions
+   * ReadOnly* made internal in favor of a `read_only_view` properties
+   * Iterator<G> is now mutable and resettable
+   * Introduction of BidirIterator<G> bidirectional iterators
+   * List<G>.list_iterator () returns a specialized ListIterator<G>
+   * Various API contracts clarifications and enhancements
+   * Introduce List<G>.sort () with TimSort implementation
+   * Complete Map API rework
+   * Introduce Queue and Deque interfaces
+   * Introduce MultiSet and MultiMap interfaces (Ali Sabil)
+   * Introduce SortedSet interface (Maciej Pietchotka)
+
+ * New implementations
+   * HashMultiSet and HashMultiMap (Ali Sabil)
+   * TreeMultiSet and TreeMultiMap.
+   * PriorityQueue
+   * LinkedList now implements Deque
+   * TreeSet now implements SortedSet (Maciej Pietchotka)
+
+ * Infrastructure
+   * New test framework and complete tests refactoring (Julien Peters)
+   * New doc/ documentation directory (--enable-doc)
+   * Test coverage analysis using lcov (--enable-coverage)
+   * Basic benchmark framework and sort benchmark (--enable-benchmark)
+   * Use silent rules by default for users of automake 1.11
+
+ * Code Quality
+   * Many bug fixes
+   * Many optimizations
+   * Lots of additional documentation
+   * Better overall encapsulation, dangerous public setters have been removed
+   * Better test coverage (more than 90%)
+
+libgee 0.4.0
+============
+
+ * Bug fixes.
+
+libgee 0.3.0
+============
+
+ * Introduce AbstractCollection, AbstractList and AbstractMap base classes.
+ * Add new properties and methods to Collection, List and Map. (Tomaž Vajngerl)
+ * Add LinkedList implementation. (Mark Lee)
+ * Add TreeSet and TreeMap implementations. (Maciej Piechotka)
+ * Iterable.element_type is now a property.
+ * Map.remove now takes an optional parameter to retrieve the removed value.
+ * Bump library version info to reflect API/ABI breakage
+
+libgee 0.2.0
+============
+
+ * Generate GIR file.
+
+libgee 0.1.6
+============
+
+ * Fix build for Vala 0.7.
+ * Bug fixes.
+
+libgee 0.1.5
+============
+
+ * Add slice method to Gee.List.
+
+libgee 0.1.4
+============
+
+ * Update for Vala 0.3.3.
+
+libgee 0.1.3
+============
+
+ * More unit tests.
+ * Update for Vala 0.3.1.
+
+libgee 0.1.2
+============
+
+ * Add unit tests.
+ * Bug fixes.
+
+libgee 0.1.1
+============
+
+ * Add get_element_type method to Gee.Iterable.
+ * Update for Vala 0.1.6.
+
+libgee 0.1.0
+============
+
+ * Initial release.

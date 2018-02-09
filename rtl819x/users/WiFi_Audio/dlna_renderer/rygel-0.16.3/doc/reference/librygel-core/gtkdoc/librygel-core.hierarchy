@@ -1,0 +1,50 @@
+GObject
+  DescriptionFile
+  GDBusProxy
+    FreeDesktopDBusObjectProxy
+    FreeDesktopPropertiesProxy
+    RygelDBusInterfaceProxy
+  RygelCmdlineConfig
+  GUPnPServiceInfo
+    GUPnPService
+      RygelConnectionManager
+  RygelLogHandler
+  RygelMediaDevice
+  RygelMetaConfig
+  GUPnPResourceFactory
+    RygelPlugin
+  RygelPluginLoader
+  GUPnPDeviceInfo
+    GUPnPDevice
+      GUPnPRootDevice
+        RygelRootDevice
+  RygelUserConfig
+  GDBusConnection
+  GSSDPClient
+    GUPnPContext
+  GUPnPXMLDoc
+  GeeAbstractCollection
+    GeeAbstractList
+      GeeArrayList
+  GCancellable
+GInterface
+  GTypePlugin
+  FreeDesktopDBusObject
+  GDBusInterface
+  GInitable
+  GAsyncInitable
+  FreeDesktopProperties
+  RygelConfiguration
+  RygelDBusInterface
+  RygelStateMachine
+  GeeIterable
+  GeeCollection
+  GeeList
+GEnum
+  FreeDesktopDBusRequestNameReply
+  RygelLogLevel
+  GBusType
+RygelIconInfo
+RygelResourceInfo
+RygelRootDeviceFactory
+RygelXMLUtils

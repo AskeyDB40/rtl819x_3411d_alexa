@@ -1,0 +1,368 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>DescriptionFile</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="librygel-core Reference Manual">
+<link rel="up" href="ch01.html" title="librygel-core API Reference">
+<link rel="prev" href="RygelDBusInterface.html" title="RygelDBusInterface">
+<link rel="next" href="RygelPluginLoader.html" title="RygelPluginLoader">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="RygelDBusInterface.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">librygel-core Reference Manual</th>
+<td><a accesskey="n" href="RygelPluginLoader.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#DescriptionFile.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#DescriptionFile.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#DescriptionFile.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="DescriptionFile"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="DescriptionFile.top_of_page"></a>DescriptionFile</span></h2>
+<p>DescriptionFile — Represents a device description document and offers methods for easy manipulation of those.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="DescriptionFile.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">#define             <a class="link" href="DescriptionFile.html#TYPE-DESCRIPTION-FILE:CAPS" title="TYPE_DESCRIPTION_FILE">TYPE_DESCRIPTION_FILE</a>
+<span class="returnvalue">void</span>                <a class="link" href="DescriptionFile.html#description-file-set-device-type" title="description_file_set_device_type ()">description_file_set_device_type</a>    (<em class="parameter"><code><a class="link" href="DescriptionFile.html" title="DescriptionFile"><span class="type">DescriptionFile</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *device_type</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="DescriptionFile.html#description-file-set-model-name" title="description_file_set_model_name ()">description_file_set_model_name</a>     (<em class="parameter"><code><a class="link" href="DescriptionFile.html" title="DescriptionFile"><span class="type">DescriptionFile</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *model_name</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="DescriptionFile.html#description-file-set-model-number" title="description_file_set_model_number ()">description_file_set_model_number</a>   (<em class="parameter"><code><a class="link" href="DescriptionFile.html" title="DescriptionFile"><span class="type">DescriptionFile</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *model_number</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="DescriptionFile.html#description-file-set-friendly-name" title="description_file_set_friendly_name ()">description_file_set_friendly_name</a>  (<em class="parameter"><code><a class="link" href="DescriptionFile.html" title="DescriptionFile"><span class="type">DescriptionFile</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *friendly_name</code></em>);
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="DescriptionFile.html#description-file-get-friendly-name" title="description_file_get_friendly_name ()">description_file_get_friendly_name</a>  (<em class="parameter"><code><a class="link" href="DescriptionFile.html" title="DescriptionFile"><span class="type">DescriptionFile</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="DescriptionFile.html#description-file-modify-service-type" title="description_file_modify_service_type ()">description_file_modify_service_type</a>
+                                                        (<em class="parameter"><code><a class="link" href="DescriptionFile.html" title="DescriptionFile"><span class="type">DescriptionFile</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *old_type</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *new_type</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="DescriptionFile.html#description-file-save" title="description_file_save ()">description_file_save</a>               (<em class="parameter"><code><a class="link" href="DescriptionFile.html" title="DescriptionFile"><span class="type">DescriptionFile</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *path</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a class="link" href="DescriptionFile.html" title="DescriptionFile"><span class="returnvalue">DescriptionFile</span></a> *   <a class="link" href="DescriptionFile.html#description-file-new" title="description_file_new ()">description_file_new</a>                (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *template</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a class="link" href="DescriptionFile.html" title="DescriptionFile"><span class="returnvalue">DescriptionFile</span></a> *   <a class="link" href="DescriptionFile.html#description-file-new-from-xml-document" title="description_file_new_from_xml_document ()">description_file_new_from_xml_document</a>
+                                                        (<em class="parameter"><code><a href="../gupnp/GUPnPXMLDoc.html"><span class="type">GUPnPXMLDoc</span></a> *doc</code></em>);
+struct              <a class="link" href="DescriptionFile.html#DescriptionFile-struct" title="struct DescriptionFile">DescriptionFile</a>;
+struct              <a class="link" href="DescriptionFile.html#DescriptionFileClass" title="struct DescriptionFileClass">DescriptionFileClass</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="DescriptionFile.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="../gobject/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----DescriptionFile
+</pre>
+</div>
+<div class="refsect1">
+<a name="DescriptionFile.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="DescriptionFile.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="TYPE-DESCRIPTION-FILE:CAPS"></a><h3>TYPE_DESCRIPTION_FILE</h3>
+<pre class="programlisting">#define TYPE_DESCRIPTION_FILE (description_file_get_type ())
+</pre>
+<p>
+The type for <a class="link" href="DescriptionFile.html" title="DescriptionFile"><span class="type">DescriptionFile</span></a>.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="description-file-set-device-type"></a><h3>description_file_set_device_type ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                description_file_set_device_type    (<em class="parameter"><code><a class="link" href="DescriptionFile.html" title="DescriptionFile"><span class="type">DescriptionFile</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *device_type</code></em>);</pre>
+<p>
+Change the type of a service.
+</p>
+<p>
+</p>
+<p>Usually used to modify the device version, e.g. default device type is "MediaServer:2" and device_type = "MediaServer:1".</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="DescriptionFile.html" title="DescriptionFile"><span class="type">DescriptionFile</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>device_type</code></em> :</span></p></td>
+<td>is the current content of serviceType. <span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="description-file-set-model-name"></a><h3>description_file_set_model_name ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                description_file_set_model_name     (<em class="parameter"><code><a class="link" href="DescriptionFile.html" title="DescriptionFile"><span class="type">DescriptionFile</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *model_name</code></em>);</pre>
+<p>
+Modify the model name.
+</p>
+<p>
+</p>
+<p>Usually the name of the software implementing this device.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="DescriptionFile.html" title="DescriptionFile"><span class="type">DescriptionFile</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>model_name</code></em> :</span></p></td>
+<td>is the new model name. <span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="description-file-set-model-number"></a><h3>description_file_set_model_number ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                description_file_set_model_number   (<em class="parameter"><code><a class="link" href="DescriptionFile.html" title="DescriptionFile"><span class="type">DescriptionFile</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *model_number</code></em>);</pre>
+<p>
+Modify the model number.
+</p>
+<p>
+</p>
+<p>Usually the version of the software implementing this device.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="DescriptionFile.html" title="DescriptionFile"><span class="type">DescriptionFile</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>model_number</code></em> :</span></p></td>
+<td>is the new model number. <span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="description-file-set-friendly-name"></a><h3>description_file_set_friendly_name ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                description_file_set_friendly_name  (<em class="parameter"><code><a class="link" href="DescriptionFile.html" title="DescriptionFile"><span class="type">DescriptionFile</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *friendly_name</code></em>);</pre>
+<p>
+Set the friendly name of the device.
+</p>
+<p>
+</p>
+<p>The friendly name is the one usually presented to the user in control points or DMPs</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="DescriptionFile.html" title="DescriptionFile"><span class="type">DescriptionFile</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>friendly_name</code></em> :</span></p></td>
+<td>is the new friendly name of the device. <span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="description-file-get-friendly-name"></a><h3>description_file_get_friendly_name ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             description_file_get_friendly_name  (<em class="parameter"><code><a class="link" href="DescriptionFile.html" title="DescriptionFile"><span class="type">DescriptionFile</span></a> *self</code></em>);</pre>
+<p>
+Get the current friendly name of the device.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="DescriptionFile.html" title="DescriptionFile"><span class="type">DescriptionFile</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The currenly set friendly name.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="description-file-modify-service-type"></a><h3>description_file_modify_service_type ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                description_file_modify_service_type
+                                                        (<em class="parameter"><code><a class="link" href="DescriptionFile.html" title="DescriptionFile"><span class="type">DescriptionFile</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *old_type</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *new_type</code></em>);</pre>
+<p>
+Change the type of a service.
+</p>
+<p>
+</p>
+<p>Usually used to modify the service version, e.g. old_type = "ContentDirectory:2" and new_type = "ContentDirectory:1".</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="DescriptionFile.html" title="DescriptionFile"><span class="type">DescriptionFile</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>old_type</code></em> :</span></p></td>
+<td>is the current content of serviceType. <span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>new_type</code></em> :</span></p></td>
+<td>is the content serviceType will be set to. <span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="description-file-save"></a><h3>description_file_save ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                description_file_save               (<em class="parameter"><code><a class="link" href="DescriptionFile.html" title="DescriptionFile"><span class="type">DescriptionFile</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *path</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Writes the current document to a file.
+</p>
+<p>
+</p>
+<p>It makes sure that the resulting file has the correct UTF-8 encoding and does not have any kind of newlines. This is necessary as some devices with broken XML parsers can't cope with UNIX newlines. If a file with the same name exists it will be overwritten.</p>
+<p>
+</p>
+<p><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> will be returned in <em class="parameter"><code>error</code></em> if anything fails while creating the XML dump. </p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="DescriptionFile.html" title="DescriptionFile"><span class="type">DescriptionFile</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>path</code></em> :</span></p></td>
+<td>is a path to a file. <span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="description-file-new"></a><h3>description_file_new ()</h3>
+<pre class="programlisting"><a class="link" href="DescriptionFile.html" title="DescriptionFile"><span class="returnvalue">DescriptionFile</span></a> *   description_file_new                (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *template</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Constructor to load a description file from disk
+</p>
+<p>
+</p>
+<p><span class="type">GUPNP_XML_ERROR_PARSE</span> will be returned in <em class="parameter"><code>error</code></em> if there was an error reading or parsing the file. </p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>template</code></em> :</span></p></td>
+<td>the path to the description file. <span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="description-file-new-from-xml-document"></a><h3>description_file_new_from_xml_document ()</h3>
+<pre class="programlisting"><a class="link" href="DescriptionFile.html" title="DescriptionFile"><span class="returnvalue">DescriptionFile</span></a> *   description_file_new_from_xml_document
+                                                        (<em class="parameter"><code><a href="../gupnp/GUPnPXMLDoc.html"><span class="type">GUPnPXMLDoc</span></a> *doc</code></em>);</pre>
+<p>
+Constructor which wraps an existing GUPnP.XMLDoc as a description file.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>doc</code></em> :</span></p></td>
+<td>is the GUPnP.XMLDoc to wrap. <span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="DescriptionFile-struct"></a><h3>struct DescriptionFile</h3>
+<pre class="programlisting">struct DescriptionFile;</pre>
+<p>
+Represents a device description document and offers methods for easy manipulation of those.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="DescriptionFileClass"></a><h3>struct DescriptionFileClass</h3>
+<pre class="programlisting">struct DescriptionFileClass {
+	GObjectClass parent_class;
+};
+</pre>
+<p>
+The class structure for <a class="link" href="DescriptionFile.html#TYPE-DESCRIPTION-FILE:CAPS" title="TYPE_DESCRIPTION_FILE"><code class="literal">TYPE_DESCRIPTION_FILE</code></a>. All the fields in this structure are private and should never be accessed directly.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><a href="../gobject/gobject-The-Base-Object-Type.html#GObjectClass"><span class="type">GObjectClass</span></a> <em class="structfield"><code><a name="DescriptionFileClass.parent-class"></a>parent_class</code></em>;</span></p></td>
+<td>the parent class structure</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

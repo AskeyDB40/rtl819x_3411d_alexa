@@ -1,0 +1,351 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelMediaContainer">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelMediaContainer.top_of_page">RygelMediaContainer</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-SERVER Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelMediaContainer</refname>
+<refpurpose>This is a container (folder) for media items and child containers.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelMediaContainer.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="RYGEL-TYPE-MEDIA-CONTAINER:CAPS">RYGEL_TYPE_MEDIA_CONTAINER</link>
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-media-container-get-children">rygel_media_container_get_children</link>  (<parameter><link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> *self</parameter>,
+                                                         <parameter><link linkend="guint"><type>guint</type></link> offset</parameter>,
+                                                         <parameter><link linkend="guint"><type>guint</type></link> max_count</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *sort_criteria</parameter>,
+                                                         <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                                                         <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                                         <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);
+<link linkend="RygelMediaObjects"><returnvalue>RygelMediaObjects</returnvalue></link> * <link linkend="rygel-media-container-get-children-finish">rygel_media_container_get_children_finish</link>
+                                                        (<parameter><link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-media-container-find-object">rygel_media_container_find_object</link>   (<parameter><link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *id</parameter>,
+                                                         <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                                                         <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                                         <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);
+<link linkend="RygelMediaObject"><returnvalue>RygelMediaObject</returnvalue></link> *  <link linkend="rygel-media-container-find-object-finish">rygel_media_container_find_object_finish</link>
+                                                        (<parameter><link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-media-container-updated">rygel_media_container_updated</link>       (<parameter><link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> *self</parameter>);
+#define             <link linkend="RYGEL-MEDIA-CONTAINER-UPNP-CLASS:CAPS">RYGEL_MEDIA_CONTAINER_UPNP_CLASS</link>
+#define             <link linkend="RYGEL-MEDIA-CONTAINER-STORAGE-FOLDER:CAPS">RYGEL_MEDIA_CONTAINER_STORAGE_FOLDER</link>
+#define             <link linkend="RYGEL-MEDIA-CONTAINER-MUSIC-ALBUM:CAPS">RYGEL_MEDIA_CONTAINER_MUSIC_ALBUM</link>
+#define             <link linkend="RYGEL-MEDIA-CONTAINER-MUSIC-ARTIST:CAPS">RYGEL_MEDIA_CONTAINER_MUSIC_ARTIST</link>
+#define             <link linkend="RYGEL-MEDIA-CONTAINER-MUSIC-GENRE:CAPS">RYGEL_MEDIA_CONTAINER_MUSIC_GENRE</link>
+#define             <link linkend="RYGEL-MEDIA-CONTAINER-ALBUM-SORT-CRITERIA:CAPS">RYGEL_MEDIA_CONTAINER_ALBUM_SORT_CRITERIA</link>
+const <link linkend="gchar"><returnvalue>gchar</returnvalue></link> *       <link linkend="rygel-media-container-get-sort-criteria">rygel_media_container_get_sort_criteria</link>
+                                                        (<parameter><link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> *self</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-media-container-set-sort-criteria">rygel_media_container_set_sort_criteria</link>
+                                                        (<parameter><link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *value</parameter>);
+struct              <link linkend="RygelMediaContainer-struct">RygelMediaContainer</link>;
+struct              <link linkend="RygelMediaContainerClass">RygelMediaContainerClass</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelMediaContainer.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="RygelMediaObject">RygelMediaObject</link>
+         +----RygelMediaContainer
+               +----<link linkend="RygelSimpleContainer">RygelSimpleContainer</link>
+</synopsis>
+</refsect1>
+<refsect1 id="RygelMediaContainer.derived-interfaces" role="derived_interfaces">
+<title role="derived_interfaces.title">Known Derived Interfaces</title>
+<para>
+RygelMediaContainer is required by
+ <link linkend="RygelSearchableContainer">RygelSearchableContainer</link> and  <link linkend="RygelWritableContainer">RygelWritableContainer</link>.</para>
+</refsect1>
+<refsect1 id="RygelMediaContainer.properties" role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+  &quot;<link linkend="RygelMediaContainer--ocm-flags">ocm-flags</link>&quot;                <link linkend="GUPnPOCMFlags"><type>GUPnPOCMFlags</type></link>         : Read
+  &quot;<link linkend="RygelMediaContainer--sort-criteria">sort-criteria</link>&quot;            <link linkend="gchar"><type>gchar</type></link>*                : Read / Write
+</synopsis>
+</refsect1>
+<refsect1 id="RygelMediaContainer.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<synopsis>
+  &quot;<link linkend="RygelMediaContainer-container-updated">container-updated</link>&quot;                              : <link linkend="G-SIGNAL-RUN-LAST:CAPS"><literal>Run Last</literal></link>
+</synopsis>
+</refsect1>
+
+<refsect1 id="RygelMediaContainer.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+<para>It provides a basic serialization implementation (to DIDLLiteWriter).</para><para>A derived class should provide a working implementation of get_children and should emit the container_updated signal.</para>
+</para>
+</refsect1>
+<refsect1 id="RygelMediaContainer.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="RYGEL-TYPE-MEDIA-CONTAINER:CAPS" role="macro">
+<title>RYGEL_TYPE_MEDIA_CONTAINER</title>
+<indexterm zone="RYGEL-TYPE-MEDIA-CONTAINER:CAPS"><primary>RYGEL_TYPE_MEDIA_CONTAINER</primary></indexterm>
+<programlisting>#define RYGEL_TYPE_MEDIA_CONTAINER (rygel_media_container_get_type ())
+</programlisting>
+<para>
+The type for <link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link>.
+</para></refsect2>
+<refsect2 id="rygel-media-container-get-children" role="function">
+<title>rygel_media_container_get_children ()</title>
+<indexterm zone="rygel-media-container-get-children"><primary>rygel_media_container_get_children</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_media_container_get_children  (<parameter><link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> *self</parameter>,
+                                                         <parameter><link linkend="guint"><type>guint</type></link> offset</parameter>,
+                                                         <parameter><link linkend="guint"><type>guint</type></link> max_count</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *sort_criteria</parameter>,
+                                                         <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                                                         <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                                         <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para>
+Fetches the list of media objects directly under this container.
+</para>
+<para>
+<emphasis>See also</emphasis>: <link linkend="rygel-media-container-get-children-finish"><function><link linkend="rygel-media-container-get-children-finish"><function>rygel_media_container_get_children_finish()</function></link></function></link>
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>offset</parameter>&#160;:</term>
+<listitem><simpara>zero-based index of the first item to return. <emphasis role="annotation">[<acronym>in</acronym>]</emphasis></simpara></listitem></varlistentry>
+<varlistentry><term><parameter>max_count</parameter>&#160;:</term>
+<listitem><simpara>maximum number of objects to return. <emphasis role="annotation">[<acronym>in</acronym>]</emphasis></simpara></listitem></varlistentry>
+<varlistentry><term><parameter>sort_criteria</parameter>&#160;:</term>
+<listitem><simpara>sorting order of objects to return. <emphasis role="annotation">[<acronym>in</acronym>]</emphasis></simpara></listitem></varlistentry>
+<varlistentry><term><parameter>cancellable</parameter>&#160;:</term>
+<listitem><simpara>optional cancellable for this operation. <emphasis role="annotation">[<acronym>in</acronym>][<acronym>allow-none</acronym>]</emphasis></simpara></listitem></varlistentry>
+<varlistentry><term><parameter>_callback_</parameter>&#160;:</term>
+<listitem><simpara>callback to call when the request is satisfied. <emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></simpara></listitem></varlistentry>
+<varlistentry><term><parameter>_user_data_</parameter>&#160;:</term>
+<listitem><simpara>the data to pass to <parameter>_callback_</parameter> function. <emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-container-get-children-finish" role="function">
+<title>rygel_media_container_get_children_finish ()</title>
+<indexterm zone="rygel-media-container-get-children-finish"><primary>rygel_media_container_get_children_finish</primary></indexterm>
+<programlisting><link linkend="RygelMediaObjects"><returnvalue>RygelMediaObjects</returnvalue></link> * rygel_media_container_get_children_finish
+                                                        (<parameter><link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>
+Fetches the list of media objects directly under this container.
+</para>
+<para>
+<emphasis>See also</emphasis>: <link linkend="rygel-media-container-get-children"><function><link linkend="rygel-media-container-get-children"><function>rygel_media_container_get_children()</function></link></function></link>
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>_res_</parameter>&#160;:</term>
+<listitem><simpara>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>A list of media objects.</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-container-find-object" role="function">
+<title>rygel_media_container_find_object ()</title>
+<indexterm zone="rygel-media-container-find-object"><primary>rygel_media_container_find_object</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_media_container_find_object   (<parameter><link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *id</parameter>,
+                                                         <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                                                         <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                                         <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para>
+Recursively searches this container for a media object with the given ID.
+</para>
+<para>
+<emphasis>See also</emphasis>: <link linkend="rygel-media-container-find-object-finish"><function><link linkend="rygel-media-container-find-object-finish"><function>rygel_media_container_find_object_finish()</function></link></function></link>
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>id</parameter>&#160;:</term>
+<listitem><simpara>ID of the media object to search for. <emphasis role="annotation">[<acronym>in</acronym>]</emphasis></simpara></listitem></varlistentry>
+<varlistentry><term><parameter>cancellable</parameter>&#160;:</term>
+<listitem><simpara>optional cancellable for this operation. <emphasis role="annotation">[<acronym>in</acronym>][<acronym>allow-none</acronym>]</emphasis></simpara></listitem></varlistentry>
+<varlistentry><term><parameter>_callback_</parameter>&#160;:</term>
+<listitem><simpara>callback to call when the request is satisfied. <emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></simpara></listitem></varlistentry>
+<varlistentry><term><parameter>_user_data_</parameter>&#160;:</term>
+<listitem><simpara>the data to pass to <parameter>_callback_</parameter> function. <emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-container-find-object-finish" role="function">
+<title>rygel_media_container_find_object_finish ()</title>
+<indexterm zone="rygel-media-container-find-object-finish"><primary>rygel_media_container_find_object_finish</primary></indexterm>
+<programlisting><link linkend="RygelMediaObject"><returnvalue>RygelMediaObject</returnvalue></link> *  rygel_media_container_find_object_finish
+                                                        (<parameter><link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>
+Recursively searches this container for a media object with the given ID.
+</para>
+<para>
+<emphasis>See also</emphasis>: <link linkend="rygel-media-container-find-object"><function><link linkend="rygel-media-container-find-object"><function>rygel_media_container_find_object()</function></link></function></link>
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>_res_</parameter>&#160;:</term>
+<listitem><simpara>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>the found media object.</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-container-updated" role="function">
+<title>rygel_media_container_updated ()</title>
+<indexterm zone="rygel-media-container-updated"><primary>rygel_media_container_updated</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_media_container_updated       (<parameter><link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> *self</parameter>);</programlisting>
+<para>
+This method should be called each time this container is updated.
+</para>
+<para>
+<para>For instance, this should be called if there are metadata changes for this container, if items under it are removed or added, if there are metadata changes to items under it, etc.</para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> instance</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="RYGEL-MEDIA-CONTAINER-UPNP-CLASS:CAPS" role="macro">
+<title>RYGEL_MEDIA_CONTAINER_UPNP_CLASS</title>
+<indexterm zone="RYGEL-MEDIA-CONTAINER-UPNP-CLASS:CAPS"><primary>RYGEL_MEDIA_CONTAINER_UPNP_CLASS</primary></indexterm>
+<programlisting>#define RYGEL_MEDIA_CONTAINER_UPNP_CLASS "object.container"
+</programlisting>
+</refsect2>
+<refsect2 id="RYGEL-MEDIA-CONTAINER-STORAGE-FOLDER:CAPS" role="macro">
+<title>RYGEL_MEDIA_CONTAINER_STORAGE_FOLDER</title>
+<indexterm zone="RYGEL-MEDIA-CONTAINER-STORAGE-FOLDER:CAPS"><primary>RYGEL_MEDIA_CONTAINER_STORAGE_FOLDER</primary></indexterm>
+<programlisting>#define RYGEL_MEDIA_CONTAINER_STORAGE_FOLDER RYGEL_MEDIA_CONTAINER_UPNP_CLASS ".storageFolder"
+</programlisting>
+</refsect2>
+<refsect2 id="RYGEL-MEDIA-CONTAINER-MUSIC-ALBUM:CAPS" role="macro">
+<title>RYGEL_MEDIA_CONTAINER_MUSIC_ALBUM</title>
+<indexterm zone="RYGEL-MEDIA-CONTAINER-MUSIC-ALBUM:CAPS"><primary>RYGEL_MEDIA_CONTAINER_MUSIC_ALBUM</primary></indexterm>
+<programlisting>#define RYGEL_MEDIA_CONTAINER_MUSIC_ALBUM RYGEL_MEDIA_CONTAINER_UPNP_CLASS ".album.musicAlbum"
+</programlisting>
+</refsect2>
+<refsect2 id="RYGEL-MEDIA-CONTAINER-MUSIC-ARTIST:CAPS" role="macro">
+<title>RYGEL_MEDIA_CONTAINER_MUSIC_ARTIST</title>
+<indexterm zone="RYGEL-MEDIA-CONTAINER-MUSIC-ARTIST:CAPS"><primary>RYGEL_MEDIA_CONTAINER_MUSIC_ARTIST</primary></indexterm>
+<programlisting>#define RYGEL_MEDIA_CONTAINER_MUSIC_ARTIST RYGEL_MEDIA_CONTAINER_UPNP_CLASS ".person.musicArtist"
+</programlisting>
+</refsect2>
+<refsect2 id="RYGEL-MEDIA-CONTAINER-MUSIC-GENRE:CAPS" role="macro">
+<title>RYGEL_MEDIA_CONTAINER_MUSIC_GENRE</title>
+<indexterm zone="RYGEL-MEDIA-CONTAINER-MUSIC-GENRE:CAPS"><primary>RYGEL_MEDIA_CONTAINER_MUSIC_GENRE</primary></indexterm>
+<programlisting>#define RYGEL_MEDIA_CONTAINER_MUSIC_GENRE RYGEL_MEDIA_CONTAINER_UPNP_CLASS ".genre.musicGenre"
+</programlisting>
+</refsect2>
+<refsect2 id="RYGEL-MEDIA-CONTAINER-ALBUM-SORT-CRITERIA:CAPS" role="macro">
+<title>RYGEL_MEDIA_CONTAINER_ALBUM_SORT_CRITERIA</title>
+<indexterm zone="RYGEL-MEDIA-CONTAINER-ALBUM-SORT-CRITERIA:CAPS"><primary>RYGEL_MEDIA_CONTAINER_ALBUM_SORT_CRITERIA</primary></indexterm>
+<programlisting>#define RYGEL_MEDIA_CONTAINER_ALBUM_SORT_CRITERIA "+upnp:class," "+rygel:originalVolumeNumber," "+upnp:originalTrackNumber," "+dc:title"
+</programlisting>
+</refsect2>
+<refsect2 id="rygel-media-container-get-sort-criteria" role="function">
+<title>rygel_media_container_get_sort_criteria ()</title>
+<indexterm zone="rygel-media-container-get-sort-criteria"><primary>rygel_media_container_get_sort_criteria</primary></indexterm>
+<programlisting>const <link linkend="gchar"><returnvalue>gchar</returnvalue></link> *       rygel_media_container_get_sort_criteria
+                                                        (<parameter><link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> *self</parameter>);</programlisting>
+<para>
+Get and return the current value of the <link linkend="RygelMediaContainer--sort-criteria"><type>"sort-criteria"</type></link> property.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> instance to query</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>the value of the <link linkend="RygelMediaContainer--sort-criteria"><type>"sort-criteria"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-container-set-sort-criteria" role="function">
+<title>rygel_media_container_set_sort_criteria ()</title>
+<indexterm zone="rygel-media-container-set-sort-criteria"><primary>rygel_media_container_set_sort_criteria</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_media_container_set_sort_criteria
+                                                        (<parameter><link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *value</parameter>);</programlisting>
+<para>
+Set the value of the <link linkend="RygelMediaContainer--sort-criteria"><type>"sort-criteria"</type></link> property to <parameter>value</parameter>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> instance to modify</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>value</parameter>&#160;:</term>
+<listitem><simpara>the new value of the <link linkend="RygelMediaContainer--sort-criteria"><type>"sort-criteria"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="RygelMediaContainer-struct" role="struct">
+<title>struct RygelMediaContainer</title>
+<indexterm zone="RygelMediaContainer-struct"><primary>RygelMediaContainer</primary></indexterm>
+<programlisting>struct RygelMediaContainer;</programlisting>
+<para>
+This is a container (folder) for media items and child containers.
+</para>
+<para>
+<para>It provides a basic serialization implementation (to DIDLLiteWriter).</para><para>A derived class should provide a working implementation of get_children and should emit the container_updated signal.</para>
+</para></refsect2>
+<refsect2 id="RygelMediaContainerClass" role="struct">
+<title>struct RygelMediaContainerClass</title>
+<indexterm zone="RygelMediaContainerClass"><primary>RygelMediaContainerClass</primary></indexterm>
+<programlisting>struct RygelMediaContainerClass {
+	RygelMediaObjectClass parent_class;
+	void (*get_children) (RygelMediaContainer* self, guint offset, guint max_count, const gchar* sort_criteria, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	RygelMediaObjects* (*get_children_finish) (RygelMediaContainer* self, GAsyncResult* _res_, GError** error);
+	void (*find_object) (RygelMediaContainer* self, const gchar* id, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	RygelMediaObject* (*find_object_finish) (RygelMediaContainer* self, GAsyncResult* _res_, GError** error);
+};
+</programlisting>
+<para>
+The class structure for <link linkend="RYGEL-TYPE-MEDIA-CONTAINER:CAPS"><literal>RYGEL_TYPE_MEDIA_CONTAINER</literal></link>. All the fields in this structure are private and should never be accessed directly.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="RygelMediaObjectClass"><type>RygelMediaObjectClass</type></link>&#160;<structfield id="RygelMediaContainerClass.parent-class">parent_class</structfield>;</term>
+<listitem><simpara>the parent class structure</simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelMediaContainerClass.get-children">get_children</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-media-container-get-children"><function><link linkend="rygel-media-container-get-children"><function>rygel_media_container_get_children()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelMediaContainerClass.get-children-finish">get_children_finish</structfield>&#160;()</term>
+<listitem><simpara>asynchronous finish function for <structfield>get_children</structfield>, called by <link linkend="rygel-media-container-get-children"><function><link linkend="rygel-media-container-get-children"><function>rygel_media_container_get_children()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelMediaContainerClass.find-object">find_object</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-media-container-find-object"><function><link linkend="rygel-media-container-find-object"><function>rygel_media_container_find_object()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelMediaContainerClass.find-object-finish">find_object_finish</structfield>&#160;()</term>
+<listitem><simpara>asynchronous finish function for <structfield>find_object</structfield>, called by <link linkend="rygel-media-container-find-object"><function><link linkend="rygel-media-container-find-object"><function>rygel_media_container_find_object()</function></link></function></link></simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 id="RygelMediaContainer.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="RygelMediaContainer--ocm-flags" role="property"><title>The <literal>&quot;ocm-flags&quot;</literal> property</title>
+<indexterm zone="RygelMediaContainer--ocm-flags"><primary>RygelMediaContainer:ocm-flags</primary></indexterm>
+<programlisting>  &quot;ocm-flags&quot;                <link linkend="GUPnPOCMFlags"><type>GUPnPOCMFlags</type></link>         : Read</programlisting>
+<para>ocm-flags.</para></refsect2>
+<refsect2 id="RygelMediaContainer--sort-criteria" role="property"><title>The <literal>&quot;sort-criteria&quot;</literal> property</title>
+<indexterm zone="RygelMediaContainer--sort-criteria"><primary>RygelMediaContainer:sort-criteria</primary></indexterm>
+<programlisting>  &quot;sort-criteria&quot;            <link linkend="gchar"><type>gchar</type></link>*                : Read / Write</programlisting>
+<para>sort-criteria.</para><para>Default value: NULL</para>
+</refsect2>
+</refsect1>
+<refsect1 id="RygelMediaContainer.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="RygelMediaContainer-container-updated" role="signal"><title>The <literal>&quot;container-updated&quot;</literal> signal</title>
+<indexterm zone="RygelMediaContainer-container-updated"><primary>RygelMediaContainer::container-updated</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                user_function                      (<link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> *media_container,
+                                                        <link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> *container,
+                                                        <link linkend="gpointer"><type>gpointer</type></link>             user_data)            : <link linkend="G-SIGNAL-RUN-LAST:CAPS"><literal>Run Last</literal></link></programlisting>
+<para>
+The container_updated signal is emitted if a child container under the tree of this container has been updated.
+</para><variablelist role="params">
+<varlistentry><term><parameter>media_container</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> instance that received the signal</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>container</parameter>&#160;:</term>
+<listitem><simpara>The child container that has been updated. <para></para></simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&#160;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+</refsect1>
+
+</refentry>

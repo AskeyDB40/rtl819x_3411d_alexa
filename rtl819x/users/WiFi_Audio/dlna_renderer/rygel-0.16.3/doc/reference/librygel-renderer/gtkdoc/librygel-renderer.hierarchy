@@ -1,0 +1,13 @@
+GObject
+  GUPnPResourceFactory
+    RygelPlugin
+      RygelMediaRendererPlugin
+        RygelPlaybinPlugin
+  RygelPlaybinPlayer
+  RygelMediaDevice
+    RygelPlaybinRenderer
+  GstObject
+    GstElement
+GInterface
+  GTypePlugin
+  RygelMediaPlayer

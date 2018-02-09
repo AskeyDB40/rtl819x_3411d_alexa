@@ -1,0 +1,48 @@
+<!-- ##### SECTION Title ##### -->
+GUPnPXMLDoc
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT GUPnPXMLDoc ##### -->
+<para>
+
+</para>
+
+@doc: 
+
+<!-- ##### FUNCTION gupnp_xml_doc_new ##### -->
+<para>
+
+</para>
+
+@xml_doc: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_xml_doc_new_from_path ##### -->
+<para>
+
+</para>
+
+@path: 
+@error: 
+@Returns: 
+
+

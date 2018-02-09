@@ -1,0 +1,1021 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Yaron Shahrabani <sh.yaron@gmail.com>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: rygel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-08-13 23:03+0300\n"
+"PO-Revision-Date: 2012-08-13 23:04+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: Gezer <sh.yaron@gmail.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural= (n!=1);\n"
+"X-Poedit-Language: Hebrew\n"
+"X-Poedit-Country: ISRAEL\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: ../data/rygel-preferences.ui.h:1
+#: ../data/rygel-preferences.desktop.in.in.h:1
+msgid "Rygel Preferences"
+msgstr "העדפות Rygel"
+
+#: ../data/rygel-preferences.ui.h:2
+msgid "_Share media through DLNA"
+msgstr "_שיתוף מדיה דרך DLNA"
+
+#: ../data/rygel-preferences.ui.h:3
+msgid "Enable sharing of media, such as photos, videos and music, with DLNA"
+msgstr "הפעלת שיתוף מדיה כגון תמונות, וידאו ומוזיקה באמצעות DLNA"
+
+#: ../data/rygel-preferences.ui.h:4
+msgid "Add a directory to the list of shared directories"
+msgstr "הוספת תיקייה לרשימת התיקיות המשותפות"
+
+#: ../data/rygel-preferences.ui.h:5
+msgid "Add shared directory"
+msgstr "הוספת תיקייה משותפת"
+
+#: ../data/rygel-preferences.ui.h:6
+msgid "Remove a directory from the list of shared directories"
+msgstr "הסרת תיקייה מרשימת התיקיות המשותפות"
+
+#: ../data/rygel-preferences.ui.h:7
+msgid "Remove shared directory"
+msgstr "הסרת תיקייה משותפת"
+
+#. Network Interface
+#: ../data/rygel-preferences.ui.h:9
+msgid "_Network:"
+msgstr "_רשת:"
+
+#: ../data/rygel-preferences.ui.h:10
+msgid "Select the network interface that DLNA media will be shared on, or share media on all interfaces"
+msgstr "נא לבחור את מנשק הרשת שדרכו תשותף המדיה שלך דרך DLNA או שיתוף המדיה דרך כל המנשקים."
+
+#: ../data/rygel-preferences.ui.h:11
+msgid "Any"
+msgstr "כלשהו"
+
+#: ../data/rygel-preferences.ui.h:12
+msgid "Select folders"
+msgstr "בחירת תיקיות"
+
+#: ../data/rygel-preferences.desktop.in.in.h:2
+msgid "UPnP/DLNA Preferences"
+msgstr "העדפות UPnP/DLNA"
+
+#: ../data/rygel.desktop.in.in.h:1
+msgid "Rygel"
+msgstr "Rygel"
+
+#: ../data/rygel.desktop.in.in.h:2
+msgid "UPnP/DLNA Services"
+msgstr "העדפות UPnP/DLNA"
+
+#: ../src/plugins/media-export/rygel-media-export-database.vala:210
+#, c-format
+msgid "Failed to roll back transaction: %s"
+msgstr "ארע כשל בהחזרת ההעברה: %s"
+
+#: ../src/plugins/media-export/rygel-media-export-metadata-extractor.vala:134
+#: ../src/librygel-core/rygel-plugin-loader.vala:194
+#, c-format
+msgid "Failed to query content type for '%s'"
+msgstr "ארע כשל בתשאול סוג התוכן עבור '%s'"
+
+#: ../src/plugins/media-export/rygel-media-export-media-cache.vala:112
+#, c-format
+msgid "Failed to add item with ID %s: %s"
+msgstr "ארע כשל בהוספת פריט עם מספר זיהוי %s:‏ %s"
+
+#: ../src/plugins/media-export/rygel-media-export-dbus-service.vala:38
+#, c-format
+msgid "Failed to attach to D-Bus session bus: %s"
+msgstr "ארע כשל בהצטרפות לאפיק ההפעלה של D-Bus:‏ %s"
+
+#: ../src/plugins/media-export/rygel-media-export-harvester.vala:78
+msgid "No metadata extractor available. Will not crawl."
+msgstr "אין מחלץ נתוני על זמין. לא יתבצע אחזור מידע."
+
+#: ../src/plugins/media-export/rygel-media-export-harvester.vala:121
+#, c-format
+msgid "'%s' harvested"
+msgstr "'%s' נקצר"
+
+#: ../src/plugins/media-export/rygel-media-export-harvester.vala:211
+#, c-format
+msgid "Error fetching object '%s' from database: %s"
+msgstr "ארעה שגיאה בקבלת העצם '%s' ממסד הנתונים: %s"
+
+#: ../src/plugins/media-export/rygel-media-export-harvester.vala:217
+#, c-format
+msgid "Failed to access media cache: %s"
+msgstr "הגישה למטמון המדיה נכשלה: %s"
+
+#: ../src/plugins/media-export/rygel-media-export-harvester.vala:256
+#, c-format
+msgid "Error removing object from database: %s"
+msgstr "ארעה שגיאה בעת הסרת העצם ממסד הנתונים: %s"
+
+#: ../src/plugins/media-export/rygel-media-export-recursive-file-monitor.vala:40
+msgid "Will not monitor file changes"
+msgstr "לא יתבצע מעקב אחר שינויים בקבצים"
+
+#: ../src/plugins/media-export/rygel-media-export-recursive-file-monitor.vala:98
+#, c-format
+msgid "Failed to get file info for %s"
+msgstr "ארע כשל בקבלת המידע עבור %s"
+
+#: ../src/plugins/media-export/rygel-media-export-root-container.vala:30
+#: ../src/plugins/tracker/rygel-tracker-years.vala:33
+msgid "Year"
+msgstr "שנה"
+
+#: ../src/plugins/media-export/rygel-media-export-root-container.vala:31
+msgid "All"
+msgstr "הכול"
+
+#: ../src/plugins/media-export/rygel-media-export-root-container.vala:35
+msgid "Artist"
+msgstr "אמן"
+
+#: ../src/plugins/media-export/rygel-media-export-root-container.vala:36
+msgid "Album"
+msgstr "אלבום"
+
+#: ../src/plugins/media-export/rygel-media-export-root-container.vala:37
+#: ../src/plugins/tracker/rygel-tracker-genre.vala:31
+msgid "Genre"
+msgstr "סגנון"
+
+#: ../src/plugins/media-export/rygel-media-export-root-container.vala:53
+msgid "Files & Folders"
+msgstr "קבצים ותיקיות"
+
+#: ../src/plugins/media-export/rygel-media-export-root-container.vala:104
+#, c-format
+msgid "Failed to remove URI: %s"
+msgstr "ארע כשל בהסרת הכתובת: %s"
+
+#: ../src/plugins/media-export/rygel-media-export-root-container.vala:355
+#: ../src/plugins/tracker/rygel-tracker-plugin.vala:34
+msgid "@REALNAME@'s media"
+msgstr "המדיה של @REALNAME@"
+
+#: ../src/plugins/media-export/rygel-media-export-root-container.vala:362
+#, c-format
+msgid "Failed to create MediaExport D-Bus service: %s"
+msgstr "אירע כשל ביצירת שירות ה־D-Bus ליצוא מדיה: %s"
+
+#: ../src/plugins/media-export/rygel-media-export-root-container.vala:402
+#, c-format
+msgid "Failed to remove entry: %s"
+msgstr "ארע כשל בהסרת הרשומה: %s"
+
+#: ../src/plugins/media-export/rygel-media-export-root-container.vala:423
+msgid "Music"
+msgstr "מוזיקה"
+
+#: ../src/plugins/media-export/rygel-media-export-root-container.vala:426
+msgid "Pictures"
+msgstr "תמונות"
+
+#: ../src/plugins/media-export/rygel-media-export-root-container.vala:428
+msgid "Videos"
+msgstr "וידאו"
+
+#: ../src/plugins/tracker/rygel-tracker-category-all-container.vala:54
+#, c-format
+msgid "Failed to create a Tracker connection: %s"
+msgstr "יצירת קשר עם העוקב נכשלה: %s"
+
+#: ../src/plugins/tracker/rygel-tracker-category-all-container.vala:62
+#, c-format
+msgid "Failed to construct URI for folder '%s': %s"
+msgstr "ארע כשל בהרכבת הכתובת עבור התיקייה '%s':‏ %s"
+
+#: ../src/plugins/tracker/rygel-tracker-category-all-container.vala:77
+#, c-format
+msgid "Could not subscribe to tracker signals: %s"
+msgstr "לא ניתן להירשם לאותות העוקב: %s"
+
+#: ../src/plugins/tracker/rygel-tracker-plugin-factory.vala:42
+#, c-format
+msgid "Failed to start Tracker service: %s. Plugin disabled."
+msgstr "ארע כשל בהפעלת שירות העוקב: %s. התוסף מבוטל."
+
+#: ../src/plugins/tracker/rygel-tracker-search-container.vala:104
+#, c-format
+msgid "Failed to get Tracker connection: %s"
+msgstr "חיבור לעוקב נכשל: %s"
+
+#: ../src/plugins/tracker/rygel-tracker-search-container.vala:228
+#, c-format
+msgid "Error getting item count under category '%s': %s"
+msgstr "ארעה שגיאה בקבלת ספירת הפריטים תחת הקטגוריה '%s':‏ %s"
+
+#: ../src/plugins/tracker/rygel-tracker-albums.vala:31
+msgid "Albums"
+msgstr "אלבומים"
+
+#: ../src/plugins/tracker/rygel-tracker-artists.vala:31
+msgid "Artists"
+msgstr "אמנים"
+
+#: ../src/plugins/tracker/rygel-tracker-titles.vala:58
+msgid "Titles"
+msgstr "כותרות"
+
+#: ../src/librygel-core/rygel-cmdline-config.vala:158
+#: ../src/librygel-core/rygel-cmdline-config.vala:166
+#: ../src/librygel-core/rygel-cmdline-config.vala:174
+#: ../src/librygel-core/rygel-cmdline-config.vala:182
+#: ../src/librygel-core/rygel-cmdline-config.vala:190
+#: ../src/librygel-core/rygel-cmdline-config.vala:198
+#: ../src/librygel-core/rygel-cmdline-config.vala:206
+#: ../src/librygel-core/rygel-cmdline-config.vala:214
+#: ../src/librygel-core/rygel-cmdline-config.vala:222
+#: ../src/librygel-core/rygel-cmdline-config.vala:230
+#: ../src/librygel-core/rygel-cmdline-config.vala:238
+#: ../src/librygel-core/rygel-cmdline-config.vala:246
+#: ../src/librygel-core/rygel-cmdline-config.vala:254
+#: ../src/librygel-core/rygel-cmdline-config.vala:280
+#: ../src/librygel-core/rygel-cmdline-config.vala:299
+#: ../src/librygel-core/rygel-cmdline-config.vala:305
+#: ../src/librygel-core/rygel-cmdline-config.vala:312
+#: ../src/librygel-core/rygel-cmdline-config.vala:316
+#: ../src/librygel-core/rygel-cmdline-config.vala:320
+#: ../src/librygel-core/rygel-cmdline-config.vala:343
+#: ../src/librygel-core/rygel-cmdline-config.vala:369
+#: ../src/librygel-core/rygel-cmdline-config.vala:398
+#: ../src/librygel-core/rygel-cmdline-config.vala:424
+#: ../src/librygel-core/rygel-cmdline-config.vala:449
+#: ../src/librygel-core/rygel-meta-config.vala:95
+#: ../src/librygel-core/rygel-meta-config.vala:114
+#: ../src/librygel-core/rygel-meta-config.vala:133
+#: ../src/librygel-core/rygel-meta-config.vala:152
+#: ../src/librygel-core/rygel-meta-config.vala:171
+#: ../src/librygel-core/rygel-meta-config.vala:190
+#: ../src/librygel-core/rygel-meta-config.vala:209
+#: ../src/librygel-core/rygel-meta-config.vala:228
+#: ../src/librygel-core/rygel-meta-config.vala:247
+#: ../src/librygel-core/rygel-meta-config.vala:266
+#: ../src/librygel-core/rygel-meta-config.vala:285
+#: ../src/librygel-core/rygel-meta-config.vala:304
+#: ../src/librygel-core/rygel-meta-config.vala:323
+msgid "No value available"
+msgstr "אין ערך זמין"
+
+#: ../src/librygel-core/rygel-connection-manager.vala:89
+#: ../src/librygel-core/rygel-connection-manager.vala:103
+#: ../src/librygel-core/rygel-connection-manager.vala:125
+#: ../src/librygel-renderer/rygel-av-transport.vala:215
+#: ../src/librygel-renderer/rygel-rendering-control.vala:123
+#: ../src/librygel-server/rygel-content-directory.vala:198
+#: ../src/librygel-server/rygel-content-directory.vala:225
+#: ../src/librygel-server/rygel-content-directory.vala:244
+#: ../src/librygel-server/rygel-content-directory.vala:279
+#: ../src/librygel-server/rygel-content-directory.vala:304
+#: ../src/librygel-server/rygel-content-directory.vala:329
+#: ../src/librygel-server/rygel-media-receiver-registrar.vala:59
+msgid "Invalid argument"
+msgstr "ארגומנט שגוי"
+
+#: ../src/librygel-core/rygel-connection-manager.vala:119
+msgid "Invalid connection reference"
+msgstr "הפניית חיבור שגויה"
+
+#: ../src/librygel-core/rygel-log-handler.vala:68
+#, c-format
+msgid "Failed to get log level from configuration: %s"
+msgstr "ארע כשל בקבלת רמת הרישום מהתצורה: %s"
+
+#: ../src/librygel-core/rygel-meta-config.vala:77
+#, c-format
+msgid "Failed to load user configuration: %s"
+msgstr "ארע כשל בטעינת תצורת המשתמש: %s"
+
+#: ../src/librygel-core/rygel-meta-config.vala:406
+#: ../src/librygel-core/rygel-meta-config.vala:425
+#, c-format
+msgid "No value set for '%s/enabled'"
+msgstr "לא הוגדר ערך עבור '%s/enabled'"
+
+#: ../src/librygel-core/rygel-meta-config.vala:445
+#: ../src/librygel-core/rygel-meta-config.vala:467
+#: ../src/librygel-core/rygel-meta-config.vala:493
+#: ../src/librygel-core/rygel-meta-config.vala:515
+#: ../src/librygel-core/rygel-meta-config.vala:539
+#, c-format
+msgid "No value available for '%s/%s'"
+msgstr "אין ערך זמין עבור '%s/%s'"
+
+#: ../src/librygel-core/rygel-plugin-loader.vala:85
+#, c-format
+msgid "New plugin '%s' available"
+msgstr "תוסף חדש '%s' זמין"
+
+#: ../src/librygel-core/rygel-plugin-loader.vala:119
+#, c-format
+msgid "Error listing contents of folder '%s': %s"
+msgstr "ארעה שגיאה בעת הצגת תכני התיקייה '%s':‏ %s"
+
+#: ../src/librygel-core/rygel-plugin-loader.vala:147
+#, c-format
+msgid "A module named %s is already loaded"
+msgstr "כבר נטען מודול בשם %s"
+
+#: ../src/librygel-core/rygel-plugin-loader.vala:156
+#, c-format
+msgid "Failed to load module from path '%s': %s"
+msgstr "אירע כשל בטעינת המודול מהנתיב '%s' :‏ %s"
+
+#: ../src/librygel-core/rygel-plugin-loader.vala:166
+#, c-format
+msgid "Failed to find entry point function '%s' in '%s': %s"
+msgstr "ארע כשל במציאת פונקציית נקודת הרשומה '%s' תחת '%s':‏ %s"
+
+#: ../src/librygel-core/rygel-root-device-factory.vala:98
+#: ../src/librygel-core/rygel-root-device-factory.vala:132
+#: ../src/librygel-core/rygel-root-device-factory.vala:154
+#: ../src/librygel-core/rygel-root-device-factory.vala:209
+#, c-format
+msgid "XML node '%s' not found."
+msgstr "צומת ה־XML ‏'%s' לא נמצאה."
+
+#: ../src/librygel-core/rygel-user-config.vala:198
+#, c-format
+msgid "No value available for '%s'"
+msgstr "אין ערך זמין עבור '%s'"
+
+#: ../src/librygel-core/rygel-user-config.vala:248
+#, c-format
+msgid "Value of '%s' out of range"
+msgstr "הערך של '%s' אינו בטווח"
+
+#: ../src/librygel-renderer/rygel-av-transport.vala:221
+#: ../src/librygel-renderer/rygel-rendering-control.vala:129
+msgid "Invalid InstanceID"
+msgstr "מזהה המופע שגוי"
+
+#: ../src/librygel-renderer/rygel-av-transport.vala:481
+msgid "Play speed not supported"
+msgstr "מהירות הנגינה אינה נתמכת"
+
+#: ../src/librygel-renderer/rygel-av-transport.vala:497
+#: ../src/librygel-renderer/rygel-av-transport.vala:542
+#: ../src/librygel-renderer/rygel-av-transport.vala:546
+msgid "Transition not available"
+msgstr "העברה אינה זמינה"
+
+#: ../src/librygel-renderer/rygel-av-transport.vala:526
+#: ../src/librygel-renderer/rygel-av-transport.vala:535
+msgid "Seek mode not supported"
+msgstr "מצב סקירה אינו נתמך"
+
+#: ../src/librygel-renderer/rygel-playbin-plugin.vala:34
+msgid "GStreamer Player"
+msgstr "נגן GStreamer"
+
+#: ../src/librygel-renderer/rygel-rendering-control.vala:160
+msgid "Invalid Name"
+msgstr "שם בלתי תקני"
+
+#: ../src/librygel-renderer/rygel-rendering-control.vala:174
+msgid "Invalid Channel"
+msgstr "ערוץ בלתי תקני"
+
+#: ../src/librygel-renderer/rygel-rendering-control.vala:210
+#: ../src/librygel-renderer/rygel-rendering-control.vala:252
+#: ../src/librygel-renderer/rygel-rendering-control.vala:261
+msgid "Action Failed"
+msgstr "הפעולה נכשלה"
+
+#: ../src/librygel-server/rygel-browse.vala:63
+msgid "Invalid Arguments"
+msgstr "ארגומנטים שגויים"
+
+#: ../src/librygel-server/rygel-browse.vala:94
+msgid "Cannot browse children on item"
+msgstr "לא ניתן לעיין בצאצא של פריט"
+
+#: ../src/librygel-server/rygel-browse.vala:128
+#, c-format
+msgid "Failed to browse '%s': %s\n"
+msgstr "ארע כשל בסיור ב־'%s':‏ %s\n"
+
+#: ../src/librygel-server/rygel-content-directory.vala:217
+#: ../src/librygel-server/rygel-content-directory.vala:236
+msgid "No such file transfer"
+msgstr "אין כזאת העברת קבצים"
+
+#: ../src/librygel-server/rygel-gst-utils.vala:38
+#, c-format
+msgid "Required element %s missing"
+msgstr "הרכיב הנדרש %s חסר"
+
+#. Range header was present but invalid
+#: ../src/librygel-server/rygel-http-byte-seek.vala:47
+#: ../src/librygel-server/rygel-http-byte-seek.vala:52
+#: ../src/librygel-server/rygel-http-time-seek.vala:49
+#: ../src/librygel-server/rygel-http-time-seek.vala:61
+#: ../src/librygel-server/rygel-http-time-seek.vala:68
+#: ../src/librygel-server/rygel-http-time-seek.vala:83
+#, c-format
+msgid "Invalid Range '%s'"
+msgstr "טווח שגוי '%s'"
+
+#: ../src/librygel-server/rygel-http-get.vala:59
+msgid "Invalid Request"
+msgstr "בקשה בלתי תקנית"
+
+#: ../src/librygel-server/rygel-http-identity-handler.vala:89
+#: ../src/librygel-server/rygel-http-transcode-handler.vala:57
+msgid "Not found"
+msgstr "לא נמצא"
+
+#: ../src/librygel-server/rygel-http-item-uri.vala:127
+#, c-format
+msgid "Invalid URI '%s'"
+msgstr "כתובת שגויה '%s'"
+
+#: ../src/librygel-server/rygel-http-item-uri.vala:166
+msgid "Not Found"
+msgstr "לא נמצא"
+
+#: ../src/librygel-server/rygel-http-post.vala:62
+#: ../src/librygel-server/rygel-import-resource.vala:191
+#, c-format
+msgid "Pushing data to non-empty item '%s' not allowed"
+msgstr "דחיפת עצם '%s' שאינו ריק אינה מורשית"
+
+#: ../src/librygel-server/rygel-http-post.vala:70
+#, c-format
+msgid "No writable URI for %s available"
+msgstr "אין כתובת עבור %s הניתנת לכתיבה"
+
+#. translators: Dotfile is the filename with prefix "."
+#: ../src/librygel-server/rygel-http-post.vala:185
+#, c-format
+msgid "Failed to move dotfile %s: %s"
+msgstr "העברת ה־dotfile נכשלה %s:‏ %s"
+
+#: ../src/librygel-server/rygel-http-request.vala:89
+#, c-format
+msgid "Requested item '%s' not found"
+msgstr "הפריט המבוקש '%s' לא נמצא"
+
+#: ../src/librygel-server/rygel-http-response.vala:156
+#: ../src/librygel-server/rygel-http-response.vala:177
+#, c-format
+msgid "Failed to link %s to %s"
+msgstr "ארע כשל בקישור %s אל %s"
+
+#: ../src/librygel-server/rygel-http-response.vala:192
+#, c-format
+msgid "Failed to link pad %s to %s"
+msgstr "ארע כשל בקישור הלוח %s אל %s"
+
+#: ../src/librygel-server/rygel-http-response.vala:235
+#, c-format
+msgid "Error from pipeline %s: %s"
+msgstr "שגיאה מצינורית הפיקוד %s:‏ %s"
+
+#: ../src/librygel-server/rygel-http-response.vala:242
+#, c-format
+msgid "Warning from pipeline %s: %s"
+msgstr "אזהרה מצינורית הפיקוד %s:‏ %s"
+
+#: ../src/librygel-server/rygel-http-response.vala:285
+#, c-format
+msgid "Failed to seek to offset %lld"
+msgstr "ארע כשל בעת המעבר להיסט %lld"
+
+#: ../src/librygel-server/rygel-http-seek.vala:51
+#, c-format
+msgid "Out Of Range Start '%ld'"
+msgstr "ההתחלה מחוץ לתחום '%ld'"
+
+#: ../src/librygel-server/rygel-http-seek.vala:55
+#, c-format
+msgid "Out Of Range Stop '%ld'"
+msgstr "העצירה מחוץ לתחום '%ld'"
+
+#: ../src/librygel-server/rygel-import-resource.vala:124
+#, c-format
+msgid "Failed to get original URI for '%s': %s"
+msgstr "ארע כשל בקבלת הכתובת המקורית עבור '%s':‏ %s"
+
+#: ../src/librygel-server/rygel-import-resource.vala:188
+#, c-format
+msgid "URI '%s' invalid for importing contents to"
+msgstr "הכתובת '%s' אינה תקינה לצורך יבוא תכנים אל"
+
+#: ../src/librygel-server/rygel-item-creator.vala:118
+msgid "'Elements' argument missing."
+msgstr "הארגומנט 'Elements' חסר."
+
+#: ../src/librygel-server/rygel-item-creator.vala:121
+msgid "Comments not allowed in XML"
+msgstr "תגובות אינן מורשות ב־XML"
+
+#: ../src/librygel-server/rygel-item-creator.vala:127
+#: ../src/librygel-server/rygel-item-creator.vala:280
+#: ../src/librygel-server/rygel-item-destroyer.vala:53
+#: ../src/librygel-server/rygel-item-destroyer.vala:100
+#: ../src/librygel-server/rygel-media-query-action.vala:115
+#: ../src/librygel-server/rygel-media-query-action.vala:182
+msgid "No such object"
+msgstr "אין כזה עצם"
+
+#: ../src/librygel-server/rygel-item-creator.vala:149
+#, c-format
+msgid "No items in DIDL-Lite from client: '%s'"
+msgstr "אין פריטים ב־DIDL-Lite מהלקוח: '%s'"
+
+#: ../src/librygel-server/rygel-item-creator.vala:284
+#: ../src/librygel-server/rygel-item-creator.vala:519
+#, c-format
+msgid "Object creation in %s not allowed"
+msgstr "יצירת עצמים תחת %s אינה מורשית"
+
+#: ../src/librygel-server/rygel-item-creator.vala:312
+#, c-format
+msgid "Failed to create item under '%s': %s"
+msgstr "ארע כשל ביצירת פריט תחת '%s':‏ %s"
+
+#: ../src/librygel-server/rygel-item-destroyer.vala:60
+#, c-format
+msgid "Successfully destroyed object '%s'"
+msgstr "העצם '%s' הושמד בהצלחה"
+
+#: ../src/librygel-server/rygel-item-destroyer.vala:68
+#, c-format
+msgid "Failed to destroy object '%s': %s"
+msgstr "אירע כשל בהריסת העצם שב־'%s':‏ %s"
+
+#: ../src/librygel-server/rygel-item-destroyer.vala:103
+#, c-format
+msgid "Removal of object %s not allowed"
+msgstr "הסרת עצמים מ־%s אינה מורשית"
+
+#: ../src/librygel-server/rygel-item-destroyer.vala:106
+#, c-format
+msgid "Object removal from %s not allowed"
+msgstr "הסרת עצמים מ־%s אינה מורשית"
+
+#: ../src/librygel-server/rygel-media-item.vala:273
+#, c-format
+msgid "Bad URI: %s"
+msgstr "כתובת שגויה: %s"
+
+#. Assume the protocol to be the scheme of the URI
+#: ../src/librygel-server/rygel-media-item.vala:285
+#, c-format
+msgid "Failed to probe protocol for URI %s. Assuming '%s'"
+msgstr "ארע כשל בבדיקת הפרוטוקול עבור הכתובת %s. נניח כי מדובר ב־'%s'"
+
+#: ../src/librygel-server/rygel-media-query-action.vala:120
+msgid "Invalid range"
+msgstr "טווח בלתי תקני"
+
+#: ../src/librygel-server/rygel-search.vala:91
+#, c-format
+msgid "Failed to search in '%s': %s"
+msgstr "ארע כשל בחיפוש תחת '%s':‏ %s"
+
+#: ../src/librygel-server/rygel-subtitle-manager.vala:65
+msgid "No subtitle available"
+msgstr "אין כתוביות זמינות"
+
+#: ../src/librygel-server/rygel-thumbnailer.vala:60
+#, c-format
+msgid "No thumbnailer available: %s"
+msgstr "תכנית למזעור תמונות אינה זמינה: %s"
+
+#: ../src/librygel-server/rygel-thumbnailer.vala:82
+#: ../src/librygel-server/rygel-thumbnailer.vala:91
+#: ../src/librygel-server/rygel-thumbnailer.vala:96
+#: ../src/librygel-server/rygel-thumbnailer.vala:107
+msgid "No thumbnail available"
+msgstr "אין תמונה ממוזערת"
+
+#: ../src/librygel-server/rygel-thumbnailer.vala:126
+msgid "No D-Bus thumbnailer available"
+msgstr "אין מנהל D-Bus לתמונות ממוזערות"
+
+#: ../src/librygel-server/rygel-transcode-manager.vala:130
+#, c-format
+msgid "No transcoder available for target format '%s'"
+msgstr "אין ממיר דיגיטלי זמין עבור פורמט היעד '%s'"
+
+#: ../src/rygel/rygel-main.vala:105
+#, c-format
+msgid "No plugins found in %d second; giving up.."
+msgid_plural "No plugins found in %d seconds; giving up.."
+msgstr[0] "לא נמצאו תוספים תוך שנייה; מוותר..."
+msgstr[1] "לא נמצאו תוספים בתוך %d שניות; מוותר..."
+
+#: ../src/rygel/rygel-main.vala:166
+#, c-format
+msgid "Failed to create root device factory: %s"
+msgstr "ארע כשל ביצירת מפעל התקן על: %s"
+
+#: ../src/rygel/rygel-main.vala:224
+#, c-format
+msgid "Failed to create RootDevice for %s. Reason: %s"
+msgstr "ארע כשל ביצירת התקן על עבור %s. סיבה: %s"
+
+#: ../src/ui/rygel-preferences-dialog.vala:94
+#, c-format
+msgid "Failed to create preferences dialog: %s"
+msgstr "ארע כשל ביצירת דו־שיח ההעדפות: %s"
+
+#: ../src/ui/rygel-writable-user-config.vala:122
+#, c-format
+msgid "Failed to save configuration data to file '%s': %s"
+msgstr "ארע כשל בשמירת נתוני התצורה לקובץ '%s':‏ %s"
+
+#: ../src/ui/rygel-writable-user-config.vala:210
+#, c-format
+msgid "Failed to start Rygel service: %s"
+msgstr "ארע כשל בהפעלת השירות Rygel:‏ %s"
+
+#: ../src/ui/rygel-writable-user-config.vala:212
+#, c-format
+msgid "Failed to stop Rygel service: %s"
+msgstr "ארע כשל בעצירת השירות Rygel:‏ %s"
+
+#~ msgid "Failed to create D-Bus proxies: %s"
+#~ msgstr "אירע כשל ביצירת מתווכי D-Bus:‏ %s"
+
+#~ msgid "Failed to connect to session bus: %s"
+#~ msgstr "ארע כשל בהתחברות אל אפיק ההפעלה: %s"
+
+#~ msgid "Error getting all values for '%s': %s"
+#~ msgstr "שגיאה בקבלת כל הערכים עבור '%s':‏ %s"
+
+#~ msgid "Invalid Args"
+#~ msgstr "ארגומנטים שגויים"
+
+#~ msgid "Seek failed"
+#~ msgstr "החיפוש נכשל"
+
+#~ msgid "ActionFailed"
+#~ msgstr "הפעולה נכשלה"
+
+#~ msgid "Failed to find thumbnails folder."
+#~ msgstr "ארע כשל באיתור תיקיית התמונות הממוזערות."
+
+#~ msgid "Failed to open database: %d (%s)"
+#~ msgstr "ארע כשל בפתיחת מסד הנתונים: %d‏ (%s)"
+
+#~ msgid "Unsupported type %s"
+#~ msgstr "סוג בלתי נתמך %s"
+
+#~ msgid "Object %s is not an item"
+#~ msgstr "העצם %s אינו פריט"
+
+#~ msgid "Item '%s' didn't provide a URI"
+#~ msgstr "הפריט '%s' לא ציין כתובת"
+
+#~ msgid "Plugin 'fakesink' missing"
+#~ msgstr "התוסף 'fakesink' חסר"
+
+#~ msgid "Failed to start D-Bus service: %s"
+#~ msgstr "ארע כשל בהפעלת שירות ה־D-Bus:‏ %s"
+
+#~ msgid "Failed to write modified description to %s"
+#~ msgstr "ארע כשל בכתיבת התיאור השונה אל %s"
+
+#~ msgid "Failed to read from URI: %s: %s"
+#~ msgstr "ארע כשל בקריאה מהכתובת: %s:‏ %s"
+
+#~ msgid "Failed to seek to %s-%s on URI %s: %s"
+#~ msgstr "ארע כשל במעבר אל %s‏-%s בכתובת %s:‏ %s"
+
+#~ msgid "Failed to read contents from URI: %s: %s"
+#~ msgstr "ארע כשל בקריאת התוכן מהכתובת: %s:‏ %s"
+
+#~ msgid "Failed to close stream to URI %s: %s"
+#~ msgstr "ארע כשל בסגירת התזרים לכתובת %s:‏ %s"
+
+#~ msgid "Not Applicable"
+#~ msgstr "לא בר יישום"
+
+#~ msgid "Failed to write modified description to %s."
+#~ msgstr "ארע כשל בכתיבת התיאור לאחר השינוי אל %s."
+
+#~ msgid "General"
+#~ msgstr "כללי"
+
+#~ msgid "MPE_G TS"
+#~ msgstr "MPE_G TS"
+
+#~ msgid "Plugins"
+#~ msgstr "תוספים"
+
+#~ msgid "Share M_usic"
+#~ msgstr "שיתוף _מוזיקה"
+
+#~ msgid "Share _Pictures"
+#~ msgstr "שיתוף _תמונות"
+
+#~ msgid "Share _Videos"
+#~ msgstr "שיתוף _וידאו"
+
+#~ msgid "T_itle"
+#~ msgstr "_כותרת"
+
+#~ msgid "Ti_tle"
+#~ msgstr "כו_תרת"
+
+#~ msgid ""
+#~ "Write %u for username, %n for real name of the user and %h for host name"
+#~ msgstr ""
+#~ "יש לרשום %u בתור שם המשתמש, %n בתור שם המשתמש האמתי ו־%h בתור שם המארח"
+
+#~ msgid "_Enable UPnP/DLNA"
+#~ msgstr "ה_פעלת UPnP/DLNA"
+
+#~ msgid "_Interface"
+#~ msgstr "_מנשק"
+
+#~ msgid "_LPCM"
+#~ msgstr "_LPCM"
+
+#~ msgid "_MP3"
+#~ msgstr "_MP3"
+
+#~ msgid "_Media Export"
+#~ msgstr "יי_צוא מדיה"
+
+#~ msgid "_Port"
+#~ msgstr "_פתחה"
+
+#~ msgid "_Transcoding support"
+#~ msgstr "תמיכה בה_מרה דיגיטלית"
+
+#~ msgid "_URIs"
+#~ msgstr "_כתובות"
+
+#~ msgid "Failed to create instance of database"
+#~ msgstr "ארע כשל ביציאת מופיע של מסד הנתונים"
+
+#~ msgid "Changing playback state to %s."
+#~ msgstr "מצב הנגינה משתנה ל־%s."
+
+#~ msgid "URI set to %s."
+#~ msgstr "הכתובת שונתה ל־%s."
+
+#~ msgid "volume set to %f."
+#~ msgstr "עצמת השמע הוגדרה ל־%f."
+
+#~ msgid "Using database file %s"
+#~ msgstr "נעשה שימוש בקובץ מסד הנתונים %s"
+
+#~ msgid "Failed to extract metadata from %s: %s"
+#~ msgstr "ארע כשל בחילוץ נתוני העל מ־%s:‏ %s"
+
+#~ msgid "Original search: %s"
+#~ msgstr "החיפוש המקורי: %s"
+
+#~ msgid "Parsed search expression: %s"
+#~ msgstr "התבצע ניתוח של ביטוי החיפוש: %s"
+
+#~ msgid "Trying to harvest %s because of %d"
+#~ msgstr "מתבצע ניסיון לקצירת %s עקב %d"
+
+#~ msgid "Folder %s gone; removing watch"
+#~ msgstr "התיקייה %s איננה; המעקב יוסר"
+
+#~ msgid "ID %s no longer in config; deleting..."
+#~ msgstr "מספר הזיהוי %s אינו נמצא עוד בתצורה, נמחק..."
+
+#~ msgid "Changing playback state to %s.."
+#~ msgstr "מצב הנגינה משתנה ל־%s..."
+
+#~ msgid "Executing SPARQL query: %s"
+#~ msgstr "מופעלת שאילתת SPARQL:‏ %s"
+
+#~ msgid "Seeking to %s."
+#~ msgstr "מעבר ל־%s."
+
+#~ msgid "Following HTTP headers appended to response:"
+#~ msgstr "כותרות ה־HTTP הבאות נוספו לתגובה:"
+
+#~ msgid "HTTP %s request for URI '%s' handled."
+#~ msgstr "בקשת HTTP‏ %s עבור הכתובת '%s' טופלה."
+
+#~ msgid "HTTP %s request for URI '%s'. Headers:"
+#~ msgstr "בקשת HTTP‏ %s התבקשה עבור הכתובת '%s'. כותרות:"
+
+#~ msgid "HTTP client aborted %s request for URI '%s'."
+#~ msgstr "לקוח ה־HTTP ביטל בקשת %s עבור הכתובת '%s'."
+
+#~ msgid "HTTP POST request for URI '%s'"
+#~ msgstr "בקשת POST דרך HTTP עבור הכתובת '%s'"
+
+#~ msgid "Import of '%s' to '%s' completed"
+#~ msgstr "הייבוא של '%s' אל '%s'  הושלם"
+
+#~ msgid "new network context %s (%s) available."
+#~ msgstr "הקשר רשת חדש  %s‏ (%s) זמין."
+
+#~ msgid "Ignoring network context %s (%s)."
+#~ msgstr "מתבצעת התעלמות מהקשר הרשת %s‏ (%s)."
+
+#~ msgid "Network context %s (%s) now unavailable."
+#~ msgstr "הקשר הרשת %s‏ (%s) אינו זמין כעת."
+
+#~ msgid "Plugin '%s' disabled in user configuration; ignoring.."
+#~ msgstr "התוסף '%s' בוטל בתצורת המשתמש; התעלמות..."
+
+#~ msgid "Searching for modules in folder '%s'."
+#~ msgstr "מתבצע חיפוש אחר מודולים בתיקייה '%s' ."
+
+#~ msgid "Finished searching for modules in folder '%s'"
+#~ msgstr "נגמר החיפוש אחר המודולים בתיקייה '%s'"
+
+#~ msgid "Loaded module source: '%s'"
+#~ msgstr "נטען מקור המודול: '%s'"
+
+#~ msgid "No icon provided by plugin '%s'. Using Rygel logo."
+#~ msgstr "לא סופק סמל על ידי התוסף '%s'. נעשה שימוש בלוגו של Rygel."
+
+#~ msgid "Executing search request: %s"
+#~ msgstr "מופעלת בקשת החיפוש: %s"
+
+#~ msgid "Loaded user configuration from file '%s'"
+#~ msgstr "תצורת המשתמש נטענה מהקובץ '%s'"
+
+#~ msgid "Setting up timeout for LastChange"
+#~ msgstr "הגדרת תפוגת זמן עבור השינוי האחרון"
+
+#~ msgid "Unable to serialize unsupported object"
+#~ msgstr "לא ניתן לתאם מספר סידורי עבור פריט שאינו נתמך"
+
+#~ msgid "No object satisfies given search criteria."
+#~ msgstr "אין עצם המספק את תנאי החיפוש שסופקו."
+
+#~ msgid "Failed to query database: %s"
+#~ msgstr "ארע כשל בתשאול מסד הנתונים: %s"
+
+#~ msgid "failed to enumerate folder: %s"
+#~ msgstr "ארע כשל במניית התיקייה: %s"
+
+#~ msgid "Failed to get children of container %s: %s"
+#~ msgstr "ארע כשל בקבלת הצאצא של המכל %s:‏ %s"
+
+#~ msgid "File %s does not need harvesting"
+#~ msgstr "הקובץ %s אינו זקוק לקצירה"
+
+#~ msgid "ID does not contain pairs"
+#~ msgstr "המזהה אינו מכיל צמדים"
+
+#~ msgid "Empty part not allowed in virtual ID"
+#~ msgstr "החלק הריק אינו מורשה במזהה וירטואלי"
+
+#~ msgid "Placeholder can only be on second place"
+#~ msgstr "ממלא המקום יכול להיות רק במקום השני"
+
+#~ msgid "%s is not a valid virtual ID"
+#~ msgstr "%s אינו מספר זיהוי וירטואלי תקני"
+
+#~ msgid "Got error while trying to find virtual folders: %s"
+#~ msgstr "התקבלה שגיאה בעת הניסיון למציאת תיקיות וירטואליות: %s"
+
+#~ msgid "Already harvesting; cancelling"
+#~ msgstr "כבר מתבצע קציר; מתבטל"
+
+#~ msgid "Error creating URI from %s: %s"
+#~ msgstr "שגיאה ביצירת כתובת מ־%s:‏ %s"
+
+#~ msgid "Failed to create HTTP server for %s: %s"
+#~ msgstr "ארע כשל ביצירת שרת HTTP עבור %s:‏ %s"
+
+#~ msgid "Using playbin2"
+#~ msgstr "נעשה שימוש ב־playbin2"
+
+#~ msgid "Could not create Playbin2, trying Playbin"
+#~ msgstr "לא ניתן ליצור את Playbin2, מנסה את Playbin"
+
+#~ msgid "Using playbin"
+#~ msgstr "נעשה שימוש ב־playbin"
+
+#~ msgid "Could not find any playbin."
+#~ msgstr "לא ניתן למצוא playbin כלל."
+
+#~ msgid "Please check your gstreamer setup"
+#~ msgstr "יש לבדוק את התקנת ה־gstreamer שלך"
+
+#~ msgid "Metadata extractor timed out on %s, restarting"
+#~ msgstr "פג הזמן לפעולת מחלץ נתוני העל ב־%s, מופעל מחדש"
+
+#~ msgid "Pipeline stuck while reading file info"
+#~ msgstr "צינורית הפקודות נתקעה בעת קריאת נתוני הקובץ"
+
+#~ msgid "Scheduling file %s for metadata extraction"
+#~ msgstr "מתבצע תזמון לחילוץ נתוני על מהקובץ %s"
+
+#~ msgid "File '%s' is of unknown format/type."
+#~ msgstr "הקובץ '%s' הוא מסוג/פורמט בלתי ידוע."
+
+#~ msgid "Trying to guess from content type %s"
+#~ msgstr "מתבצע ניסיון לניחוש מסוג התוכן '%s'"
+
+#~ msgid "Failed to detect UPnP class for '%s', assuming '%s'"
+#~ msgstr "ארע כשל באיתור מחלקת ה־UPnP עבור '%s', מניח כי מדובר ב־'%s'"
+
+#~ msgid "Got empty taglist for file %s"
+#~ msgstr "התקבלה רשימת תגיות ריקה עבור הקובץ %s"
+
+#~ msgid "Nothing configured, using XDG special folders"
+#~ msgstr "שום דבר לא הוגדר, נעשה שימוש בתיקיות המיוחדות של XDG"
+
+#~ msgid "Failed to parse query: %s"
+#~ msgstr "ארע כשל בניתוח השאילתה: %s"
+
+#~ msgid "No such container"
+#~ msgstr "אין כזה מכל"
+
+#~ msgid "Specified container does not exist."
+#~ msgstr "המכל שצוין אינו קיים."
+
+#~ msgid "Query: %s, Time: %f"
+#~ msgstr "שאילתה: %s, שעה: %f"
+
+#~ msgid "Checking for gstreamer playbin..."
+#~ msgstr "מתבצע חיפוש אחר playbin של gstreamer..."
+
+#~ msgid "Invalid object type"
+#~ msgstr "סוג העצם אינו תקני"
+
+#~ msgid "We have %u child."
+
+#~ msgid_plural "We have %u children."
+#~ msgstr[0] "יש לנו צאצא אחד."
+#~ msgstr[1] "יש לנו %u צאצאים."
+
+#~ msgid "Registering %s for %s"
+#~ msgstr "מתבצע רישום של %s עבור %s"
+
+#~ msgid "Could not fetch XML"
+#~ msgstr "לא ניתן לקבל את ה־XML"
+
+#~ msgid "Playlist download failed: %u (%s)"
+#~ msgstr "הורדת רשימת ההשמעה נכשלה: %u‏ (%s)"
+
+#~ msgid "ZDF Mediathek"
+#~ msgstr "ZDF Mediathek"
+
+#~ msgid "Scheduling update for all feeds...."
+#~ msgstr "מתבצע תזמון עדכונים עבור כל הערוצים...."
+
+#~ msgid "Could not get RSS from configuration, using defaults"
+#~ msgstr "לא ניתן לקבל את ה־RSS מהתצורה, נעשה שימוש בברירות מחדל"
+
+#~ msgid "Feed has not changed, nothing to do"
+#~ msgstr "הערוץ לא השתנה, אין מה לעשות"
+
+#~ msgid "Got unexpected response %u (%s)"
+#~ msgstr "התקבלה תגובה בלתי צפויה %u‏ (%s)"
+
+#~ msgid "Error creating video item: %s"
+#~ msgstr "שגיאה ביצירת פריט הווידאו: %s"
+
+#~ msgid "XPath query failed"
+#~ msgstr "שאילתת ה־XPath"
+
+#~ msgid "Failed to parse doc"
+#~ msgstr "ארע כשל בניתוח המסמך"
+
+#~ msgid "Requesting change since %s"
+#~ msgstr "בקשת שינוי מאז %s"
+
+#~ msgid "ZDF Mediathek RSS feed %u"
+#~ msgstr "ערוץ ה־RSS של ZDF Mediathek‏ %u"
+
+#~ msgid "ZDF - Second German TV Channel Streams"
+#~ msgstr "ZDF - תזרימי הטלוויזיה של הערוץ הגרמני השני"
+
+#~ msgid "group node has no 'url' property"
+#~ msgstr "למפרק הקבוצה אין תכונת 'url'"
+
+#~ msgid "invalid or no namespace"
+#~ msgstr "שם המרחב פגום או חסר"
+
+#~ msgid "Invalid or no namespace on group node"
+#~ msgstr "שם המרחב פגום או חסר במפרק הקבוצה"
+
+#~ msgid "Could not find title"
+#~ msgstr "לא ניתן למצוא כותרת"
+
+#~ msgid "Could not find URIs"
+#~ msgstr "לא ניתן למצוא כתובות"

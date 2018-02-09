@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>RygelThumbnail</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="librygel-server Reference Manual">
+<link rel="up" href="ch01.html" title="librygel-server API Reference">
+<link rel="prev" href="RygelSubtitle.html" title="RygelSubtitle">
+<link rel="next" href="RygelMediaObjects.html" title="RygelMediaObjects">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="RygelSubtitle.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">librygel-server Reference Manual</th>
+<td><a accesskey="n" href="RygelMediaObjects.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#RygelThumbnail.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#RygelThumbnail.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#RygelThumbnail.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="RygelThumbnail"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="RygelThumbnail.top_of_page"></a>RygelThumbnail</span></h2>
+<p>RygelThumbnail — Represents a picture or video thumbnail.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="RygelThumbnail.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">#define             <a class="link" href="RygelThumbnail.html#RYGEL-TYPE-THUMBNAIL:CAPS" title="RYGEL_TYPE_THUMBNAIL">RYGEL_TYPE_THUMBNAIL</a>
+<a class="link" href="RygelThumbnail.html" title="RygelThumbnail"><span class="returnvalue">RygelThumbnail</span></a> *    <a class="link" href="RygelThumbnail.html#rygel-thumbnail-new" title="rygel_thumbnail_new ()">rygel_thumbnail_new</a>                 (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *mime_type</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *dlna_profile</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *file_extension</code></em>);
+struct              <a class="link" href="RygelThumbnail.html#RygelThumbnail-struct" title="struct RygelThumbnail">RygelThumbnail</a>;
+struct              <a class="link" href="RygelThumbnail.html#RygelThumbnailClass" title="struct RygelThumbnailClass">RygelThumbnailClass</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelThumbnail.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  RygelIconInfo
+   +----RygelThumbnail
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelThumbnail.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="RygelThumbnail.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="RYGEL-TYPE-THUMBNAIL:CAPS"></a><h3>RYGEL_TYPE_THUMBNAIL</h3>
+<pre class="programlisting">#define RYGEL_TYPE_THUMBNAIL (rygel_thumbnail_get_type ())
+</pre>
+<p>
+The type for <a class="link" href="RygelThumbnail.html" title="RygelThumbnail"><span class="type">RygelThumbnail</span></a>.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-thumbnail-new"></a><h3>rygel_thumbnail_new ()</h3>
+<pre class="programlisting"><a class="link" href="RygelThumbnail.html" title="RygelThumbnail"><span class="returnvalue">RygelThumbnail</span></a> *    rygel_thumbnail_new                 (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *mime_type</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *dlna_profile</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *file_extension</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelThumbnail-struct"></a><h3>struct RygelThumbnail</h3>
+<pre class="programlisting">struct RygelThumbnail;</pre>
+<p>
+Represents a picture or video thumbnail.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelThumbnailClass"></a><h3>struct RygelThumbnailClass</h3>
+<pre class="programlisting">struct RygelThumbnailClass {
+	RygelIconInfoClass parent_class;
+	GUPnPDIDLLiteResource* (*add_resource) (RygelThumbnail* self, GUPnPDIDLLiteItem* didl_item, const gchar* protocol);
+};
+</pre>
+<p>
+The class structure for <a class="link" href="RygelThumbnail.html#RYGEL-TYPE-THUMBNAIL:CAPS" title="RYGEL_TYPE_THUMBNAIL"><code class="literal">RYGEL_TYPE_THUMBNAIL</code></a>. All the fields in this structure are private and should never be accessed directly.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><span class="type">RygelIconInfoClass</span> <em class="structfield"><code><a name="RygelThumbnailClass.parent-class"></a>parent_class</code></em>;</span></p></td>
+<td>the parent class structure</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelThumbnailClass.add-resource"></a>add_resource</code></em> ()</span></p></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

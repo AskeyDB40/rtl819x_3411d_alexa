@@ -1,0 +1,362 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GUPnPSearchCriteriaParser</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GUPnP A/V Reference Manual">
+<link rel="up" href="ch01.html" title="GUPnP A/V">
+<link rel="prev" href="GUPnPLastChangeParser.html" title="GUPnPLastChangeParser">
+<link rel="next" href="GUPnPProtocolInfo.html" title="GUPnPProtocolInfo">
+<meta name="generator" content="GTK-Doc V1.17.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GUPnPLastChangeParser.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GUPnP A/V Reference Manual</th>
+<td><a accesskey="n" href="GUPnPProtocolInfo.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GUPnPSearchCriteriaParser.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#GUPnPSearchCriteriaParser.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#GUPnPSearchCriteriaParser.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#GUPnPSearchCriteriaParser.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="GUPnPSearchCriteriaParser"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GUPnPSearchCriteriaParser.top_of_page"></a>GUPnPSearchCriteriaParser</span></h2>
+<p>GUPnPSearchCriteriaParser — A/V search criteria parser</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="GUPnPSearchCriteriaParser.synopsis"></a><h2>Synopsis</h2>
+<a name="GUPnPSearchCriteriaOp"></a><pre class="synopsis">                    <a class="link" href="GUPnPSearchCriteriaParser.html#GUPnPSearchCriteriaParser-struct" title="GUPnPSearchCriteriaParser">GUPnPSearchCriteriaParser</a>;
+enum                <a class="link" href="GUPnPSearchCriteriaParser.html#GUPnPSearchCriteriaOp">GUPnPSearchCriteriaOp</a>;
+<a class="link" href="GUPnPSearchCriteriaParser.html" title="GUPnPSearchCriteriaParser"><span class="returnvalue">GUPnPSearchCriteriaParser</span></a> * <a class="link" href="GUPnPSearchCriteriaParser.html#gupnp-search-criteria-parser-new" title="gupnp_search_criteria_parser_new ()">gupnp_search_criteria_parser_new</a>
+                                                        (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="GUPnPSearchCriteriaParser.html#gupnp-search-criteria-parser-parse-text" title="gupnp_search_criteria_parser_parse_text ()">gupnp_search_criteria_parser_parse_text</a>
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPSearchCriteriaParser.html" title="GUPnPSearchCriteriaParser"><span class="type">GUPnPSearchCriteriaParser</span></a> *parser</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *text</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="GUPnPSearchCriteriaParser.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----GUPnPSearchCriteriaParser
+</pre>
+<pre class="synopsis">
+  GEnum
+   +----GUPnPSearchCriteriaOp
+</pre>
+</div>
+<div class="refsect1">
+<a name="GUPnPSearchCriteriaParser.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="GUPnPSearchCriteriaParser.html#GUPnPSearchCriteriaParser-begin-parens" title='The "begin-parens" signal'>begin-parens</a>"                                   : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
+  "<a class="link" href="GUPnPSearchCriteriaParser.html#GUPnPSearchCriteriaParser-conjunction" title='The "conjunction" signal'>conjunction</a>"                                    : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
+  "<a class="link" href="GUPnPSearchCriteriaParser.html#GUPnPSearchCriteriaParser-disjunction" title='The "disjunction" signal'>disjunction</a>"                                    : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
+  "<a class="link" href="GUPnPSearchCriteriaParser.html#GUPnPSearchCriteriaParser-end-parens" title='The "end-parens" signal'>end-parens</a>"                                     : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
+  "<a class="link" href="GUPnPSearchCriteriaParser.html#GUPnPSearchCriteriaParser-expression" title='The "expression" signal'>expression</a>"                                     : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="GUPnPSearchCriteriaParser.description"></a><h2>Description</h2>
+<p>
+<a class="link" href="GUPnPSearchCriteriaParser.html" title="GUPnPSearchCriteriaParser"><span class="type">GUPnPSearchCriteriaParser</span></a> parses ContentDirectory search criteria
+strings.
+</p>
+<p>
+Note that no signals will be emitted if a wildcard is specified,
+and that the user is responsible for ensuring precedence of conjunction
+over disjunction.
+</p>
+</div>
+<div class="refsect1">
+<a name="GUPnPSearchCriteriaParser.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GUPnPSearchCriteriaParser-struct"></a><h3>GUPnPSearchCriteriaParser</h3>
+<pre class="programlisting">typedef struct _GUPnPSearchCriteriaParser GUPnPSearchCriteriaParser;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GUPnPSearchCriteriaOp"></a><h3>enum GUPnPSearchCriteriaOp</h3>
+<pre class="programlisting">typedef enum {
+        /* G_TYPE_STRING */
+        GUPNP_SEARCH_CRITERIA_OP_EQ               = G_TOKEN_LAST + 1,
+        GUPNP_SEARCH_CRITERIA_OP_NEQ              = G_TOKEN_LAST + 2,
+        GUPNP_SEARCH_CRITERIA_OP_LESS             = G_TOKEN_LAST + 3,
+        GUPNP_SEARCH_CRITERIA_OP_LEQ              = G_TOKEN_LAST + 4,
+        GUPNP_SEARCH_CRITERIA_OP_GREATER          = G_TOKEN_LAST + 5,
+        GUPNP_SEARCH_CRITERIA_OP_GEQ              = G_TOKEN_LAST + 6,
+        GUPNP_SEARCH_CRITERIA_OP_CONTAINS         = G_TOKEN_LAST + 7,
+        GUPNP_SEARCH_CRITERIA_OP_DOES_NOT_CONTAIN = G_TOKEN_LAST + 8,
+        GUPNP_SEARCH_CRITERIA_OP_DERIVED_FROM     = G_TOKEN_LAST + 9,
+
+        /* G_TYPE_BOOLEAN */
+        GUPNP_SEARCH_CRITERIA_OP_EXISTS           = G_TOKEN_LAST + 10
+} GUPnPSearchCriteriaOp;
+</pre>
+<p>
+The possible operators in SearchCriteria strings.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><a name="GUPNP-SEARCH-CRITERIA-OP-EQ:CAPS"></a><span class="term"><code class="literal">GUPNP_SEARCH_CRITERIA_OP_EQ</code></span></p></td>
+<td>'='
+</td>
+</tr>
+<tr>
+<td><p><a name="GUPNP-SEARCH-CRITERIA-OP-NEQ:CAPS"></a><span class="term"><code class="literal">GUPNP_SEARCH_CRITERIA_OP_NEQ</code></span></p></td>
+<td>'!='
+</td>
+</tr>
+<tr>
+<td><p><a name="GUPNP-SEARCH-CRITERIA-OP-LESS:CAPS"></a><span class="term"><code class="literal">GUPNP_SEARCH_CRITERIA_OP_LESS</code></span></p></td>
+<td>'&lt;'
+</td>
+</tr>
+<tr>
+<td><p><a name="GUPNP-SEARCH-CRITERIA-OP-LEQ:CAPS"></a><span class="term"><code class="literal">GUPNP_SEARCH_CRITERIA_OP_LEQ</code></span></p></td>
+<td>'&lt;='
+</td>
+</tr>
+<tr>
+<td><p><a name="GUPNP-SEARCH-CRITERIA-OP-GREATER:CAPS"></a><span class="term"><code class="literal">GUPNP_SEARCH_CRITERIA_OP_GREATER</code></span></p></td>
+<td>'&gt;'
+</td>
+</tr>
+<tr>
+<td><p><a name="GUPNP-SEARCH-CRITERIA-OP-GEQ:CAPS"></a><span class="term"><code class="literal">GUPNP_SEARCH_CRITERIA_OP_GEQ</code></span></p></td>
+<td>'&gt;='
+</td>
+</tr>
+<tr>
+<td><p><a name="GUPNP-SEARCH-CRITERIA-OP-CONTAINS:CAPS"></a><span class="term"><code class="literal">GUPNP_SEARCH_CRITERIA_OP_CONTAINS</code></span></p></td>
+<td>'contains'
+</td>
+</tr>
+<tr>
+<td><p><a name="GUPNP-SEARCH-CRITERIA-OP-DOES-NOT-CONTAIN:CAPS"></a><span class="term"><code class="literal">GUPNP_SEARCH_CRITERIA_OP_DOES_NOT_CONTAIN</code></span></p></td>
+<td>'doesNotContain'
+</td>
+</tr>
+<tr>
+<td><p><a name="GUPNP-SEARCH-CRITERIA-OP-DERIVED-FROM:CAPS"></a><span class="term"><code class="literal">GUPNP_SEARCH_CRITERIA_OP_DERIVED_FROM</code></span></p></td>
+<td>'derivedFrom'
+</td>
+</tr>
+<tr>
+<td><p><a name="GUPNP-SEARCH-CRITERIA-OP-EXISTS:CAPS"></a><span class="term"><code class="literal">GUPNP_SEARCH_CRITERIA_OP_EXISTS</code></span></p></td>
+<td>'exists'
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-search-criteria-parser-new"></a><h3>gupnp_search_criteria_parser_new ()</h3>
+<pre class="programlisting"><a class="link" href="GUPnPSearchCriteriaParser.html" title="GUPnPSearchCriteriaParser"><span class="returnvalue">GUPnPSearchCriteriaParser</span></a> * gupnp_search_criteria_parser_new
+                                                        (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A new <a class="link" href="GUPnPSearchCriteriaParser.html" title="GUPnPSearchCriteriaParser"><span class="type">GUPnPSearchCriteriaParser</span></a> object.</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-search-criteria-parser-parse-text"></a><h3>gupnp_search_criteria_parser_parse_text ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gupnp_search_criteria_parser_parse_text
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPSearchCriteriaParser.html" title="GUPnPSearchCriteriaParser"><span class="type">GUPnPSearchCriteriaParser</span></a> *parser</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *text</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Parses <em class="parameter"><code>text</code></em>, emitting the various defined signals on the way. If an
+error occured <em class="parameter"><code>error</code></em> will be set.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>parser</code></em> :</span></p></td>
+<td>A <a class="link" href="GUPnPSearchCriteriaParser.html" title="GUPnPSearchCriteriaParser"><span class="type">GUPnPSearchCriteriaParser</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>text</code></em> :</span></p></td>
+<td>The search criteria string to be parsed</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>The location where to store the error information if any, or NULL</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>TRUE on success.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="GUPnPSearchCriteriaParser.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="GUPnPSearchCriteriaParser-begin-parens"></a><h3>The <code class="literal">"begin-parens"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="GUPnPSearchCriteriaParser.html" title="GUPnPSearchCriteriaParser"><span class="type">GUPnPSearchCriteriaParser</span></a> *parser,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>                   user_data)      : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a></pre>
+<p>
+The ::begin_parens signal is emitted to mark the beginning of a
+parenthetical expression.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>parser</code></em> :</span></p></td>
+<td>The <a class="link" href="GUPnPSearchCriteriaParser.html" title="GUPnPSearchCriteriaParser"><span class="type">GUPnPSearchCriteriaParser</span></a> that received the signal</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GUPnPSearchCriteriaParser-conjunction"></a><h3>The <code class="literal">"conjunction"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="GUPnPSearchCriteriaParser.html" title="GUPnPSearchCriteriaParser"><span class="type">GUPnPSearchCriteriaParser</span></a> *parser,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>                   user_data)      : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a></pre>
+<p>
+The ::conjuction signal is emitted whenever a conjuction marker
+(and) is parsed.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>parser</code></em> :</span></p></td>
+<td>The <a class="link" href="GUPnPSearchCriteriaParser.html" title="GUPnPSearchCriteriaParser"><span class="type">GUPnPSearchCriteriaParser</span></a> that received the signal</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GUPnPSearchCriteriaParser-disjunction"></a><h3>The <code class="literal">"disjunction"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="GUPnPSearchCriteriaParser.html" title="GUPnPSearchCriteriaParser"><span class="type">GUPnPSearchCriteriaParser</span></a> *parser,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>                   user_data)      : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a></pre>
+<p>
+The ::disjuction signal is emitted whenever a disjuction marker
+(or&amp;rpar is parsed.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>parser</code></em> :</span></p></td>
+<td>The <a class="link" href="GUPnPSearchCriteriaParser.html" title="GUPnPSearchCriteriaParser"><span class="type">GUPnPSearchCriteriaParser</span></a> that received the signal</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GUPnPSearchCriteriaParser-end-parens"></a><h3>The <code class="literal">"end-parens"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="GUPnPSearchCriteriaParser.html" title="GUPnPSearchCriteriaParser"><span class="type">GUPnPSearchCriteriaParser</span></a> *parser,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>                   user_data)      : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a></pre>
+<p>
+The ::end_parens signal is emitted to mark the end of a parenthetical
+expression.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>parser</code></em> :</span></p></td>
+<td>The <a class="link" href="GUPnPSearchCriteriaParser.html" title="GUPnPSearchCriteriaParser"><span class="type">GUPnPSearchCriteriaParser</span></a> that received the signal</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GUPnPSearchCriteriaParser-expression"></a><h3>The <code class="literal">"expression"</code> signal</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            user_function                      (<a class="link" href="GUPnPSearchCriteriaParser.html" title="GUPnPSearchCriteriaParser"><span class="type">GUPnPSearchCriteriaParser</span></a> *parser,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>                     *property,
+                                                        <a class="link" href="GUPnPSearchCriteriaParser.html#GUPnPSearchCriteriaOp"><span class="type">GUPnPSearchCriteriaOp</span></a>      op,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>                     *value,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>                   error,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>                   user_data)      : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a></pre>
+<p>
+The ::expression signal is emitted whenever an expression is parsed.
+Set <em class="parameter"><code>error</code></em> and return <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if an error occurred.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>parser</code></em> :</span></p></td>
+<td>The <a class="link" href="GUPnPSearchCriteriaParser.html" title="GUPnPSearchCriteriaParser"><span class="type">GUPnPSearchCriteriaParser</span></a> that received the signal</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td>The property</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>op</code></em> :</span></p></td>
+<td>The operator as <a class="link" href="GUPnPSearchCriteriaParser.html#GUPnPSearchCriteriaOp"><span class="type">GUPnPSearchCriteriaOp</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>The value as string</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>Place-holder for any possible errors from handler</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17.1</div>
+</body>
+</html>

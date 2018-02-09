@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>RygelMediaServerPlugin</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="librygel-server Reference Manual">
+<link rel="up" href="ch01.html" title="librygel-server API Reference">
+<link rel="prev" href="RygelMusicItem.html" title="RygelMusicItem">
+<link rel="next" href="RygelSearchableContainer.html" title="RygelSearchableContainer">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="RygelMusicItem.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">librygel-server Reference Manual</th>
+<td><a accesskey="n" href="RygelSearchableContainer.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#RygelMediaServerPlugin.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#RygelMediaServerPlugin.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#RygelMediaServerPlugin.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="RygelMediaServerPlugin"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="RygelMediaServerPlugin.top_of_page"></a>RygelMediaServerPlugin</span></h2>
+<p>RygelMediaServerPlugin — This is the base class for every Rygel implementation of a UPnP media server. It should be used either for a real plug-in for the rygel process or used in-process via the librygel-server API (see the standalone-server.c example).</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="RygelMediaServerPlugin.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">#define             <a class="link" href="RygelMediaServerPlugin.html#RYGEL-TYPE-MEDIA-SERVER-PLUGIN:CAPS" title="RYGEL_TYPE_MEDIA_SERVER_PLUGIN">RYGEL_TYPE_MEDIA_SERVER_PLUGIN</a>
+struct              <a class="link" href="RygelMediaServerPlugin.html#RygelMediaServerPlugin-struct" title="struct RygelMediaServerPlugin">RygelMediaServerPlugin</a>;
+struct              <a class="link" href="RygelMediaServerPlugin.html#RygelMediaServerPluginClass" title="struct RygelMediaServerPluginClass">RygelMediaServerPluginClass</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelMediaServerPlugin.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="../gobject/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a href="../gupnp/GUPnPResourceFactory.html">GUPnPResourceFactory</a>
+         +----RygelPlugin
+               +----RygelMediaServerPlugin
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelMediaServerPlugin.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="RygelMediaServerPlugin.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="RYGEL-TYPE-MEDIA-SERVER-PLUGIN:CAPS"></a><h3>RYGEL_TYPE_MEDIA_SERVER_PLUGIN</h3>
+<pre class="programlisting">#define RYGEL_TYPE_MEDIA_SERVER_PLUGIN (rygel_media_server_plugin_get_type ())
+</pre>
+<p>
+The type for <a class="link" href="RygelMediaServerPlugin.html" title="RygelMediaServerPlugin"><span class="type">RygelMediaServerPlugin</span></a>.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelMediaServerPlugin-struct"></a><h3>struct RygelMediaServerPlugin</h3>
+<pre class="programlisting">struct RygelMediaServerPlugin;</pre>
+<p>
+This is the base class for every Rygel implementation of a UPnP media server. It should be used either for a real plug-in for the rygel process or used in-process via the librygel-server API (see the standalone-server.c example).
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelMediaServerPluginClass"></a><h3>struct RygelMediaServerPluginClass</h3>
+<pre class="programlisting">struct RygelMediaServerPluginClass {
+	RygelPluginClass parent_class;
+};
+</pre>
+<p>
+The class structure for <a class="link" href="RygelMediaServerPlugin.html#RYGEL-TYPE-MEDIA-SERVER-PLUGIN:CAPS" title="RYGEL_TYPE_MEDIA_SERVER_PLUGIN"><code class="literal">RYGEL_TYPE_MEDIA_SERVER_PLUGIN</code></a>. All the fields in this structure are private and should never be accessed directly.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="type">RygelPluginClass</span> <em class="structfield"><code><a name="RygelMediaServerPluginClass.parent-class"></a>parent_class</code></em>;</span></p></td>
+<td>the parent class structure</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

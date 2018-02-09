@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+
+<dlna-profiles>
+  <restrictions>
+    <restriction id="EAC3" type="audio">
+      <field name="name" type="string">
+        <value>audio/x-eac3</value>
+      </field>
+      <field name="rate" type="int">
+        <value>32000</value>
+        <value>44100</value>
+        <value>48000</value>
+      </field>
+      <field name="channels" type="int">
+        <!-- XXX: need to verify channel mapping -->
+        <range min="1" max="6"/>
+      </field>
+      <field name="bitrate" type="int" used="in-strict">
+        <range min="32000" max="6144000"/>
+      </field>
+    </restriction>
+
+    <restriction id="AC3" type="audio">
+      <field name="name" type="string">
+	<value>audio/x-ac3</value>
+      </field>
+      <field name="rate" type="int">
+	<value>32000</value>
+	<value>44100</value>
+	<value>48000</value>
+      </field>
+      <field name="channels" type="int">
+	<!-- XXX: need to verify channel mapping -->
+	<range min="1" max="6"/>
+      </field>
+      <field name="bitrate" type="int">
+	<range min="64000" max="640000"/>
+      </field>
+    </restriction>
+
+    <restriction id="EAC3-3024" type="audio">
+      <parent name="EAC3" />
+      <field name="bitrate" type="int" used="in-strict">
+        <range min="0" max="3024000" />
+      </field>
+    </restriction>
+  </restrictions>
+
+  <dlna-profile name="AC3" mime="audio/vnd.dolby.dd-raw">
+    <parent name="AC3" />
+  </dlna-profile>
+
+  <dlna-profile name="EAC3" mime="audio/eac3">
+    <parent name="EAC3" />
+  </dlna-profile>
+</dlna-profiles>

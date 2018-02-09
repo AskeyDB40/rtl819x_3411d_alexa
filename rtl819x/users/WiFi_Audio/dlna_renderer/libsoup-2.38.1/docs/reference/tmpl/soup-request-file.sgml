@@ -1,0 +1,39 @@
+<!-- ##### SECTION Title ##### -->
+SoupRequestFile
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT SoupRequestFile ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION soup_request_file_get_file ##### -->
+<para>
+
+</para>
+
+@file: 
+@Returns: 
+
+

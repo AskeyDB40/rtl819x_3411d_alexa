@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>RygelImageItem</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="librygel-server Reference Manual">
+<link rel="up" href="ch01.html" title="librygel-server API Reference">
+<link rel="prev" href="ch01.html" title="librygel-server API Reference">
+<link rel="next" href="RygelPhotoItem.html" title="RygelPhotoItem">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ch01.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">librygel-server Reference Manual</th>
+<td><a accesskey="n" href="RygelPhotoItem.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#RygelImageItem.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#RygelImageItem.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#RygelImageItem.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#RygelImageItem.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#RygelImageItem.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="RygelImageItem"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="RygelImageItem.top_of_page"></a>RygelImageItem</span></h2>
+<p>RygelImageItem — Represents an image item.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="RygelImageItem.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">#define             <a class="link" href="RygelImageItem.html#RYGEL-TYPE-IMAGE-ITEM:CAPS" title="RYGEL_TYPE_IMAGE_ITEM">RYGEL_TYPE_IMAGE_ITEM</a>
+#define             <a class="link" href="RygelImageItem.html#RYGEL-IMAGE-ITEM-UPNP-CLASS:CAPS" title="RYGEL_IMAGE_ITEM_UPNP_CLASS">RYGEL_IMAGE_ITEM_UPNP_CLASS</a>
+<a class="link" href="RygelImageItem.html" title="RygelImageItem"><span class="returnvalue">RygelImageItem</span></a> *    <a class="link" href="RygelImageItem.html#rygel-image-item-new" title="rygel_image_item_new ()">rygel_image_item_new</a>                (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *id</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="RygelMediaContainer.html" title="RygelMediaContainer"><span class="type">RygelMediaContainer</span></a> *parent</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *title</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *upnp_class</code></em>);
+struct              <a class="link" href="RygelImageItem.html#RygelImageItem-struct" title="struct RygelImageItem">RygelImageItem</a>;
+struct              <a class="link" href="RygelImageItem.html#RygelImageItemClass" title="struct RygelImageItemClass">RygelImageItemClass</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelImageItem.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="../gobject/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="RygelMediaObject.html" title="RygelMediaObject">RygelMediaObject</a>
+         +----<a class="link" href="RygelMediaItem.html" title="RygelMediaItem">RygelMediaItem</a>
+               +----RygelImageItem
+                     +----<a class="link" href="RygelPhotoItem.html" title="RygelPhotoItem">RygelPhotoItem</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelImageItem.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+RygelImageItem implements
+ <a class="link" href="RygelVisualItem.html" title="RygelVisualItem">RygelVisualItem</a>.</p>
+</div>
+<div class="refsect1">
+<a name="RygelImageItem.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="RygelImageItem.html#RygelImageItem--color-depth" title='The "color-depth" property'>color-depth</a>"              <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write
+  "<a class="link" href="RygelImageItem.html#RygelImageItem--height" title='The "height" property'>height</a>"                   <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write
+  "<a class="link" href="RygelImageItem.html#RygelImageItem--pixel-height" title='The "pixel-height" property'>pixel-height</a>"             <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write
+  "<a class="link" href="RygelImageItem.html#RygelImageItem--pixel-width" title='The "pixel-width" property'>pixel-width</a>"              <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write
+  "<a class="link" href="RygelImageItem.html#RygelImageItem--thumbnails" title='The "thumbnails" property'>thumbnails</a>"               <span class="type">GeeArrayList</span>*         : Read / Write
+  "<a class="link" href="RygelImageItem.html#RygelImageItem--width" title='The "width" property'>width</a>"                    <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelImageItem.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="RygelImageItem.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="RYGEL-TYPE-IMAGE-ITEM:CAPS"></a><h3>RYGEL_TYPE_IMAGE_ITEM</h3>
+<pre class="programlisting">#define RYGEL_TYPE_IMAGE_ITEM (rygel_image_item_get_type ())
+</pre>
+<p>
+The type for <a class="link" href="RygelImageItem.html" title="RygelImageItem"><span class="type">RygelImageItem</span></a>.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RYGEL-IMAGE-ITEM-UPNP-CLASS:CAPS"></a><h3>RYGEL_IMAGE_ITEM_UPNP_CLASS</h3>
+<pre class="programlisting">#define RYGEL_IMAGE_ITEM_UPNP_CLASS "object.item.imageItem"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-image-item-new"></a><h3>rygel_image_item_new ()</h3>
+<pre class="programlisting"><a class="link" href="RygelImageItem.html" title="RygelImageItem"><span class="returnvalue">RygelImageItem</span></a> *    rygel_image_item_new                (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *id</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="RygelMediaContainer.html" title="RygelMediaContainer"><span class="type">RygelMediaContainer</span></a> *parent</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *title</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *upnp_class</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelImageItem-struct"></a><h3>struct RygelImageItem</h3>
+<pre class="programlisting">struct RygelImageItem;</pre>
+<p>
+Represents an image item.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelImageItemClass"></a><h3>struct RygelImageItemClass</h3>
+<pre class="programlisting">struct RygelImageItemClass {
+	RygelMediaItemClass parent_class;
+};
+</pre>
+<p>
+The class structure for <a class="link" href="RygelImageItem.html#RYGEL-TYPE-IMAGE-ITEM:CAPS" title="RYGEL_TYPE_IMAGE_ITEM"><code class="literal">RYGEL_TYPE_IMAGE_ITEM</code></a>. All the fields in this structure are private and should never be accessed directly.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><a class="link" href="RygelMediaItem.html#RygelMediaItemClass" title="struct RygelMediaItemClass"><span class="type">RygelMediaItemClass</span></a> <em class="structfield"><code><a name="RygelImageItemClass.parent-class"></a>parent_class</code></em>;</span></p></td>
+<td>the parent class structure</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="RygelImageItem.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="RygelImageItem--color-depth"></a><h3>The <code class="literal">"color-depth"</code> property</h3>
+<pre class="programlisting">  "color-depth"              <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write</pre>
+<p>color-depth.</p>
+<p>Default value: -1</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelImageItem--height"></a><h3>The <code class="literal">"height"</code> property</h3>
+<pre class="programlisting">  "height"                   <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write</pre>
+<p>height.</p>
+<p>Default value: -1</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelImageItem--pixel-height"></a><h3>The <code class="literal">"pixel-height"</code> property</h3>
+<pre class="programlisting">  "pixel-height"             <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write</pre>
+<p>pixel-height.</p>
+<p>Default value: -1</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelImageItem--pixel-width"></a><h3>The <code class="literal">"pixel-width"</code> property</h3>
+<pre class="programlisting">  "pixel-width"              <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write</pre>
+<p>pixel-width.</p>
+<p>Default value: -1</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelImageItem--thumbnails"></a><h3>The <code class="literal">"thumbnails"</code> property</h3>
+<pre class="programlisting">  "thumbnails"               <span class="type">GeeArrayList</span>*         : Read / Write</pre>
+<p>thumbnails.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelImageItem--width"></a><h3>The <code class="literal">"width"</code> property</h3>
+<pre class="programlisting">  "width"                    <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write</pre>
+<p>width.</p>
+<p>Default value: -1</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

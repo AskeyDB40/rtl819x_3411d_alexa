@@ -1,0 +1,86 @@
+<!-- ##### SECTION Title ##### -->
+GUPnPResourceFactory
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT GUPnPResourceFactory ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION gupnp_resource_factory_new ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_resource_factory_get_default ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_resource_factory_register_resource_type ##### -->
+<para>
+
+</para>
+
+@factory: 
+@upnp_type: 
+@type: 
+
+
+<!-- ##### FUNCTION gupnp_resource_factory_unregister_resource_type ##### -->
+<para>
+
+</para>
+
+@factory: 
+@upnp_type: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_resource_factory_register_resource_proxy_type ##### -->
+<para>
+
+</para>
+
+@factory: 
+@upnp_type: 
+@type: 
+
+
+<!-- ##### FUNCTION gupnp_resource_factory_unregister_resource_proxy_type ##### -->
+<para>
+
+</para>
+
+@factory: 
+@upnp_type: 
+@Returns: 
+
+

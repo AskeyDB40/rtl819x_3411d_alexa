@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelLogicalExpression">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelLogicalExpression.top_of_page">RygelLogicalExpression</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-SERVER Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelLogicalExpression</refname>
+<refpurpose>This is a parsed UPnP search expression consisting of two other search expressions joined by a boolean operator such as AND or OR.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelLogicalExpression.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+<anchor id="RygelLogicalOperator"/>
+<synopsis>#define             <link linkend="RYGEL-TYPE-LOGICAL-EXPRESSION:CAPS">RYGEL_TYPE_LOGICAL_EXPRESSION</link>
+<link linkend="RygelLogicalExpression"><returnvalue>RygelLogicalExpression</returnvalue></link> * <link linkend="rygel-logical-expression-new">rygel_logical_expression_new</link>   (<parameter><type>void</type></parameter>);
+struct              <link linkend="RygelLogicalExpression-struct">RygelLogicalExpression</link>;
+struct              <link linkend="RygelLogicalExpressionClass">RygelLogicalExpressionClass</link>;
+enum                <link linkend="RygelLogicalOperator-enum">RygelLogicalOperator</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelLogicalExpression.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="RygelSearchExpression">RygelSearchExpression</link>
+   +----RygelLogicalExpression
+</synopsis>
+<synopsis>
+  <link linkend="GEnum">GEnum</link>
+   +----RygelLogicalOperator
+</synopsis>
+</refsect1>
+
+<refsect1 id="RygelLogicalExpression.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="RygelLogicalExpression.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="RYGEL-TYPE-LOGICAL-EXPRESSION:CAPS" role="macro">
+<title>RYGEL_TYPE_LOGICAL_EXPRESSION</title>
+<indexterm zone="RYGEL-TYPE-LOGICAL-EXPRESSION:CAPS"><primary>RYGEL_TYPE_LOGICAL_EXPRESSION</primary></indexterm>
+<programlisting>#define RYGEL_TYPE_LOGICAL_EXPRESSION (rygel_logical_expression_get_type ())
+</programlisting>
+<para>
+The type for <link linkend="RygelLogicalExpression"><type>RygelLogicalExpression</type></link>.
+</para></refsect2>
+<refsect2 id="rygel-logical-expression-new" role="function">
+<title>rygel_logical_expression_new ()</title>
+<indexterm zone="rygel-logical-expression-new"><primary>rygel_logical_expression_new</primary></indexterm>
+<programlisting><link linkend="RygelLogicalExpression"><returnvalue>RygelLogicalExpression</returnvalue></link> * rygel_logical_expression_new   (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="RygelLogicalExpression-struct" role="struct">
+<title>struct RygelLogicalExpression</title>
+<indexterm zone="RygelLogicalExpression-struct"><primary>RygelLogicalExpression</primary></indexterm>
+<programlisting>struct RygelLogicalExpression;</programlisting>
+<para>
+This is a parsed UPnP search expression consisting of two other search expressions joined by a boolean operator such as AND or OR.
+</para></refsect2>
+<refsect2 id="RygelLogicalExpressionClass" role="struct">
+<title>struct RygelLogicalExpressionClass</title>
+<indexterm zone="RygelLogicalExpressionClass"><primary>RygelLogicalExpressionClass</primary></indexterm>
+<programlisting>struct RygelLogicalExpressionClass {
+	RygelSearchExpressionClass parent_class;
+};
+</programlisting>
+<para>
+The class structure for <link linkend="RYGEL-TYPE-LOGICAL-EXPRESSION:CAPS"><literal>RYGEL_TYPE_LOGICAL_EXPRESSION</literal></link>. All the fields in this structure are private and should never be accessed directly.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="RygelSearchExpressionClass"><type>RygelSearchExpressionClass</type></link>&#160;<structfield id="RygelLogicalExpressionClass.parent-class">parent_class</structfield>;</term>
+<listitem><simpara>the parent class structure</simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+<refsect2 id="RygelLogicalOperator-enum" role="enum">
+<title>enum RygelLogicalOperator</title>
+<indexterm zone="RygelLogicalOperator-enum"><primary>RygelLogicalOperator</primary></indexterm>
+<programlisting>typedef enum {
+	RYGEL_LOGICAL_OPERATOR_AND,
+	RYGEL_LOGICAL_OPERATOR_OR
+} RygelLogicalOperator;
+</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

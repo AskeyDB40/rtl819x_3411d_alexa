@@ -1,0 +1,305 @@
+<!-- ##### SECTION Title ##### -->
+GUPnPDeviceInfo
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT GUPnPDeviceInfo ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG GUPnPDeviceInfo:context ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GUPnPDeviceInfo:device-type ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GUPnPDeviceInfo:document ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GUPnPDeviceInfo:element ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GUPnPDeviceInfo:location ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GUPnPDeviceInfo:resource-factory ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GUPnPDeviceInfo:udn ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GUPnPDeviceInfo:url-base ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION gupnp_device_info_get_resource_factory ##### -->
+<para>
+
+</para>
+
+@device_info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_device_info_get_context ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_device_info_get_location ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_device_info_get_url_base ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_device_info_get_udn ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_device_info_get_device_type ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_device_info_get_friendly_name ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_device_info_get_manufacturer ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_device_info_get_manufacturer_url ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_device_info_get_model_description ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_device_info_get_model_name ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_device_info_get_model_number ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_device_info_get_model_url ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_device_info_get_serial_number ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_device_info_get_presentation_url ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_device_info_get_upc ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_device_info_get_icon_url ##### -->
+<para>
+
+</para>
+
+@info: 
+@requested_mime_type: 
+@requested_depth: 
+@requested_width: 
+@requested_height: 
+@prefer_bigger: 
+@mime_type: 
+@depth: 
+@width: 
+@height: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_device_info_list_dlna_capabilities ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_device_info_get_description_value ##### -->
+<para>
+
+</para>
+
+@info: 
+@element: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_device_info_list_devices ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_device_info_list_device_types ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_device_info_get_device ##### -->
+<para>
+
+</para>
+
+@info: 
+@type: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_device_info_list_services ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_device_info_list_service_types ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_device_info_get_service ##### -->
+<para>
+
+</para>
+
+@info: 
+@type: 
+@Returns: 
+
+

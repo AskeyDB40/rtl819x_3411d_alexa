@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelMetaConfig">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelMetaConfig.top_of_page">RygelMetaConfig</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-CORE Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelMetaConfig</refname>
+<refpurpose>Manages all the configuration sources for Rygel.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelMetaConfig.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="RYGEL-TYPE-META-CONFIG:CAPS">RYGEL_TYPE_META_CONFIG</link>
+<link linkend="RygelMetaConfig"><returnvalue>RygelMetaConfig</returnvalue></link> *   <link linkend="rygel-meta-config-new">rygel_meta_config_new</link>               (<parameter><type>void</type></parameter>);
+<link linkend="RygelMetaConfig"><returnvalue>RygelMetaConfig</returnvalue></link> *   <link linkend="rygel-meta-config-get-default">rygel_meta_config_get_default</link>       (<parameter><type>void</type></parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-meta-config-register-configuration">rygel_meta_config_register_configuration</link>
+                                                        (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *config</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-meta-config-register-default-configurations">rygel_meta_config_register_default_configurations</link>
+                                                        (<parameter><type>void</type></parameter>);
+struct              <link linkend="RygelMetaConfig-struct">RygelMetaConfig</link>;
+struct              <link linkend="RygelMetaConfigClass">RygelMetaConfigClass</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelMetaConfig.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----RygelMetaConfig
+</synopsis>
+</refsect1>
+<refsect1 id="RygelMetaConfig.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+RygelMetaConfig implements
+ <link linkend="RygelConfiguration">RygelConfiguration</link>.</para>
+</refsect1>
+
+<refsect1 id="RygelMetaConfig.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+<para>Abstracts Rygel and it&apos;s plugins from Configuration implementations. It keeps all real configuration sources in a list and returns the value provided by the first one. If none of them provides the value, it emits an error.</para>
+</para>
+</refsect1>
+<refsect1 id="RygelMetaConfig.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="RYGEL-TYPE-META-CONFIG:CAPS" role="macro">
+<title>RYGEL_TYPE_META_CONFIG</title>
+<indexterm zone="RYGEL-TYPE-META-CONFIG:CAPS"><primary>RYGEL_TYPE_META_CONFIG</primary></indexterm>
+<programlisting>#define RYGEL_TYPE_META_CONFIG (rygel_meta_config_get_type ())
+</programlisting>
+<para>
+The type for <link linkend="RygelMetaConfig"><type>RygelMetaConfig</type></link>.
+</para></refsect2>
+<refsect2 id="rygel-meta-config-new" role="function">
+<title>rygel_meta_config_new ()</title>
+<indexterm zone="rygel-meta-config-new"><primary>rygel_meta_config_new</primary></indexterm>
+<programlisting><link linkend="RygelMetaConfig"><returnvalue>RygelMetaConfig</returnvalue></link> *   rygel_meta_config_new               (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="rygel-meta-config-get-default" role="function">
+<title>rygel_meta_config_get_default ()</title>
+<indexterm zone="rygel-meta-config-get-default"><primary>rygel_meta_config_get_default</primary></indexterm>
+<programlisting><link linkend="RygelMetaConfig"><returnvalue>RygelMetaConfig</returnvalue></link> *   rygel_meta_config_get_default       (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="rygel-meta-config-register-configuration" role="function">
+<title>rygel_meta_config_register_configuration ()</title>
+<indexterm zone="rygel-meta-config-register-configuration"><primary>rygel_meta_config_register_configuration</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_meta_config_register_configuration
+                                                        (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *config</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="rygel-meta-config-register-default-configurations" role="function">
+<title>rygel_meta_config_register_default_configurations ()</title>
+<indexterm zone="rygel-meta-config-register-default-configurations"><primary>rygel_meta_config_register_default_configurations</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_meta_config_register_default_configurations
+                                                        (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="RygelMetaConfig-struct" role="struct">
+<title>struct RygelMetaConfig</title>
+<indexterm zone="RygelMetaConfig-struct"><primary>RygelMetaConfig</primary></indexterm>
+<programlisting>struct RygelMetaConfig;</programlisting>
+<para>
+Manages all the configuration sources for Rygel.
+</para>
+<para>
+<para>Abstracts Rygel and it&apos;s plugins from Configuration implementations. It keeps all real configuration sources in a list and returns the value provided by the first one. If none of them provides the value, it emits an error.</para>
+</para></refsect2>
+<refsect2 id="RygelMetaConfigClass" role="struct">
+<title>struct RygelMetaConfigClass</title>
+<indexterm zone="RygelMetaConfigClass"><primary>RygelMetaConfigClass</primary></indexterm>
+<programlisting>struct RygelMetaConfigClass {
+	GObjectClass parent_class;
+};
+</programlisting>
+<para>
+The class structure for <link linkend="RYGEL-TYPE-META-CONFIG:CAPS"><literal>RYGEL_TYPE_META_CONFIG</literal></link>. All the fields in this structure are private and should never be accessed directly.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="GObjectClass"><type>GObjectClass</type></link>&#160;<structfield id="RygelMetaConfigClass.parent-class">parent_class</structfield>;</term>
+<listitem><simpara>the parent class structure</simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+</refentry>

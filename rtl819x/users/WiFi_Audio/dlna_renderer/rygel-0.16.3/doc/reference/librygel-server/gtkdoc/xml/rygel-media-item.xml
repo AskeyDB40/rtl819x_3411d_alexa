@@ -1,0 +1,300 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelMediaItem">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelMediaItem.top_of_page">RygelMediaItem</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-SERVER Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelMediaItem</refname>
+<refpurpose>Represents a media item (Music, Video or Image).</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelMediaItem.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="RYGEL-TYPE-MEDIA-ITEM:CAPS">RYGEL_TYPE_MEDIA_ITEM</link>
+<link linkend="GstElement"><returnvalue>GstElement</returnvalue></link> *        <link linkend="rygel-media-item-create-stream-source">rygel_media_item_create_stream_source</link>
+                                                        (<parameter><link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *host_ip</parameter>);
+<link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            <link linkend="rygel-media-item-is-live-stream">rygel_media_item_is_live_stream</link>     (<parameter><link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> *self</parameter>);
+<link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            <link linkend="rygel-media-item-streamable">rygel_media_item_streamable</link>         (<parameter><link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> *self</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-media-item-add-uri">rygel_media_item_add_uri</link>            (<parameter><link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *uri</parameter>);
+<link linkend="GUPnPProtocolInfo"><returnvalue>GUPnPProtocolInfo</returnvalue></link> * <link linkend="rygel-media-item-get-protocol-info">rygel_media_item_get_protocol_info</link>  (<parameter><link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *uri</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *protocol</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-media-item-add-resources">rygel_media_item_add_resources</link>      (<parameter><link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GUPnPDIDLLiteItem"><type>GUPnPDIDLLiteItem</type></link> *didl_item</parameter>,
+                                                         <parameter><link linkend="gboolean"><type>gboolean</type></link> allow_internal</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="gint64"><returnvalue>gint64</returnvalue></link>              <link linkend="rygel-media-item-get-size">rygel_media_item_get_size</link>           (<parameter><link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> *self</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-media-item-set-size">rygel_media_item_set_size</link>           (<parameter><link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> *self</parameter>,
+                                                         <parameter><link linkend="gint64"><type>gint64</type></link> value</parameter>);
+<link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            <link linkend="rygel-media-item-get-place-holder">rygel_media_item_get_place_holder</link>   (<parameter><link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> *self</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-media-item-set-place-holder">rygel_media_item_set_place_holder</link>   (<parameter><link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> *self</parameter>,
+                                                         <parameter><link linkend="gboolean"><type>gboolean</type></link> value</parameter>);
+const <link linkend="gchar"><returnvalue>gchar</returnvalue></link> *       <link linkend="rygel-media-item-get-description">rygel_media_item_get_description</link>    (<parameter><link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> *self</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-media-item-set-description">rygel_media_item_set_description</link>    (<parameter><link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *value</parameter>);
+struct              <link linkend="RygelMediaItem-struct">RygelMediaItem</link>;
+struct              <link linkend="RygelMediaItemClass">RygelMediaItemClass</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelMediaItem.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="RygelMediaObject">RygelMediaObject</link>
+         +----RygelMediaItem
+               +----<link linkend="RygelAudioItem">RygelAudioItem</link>
+               +----<link linkend="RygelImageItem">RygelImageItem</link>
+</synopsis>
+</refsect1>
+<refsect1 id="RygelMediaItem.derived-interfaces" role="derived_interfaces">
+<title role="derived_interfaces.title">Known Derived Interfaces</title>
+<para>
+RygelMediaItem is required by
+ <link linkend="RygelVisualItem">RygelVisualItem</link>.</para>
+</refsect1>
+<refsect1 id="RygelMediaItem.properties" role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+  &quot;<link linkend="RygelMediaItem--description">description</link>&quot;              <link linkend="gchar"><type>gchar</type></link>*                : Read / Write
+  &quot;<link linkend="RygelMediaItem--ocm-flags">ocm-flags</link>&quot;                <link linkend="GUPnPOCMFlags"><type>GUPnPOCMFlags</type></link>         : Read
+  &quot;<link linkend="RygelMediaItem--place-holder">place-holder</link>&quot;             <link linkend="gboolean"><type>gboolean</type></link>              : Read / Write
+  &quot;<link linkend="RygelMediaItem--size">size</link>&quot;                     <link linkend="gint64"><type>gint64</type></link>                : Read / Write
+</synopsis>
+</refsect1>
+
+<refsect1 id="RygelMediaItem.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+<para>These objects correspond to items in the UPnP ContentDirectory&apos;s DIDL-Lite XML.</para>
+</para>
+</refsect1>
+<refsect1 id="RygelMediaItem.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="RYGEL-TYPE-MEDIA-ITEM:CAPS" role="macro">
+<title>RYGEL_TYPE_MEDIA_ITEM</title>
+<indexterm zone="RYGEL-TYPE-MEDIA-ITEM:CAPS"><primary>RYGEL_TYPE_MEDIA_ITEM</primary></indexterm>
+<programlisting>#define RYGEL_TYPE_MEDIA_ITEM (rygel_media_item_get_type ())
+</programlisting>
+<para>
+The type for <link linkend="RygelMediaItem"><type>RygelMediaItem</type></link>.
+</para></refsect2>
+<refsect2 id="rygel-media-item-create-stream-source" role="function">
+<title>rygel_media_item_create_stream_source ()</title>
+<indexterm zone="rygel-media-item-create-stream-source"><primary>rygel_media_item_create_stream_source</primary></indexterm>
+<programlisting><link linkend="GstElement"><returnvalue>GstElement</returnvalue></link> *        rygel_media_item_create_stream_source
+                                                        (<parameter><link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *host_ip</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> instance</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-item-is-live-stream" role="function">
+<title>rygel_media_item_is_live_stream ()</title>
+<indexterm zone="rygel-media-item-is-live-stream"><primary>rygel_media_item_is_live_stream</primary></indexterm>
+<programlisting><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            rygel_media_item_is_live_stream     (<parameter><link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> *self</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> instance</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-item-streamable" role="function">
+<title>rygel_media_item_streamable ()</title>
+<indexterm zone="rygel-media-item-streamable"><primary>rygel_media_item_streamable</primary></indexterm>
+<programlisting><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            rygel_media_item_streamable         (<parameter><link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> *self</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> instance</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-item-add-uri" role="function">
+<title>rygel_media_item_add_uri ()</title>
+<indexterm zone="rygel-media-item-add-uri"><primary>rygel_media_item_add_uri</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_media_item_add_uri            (<parameter><link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *uri</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> instance</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-item-get-protocol-info" role="function">
+<title>rygel_media_item_get_protocol_info ()</title>
+<indexterm zone="rygel-media-item-get-protocol-info"><primary>rygel_media_item_get_protocol_info</primary></indexterm>
+<programlisting><link linkend="GUPnPProtocolInfo"><returnvalue>GUPnPProtocolInfo</returnvalue></link> * rygel_media_item_get_protocol_info  (<parameter><link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *uri</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *protocol</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> instance</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-item-add-resources" role="function">
+<title>rygel_media_item_add_resources ()</title>
+<indexterm zone="rygel-media-item-add-resources"><primary>rygel_media_item_add_resources</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_media_item_add_resources      (<parameter><link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GUPnPDIDLLiteItem"><type>GUPnPDIDLLiteItem</type></link> *didl_item</parameter>,
+                                                         <parameter><link linkend="gboolean"><type>gboolean</type></link> allow_internal</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-item-get-size" role="function">
+<title>rygel_media_item_get_size ()</title>
+<indexterm zone="rygel-media-item-get-size"><primary>rygel_media_item_get_size</primary></indexterm>
+<programlisting><link linkend="gint64"><returnvalue>gint64</returnvalue></link>              rygel_media_item_get_size           (<parameter><link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> *self</parameter>);</programlisting>
+<para>
+Get and return the current value of the <link linkend="RygelMediaItem--size"><type>"size"</type></link> property.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> instance to query</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>the value of the <link linkend="RygelMediaItem--size"><type>"size"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-item-set-size" role="function">
+<title>rygel_media_item_set_size ()</title>
+<indexterm zone="rygel-media-item-set-size"><primary>rygel_media_item_set_size</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_media_item_set_size           (<parameter><link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> *self</parameter>,
+                                                         <parameter><link linkend="gint64"><type>gint64</type></link> value</parameter>);</programlisting>
+<para>
+Set the value of the <link linkend="RygelMediaItem--size"><type>"size"</type></link> property to <parameter>value</parameter>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> instance to modify</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>value</parameter>&#160;:</term>
+<listitem><simpara>the new value of the <link linkend="RygelMediaItem--size"><type>"size"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-item-get-place-holder" role="function">
+<title>rygel_media_item_get_place_holder ()</title>
+<indexterm zone="rygel-media-item-get-place-holder"><primary>rygel_media_item_get_place_holder</primary></indexterm>
+<programlisting><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            rygel_media_item_get_place_holder   (<parameter><link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> *self</parameter>);</programlisting>
+<para>
+Get and return the current value of the <link linkend="RygelMediaItem--place-holder"><type>"place-holder"</type></link> property.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> instance to query</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>the value of the <link linkend="RygelMediaItem--place-holder"><type>"place-holder"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-item-set-place-holder" role="function">
+<title>rygel_media_item_set_place_holder ()</title>
+<indexterm zone="rygel-media-item-set-place-holder"><primary>rygel_media_item_set_place_holder</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_media_item_set_place_holder   (<parameter><link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> *self</parameter>,
+                                                         <parameter><link linkend="gboolean"><type>gboolean</type></link> value</parameter>);</programlisting>
+<para>
+Set the value of the <link linkend="RygelMediaItem--place-holder"><type>"place-holder"</type></link> property to <parameter>value</parameter>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> instance to modify</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>value</parameter>&#160;:</term>
+<listitem><simpara>the new value of the <link linkend="RygelMediaItem--place-holder"><type>"place-holder"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-item-get-description" role="function">
+<title>rygel_media_item_get_description ()</title>
+<indexterm zone="rygel-media-item-get-description"><primary>rygel_media_item_get_description</primary></indexterm>
+<programlisting>const <link linkend="gchar"><returnvalue>gchar</returnvalue></link> *       rygel_media_item_get_description    (<parameter><link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> *self</parameter>);</programlisting>
+<para>
+Get and return the current value of the <link linkend="RygelMediaItem--description"><type>"description"</type></link> property.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> instance to query</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>the value of the <link linkend="RygelMediaItem--description"><type>"description"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-item-set-description" role="function">
+<title>rygel_media_item_set_description ()</title>
+<indexterm zone="rygel-media-item-set-description"><primary>rygel_media_item_set_description</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_media_item_set_description    (<parameter><link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *value</parameter>);</programlisting>
+<para>
+Set the value of the <link linkend="RygelMediaItem--description"><type>"description"</type></link> property to <parameter>value</parameter>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> instance to modify</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>value</parameter>&#160;:</term>
+<listitem><simpara>the new value of the <link linkend="RygelMediaItem--description"><type>"description"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="RygelMediaItem-struct" role="struct">
+<title>struct RygelMediaItem</title>
+<indexterm zone="RygelMediaItem-struct"><primary>RygelMediaItem</primary></indexterm>
+<programlisting>struct RygelMediaItem;</programlisting>
+<para>
+Represents a media item (Music, Video or Image).
+</para>
+<para>
+<para>These objects correspond to items in the UPnP ContentDirectory&apos;s DIDL-Lite XML.</para>
+</para></refsect2>
+<refsect2 id="RygelMediaItemClass" role="struct">
+<title>struct RygelMediaItemClass</title>
+<indexterm zone="RygelMediaItemClass"><primary>RygelMediaItemClass</primary></indexterm>
+<programlisting>struct RygelMediaItemClass {
+	RygelMediaObjectClass parent_class;
+	GstElement* (*create_stream_source) (RygelMediaItem* self, const gchar* host_ip);
+	gboolean (*streamable) (RygelMediaItem* self);
+	void (*add_uri) (RygelMediaItem* self, const gchar* uri);
+	GUPnPDIDLLiteResource* (*add_resource) (RygelMediaItem* self, GUPnPDIDLLiteItem* didl_item, const gchar* uri, const gchar* protocol, const gchar* import_uri, GError** error);
+	void (*add_proxy_resources) (RygelMediaItem* self, RygelHTTPServer* server, GUPnPDIDLLiteItem* didl_item, GError** error);
+	GUPnPProtocolInfo* (*get_protocol_info) (RygelMediaItem* self, const gchar* uri, const gchar* protocol);
+	void (*add_resources) (RygelMediaItem* self, GUPnPDIDLLiteItem* didl_item, gboolean allow_internal, GError** error);
+};
+</programlisting>
+<para>
+The class structure for <link linkend="RYGEL-TYPE-MEDIA-ITEM:CAPS"><literal>RYGEL_TYPE_MEDIA_ITEM</literal></link>. All the fields in this structure are private and should never be accessed directly.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="RygelMediaObjectClass"><type>RygelMediaObjectClass</type></link>&#160;<structfield id="RygelMediaItemClass.parent-class">parent_class</structfield>;</term>
+<listitem><simpara>the parent class structure</simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelMediaItemClass.create-stream-source">create_stream_source</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-media-item-create-stream-source"><function><link linkend="rygel-media-item-create-stream-source"><function>rygel_media_item_create_stream_source()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelMediaItemClass.streamable">streamable</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-media-item-streamable"><function><link linkend="rygel-media-item-streamable"><function>rygel_media_item_streamable()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelMediaItemClass.add-uri">add_uri</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-media-item-add-uri"><function><link linkend="rygel-media-item-add-uri"><function>rygel_media_item_add_uri()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelMediaItemClass.add-resource">add_resource</structfield>&#160;()</term>
+<listitem />
+</varlistentry>
+<varlistentry><term><structfield id="RygelMediaItemClass.add-proxy-resources">add_proxy_resources</structfield>&#160;()</term>
+<listitem />
+</varlistentry>
+<varlistentry><term><structfield id="RygelMediaItemClass.get-protocol-info">get_protocol_info</structfield>&#160;()</term>
+<listitem><simpara>virtual method used internally</simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelMediaItemClass.add-resources">add_resources</structfield>&#160;()</term>
+<listitem><simpara>virtual method used internally</simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 id="RygelMediaItem.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="RygelMediaItem--description" role="property"><title>The <literal>&quot;description&quot;</literal> property</title>
+<indexterm zone="RygelMediaItem--description"><primary>RygelMediaItem:description</primary></indexterm>
+<programlisting>  &quot;description&quot;              <link linkend="gchar"><type>gchar</type></link>*                : Read / Write</programlisting>
+<para>description.</para><para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="RygelMediaItem--ocm-flags" role="property"><title>The <literal>&quot;ocm-flags&quot;</literal> property</title>
+<indexterm zone="RygelMediaItem--ocm-flags"><primary>RygelMediaItem:ocm-flags</primary></indexterm>
+<programlisting>  &quot;ocm-flags&quot;                <link linkend="GUPnPOCMFlags"><type>GUPnPOCMFlags</type></link>         : Read</programlisting>
+<para>ocm-flags.</para></refsect2>
+<refsect2 id="RygelMediaItem--place-holder" role="property"><title>The <literal>&quot;place-holder&quot;</literal> property</title>
+<indexterm zone="RygelMediaItem--place-holder"><primary>RygelMediaItem:place-holder</primary></indexterm>
+<programlisting>  &quot;place-holder&quot;             <link linkend="gboolean"><type>gboolean</type></link>              : Read / Write</programlisting>
+<para>place-holder.</para><para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="RygelMediaItem--size" role="property"><title>The <literal>&quot;size&quot;</literal> property</title>
+<indexterm zone="RygelMediaItem--size"><primary>RygelMediaItem:size</primary></indexterm>
+<programlisting>  &quot;size&quot;                     <link linkend="gint64"><type>gint64</type></link>                : Read / Write</programlisting>
+<para>size.</para><para>Default value: 0</para>
+</refsect2>
+</refsect1>
+
+</refentry>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE book PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "">
+<book xmlns="http://www.devhelp.net/book" title="GUPnP A/V Reference Manual" link="index.html" author="" name="gupnp-av">
+  <chapters>
+    <sub name="GUPnP A/V" link="ch01.html">
+      <sub name="GUPnPDIDLLiteParser" link="GUPnPDIDLLiteParser.html"/>
+      <sub name="GUPnPDIDLLiteObject" link="GUPnPDIDLLiteObject.html"/>
+      <sub name="GUPnPDIDLLiteContainer" link="GUPnPDIDLLiteContainer.html"/>
+      <sub name="GUPnPDIDLLiteItem" link="GUPnPDIDLLiteItem.html"/>
+      <sub name="GUPnPDIDLLiteWriter" link="GUPnPDIDLLiteWriter.html"/>
+      <sub name="GUPnPDIDLLiteResource" link="GUPnPDIDLLiteResource.html"/>
+      <sub name="GUPnPDIDLLiteDescriptor" link="GUPnPDIDLLiteDescriptor.html"/>
+      <sub name="GUPnPDIDLLiteContributor" link="GUPnPDIDLLiteContributor.html"/>
+      <sub name="GUPnPLastChangeParser" link="GUPnPLastChangeParser.html"/>
+      <sub name="GUPnPSearchCriteriaParser" link="GUPnPSearchCriteriaParser.html"/>
+      <sub name="GUPnPProtocolInfo" link="GUPnPProtocolInfo.html"/>
+    </sub>
+    <sub name="Error Codes" link="ch02.html">
+      <sub name="Error codes" link="gupnp-av-Error-codes.html"/>
+    </sub>
+    <sub name="Annotation Glossary" link="annotation-glossary.html"/>
+  </chapters>
+  <functions>
+    <function name="GUPnPDIDLLiteParser" link="GUPnPDIDLLiteParser.html#GUPnPDIDLLiteParser-struct"/>
+    <function name="gupnp_didl_lite_parser_new ()" link="GUPnPDIDLLiteParser.html#gupnp-didl-lite-parser-new"/>
+    <function name="gupnp_didl_lite_parser_parse_didl ()" link="GUPnPDIDLLiteParser.html#gupnp-didl-lite-parser-parse-didl"/>
+    <function name="The &quot;container-available&quot; signal" link="GUPnPDIDLLiteParser.html#GUPnPDIDLLiteParser-container-available"/>
+    <function name="The &quot;item-available&quot; signal" link="GUPnPDIDLLiteParser.html#GUPnPDIDLLiteParser-item-available"/>
+    <function name="The &quot;object-available&quot; signal" link="GUPnPDIDLLiteParser.html#GUPnPDIDLLiteParser-object-available"/>
+    <function name="GUPnPDIDLLiteObject" link="GUPnPDIDLLiteObject.html#GUPnPDIDLLiteObject-struct"/>
+    <function name="enum GUPnPOCMFlags" link="GUPnPDIDLLiteObject.html#GUPnPOCMFlags"/>
+    <function name="gupnp_didl_lite_object_get_xml_node ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-get-xml-node"/>
+    <function name="gupnp_didl_lite_object_get_upnp_namespace ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-get-upnp-namespace"/>
+    <function name="gupnp_didl_lite_object_get_dc_namespace ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-get-dc-namespace"/>
+    <function name="gupnp_didl_lite_object_get_dlna_namespace ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-get-dlna-namespace"/>
+    <function name="gupnp_didl_lite_object_get_properties ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-get-properties"/>
+    <function name="gupnp_didl_lite_object_get_id ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-get-id"/>
+    <function name="gupnp_didl_lite_object_get_parent_id ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-get-parent-id"/>
+    <function name="gupnp_didl_lite_object_get_restricted ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-get-restricted"/>
+    <function name="gupnp_didl_lite_object_get_title ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-get-title"/>
+    <function name="gupnp_didl_lite_object_get_creator ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-get-creator"/>
+    <function name="gupnp_didl_lite_object_get_artist ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-get-artist"/>
+    <function name="gupnp_didl_lite_object_get_author ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-get-author"/>
+    <function name="gupnp_didl_lite_object_get_creators ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-get-creators"/>
+    <function name="gupnp_didl_lite_object_get_artists ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-get-artists"/>
+    <function name="gupnp_didl_lite_object_get_authors ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-get-authors"/>
+    <function name="gupnp_didl_lite_object_get_descriptors ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-get-descriptors"/>
+    <function name="gupnp_didl_lite_object_get_write_status ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-get-write-status"/>
+    <function name="gupnp_didl_lite_object_get_genre ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-get-genre"/>
+    <function name="gupnp_didl_lite_object_get_upnp_class ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-get-upnp-class"/>
+    <function name="gupnp_didl_lite_object_get_album ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-get-album"/>
+    <function name="gupnp_didl_lite_object_get_album_art ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-get-album-art"/>
+    <function name="gupnp_didl_lite_object_get_description ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-get-description"/>
+    <function name="gupnp_didl_lite_object_get_date ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-get-date"/>
+    <function name="gupnp_didl_lite_object_get_track_number ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-get-track-number"/>
+    <function name="gupnp_didl_lite_object_get_dlna_managed ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-get-dlna-managed"/>
+    <function name="gupnp_didl_lite_object_get_resources ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-get-resources"/>
+    <function name="gupnp_didl_lite_object_get_compat_resource ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-get-compat-resource"/>
+    <function name="gupnp_didl_lite_object_add_resource ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-add-resource"/>
+    <function name="gupnp_didl_lite_object_add_descriptor ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-add-descriptor"/>
+    <function name="gupnp_didl_lite_object_set_upnp_class ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-set-upnp-class"/>
+    <function name="gupnp_didl_lite_object_set_id ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-set-id"/>
+    <function name="gupnp_didl_lite_object_set_parent_id ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-set-parent-id"/>
+    <function name="gupnp_didl_lite_object_set_restricted ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-set-restricted"/>
+    <function name="gupnp_didl_lite_object_set_title ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-set-title"/>
+    <function name="gupnp_didl_lite_object_set_creator ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-set-creator"/>
+    <function name="gupnp_didl_lite_object_set_artist ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-set-artist"/>
+    <function name="gupnp_didl_lite_object_set_author ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-set-author"/>
+    <function name="gupnp_didl_lite_object_add_creator ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-add-creator"/>
+    <function name="gupnp_didl_lite_object_add_artist ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-add-artist"/>
+    <function name="gupnp_didl_lite_object_add_author ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-add-author"/>
+    <function name="gupnp_didl_lite_object_set_genre ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-set-genre"/>
+    <function name="gupnp_didl_lite_object_set_write_status ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-set-write-status"/>
+    <function name="gupnp_didl_lite_object_set_album ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-set-album"/>
+    <function name="gupnp_didl_lite_object_set_album_art ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-set-album-art"/>
+    <function name="gupnp_didl_lite_object_set_description ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-set-description"/>
+    <function name="gupnp_didl_lite_object_set_date ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-set-date"/>
+    <function name="gupnp_didl_lite_object_set_track_number ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-set-track-number"/>
+    <function name="gupnp_didl_lite_object_set_dlna_managed ()" link="GUPnPDIDLLiteObject.html#gupnp-didl-lite-object-set-dlna-managed"/>
+    <function name="The &quot;album&quot; property" link="GUPnPDIDLLiteObject.html#GUPnPDIDLLiteObject--album"/>
+    <function name="The &quot;album-art&quot; property" link="GUPnPDIDLLiteObject.html#GUPnPDIDLLiteObject--album-art"/>
+    <function name="The &quot;artist&quot; property" link="GUPnPDIDLLiteObject.html#GUPnPDIDLLiteObject--artist"/>
+    <function name="The &quot;author&quot; property" link="GUPnPDIDLLiteObject.html#GUPnPDIDLLiteObject--author"/>
+    <function name="The &quot;creator&quot; property" link="GUPnPDIDLLiteObject.html#GUPnPDIDLLiteObject--creator"/>
+    <function name="The &quot;date&quot; property" link="GUPnPDIDLLiteObject.html#GUPnPDIDLLiteObject--date"/>
+    <function name="The &quot;dc-namespace&quot; property" link="GUPnPDIDLLiteObject.html#GUPnPDIDLLiteObject--dc-namespace"/>
+    <function name="The &quot;description&quot; property" link="GUPnPDIDLLiteObject.html#GUPnPDIDLLiteObject--description"/>
+    <function name="The &quot;dlna-managed&quot; property" link="GUPnPDIDLLiteObject.html#GUPnPDIDLLiteObject--dlna-managed"/>
+    <function name="The &quot;dlna-namespace&quot; property" link="GUPnPDIDLLiteObject.html#GUPnPDIDLLiteObject--dlna-namespace"/>
+    <function name="The &quot;genre&quot; property" link="GUPnPDIDLLiteObject.html#GUPnPDIDLLiteObject--genre"/>
+    <function name="The &quot;id&quot; property" link="GUPnPDIDLLiteObject.html#GUPnPDIDLLiteObject--id"/>
+    <function name="The &quot;parent-id&quot; property" link="GUPnPDIDLLiteObject.html#GUPnPDIDLLiteObject--parent-id"/>
+    <function name="The &quot;restricted&quot; property" link="GUPnPDIDLLiteObject.html#GUPnPDIDLLiteObject--restricted"/>
+    <function name="The &quot;title&quot; property" link="GUPnPDIDLLiteObject.html#GUPnPDIDLLiteObject--title"/>
+    <function name="The &quot;track-number&quot; property" link="GUPnPDIDLLiteObject.html#GUPnPDIDLLiteObject--track-number"/>
+    <function name="The &quot;upnp-class&quot; property" link="GUPnPDIDLLiteObject.html#GUPnPDIDLLiteObject--upnp-class"/>
+    <function name="The &quot;upnp-namespace&quot; property" link="GUPnPDIDLLiteObject.html#GUPnPDIDLLiteObject--upnp-namespace"/>
+    <function name="The &quot;write-status&quot; property" link="GUPnPDIDLLiteObject.html#GUPnPDIDLLiteObject--write-status"/>
+    <function name="The &quot;xml-doc&quot; property" link="GUPnPDIDLLiteObject.html#GUPnPDIDLLiteObject--xml-doc"/>
+    <function name="The &quot;xml-node&quot; property" link="GUPnPDIDLLiteObject.html#GUPnPDIDLLiteObject--xml-node"/>
+    <function name="GUPnPDIDLLiteContainer" link="GUPnPDIDLLiteContainer.html#GUPnPDIDLLiteContainer-struct"/>
+    <function name="gupnp_didl_lite_container_get_searchable ()" link="GUPnPDIDLLiteContainer.html#gupnp-didl-lite-container-get-searchable"/>
+    <function name="gupnp_didl_lite_container_get_child_count ()" link="GUPnPDIDLLiteContainer.html#gupnp-didl-lite-container-get-child-count"/>
+    <function name="gupnp_didl_lite_container_get_create_classes ()" link="GUPnPDIDLLiteContainer.html#gupnp-didl-lite-container-get-create-classes"/>
+    <function name="gupnp_didl_lite_container_get_search_classes ()" link="GUPnPDIDLLiteContainer.html#gupnp-didl-lite-container-get-search-classes"/>
+    <function name="gupnp_didl_lite_container_get_storage_used ()" link="GUPnPDIDLLiteContainer.html#gupnp-didl-lite-container-get-storage-used"/>
+    <function name="gupnp_didl_lite_container_set_searchable ()" link="GUPnPDIDLLiteContainer.html#gupnp-didl-lite-container-set-searchable"/>
+    <function name="gupnp_didl_lite_container_set_child_count ()" link="GUPnPDIDLLiteContainer.html#gupnp-didl-lite-container-set-child-count"/>
+    <function name="gupnp_didl_lite_container_set_storage_used ()" link="GUPnPDIDLLiteContainer.html#gupnp-didl-lite-container-set-storage-used"/>
+    <function name="gupnp_didl_lite_container_add_create_class ()" link="GUPnPDIDLLiteContainer.html#gupnp-didl-lite-container-add-create-class"/>
+    <function name="gupnp_didl_lite_container_add_create_class_full ()" link="GUPnPDIDLLiteContainer.html#gupnp-didl-lite-container-add-create-class-full"/>
+    <function name="gupnp_didl_lite_container_add_search_class ()" link="GUPnPDIDLLiteContainer.html#gupnp-didl-lite-container-add-search-class"/>
+    <function name="gupnp_didl_lite_container_add_search_class_full ()" link="GUPnPDIDLLiteContainer.html#gupnp-didl-lite-container-add-search-class-full"/>
+    <function name="The &quot;child-count&quot; property" link="GUPnPDIDLLiteContainer.html#GUPnPDIDLLiteContainer--child-count"/>
+    <function name="The &quot;searchable&quot; property" link="GUPnPDIDLLiteContainer.html#GUPnPDIDLLiteContainer--searchable"/>
+    <function name="The &quot;storage-used&quot; property" link="GUPnPDIDLLiteContainer.html#GUPnPDIDLLiteContainer--storage-used"/>
+    <function name="GUPnPDIDLLiteItem" link="GUPnPDIDLLiteItem.html#GUPnPDIDLLiteItem-struct"/>
+    <function name="gupnp_didl_lite_item_get_ref_id ()" link="GUPnPDIDLLiteItem.html#gupnp-didl-lite-item-get-ref-id"/>
+    <function name="gupnp_didl_lite_item_set_ref_id ()" link="GUPnPDIDLLiteItem.html#gupnp-didl-lite-item-set-ref-id"/>
+    <function name="The &quot;ref-id&quot; property" link="GUPnPDIDLLiteItem.html#GUPnPDIDLLiteItem--ref-id"/>
+    <function name="GUPnPDIDLLiteWriter" link="GUPnPDIDLLiteWriter.html#GUPnPDIDLLiteWriter-struct"/>
+    <function name="gupnp_didl_lite_writer_new ()" link="GUPnPDIDLLiteWriter.html#gupnp-didl-lite-writer-new"/>
+    <function name="gupnp_didl_lite_writer_add_item ()" link="GUPnPDIDLLiteWriter.html#gupnp-didl-lite-writer-add-item"/>
+    <function name="gupnp_didl_lite_writer_add_container ()" link="GUPnPDIDLLiteWriter.html#gupnp-didl-lite-writer-add-container"/>
+    <function name="gupnp_didl_lite_writer_add_descriptor ()" link="GUPnPDIDLLiteWriter.html#gupnp-didl-lite-writer-add-descriptor"/>
+    <function name="gupnp_didl_lite_writer_get_xml_node ()" link="GUPnPDIDLLiteWriter.html#gupnp-didl-lite-writer-get-xml-node"/>
+    <function name="gupnp_didl_lite_writer_get_string ()" link="GUPnPDIDLLiteWriter.html#gupnp-didl-lite-writer-get-string"/>
+    <function name="gupnp_didl_lite_writer_get_language ()" link="GUPnPDIDLLiteWriter.html#gupnp-didl-lite-writer-get-language"/>
+    <function name="gupnp_didl_lite_writer_filter ()" link="GUPnPDIDLLiteWriter.html#gupnp-didl-lite-writer-filter"/>
+    <function name="The &quot;language&quot; property" link="GUPnPDIDLLiteWriter.html#GUPnPDIDLLiteWriter--language"/>
+    <function name="The &quot;xml-node&quot; property" link="GUPnPDIDLLiteWriter.html#GUPnPDIDLLiteWriter--xml-node"/>
+    <function name="GUPnPDIDLLiteResource" link="GUPnPDIDLLiteResource.html#GUPnPDIDLLiteResource-struct"/>
+    <function name="gupnp_didl_lite_resource_set_uri ()" link="GUPnPDIDLLiteResource.html#gupnp-didl-lite-resource-set-uri"/>
+    <function name="gupnp_didl_lite_resource_set_import_uri ()" link="GUPnPDIDLLiteResource.html#gupnp-didl-lite-resource-set-import-uri"/>
+    <function name="gupnp_didl_lite_resource_set_protocol_info ()" link="GUPnPDIDLLiteResource.html#gupnp-didl-lite-resource-set-protocol-info"/>
+    <function name="gupnp_didl_lite_resource_set_size ()" link="GUPnPDIDLLiteResource.html#gupnp-didl-lite-resource-set-size"/>
+    <function name="gupnp_didl_lite_resource_set_size64 ()" link="GUPnPDIDLLiteResource.html#gupnp-didl-lite-resource-set-size64"/>
+    <function name="gupnp_didl_lite_resource_set_duration ()" link="GUPnPDIDLLiteResource.html#gupnp-didl-lite-resource-set-duration"/>
+    <function name="gupnp_didl_lite_resource_set_bitrate ()" link="GUPnPDIDLLiteResource.html#gupnp-didl-lite-resource-set-bitrate"/>
+    <function name="gupnp_didl_lite_resource_set_sample_freq ()" link="GUPnPDIDLLiteResource.html#gupnp-didl-lite-resource-set-sample-freq"/>
+    <function name="gupnp_didl_lite_resource_set_bits_per_sample ()" link="GUPnPDIDLLiteResource.html#gupnp-didl-lite-resource-set-bits-per-sample"/>
+    <function name="gupnp_didl_lite_resource_set_protection ()" link="GUPnPDIDLLiteResource.html#gupnp-didl-lite-resource-set-protection"/>
+    <function name="gupnp_didl_lite_resource_set_audio_channels ()" link="GUPnPDIDLLiteResource.html#gupnp-didl-lite-resource-set-audio-channels"/>
+    <function name="gupnp_didl_lite_resource_set_width ()" link="GUPnPDIDLLiteResource.html#gupnp-didl-lite-resource-set-width"/>
+    <function name="gupnp_didl_lite_resource_set_height ()" link="GUPnPDIDLLiteResource.html#gupnp-didl-lite-resource-set-height"/>
+    <function name="gupnp_didl_lite_resource_set_color_depth ()" link="GUPnPDIDLLiteResource.html#gupnp-didl-lite-resource-set-color-depth"/>
+    <function name="gupnp_didl_lite_resource_get_uri ()" link="GUPnPDIDLLiteResource.html#gupnp-didl-lite-resource-get-uri"/>
+    <function name="gupnp_didl_lite_resource_get_import_uri ()" link="GUPnPDIDLLiteResource.html#gupnp-didl-lite-resource-get-import-uri"/>
+    <function name="gupnp_didl_lite_resource_get_protocol_info ()" link="GUPnPDIDLLiteResource.html#gupnp-didl-lite-resource-get-protocol-info"/>
+    <function name="gupnp_didl_lite_resource_get_size ()" link="GUPnPDIDLLiteResource.html#gupnp-didl-lite-resource-get-size"/>
+    <function name="gupnp_didl_lite_resource_get_size64 ()" link="GUPnPDIDLLiteResource.html#gupnp-didl-lite-resource-get-size64"/>
+    <function name="gupnp_didl_lite_resource_get_duration ()" link="GUPnPDIDLLiteResource.html#gupnp-didl-lite-resource-get-duration"/>
+    <function name="gupnp_didl_lite_resource_get_bitrate ()" link="GUPnPDIDLLiteResource.html#gupnp-didl-lite-resource-get-bitrate"/>
+    <function name="gupnp_didl_lite_resource_get_sample_freq ()" link="GUPnPDIDLLiteResource.html#gupnp-didl-lite-resource-get-sample-freq"/>
+    <function name="gupnp_didl_lite_resource_get_bits_per_sample ()" link="GUPnPDIDLLiteResource.html#gupnp-didl-lite-resource-get-bits-per-sample"/>
+    <function name="gupnp_didl_lite_resource_get_protection ()" link="GUPnPDIDLLiteResource.html#gupnp-didl-lite-resource-get-protection"/>
+    <function name="gupnp_didl_lite_resource_get_audio_channels ()" link="GUPnPDIDLLiteResource.html#gupnp-didl-lite-resource-get-audio-channels"/>
+    <function name="gupnp_didl_lite_resource_get_width ()" link="GUPnPDIDLLiteResource.html#gupnp-didl-lite-resource-get-width"/>
+    <function name="gupnp_didl_lite_resource_get_height ()" link="GUPnPDIDLLiteResource.html#gupnp-didl-lite-resource-get-height"/>
+    <function name="gupnp_didl_lite_resource_get_color_depth ()" link="GUPnPDIDLLiteResource.html#gupnp-didl-lite-resource-get-color-depth"/>
+    <function name="gupnp_didl_lite_resource_get_xml_node ()" link="GUPnPDIDLLiteResource.html#gupnp-didl-lite-resource-get-xml-node"/>
+    <function name="The &quot;audio-channels&quot; property" link="GUPnPDIDLLiteResource.html#GUPnPDIDLLiteResource--audio-channels"/>
+    <function name="The &quot;bitrate&quot; property" link="GUPnPDIDLLiteResource.html#GUPnPDIDLLiteResource--bitrate"/>
+    <function name="The &quot;bits-per-sample&quot; property" link="GUPnPDIDLLiteResource.html#GUPnPDIDLLiteResource--bits-per-sample"/>
+    <function name="The &quot;color-depth&quot; property" link="GUPnPDIDLLiteResource.html#GUPnPDIDLLiteResource--color-depth"/>
+    <function name="The &quot;duration&quot; property" link="GUPnPDIDLLiteResource.html#GUPnPDIDLLiteResource--duration"/>
+    <function name="The &quot;height&quot; property" link="GUPnPDIDLLiteResource.html#GUPnPDIDLLiteResource--height"/>
+    <function name="The &quot;import-uri&quot; property" link="GUPnPDIDLLiteResource.html#GUPnPDIDLLiteResource--import-uri"/>
+    <function name="The &quot;protection&quot; property" link="GUPnPDIDLLiteResource.html#GUPnPDIDLLiteResource--protection"/>
+    <function name="The &quot;protocol-info&quot; property" link="GUPnPDIDLLiteResource.html#GUPnPDIDLLiteResource--protocol-info"/>
+    <function name="The &quot;sample-freq&quot; property" link="GUPnPDIDLLiteResource.html#GUPnPDIDLLiteResource--sample-freq"/>
+    <function name="The &quot;size&quot; property" link="GUPnPDIDLLiteResource.html#GUPnPDIDLLiteResource--size"/>
+    <function name="The &quot;size64&quot; property" link="GUPnPDIDLLiteResource.html#GUPnPDIDLLiteResource--size64"/>
+    <function name="The &quot;uri&quot; property" link="GUPnPDIDLLiteResource.html#GUPnPDIDLLiteResource--uri"/>
+    <function name="The &quot;width&quot; property" link="GUPnPDIDLLiteResource.html#GUPnPDIDLLiteResource--width"/>
+    <function name="The &quot;xml-doc&quot; property" link="GUPnPDIDLLiteResource.html#GUPnPDIDLLiteResource--xml-doc"/>
+    <function name="The &quot;xml-node&quot; property" link="GUPnPDIDLLiteResource.html#GUPnPDIDLLiteResource--xml-node"/>
+    <function name="GUPnPDIDLLiteDescriptor" link="GUPnPDIDLLiteDescriptor.html#GUPnPDIDLLiteDescriptor-struct"/>
+    <function name="gupnp_didl_lite_descriptor_get_xml_node ()" link="GUPnPDIDLLiteDescriptor.html#gupnp-didl-lite-descriptor-get-xml-node"/>
+    <function name="gupnp_didl_lite_descriptor_get_content ()" link="GUPnPDIDLLiteDescriptor.html#gupnp-didl-lite-descriptor-get-content"/>
+    <function name="gupnp_didl_lite_descriptor_get_id ()" link="GUPnPDIDLLiteDescriptor.html#gupnp-didl-lite-descriptor-get-id"/>
+    <function name="gupnp_didl_lite_descriptor_get_metadata_type ()" link="GUPnPDIDLLiteDescriptor.html#gupnp-didl-lite-descriptor-get-metadata-type"/>
+    <function name="gupnp_didl_lite_descriptor_get_name_space ()" link="GUPnPDIDLLiteDescriptor.html#gupnp-didl-lite-descriptor-get-name-space"/>
+    <function name="gupnp_didl_lite_descriptor_set_content ()" link="GUPnPDIDLLiteDescriptor.html#gupnp-didl-lite-descriptor-set-content"/>
+    <function name="gupnp_didl_lite_descriptor_set_id ()" link="GUPnPDIDLLiteDescriptor.html#gupnp-didl-lite-descriptor-set-id"/>
+    <function name="gupnp_didl_lite_descriptor_set_metadata_type ()" link="GUPnPDIDLLiteDescriptor.html#gupnp-didl-lite-descriptor-set-metadata-type"/>
+    <function name="gupnp_didl_lite_descriptor_set_name_space ()" link="GUPnPDIDLLiteDescriptor.html#gupnp-didl-lite-descriptor-set-name-space"/>
+    <function name="The &quot;content&quot; property" link="GUPnPDIDLLiteDescriptor.html#GUPnPDIDLLiteDescriptor--content"/>
+    <function name="The &quot;id&quot; property" link="GUPnPDIDLLiteDescriptor.html#GUPnPDIDLLiteDescriptor--id"/>
+    <function name="The &quot;metadata-type&quot; property" link="GUPnPDIDLLiteDescriptor.html#GUPnPDIDLLiteDescriptor--metadata-type"/>
+    <function name="The &quot;name-space&quot; property" link="GUPnPDIDLLiteDescriptor.html#GUPnPDIDLLiteDescriptor--name-space"/>
+    <function name="The &quot;xml-doc&quot; property" link="GUPnPDIDLLiteDescriptor.html#GUPnPDIDLLiteDescriptor--xml-doc"/>
+    <function name="The &quot;xml-node&quot; property" link="GUPnPDIDLLiteDescriptor.html#GUPnPDIDLLiteDescriptor--xml-node"/>
+    <function name="GUPnPDIDLLiteContributor" link="GUPnPDIDLLiteContributor.html#GUPnPDIDLLiteContributor-struct"/>
+    <function name="gupnp_didl_lite_contributor_get_xml_node ()" link="GUPnPDIDLLiteContributor.html#gupnp-didl-lite-contributor-get-xml-node"/>
+    <function name="gupnp_didl_lite_contributor_get_role ()" link="GUPnPDIDLLiteContributor.html#gupnp-didl-lite-contributor-get-role"/>
+    <function name="gupnp_didl_lite_contributor_get_name ()" link="GUPnPDIDLLiteContributor.html#gupnp-didl-lite-contributor-get-name"/>
+    <function name="gupnp_didl_lite_contributor_set_role ()" link="GUPnPDIDLLiteContributor.html#gupnp-didl-lite-contributor-set-role"/>
+    <function name="gupnp_didl_lite_contributor_set_name ()" link="GUPnPDIDLLiteContributor.html#gupnp-didl-lite-contributor-set-name"/>
+    <function name="The &quot;name&quot; property" link="GUPnPDIDLLiteContributor.html#GUPnPDIDLLiteContributor--name"/>
+    <function name="The &quot;role&quot; property" link="GUPnPDIDLLiteContributor.html#GUPnPDIDLLiteContributor--role"/>
+    <function name="The &quot;xml-doc&quot; property" link="GUPnPDIDLLiteContributor.html#GUPnPDIDLLiteContributor--xml-doc"/>
+    <function name="The &quot;xml-node&quot; property" link="GUPnPDIDLLiteContributor.html#GUPnPDIDLLiteContributor--xml-node"/>
+    <function name="GUPnPLastChangeParser" link="GUPnPLastChangeParser.html#GUPnPLastChangeParser-struct"/>
+    <function name="gupnp_last_change_parser_new ()" link="GUPnPLastChangeParser.html#gupnp-last-change-parser-new"/>
+    <function name="gupnp_last_change_parser_parse_last_change_valist ()" link="GUPnPLastChangeParser.html#gupnp-last-change-parser-parse-last-change-valist"/>
+    <function name="gupnp_last_change_parser_parse_last_change ()" link="GUPnPLastChangeParser.html#gupnp-last-change-parser-parse-last-change"/>
+    <function name="GUPnPSearchCriteriaParser" link="GUPnPSearchCriteriaParser.html#GUPnPSearchCriteriaParser-struct"/>
+    <function name="enum GUPnPSearchCriteriaOp" link="GUPnPSearchCriteriaParser.html#GUPnPSearchCriteriaOp"/>
+    <function name="gupnp_search_criteria_parser_new ()" link="GUPnPSearchCriteriaParser.html#gupnp-search-criteria-parser-new"/>
+    <function name="gupnp_search_criteria_parser_parse_text ()" link="GUPnPSearchCriteriaParser.html#gupnp-search-criteria-parser-parse-text"/>
+    <function name="The &quot;begin-parens&quot; signal" link="GUPnPSearchCriteriaParser.html#GUPnPSearchCriteriaParser-begin-parens"/>
+    <function name="The &quot;conjunction&quot; signal" link="GUPnPSearchCriteriaParser.html#GUPnPSearchCriteriaParser-conjunction"/>
+    <function name="The &quot;disjunction&quot; signal" link="GUPnPSearchCriteriaParser.html#GUPnPSearchCriteriaParser-disjunction"/>
+    <function name="The &quot;end-parens&quot; signal" link="GUPnPSearchCriteriaParser.html#GUPnPSearchCriteriaParser-end-parens"/>
+    <function name="The &quot;expression&quot; signal" link="GUPnPSearchCriteriaParser.html#GUPnPSearchCriteriaParser-expression"/>
+    <function name="GUPnPProtocolInfo" link="GUPnPProtocolInfo.html#GUPnPProtocolInfo-struct"/>
+    <function name="enum GUPnPDLNAConversion" link="GUPnPProtocolInfo.html#GUPnPDLNAConversion"/>
+    <function name="enum GUPnPDLNAFlags" link="GUPnPProtocolInfo.html#GUPnPDLNAFlags"/>
+    <function name="enum GUPnPDLNAOperation" link="GUPnPProtocolInfo.html#GUPnPDLNAOperation"/>
+    <function name="gupnp_protocol_info_new ()" link="GUPnPProtocolInfo.html#gupnp-protocol-info-new"/>
+    <function name="gupnp_protocol_info_new_from_string ()" link="GUPnPProtocolInfo.html#gupnp-protocol-info-new-from-string"/>
+    <function name="gupnp_protocol_info_to_string ()" link="GUPnPProtocolInfo.html#gupnp-protocol-info-to-string"/>
+    <function name="gupnp_protocol_info_is_compatible ()" link="GUPnPProtocolInfo.html#gupnp-protocol-info-is-compatible"/>
+    <function name="gupnp_protocol_info_set_protocol ()" link="GUPnPProtocolInfo.html#gupnp-protocol-info-set-protocol"/>
+    <function name="gupnp_protocol_info_set_network ()" link="GUPnPProtocolInfo.html#gupnp-protocol-info-set-network"/>
+    <function name="gupnp_protocol_info_set_mime_type ()" link="GUPnPProtocolInfo.html#gupnp-protocol-info-set-mime-type"/>
+    <function name="gupnp_protocol_info_set_dlna_profile ()" link="GUPnPProtocolInfo.html#gupnp-protocol-info-set-dlna-profile"/>
+    <function name="gupnp_protocol_info_set_play_speeds ()" link="GUPnPProtocolInfo.html#gupnp-protocol-info-set-play-speeds"/>
+    <function name="gupnp_protocol_info_set_dlna_conversion ()" link="GUPnPProtocolInfo.html#gupnp-protocol-info-set-dlna-conversion"/>
+    <function name="gupnp_protocol_info_set_dlna_operation ()" link="GUPnPProtocolInfo.html#gupnp-protocol-info-set-dlna-operation"/>
+    <function name="gupnp_protocol_info_set_dlna_flags ()" link="GUPnPProtocolInfo.html#gupnp-protocol-info-set-dlna-flags"/>
+    <function name="gupnp_protocol_info_get_protocol ()" link="GUPnPProtocolInfo.html#gupnp-protocol-info-get-protocol"/>
+    <function name="gupnp_protocol_info_get_network ()" link="GUPnPProtocolInfo.html#gupnp-protocol-info-get-network"/>
+    <function name="gupnp_protocol_info_get_mime_type ()" link="GUPnPProtocolInfo.html#gupnp-protocol-info-get-mime-type"/>
+    <function name="gupnp_protocol_info_get_dlna_profile ()" link="GUPnPProtocolInfo.html#gupnp-protocol-info-get-dlna-profile"/>
+    <function name="gupnp_protocol_info_get_play_speeds ()" link="GUPnPProtocolInfo.html#gupnp-protocol-info-get-play-speeds"/>
+    <function name="gupnp_protocol_info_get_dlna_conversion ()" link="GUPnPProtocolInfo.html#gupnp-protocol-info-get-dlna-conversion"/>
+    <function name="gupnp_protocol_info_get_dlna_operation ()" link="GUPnPProtocolInfo.html#gupnp-protocol-info-get-dlna-operation"/>
+    <function name="gupnp_protocol_info_get_dlna_flags ()" link="GUPnPProtocolInfo.html#gupnp-protocol-info-get-dlna-flags"/>
+    <function name="The &quot;dlna-conversion&quot; property" link="GUPnPProtocolInfo.html#GUPnPProtocolInfo--dlna-conversion"/>
+    <function name="The &quot;dlna-flags&quot; property" link="GUPnPProtocolInfo.html#GUPnPProtocolInfo--dlna-flags"/>
+    <function name="The &quot;dlna-operation&quot; property" link="GUPnPProtocolInfo.html#GUPnPProtocolInfo--dlna-operation"/>
+    <function name="The &quot;dlna-profile&quot; property" link="GUPnPProtocolInfo.html#GUPnPProtocolInfo--dlna-profile"/>
+    <function name="The &quot;mime-type&quot; property" link="GUPnPProtocolInfo.html#GUPnPProtocolInfo--mime-type"/>
+    <function name="The &quot;network&quot; property" link="GUPnPProtocolInfo.html#GUPnPProtocolInfo--network"/>
+    <function name="The &quot;play-speeds&quot; property" link="GUPnPProtocolInfo.html#GUPnPProtocolInfo--play-speeds"/>
+    <function name="The &quot;protocol&quot; property" link="GUPnPProtocolInfo.html#GUPnPProtocolInfo--protocol"/>
+    <function name="GUPNP_PROTOCOL_ERROR" link="gupnp-av-Error-codes.html#GUPNP-PROTOCOL-ERROR:CAPS"/>
+    <function name="GUPNP_SEARCH_CRITERIA_PARSER_ERROR" link="gupnp-av-Error-codes.html#GUPNP-SEARCH-CRITERIA-PARSER-ERROR:CAPS"/>
+    <function name="enum GUPnPProtocolError" link="gupnp-av-Error-codes.html#GUPnPProtocolError"/>
+    <function name="enum GUPnPSearchCriteriaParserError" link="gupnp-av-Error-codes.html#GUPnPSearchCriteriaParserError"/>
+  </functions>
+</book>

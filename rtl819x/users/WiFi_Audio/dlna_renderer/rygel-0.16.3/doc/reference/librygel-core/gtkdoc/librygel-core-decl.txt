@@ -1,0 +1,1697 @@
+<MACRO>
+<NAME>RYGEL_TYPE_CONFIGURATION</NAME>
+#define RYGEL_TYPE_CONFIGURATION (rygel_configuration_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_CONFIGURATION</NAME>
+#define RYGEL_CONFIGURATION(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_CONFIGURATION, RygelConfiguration))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_CONFIGURATION</NAME>
+#define RYGEL_IS_CONFIGURATION(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_CONFIGURATION))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_CONFIGURATION_GET_INTERFACE</NAME>
+#define RYGEL_CONFIGURATION_GET_INTERFACE(obj) (G_TYPE_INSTANCE_GET_INTERFACE ((obj), RYGEL_TYPE_CONFIGURATION, RygelConfigurationIface))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_CMDLINE_CONFIG</NAME>
+#define RYGEL_TYPE_CMDLINE_CONFIG (rygel_cmdline_config_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_CMDLINE_CONFIG</NAME>
+#define RYGEL_CMDLINE_CONFIG(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_CMDLINE_CONFIG, RygelCmdlineConfig))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_CMDLINE_CONFIG_CLASS</NAME>
+#define RYGEL_CMDLINE_CONFIG_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_CMDLINE_CONFIG, RygelCmdlineConfigClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_CMDLINE_CONFIG</NAME>
+#define RYGEL_IS_CMDLINE_CONFIG(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_CMDLINE_CONFIG))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_CMDLINE_CONFIG_CLASS</NAME>
+#define RYGEL_IS_CMDLINE_CONFIG_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_CMDLINE_CONFIG))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_CMDLINE_CONFIG_GET_CLASS</NAME>
+#define RYGEL_CMDLINE_CONFIG_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_CMDLINE_CONFIG, RygelCmdlineConfigClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_CONNECTION_MANAGER</NAME>
+#define RYGEL_TYPE_CONNECTION_MANAGER (rygel_connection_manager_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_CONNECTION_MANAGER</NAME>
+#define RYGEL_CONNECTION_MANAGER(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_CONNECTION_MANAGER, RygelConnectionManager))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_CONNECTION_MANAGER_CLASS</NAME>
+#define RYGEL_CONNECTION_MANAGER_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_CONNECTION_MANAGER, RygelConnectionManagerClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_CONNECTION_MANAGER</NAME>
+#define RYGEL_IS_CONNECTION_MANAGER(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_CONNECTION_MANAGER))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_CONNECTION_MANAGER_CLASS</NAME>
+#define RYGEL_IS_CONNECTION_MANAGER_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_CONNECTION_MANAGER))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_CONNECTION_MANAGER_GET_CLASS</NAME>
+#define RYGEL_CONNECTION_MANAGER_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_CONNECTION_MANAGER, RygelConnectionManagerClass))
+</MACRO>
+<MACRO>
+<NAME>TYPE_DESCRIPTION_FILE</NAME>
+#define TYPE_DESCRIPTION_FILE (description_file_get_type ())
+</MACRO>
+<MACRO>
+<NAME>DESCRIPTION_FILE</NAME>
+#define DESCRIPTION_FILE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_DESCRIPTION_FILE, DescriptionFile))
+</MACRO>
+<MACRO>
+<NAME>DESCRIPTION_FILE_CLASS</NAME>
+#define DESCRIPTION_FILE_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), TYPE_DESCRIPTION_FILE, DescriptionFileClass))
+</MACRO>
+<MACRO>
+<NAME>IS_DESCRIPTION_FILE</NAME>
+#define IS_DESCRIPTION_FILE(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_DESCRIPTION_FILE))
+</MACRO>
+<MACRO>
+<NAME>IS_DESCRIPTION_FILE_CLASS</NAME>
+#define IS_DESCRIPTION_FILE_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), TYPE_DESCRIPTION_FILE))
+</MACRO>
+<MACRO>
+<NAME>DESCRIPTION_FILE_GET_CLASS</NAME>
+#define DESCRIPTION_FILE_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_DESCRIPTION_FILE, DescriptionFileClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_ROOT_DEVICE</NAME>
+#define RYGEL_TYPE_ROOT_DEVICE (rygel_root_device_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_ROOT_DEVICE</NAME>
+#define RYGEL_ROOT_DEVICE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_ROOT_DEVICE, RygelRootDevice))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_ROOT_DEVICE_CLASS</NAME>
+#define RYGEL_ROOT_DEVICE_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_ROOT_DEVICE, RygelRootDeviceClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_ROOT_DEVICE</NAME>
+#define RYGEL_IS_ROOT_DEVICE(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_ROOT_DEVICE))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_ROOT_DEVICE_CLASS</NAME>
+#define RYGEL_IS_ROOT_DEVICE_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_ROOT_DEVICE))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_ROOT_DEVICE_GET_CLASS</NAME>
+#define RYGEL_ROOT_DEVICE_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_ROOT_DEVICE, RygelRootDeviceClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_PLUGIN</NAME>
+#define RYGEL_TYPE_PLUGIN (rygel_plugin_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_PLUGIN</NAME>
+#define RYGEL_PLUGIN(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_PLUGIN, RygelPlugin))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_PLUGIN_CLASS</NAME>
+#define RYGEL_PLUGIN_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_PLUGIN, RygelPluginClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_PLUGIN</NAME>
+#define RYGEL_IS_PLUGIN(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_PLUGIN))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_PLUGIN_CLASS</NAME>
+#define RYGEL_IS_PLUGIN_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_PLUGIN))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_PLUGIN_GET_CLASS</NAME>
+#define RYGEL_PLUGIN_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_PLUGIN, RygelPluginClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_ROOT_DEVICE_FACTORY</NAME>
+#define RYGEL_TYPE_ROOT_DEVICE_FACTORY (rygel_root_device_factory_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_ROOT_DEVICE_FACTORY</NAME>
+#define RYGEL_ROOT_DEVICE_FACTORY(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_ROOT_DEVICE_FACTORY, RygelRootDeviceFactory))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_ROOT_DEVICE_FACTORY_CLASS</NAME>
+#define RYGEL_ROOT_DEVICE_FACTORY_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_ROOT_DEVICE_FACTORY, RygelRootDeviceFactoryClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_ROOT_DEVICE_FACTORY</NAME>
+#define RYGEL_IS_ROOT_DEVICE_FACTORY(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_ROOT_DEVICE_FACTORY))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_ROOT_DEVICE_FACTORY_CLASS</NAME>
+#define RYGEL_IS_ROOT_DEVICE_FACTORY_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_ROOT_DEVICE_FACTORY))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_ROOT_DEVICE_FACTORY_GET_CLASS</NAME>
+#define RYGEL_ROOT_DEVICE_FACTORY_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_ROOT_DEVICE_FACTORY, RygelRootDeviceFactoryClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_DBUS_INTERFACE</NAME>
+#define RYGEL_TYPE_DBUS_INTERFACE (rygel_dbus_interface_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_DBUS_INTERFACE</NAME>
+#define RYGEL_DBUS_INTERFACE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_DBUS_INTERFACE, RygelDBusInterface))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_DBUS_INTERFACE</NAME>
+#define RYGEL_IS_DBUS_INTERFACE(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_DBUS_INTERFACE))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_DBUS_INTERFACE_GET_INTERFACE</NAME>
+#define RYGEL_DBUS_INTERFACE_GET_INTERFACE(obj) (G_TYPE_INSTANCE_GET_INTERFACE ((obj), RYGEL_TYPE_DBUS_INTERFACE, RygelDBusInterfaceIface))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_DBUS_INTERFACE_PROXY</NAME>
+#define RYGEL_TYPE_DBUS_INTERFACE_PROXY (rygel_dbus_interface_proxy_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_LOG_LEVEL</NAME>
+#define RYGEL_TYPE_LOG_LEVEL (rygel_log_level_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_LOG_HANDLER</NAME>
+#define RYGEL_TYPE_LOG_HANDLER (rygel_log_handler_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_LOG_HANDLER</NAME>
+#define RYGEL_LOG_HANDLER(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_LOG_HANDLER, RygelLogHandler))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_LOG_HANDLER_CLASS</NAME>
+#define RYGEL_LOG_HANDLER_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_LOG_HANDLER, RygelLogHandlerClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_LOG_HANDLER</NAME>
+#define RYGEL_IS_LOG_HANDLER(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_LOG_HANDLER))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_LOG_HANDLER_CLASS</NAME>
+#define RYGEL_IS_LOG_HANDLER_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_LOG_HANDLER))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_LOG_HANDLER_GET_CLASS</NAME>
+#define RYGEL_LOG_HANDLER_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_LOG_HANDLER, RygelLogHandlerClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_META_CONFIG</NAME>
+#define RYGEL_TYPE_META_CONFIG (rygel_meta_config_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_META_CONFIG</NAME>
+#define RYGEL_META_CONFIG(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_META_CONFIG, RygelMetaConfig))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_META_CONFIG_CLASS</NAME>
+#define RYGEL_META_CONFIG_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_META_CONFIG, RygelMetaConfigClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_META_CONFIG</NAME>
+#define RYGEL_IS_META_CONFIG(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_META_CONFIG))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_META_CONFIG_CLASS</NAME>
+#define RYGEL_IS_META_CONFIG_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_META_CONFIG))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_META_CONFIG_GET_CLASS</NAME>
+#define RYGEL_META_CONFIG_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_META_CONFIG, RygelMetaConfigClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_PLUGIN_LOADER</NAME>
+#define RYGEL_TYPE_PLUGIN_LOADER (rygel_plugin_loader_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_PLUGIN_LOADER</NAME>
+#define RYGEL_PLUGIN_LOADER(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_PLUGIN_LOADER, RygelPluginLoader))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_PLUGIN_LOADER_CLASS</NAME>
+#define RYGEL_PLUGIN_LOADER_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_PLUGIN_LOADER, RygelPluginLoaderClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_PLUGIN_LOADER</NAME>
+#define RYGEL_IS_PLUGIN_LOADER(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_PLUGIN_LOADER))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_PLUGIN_LOADER_CLASS</NAME>
+#define RYGEL_IS_PLUGIN_LOADER_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_PLUGIN_LOADER))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_PLUGIN_LOADER_GET_CLASS</NAME>
+#define RYGEL_PLUGIN_LOADER_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_PLUGIN_LOADER, RygelPluginLoaderClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_RESOURCE_INFO</NAME>
+#define RYGEL_TYPE_RESOURCE_INFO (rygel_resource_info_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_RESOURCE_INFO</NAME>
+#define RYGEL_RESOURCE_INFO(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_RESOURCE_INFO, RygelResourceInfo))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_RESOURCE_INFO_CLASS</NAME>
+#define RYGEL_RESOURCE_INFO_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_RESOURCE_INFO, RygelResourceInfoClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_RESOURCE_INFO</NAME>
+#define RYGEL_IS_RESOURCE_INFO(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_RESOURCE_INFO))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_RESOURCE_INFO_CLASS</NAME>
+#define RYGEL_IS_RESOURCE_INFO_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_RESOURCE_INFO))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_RESOURCE_INFO_GET_CLASS</NAME>
+#define RYGEL_RESOURCE_INFO_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_RESOURCE_INFO, RygelResourceInfoClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_ICON_INFO</NAME>
+#define RYGEL_TYPE_ICON_INFO (rygel_icon_info_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_ICON_INFO</NAME>
+#define RYGEL_ICON_INFO(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_ICON_INFO, RygelIconInfo))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_ICON_INFO_CLASS</NAME>
+#define RYGEL_ICON_INFO_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_ICON_INFO, RygelIconInfoClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_ICON_INFO</NAME>
+#define RYGEL_IS_ICON_INFO(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_ICON_INFO))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_ICON_INFO_CLASS</NAME>
+#define RYGEL_IS_ICON_INFO_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_ICON_INFO))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_ICON_INFO_GET_CLASS</NAME>
+#define RYGEL_ICON_INFO_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_ICON_INFO, RygelIconInfoClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_USER_CONFIG</NAME>
+#define RYGEL_TYPE_USER_CONFIG (rygel_user_config_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_USER_CONFIG</NAME>
+#define RYGEL_USER_CONFIG(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_USER_CONFIG, RygelUserConfig))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_USER_CONFIG_CLASS</NAME>
+#define RYGEL_USER_CONFIG_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_USER_CONFIG, RygelUserConfigClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_USER_CONFIG</NAME>
+#define RYGEL_IS_USER_CONFIG(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_USER_CONFIG))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_USER_CONFIG_CLASS</NAME>
+#define RYGEL_IS_USER_CONFIG_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_USER_CONFIG))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_USER_CONFIG_GET_CLASS</NAME>
+#define RYGEL_USER_CONFIG_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_USER_CONFIG, RygelUserConfigClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_MEDIA_DEVICE</NAME>
+#define RYGEL_TYPE_MEDIA_DEVICE (rygel_media_device_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_DEVICE</NAME>
+#define RYGEL_MEDIA_DEVICE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_MEDIA_DEVICE, RygelMediaDevice))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_DEVICE_CLASS</NAME>
+#define RYGEL_MEDIA_DEVICE_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_MEDIA_DEVICE, RygelMediaDeviceClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_MEDIA_DEVICE</NAME>
+#define RYGEL_IS_MEDIA_DEVICE(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_MEDIA_DEVICE))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_MEDIA_DEVICE_CLASS</NAME>
+#define RYGEL_IS_MEDIA_DEVICE_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_MEDIA_DEVICE))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_DEVICE_GET_CLASS</NAME>
+#define RYGEL_MEDIA_DEVICE_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_MEDIA_DEVICE, RygelMediaDeviceClass))
+</MACRO>
+<MACRO>
+<NAME>FREE_DESKTOP_TYPE_DBUS_REQUEST_NAME_REPLY</NAME>
+#define FREE_DESKTOP_TYPE_DBUS_REQUEST_NAME_REPLY (free_desktop_dbus_request_name_reply_get_type ())
+</MACRO>
+<MACRO>
+<NAME>FREE_DESKTOP_TYPE_DBUS_OBJECT</NAME>
+#define FREE_DESKTOP_TYPE_DBUS_OBJECT (free_desktop_dbus_object_get_type ())
+</MACRO>
+<MACRO>
+<NAME>FREE_DESKTOP_DBUS_OBJECT</NAME>
+#define FREE_DESKTOP_DBUS_OBJECT(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), FREE_DESKTOP_TYPE_DBUS_OBJECT, FreeDesktopDBusObject))
+</MACRO>
+<MACRO>
+<NAME>FREE_DESKTOP_IS_DBUS_OBJECT</NAME>
+#define FREE_DESKTOP_IS_DBUS_OBJECT(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), FREE_DESKTOP_TYPE_DBUS_OBJECT))
+</MACRO>
+<MACRO>
+<NAME>FREE_DESKTOP_DBUS_OBJECT_GET_INTERFACE</NAME>
+#define FREE_DESKTOP_DBUS_OBJECT_GET_INTERFACE(obj) (G_TYPE_INSTANCE_GET_INTERFACE ((obj), FREE_DESKTOP_TYPE_DBUS_OBJECT, FreeDesktopDBusObjectIface))
+</MACRO>
+<MACRO>
+<NAME>FREE_DESKTOP_TYPE_DBUS_OBJECT_PROXY</NAME>
+#define FREE_DESKTOP_TYPE_DBUS_OBJECT_PROXY (free_desktop_dbus_object_proxy_get_type ())
+</MACRO>
+<MACRO>
+<NAME>FREE_DESKTOP_TYPE_PROPERTIES</NAME>
+#define FREE_DESKTOP_TYPE_PROPERTIES (free_desktop_properties_get_type ())
+</MACRO>
+<MACRO>
+<NAME>FREE_DESKTOP_PROPERTIES</NAME>
+#define FREE_DESKTOP_PROPERTIES(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), FREE_DESKTOP_TYPE_PROPERTIES, FreeDesktopProperties))
+</MACRO>
+<MACRO>
+<NAME>FREE_DESKTOP_IS_PROPERTIES</NAME>
+#define FREE_DESKTOP_IS_PROPERTIES(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), FREE_DESKTOP_TYPE_PROPERTIES))
+</MACRO>
+<MACRO>
+<NAME>FREE_DESKTOP_PROPERTIES_GET_INTERFACE</NAME>
+#define FREE_DESKTOP_PROPERTIES_GET_INTERFACE(obj) (G_TYPE_INSTANCE_GET_INTERFACE ((obj), FREE_DESKTOP_TYPE_PROPERTIES, FreeDesktopPropertiesIface))
+</MACRO>
+<MACRO>
+<NAME>FREE_DESKTOP_TYPE_PROPERTIES_PROXY</NAME>
+#define FREE_DESKTOP_TYPE_PROPERTIES_PROXY (free_desktop_properties_proxy_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_STATE_MACHINE</NAME>
+#define RYGEL_TYPE_STATE_MACHINE (rygel_state_machine_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_STATE_MACHINE</NAME>
+#define RYGEL_STATE_MACHINE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_STATE_MACHINE, RygelStateMachine))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_STATE_MACHINE</NAME>
+#define RYGEL_IS_STATE_MACHINE(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_STATE_MACHINE))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_STATE_MACHINE_GET_INTERFACE</NAME>
+#define RYGEL_STATE_MACHINE_GET_INTERFACE(obj) (G_TYPE_INSTANCE_GET_INTERFACE ((obj), RYGEL_TYPE_STATE_MACHINE, RygelStateMachineIface))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_XML_UTILS</NAME>
+#define RYGEL_TYPE_XML_UTILS (rygel_xml_utils_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_XML_UTILS</NAME>
+#define RYGEL_XML_UTILS(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_XML_UTILS, RygelXMLUtils))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_XML_UTILS_CLASS</NAME>
+#define RYGEL_XML_UTILS_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_XML_UTILS, RygelXMLUtilsClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_XML_UTILS</NAME>
+#define RYGEL_IS_XML_UTILS(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_XML_UTILS))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_XML_UTILS_CLASS</NAME>
+#define RYGEL_IS_XML_UTILS_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_XML_UTILS))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_XML_UTILS_GET_CLASS</NAME>
+#define RYGEL_XML_UTILS_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_XML_UTILS, RygelXMLUtilsClass))
+</MACRO>
+<ENUM>
+<NAME>RygelCmdlineConfigError</NAME>
+typedef enum  {
+	RYGEL_CMDLINE_CONFIG_ERROR_VERSION_ONLY
+} RygelCmdlineConfigError;
+</ENUM>
+<MACRO>
+<NAME>RYGEL_CMDLINE_CONFIG_ERROR</NAME>
+#define RYGEL_CMDLINE_CONFIG_ERROR rygel_cmdline_config_error_quark ()
+</MACRO>
+<STRUCT>
+<NAME>RygelConfigurationIface</NAME>
+struct _RygelConfigurationIface {
+	GTypeInterface parent_iface;
+	gboolean (*get_upnp_enabled) (RygelConfiguration* self, GError** error);
+	gchar* (*get_interface) (RygelConfiguration* self, GError** error);
+	gint (*get_port) (RygelConfiguration* self, GError** error);
+	gboolean (*get_transcoding) (RygelConfiguration* self, GError** error);
+	gboolean (*get_mp3_transcoder) (RygelConfiguration* self, GError** error);
+	gboolean (*get_mp2ts_transcoder) (RygelConfiguration* self, GError** error);
+	gboolean (*get_lpcm_transcoder) (RygelConfiguration* self, GError** error);
+	gboolean (*get_wmv_transcoder) (RygelConfiguration* self, GError** error);
+	gboolean (*get_aac_transcoder) (RygelConfiguration* self, GError** error);
+	gboolean (*get_avc_transcoder) (RygelConfiguration* self, GError** error);
+	gboolean (*get_allow_upload) (RygelConfiguration* self, GError** error);
+	gboolean (*get_allow_deletion) (RygelConfiguration* self, GError** error);
+	gchar* (*get_log_levels) (RygelConfiguration* self, GError** error);
+	gchar* (*get_plugin_path) (RygelConfiguration* self, GError** error);
+	gchar* (*get_video_upload_folder) (RygelConfiguration* self, GError** error);
+	gchar* (*get_music_upload_folder) (RygelConfiguration* self, GError** error);
+	gchar* (*get_picture_upload_folder) (RygelConfiguration* self, GError** error);
+	gboolean (*get_enabled) (RygelConfiguration* self, const gchar* section, GError** error);
+	gchar* (*get_title) (RygelConfiguration* self, const gchar* section, GError** error);
+	gchar* (*get_string) (RygelConfiguration* self, const gchar* section, const gchar* key, GError** error);
+	GeeArrayList* (*get_string_list) (RygelConfiguration* self, const gchar* section, const gchar* key, GError** error);
+	gint (*get_int) (RygelConfiguration* self, const gchar* section, const gchar* key, gint min, gint max, GError** error);
+	GeeArrayList* (*get_int_list) (RygelConfiguration* self, const gchar* section, const gchar* key, GError** error);
+	gboolean (*get_bool) (RygelConfiguration* self, const gchar* section, const gchar* key, GError** error);
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelCmdlineConfig</NAME>
+struct _RygelCmdlineConfig {
+	GObject parent_instance;
+	RygelCmdlineConfigPrivate * priv;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelCmdlineConfigClass</NAME>
+struct _RygelCmdlineConfigClass {
+	GObjectClass parent_class;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelConnectionManager</NAME>
+struct _RygelConnectionManager {
+	GUPnPService parent_instance;
+	RygelConnectionManagerPrivate * priv;
+	gchar* sink_protocol_info;
+	gchar* connection_ids;
+	gchar* source_protocol_info;
+	gint rcs_id;
+	gint av_transport_id;
+	gchar* direction;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelConnectionManagerClass</NAME>
+struct _RygelConnectionManagerClass {
+	GUPnPServiceClass parent_class;
+};
+</STRUCT>
+<STRUCT>
+<NAME>DescriptionFile</NAME>
+struct _DescriptionFile {
+	GObject parent_instance;
+	DescriptionFilePrivate * priv;
+};
+</STRUCT>
+<STRUCT>
+<NAME>DescriptionFileClass</NAME>
+struct _DescriptionFileClass {
+	GObjectClass parent_class;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelRootDevice</NAME>
+struct _RygelRootDevice {
+	GUPnPRootDevice parent_instance;
+	RygelRootDevicePrivate * priv;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelRootDeviceClass</NAME>
+struct _RygelRootDeviceClass {
+	GUPnPRootDeviceClass parent_class;
+};
+</STRUCT>
+<ENUM>
+<NAME>RootDeviceFactoryError</NAME>
+typedef enum  {
+	ROOT_DEVICE_FACTORY_ERROR_XML_PARSE
+} RootDeviceFactoryError;
+</ENUM>
+<MACRO>
+<NAME>ROOT_DEVICE_FACTORY_ERROR</NAME>
+#define ROOT_DEVICE_FACTORY_ERROR root_device_factory_error_quark ()
+</MACRO>
+<STRUCT>
+<NAME>RygelRootDeviceFactory</NAME>
+struct _RygelRootDeviceFactory {
+	GTypeInstance parent_instance;
+	volatile int ref_count;
+	RygelRootDeviceFactoryPrivate * priv;
+	GUPnPContext* context;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelRootDeviceFactoryClass</NAME>
+struct _RygelRootDeviceFactoryClass {
+	GTypeClass parent_class;
+	void (*finalize) (RygelRootDeviceFactory *self);
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelDBusInterfaceIface</NAME>
+struct _RygelDBusInterfaceIface {
+	GTypeInterface parent_iface;
+	void (*shutdown) (RygelDBusInterface* self, GError** error);
+};
+</STRUCT>
+<ENUM>
+<NAME>RygelLogLevel</NAME>
+typedef enum  {
+	RYGEL_LOG_LEVEL_INVALID = 0,
+	RYGEL_LOG_LEVEL_CRITICAL = 1,
+	RYGEL_LOG_LEVEL_ERROR = 2,
+	RYGEL_LOG_LEVEL_WARNING = 3,
+	RYGEL_LOG_LEVEL_INFO = 4,
+	RYGEL_LOG_LEVEL_DEFAULT = 4,
+	RYGEL_LOG_LEVEL_DEBUG = 5
+} RygelLogLevel;
+</ENUM>
+<STRUCT>
+<NAME>RygelLogHandler</NAME>
+struct _RygelLogHandler {
+	GObject parent_instance;
+	RygelLogHandlerPrivate * priv;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelLogHandlerClass</NAME>
+struct _RygelLogHandlerClass {
+	GObjectClass parent_class;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelMetaConfig</NAME>
+struct _RygelMetaConfig {
+	GObject parent_instance;
+	RygelMetaConfigPrivate * priv;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelMetaConfigClass</NAME>
+struct _RygelMetaConfigClass {
+	GObjectClass parent_class;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelPluginLoader</NAME>
+struct _RygelPluginLoader {
+	GObject parent_instance;
+	RygelPluginLoaderPrivate * priv;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelPluginLoaderClass</NAME>
+struct _RygelPluginLoaderClass {
+	GObjectClass parent_class;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelPlugin</NAME>
+struct _RygelPlugin {
+	GUPnPResourceFactory parent_instance;
+	RygelPluginPrivate * priv;
+	gchar* name;
+	gchar* title;
+	gchar* description;
+	gchar* desc_path;
+	GeeArrayList* resource_infos;
+	GeeArrayList* icon_infos;
+	GeeArrayList* default_icons;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelPluginClass</NAME>
+struct _RygelPluginClass {
+	GUPnPResourceFactoryClass parent_class;
+	void (*apply_hacks) (RygelPlugin* self, RygelRootDevice* device, const gchar* description_path, GError** error);
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelResourceInfo</NAME>
+struct _RygelResourceInfo {
+	GTypeInstance parent_instance;
+	volatile int ref_count;
+	RygelResourceInfoPrivate * priv;
+	gchar* upnp_type;
+	gchar* upnp_id;
+	gchar* description_path;
+	GType type;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelResourceInfoClass</NAME>
+struct _RygelResourceInfoClass {
+	GTypeClass parent_class;
+	void (*finalize) (RygelResourceInfo *self);
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelUserConfig</NAME>
+struct _RygelUserConfig {
+	GObject parent_instance;
+	RygelUserConfigPrivate * priv;
+	GKeyFile* key_file;
+	GKeyFile* sys_key_file;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelUserConfigClass</NAME>
+struct _RygelUserConfigClass {
+	GObjectClass parent_class;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelMediaDevice</NAME>
+struct _RygelMediaDevice {
+	GObject parent_instance;
+	RygelMediaDevicePrivate * priv;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelMediaDeviceClass</NAME>
+struct _RygelMediaDeviceClass {
+	GObjectClass parent_class;
+};
+</STRUCT>
+<ENUM>
+<NAME>RygelConfigurationError</NAME>
+typedef enum  {
+	RYGEL_CONFIGURATION_ERROR_NO_VALUE_SET,
+	RYGEL_CONFIGURATION_ERROR_VALUE_OUT_OF_RANGE
+} RygelConfigurationError;
+</ENUM>
+<MACRO>
+<NAME>RYGEL_CONFIGURATION_ERROR</NAME>
+#define RYGEL_CONFIGURATION_ERROR rygel_configuration_error_quark ()
+</MACRO>
+<ENUM>
+<NAME>FreeDesktopDBusRequestNameReply</NAME>
+typedef enum  {
+	FREE_DESKTOP_DBUS_REQUEST_NAME_REPLY_PRIMARY_OWNER = 1,
+	FREE_DESKTOP_DBUS_REQUEST_NAME_REPLY_IN_QUEUE,
+	FREE_DESKTOP_DBUS_REQUEST_NAME_REPLY_EXISTS,
+	FREE_DESKTOP_DBUS_REQUEST_NAME_REPLY_ALREADY_OWNER
+} FreeDesktopDBusRequestNameReply;
+</ENUM>
+<STRUCT>
+<NAME>FreeDesktopDBusObjectIface</NAME>
+struct _FreeDesktopDBusObjectIface {
+	GTypeInterface parent_iface;
+	guint32 (*request_name) (FreeDesktopDBusObject* self, const gchar* name, guint32 flags, GError** error);
+	guint32 (*start_service_by_name) (FreeDesktopDBusObject* self, const gchar* name, guint32 flags, GError** error);
+	void (*list_names) (FreeDesktopDBusObject* self, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	gchar** (*list_names_finish) (FreeDesktopDBusObject* self, GAsyncResult* _res_, int* result_length1, GError** error);
+	void (*list_activatable_names) (FreeDesktopDBusObject* self, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	gchar** (*list_activatable_names_finish) (FreeDesktopDBusObject* self, GAsyncResult* _res_, int* result_length1, GError** error);
+};
+</STRUCT>
+<STRUCT>
+<NAME>FreeDesktopPropertiesIface</NAME>
+struct _FreeDesktopPropertiesIface {
+	GTypeInterface parent_iface;
+	void (*get_all) (FreeDesktopProperties* self, const gchar* iface, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	GHashTable* (*get_all_finish) (FreeDesktopProperties* self, GAsyncResult* _res_, GError** error);
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelStateMachineIface</NAME>
+struct _RygelStateMachineIface {
+	GTypeInterface parent_iface;
+	void (*run) (RygelStateMachine* self, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	void (*run_finish) (RygelStateMachine* self, GAsyncResult* _res_);
+	GCancellable* (*get_cancellable) (RygelStateMachine* self);
+	void (*set_cancellable) (RygelStateMachine* self, GCancellable* value);
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelIconInfo</NAME>
+struct _RygelIconInfo {
+	GTypeInstance parent_instance;
+	volatile int ref_count;
+	RygelIconInfoPrivate * priv;
+	gchar* mime_type;
+	gchar* uri;
+	gchar* file_extension;
+	gint64 size;
+	gint width;
+	gint height;
+	gint depth;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelIconInfoClass</NAME>
+struct _RygelIconInfoClass {
+	GTypeClass parent_class;
+	void (*finalize) (RygelIconInfo *self);
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelXMLUtils</NAME>
+struct _RygelXMLUtils {
+	GTypeInstance parent_instance;
+	volatile int ref_count;
+	RygelXMLUtilsPrivate * priv;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelXMLUtilsClass</NAME>
+struct _RygelXMLUtilsClass {
+	GTypeClass parent_class;
+	void (*finalize) (RygelXMLUtils *self);
+};
+</STRUCT>
+<FUNCTION>
+<NAME>rygel_cmdline_config_error_quark</NAME>
+<RETURNS>GQuark  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_configuration_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_cmdline_config_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_cmdline_config_get_default</NAME>
+<RETURNS>RygelCmdlineConfig * </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_cmdline_config_parse_args</NAME>
+<RETURNS>void  </RETURNS>
+gchar*** args, int* args_length1, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_cmdline_config_get_config_file</NAME>
+<RETURNS>gchar * </RETURNS>
+RygelCmdlineConfig* self, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_cmdline_config_new</NAME>
+<RETURNS>RygelCmdlineConfig * </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_cmdline_config_construct</NAME>
+<RETURNS>RygelCmdlineConfig * </RETURNS>
+GType object_type 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_connection_manager_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<MACRO>
+<NAME>RYGEL_CONNECTION_MANAGER_UPNP_ID</NAME>
+#define RYGEL_CONNECTION_MANAGER_UPNP_ID "urn:upnp-org:serviceId:ConnectionManager"
+</MACRO>
+<MACRO>
+<NAME>RYGEL_CONNECTION_MANAGER_UPNP_TYPE</NAME>
+#define RYGEL_CONNECTION_MANAGER_UPNP_TYPE "urn:schemas-upnp-org:service:ConnectionManager:2"
+</MACRO>
+<MACRO>
+<NAME>RYGEL_CONNECTION_MANAGER_DESCRIPTION_PATH</NAME>
+#define RYGEL_CONNECTION_MANAGER_DESCRIPTION_PATH "xml/ConnectionManager.xml"
+</MACRO>
+<FUNCTION>
+<NAME>rygel_connection_manager_new</NAME>
+<RETURNS>RygelConnectionManager * </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_connection_manager_construct</NAME>
+<RETURNS>RygelConnectionManager * </RETURNS>
+GType object_type 
+</FUNCTION>
+<FUNCTION>
+<NAME>description_file_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>description_file_new</NAME>
+<RETURNS>DescriptionFile * </RETURNS>
+const gchar* template, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>description_file_construct</NAME>
+<RETURNS>DescriptionFile * </RETURNS>
+GType object_type, const gchar* template, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>description_file_new_from_xml_document</NAME>
+<RETURNS>DescriptionFile * </RETURNS>
+GUPnPXMLDoc* doc 
+</FUNCTION>
+<FUNCTION>
+<NAME>description_file_construct_from_xml_document</NAME>
+<RETURNS>DescriptionFile * </RETURNS>
+GType object_type, GUPnPXMLDoc* doc 
+</FUNCTION>
+<FUNCTION>
+<NAME>description_file_set_device_type</NAME>
+<RETURNS>void  </RETURNS>
+DescriptionFile* self, const gchar* device_type 
+</FUNCTION>
+<FUNCTION>
+<NAME>description_file_set_model_name</NAME>
+<RETURNS>void  </RETURNS>
+DescriptionFile* self, const gchar* model_name 
+</FUNCTION>
+<FUNCTION>
+<NAME>description_file_set_model_number</NAME>
+<RETURNS>void  </RETURNS>
+DescriptionFile* self, const gchar* model_number 
+</FUNCTION>
+<FUNCTION>
+<NAME>description_file_set_friendly_name</NAME>
+<RETURNS>void  </RETURNS>
+DescriptionFile* self, const gchar* friendly_name 
+</FUNCTION>
+<FUNCTION>
+<NAME>description_file_get_friendly_name</NAME>
+<RETURNS>gchar * </RETURNS>
+DescriptionFile* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>description_file_modify_service_type</NAME>
+<RETURNS>void  </RETURNS>
+DescriptionFile* self, const gchar* old_type, const gchar* new_type 
+</FUNCTION>
+<FUNCTION>
+<NAME>description_file_save</NAME>
+<RETURNS>void  </RETURNS>
+DescriptionFile* self, const gchar* path, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_root_device_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_plugin_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_root_device_new</NAME>
+<RETURNS>RygelRootDevice * </RETURNS>
+GUPnPContext* context, RygelPlugin* plugin, GUPnPXMLDoc* description_doc, const gchar* description_path, const gchar* description_dir 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_root_device_construct</NAME>
+<RETURNS>RygelRootDevice * </RETURNS>
+GType object_type, GUPnPContext* context, RygelPlugin* plugin, GUPnPXMLDoc* description_doc, const gchar* description_path, const gchar* description_dir 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_root_device_get_services</NAME>
+<RETURNS>GeeArrayList * </RETURNS>
+RygelRootDevice* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>root_device_factory_error_quark</NAME>
+<RETURNS>GQuark  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_root_device_factory_ref</NAME>
+<RETURNS>gpointer  </RETURNS>
+gpointer instance 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_root_device_factory_unref</NAME>
+<RETURNS>void  </RETURNS>
+gpointer instance 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_param_spec_root_device_factory</NAME>
+<RETURNS>GParamSpec * </RETURNS>
+const gchar* name, const gchar* nick, const gchar* blurb, GType object_type, GParamFlags flags 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_value_set_root_device_factory</NAME>
+<RETURNS>void  </RETURNS>
+GValue* value, gpointer v_object 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_value_take_root_device_factory</NAME>
+<RETURNS>void  </RETURNS>
+GValue* value, gpointer v_object 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_value_get_root_device_factory</NAME>
+<RETURNS>gpointer  </RETURNS>
+const GValue* value 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_root_device_factory_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_root_device_factory_new</NAME>
+<RETURNS>RygelRootDeviceFactory * </RETURNS>
+GUPnPContext* context, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_root_device_factory_construct</NAME>
+<RETURNS>RygelRootDeviceFactory * </RETURNS>
+GType object_type, GUPnPContext* context, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_root_device_factory_create</NAME>
+<RETURNS>RygelRootDevice * </RETURNS>
+RygelRootDeviceFactory* self, RygelPlugin* plugin, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_dbus_interface_proxy_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_dbus_interface_register_object</NAME>
+<RETURNS>guint  </RETURNS>
+void* object, GDBusConnection* connection, const gchar* path, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_dbus_interface_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_dbus_interface_shutdown</NAME>
+<RETURNS>void  </RETURNS>
+RygelDBusInterface* self, GError** error 
+</FUNCTION>
+<MACRO>
+<NAME>RYGEL_DBUS_INTERFACE_SERVICE_NAME</NAME>
+#define RYGEL_DBUS_INTERFACE_SERVICE_NAME "org.gnome.Rygel1"
+</MACRO>
+<MACRO>
+<NAME>RYGEL_DBUS_INTERFACE_OBJECT_PATH</NAME>
+#define RYGEL_DBUS_INTERFACE_OBJECT_PATH "/org/gnome/Rygel1"
+</MACRO>
+<FUNCTION>
+<NAME>rygel_log_level_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_log_handler_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_log_handler_get_default</NAME>
+<RETURNS>RygelLogHandler * </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_meta_config_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_meta_config_get_default</NAME>
+<RETURNS>RygelMetaConfig * </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_meta_config_register_configuration</NAME>
+<RETURNS>void  </RETURNS>
+RygelConfiguration* config 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_meta_config_register_default_configurations</NAME>
+<RETURNS>void  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_meta_config_new</NAME>
+<RETURNS>RygelMetaConfig * </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_meta_config_construct</NAME>
+<RETURNS>RygelMetaConfig * </RETURNS>
+GType object_type 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_plugin_loader_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_plugin_loader_new</NAME>
+<RETURNS>RygelPluginLoader * </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_plugin_loader_construct</NAME>
+<RETURNS>RygelPluginLoader * </RETURNS>
+GType object_type 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_plugin_loader_load_plugins</NAME>
+<RETURNS>void  </RETURNS>
+RygelPluginLoader* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_plugin_loader_plugin_disabled</NAME>
+<RETURNS>gboolean  </RETURNS>
+RygelPluginLoader* self, const gchar* name 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_plugin_loader_add_plugin</NAME>
+<RETURNS>void  </RETURNS>
+RygelPluginLoader* self, RygelPlugin* plugin 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_plugin_loader_get_plugin_by_name</NAME>
+<RETURNS>RygelPlugin * </RETURNS>
+RygelPluginLoader* self, const gchar* name 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_plugin_loader_list_plugins</NAME>
+<RETURNS>GeeCollection * </RETURNS>
+RygelPluginLoader* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_resource_info_ref</NAME>
+<RETURNS>gpointer  </RETURNS>
+gpointer instance 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_resource_info_unref</NAME>
+<RETURNS>void  </RETURNS>
+gpointer instance 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_param_spec_resource_info</NAME>
+<RETURNS>GParamSpec * </RETURNS>
+const gchar* name, const gchar* nick, const gchar* blurb, GType object_type, GParamFlags flags 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_value_set_resource_info</NAME>
+<RETURNS>void  </RETURNS>
+GValue* value, gpointer v_object 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_value_take_resource_info</NAME>
+<RETURNS>void  </RETURNS>
+GValue* value, gpointer v_object 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_value_get_resource_info</NAME>
+<RETURNS>gpointer  </RETURNS>
+const GValue* value 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_resource_info_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_icon_info_ref</NAME>
+<RETURNS>gpointer  </RETURNS>
+gpointer instance 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_icon_info_unref</NAME>
+<RETURNS>void  </RETURNS>
+gpointer instance 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_param_spec_icon_info</NAME>
+<RETURNS>GParamSpec * </RETURNS>
+const gchar* name, const gchar* nick, const gchar* blurb, GType object_type, GParamFlags flags 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_value_set_icon_info</NAME>
+<RETURNS>void  </RETURNS>
+GValue* value, gpointer v_object 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_value_take_icon_info</NAME>
+<RETURNS>void  </RETURNS>
+GValue* value, gpointer v_object 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_value_get_icon_info</NAME>
+<RETURNS>gpointer  </RETURNS>
+const GValue* value 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_icon_info_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_plugin_new</NAME>
+<RETURNS>RygelPlugin * </RETURNS>
+const gchar* desc_path, const gchar* name, const gchar* title, const gchar* description 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_plugin_construct</NAME>
+<RETURNS>RygelPlugin * </RETURNS>
+GType object_type, const gchar* desc_path, const gchar* name, const gchar* title, const gchar* description 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_plugin_add_resource</NAME>
+<RETURNS>void  </RETURNS>
+RygelPlugin* self, RygelResourceInfo* resource_info 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_plugin_add_icon</NAME>
+<RETURNS>void  </RETURNS>
+RygelPlugin* self, RygelIconInfo* icon_info 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_plugin_apply_hacks</NAME>
+<RETURNS>void  </RETURNS>
+RygelPlugin* self, RygelRootDevice* device, const gchar* description_path, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_plugin_get_active</NAME>
+<RETURNS>gboolean  </RETURNS>
+RygelPlugin* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_plugin_set_active</NAME>
+<RETURNS>void  </RETURNS>
+RygelPlugin* self, gboolean value 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_resource_info_new</NAME>
+<RETURNS>RygelResourceInfo * </RETURNS>
+const gchar* upnp_id, const gchar* upnp_type, const gchar* description_path, GType type 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_resource_info_construct</NAME>
+<RETURNS>RygelResourceInfo * </RETURNS>
+GType object_type, const gchar* upnp_id, const gchar* upnp_type, const gchar* description_path, GType type 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_user_config_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<MACRO>
+<NAME>RYGEL_USER_CONFIG_CONFIG_FILE</NAME>
+#define RYGEL_USER_CONFIG_CONFIG_FILE "rygel.conf"
+</MACRO>
+<MACRO>
+<NAME>RYGEL_USER_CONFIG_IFACE_KEY</NAME>
+#define RYGEL_USER_CONFIG_IFACE_KEY "interface"
+</MACRO>
+<MACRO>
+<NAME>RYGEL_USER_CONFIG_PORT_KEY</NAME>
+#define RYGEL_USER_CONFIG_PORT_KEY "port"
+</MACRO>
+<MACRO>
+<NAME>RYGEL_USER_CONFIG_ENABLED_KEY</NAME>
+#define RYGEL_USER_CONFIG_ENABLED_KEY "enabled"
+</MACRO>
+<MACRO>
+<NAME>RYGEL_USER_CONFIG_UPNP_ENABLED_KEY</NAME>
+#define RYGEL_USER_CONFIG_UPNP_ENABLED_KEY "upnp-" RYGEL_USER_CONFIG_ENABLED_KEY
+</MACRO>
+<MACRO>
+<NAME>RYGEL_USER_CONFIG_TITLE_KEY</NAME>
+#define RYGEL_USER_CONFIG_TITLE_KEY "title"
+</MACRO>
+<MACRO>
+<NAME>RYGEL_USER_CONFIG_TRANSCODING_KEY</NAME>
+#define RYGEL_USER_CONFIG_TRANSCODING_KEY "enable-transcoding"
+</MACRO>
+<MACRO>
+<NAME>RYGEL_USER_CONFIG_MP3_TRANSCODER_KEY</NAME>
+#define RYGEL_USER_CONFIG_MP3_TRANSCODER_KEY "enable-mp3-transcoder"
+</MACRO>
+<MACRO>
+<NAME>RYGEL_USER_CONFIG_MP2TS_TRANSCODER_KEY</NAME>
+#define RYGEL_USER_CONFIG_MP2TS_TRANSCODER_KEY "enable-mp2ts-transcoder"
+</MACRO>
+<MACRO>
+<NAME>RYGEL_USER_CONFIG_LPCM_TRANSCODER_KEY</NAME>
+#define RYGEL_USER_CONFIG_LPCM_TRANSCODER_KEY "enable-lpcm-transcoder"
+</MACRO>
+<MACRO>
+<NAME>RYGEL_USER_CONFIG_WMV_TRANSCODER_KEY</NAME>
+#define RYGEL_USER_CONFIG_WMV_TRANSCODER_KEY "enable-wmv-transcoder"
+</MACRO>
+<MACRO>
+<NAME>RYGEL_USER_CONFIG_AAC_TRANSCODER_KEY</NAME>
+#define RYGEL_USER_CONFIG_AAC_TRANSCODER_KEY "enable-aac-transcoder"
+</MACRO>
+<MACRO>
+<NAME>RYGEL_USER_CONFIG_AVC_TRANSCODER_KEY</NAME>
+#define RYGEL_USER_CONFIG_AVC_TRANSCODER_KEY "enable-avc-transcoder"
+</MACRO>
+<MACRO>
+<NAME>RYGEL_USER_CONFIG_ALLOW_UPLOAD_KEY</NAME>
+#define RYGEL_USER_CONFIG_ALLOW_UPLOAD_KEY "allow-upload"
+</MACRO>
+<MACRO>
+<NAME>RYGEL_USER_CONFIG_ALLOW_DELETION_KEY</NAME>
+#define RYGEL_USER_CONFIG_ALLOW_DELETION_KEY "allow-deletion"
+</MACRO>
+<MACRO>
+<NAME>RYGEL_USER_CONFIG_LOG_LEVELS_KEY</NAME>
+#define RYGEL_USER_CONFIG_LOG_LEVELS_KEY "log-level"
+</MACRO>
+<MACRO>
+<NAME>RYGEL_USER_CONFIG_PLUGIN_PATH_KEY</NAME>
+#define RYGEL_USER_CONFIG_PLUGIN_PATH_KEY "plugin-path"
+</MACRO>
+<MACRO>
+<NAME>RYGEL_USER_CONFIG_UPLOAD_FOLDER_KEY</NAME>
+#define RYGEL_USER_CONFIG_UPLOAD_FOLDER_KEY "upload-folder"
+</MACRO>
+<MACRO>
+<NAME>RYGEL_USER_CONFIG_VIDEO_UPLOAD_DIR_PATH_KEY</NAME>
+#define RYGEL_USER_CONFIG_VIDEO_UPLOAD_DIR_PATH_KEY "video-" RYGEL_USER_CONFIG_UPLOAD_FOLDER_KEY
+</MACRO>
+<MACRO>
+<NAME>RYGEL_USER_CONFIG_MUSIC_UPLOAD_DIR_PATH_KEY</NAME>
+#define RYGEL_USER_CONFIG_MUSIC_UPLOAD_DIR_PATH_KEY "music-" RYGEL_USER_CONFIG_UPLOAD_FOLDER_KEY
+</MACRO>
+<MACRO>
+<NAME>RYGEL_USER_CONFIG_PICTURE_UPLOAD_DIR_PATH_KEY</NAME>
+#define RYGEL_USER_CONFIG_PICTURE_UPLOAD_DIR_PATH_KEY "picture-" RYGEL_USER_CONFIG_UPLOAD_FOLDER_KEY
+</MACRO>
+<FUNCTION>
+<NAME>rygel_user_config_get_default</NAME>
+<RETURNS>RygelUserConfig * </RETURNS>
+GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_user_config_new</NAME>
+<RETURNS>RygelUserConfig * </RETURNS>
+const gchar* file, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_user_config_construct</NAME>
+<RETURNS>RygelUserConfig * </RETURNS>
+GType object_type, const gchar* file, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_device_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_device_construct</NAME>
+<RETURNS>RygelMediaDevice * </RETURNS>
+GType object_type 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_device_add_interface</NAME>
+<RETURNS>void  </RETURNS>
+RygelMediaDevice* self, const gchar* iface 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_device_remove_interface</NAME>
+<RETURNS>void  </RETURNS>
+RygelMediaDevice* self, const gchar* iface 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_device_get_interfaces</NAME>
+<RETURNS>GList * </RETURNS>
+RygelMediaDevice* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_device_get_plugin</NAME>
+<RETURNS>RygelPlugin * </RETURNS>
+RygelMediaDevice* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_device_set_plugin</NAME>
+<RETURNS>void  </RETURNS>
+RygelMediaDevice* self, RygelPlugin* value 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_configuration_error_quark</NAME>
+<RETURNS>GQuark  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_configuration_get_upnp_enabled</NAME>
+<RETURNS>gboolean  </RETURNS>
+RygelConfiguration* self, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_configuration_get_interface</NAME>
+<RETURNS>gchar * </RETURNS>
+RygelConfiguration* self, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_configuration_get_port</NAME>
+<RETURNS>gint  </RETURNS>
+RygelConfiguration* self, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_configuration_get_transcoding</NAME>
+<RETURNS>gboolean  </RETURNS>
+RygelConfiguration* self, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_configuration_get_mp3_transcoder</NAME>
+<RETURNS>gboolean  </RETURNS>
+RygelConfiguration* self, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_configuration_get_mp2ts_transcoder</NAME>
+<RETURNS>gboolean  </RETURNS>
+RygelConfiguration* self, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_configuration_get_lpcm_transcoder</NAME>
+<RETURNS>gboolean  </RETURNS>
+RygelConfiguration* self, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_configuration_get_wmv_transcoder</NAME>
+<RETURNS>gboolean  </RETURNS>
+RygelConfiguration* self, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_configuration_get_aac_transcoder</NAME>
+<RETURNS>gboolean  </RETURNS>
+RygelConfiguration* self, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_configuration_get_avc_transcoder</NAME>
+<RETURNS>gboolean  </RETURNS>
+RygelConfiguration* self, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_configuration_get_allow_upload</NAME>
+<RETURNS>gboolean  </RETURNS>
+RygelConfiguration* self, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_configuration_get_allow_deletion</NAME>
+<RETURNS>gboolean  </RETURNS>
+RygelConfiguration* self, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_configuration_get_log_levels</NAME>
+<RETURNS>gchar * </RETURNS>
+RygelConfiguration* self, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_configuration_get_plugin_path</NAME>
+<RETURNS>gchar * </RETURNS>
+RygelConfiguration* self, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_configuration_get_video_upload_folder</NAME>
+<RETURNS>gchar * </RETURNS>
+RygelConfiguration* self, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_configuration_get_music_upload_folder</NAME>
+<RETURNS>gchar * </RETURNS>
+RygelConfiguration* self, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_configuration_get_picture_upload_folder</NAME>
+<RETURNS>gchar * </RETURNS>
+RygelConfiguration* self, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_configuration_get_enabled</NAME>
+<RETURNS>gboolean  </RETURNS>
+RygelConfiguration* self, const gchar* section, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_configuration_get_title</NAME>
+<RETURNS>gchar * </RETURNS>
+RygelConfiguration* self, const gchar* section, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_configuration_get_string</NAME>
+<RETURNS>gchar * </RETURNS>
+RygelConfiguration* self, const gchar* section, const gchar* key, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_configuration_get_string_list</NAME>
+<RETURNS>GeeArrayList * </RETURNS>
+RygelConfiguration* self, const gchar* section, const gchar* key, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_configuration_get_int</NAME>
+<RETURNS>gint  </RETURNS>
+RygelConfiguration* self, const gchar* section, const gchar* key, gint min, gint max, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_configuration_get_int_list</NAME>
+<RETURNS>GeeArrayList * </RETURNS>
+RygelConfiguration* self, const gchar* section, const gchar* key, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_configuration_get_bool</NAME>
+<RETURNS>gboolean  </RETURNS>
+RygelConfiguration* self, const gchar* section, const gchar* key, GError** error 
+</FUNCTION>
+<MACRO>
+<NAME>FREE_DESKTOP_DBUS_SERVICE</NAME>
+#define FREE_DESKTOP_DBUS_SERVICE "org.freedesktop.DBus"
+</MACRO>
+<MACRO>
+<NAME>FREE_DESKTOP_DBUS_OBJECT_PATH</NAME>
+#define FREE_DESKTOP_DBUS_OBJECT_PATH "/org/freedesktop/DBus"
+</MACRO>
+<FUNCTION>
+<NAME>free_desktop_dbus_request_name_reply_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>free_desktop_dbus_object_proxy_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>free_desktop_dbus_object_register_object</NAME>
+<RETURNS>guint  </RETURNS>
+void* object, GDBusConnection* connection, const gchar* path, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>free_desktop_dbus_object_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>free_desktop_dbus_object_request_name</NAME>
+<RETURNS>guint32  </RETURNS>
+FreeDesktopDBusObject* self, const gchar* name, guint32 flags, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>free_desktop_dbus_object_start_service_by_name</NAME>
+<RETURNS>guint32  </RETURNS>
+FreeDesktopDBusObject* self, const gchar* name, guint32 flags, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>free_desktop_dbus_object_list_names</NAME>
+<RETURNS>void  </RETURNS>
+FreeDesktopDBusObject* self, GAsyncReadyCallback _callback_, gpointer _user_data_ 
+</FUNCTION>
+<FUNCTION>
+<NAME>free_desktop_dbus_object_list_names_finish</NAME>
+<RETURNS>gchar ** </RETURNS>
+FreeDesktopDBusObject* self, GAsyncResult* _res_, int* result_length1, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>free_desktop_dbus_object_list_activatable_names</NAME>
+<RETURNS>void  </RETURNS>
+FreeDesktopDBusObject* self, GAsyncReadyCallback _callback_, gpointer _user_data_ 
+</FUNCTION>
+<FUNCTION>
+<NAME>free_desktop_dbus_object_list_activatable_names_finish</NAME>
+<RETURNS>gchar ** </RETURNS>
+FreeDesktopDBusObject* self, GAsyncResult* _res_, int* result_length1, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>free_desktop_properties_proxy_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>free_desktop_properties_register_object</NAME>
+<RETURNS>guint  </RETURNS>
+void* object, GDBusConnection* connection, const gchar* path, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>free_desktop_properties_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>free_desktop_properties_get_all</NAME>
+<RETURNS>void  </RETURNS>
+FreeDesktopProperties* self, const gchar* iface, GAsyncReadyCallback _callback_, gpointer _user_data_ 
+</FUNCTION>
+<FUNCTION>
+<NAME>free_desktop_properties_get_all_finish</NAME>
+<RETURNS>GHashTable * </RETURNS>
+FreeDesktopProperties* self, GAsyncResult* _res_, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_state_machine_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_state_machine_run</NAME>
+<RETURNS>void  </RETURNS>
+RygelStateMachine* self, GAsyncReadyCallback _callback_, gpointer _user_data_ 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_state_machine_run_finish</NAME>
+<RETURNS>void  </RETURNS>
+RygelStateMachine* self, GAsyncResult* _res_ 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_state_machine_get_cancellable</NAME>
+<RETURNS>GCancellable * </RETURNS>
+RygelStateMachine* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_state_machine_set_cancellable</NAME>
+<RETURNS>void  </RETURNS>
+RygelStateMachine* self, GCancellable* value 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_icon_info_new</NAME>
+<RETURNS>RygelIconInfo * </RETURNS>
+const gchar* mime_type, const gchar* file_extension 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_icon_info_construct</NAME>
+<RETURNS>RygelIconInfo * </RETURNS>
+GType object_type, const gchar* mime_type, const gchar* file_extension 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_xml_utils_ref</NAME>
+<RETURNS>gpointer  </RETURNS>
+gpointer instance 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_xml_utils_unref</NAME>
+<RETURNS>void  </RETURNS>
+gpointer instance 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_param_spec_xml_utils</NAME>
+<RETURNS>GParamSpec * </RETURNS>
+const gchar* name, const gchar* nick, const gchar* blurb, GType object_type, GParamFlags flags 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_value_set_xml_utils</NAME>
+<RETURNS>void  </RETURNS>
+GValue* value, gpointer v_object 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_value_take_xml_utils</NAME>
+<RETURNS>void  </RETURNS>
+GValue* value, gpointer v_object 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_value_get_xml_utils</NAME>
+<RETURNS>gpointer  </RETURNS>
+const GValue* value 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_xml_utils_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_xml_utils_get_element</NAME>
+<RETURNS>xmlNode * </RETURNS>
+xmlNode* node, ... 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_xml_utils_new</NAME>
+<RETURNS>RygelXMLUtils * </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_xml_utils_construct</NAME>
+<RETURNS>RygelXMLUtils * </RETURNS>
+GType object_type 
+</FUNCTION>
+<STRUCT>
+<NAME>RygelStateMachine</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelRootDeviceFactoryPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelXMLUtilsPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>FreeDesktopProperties</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelConnectionManagerPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelDBusInterface</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelMediaDevicePrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelRootDevicePrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelResourceInfoPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>FreeDesktopDBusObject</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelPluginPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelLogHandlerPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelPluginLoaderPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelConfiguration</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelIconInfoPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>DescriptionFilePrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelMetaConfigPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelCmdlineConfigPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelUserConfigPrivate</NAME>
+</STRUCT>

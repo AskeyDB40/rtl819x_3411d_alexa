@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelPlugin">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelPlugin.top_of_page">RygelPlugin</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-CORE Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelPlugin</refname>
+<refpurpose>Represents a Rygel plugin. Plugins are supposed to provide an object of this class or a subclass.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelPlugin.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="RYGEL-TYPE-PLUGIN:CAPS">RYGEL_TYPE_PLUGIN</link>
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-plugin-add-resource">rygel_plugin_add_resource</link>           (<parameter><link linkend="RygelPlugin"><type>RygelPlugin</type></link> *self</parameter>,
+                                                         <parameter><link linkend="RygelResourceInfo"><type>RygelResourceInfo</type></link> *resource_info</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-plugin-add-icon">rygel_plugin_add_icon</link>               (<parameter><link linkend="RygelPlugin"><type>RygelPlugin</type></link> *self</parameter>,
+                                                         <parameter><link linkend="RygelIconInfo"><type>RygelIconInfo</type></link> *icon_info</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-plugin-apply-hacks">rygel_plugin_apply_hacks</link>            (<parameter><link linkend="RygelPlugin"><type>RygelPlugin</type></link> *self</parameter>,
+                                                         <parameter><link linkend="RygelRootDevice"><type>RygelRootDevice</type></link> *device</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *description_path</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="RygelPlugin"><returnvalue>RygelPlugin</returnvalue></link> *       <link linkend="rygel-plugin-new">rygel_plugin_new</link>                    (<parameter>const <link linkend="gchar"><type>gchar</type></link> *desc_path</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *title</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *description</parameter>);
+<link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            <link linkend="rygel-plugin-get-active">rygel_plugin_get_active</link>             (<parameter><link linkend="RygelPlugin"><type>RygelPlugin</type></link> *self</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-plugin-set-active">rygel_plugin_set_active</link>             (<parameter><link linkend="RygelPlugin"><type>RygelPlugin</type></link> *self</parameter>,
+                                                         <parameter><link linkend="gboolean"><type>gboolean</type></link> value</parameter>);
+struct              <link linkend="RygelPlugin-struct">RygelPlugin</link>;
+struct              <link linkend="RygelPluginClass">RygelPluginClass</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelPlugin.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GUPnPResourceFactory">GUPnPResourceFactory</link>
+         +----RygelPlugin
+</synopsis>
+</refsect1>
+<refsect1 id="RygelPlugin.properties" role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+  &quot;<link linkend="RygelPlugin--active">active</link>&quot;                   <link linkend="gboolean"><type>gboolean</type></link>              : Read / Write
+</synopsis>
+</refsect1>
+
+<refsect1 id="RygelPlugin.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="RygelPlugin.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="RYGEL-TYPE-PLUGIN:CAPS" role="macro">
+<title>RYGEL_TYPE_PLUGIN</title>
+<indexterm zone="RYGEL-TYPE-PLUGIN:CAPS"><primary>RYGEL_TYPE_PLUGIN</primary></indexterm>
+<programlisting>#define RYGEL_TYPE_PLUGIN (rygel_plugin_get_type ())
+</programlisting>
+<para>
+The type for <link linkend="RygelPlugin"><type>RygelPlugin</type></link>.
+</para></refsect2>
+<refsect2 id="rygel-plugin-add-resource" role="function">
+<title>rygel_plugin_add_resource ()</title>
+<indexterm zone="rygel-plugin-add-resource"><primary>rygel_plugin_add_resource</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_plugin_add_resource           (<parameter><link linkend="RygelPlugin"><type>RygelPlugin</type></link> *self</parameter>,
+                                                         <parameter><link linkend="RygelResourceInfo"><type>RygelResourceInfo</type></link> *resource_info</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelPlugin"><type>RygelPlugin</type></link> instance</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-plugin-add-icon" role="function">
+<title>rygel_plugin_add_icon ()</title>
+<indexterm zone="rygel-plugin-add-icon"><primary>rygel_plugin_add_icon</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_plugin_add_icon               (<parameter><link linkend="RygelPlugin"><type>RygelPlugin</type></link> *self</parameter>,
+                                                         <parameter><link linkend="RygelIconInfo"><type>RygelIconInfo</type></link> *icon_info</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelPlugin"><type>RygelPlugin</type></link> instance</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-plugin-apply-hacks" role="function">
+<title>rygel_plugin_apply_hacks ()</title>
+<indexterm zone="rygel-plugin-apply-hacks"><primary>rygel_plugin_apply_hacks</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_plugin_apply_hacks            (<parameter><link linkend="RygelPlugin"><type>RygelPlugin</type></link> *self</parameter>,
+                                                         <parameter><link linkend="RygelRootDevice"><type>RygelRootDevice</type></link> *device</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *description_path</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelPlugin"><type>RygelPlugin</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-plugin-new" role="function">
+<title>rygel_plugin_new ()</title>
+<indexterm zone="rygel-plugin-new"><primary>rygel_plugin_new</primary></indexterm>
+<programlisting><link linkend="RygelPlugin"><returnvalue>RygelPlugin</returnvalue></link> *       rygel_plugin_new                    (<parameter>const <link linkend="gchar"><type>gchar</type></link> *desc_path</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *title</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *description</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="rygel-plugin-get-active" role="function">
+<title>rygel_plugin_get_active ()</title>
+<indexterm zone="rygel-plugin-get-active"><primary>rygel_plugin_get_active</primary></indexterm>
+<programlisting><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            rygel_plugin_get_active             (<parameter><link linkend="RygelPlugin"><type>RygelPlugin</type></link> *self</parameter>);</programlisting>
+<para>
+Get and return the current value of the <link linkend="RygelPlugin--active"><type>"active"</type></link> property.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelPlugin"><type>RygelPlugin</type></link> instance to query</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>the value of the <link linkend="RygelPlugin--active"><type>"active"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-plugin-set-active" role="function">
+<title>rygel_plugin_set_active ()</title>
+<indexterm zone="rygel-plugin-set-active"><primary>rygel_plugin_set_active</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_plugin_set_active             (<parameter><link linkend="RygelPlugin"><type>RygelPlugin</type></link> *self</parameter>,
+                                                         <parameter><link linkend="gboolean"><type>gboolean</type></link> value</parameter>);</programlisting>
+<para>
+Set the value of the <link linkend="RygelPlugin--active"><type>"active"</type></link> property to <parameter>value</parameter>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelPlugin"><type>RygelPlugin</type></link> instance to modify</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>value</parameter>&#160;:</term>
+<listitem><simpara>the new value of the <link linkend="RygelPlugin--active"><type>"active"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="RygelPlugin-struct" role="struct">
+<title>struct RygelPlugin</title>
+<indexterm zone="RygelPlugin-struct"><primary>RygelPlugin</primary></indexterm>
+<programlisting>struct RygelPlugin;</programlisting>
+<para>
+Represents a Rygel plugin. Plugins are supposed to provide an object of this class or a subclass.
+</para></refsect2>
+<refsect2 id="RygelPluginClass" role="struct">
+<title>struct RygelPluginClass</title>
+<indexterm zone="RygelPluginClass"><primary>RygelPluginClass</primary></indexterm>
+<programlisting>struct RygelPluginClass {
+	GUPnPResourceFactoryClass parent_class;
+	void (*apply_hacks) (RygelPlugin* self, RygelRootDevice* device, const gchar* description_path, GError** error);
+};
+</programlisting>
+<para>
+The class structure for <link linkend="RYGEL-TYPE-PLUGIN:CAPS"><literal>RYGEL_TYPE_PLUGIN</literal></link>. All the fields in this structure are private and should never be accessed directly.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="GUPnPResourceFactoryClass"><type>GUPnPResourceFactoryClass</type></link>&#160;<structfield id="RygelPluginClass.parent-class">parent_class</structfield>;</term>
+<listitem><simpara>the parent class structure</simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelPluginClass.apply-hacks">apply_hacks</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-plugin-apply-hacks"><function><link linkend="rygel-plugin-apply-hacks"><function>rygel_plugin_apply_hacks()</function></link></function></link></simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 id="RygelPlugin.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="RygelPlugin--active" role="property"><title>The <literal>&quot;active&quot;</literal> property</title>
+<indexterm zone="RygelPlugin--active"><primary>RygelPlugin:active</primary></indexterm>
+<programlisting>  &quot;active&quot;                   <link linkend="gboolean"><type>gboolean</type></link>              : Read / Write</programlisting>
+<para>active.</para><para>Default value: FALSE</para>
+</refsect2>
+</refsect1>
+
+</refentry>

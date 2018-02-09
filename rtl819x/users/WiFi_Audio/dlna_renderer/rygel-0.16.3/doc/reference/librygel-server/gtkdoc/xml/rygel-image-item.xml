@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelImageItem">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelImageItem.top_of_page">RygelImageItem</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-SERVER Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelImageItem</refname>
+<refpurpose>Represents an image item.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelImageItem.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="RYGEL-TYPE-IMAGE-ITEM:CAPS">RYGEL_TYPE_IMAGE_ITEM</link>
+#define             <link linkend="RYGEL-IMAGE-ITEM-UPNP-CLASS:CAPS">RYGEL_IMAGE_ITEM_UPNP_CLASS</link>
+<link linkend="RygelImageItem"><returnvalue>RygelImageItem</returnvalue></link> *    <link linkend="rygel-image-item-new">rygel_image_item_new</link>                (<parameter>const <link linkend="gchar"><type>gchar</type></link> *id</parameter>,
+                                                         <parameter><link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> *parent</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *title</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *upnp_class</parameter>);
+struct              <link linkend="RygelImageItem-struct">RygelImageItem</link>;
+struct              <link linkend="RygelImageItemClass">RygelImageItemClass</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelImageItem.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="RygelMediaObject">RygelMediaObject</link>
+         +----<link linkend="RygelMediaItem">RygelMediaItem</link>
+               +----RygelImageItem
+                     +----<link linkend="RygelPhotoItem">RygelPhotoItem</link>
+</synopsis>
+</refsect1>
+<refsect1 id="RygelImageItem.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+RygelImageItem implements
+ <link linkend="RygelVisualItem">RygelVisualItem</link>.</para>
+</refsect1>
+<refsect1 id="RygelImageItem.properties" role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+  &quot;<link linkend="RygelImageItem--color-depth">color-depth</link>&quot;              <link linkend="gint"><type>gint</type></link>                  : Read / Write
+  &quot;<link linkend="RygelImageItem--height">height</link>&quot;                   <link linkend="gint"><type>gint</type></link>                  : Read / Write
+  &quot;<link linkend="RygelImageItem--pixel-height">pixel-height</link>&quot;             <link linkend="gint"><type>gint</type></link>                  : Read / Write
+  &quot;<link linkend="RygelImageItem--pixel-width">pixel-width</link>&quot;              <link linkend="gint"><type>gint</type></link>                  : Read / Write
+  &quot;<link linkend="RygelImageItem--thumbnails">thumbnails</link>&quot;               <link linkend="GeeArrayList"><type>GeeArrayList</type></link>*         : Read / Write
+  &quot;<link linkend="RygelImageItem--width">width</link>&quot;                    <link linkend="gint"><type>gint</type></link>                  : Read / Write
+</synopsis>
+</refsect1>
+
+<refsect1 id="RygelImageItem.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="RygelImageItem.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="RYGEL-TYPE-IMAGE-ITEM:CAPS" role="macro">
+<title>RYGEL_TYPE_IMAGE_ITEM</title>
+<indexterm zone="RYGEL-TYPE-IMAGE-ITEM:CAPS"><primary>RYGEL_TYPE_IMAGE_ITEM</primary></indexterm>
+<programlisting>#define RYGEL_TYPE_IMAGE_ITEM (rygel_image_item_get_type ())
+</programlisting>
+<para>
+The type for <link linkend="RygelImageItem"><type>RygelImageItem</type></link>.
+</para></refsect2>
+<refsect2 id="RYGEL-IMAGE-ITEM-UPNP-CLASS:CAPS" role="macro">
+<title>RYGEL_IMAGE_ITEM_UPNP_CLASS</title>
+<indexterm zone="RYGEL-IMAGE-ITEM-UPNP-CLASS:CAPS"><primary>RYGEL_IMAGE_ITEM_UPNP_CLASS</primary></indexterm>
+<programlisting>#define RYGEL_IMAGE_ITEM_UPNP_CLASS "object.item.imageItem"
+</programlisting>
+</refsect2>
+<refsect2 id="rygel-image-item-new" role="function">
+<title>rygel_image_item_new ()</title>
+<indexterm zone="rygel-image-item-new"><primary>rygel_image_item_new</primary></indexterm>
+<programlisting><link linkend="RygelImageItem"><returnvalue>RygelImageItem</returnvalue></link> *    rygel_image_item_new                (<parameter>const <link linkend="gchar"><type>gchar</type></link> *id</parameter>,
+                                                         <parameter><link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> *parent</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *title</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *upnp_class</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="RygelImageItem-struct" role="struct">
+<title>struct RygelImageItem</title>
+<indexterm zone="RygelImageItem-struct"><primary>RygelImageItem</primary></indexterm>
+<programlisting>struct RygelImageItem;</programlisting>
+<para>
+Represents an image item.
+</para></refsect2>
+<refsect2 id="RygelImageItemClass" role="struct">
+<title>struct RygelImageItemClass</title>
+<indexterm zone="RygelImageItemClass"><primary>RygelImageItemClass</primary></indexterm>
+<programlisting>struct RygelImageItemClass {
+	RygelMediaItemClass parent_class;
+};
+</programlisting>
+<para>
+The class structure for <link linkend="RYGEL-TYPE-IMAGE-ITEM:CAPS"><literal>RYGEL_TYPE_IMAGE_ITEM</literal></link>. All the fields in this structure are private and should never be accessed directly.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="RygelMediaItemClass"><type>RygelMediaItemClass</type></link>&#160;<structfield id="RygelImageItemClass.parent-class">parent_class</structfield>;</term>
+<listitem><simpara>the parent class structure</simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 id="RygelImageItem.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="RygelImageItem--color-depth" role="property"><title>The <literal>&quot;color-depth&quot;</literal> property</title>
+<indexterm zone="RygelImageItem--color-depth"><primary>RygelImageItem:color-depth</primary></indexterm>
+<programlisting>  &quot;color-depth&quot;              <link linkend="gint"><type>gint</type></link>                  : Read / Write</programlisting>
+<para>color-depth.</para><para>Default value: -1</para>
+</refsect2>
+<refsect2 id="RygelImageItem--height" role="property"><title>The <literal>&quot;height&quot;</literal> property</title>
+<indexterm zone="RygelImageItem--height"><primary>RygelImageItem:height</primary></indexterm>
+<programlisting>  &quot;height&quot;                   <link linkend="gint"><type>gint</type></link>                  : Read / Write</programlisting>
+<para>height.</para><para>Default value: -1</para>
+</refsect2>
+<refsect2 id="RygelImageItem--pixel-height" role="property"><title>The <literal>&quot;pixel-height&quot;</literal> property</title>
+<indexterm zone="RygelImageItem--pixel-height"><primary>RygelImageItem:pixel-height</primary></indexterm>
+<programlisting>  &quot;pixel-height&quot;             <link linkend="gint"><type>gint</type></link>                  : Read / Write</programlisting>
+<para>pixel-height.</para><para>Default value: -1</para>
+</refsect2>
+<refsect2 id="RygelImageItem--pixel-width" role="property"><title>The <literal>&quot;pixel-width&quot;</literal> property</title>
+<indexterm zone="RygelImageItem--pixel-width"><primary>RygelImageItem:pixel-width</primary></indexterm>
+<programlisting>  &quot;pixel-width&quot;              <link linkend="gint"><type>gint</type></link>                  : Read / Write</programlisting>
+<para>pixel-width.</para><para>Default value: -1</para>
+</refsect2>
+<refsect2 id="RygelImageItem--thumbnails" role="property"><title>The <literal>&quot;thumbnails&quot;</literal> property</title>
+<indexterm zone="RygelImageItem--thumbnails"><primary>RygelImageItem:thumbnails</primary></indexterm>
+<programlisting>  &quot;thumbnails&quot;               <link linkend="GeeArrayList"><type>GeeArrayList</type></link>*         : Read / Write</programlisting>
+<para>thumbnails.</para></refsect2>
+<refsect2 id="RygelImageItem--width" role="property"><title>The <literal>&quot;width&quot;</literal> property</title>
+<indexterm zone="RygelImageItem--width"><primary>RygelImageItem:width</primary></indexterm>
+<programlisting>  &quot;width&quot;                    <link linkend="gint"><type>gint</type></link>                  : Read / Write</programlisting>
+<para>width.</para><para>Default value: -1</para>
+</refsect2>
+</refsect1>
+
+</refentry>

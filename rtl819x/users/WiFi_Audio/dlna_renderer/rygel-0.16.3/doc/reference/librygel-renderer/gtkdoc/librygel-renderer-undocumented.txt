@@ -1,0 +1,19 @@
+85% symbol docs coverage.
+60 symbols documented.
+5 symbols incomplete.
+11 not documented.
+
+
+RYGEL_PLAYBIN_PLUGIN_NAME
+RygelMediaPlayer:duration-as-str
+RygelMediaPlayer:position-as-str
+rygel_media_player_get_mime_types (result_length1)
+rygel_media_player_get_protocols (result_length1)
+rygel_media_player_seek (time)
+rygel_media_renderer_plugin_get_player
+rygel_media_renderer_plugin_new (name, title, description)
+rygel_playbin_player_get_default
+rygel_playbin_player_new_wrap (playbin)
+rygel_playbin_plugin_new
+
+

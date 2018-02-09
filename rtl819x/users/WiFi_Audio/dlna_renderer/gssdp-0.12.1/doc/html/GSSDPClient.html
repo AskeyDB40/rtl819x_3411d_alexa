@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GSSDPClient</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GSSDP Reference Manual">
+<link rel="up" href="ch01.html" title="GSSDP">
+<link rel="prev" href="ch01.html" title="GSSDP">
+<link rel="next" href="GSSDPResourceBrowser.html" title="GSSDPResourceBrowser">
+<meta name="generator" content="GTK-Doc V1.17.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ch01.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GSSDP Reference Manual</th>
+<td><a accesskey="n" href="GSSDPResourceBrowser.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GSSDPClient.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#GSSDPClient.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#GSSDPClient.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#GSSDPClient.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#GSSDPClient.properties" class="shortcut">Properties</a>
+                   | 
+                  <a href="#GSSDPClient.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="GSSDPClient"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GSSDPClient.top_of_page"></a>GSSDPClient</span></h2>
+<p>GSSDPClient — SSDP "bus" wrapper.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="GSSDPClient.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="GSSDPClient.html#GSSDPClient-struct" title="struct GSSDPClient">GSSDPClient</a>;
+<a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="returnvalue">GSSDPClient</span></a> *       <a class="link" href="GSSDPClient.html#gssdp-client-new" title="gssdp_client_new ()">gssdp_client_new</a>                    (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GMainContext"><span class="type">GMainContext</span></a> *main_context</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *iface</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GMainContext"><span class="returnvalue">GMainContext</span></a> *      <a class="link" href="GSSDPClient.html#gssdp-client-get-main-context" title="gssdp_client_get_main_context ()">gssdp_client_get_main_context</a>       (<em class="parameter"><code><a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a> *client</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="GSSDPClient.html#gssdp-client-set-server-id" title="gssdp_client_set_server_id ()">gssdp_client_set_server_id</a>          (<em class="parameter"><code><a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a> *client</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *server_id</code></em>);
+const <span class="returnvalue">char</span> *        <a class="link" href="GSSDPClient.html#gssdp-client-get-server-id" title="gssdp_client_get_server_id ()">gssdp_client_get_server_id</a>          (<em class="parameter"><code><a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a> *client</code></em>);
+const <span class="returnvalue">char</span> *        <a class="link" href="GSSDPClient.html#gssdp-client-get-interface" title="gssdp_client_get_interface ()">gssdp_client_get_interface</a>          (<em class="parameter"><code><a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a> *client</code></em>);
+const <span class="returnvalue">char</span> *        <a class="link" href="GSSDPClient.html#gssdp-client-get-host-ip" title="gssdp_client_get_host_ip ()">gssdp_client_get_host_ip</a>            (<em class="parameter"><code><a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a> *client</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="GSSDPClient.html#gssdp-client-set-network" title="gssdp_client_set_network ()">gssdp_client_set_network</a>            (<em class="parameter"><code><a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a> *client</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *network</code></em>);
+const <span class="returnvalue">char</span> *        <a class="link" href="GSSDPClient.html#gssdp-client-get-network" title="gssdp_client_get_network ()">gssdp_client_get_network</a>            (<em class="parameter"><code><a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a> *client</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="GSSDPClient.html#gssdp-client-get-active" title="gssdp_client_get_active ()">gssdp_client_get_active</a>             (<em class="parameter"><code><a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a> *client</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSSDPClient.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----GSSDPClient
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSSDPClient.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GSSDPClient implements
+ <a href="http://library.gnome.org/devel/gio/unstable/GInitable.html">GInitable</a>.</p>
+</div>
+<div class="refsect1">
+<a name="GSSDPClient.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="GSSDPClient.html#GSSDPClient--active" title='The "active" property'>active</a>"                   <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="GSSDPClient.html#GSSDPClient--host-ip" title='The "host-ip" property'>host-ip</a>"                  <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="GSSDPClient.html#GSSDPClient--interface" title='The "interface" property'>interface</a>"                <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write / Construct Only
+  "<a class="link" href="GSSDPClient.html#GSSDPClient--main-context" title='The "main-context" property'>main-context</a>"             <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>              : Read / Write / Construct Only
+  "<a class="link" href="GSSDPClient.html#GSSDPClient--network" title='The "network" property'>network</a>"                  <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write / Construct
+  "<a class="link" href="GSSDPClient.html#GSSDPClient--server-id" title='The "server-id" property'>server-id</a>"                <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSSDPClient.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="GSSDPClient.html#GSSDPClient-message-received" title='The "message-received" signal'>message-received</a>"                               : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSSDPClient.description"></a><h2>Description</h2>
+<p>
+<a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a> wraps the SSDP "bus" as used by both <a class="link" href="GSSDPResourceBrowser.html" title="GSSDPResourceBrowser"><span class="type">GSSDPResourceBrowser</span></a>
+and <a class="link" href="GSSDPResourceGroup.html" title="GSSDPResourceGroup"><span class="type">GSSDPResourceGroup</span></a>.
+</p>
+</div>
+<div class="refsect1">
+<a name="GSSDPClient.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GSSDPClient-struct"></a><h3>struct GSSDPClient</h3>
+<pre class="programlisting">struct GSSDPClient;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gssdp-client-new"></a><h3>gssdp_client_new ()</h3>
+<pre class="programlisting"><a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="returnvalue">GSSDPClient</span></a> *       gssdp_client_new                    (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GMainContext"><span class="type">GMainContext</span></a> *main_context</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *iface</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>main_context</code></em> :</span></p></td>
+<td>Deprecated: 0.11.2: Always set to NULL. If you want to
+specify a context use <a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default"><code class="function">g_main_context_push_thread_default()</code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>iface</code></em> :</span></p></td>
+<td>The name of the network interface, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> for auto-detection.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>Location to store error, or NULL</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A new <a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a> object.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gssdp-client-get-main-context"></a><h3>gssdp_client_get_main_context ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GMainContext"><span class="returnvalue">GMainContext</span></a> *      gssdp_client_get_main_context       (<em class="parameter"><code><a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a> *client</code></em>);</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gssdp-client-set-server-id"></a><h3>gssdp_client_set_server_id ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gssdp_client_set_server_id          (<em class="parameter"><code><a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a> *client</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *server_id</code></em>);</pre>
+<p>
+Sets the server ID of <em class="parameter"><code>client</code></em> to <em class="parameter"><code>server_id</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>client</code></em> :</span></p></td>
+<td>A <a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>server_id</code></em> :</span></p></td>
+<td>The server ID</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gssdp-client-get-server-id"></a><h3>gssdp_client_get_server_id ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *        gssdp_client_get_server_id          (<em class="parameter"><code><a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a> *client</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>client</code></em> :</span></p></td>
+<td>A <a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The server ID.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gssdp-client-get-interface"></a><h3>gssdp_client_get_interface ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *        gssdp_client_get_interface          (<em class="parameter"><code><a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a> *client</code></em>);</pre>
+<p>
+Get the name of the network interface associated to <em class="parameter"><code>client</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>client</code></em> :</span></p></td>
+<td>A <a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The network interface name. This string should not be freed.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gssdp-client-get-host-ip"></a><h3>gssdp_client_get_host_ip ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *        gssdp_client_get_host_ip            (<em class="parameter"><code><a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a> *client</code></em>);</pre>
+<p>
+Get the IP address we advertise ourselves as using.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>client</code></em> :</span></p></td>
+<td>A <a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The IP address. This string should not be freed.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gssdp-client-set-network"></a><h3>gssdp_client_set_network ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gssdp_client_set_network            (<em class="parameter"><code><a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a> *client</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *network</code></em>);</pre>
+<p>
+Sets the network identification of <em class="parameter"><code>client</code></em> to <em class="parameter"><code>network</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>client</code></em> :</span></p></td>
+<td>A <a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>network</code></em> :</span></p></td>
+<td>The string identifying the network</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gssdp-client-get-network"></a><h3>gssdp_client_get_network ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *        gssdp_client_get_network            (<em class="parameter"><code><a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a> *client</code></em>);</pre>
+<p>
+Get the network this client is associated with.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>client</code></em> :</span></p></td>
+<td>A <a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The network identification. This string should not be freed.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gssdp-client-get-active"></a><h3>gssdp_client_get_active ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gssdp_client_get_active             (<em class="parameter"><code><a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a> *client</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>client</code></em> :</span></p></td>
+<td>A <a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if <em class="parameter"><code>client</code></em> is active, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> otherwise.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="GSSDPClient.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="GSSDPClient--active"></a><h3>The <code class="literal">"active"</code> property</h3>
+<pre class="programlisting">  "active"                   <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>
+Whether this client is active or not (passive). When active
+(default), the client sends messages on the network, otherwise
+not. In most cases, you don't want to touch this property.
+</p>
+<p>Default value: TRUE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GSSDPClient--host-ip"></a><h3>The <code class="literal">"host-ip"</code> property</h3>
+<pre class="programlisting">  "host-ip"                  <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>
+The IP address of the assoicated network interface.
+</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GSSDPClient--interface"></a><h3>The <code class="literal">"interface"</code> property</h3>
+<pre class="programlisting">  "interface"                <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write / Construct Only</pre>
+<p>
+The name of the network interface this client is associated with.
+Set to NULL to autodetect.
+</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GSSDPClient--main-context"></a><h3>The <code class="literal">"main-context"</code> property</h3>
+<pre class="programlisting">  "main-context"             <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>              : Read / Write / Construct Only</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">GSSDPClient:main-context</code> has been deprecated since version 0.11.2 and should not be used in newly-written code. Use <a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#g-main-context-push-thread-default"><code class="function">g_main_context_push_thread_default()</code></a>.</p>
+</div>
+<p>
+The <a href="http://library.gnome.org/devel/glib/unstable/glib-The-Main-Event-Loop.html#GMainContext"><span class="type">GMainContext</span></a> to use. Set to NULL to use the default.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GSSDPClient--network"></a><h3>The <code class="literal">"network"</code> property</h3>
+<pre class="programlisting">  "network"                  <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write / Construct</pre>
+<p>
+The network this client is currently connected to. You could set this
+to anything you want to identify the network this client is
+associated with. If you are using <a href="/opt/gnome2/share/gtk-doc/html/gupnp/GUPnPContextManager.html"><span class="type">GUPnPContextManager</span></a> and associated
+interface is a WiFi interface, this property is set to the ESSID of
+the network. Otherwise, expect this to be the network IP address by
+default.
+</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GSSDPClient--server-id"></a><h3>The <code class="literal">"server-id"</code> property</h3>
+<pre class="programlisting">  "server-id"                <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>
+The SSDP server's identifier.
+</p>
+<p>Default value: NULL</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GSSDPClient.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="GSSDPClient-message-received"></a><h3>The <code class="literal">"message-received"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a> *arg0,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>       *arg1,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>        arg2,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a>         arg3,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>     arg4,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>     user_data)      : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a></pre>
+<p>
+Internal signal.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr></tbody>
+</table></div>
+<p class="stability">Stability Level: Private</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17.1</div>
+</body>
+</html>

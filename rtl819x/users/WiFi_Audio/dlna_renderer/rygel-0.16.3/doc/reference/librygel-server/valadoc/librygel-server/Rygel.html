@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <title>Rygel &ndash; librygel-server &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">Rygel &ndash; librygel-server Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">librygel-server</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace">Rygel</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="enum"><a href="Rygel.LogicalOperator.html">LogicalOperator</a></li>
+          <li class="interface"><a href="Rygel.SearchableContainer.html">SearchableContainer</a></li>
+          <li class="interface"><a href="Rygel.VisualItem.html">VisualItem</a></li>
+          <li class="interface"><a href="Rygel.WritableContainer.html">WritableContainer</a></li>
+          <li class="class"><a href="Rygel.AudioItem.html">AudioItem</a></li>
+          <li class="class"><a href="Rygel.ImageItem.html">ImageItem</a></li>
+          <li class="class"><a href="Rygel.LogicalExpression.html">LogicalExpression</a></li>
+          <li class="class"><a href="Rygel.MediaArtStore.html">MediaArtStore</a></li>
+          <li class="abstract_class"><a href="Rygel.MediaContainer.html">MediaContainer</a></li>
+          <li class="abstract_class"><a href="Rygel.MediaItem.html">MediaItem</a></li>
+          <li class="abstract_class"><a href="Rygel.MediaObject.html">MediaObject</a></li>
+          <li class="class"><a href="Rygel.MediaObjects.html">MediaObjects</a></li>
+          <li class="class"><a href="Rygel.MediaServer.html">MediaServer</a></li>
+          <li class="abstract_class"><a href="Rygel.MediaServerPlugin.html">MediaServerPlugin</a></li>
+          <li class="class"><a href="Rygel.MusicItem.html">MusicItem</a></li>
+          <li class="class"><a href="Rygel.PhotoItem.html">PhotoItem</a></li>
+          <li class="class"><a href="Rygel.RelationalExpression.html">RelationalExpression</a></li>
+          <li class="abstract_class"><a href="Rygel.SearchExpression.html">SearchExpression</a></li>
+          <li class="class"><a href="Rygel.SimpleContainer.html">SimpleContainer</a></li>
+          <li class="class"><a href="Rygel.Subtitle.html">Subtitle</a></li>
+          <li class="class"><a href="Rygel.Thumbnail.html">Thumbnail</a></li>
+          <li class="class"><a href="Rygel.VideoItem.html">VideoItem</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">Rygel</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Interfaces:</h3>
+        <ul class="navi_inline">
+          <li class="interface"><a href="Rygel.SearchableContainer.html">SearchableContainer</a> - <span class="brief_description">The base class for 
+              searchable containers.</span></li>
+          <li class="interface"><a href="Rygel.VisualItem.html">VisualItem</a> - <span class="brief_description">An interface that visual (video and 
+              image) items must implement.</span></li>
+          <li class="interface"><a href="Rygel.WritableContainer.html">WritableContainer</a> - <span class="brief_description">This interface should 
+              be implemented by 'writable' containers - ones that allow adding, removal and editing of items directly under them. Currently, only 
+              addition and removal is supported.</span></li>
+        </ul>
+        <h3 class="main_title">Classes:</h3>
+        <ul class="navi_inline">
+          <li class="class"><a href="Rygel.AudioItem.html">AudioItem</a> - <span class="brief_description">Represents an audio item.</span></li>
+          <li class="class"><a href="Rygel.ImageItem.html">ImageItem</a> - <span class="brief_description">Represents an image item.</span></li>
+          <li class="class"><a href="Rygel.LogicalExpression.html">LogicalExpression</a> - <span class="brief_description">This is a parsed UPnP 
+              search expression consisting of two other search expressions joined by a boolean operator such as AND or OR.</span></li>
+          <li class="class"><a href="Rygel.MediaArtStore.html">MediaArtStore</a> - <span class="brief_description">This maps RygelMusicItem objects to
+              their cached cover art, implementing the GNOME <a href="https://live.gnome.org/MediaArtStorageSpec">MediaArt storage specification</a> 
+              and the simplified version that Banshee uses.</span></li>
+          <li class="class"><a href="Rygel.MediaObjects.html">MediaObjects</a> - <span class="brief_description">An array list that keeps media 
+              objects.</span></li>
+          <li class="class"><a href="Rygel.MusicItem.html">MusicItem</a> - <span class="brief_description">Represents a music item.</span></li>
+          <li class="class"><a href="Rygel.PhotoItem.html">PhotoItem</a> - <span class="brief_description">Represents a photo item.</span></li>
+          <li class="class"><a href="Rygel.RelationalExpression.html">RelationalExpression</a> - <span class="brief_description">This is a parsed UPnP
+              search expression consisting of two strings joined by a relational operator such as such &lt;, &lt;=, ==, !=, &gt;, &gt;=, derivedFrom 
+              or exists.</span></li>
+          <li class="class"><a href="Rygel.SimpleContainer.html">SimpleContainer</a> - <span class="brief_description">A simple implementation of 
+              RygelMediaContainer that keeps all RygelMediaObjects in memory. You should add children via rygel_simple_container_add_child_item().
+            </span></li>
+          <li class="class"><a href="Rygel.Subtitle.html">Subtitle</a> - <span class="brief_description">Represents a subtitle for a video.</span>
+          </li>
+          <li class="class"><a href="Rygel.Thumbnail.html">Thumbnail</a> - <span class="brief_description">Represents a picture or video thumbnail.
+            </span></li>
+          <li class="class"><a href="Rygel.VideoItem.html">VideoItem</a> - <span class="brief_description">Represents a video item.</span></li>
+          <li class="abstract_class"><a href="Rygel.MediaContainer.html">MediaContainer</a> - <span class="brief_description">This is a container 
+              (folder) for media items and child containers.</span></li>
+          <li class="abstract_class"><a href="Rygel.MediaItem.html">MediaItem</a> - <span class="brief_description">Represents a media item (Music, 
+              Video or Image).</span></li>
+          <li class="abstract_class"><a href="Rygel.MediaObject.html">MediaObject</a> - <span class="brief_description">Represents a media object 
+              (container or item).</span></li>
+          <li class="abstract_class"><a href="Rygel.MediaServerPlugin.html">MediaServerPlugin</a> - <span class="brief_description">This is the base 
+              class for every Rygel implementation of a UPnP media server. It should be used either for a real plug-in for the rygel process or used 
+              in-process via the librygel-server API (see the standalone-server.c example).</span></li>
+          <li class="abstract_class"><a href="Rygel.SearchExpression.html">SearchExpression</a> - <span class="brief_description">Represents a 
+              SearchExpression tree.</span></li>
+          <li class="class"><a href="Rygel.MediaServer.html">MediaServer</a> - <span class="brief_description">This class may be used to implement in-
+              process UPnP-AV media servers.</span></li>
+        </ul>
+        <h3 class="main_title">Enums:</h3>
+        <ul class="navi_inline">
+          <li class="enum"><a href="Rygel.LogicalOperator.html">LogicalOperator</a> - </li>
+        </ul>
+        <h3 class="main_title">Error domains:</h3>
+        <ul class="navi_inline">
+          <li class="errordomain"><a href="Rygel.ContentDirectoryError.html">ContentDirectoryError</a> - <span class="brief_description">Errors used 
+              by ContentDirectory and deriving classes.</span></li>
+        </ul>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

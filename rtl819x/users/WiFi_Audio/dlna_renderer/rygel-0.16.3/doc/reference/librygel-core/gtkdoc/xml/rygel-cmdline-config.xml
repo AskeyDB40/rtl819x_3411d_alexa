@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelCmdlineConfig">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelCmdlineConfig.top_of_page">RygelCmdlineConfig</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-CORE Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelCmdlineConfig</refname>
+<refpurpose>Manages configuration from Commandline arguments.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelCmdlineConfig.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="RYGEL-TYPE-CMDLINE-CONFIG:CAPS">RYGEL_TYPE_CMDLINE_CONFIG</link>
+<link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             <link linkend="rygel-cmdline-config-get-config-file">rygel_cmdline_config_get_config_file</link>
+                                                        (<parameter><link linkend="RygelCmdlineConfig"><type>RygelCmdlineConfig</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="RygelCmdlineConfig"><returnvalue>RygelCmdlineConfig</returnvalue></link> * <link linkend="rygel-cmdline-config-new">rygel_cmdline_config_new</link>           (<parameter><type>void</type></parameter>);
+<link linkend="RygelCmdlineConfig"><returnvalue>RygelCmdlineConfig</returnvalue></link> * <link linkend="rygel-cmdline-config-get-default">rygel_cmdline_config_get_default</link>   (<parameter><type>void</type></parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-cmdline-config-parse-args">rygel_cmdline_config_parse_args</link>     (<parameter><link linkend="gchar"><type>gchar</type></link> ***args</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> *args_length1</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+struct              <link linkend="RygelCmdlineConfig-struct">RygelCmdlineConfig</link>;
+struct              <link linkend="RygelCmdlineConfigClass">RygelCmdlineConfigClass</link>;
+enum                <link linkend="RygelCmdlineConfigError">RygelCmdlineConfigError</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelCmdlineConfig.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----RygelCmdlineConfig
+</synopsis>
+</refsect1>
+<refsect1 id="RygelCmdlineConfig.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+RygelCmdlineConfig implements
+ <link linkend="RygelConfiguration">RygelConfiguration</link>.</para>
+</refsect1>
+
+<refsect1 id="RygelCmdlineConfig.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="RygelCmdlineConfig.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="RYGEL-TYPE-CMDLINE-CONFIG:CAPS" role="macro">
+<title>RYGEL_TYPE_CMDLINE_CONFIG</title>
+<indexterm zone="RYGEL-TYPE-CMDLINE-CONFIG:CAPS"><primary>RYGEL_TYPE_CMDLINE_CONFIG</primary></indexterm>
+<programlisting>#define RYGEL_TYPE_CMDLINE_CONFIG (rygel_cmdline_config_get_type ())
+</programlisting>
+<para>
+The type for <link linkend="RygelCmdlineConfig"><type>RygelCmdlineConfig</type></link>.
+</para></refsect2>
+<refsect2 id="rygel-cmdline-config-get-config-file" role="function">
+<title>rygel_cmdline_config_get_config_file ()</title>
+<indexterm zone="rygel-cmdline-config-get-config-file"><primary>rygel_cmdline_config_get_config_file</primary></indexterm>
+<programlisting><link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             rygel_cmdline_config_get_config_file
+                                                        (<parameter><link linkend="RygelCmdlineConfig"><type>RygelCmdlineConfig</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelCmdlineConfig"><type>RygelCmdlineConfig</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-cmdline-config-new" role="function">
+<title>rygel_cmdline_config_new ()</title>
+<indexterm zone="rygel-cmdline-config-new"><primary>rygel_cmdline_config_new</primary></indexterm>
+<programlisting><link linkend="RygelCmdlineConfig"><returnvalue>RygelCmdlineConfig</returnvalue></link> * rygel_cmdline_config_new           (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="rygel-cmdline-config-get-default" role="function">
+<title>rygel_cmdline_config_get_default ()</title>
+<indexterm zone="rygel-cmdline-config-get-default"><primary>rygel_cmdline_config_get_default</primary></indexterm>
+<programlisting><link linkend="RygelCmdlineConfig"><returnvalue>RygelCmdlineConfig</returnvalue></link> * rygel_cmdline_config_get_default   (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="rygel-cmdline-config-parse-args" role="function">
+<title>rygel_cmdline_config_parse_args ()</title>
+<indexterm zone="rygel-cmdline-config-parse-args"><primary>rygel_cmdline_config_parse_args</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_cmdline_config_parse_args     (<parameter><link linkend="gchar"><type>gchar</type></link> ***args</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> *args_length1</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>args_length1</parameter>&#160;:</term>
+<listitem><simpara>length of the <parameter>args</parameter> array</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore. <emphasis role="annotation">[<acronym>error-domains</acronym> RygelCmdlineConfigError GOptionError]</emphasis></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="RygelCmdlineConfig-struct" role="struct">
+<title>struct RygelCmdlineConfig</title>
+<indexterm zone="RygelCmdlineConfig-struct"><primary>RygelCmdlineConfig</primary></indexterm>
+<programlisting>struct RygelCmdlineConfig;</programlisting>
+<para>
+Manages configuration from Commandline arguments.
+</para></refsect2>
+<refsect2 id="RygelCmdlineConfigClass" role="struct">
+<title>struct RygelCmdlineConfigClass</title>
+<indexterm zone="RygelCmdlineConfigClass"><primary>RygelCmdlineConfigClass</primary></indexterm>
+<programlisting>struct RygelCmdlineConfigClass {
+	GObjectClass parent_class;
+};
+</programlisting>
+<para>
+The class structure for <link linkend="RYGEL-TYPE-CMDLINE-CONFIG:CAPS"><literal>RYGEL_TYPE_CMDLINE_CONFIG</literal></link>. All the fields in this structure are private and should never be accessed directly.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="GObjectClass"><type>GObjectClass</type></link>&#160;<structfield id="RygelCmdlineConfigClass.parent-class">parent_class</structfield>;</term>
+<listitem><simpara>the parent class structure</simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+<refsect2 id="RygelCmdlineConfigError" role="enum">
+<title>enum RygelCmdlineConfigError</title>
+<indexterm zone="RygelCmdlineConfigError"><primary>RygelCmdlineConfigError</primary></indexterm>
+<programlisting>typedef enum {
+	RYGEL_CMDLINE_CONFIG_ERROR_VERSION_ONLY
+} RygelCmdlineConfigError;
+</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

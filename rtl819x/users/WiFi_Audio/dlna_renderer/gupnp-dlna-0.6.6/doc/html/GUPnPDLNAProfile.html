@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GUPnPDLNAProfile</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GUPnP DLNA Reference Manual">
+<link rel="up" href="ch01.html" title="GUPnP DLNA">
+<link rel="prev" href="GUPnPDLNAInformation.html" title="GUPnPDLNAInformation">
+<link rel="next" href="annotation-glossary.html" title="Annotation Glossary">
+<meta name="generator" content="GTK-Doc V1.17.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GUPnPDLNAInformation.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GUPnP DLNA Reference Manual</th>
+<td><a accesskey="n" href="annotation-glossary.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GUPnPDLNAProfile.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#GUPnPDLNAProfile.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#GUPnPDLNAProfile.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#GUPnPDLNAProfile.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="GUPnPDLNAProfile"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GUPnPDLNAProfile.top_of_page"></a>GUPnPDLNAProfile</span></h2>
+<p>GUPnPDLNAProfile — Object representing a DLNA profile</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="GUPnPDLNAProfile.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="GUPnPDLNAProfile.html#GUPnPDLNAProfile-struct" title="GUPnPDLNAProfile">GUPnPDLNAProfile</a>;
+                    <a class="link" href="GUPnPDLNAProfile.html#GUPnPDLNAProfileClass" title="GUPnPDLNAProfileClass">GUPnPDLNAProfileClass</a>;
+<a class="link" href="GUPnPDLNAProfile.html" title="GUPnPDLNAProfile"><span class="returnvalue">GUPnPDLNAProfile</span></a> *  <a class="link" href="GUPnPDLNAProfile.html#gupnp-dlna-profile-new" title="gupnp_dlna_profile_new ()">gupnp_dlna_profile_new</a>              (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *mime</code></em>,
+                                                         <em class="parameter"><code><a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gstreamer/html/gstreamer-GstCaps.html#GstCaps"><span class="type">GstCaps</span></a> *container_caps</code></em>,
+                                                         <em class="parameter"><code><a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gstreamer/html/gstreamer-GstCaps.html#GstCaps"><span class="type">GstCaps</span></a> *video_caps</code></em>,
+                                                         <em class="parameter"><code><a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gstreamer/html/gstreamer-GstCaps.html#GstCaps"><span class="type">GstCaps</span></a> *audio_caps</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> extended</code></em>);
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="GUPnPDLNAProfile.html#gupnp-dlna-profile-get-name" title="gupnp_dlna_profile_get_name ()">gupnp_dlna_profile_get_name</a>         (<em class="parameter"><code><a class="link" href="GUPnPDLNAProfile.html" title="GUPnPDLNAProfile"><span class="type">GUPnPDLNAProfile</span></a> *self</code></em>);
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="GUPnPDLNAProfile.html#gupnp-dlna-profile-get-mime" title="gupnp_dlna_profile_get_mime ()">gupnp_dlna_profile_get_mime</a>         (<em class="parameter"><code><a class="link" href="GUPnPDLNAProfile.html" title="GUPnPDLNAProfile"><span class="type">GUPnPDLNAProfile</span></a> *self</code></em>);
+<a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-base-libs/html/gst-plugins-base-libs-encoding-profile.html#GstEncodingProfile"><span class="returnvalue">GstEncodingProfile</span></a> * <a class="link" href="GUPnPDLNAProfile.html#gupnp-dlna-profile-get-encoding-profile" title="gupnp_dlna_profile_get_encoding_profile ()">gupnp_dlna_profile_get_encoding_profile</a>
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDLNAProfile.html" title="GUPnPDLNAProfile"><span class="type">GUPnPDLNAProfile</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="GUPnPDLNAProfile.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----GUPnPDLNAProfile
+</pre>
+</div>
+<div class="refsect1">
+<a name="GUPnPDLNAProfile.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="GUPnPDLNAProfile.html#GUPnPDLNAProfile--encoding-profile" title='The "encoding-profile" property'>encoding-profile</a>"         <a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-base-libs/html/gst-plugins-base-libs-encoding-profile.html#GstEncodingProfile"><span class="type">GstEncodingProfile</span></a>*   : Read
+  "<a class="link" href="GUPnPDLNAProfile.html#GUPnPDLNAProfile--extended" title='The "extended" property'>extended</a>"                 <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write / Construct Only
+  "<a class="link" href="GUPnPDLNAProfile.html#GUPnPDLNAProfile--mime" title='The "mime" property'>mime</a>"                     <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write / Construct Only
+  "<a class="link" href="GUPnPDLNAProfile.html#GUPnPDLNAProfile--name" title='The "name" property'>name</a>"                     <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write / Construct Only
+</pre>
+</div>
+<div class="refsect1">
+<a name="GUPnPDLNAProfile.description"></a><h2>Description</h2>
+<p>
+The <a class="link" href="GUPnPDLNADiscoverer.html" title="GUPnPDLNADiscoverer"><span class="type">GUPnPDLNADiscoverer</span></a> object provides a few APIs that return
+<a class="link" href="GUPnPDLNAProfile.html" title="GUPnPDLNAProfile"><span class="type">GUPnPDLNAProfile</span></a> objects. These represent a single DLNA profile. Each
+<a class="link" href="GUPnPDLNAProfile.html" title="GUPnPDLNAProfile"><span class="type">GUPnPDLNAProfile</span></a> has a name (the name of the DLNA profile), the
+corresponding MIME type, and a <a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-base-libs/html/gst-plugins-base-libs-encoding-profile.html#GstEncodingProfile"><span class="type">GstEncodingProfile</span></a> which represents the
+various audio/video/container restrictions specified for that DLNA profile.
+</p>
+</div>
+<div class="refsect1">
+<a name="GUPnPDLNAProfile.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GUPnPDLNAProfile-struct"></a><h3>GUPnPDLNAProfile</h3>
+<pre class="programlisting">typedef struct _GUPnPDLNAProfile GUPnPDLNAProfile;</pre>
+<p>
+The top-level object used for the in-memory representation of the DLNA
+Profiles.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GUPnPDLNAProfileClass"></a><h3>GUPnPDLNAProfileClass</h3>
+<pre class="programlisting">typedef struct {
+        GObjectClass parent_class;
+} GUPnPDLNAProfileClass;
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-dlna-profile-new"></a><h3>gupnp_dlna_profile_new ()</h3>
+<pre class="programlisting"><a class="link" href="GUPnPDLNAProfile.html" title="GUPnPDLNAProfile"><span class="returnvalue">GUPnPDLNAProfile</span></a> *  gupnp_dlna_profile_new              (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *mime</code></em>,
+                                                         <em class="parameter"><code><a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gstreamer/html/gstreamer-GstCaps.html#GstCaps"><span class="type">GstCaps</span></a> *container_caps</code></em>,
+                                                         <em class="parameter"><code><a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gstreamer/html/gstreamer-GstCaps.html#GstCaps"><span class="type">GstCaps</span></a> *video_caps</code></em>,
+                                                         <em class="parameter"><code><a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gstreamer/html/gstreamer-GstCaps.html#GstCaps"><span class="type">GstCaps</span></a> *audio_caps</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> extended</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-dlna-profile-get-name"></a><h3>gupnp_dlna_profile_get_name ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       gupnp_dlna_profile_get_name         (<em class="parameter"><code><a class="link" href="GUPnPDLNAProfile.html" title="GUPnPDLNAProfile"><span class="type">GUPnPDLNAProfile</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GUPnPDLNAProfile.html" title="GUPnPDLNAProfile"><span class="type">GUPnPDLNAProfile</span></a> object</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the name of the DLNA profile represented by <em class="parameter"><code>self</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-dlna-profile-get-mime"></a><h3>gupnp_dlna_profile_get_mime ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       gupnp_dlna_profile_get_mime         (<em class="parameter"><code><a class="link" href="GUPnPDLNAProfile.html" title="GUPnPDLNAProfile"><span class="type">GUPnPDLNAProfile</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GUPnPDLNAProfile.html" title="GUPnPDLNAProfile"><span class="type">GUPnPDLNAProfile</span></a> object</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the DLNA MIME type of the DLNA profile represented by <em class="parameter"><code>self</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-dlna-profile-get-encoding-profile"></a><h3>gupnp_dlna_profile_get_encoding_profile ()</h3>
+<pre class="programlisting"><a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-base-libs/html/gst-plugins-base-libs-encoding-profile.html#GstEncodingProfile"><span class="returnvalue">GstEncodingProfile</span></a> * gupnp_dlna_profile_get_encoding_profile
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDLNAProfile.html" title="GUPnPDLNAProfile"><span class="type">GUPnPDLNAProfile</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GUPnPDLNAProfile.html" title="GUPnPDLNAProfile"><span class="type">GUPnPDLNAProfile</span></a> object</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-base-libs/html/gst-plugins-base-libs-encoding-profile.html#GstEncodingProfile"><span class="type">GstEncodingProfile</span></a> object that, in a future
+version, can be used to transcode a given stream to match the DLNA
+profile represented by <em class="parameter"><code>self</code></em>.
+The receiver must unref the returned <a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-base-libs/html/gst-plugins-base-libs-encoding-profile.html#GstEncodingProfile"><span class="type">GstEncodingProfile</span></a> when done
+using it. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="GUPnPDLNAProfile.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="GUPnPDLNAProfile--encoding-profile"></a><h3>The <code class="literal">"encoding-profile"</code> property</h3>
+<pre class="programlisting">  "encoding-profile"         <a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-base-libs/html/gst-plugins-base-libs-encoding-profile.html#GstEncodingProfile"><span class="type">GstEncodingProfile</span></a>*   : Read</pre>
+<p>GstEncodingProfile objectcorresponding to the DLNA profile.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GUPnPDLNAProfile--extended"></a><h3>The <code class="literal">"extended"</code> property</h3>
+<pre class="programlisting">  "extended"                 <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write / Construct Only</pre>
+<p>Indicates that this profile is not part of the DLNA specification.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GUPnPDLNAProfile--mime"></a><h3>The <code class="literal">"mime"</code> property</h3>
+<pre class="programlisting">  "mime"                     <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write / Construct Only</pre>
+<p>The MIME type of the DLNA profile.</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GUPnPDLNAProfile--name"></a><h3>The <code class="literal">"name"</code> property</h3>
+<pre class="programlisting">  "name"                     <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write / Construct Only</pre>
+<p>The name of the DLNA profile .</p>
+<p>Default value: NULL</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17.1</div>
+</body>
+</html>

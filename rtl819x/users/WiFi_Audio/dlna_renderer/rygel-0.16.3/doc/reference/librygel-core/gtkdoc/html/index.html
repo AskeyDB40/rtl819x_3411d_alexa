@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>librygel-core Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="librygel-core Reference Manual">
+<link rel="next" href="ch01.html" title="librygel-core API Reference">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="book">
+<div class="titlepage">
+<div>
+<div><table class="navigation" id="top" width="100%" cellpadding="2" cellspacing="0"><tr><th valign="middle"><p class="title">librygel-core Reference Manual</p></th></tr></table></div>
+<div><p class="releaseinfo">
+      for librygel-core 1.0.
+      The latest version of this documentation can be found on-line at
+      <a class="ulink" href="http://%5BSERVER%5D/librygel-core/index.html" target="_top">http://[SERVER]/librygel-core/</a>.
+    </p></div>
+</div>
+<hr>
+</div>
+<div class="toc"><dl>
+<dt><span class="chapter"><a href="ch01.html">librygel-core API Reference</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="RygelConnectionManager.html">RygelConnectionManager</a></span><span class="refpurpose"> — Basic implementation of UPnP ConnectionManager service version 2.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="RygelConfiguration.html">RygelConfiguration</a></span><span class="refpurpose"> — Interface for dealing with Rygel configuration.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="RygelLogHandler.html">RygelLogHandler</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="RygelResourceInfo.html">RygelResourceInfo</a></span><span class="refpurpose"> — Holds information about a particular resource (device and service) implementation.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="RygelDBusInterface.html">RygelDBusInterface</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="DescriptionFile.html">DescriptionFile</a></span><span class="refpurpose"> — Represents a device description document and offers methods for easy manipulation of those.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="RygelPluginLoader.html">RygelPluginLoader</a></span><span class="refpurpose"> — Responsible for plugin loading. Probes for shared library files in a specific directry and tries to grab a function with a specific name and signature, calls it. The loaded module can then add plugins to Rygel by calling the add_plugin method. NOTE: The module SHOULD make sure that plugin is not disabled by user using plugin_disabled method before creating the plugin instance and resources related to that instance.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="RygelIconInfo.html">RygelIconInfo</a></span><span class="refpurpose"> — Holds information about an icon.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="FreeDesktopDBusObject.html">FreeDesktopDBusObject</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="RygelRootDevice.html">RygelRootDevice</a></span><span class="refpurpose"> — Represents a Root device.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="RygelUserConfig.html">RygelUserConfig</a></span><span class="refpurpose"> — Manages the user configuration for Rygel.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="RygelCmdlineConfig.html">RygelCmdlineConfig</a></span><span class="refpurpose"> — Manages configuration from Commandline arguments.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="RygelPlugin.html">RygelPlugin</a></span><span class="refpurpose"> — Represents a Rygel plugin. Plugins are supposed to provide an object of this class or a subclass.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="RygelMediaDevice.html">RygelMediaDevice</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="RygelRootDeviceFactory.html">RygelRootDeviceFactory</a></span><span class="refpurpose"> — Factory for RootDevice objects. Give it a plugin and it will create a Root device for that.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="RygelMetaConfig.html">RygelMetaConfig</a></span><span class="refpurpose"> — Manages all the configuration sources for Rygel.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="RygelXMLUtils.html">RygelXMLUtils</a></span><span class="refpurpose"> — XML utility API.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="RygelStateMachine.html">RygelStateMachine</a></span><span class="refpurpose"> — StateMachine interface.</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="ch02.html">librygel-core D-Bus API Reference</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="docs-org-gnome-Rygel1.html">org.gnome.Rygel1</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="docs-org-freedesktop-DBus.html">org.freedesktop.DBus</a></span><span class="refpurpose"></span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="docs-org-freedesktop-DBus-Properties.html">org.freedesktop.DBus.Properties</a></span><span class="refpurpose"></span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="object-tree.html">Object Hierarchy</a></span></dt>
+<dt><span class="index"><a href="api-index-full.html">API Index</a></span></dt>
+<dt><span class="index"><a href="deprecated-api-index.html">Index of deprecated API</a></span></dt>
+<dt><span class="glossary"><a href="annotation-glossary.html">Annotation Glossary</a></span></dt>
+</dl></div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

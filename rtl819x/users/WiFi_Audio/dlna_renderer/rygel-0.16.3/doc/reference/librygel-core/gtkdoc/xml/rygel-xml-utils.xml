@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelXMLUtils">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelXMLUtils.top_of_page">RygelXMLUtils</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-CORE Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelXMLUtils</refname>
+<refpurpose>XML utility API.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelXMLUtils.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="RYGEL-TYPE-XML-UTILS:CAPS">RYGEL_TYPE_XML_UTILS</link>
+<link linkend="RygelXMLUtils"><returnvalue>RygelXMLUtils</returnvalue></link> *     <link linkend="rygel-xml-utils-new">rygel_xml_utils_new</link>                 (<parameter><type>void</type></parameter>);
+<link linkend="xmlNode"><returnvalue>xmlNode</returnvalue></link> *           <link linkend="rygel-xml-utils-get-element">rygel_xml_utils_get_element</link>         (<parameter><link linkend="xmlNode"><type>xmlNode</type></link> *node</parameter>,
+                                                         <parameter>...</parameter>);
+struct              <link linkend="RygelXMLUtils-struct">RygelXMLUtils</link>;
+<link linkend="gpointer"><returnvalue>gpointer</returnvalue></link>            <link linkend="rygel-xml-utils-ref">rygel_xml_utils_ref</link>                 (<parameter><link linkend="gpointer"><type>gpointer</type></link> instance</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-xml-utils-unref">rygel_xml_utils_unref</link>               (<parameter><link linkend="gpointer"><type>gpointer</type></link> instance</parameter>);
+<link linkend="GParamSpec"><returnvalue>GParamSpec</returnvalue></link> *        <link linkend="rygel-param-spec-xml-utils">rygel_param_spec_xml_utils</link>          (<parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *nick</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *blurb</parameter>,
+                                                         <parameter><link linkend="GType"><type>GType</type></link> object_type</parameter>,
+                                                         <parameter><link linkend="GParamFlags"><type>GParamFlags</type></link> flags</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-value-set-xml-utils">rygel_value_set_xml_utils</link>           (<parameter><link linkend="GValue"><type>GValue</type></link> *value</parameter>,
+                                                         <parameter><link linkend="gpointer"><type>gpointer</type></link> v_object</parameter>);
+<link linkend="gpointer"><returnvalue>gpointer</returnvalue></link>            <link linkend="rygel-value-get-xml-utils">rygel_value_get_xml_utils</link>           (<parameter>const <link linkend="GValue"><type>GValue</type></link> *value</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-value-take-xml-utils">rygel_value_take_xml_utils</link>          (<parameter><link linkend="GValue"><type>GValue</type></link> *value</parameter>,
+                                                         <parameter><link linkend="gpointer"><type>gpointer</type></link> v_object</parameter>);
+struct              <link linkend="RygelXMLUtilsClass">RygelXMLUtilsClass</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelXMLUtils.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  RygelXMLUtils
+</synopsis>
+</refsect1>
+
+<refsect1 id="RygelXMLUtils.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="RygelXMLUtils.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="RYGEL-TYPE-XML-UTILS:CAPS" role="macro">
+<title>RYGEL_TYPE_XML_UTILS</title>
+<indexterm zone="RYGEL-TYPE-XML-UTILS:CAPS"><primary>RYGEL_TYPE_XML_UTILS</primary></indexterm>
+<programlisting>#define RYGEL_TYPE_XML_UTILS (rygel_xml_utils_get_type ())
+</programlisting>
+<para>
+The type for <link linkend="RygelXMLUtils"><type>RygelXMLUtils</type></link>.
+</para></refsect2>
+<refsect2 id="rygel-xml-utils-new" role="function">
+<title>rygel_xml_utils_new ()</title>
+<indexterm zone="rygel-xml-utils-new"><primary>rygel_xml_utils_new</primary></indexterm>
+<programlisting><link linkend="RygelXMLUtils"><returnvalue>RygelXMLUtils</returnvalue></link> *     rygel_xml_utils_new                 (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="rygel-xml-utils-get-element" role="function">
+<title>rygel_xml_utils_get_element ()</title>
+<indexterm zone="rygel-xml-utils-get-element"><primary>rygel_xml_utils_get_element</primary></indexterm>
+<programlisting><link linkend="xmlNode"><returnvalue>xmlNode</returnvalue></link> *           rygel_xml_utils_get_element         (<parameter><link linkend="xmlNode"><type>xmlNode</type></link> *node</parameter>,
+                                                         <parameter>...</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="RygelXMLUtils-struct" role="struct">
+<title>struct RygelXMLUtils</title>
+<indexterm zone="RygelXMLUtils-struct"><primary>RygelXMLUtils</primary></indexterm>
+<programlisting>struct RygelXMLUtils;</programlisting>
+<para>
+XML utility API.
+</para></refsect2>
+<refsect2 id="rygel-xml-utils-ref" role="function">
+<title>rygel_xml_utils_ref ()</title>
+<indexterm zone="rygel-xml-utils-ref"><primary>rygel_xml_utils_ref</primary></indexterm>
+<programlisting><link linkend="gpointer"><returnvalue>gpointer</returnvalue></link>            rygel_xml_utils_ref                 (<parameter><link linkend="gpointer"><type>gpointer</type></link> instance</parameter>);</programlisting>
+<para>
+Increases the reference count of <parameter>object</parameter>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>instance</parameter>&#160;:</term>
+<listitem><simpara>a <link linkend="RygelXMLUtils"><type>RygelXMLUtils</type></link>.</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>the same <parameter>object</parameter></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-xml-utils-unref" role="function">
+<title>rygel_xml_utils_unref ()</title>
+<indexterm zone="rygel-xml-utils-unref"><primary>rygel_xml_utils_unref</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_xml_utils_unref               (<parameter><link linkend="gpointer"><type>gpointer</type></link> instance</parameter>);</programlisting>
+<para>
+Decreases the reference count of <parameter>object</parameter>. When its reference count drops to 0, the object is finalized (i.e. its memory is freed).
+</para><variablelist role="params">
+<varlistentry><term><parameter>instance</parameter>&#160;:</term>
+<listitem><simpara>a <link linkend="RygelXMLUtils"><type>RygelXMLUtils</type></link>.</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-param-spec-xml-utils" role="function">
+<title>rygel_param_spec_xml_utils ()</title>
+<indexterm zone="rygel-param-spec-xml-utils"><primary>rygel_param_spec_xml_utils</primary></indexterm>
+<programlisting><link linkend="GParamSpec"><returnvalue>GParamSpec</returnvalue></link> *        rygel_param_spec_xml_utils          (<parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *nick</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *blurb</parameter>,
+                                                         <parameter><link linkend="GType"><type>GType</type></link> object_type</parameter>,
+                                                         <parameter><link linkend="GParamFlags"><type>GParamFlags</type></link> flags</parameter>);</programlisting>
+<para>
+Creates a new <link linkend="GParamSpecBoxed"><type>GParamSpecBoxed</type></link> instance specifying a <link linkend="RYGEL-TYPE-XML-UTILS:CAPS"><literal>RYGEL_TYPE_XML_UTILS</literal></link> derived property.
+</para>
+<para>
+See <link linkend="g-param-spec-internal"><function><link linkend="g-param-spec-internal"><function>g_param_spec_internal()</function></link></function></link> for details on property names.
+</para><variablelist role="params">
+<varlistentry><term><parameter>name</parameter>&#160;:</term>
+<listitem><simpara>canonical name of the property specified</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>nick</parameter>&#160;:</term>
+<listitem><simpara>nick name for the property specified</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>blurb</parameter>&#160;:</term>
+<listitem><simpara>description of the property specified</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>object_type</parameter>&#160;:</term>
+<listitem><simpara><link linkend="RYGEL-TYPE-XML-UTILS:CAPS"><literal>RYGEL_TYPE_XML_UTILS</literal></link> derived type of this property</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>flags</parameter>&#160;:</term>
+<listitem><simpara>flags for the property specified</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-value-set-xml-utils" role="function">
+<title>rygel_value_set_xml_utils ()</title>
+<indexterm zone="rygel-value-set-xml-utils"><primary>rygel_value_set_xml_utils</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_value_set_xml_utils           (<parameter><link linkend="GValue"><type>GValue</type></link> *value</parameter>,
+                                                         <parameter><link linkend="gpointer"><type>gpointer</type></link> v_object</parameter>);</programlisting>
+<para>
+Set the contents of a <link linkend="RYGEL-TYPE-XML-UTILS:CAPS"><literal>RYGEL_TYPE_XML_UTILS</literal></link> derived <link linkend="GValue"><type>GValue</type></link> to <parameter>v_object</parameter>.
+</para>
+<para>
+<link linkend="rygel-value-set-xml-utils"><function><link linkend="rygel-value-set-xml-utils"><function>rygel_value_set_xml_utils()</function></link></function></link> increases the reference count of <parameter>v_object</parameter> (the <link linkend="GValue"><type>GValue</type></link> holds a reference to <parameter>v_object</parameter>). If you do not wish to increase the reference count of the object (i.e. you wish to pass your current reference to the <link linkend="GValue"><type>GValue</type></link> because you no longer need it), use <link linkend="rygel-value-take-xml-utils"><function><link linkend="rygel-value-take-xml-utils"><function>rygel_value_take_xml_utils()</function></link></function></link> instead.
+</para>
+<para>
+It is important that your <link linkend="GValue"><type>GValue</type></link> holds a reference to <parameter>v_object</parameter> (either its own, or one it has taken) to ensure that the object won't be destroyed while the <link linkend="GValue"><type>GValue</type></link> still exists).
+</para><variablelist role="params">
+<varlistentry><term><parameter>value</parameter>&#160;:</term>
+<listitem><simpara>a valid <link linkend="GValue"><type>GValue</type></link> of <link linkend="RYGEL-TYPE-XML-UTILS:CAPS"><literal>RYGEL_TYPE_XML_UTILS</literal></link> derived type</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>v_object</parameter>&#160;:</term>
+<listitem><simpara>object value to be set</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-value-get-xml-utils" role="function">
+<title>rygel_value_get_xml_utils ()</title>
+<indexterm zone="rygel-value-get-xml-utils"><primary>rygel_value_get_xml_utils</primary></indexterm>
+<programlisting><link linkend="gpointer"><returnvalue>gpointer</returnvalue></link>            rygel_value_get_xml_utils           (<parameter>const <link linkend="GValue"><type>GValue</type></link> *value</parameter>);</programlisting>
+<para>
+Get the contents of a <link linkend="RYGEL-TYPE-XML-UTILS:CAPS"><literal>RYGEL_TYPE_XML_UTILS</literal></link> derived <link linkend="GValue"><type>GValue</type></link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>value</parameter>&#160;:</term>
+<listitem><simpara>a valid <link linkend="GValue"><type>GValue</type></link> of <link linkend="RYGEL-TYPE-XML-UTILS:CAPS"><literal>RYGEL_TYPE_XML_UTILS</literal></link> derived type</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>object contents of <parameter>value</parameter></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-value-take-xml-utils" role="function">
+<title>rygel_value_take_xml_utils ()</title>
+<indexterm zone="rygel-value-take-xml-utils"><primary>rygel_value_take_xml_utils</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_value_take_xml_utils          (<parameter><link linkend="GValue"><type>GValue</type></link> *value</parameter>,
+                                                         <parameter><link linkend="gpointer"><type>gpointer</type></link> v_object</parameter>);</programlisting>
+<para>
+Sets the contents of a <link linkend="RYGEL-TYPE-XML-UTILS:CAPS"><literal>RYGEL_TYPE_XML_UTILS</literal></link> derived <link linkend="GValue"><type>GValue</type></link> to <parameter>v_object</parameter> and takes over the ownership of the callers reference to <parameter>v_object</parameter>; the caller doesn't have to unref it any more (i.e. the reference count of the object is not increased).
+</para>
+<para>
+If you want the GValue to hold its own reference to <parameter>v_object</parameter>, use <link linkend="rygel-value-set-xml-utils"><function><link linkend="rygel-value-set-xml-utils"><function>rygel_value_set_xml_utils()</function></link></function></link> instead.
+</para><variablelist role="params">
+<varlistentry><term><parameter>value</parameter>&#160;:</term>
+<listitem><simpara>a valid <link linkend="GValue"><type>GValue</type></link> of <link linkend="RYGEL-TYPE-XML-UTILS:CAPS"><literal>RYGEL_TYPE_XML_UTILS</literal></link> derived type</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>v_object</parameter>&#160;:</term>
+<listitem><simpara>object value to be set</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="RygelXMLUtilsClass" role="struct">
+<title>struct RygelXMLUtilsClass</title>
+<indexterm zone="RygelXMLUtilsClass"><primary>RygelXMLUtilsClass</primary></indexterm>
+<programlisting>struct RygelXMLUtilsClass {
+	GTypeClass parent_class;
+	void (*finalize) (RygelXMLUtils *self);
+};
+</programlisting>
+<para>
+The class structure for <link linkend="RYGEL-TYPE-XML-UTILS:CAPS"><literal>RYGEL_TYPE_XML_UTILS</literal></link>. All the fields in this structure are private and should never be accessed directly.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="GTypeClass"><type>GTypeClass</type></link>&#160;<structfield id="RygelXMLUtilsClass.parent-class">parent_class</structfield>;</term>
+<listitem><simpara>the parent class structure</simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelXMLUtilsClass.finalize">finalize</structfield>&#160;()</term>
+<listitem />
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,1715 @@
+<MACRO>
+<NAME>RYGEL_TYPE_MEDIA_OBJECT</NAME>
+#define RYGEL_TYPE_MEDIA_OBJECT (rygel_media_object_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_OBJECT</NAME>
+#define RYGEL_MEDIA_OBJECT(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_MEDIA_OBJECT, RygelMediaObject))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_OBJECT_CLASS</NAME>
+#define RYGEL_MEDIA_OBJECT_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_MEDIA_OBJECT, RygelMediaObjectClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_MEDIA_OBJECT</NAME>
+#define RYGEL_IS_MEDIA_OBJECT(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_MEDIA_OBJECT))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_MEDIA_OBJECT_CLASS</NAME>
+#define RYGEL_IS_MEDIA_OBJECT_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_MEDIA_OBJECT))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_OBJECT_GET_CLASS</NAME>
+#define RYGEL_MEDIA_OBJECT_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_MEDIA_OBJECT, RygelMediaObjectClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_TRANSCODE_MANAGER</NAME>
+#define RYGEL_TYPE_TRANSCODE_MANAGER (rygel_transcode_manager_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TRANSCODE_MANAGER</NAME>
+#define RYGEL_TRANSCODE_MANAGER(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_TRANSCODE_MANAGER, RygelTranscodeManager))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TRANSCODE_MANAGER_CLASS</NAME>
+#define RYGEL_TRANSCODE_MANAGER_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_TRANSCODE_MANAGER, RygelTranscodeManagerClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_TRANSCODE_MANAGER</NAME>
+#define RYGEL_IS_TRANSCODE_MANAGER(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_TRANSCODE_MANAGER))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_TRANSCODE_MANAGER_CLASS</NAME>
+#define RYGEL_IS_TRANSCODE_MANAGER_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_TRANSCODE_MANAGER))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TRANSCODE_MANAGER_GET_CLASS</NAME>
+#define RYGEL_TRANSCODE_MANAGER_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_TRANSCODE_MANAGER, RygelTranscodeManagerClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_HTTP_SERVER</NAME>
+#define RYGEL_TYPE_HTTP_SERVER (rygel_http_server_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_HTTP_SERVER</NAME>
+#define RYGEL_HTTP_SERVER(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_HTTP_SERVER, RygelHTTPServer))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_HTTP_SERVER_CLASS</NAME>
+#define RYGEL_HTTP_SERVER_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_HTTP_SERVER, RygelHTTPServerClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_HTTP_SERVER</NAME>
+#define RYGEL_IS_HTTP_SERVER(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_HTTP_SERVER))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_HTTP_SERVER_CLASS</NAME>
+#define RYGEL_IS_HTTP_SERVER_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_HTTP_SERVER))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_HTTP_SERVER_GET_CLASS</NAME>
+#define RYGEL_HTTP_SERVER_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_HTTP_SERVER, RygelHTTPServerClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_MEDIA_CONTAINER</NAME>
+#define RYGEL_TYPE_MEDIA_CONTAINER (rygel_media_container_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_CONTAINER</NAME>
+#define RYGEL_MEDIA_CONTAINER(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_MEDIA_CONTAINER, RygelMediaContainer))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_CONTAINER_CLASS</NAME>
+#define RYGEL_MEDIA_CONTAINER_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_MEDIA_CONTAINER, RygelMediaContainerClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_MEDIA_CONTAINER</NAME>
+#define RYGEL_IS_MEDIA_CONTAINER(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_MEDIA_CONTAINER))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_MEDIA_CONTAINER_CLASS</NAME>
+#define RYGEL_IS_MEDIA_CONTAINER_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_MEDIA_CONTAINER))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_CONTAINER_GET_CLASS</NAME>
+#define RYGEL_MEDIA_CONTAINER_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_MEDIA_CONTAINER, RygelMediaContainerClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_MEDIA_ITEM</NAME>
+#define RYGEL_TYPE_MEDIA_ITEM (rygel_media_item_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_ITEM</NAME>
+#define RYGEL_MEDIA_ITEM(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_MEDIA_ITEM, RygelMediaItem))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_ITEM_CLASS</NAME>
+#define RYGEL_MEDIA_ITEM_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_MEDIA_ITEM, RygelMediaItemClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_MEDIA_ITEM</NAME>
+#define RYGEL_IS_MEDIA_ITEM(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_MEDIA_ITEM))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_MEDIA_ITEM_CLASS</NAME>
+#define RYGEL_IS_MEDIA_ITEM_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_MEDIA_ITEM))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_ITEM_GET_CLASS</NAME>
+#define RYGEL_MEDIA_ITEM_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_MEDIA_ITEM, RygelMediaItemClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_AUDIO_ITEM</NAME>
+#define RYGEL_TYPE_AUDIO_ITEM (rygel_audio_item_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_AUDIO_ITEM</NAME>
+#define RYGEL_AUDIO_ITEM(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_AUDIO_ITEM, RygelAudioItem))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_AUDIO_ITEM_CLASS</NAME>
+#define RYGEL_AUDIO_ITEM_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_AUDIO_ITEM, RygelAudioItemClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_AUDIO_ITEM</NAME>
+#define RYGEL_IS_AUDIO_ITEM(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_AUDIO_ITEM))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_AUDIO_ITEM_CLASS</NAME>
+#define RYGEL_IS_AUDIO_ITEM_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_AUDIO_ITEM))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_AUDIO_ITEM_GET_CLASS</NAME>
+#define RYGEL_AUDIO_ITEM_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_AUDIO_ITEM, RygelAudioItemClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_VISUAL_ITEM</NAME>
+#define RYGEL_TYPE_VISUAL_ITEM (rygel_visual_item_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_VISUAL_ITEM</NAME>
+#define RYGEL_VISUAL_ITEM(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_VISUAL_ITEM, RygelVisualItem))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_VISUAL_ITEM</NAME>
+#define RYGEL_IS_VISUAL_ITEM(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_VISUAL_ITEM))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_VISUAL_ITEM_GET_INTERFACE</NAME>
+#define RYGEL_VISUAL_ITEM_GET_INTERFACE(obj) (G_TYPE_INSTANCE_GET_INTERFACE ((obj), RYGEL_TYPE_VISUAL_ITEM, RygelVisualItemIface))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_THUMBNAIL</NAME>
+#define RYGEL_TYPE_THUMBNAIL (rygel_thumbnail_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_THUMBNAIL</NAME>
+#define RYGEL_THUMBNAIL(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_THUMBNAIL, RygelThumbnail))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_THUMBNAIL_CLASS</NAME>
+#define RYGEL_THUMBNAIL_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_THUMBNAIL, RygelThumbnailClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_THUMBNAIL</NAME>
+#define RYGEL_IS_THUMBNAIL(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_THUMBNAIL))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_THUMBNAIL_CLASS</NAME>
+#define RYGEL_IS_THUMBNAIL_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_THUMBNAIL))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_THUMBNAIL_GET_CLASS</NAME>
+#define RYGEL_THUMBNAIL_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_THUMBNAIL, RygelThumbnailClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_IMAGE_ITEM</NAME>
+#define RYGEL_TYPE_IMAGE_ITEM (rygel_image_item_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IMAGE_ITEM</NAME>
+#define RYGEL_IMAGE_ITEM(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_IMAGE_ITEM, RygelImageItem))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IMAGE_ITEM_CLASS</NAME>
+#define RYGEL_IMAGE_ITEM_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_IMAGE_ITEM, RygelImageItemClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_IMAGE_ITEM</NAME>
+#define RYGEL_IS_IMAGE_ITEM(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_IMAGE_ITEM))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_IMAGE_ITEM_CLASS</NAME>
+#define RYGEL_IS_IMAGE_ITEM_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_IMAGE_ITEM))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IMAGE_ITEM_GET_CLASS</NAME>
+#define RYGEL_IMAGE_ITEM_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_IMAGE_ITEM, RygelImageItemClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_LOGICAL_OPERATOR</NAME>
+#define RYGEL_TYPE_LOGICAL_OPERATOR (rygel_logical_operator_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_SEARCH_EXPRESSION</NAME>
+#define RYGEL_TYPE_SEARCH_EXPRESSION (rygel_search_expression_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_SEARCH_EXPRESSION</NAME>
+#define RYGEL_SEARCH_EXPRESSION(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_SEARCH_EXPRESSION, RygelSearchExpression))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_SEARCH_EXPRESSION_CLASS</NAME>
+#define RYGEL_SEARCH_EXPRESSION_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_SEARCH_EXPRESSION, RygelSearchExpressionClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_SEARCH_EXPRESSION</NAME>
+#define RYGEL_IS_SEARCH_EXPRESSION(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_SEARCH_EXPRESSION))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_SEARCH_EXPRESSION_CLASS</NAME>
+#define RYGEL_IS_SEARCH_EXPRESSION_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_SEARCH_EXPRESSION))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_SEARCH_EXPRESSION_GET_CLASS</NAME>
+#define RYGEL_SEARCH_EXPRESSION_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_SEARCH_EXPRESSION, RygelSearchExpressionClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_LOGICAL_EXPRESSION</NAME>
+#define RYGEL_TYPE_LOGICAL_EXPRESSION (rygel_logical_expression_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_LOGICAL_EXPRESSION</NAME>
+#define RYGEL_LOGICAL_EXPRESSION(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_LOGICAL_EXPRESSION, RygelLogicalExpression))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_LOGICAL_EXPRESSION_CLASS</NAME>
+#define RYGEL_LOGICAL_EXPRESSION_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_LOGICAL_EXPRESSION, RygelLogicalExpressionClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_LOGICAL_EXPRESSION</NAME>
+#define RYGEL_IS_LOGICAL_EXPRESSION(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_LOGICAL_EXPRESSION))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_LOGICAL_EXPRESSION_CLASS</NAME>
+#define RYGEL_IS_LOGICAL_EXPRESSION_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_LOGICAL_EXPRESSION))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_LOGICAL_EXPRESSION_GET_CLASS</NAME>
+#define RYGEL_LOGICAL_EXPRESSION_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_LOGICAL_EXPRESSION, RygelLogicalExpressionClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_MEDIA_ART_STORE</NAME>
+#define RYGEL_TYPE_MEDIA_ART_STORE (rygel_media_art_store_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_ART_STORE</NAME>
+#define RYGEL_MEDIA_ART_STORE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_MEDIA_ART_STORE, RygelMediaArtStore))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_ART_STORE_CLASS</NAME>
+#define RYGEL_MEDIA_ART_STORE_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_MEDIA_ART_STORE, RygelMediaArtStoreClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_MEDIA_ART_STORE</NAME>
+#define RYGEL_IS_MEDIA_ART_STORE(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_MEDIA_ART_STORE))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_MEDIA_ART_STORE_CLASS</NAME>
+#define RYGEL_IS_MEDIA_ART_STORE_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_MEDIA_ART_STORE))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_ART_STORE_GET_CLASS</NAME>
+#define RYGEL_MEDIA_ART_STORE_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_MEDIA_ART_STORE, RygelMediaArtStoreClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_MUSIC_ITEM</NAME>
+#define RYGEL_TYPE_MUSIC_ITEM (rygel_music_item_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MUSIC_ITEM</NAME>
+#define RYGEL_MUSIC_ITEM(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_MUSIC_ITEM, RygelMusicItem))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MUSIC_ITEM_CLASS</NAME>
+#define RYGEL_MUSIC_ITEM_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_MUSIC_ITEM, RygelMusicItemClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_MUSIC_ITEM</NAME>
+#define RYGEL_IS_MUSIC_ITEM(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_MUSIC_ITEM))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_MUSIC_ITEM_CLASS</NAME>
+#define RYGEL_IS_MUSIC_ITEM_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_MUSIC_ITEM))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MUSIC_ITEM_GET_CLASS</NAME>
+#define RYGEL_MUSIC_ITEM_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_MUSIC_ITEM, RygelMusicItemClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_MEDIA_OBJECTS</NAME>
+#define RYGEL_TYPE_MEDIA_OBJECTS (rygel_media_objects_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_OBJECTS</NAME>
+#define RYGEL_MEDIA_OBJECTS(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_MEDIA_OBJECTS, RygelMediaObjects))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_OBJECTS_CLASS</NAME>
+#define RYGEL_MEDIA_OBJECTS_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_MEDIA_OBJECTS, RygelMediaObjectsClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_MEDIA_OBJECTS</NAME>
+#define RYGEL_IS_MEDIA_OBJECTS(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_MEDIA_OBJECTS))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_MEDIA_OBJECTS_CLASS</NAME>
+#define RYGEL_IS_MEDIA_OBJECTS_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_MEDIA_OBJECTS))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_OBJECTS_GET_CLASS</NAME>
+#define RYGEL_MEDIA_OBJECTS_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_MEDIA_OBJECTS, RygelMediaObjectsClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_PHOTO_ITEM</NAME>
+#define RYGEL_TYPE_PHOTO_ITEM (rygel_photo_item_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_PHOTO_ITEM</NAME>
+#define RYGEL_PHOTO_ITEM(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_PHOTO_ITEM, RygelPhotoItem))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_PHOTO_ITEM_CLASS</NAME>
+#define RYGEL_PHOTO_ITEM_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_PHOTO_ITEM, RygelPhotoItemClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_PHOTO_ITEM</NAME>
+#define RYGEL_IS_PHOTO_ITEM(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_PHOTO_ITEM))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_PHOTO_ITEM_CLASS</NAME>
+#define RYGEL_IS_PHOTO_ITEM_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_PHOTO_ITEM))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_PHOTO_ITEM_GET_CLASS</NAME>
+#define RYGEL_PHOTO_ITEM_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_PHOTO_ITEM, RygelPhotoItemClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_RELATIONAL_EXPRESSION</NAME>
+#define RYGEL_TYPE_RELATIONAL_EXPRESSION (rygel_relational_expression_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_RELATIONAL_EXPRESSION</NAME>
+#define RYGEL_RELATIONAL_EXPRESSION(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_RELATIONAL_EXPRESSION, RygelRelationalExpression))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_RELATIONAL_EXPRESSION_CLASS</NAME>
+#define RYGEL_RELATIONAL_EXPRESSION_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_RELATIONAL_EXPRESSION, RygelRelationalExpressionClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_RELATIONAL_EXPRESSION</NAME>
+#define RYGEL_IS_RELATIONAL_EXPRESSION(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_RELATIONAL_EXPRESSION))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_RELATIONAL_EXPRESSION_CLASS</NAME>
+#define RYGEL_IS_RELATIONAL_EXPRESSION_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_RELATIONAL_EXPRESSION))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_RELATIONAL_EXPRESSION_GET_CLASS</NAME>
+#define RYGEL_RELATIONAL_EXPRESSION_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_RELATIONAL_EXPRESSION, RygelRelationalExpressionClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_SEARCHABLE_CONTAINER</NAME>
+#define RYGEL_TYPE_SEARCHABLE_CONTAINER (rygel_searchable_container_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_SEARCHABLE_CONTAINER</NAME>
+#define RYGEL_SEARCHABLE_CONTAINER(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_SEARCHABLE_CONTAINER, RygelSearchableContainer))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_SEARCHABLE_CONTAINER</NAME>
+#define RYGEL_IS_SEARCHABLE_CONTAINER(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_SEARCHABLE_CONTAINER))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_SEARCHABLE_CONTAINER_GET_INTERFACE</NAME>
+#define RYGEL_SEARCHABLE_CONTAINER_GET_INTERFACE(obj) (G_TYPE_INSTANCE_GET_INTERFACE ((obj), RYGEL_TYPE_SEARCHABLE_CONTAINER, RygelSearchableContainerIface))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_SIMPLE_CONTAINER</NAME>
+#define RYGEL_TYPE_SIMPLE_CONTAINER (rygel_simple_container_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_SIMPLE_CONTAINER</NAME>
+#define RYGEL_SIMPLE_CONTAINER(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_SIMPLE_CONTAINER, RygelSimpleContainer))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_SIMPLE_CONTAINER_CLASS</NAME>
+#define RYGEL_SIMPLE_CONTAINER_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_SIMPLE_CONTAINER, RygelSimpleContainerClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_SIMPLE_CONTAINER</NAME>
+#define RYGEL_IS_SIMPLE_CONTAINER(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_SIMPLE_CONTAINER))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_SIMPLE_CONTAINER_CLASS</NAME>
+#define RYGEL_IS_SIMPLE_CONTAINER_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_SIMPLE_CONTAINER))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_SIMPLE_CONTAINER_GET_CLASS</NAME>
+#define RYGEL_SIMPLE_CONTAINER_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_SIMPLE_CONTAINER, RygelSimpleContainerClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_SUBTITLE</NAME>
+#define RYGEL_TYPE_SUBTITLE (rygel_subtitle_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_SUBTITLE</NAME>
+#define RYGEL_SUBTITLE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_SUBTITLE, RygelSubtitle))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_SUBTITLE_CLASS</NAME>
+#define RYGEL_SUBTITLE_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_SUBTITLE, RygelSubtitleClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_SUBTITLE</NAME>
+#define RYGEL_IS_SUBTITLE(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_SUBTITLE))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_SUBTITLE_CLASS</NAME>
+#define RYGEL_IS_SUBTITLE_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_SUBTITLE))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_SUBTITLE_GET_CLASS</NAME>
+#define RYGEL_SUBTITLE_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_SUBTITLE, RygelSubtitleClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_VIDEO_ITEM</NAME>
+#define RYGEL_TYPE_VIDEO_ITEM (rygel_video_item_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_VIDEO_ITEM</NAME>
+#define RYGEL_VIDEO_ITEM(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_VIDEO_ITEM, RygelVideoItem))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_VIDEO_ITEM_CLASS</NAME>
+#define RYGEL_VIDEO_ITEM_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_VIDEO_ITEM, RygelVideoItemClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_VIDEO_ITEM</NAME>
+#define RYGEL_IS_VIDEO_ITEM(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_VIDEO_ITEM))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_VIDEO_ITEM_CLASS</NAME>
+#define RYGEL_IS_VIDEO_ITEM_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_VIDEO_ITEM))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_VIDEO_ITEM_GET_CLASS</NAME>
+#define RYGEL_VIDEO_ITEM_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_VIDEO_ITEM, RygelVideoItemClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_MEDIA_SERVER_PLUGIN</NAME>
+#define RYGEL_TYPE_MEDIA_SERVER_PLUGIN (rygel_media_server_plugin_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_SERVER_PLUGIN</NAME>
+#define RYGEL_MEDIA_SERVER_PLUGIN(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_MEDIA_SERVER_PLUGIN, RygelMediaServerPlugin))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_SERVER_PLUGIN_CLASS</NAME>
+#define RYGEL_MEDIA_SERVER_PLUGIN_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_MEDIA_SERVER_PLUGIN, RygelMediaServerPluginClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_MEDIA_SERVER_PLUGIN</NAME>
+#define RYGEL_IS_MEDIA_SERVER_PLUGIN(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_MEDIA_SERVER_PLUGIN))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_MEDIA_SERVER_PLUGIN_CLASS</NAME>
+#define RYGEL_IS_MEDIA_SERVER_PLUGIN_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_MEDIA_SERVER_PLUGIN))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_SERVER_PLUGIN_GET_CLASS</NAME>
+#define RYGEL_MEDIA_SERVER_PLUGIN_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_MEDIA_SERVER_PLUGIN, RygelMediaServerPluginClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_WRITABLE_CONTAINER</NAME>
+#define RYGEL_TYPE_WRITABLE_CONTAINER (rygel_writable_container_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_WRITABLE_CONTAINER</NAME>
+#define RYGEL_WRITABLE_CONTAINER(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_WRITABLE_CONTAINER, RygelWritableContainer))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_WRITABLE_CONTAINER</NAME>
+#define RYGEL_IS_WRITABLE_CONTAINER(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_WRITABLE_CONTAINER))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_WRITABLE_CONTAINER_GET_INTERFACE</NAME>
+#define RYGEL_WRITABLE_CONTAINER_GET_INTERFACE(obj) (G_TYPE_INSTANCE_GET_INTERFACE ((obj), RYGEL_TYPE_WRITABLE_CONTAINER, RygelWritableContainerIface))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_MEDIA_SERVER</NAME>
+#define RYGEL_TYPE_MEDIA_SERVER (rygel_media_server_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_SERVER</NAME>
+#define RYGEL_MEDIA_SERVER(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_MEDIA_SERVER, RygelMediaServer))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_SERVER_CLASS</NAME>
+#define RYGEL_MEDIA_SERVER_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_MEDIA_SERVER, RygelMediaServerClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_MEDIA_SERVER</NAME>
+#define RYGEL_IS_MEDIA_SERVER(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_MEDIA_SERVER))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_MEDIA_SERVER_CLASS</NAME>
+#define RYGEL_IS_MEDIA_SERVER_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_MEDIA_SERVER))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_SERVER_GET_CLASS</NAME>
+#define RYGEL_MEDIA_SERVER_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_MEDIA_SERVER, RygelMediaServerClass))
+</MACRO>
+<STRUCT>
+<NAME>RygelMediaObject</NAME>
+struct _RygelMediaObject {
+	GObject parent_instance;
+	RygelMediaObjectPrivate * priv;
+	gchar* id;
+	gchar* ref_id;
+	gchar* upnp_class;
+	guint64 modified;
+	GeeArrayList* uris;
+	RygelMediaContainer* parent;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelMediaObjectClass</NAME>
+struct _RygelMediaObjectClass {
+	GObjectClass parent_class;
+	GUPnPDIDLLiteObject* (*serialize) (RygelMediaObject* self, GUPnPDIDLLiteWriter* writer, RygelHTTPServer* http_server, GError** error);
+	gint (*compare_by_property) (RygelMediaObject* self, RygelMediaObject* media_object, const gchar* property);
+	GUPnPOCMFlags (*get_ocm_flags) (RygelMediaObject* self);
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelMediaItem</NAME>
+struct _RygelMediaItem {
+	RygelMediaObject parent_instance;
+	RygelMediaItemPrivate * priv;
+	gchar* date;
+	gchar* mime_type;
+	gchar* dlna_profile;
+	GRegex* address_regex;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelMediaItemClass</NAME>
+struct _RygelMediaItemClass {
+	RygelMediaObjectClass parent_class;
+	GstElement* (*create_stream_source) (RygelMediaItem* self, const gchar* host_ip);
+	gboolean (*streamable) (RygelMediaItem* self);
+	void (*add_uri) (RygelMediaItem* self, const gchar* uri);
+	GUPnPDIDLLiteResource* (*add_resource) (RygelMediaItem* self, GUPnPDIDLLiteItem* didl_item, const gchar* uri, const gchar* protocol, const gchar* import_uri, GError** error);
+	void (*add_proxy_resources) (RygelMediaItem* self, RygelHTTPServer* server, GUPnPDIDLLiteItem* didl_item, GError** error);
+	GUPnPProtocolInfo* (*get_protocol_info) (RygelMediaItem* self, const gchar* uri, const gchar* protocol);
+	void (*add_resources) (RygelMediaItem* self, GUPnPDIDLLiteItem* didl_item, gboolean allow_internal, GError** error);
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelAudioItem</NAME>
+struct _RygelAudioItem {
+	RygelMediaItem parent_instance;
+	RygelAudioItemPrivate * priv;
+	glong duration;
+	gint bitrate;
+	gint sample_freq;
+	gint bits_per_sample;
+	gint channels;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelAudioItemClass</NAME>
+struct _RygelAudioItemClass {
+	RygelMediaItemClass parent_class;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelVisualItemIface</NAME>
+struct _RygelVisualItemIface {
+	GTypeInterface parent_iface;
+	gint (*get_width) (RygelVisualItem* self);
+	void (*set_width) (RygelVisualItem* self, gint value);
+	gint (*get_height) (RygelVisualItem* self);
+	void (*set_height) (RygelVisualItem* self, gint value);
+	gint (*get_pixel_width) (RygelVisualItem* self);
+	void (*set_pixel_width) (RygelVisualItem* self, gint value);
+	gint (*get_pixel_height) (RygelVisualItem* self);
+	void (*set_pixel_height) (RygelVisualItem* self, gint value);
+	gint (*get_color_depth) (RygelVisualItem* self);
+	void (*set_color_depth) (RygelVisualItem* self, gint value);
+	GeeArrayList* (*get_thumbnails) (RygelVisualItem* self);
+	void (*set_thumbnails) (RygelVisualItem* self, GeeArrayList* value);
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelImageItem</NAME>
+struct _RygelImageItem {
+	RygelMediaItem parent_instance;
+	RygelImageItemPrivate * priv;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelImageItemClass</NAME>
+struct _RygelImageItemClass {
+	RygelMediaItemClass parent_class;
+};
+</STRUCT>
+<ENUM>
+<NAME>RygelLogicalOperator</NAME>
+typedef enum  {
+	RYGEL_LOGICAL_OPERATOR_AND,
+	RYGEL_LOGICAL_OPERATOR_OR
+} RygelLogicalOperator;
+</ENUM>
+<STRUCT>
+<NAME>RygelSearchExpression</NAME>
+struct _RygelSearchExpression {
+	GTypeInstance parent_instance;
+	volatile int ref_count;
+	RygelSearchExpressionPrivate * priv;
+	gpointer op;
+	gpointer operand1;
+	gpointer operand2;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelSearchExpressionClass</NAME>
+struct _RygelSearchExpressionClass {
+	GTypeClass parent_class;
+	void (*finalize) (RygelSearchExpression *self);
+	gboolean (*satisfied_by) (RygelSearchExpression* self, RygelMediaObject* media_object);
+	gchar* (*to_string) (RygelSearchExpression* self);
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelLogicalExpression</NAME>
+struct _RygelLogicalExpression {
+	RygelSearchExpression parent_instance;
+	RygelLogicalExpressionPrivate * priv;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelLogicalExpressionClass</NAME>
+struct _RygelLogicalExpressionClass {
+	RygelSearchExpressionClass parent_class;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelMediaArtStore</NAME>
+struct _RygelMediaArtStore {
+	GObject parent_instance;
+	RygelMediaArtStorePrivate * priv;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelMediaArtStoreClass</NAME>
+struct _RygelMediaArtStoreClass {
+	GObjectClass parent_class;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelMediaObjects</NAME>
+struct _RygelMediaObjects {
+	GeeArrayList parent_instance;
+	RygelMediaObjectsPrivate * priv;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelMediaObjectsClass</NAME>
+struct _RygelMediaObjectsClass {
+	GeeArrayListClass parent_class;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelMusicItem</NAME>
+struct _RygelMusicItem {
+	RygelAudioItem parent_instance;
+	RygelMusicItemPrivate * priv;
+	gchar* artist;
+	gchar* album;
+	gchar* genre;
+	gint track_number;
+	RygelThumbnail* album_art;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelMusicItemClass</NAME>
+struct _RygelMusicItemClass {
+	RygelAudioItemClass parent_class;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelPhotoItem</NAME>
+struct _RygelPhotoItem {
+	RygelImageItem parent_instance;
+	RygelPhotoItemPrivate * priv;
+	gchar* creator;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelPhotoItemClass</NAME>
+struct _RygelPhotoItemClass {
+	RygelImageItemClass parent_class;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelRelationalExpression</NAME>
+struct _RygelRelationalExpression {
+	RygelSearchExpression parent_instance;
+	RygelRelationalExpressionPrivate * priv;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelRelationalExpressionClass</NAME>
+struct _RygelRelationalExpressionClass {
+	RygelSearchExpressionClass parent_class;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelMediaContainer</NAME>
+struct _RygelMediaContainer {
+	RygelMediaObject parent_instance;
+	RygelMediaContainerPrivate * priv;
+	gint child_count;
+	guint32 update_id;
+	gint64 storage_used;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelMediaContainerClass</NAME>
+struct _RygelMediaContainerClass {
+	RygelMediaObjectClass parent_class;
+	void (*get_children) (RygelMediaContainer* self, guint offset, guint max_count, const gchar* sort_criteria, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	RygelMediaObjects* (*get_children_finish) (RygelMediaContainer* self, GAsyncResult* _res_, GError** error);
+	void (*find_object) (RygelMediaContainer* self, const gchar* id, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	RygelMediaObject* (*find_object_finish) (RygelMediaContainer* self, GAsyncResult* _res_, GError** error);
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelSearchableContainerIface</NAME>
+struct _RygelSearchableContainerIface {
+	GTypeInterface parent_iface;
+	void (*search) (RygelSearchableContainer* self, RygelSearchExpression* expression, guint offset, guint max_count, const gchar* sort_criteria, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	RygelMediaObjects* (*search_finish) (RygelSearchableContainer* self, GAsyncResult* _res_, guint* total_matches, GError** error);
+	GeeArrayList* (*get_search_classes) (RygelSearchableContainer* self);
+	void (*set_search_classes) (RygelSearchableContainer* self, GeeArrayList* value);
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelSimpleContainer</NAME>
+struct _RygelSimpleContainer {
+	RygelMediaContainer parent_instance;
+	RygelSimpleContainerPrivate * priv;
+	RygelMediaObjects* children;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelSimpleContainerClass</NAME>
+struct _RygelSimpleContainerClass {
+	RygelMediaContainerClass parent_class;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelSubtitle</NAME>
+struct _RygelSubtitle {
+	GTypeInstance parent_instance;
+	volatile int ref_count;
+	RygelSubtitlePrivate * priv;
+	gchar* uri;
+	gchar* mime_type;
+	gchar* caption_type;
+	gint64 size;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelSubtitleClass</NAME>
+struct _RygelSubtitleClass {
+	GTypeClass parent_class;
+	void (*finalize) (RygelSubtitle *self);
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelThumbnail</NAME>
+struct _RygelThumbnail {
+	RygelIconInfo parent_instance;
+	RygelThumbnailPrivate * priv;
+	gchar* dlna_profile;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelThumbnailClass</NAME>
+struct _RygelThumbnailClass {
+	RygelIconInfoClass parent_class;
+	GUPnPDIDLLiteResource* (*add_resource) (RygelThumbnail* self, GUPnPDIDLLiteItem* didl_item, const gchar* protocol);
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelVideoItem</NAME>
+struct _RygelVideoItem {
+	RygelAudioItem parent_instance;
+	RygelVideoItemPrivate * priv;
+	gchar* author;
+	GeeArrayList* subtitles;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelVideoItemClass</NAME>
+struct _RygelVideoItemClass {
+	RygelAudioItemClass parent_class;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelMediaServerPlugin</NAME>
+struct _RygelMediaServerPlugin {
+	RygelPlugin parent_instance;
+	RygelMediaServerPluginPrivate * priv;
+	RygelMediaContainer* root_container;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelMediaServerPluginClass</NAME>
+struct _RygelMediaServerPluginClass {
+	RygelPluginClass parent_class;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelWritableContainerIface</NAME>
+struct _RygelWritableContainerIface {
+	GTypeInterface parent_iface;
+	void (*add_item) (RygelWritableContainer* self, RygelMediaItem* item, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	void (*add_item_finish) (RygelWritableContainer* self, GAsyncResult* _res_, GError** error);
+	void (*remove_item) (RygelWritableContainer* self, const gchar* id, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	void (*remove_item_finish) (RygelWritableContainer* self, GAsyncResult* _res_, GError** error);
+	GeeArrayList* (*get_create_classes) (RygelWritableContainer* self);
+	void (*set_create_classes) (RygelWritableContainer* self, GeeArrayList* value);
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelMediaServer</NAME>
+struct _RygelMediaServer {
+	RygelMediaDevice parent_instance;
+	RygelMediaServerPrivate * priv;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelMediaServerClass</NAME>
+struct _RygelMediaServerClass {
+	RygelMediaDeviceClass parent_class;
+};
+</STRUCT>
+<ENUM>
+<NAME>RygelContentDirectoryError</NAME>
+typedef enum  {
+	RYGEL_CONTENT_DIRECTORY_ERROR_NO_SUCH_OBJECT = 701,
+	RYGEL_CONTENT_DIRECTORY_ERROR_INVALID_SORT_CRITERIA = 709,
+	RYGEL_CONTENT_DIRECTORY_ERROR_RESTRICTED_OBJECT = 711,
+	RYGEL_CONTENT_DIRECTORY_ERROR_BAD_METADATA = 712,
+	RYGEL_CONTENT_DIRECTORY_ERROR_RESTRICTED_PARENT = 713,
+	RYGEL_CONTENT_DIRECTORY_ERROR_NO_SUCH_DESTINATION_RESOURCE = 718,
+	RYGEL_CONTENT_DIRECTORY_ERROR_CANT_PROCESS = 720,
+	RYGEL_CONTENT_DIRECTORY_ERROR_INVALID_ARGS = 402
+} RygelContentDirectoryError;
+</ENUM>
+<MACRO>
+<NAME>RYGEL_CONTENT_DIRECTORY_ERROR</NAME>
+#define RYGEL_CONTENT_DIRECTORY_ERROR rygel_content_directory_error_quark ()
+</MACRO>
+<FUNCTION>
+<NAME>rygel_media_object_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_transcode_manager_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_http_server_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_container_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_item_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_audio_item_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<MACRO>
+<NAME>RYGEL_AUDIO_ITEM_UPNP_CLASS</NAME>
+#define RYGEL_AUDIO_ITEM_UPNP_CLASS "object.item.audioItem"
+</MACRO>
+<FUNCTION>
+<NAME>rygel_audio_item_new</NAME>
+<RETURNS>RygelAudioItem * </RETURNS>
+const gchar* id, RygelMediaContainer* parent, const gchar* title, const gchar* upnp_class 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_audio_item_construct</NAME>
+<RETURNS>RygelAudioItem * </RETURNS>
+GType object_type, const gchar* id, RygelMediaContainer* parent, const gchar* title, const gchar* upnp_class 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_thumbnail_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_visual_item_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_image_item_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<MACRO>
+<NAME>RYGEL_IMAGE_ITEM_UPNP_CLASS</NAME>
+#define RYGEL_IMAGE_ITEM_UPNP_CLASS "object.item.imageItem"
+</MACRO>
+<FUNCTION>
+<NAME>rygel_image_item_new</NAME>
+<RETURNS>RygelImageItem * </RETURNS>
+const gchar* id, RygelMediaContainer* parent, const gchar* title, const gchar* upnp_class 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_image_item_construct</NAME>
+<RETURNS>RygelImageItem * </RETURNS>
+GType object_type, const gchar* id, RygelMediaContainer* parent, const gchar* title, const gchar* upnp_class 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_logical_operator_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_search_expression_ref</NAME>
+<RETURNS>gpointer  </RETURNS>
+gpointer instance 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_search_expression_unref</NAME>
+<RETURNS>void  </RETURNS>
+gpointer instance 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_param_spec_search_expression</NAME>
+<RETURNS>GParamSpec * </RETURNS>
+const gchar* name, const gchar* nick, const gchar* blurb, GType object_type, GParamFlags flags 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_value_set_search_expression</NAME>
+<RETURNS>void  </RETURNS>
+GValue* value, gpointer v_object 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_value_take_search_expression</NAME>
+<RETURNS>void  </RETURNS>
+GValue* value, gpointer v_object 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_value_get_search_expression</NAME>
+<RETURNS>gpointer  </RETURNS>
+const GValue* value 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_search_expression_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_logical_expression_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_logical_expression_new</NAME>
+<RETURNS>RygelLogicalExpression * </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_logical_expression_construct</NAME>
+<RETURNS>RygelLogicalExpression * </RETURNS>
+GType object_type 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_art_store_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_art_store_get_default</NAME>
+<RETURNS>RygelMediaArtStore * </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_music_item_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_art_store_find_media_art</NAME>
+<RETURNS>RygelThumbnail * </RETURNS>
+RygelMediaArtStore* self, RygelMusicItem* item, gboolean simple, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_art_store_find_media_art_any</NAME>
+<RETURNS>RygelThumbnail * </RETURNS>
+RygelMediaArtStore* self, RygelMusicItem* item, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_art_store_get_media_art_file</NAME>
+<RETURNS>GFile * </RETURNS>
+RygelMediaArtStore* self, const gchar* type, RygelMusicItem* item, gboolean simple 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_objects_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<MACRO>
+<NAME>RYGEL_MEDIA_OBJECTS_SORT_CAPS</NAME>
+#define RYGEL_MEDIA_OBJECTS_SORT_CAPS "@id,@parentID,dc:title,upnp:class," "upnp:artist,upnp:author,upnp:album," "dc:date,upnp:originalTrackNumber"
+</MACRO>
+<FUNCTION>
+<NAME>rygel_media_objects_sort_by_criteria</NAME>
+<RETURNS>void  </RETURNS>
+RygelMediaObjects* self, const gchar* sort_criteria 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_objects_new</NAME>
+<RETURNS>RygelMediaObjects * </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_objects_construct</NAME>
+<RETURNS>RygelMediaObjects * </RETURNS>
+GType object_type 
+</FUNCTION>
+<MACRO>
+<NAME>RYGEL_MUSIC_ITEM_UPNP_CLASS</NAME>
+#define RYGEL_MUSIC_ITEM_UPNP_CLASS "object.item.audioItem.musicTrack"
+</MACRO>
+<FUNCTION>
+<NAME>rygel_music_item_new</NAME>
+<RETURNS>RygelMusicItem * </RETURNS>
+const gchar* id, RygelMediaContainer* parent, const gchar* title, const gchar* upnp_class 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_music_item_construct</NAME>
+<RETURNS>RygelMusicItem * </RETURNS>
+GType object_type, const gchar* id, RygelMediaContainer* parent, const gchar* title, const gchar* upnp_class 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_music_item_lookup_album_art</NAME>
+<RETURNS>void  </RETURNS>
+RygelMusicItem* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_photo_item_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<MACRO>
+<NAME>RYGEL_PHOTO_ITEM_UPNP_CLASS</NAME>
+#define RYGEL_PHOTO_ITEM_UPNP_CLASS "object.item.imageItem.photo"
+</MACRO>
+<FUNCTION>
+<NAME>rygel_photo_item_new</NAME>
+<RETURNS>RygelPhotoItem * </RETURNS>
+const gchar* id, RygelMediaContainer* parent, const gchar* title, const gchar* upnp_class 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_photo_item_construct</NAME>
+<RETURNS>RygelPhotoItem * </RETURNS>
+GType object_type, const gchar* id, RygelMediaContainer* parent, const gchar* title, const gchar* upnp_class 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_relational_expression_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_relational_expression_compare_string</NAME>
+<RETURNS>gboolean  </RETURNS>
+RygelRelationalExpression* self, const gchar* str 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_relational_expression_compare_int</NAME>
+<RETURNS>gboolean  </RETURNS>
+RygelRelationalExpression* self, gint integer 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_relational_expression_new</NAME>
+<RETURNS>RygelRelationalExpression * </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_relational_expression_construct</NAME>
+<RETURNS>RygelRelationalExpression * </RETURNS>
+GType object_type 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_searchable_container_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_simple_container_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_simple_container_new</NAME>
+<RETURNS>RygelSimpleContainer * </RETURNS>
+const gchar* id, RygelMediaContainer* parent, const gchar* title 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_simple_container_construct</NAME>
+<RETURNS>RygelSimpleContainer * </RETURNS>
+GType object_type, const gchar* id, RygelMediaContainer* parent, const gchar* title 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_simple_container_new_root</NAME>
+<RETURNS>RygelSimpleContainer * </RETURNS>
+const gchar* title 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_simple_container_construct_root</NAME>
+<RETURNS>RygelSimpleContainer * </RETURNS>
+GType object_type, const gchar* title 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_simple_container_add_child_item</NAME>
+<RETURNS>void  </RETURNS>
+RygelSimpleContainer* self, RygelMediaItem* child 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_simple_container_get_all_children</NAME>
+<RETURNS>RygelMediaObjects * </RETURNS>
+RygelSimpleContainer* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_simple_container_add_child_container</NAME>
+<RETURNS>void  </RETURNS>
+RygelSimpleContainer* self, RygelMediaContainer* child 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_simple_container_remove_child</NAME>
+<RETURNS>void  </RETURNS>
+RygelSimpleContainer* self, RygelMediaObject* child 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_simple_container_clear</NAME>
+<RETURNS>void  </RETURNS>
+RygelSimpleContainer* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_simple_container_is_child_id_unique</NAME>
+<RETURNS>gboolean  </RETURNS>
+RygelSimpleContainer* self, const gchar* child_id 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_subtitle_ref</NAME>
+<RETURNS>gpointer  </RETURNS>
+gpointer instance 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_subtitle_unref</NAME>
+<RETURNS>void  </RETURNS>
+gpointer instance 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_param_spec_subtitle</NAME>
+<RETURNS>GParamSpec * </RETURNS>
+const gchar* name, const gchar* nick, const gchar* blurb, GType object_type, GParamFlags flags 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_value_set_subtitle</NAME>
+<RETURNS>void  </RETURNS>
+GValue* value, gpointer v_object 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_value_take_subtitle</NAME>
+<RETURNS>void  </RETURNS>
+GValue* value, gpointer v_object 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_value_get_subtitle</NAME>
+<RETURNS>gpointer  </RETURNS>
+const GValue* value 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_subtitle_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_subtitle_new</NAME>
+<RETURNS>RygelSubtitle * </RETURNS>
+const gchar* mime_type, const gchar* caption_type 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_subtitle_construct</NAME>
+<RETURNS>RygelSubtitle * </RETURNS>
+GType object_type, const gchar* mime_type, const gchar* caption_type 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_thumbnail_new</NAME>
+<RETURNS>RygelThumbnail * </RETURNS>
+const gchar* mime_type, const gchar* dlna_profile, const gchar* file_extension 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_thumbnail_construct</NAME>
+<RETURNS>RygelThumbnail * </RETURNS>
+GType object_type, const gchar* mime_type, const gchar* dlna_profile, const gchar* file_extension 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_video_item_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<MACRO>
+<NAME>RYGEL_VIDEO_ITEM_UPNP_CLASS</NAME>
+#define RYGEL_VIDEO_ITEM_UPNP_CLASS "object.item.videoItem"
+</MACRO>
+<FUNCTION>
+<NAME>rygel_video_item_new</NAME>
+<RETURNS>RygelVideoItem * </RETURNS>
+const gchar* id, RygelMediaContainer* parent, const gchar* title, const gchar* upnp_class 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_video_item_construct</NAME>
+<RETURNS>RygelVideoItem * </RETURNS>
+GType object_type, const gchar* id, RygelMediaContainer* parent, const gchar* title, const gchar* upnp_class 
+</FUNCTION>
+<MACRO>
+<NAME>RYGEL_MEDIA_CONTAINER_UPNP_CLASS</NAME>
+#define RYGEL_MEDIA_CONTAINER_UPNP_CLASS "object.container"
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_CONTAINER_STORAGE_FOLDER</NAME>
+#define RYGEL_MEDIA_CONTAINER_STORAGE_FOLDER RYGEL_MEDIA_CONTAINER_UPNP_CLASS ".storageFolder"
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_CONTAINER_MUSIC_ALBUM</NAME>
+#define RYGEL_MEDIA_CONTAINER_MUSIC_ALBUM RYGEL_MEDIA_CONTAINER_UPNP_CLASS ".album.musicAlbum"
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_CONTAINER_MUSIC_ARTIST</NAME>
+#define RYGEL_MEDIA_CONTAINER_MUSIC_ARTIST RYGEL_MEDIA_CONTAINER_UPNP_CLASS ".person.musicArtist"
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_CONTAINER_MUSIC_GENRE</NAME>
+#define RYGEL_MEDIA_CONTAINER_MUSIC_GENRE RYGEL_MEDIA_CONTAINER_UPNP_CLASS ".genre.musicGenre"
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_CONTAINER_ALBUM_SORT_CRITERIA</NAME>
+#define RYGEL_MEDIA_CONTAINER_ALBUM_SORT_CRITERIA "+upnp:class," "+rygel:originalVolumeNumber," "+upnp:originalTrackNumber," "+dc:title"
+</MACRO>
+<FUNCTION>
+<NAME>rygel_media_container_construct</NAME>
+<RETURNS>RygelMediaContainer * </RETURNS>
+GType object_type, const gchar* id, RygelMediaContainer* parent, const gchar* title, gint child_count 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_container_construct_root</NAME>
+<RETURNS>RygelMediaContainer * </RETURNS>
+GType object_type, const gchar* title, gint child_count 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_container_get_children</NAME>
+<RETURNS>void  </RETURNS>
+RygelMediaContainer* self, guint offset, guint max_count, const gchar* sort_criteria, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_ 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_container_get_children_finish</NAME>
+<RETURNS>RygelMediaObjects * </RETURNS>
+RygelMediaContainer* self, GAsyncResult* _res_, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_container_find_object</NAME>
+<RETURNS>void  </RETURNS>
+RygelMediaContainer* self, const gchar* id, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_ 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_container_find_object_finish</NAME>
+<RETURNS>RygelMediaObject * </RETURNS>
+RygelMediaContainer* self, GAsyncResult* _res_, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_container_updated</NAME>
+<RETURNS>void  </RETURNS>
+RygelMediaContainer* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_container_get_sort_criteria</NAME>
+<RETURNS>const gchar * </RETURNS>
+RygelMediaContainer* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_container_set_sort_criteria</NAME>
+<RETURNS>void  </RETURNS>
+RygelMediaContainer* self, const gchar* value 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_item_construct</NAME>
+<RETURNS>RygelMediaItem * </RETURNS>
+GType object_type, const gchar* id, RygelMediaContainer* parent, const gchar* title, const gchar* upnp_class 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_item_create_stream_source</NAME>
+<RETURNS>GstElement * </RETURNS>
+RygelMediaItem* self, const gchar* host_ip 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_item_is_live_stream</NAME>
+<RETURNS>gboolean  </RETURNS>
+RygelMediaItem* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_item_streamable</NAME>
+<RETURNS>gboolean  </RETURNS>
+RygelMediaItem* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_item_add_uri</NAME>
+<RETURNS>void  </RETURNS>
+RygelMediaItem* self, const gchar* uri 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_item_get_protocol_info</NAME>
+<RETURNS>GUPnPProtocolInfo * </RETURNS>
+RygelMediaItem* self, const gchar* uri, const gchar* protocol 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_item_add_resources</NAME>
+<RETURNS>void  </RETURNS>
+RygelMediaItem* self, GUPnPDIDLLiteItem* didl_item, gboolean allow_internal, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_item_get_size</NAME>
+<RETURNS>gint64  </RETURNS>
+RygelMediaItem* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_item_set_size</NAME>
+<RETURNS>void  </RETURNS>
+RygelMediaItem* self, gint64 value 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_item_get_place_holder</NAME>
+<RETURNS>gboolean  </RETURNS>
+RygelMediaItem* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_item_set_place_holder</NAME>
+<RETURNS>void  </RETURNS>
+RygelMediaItem* self, gboolean value 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_item_get_description</NAME>
+<RETURNS>const gchar * </RETURNS>
+RygelMediaItem* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_item_set_description</NAME>
+<RETURNS>void  </RETURNS>
+RygelMediaItem* self, const gchar* value 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_object_get_writable</NAME>
+<RETURNS>void  </RETURNS>
+RygelMediaObject* self, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_ 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_object_get_writable_finish</NAME>
+<RETURNS>GFile * </RETURNS>
+RygelMediaObject* self, GAsyncResult* _res_, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_object_get_writables</NAME>
+<RETURNS>void  </RETURNS>
+RygelMediaObject* self, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_ 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_object_get_writables_finish</NAME>
+<RETURNS>GeeArrayList * </RETURNS>
+RygelMediaObject* self, GAsyncResult* _res_, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_object_compare_string_props</NAME>
+<RETURNS>gint  </RETURNS>
+RygelMediaObject* self, const gchar* prop1, const gchar* prop2 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_object_compare_int_props</NAME>
+<RETURNS>gint  </RETURNS>
+RygelMediaObject* self, gint prop1, gint prop2 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_object_construct</NAME>
+<RETURNS>RygelMediaObject * </RETURNS>
+GType object_type 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_object_get_parent_ref</NAME>
+<RETURNS>RygelMediaContainer * </RETURNS>
+RygelMediaObject* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_object_set_parent_ref</NAME>
+<RETURNS>void  </RETURNS>
+RygelMediaObject* self, RygelMediaContainer* value 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_object_get_title</NAME>
+<RETURNS>const gchar * </RETURNS>
+RygelMediaObject* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_object_set_title</NAME>
+<RETURNS>void  </RETURNS>
+RygelMediaObject* self, const gchar* value 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_server_plugin_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_server_plugin_construct</NAME>
+<RETURNS>RygelMediaServerPlugin * </RETURNS>
+GType object_type, RygelMediaContainer* root_container, const gchar* name, const gchar* description 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_search_expression_satisfied_by</NAME>
+<RETURNS>gboolean  </RETURNS>
+RygelSearchExpression* self, RygelMediaObject* media_object 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_search_expression_to_string</NAME>
+<RETURNS>gchar * </RETURNS>
+RygelSearchExpression* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_search_expression_construct</NAME>
+<RETURNS>RygelSearchExpression * </RETURNS>
+GType object_type, GType g_type, GBoxedCopyFunc g_dup_func, GDestroyNotify g_destroy_func, GType h_type, GBoxedCopyFunc h_dup_func, GDestroyNotify h_destroy_func, GType i_type, GBoxedCopyFunc i_dup_func, GDestroyNotify i_destroy_func 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_searchable_container_search</NAME>
+<RETURNS>void  </RETURNS>
+RygelSearchableContainer* self, RygelSearchExpression* expression, guint offset, guint max_count, const gchar* sort_criteria, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_ 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_searchable_container_search_finish</NAME>
+<RETURNS>RygelMediaObjects * </RETURNS>
+RygelSearchableContainer* self, GAsyncResult* _res_, guint* total_matches, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_searchable_container_simple_search</NAME>
+<RETURNS>void  </RETURNS>
+RygelSearchableContainer* self, RygelSearchExpression* expression, guint offset, guint max_count, const gchar* sort_criteria, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_ 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_searchable_container_simple_search_finish</NAME>
+<RETURNS>RygelMediaObjects * </RETURNS>
+RygelSearchableContainer* self, GAsyncResult* _res_, guint* total_matches, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_searchable_container_find_object</NAME>
+<RETURNS>void  </RETURNS>
+RygelSearchableContainer* self, const gchar* id, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_ 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_searchable_container_find_object_finish</NAME>
+<RETURNS>RygelMediaObject * </RETURNS>
+RygelSearchableContainer* self, GAsyncResult* _res_, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_searchable_container_get_search_classes</NAME>
+<RETURNS>GeeArrayList * </RETURNS>
+RygelSearchableContainer* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_searchable_container_set_search_classes</NAME>
+<RETURNS>void  </RETURNS>
+RygelSearchableContainer* self, GeeArrayList* value 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_visual_item_get_width</NAME>
+<RETURNS>gint  </RETURNS>
+RygelVisualItem* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_visual_item_set_width</NAME>
+<RETURNS>void  </RETURNS>
+RygelVisualItem* self, gint value 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_visual_item_get_height</NAME>
+<RETURNS>gint  </RETURNS>
+RygelVisualItem* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_visual_item_set_height</NAME>
+<RETURNS>void  </RETURNS>
+RygelVisualItem* self, gint value 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_visual_item_get_pixel_width</NAME>
+<RETURNS>gint  </RETURNS>
+RygelVisualItem* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_visual_item_set_pixel_width</NAME>
+<RETURNS>void  </RETURNS>
+RygelVisualItem* self, gint value 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_visual_item_get_pixel_height</NAME>
+<RETURNS>gint  </RETURNS>
+RygelVisualItem* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_visual_item_set_pixel_height</NAME>
+<RETURNS>void  </RETURNS>
+RygelVisualItem* self, gint value 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_visual_item_get_color_depth</NAME>
+<RETURNS>gint  </RETURNS>
+RygelVisualItem* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_visual_item_set_color_depth</NAME>
+<RETURNS>void  </RETURNS>
+RygelVisualItem* self, gint value 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_visual_item_get_thumbnails</NAME>
+<RETURNS>GeeArrayList * </RETURNS>
+RygelVisualItem* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_visual_item_set_thumbnails</NAME>
+<RETURNS>void  </RETURNS>
+RygelVisualItem* self, GeeArrayList* value 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_writable_container_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_writable_container_can_create</NAME>
+<RETURNS>gboolean  </RETURNS>
+RygelWritableContainer* self, const gchar* upnp_class 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_writable_container_add_item</NAME>
+<RETURNS>void  </RETURNS>
+RygelWritableContainer* self, RygelMediaItem* item, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_ 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_writable_container_add_item_finish</NAME>
+<RETURNS>void  </RETURNS>
+RygelWritableContainer* self, GAsyncResult* _res_, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_writable_container_remove_item</NAME>
+<RETURNS>void  </RETURNS>
+RygelWritableContainer* self, const gchar* id, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_ 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_writable_container_remove_item_finish</NAME>
+<RETURNS>void  </RETURNS>
+RygelWritableContainer* self, GAsyncResult* _res_, GError** error 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_writable_container_get_create_classes</NAME>
+<RETURNS>GeeArrayList * </RETURNS>
+RygelWritableContainer* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_writable_container_set_create_classes</NAME>
+<RETURNS>void  </RETURNS>
+RygelWritableContainer* self, GeeArrayList* value 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_server_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_server_new</NAME>
+<RETURNS>RygelMediaServer * </RETURNS>
+const gchar* title, RygelMediaContainer* root_container 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_server_construct</NAME>
+<RETURNS>RygelMediaServer * </RETURNS>
+GType object_type, const gchar* title, RygelMediaContainer* root_container 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_content_directory_error_quark</NAME>
+<RETURNS>GQuark  </RETURNS>
+void 
+</FUNCTION>
+<STRUCT>
+<NAME>RygelLogicalExpressionPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelMediaItemPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelMediaObjectPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelPhotoItemPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelVideoItemPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelImageItemPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelMusicItemPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelMediaServerPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelSearchableContainer</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelVisualItem</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelWritableContainer</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelTranscodeManagerClass</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelSubtitlePrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelMediaServerPluginPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelHTTPServerClass</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelSimpleContainerPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelThumbnailPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelTranscodeManager</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelRelationalExpressionPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelAudioItemPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelHTTPServer</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelMediaArtStorePrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelMediaObjectsPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelSearchExpressionPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelMediaContainerPrivate</NAME>
+</STRUCT>

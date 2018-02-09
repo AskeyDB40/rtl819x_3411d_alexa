@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE informaltable PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colwidth="1*"/>
+<colspec colwidth="1*"/>
+<colspec colwidth="1*"/>
+<tbody>
+<row>
+<entry><link linkend="DescriptionFile">DescriptionFile</link></entry>
+<entry><link linkend="FreeDesktopDBusObject">FreeDesktopDBusObject</link></entry>
+<entry><link linkend="FreeDesktopDBusRequestNameReply">FreeDesktopDBusRequestNameReply</link></entry>
+</row>
+<row>
+<entry><link linkend="FreeDesktopProperties">FreeDesktopProperties</link></entry>
+<entry><link linkend="GEnum">GEnum</link></entry>
+<entry><link linkend="GInterface">GInterface</link></entry>
+</row>
+<row>
+<entry><link linkend="GObject">GObject</link></entry>
+<entry><link linkend="GUPnPDevice">GUPnPDevice</link></entry>
+<entry><link linkend="GUPnPDeviceInfo">GUPnPDeviceInfo</link></entry>
+</row>
+<row>
+<entry><link linkend="GUPnPResourceFactory">GUPnPResourceFactory</link></entry>
+<entry><link linkend="GUPnPRootDevice">GUPnPRootDevice</link></entry>
+<entry><link linkend="GUPnPService">GUPnPService</link></entry>
+</row>
+<row>
+<entry><link linkend="GUPnPServiceInfo">GUPnPServiceInfo</link></entry>
+<entry><link linkend="RygelCmdlineConfig">RygelCmdlineConfig</link></entry>
+<entry><link linkend="RygelConfiguration">RygelConfiguration</link></entry>
+</row>
+<row>
+<entry><link linkend="RygelConnectionManager">RygelConnectionManager</link></entry>
+<entry><link linkend="RygelDBusInterface">RygelDBusInterface</link></entry>
+<entry><link linkend="RygelIconInfo">RygelIconInfo</link></entry>
+</row>
+<row>
+<entry><link linkend="RygelLogHandler">RygelLogHandler</link></entry>
+<entry><link linkend="RygelLogLevel">RygelLogLevel</link></entry>
+<entry><link linkend="RygelMediaDevice">RygelMediaDevice</link></entry>
+</row>
+<row>
+<entry><link linkend="RygelMetaConfig">RygelMetaConfig</link></entry>
+<entry><link linkend="RygelPlugin">RygelPlugin</link></entry>
+<entry><link linkend="RygelPluginLoader">RygelPluginLoader</link></entry>
+</row>
+<row>
+<entry><link linkend="RygelResourceInfo">RygelResourceInfo</link></entry>
+<entry><link linkend="RygelRootDevice">RygelRootDevice</link></entry>
+<entry><link linkend="RygelRootDeviceFactory">RygelRootDeviceFactory</link></entry>
+</row>
+<row>
+<entry><link linkend="RygelStateMachine">RygelStateMachine</link></entry>
+<entry><link linkend="RygelUserConfig">RygelUserConfig</link></entry>
+<entry><link linkend="RygelXMLUtils">RygelXMLUtils</link></entry>
+</row>
+</tbody></tgroup></informaltable>

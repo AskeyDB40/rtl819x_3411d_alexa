@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>RygelLogicalExpression</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="librygel-server Reference Manual">
+<link rel="up" href="ch01.html" title="librygel-server API Reference">
+<link rel="prev" href="RygelVisualItem.html" title="RygelVisualItem">
+<link rel="next" href="RygelMusicItem.html" title="RygelMusicItem">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="RygelVisualItem.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">librygel-server Reference Manual</th>
+<td><a accesskey="n" href="RygelMusicItem.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#RygelLogicalExpression.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#RygelLogicalExpression.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#RygelLogicalExpression.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="RygelLogicalExpression"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="RygelLogicalExpression.top_of_page"></a>RygelLogicalExpression</span></h2>
+<p>RygelLogicalExpression — This is a parsed UPnP search expression consisting of two other search expressions joined by a boolean operator such as AND or OR.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="RygelLogicalExpression.synopsis"></a><h2>Synopsis</h2>
+<a name="RygelLogicalOperator"></a><pre class="synopsis">#define             <a class="link" href="RygelLogicalExpression.html#RYGEL-TYPE-LOGICAL-EXPRESSION:CAPS" title="RYGEL_TYPE_LOGICAL_EXPRESSION">RYGEL_TYPE_LOGICAL_EXPRESSION</a>
+<a class="link" href="RygelLogicalExpression.html" title="RygelLogicalExpression"><span class="returnvalue">RygelLogicalExpression</span></a> * <a class="link" href="RygelLogicalExpression.html#rygel-logical-expression-new" title="rygel_logical_expression_new ()">rygel_logical_expression_new</a>   (<em class="parameter"><code><span class="type">void</span></code></em>);
+struct              <a class="link" href="RygelLogicalExpression.html#RygelLogicalExpression-struct" title="struct RygelLogicalExpression">RygelLogicalExpression</a>;
+struct              <a class="link" href="RygelLogicalExpression.html#RygelLogicalExpressionClass" title="struct RygelLogicalExpressionClass">RygelLogicalExpressionClass</a>;
+enum                <a class="link" href="RygelLogicalExpression.html#RygelLogicalOperator-enum" title="enum RygelLogicalOperator">RygelLogicalOperator</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelLogicalExpression.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a class="link" href="RygelSearchExpression.html" title="RygelSearchExpression">RygelSearchExpression</a>
+   +----RygelLogicalExpression
+</pre>
+<pre class="synopsis">
+  GEnum
+   +----RygelLogicalOperator
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelLogicalExpression.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="RygelLogicalExpression.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="RYGEL-TYPE-LOGICAL-EXPRESSION:CAPS"></a><h3>RYGEL_TYPE_LOGICAL_EXPRESSION</h3>
+<pre class="programlisting">#define RYGEL_TYPE_LOGICAL_EXPRESSION (rygel_logical_expression_get_type ())
+</pre>
+<p>
+The type for <a class="link" href="RygelLogicalExpression.html" title="RygelLogicalExpression"><span class="type">RygelLogicalExpression</span></a>.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-logical-expression-new"></a><h3>rygel_logical_expression_new ()</h3>
+<pre class="programlisting"><a class="link" href="RygelLogicalExpression.html" title="RygelLogicalExpression"><span class="returnvalue">RygelLogicalExpression</span></a> * rygel_logical_expression_new   (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelLogicalExpression-struct"></a><h3>struct RygelLogicalExpression</h3>
+<pre class="programlisting">struct RygelLogicalExpression;</pre>
+<p>
+This is a parsed UPnP search expression consisting of two other search expressions joined by a boolean operator such as AND or OR.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelLogicalExpressionClass"></a><h3>struct RygelLogicalExpressionClass</h3>
+<pre class="programlisting">struct RygelLogicalExpressionClass {
+	RygelSearchExpressionClass parent_class;
+};
+</pre>
+<p>
+The class structure for <a class="link" href="RygelLogicalExpression.html#RYGEL-TYPE-LOGICAL-EXPRESSION:CAPS" title="RYGEL_TYPE_LOGICAL_EXPRESSION"><code class="literal">RYGEL_TYPE_LOGICAL_EXPRESSION</code></a>. All the fields in this structure are private and should never be accessed directly.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><a class="link" href="RygelSearchExpression.html#RygelSearchExpressionClass" title="struct RygelSearchExpressionClass"><span class="type">RygelSearchExpressionClass</span></a> <em class="structfield"><code><a name="RygelLogicalExpressionClass.parent-class"></a>parent_class</code></em>;</span></p></td>
+<td>the parent class structure</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelLogicalOperator-enum"></a><h3>enum RygelLogicalOperator</h3>
+<pre class="programlisting">typedef enum {
+	RYGEL_LOGICAL_OPERATOR_AND,
+	RYGEL_LOGICAL_OPERATOR_OR
+} RygelLogicalOperator;
+</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

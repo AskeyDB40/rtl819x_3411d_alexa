@@ -1,0 +1,11 @@
+prefix=$(GLIB_INSTALL_DIR)/..
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: gupnp-dlna-1.0
+Description: GObject-based AV specific UPnP library
+Version: 0.6.6
+Libs: -L${libdir} -lgupnp-dlna-1.0
+Cflags: -I${includedir}/gupnp-dlna-1.0
+Requires: gstreamer-0.10 gstreamer-base-0.10

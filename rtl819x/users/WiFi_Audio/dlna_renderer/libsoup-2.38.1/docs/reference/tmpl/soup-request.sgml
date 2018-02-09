@@ -1,0 +1,123 @@
+<!-- ##### SECTION Title ##### -->
+SoupRequest
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT SoupRequest ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG SoupRequest:session ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG SoupRequest:uri ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION soup_request_send ##### -->
+<para>
+
+</para>
+
+@request: 
+@cancellable: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION soup_request_send_async ##### -->
+<para>
+
+</para>
+
+@request: 
+@cancellable: 
+@callback: 
+@user_data: 
+
+
+<!-- ##### FUNCTION soup_request_send_finish ##### -->
+<para>
+
+</para>
+
+@request: 
+@result: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION soup_request_get_content_length ##### -->
+<para>
+
+</para>
+
+@request: 
+@Returns: 
+
+
+<!-- ##### FUNCTION soup_request_get_content_type ##### -->
+<para>
+
+</para>
+
+@request: 
+@Returns: 
+
+
+<!-- ##### FUNCTION soup_request_get_session ##### -->
+<para>
+
+</para>
+
+@request: 
+@Returns: 
+
+
+<!-- ##### FUNCTION soup_request_get_uri ##### -->
+<para>
+
+</para>
+
+@request: 
+@Returns: 
+
+
+<!-- ##### MACRO SOUP_REQUEST_SESSION ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO SOUP_REQUEST_URI ##### -->
+<para>
+
+</para>
+
+
+

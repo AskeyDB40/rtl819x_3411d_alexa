@@ -1,0 +1,40 @@
+GObject
+  RygelMediaObject
+    RygelMediaItem
+      RygelAudioItem
+        RygelMusicItem
+        RygelVideoItem
+      RygelImageItem
+        RygelPhotoItem
+    RygelMediaContainer
+      RygelSimpleContainer
+  RygelTranscodeManager
+    RygelHTTPServer
+  RygelMediaArtStore
+  GeeAbstractCollection
+    GeeAbstractList
+      GeeArrayList
+        RygelMediaObjects
+  RygelMediaDevice
+    RygelMediaServer
+  GUPnPResourceFactory
+    RygelPlugin
+      RygelMediaServerPlugin
+  GCancellable
+GInterface
+  GTypePlugin
+  RygelStateMachine
+  RygelVisualItem
+  GeeIterable
+  GeeCollection
+  GeeList
+  RygelSearchableContainer
+  RygelWritableContainer
+RygelSearchExpression
+  RygelLogicalExpression
+  RygelRelationalExpression
+GEnum
+  RygelLogicalOperator
+RygelSubtitle
+RygelIconInfo
+  RygelThumbnail

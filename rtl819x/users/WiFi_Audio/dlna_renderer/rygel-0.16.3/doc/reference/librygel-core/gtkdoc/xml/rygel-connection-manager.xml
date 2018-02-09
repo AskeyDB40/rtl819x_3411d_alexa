@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelConnectionManager">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelConnectionManager.top_of_page">RygelConnectionManager</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-CORE Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelConnectionManager</refname>
+<refpurpose>Basic implementation of UPnP ConnectionManager service version 2.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelConnectionManager.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="RYGEL-TYPE-CONNECTION-MANAGER:CAPS">RYGEL_TYPE_CONNECTION_MANAGER</link>
+#define             <link linkend="RYGEL-CONNECTION-MANAGER-UPNP-ID:CAPS">RYGEL_CONNECTION_MANAGER_UPNP_ID</link>
+#define             <link linkend="RYGEL-CONNECTION-MANAGER-UPNP-TYPE:CAPS">RYGEL_CONNECTION_MANAGER_UPNP_TYPE</link>
+#define             <link linkend="RYGEL-CONNECTION-MANAGER-DESCRIPTION-PATH:CAPS">RYGEL_CONNECTION_MANAGER_DESCRIPTION_PATH</link>
+<link linkend="RygelConnectionManager"><returnvalue>RygelConnectionManager</returnvalue></link> * <link linkend="rygel-connection-manager-new">rygel_connection_manager_new</link>   (<parameter><type>void</type></parameter>);
+struct              <link linkend="RygelConnectionManager-struct">RygelConnectionManager</link>;
+struct              <link linkend="RygelConnectionManagerClass">RygelConnectionManagerClass</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelConnectionManager.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GUPnPServiceInfo">GUPnPServiceInfo</link>
+         +----<link linkend="GUPnPService">GUPnPService</link>
+               +----RygelConnectionManager
+</synopsis>
+</refsect1>
+
+<refsect1 id="RygelConnectionManager.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="RygelConnectionManager.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="RYGEL-TYPE-CONNECTION-MANAGER:CAPS" role="macro">
+<title>RYGEL_TYPE_CONNECTION_MANAGER</title>
+<indexterm zone="RYGEL-TYPE-CONNECTION-MANAGER:CAPS"><primary>RYGEL_TYPE_CONNECTION_MANAGER</primary></indexterm>
+<programlisting>#define RYGEL_TYPE_CONNECTION_MANAGER (rygel_connection_manager_get_type ())
+</programlisting>
+<para>
+The type for <link linkend="RygelConnectionManager"><type>RygelConnectionManager</type></link>.
+</para></refsect2>
+<refsect2 id="RYGEL-CONNECTION-MANAGER-UPNP-ID:CAPS" role="macro">
+<title>RYGEL_CONNECTION_MANAGER_UPNP_ID</title>
+<indexterm zone="RYGEL-CONNECTION-MANAGER-UPNP-ID:CAPS"><primary>RYGEL_CONNECTION_MANAGER_UPNP_ID</primary></indexterm>
+<programlisting>#define RYGEL_CONNECTION_MANAGER_UPNP_ID "urn:upnp-org:serviceId:ConnectionManager"
+</programlisting>
+</refsect2>
+<refsect2 id="RYGEL-CONNECTION-MANAGER-UPNP-TYPE:CAPS" role="macro">
+<title>RYGEL_CONNECTION_MANAGER_UPNP_TYPE</title>
+<indexterm zone="RYGEL-CONNECTION-MANAGER-UPNP-TYPE:CAPS"><primary>RYGEL_CONNECTION_MANAGER_UPNP_TYPE</primary></indexterm>
+<programlisting>#define RYGEL_CONNECTION_MANAGER_UPNP_TYPE "urn:schemas-upnp-org:service:ConnectionManager:2"
+</programlisting>
+</refsect2>
+<refsect2 id="RYGEL-CONNECTION-MANAGER-DESCRIPTION-PATH:CAPS" role="macro">
+<title>RYGEL_CONNECTION_MANAGER_DESCRIPTION_PATH</title>
+<indexterm zone="RYGEL-CONNECTION-MANAGER-DESCRIPTION-PATH:CAPS"><primary>RYGEL_CONNECTION_MANAGER_DESCRIPTION_PATH</primary></indexterm>
+<programlisting>#define RYGEL_CONNECTION_MANAGER_DESCRIPTION_PATH "xml/ConnectionManager.xml"
+</programlisting>
+</refsect2>
+<refsect2 id="rygel-connection-manager-new" role="function">
+<title>rygel_connection_manager_new ()</title>
+<indexterm zone="rygel-connection-manager-new"><primary>rygel_connection_manager_new</primary></indexterm>
+<programlisting><link linkend="RygelConnectionManager"><returnvalue>RygelConnectionManager</returnvalue></link> * rygel_connection_manager_new   (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="RygelConnectionManager-struct" role="struct">
+<title>struct RygelConnectionManager</title>
+<indexterm zone="RygelConnectionManager-struct"><primary>RygelConnectionManager</primary></indexterm>
+<programlisting>struct RygelConnectionManager;</programlisting>
+<para>
+Basic implementation of UPnP ConnectionManager service version 2.
+</para></refsect2>
+<refsect2 id="RygelConnectionManagerClass" role="struct">
+<title>struct RygelConnectionManagerClass</title>
+<indexterm zone="RygelConnectionManagerClass"><primary>RygelConnectionManagerClass</primary></indexterm>
+<programlisting>struct RygelConnectionManagerClass {
+	GUPnPServiceClass parent_class;
+};
+</programlisting>
+<para>
+The class structure for <link linkend="RYGEL-TYPE-CONNECTION-MANAGER:CAPS"><literal>RYGEL_TYPE_CONNECTION_MANAGER</literal></link>. All the fields in this structure are private and should never be accessed directly.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="GUPnPServiceClass"><type>GUPnPServiceClass</type></link>&#160;<structfield id="RygelConnectionManagerClass.parent-class">parent_class</structfield>;</term>
+<listitem><simpara>the parent class structure</simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,85 @@
+<!-- ##### SECTION Title ##### -->
+Special UPnP types
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### MACRO GUPNP_TYPE_BIN_BASE64 ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO GUPNP_TYPE_BIN_HEX ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO GUPNP_TYPE_DATE ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO GUPNP_TYPE_DATE_TIME ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO GUPNP_TYPE_DATE_TIME_TZ ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO GUPNP_TYPE_TIME ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO GUPNP_TYPE_TIME_TZ ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO GUPNP_TYPE_URI ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### MACRO GUPNP_TYPE_UUID ##### -->
+<para>
+
+</para>
+
+
+

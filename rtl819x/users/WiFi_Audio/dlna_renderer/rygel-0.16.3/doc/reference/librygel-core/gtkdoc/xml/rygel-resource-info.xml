@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelResourceInfo">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelResourceInfo.top_of_page">RygelResourceInfo</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-CORE Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelResourceInfo</refname>
+<refpurpose>Holds information about a particular resource (device and service) implementation.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelResourceInfo.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="RYGEL-TYPE-RESOURCE-INFO:CAPS">RYGEL_TYPE_RESOURCE_INFO</link>
+<link linkend="RygelResourceInfo"><returnvalue>RygelResourceInfo</returnvalue></link> * <link linkend="rygel-resource-info-new">rygel_resource_info_new</link>             (<parameter>const <link linkend="gchar"><type>gchar</type></link> *upnp_id</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *upnp_type</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *description_path</parameter>,
+                                                         <parameter><link linkend="GType"><type>GType</type></link> type</parameter>);
+struct              <link linkend="RygelResourceInfo-struct">RygelResourceInfo</link>;
+<link linkend="gpointer"><returnvalue>gpointer</returnvalue></link>            <link linkend="rygel-resource-info-ref">rygel_resource_info_ref</link>             (<parameter><link linkend="gpointer"><type>gpointer</type></link> instance</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-resource-info-unref">rygel_resource_info_unref</link>           (<parameter><link linkend="gpointer"><type>gpointer</type></link> instance</parameter>);
+<link linkend="GParamSpec"><returnvalue>GParamSpec</returnvalue></link> *        <link linkend="rygel-param-spec-resource-info">rygel_param_spec_resource_info</link>      (<parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *nick</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *blurb</parameter>,
+                                                         <parameter><link linkend="GType"><type>GType</type></link> object_type</parameter>,
+                                                         <parameter><link linkend="GParamFlags"><type>GParamFlags</type></link> flags</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-value-set-resource-info">rygel_value_set_resource_info</link>       (<parameter><link linkend="GValue"><type>GValue</type></link> *value</parameter>,
+                                                         <parameter><link linkend="gpointer"><type>gpointer</type></link> v_object</parameter>);
+<link linkend="gpointer"><returnvalue>gpointer</returnvalue></link>            <link linkend="rygel-value-get-resource-info">rygel_value_get_resource_info</link>       (<parameter>const <link linkend="GValue"><type>GValue</type></link> *value</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-value-take-resource-info">rygel_value_take_resource_info</link>      (<parameter><link linkend="GValue"><type>GValue</type></link> *value</parameter>,
+                                                         <parameter><link linkend="gpointer"><type>gpointer</type></link> v_object</parameter>);
+struct              <link linkend="RygelResourceInfoClass">RygelResourceInfoClass</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelResourceInfo.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  RygelResourceInfo
+</synopsis>
+</refsect1>
+
+<refsect1 id="RygelResourceInfo.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="RygelResourceInfo.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="RYGEL-TYPE-RESOURCE-INFO:CAPS" role="macro">
+<title>RYGEL_TYPE_RESOURCE_INFO</title>
+<indexterm zone="RYGEL-TYPE-RESOURCE-INFO:CAPS"><primary>RYGEL_TYPE_RESOURCE_INFO</primary></indexterm>
+<programlisting>#define RYGEL_TYPE_RESOURCE_INFO (rygel_resource_info_get_type ())
+</programlisting>
+<para>
+The type for <link linkend="RygelResourceInfo"><type>RygelResourceInfo</type></link>.
+</para></refsect2>
+<refsect2 id="rygel-resource-info-new" role="function">
+<title>rygel_resource_info_new ()</title>
+<indexterm zone="rygel-resource-info-new"><primary>rygel_resource_info_new</primary></indexterm>
+<programlisting><link linkend="RygelResourceInfo"><returnvalue>RygelResourceInfo</returnvalue></link> * rygel_resource_info_new             (<parameter>const <link linkend="gchar"><type>gchar</type></link> *upnp_id</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *upnp_type</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *description_path</parameter>,
+                                                         <parameter><link linkend="GType"><type>GType</type></link> type</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="RygelResourceInfo-struct" role="struct">
+<title>struct RygelResourceInfo</title>
+<indexterm zone="RygelResourceInfo-struct"><primary>RygelResourceInfo</primary></indexterm>
+<programlisting>struct RygelResourceInfo;</programlisting>
+<para>
+Holds information about a particular resource (device and service) implementation.
+</para></refsect2>
+<refsect2 id="rygel-resource-info-ref" role="function">
+<title>rygel_resource_info_ref ()</title>
+<indexterm zone="rygel-resource-info-ref"><primary>rygel_resource_info_ref</primary></indexterm>
+<programlisting><link linkend="gpointer"><returnvalue>gpointer</returnvalue></link>            rygel_resource_info_ref             (<parameter><link linkend="gpointer"><type>gpointer</type></link> instance</parameter>);</programlisting>
+<para>
+Increases the reference count of <parameter>object</parameter>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>instance</parameter>&#160;:</term>
+<listitem><simpara>a <link linkend="RygelResourceInfo"><type>RygelResourceInfo</type></link>.</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>the same <parameter>object</parameter></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-resource-info-unref" role="function">
+<title>rygel_resource_info_unref ()</title>
+<indexterm zone="rygel-resource-info-unref"><primary>rygel_resource_info_unref</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_resource_info_unref           (<parameter><link linkend="gpointer"><type>gpointer</type></link> instance</parameter>);</programlisting>
+<para>
+Decreases the reference count of <parameter>object</parameter>. When its reference count drops to 0, the object is finalized (i.e. its memory is freed).
+</para><variablelist role="params">
+<varlistentry><term><parameter>instance</parameter>&#160;:</term>
+<listitem><simpara>a <link linkend="RygelResourceInfo"><type>RygelResourceInfo</type></link>.</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-param-spec-resource-info" role="function">
+<title>rygel_param_spec_resource_info ()</title>
+<indexterm zone="rygel-param-spec-resource-info"><primary>rygel_param_spec_resource_info</primary></indexterm>
+<programlisting><link linkend="GParamSpec"><returnvalue>GParamSpec</returnvalue></link> *        rygel_param_spec_resource_info      (<parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *nick</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *blurb</parameter>,
+                                                         <parameter><link linkend="GType"><type>GType</type></link> object_type</parameter>,
+                                                         <parameter><link linkend="GParamFlags"><type>GParamFlags</type></link> flags</parameter>);</programlisting>
+<para>
+Creates a new <link linkend="GParamSpecBoxed"><type>GParamSpecBoxed</type></link> instance specifying a <link linkend="RYGEL-TYPE-RESOURCE-INFO:CAPS"><literal>RYGEL_TYPE_RESOURCE_INFO</literal></link> derived property.
+</para>
+<para>
+See <link linkend="g-param-spec-internal"><function><link linkend="g-param-spec-internal"><function>g_param_spec_internal()</function></link></function></link> for details on property names.
+</para><variablelist role="params">
+<varlistentry><term><parameter>name</parameter>&#160;:</term>
+<listitem><simpara>canonical name of the property specified</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>nick</parameter>&#160;:</term>
+<listitem><simpara>nick name for the property specified</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>blurb</parameter>&#160;:</term>
+<listitem><simpara>description of the property specified</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>object_type</parameter>&#160;:</term>
+<listitem><simpara><link linkend="RYGEL-TYPE-RESOURCE-INFO:CAPS"><literal>RYGEL_TYPE_RESOURCE_INFO</literal></link> derived type of this property</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>flags</parameter>&#160;:</term>
+<listitem><simpara>flags for the property specified</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-value-set-resource-info" role="function">
+<title>rygel_value_set_resource_info ()</title>
+<indexterm zone="rygel-value-set-resource-info"><primary>rygel_value_set_resource_info</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_value_set_resource_info       (<parameter><link linkend="GValue"><type>GValue</type></link> *value</parameter>,
+                                                         <parameter><link linkend="gpointer"><type>gpointer</type></link> v_object</parameter>);</programlisting>
+<para>
+Set the contents of a <link linkend="RYGEL-TYPE-RESOURCE-INFO:CAPS"><literal>RYGEL_TYPE_RESOURCE_INFO</literal></link> derived <link linkend="GValue"><type>GValue</type></link> to <parameter>v_object</parameter>.
+</para>
+<para>
+<link linkend="rygel-value-set-resource-info"><function><link linkend="rygel-value-set-resource-info"><function>rygel_value_set_resource_info()</function></link></function></link> increases the reference count of <parameter>v_object</parameter> (the <link linkend="GValue"><type>GValue</type></link> holds a reference to <parameter>v_object</parameter>). If you do not wish to increase the reference count of the object (i.e. you wish to pass your current reference to the <link linkend="GValue"><type>GValue</type></link> because you no longer need it), use <link linkend="rygel-value-take-resource-info"><function><link linkend="rygel-value-take-resource-info"><function>rygel_value_take_resource_info()</function></link></function></link> instead.
+</para>
+<para>
+It is important that your <link linkend="GValue"><type>GValue</type></link> holds a reference to <parameter>v_object</parameter> (either its own, or one it has taken) to ensure that the object won't be destroyed while the <link linkend="GValue"><type>GValue</type></link> still exists).
+</para><variablelist role="params">
+<varlistentry><term><parameter>value</parameter>&#160;:</term>
+<listitem><simpara>a valid <link linkend="GValue"><type>GValue</type></link> of <link linkend="RYGEL-TYPE-RESOURCE-INFO:CAPS"><literal>RYGEL_TYPE_RESOURCE_INFO</literal></link> derived type</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>v_object</parameter>&#160;:</term>
+<listitem><simpara>object value to be set</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-value-get-resource-info" role="function">
+<title>rygel_value_get_resource_info ()</title>
+<indexterm zone="rygel-value-get-resource-info"><primary>rygel_value_get_resource_info</primary></indexterm>
+<programlisting><link linkend="gpointer"><returnvalue>gpointer</returnvalue></link>            rygel_value_get_resource_info       (<parameter>const <link linkend="GValue"><type>GValue</type></link> *value</parameter>);</programlisting>
+<para>
+Get the contents of a <link linkend="RYGEL-TYPE-RESOURCE-INFO:CAPS"><literal>RYGEL_TYPE_RESOURCE_INFO</literal></link> derived <link linkend="GValue"><type>GValue</type></link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>value</parameter>&#160;:</term>
+<listitem><simpara>a valid <link linkend="GValue"><type>GValue</type></link> of <link linkend="RYGEL-TYPE-RESOURCE-INFO:CAPS"><literal>RYGEL_TYPE_RESOURCE_INFO</literal></link> derived type</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>object contents of <parameter>value</parameter></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-value-take-resource-info" role="function">
+<title>rygel_value_take_resource_info ()</title>
+<indexterm zone="rygel-value-take-resource-info"><primary>rygel_value_take_resource_info</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_value_take_resource_info      (<parameter><link linkend="GValue"><type>GValue</type></link> *value</parameter>,
+                                                         <parameter><link linkend="gpointer"><type>gpointer</type></link> v_object</parameter>);</programlisting>
+<para>
+Sets the contents of a <link linkend="RYGEL-TYPE-RESOURCE-INFO:CAPS"><literal>RYGEL_TYPE_RESOURCE_INFO</literal></link> derived <link linkend="GValue"><type>GValue</type></link> to <parameter>v_object</parameter> and takes over the ownership of the callers reference to <parameter>v_object</parameter>; the caller doesn't have to unref it any more (i.e. the reference count of the object is not increased).
+</para>
+<para>
+If you want the GValue to hold its own reference to <parameter>v_object</parameter>, use <link linkend="rygel-value-set-resource-info"><function><link linkend="rygel-value-set-resource-info"><function>rygel_value_set_resource_info()</function></link></function></link> instead.
+</para><variablelist role="params">
+<varlistentry><term><parameter>value</parameter>&#160;:</term>
+<listitem><simpara>a valid <link linkend="GValue"><type>GValue</type></link> of <link linkend="RYGEL-TYPE-RESOURCE-INFO:CAPS"><literal>RYGEL_TYPE_RESOURCE_INFO</literal></link> derived type</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>v_object</parameter>&#160;:</term>
+<listitem><simpara>object value to be set</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="RygelResourceInfoClass" role="struct">
+<title>struct RygelResourceInfoClass</title>
+<indexterm zone="RygelResourceInfoClass"><primary>RygelResourceInfoClass</primary></indexterm>
+<programlisting>struct RygelResourceInfoClass {
+	GTypeClass parent_class;
+	void (*finalize) (RygelResourceInfo *self);
+};
+</programlisting>
+<para>
+The class structure for <link linkend="RYGEL-TYPE-RESOURCE-INFO:CAPS"><literal>RYGEL_TYPE_RESOURCE_INFO</literal></link>. All the fields in this structure are private and should never be accessed directly.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="GTypeClass"><type>GTypeClass</type></link>&#160;<structfield id="RygelResourceInfoClass.parent-class">parent_class</structfield>;</term>
+<listitem><simpara>the parent class structure</simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelResourceInfoClass.finalize">finalize</structfield>&#160;()</term>
+<listitem />
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+</refentry>

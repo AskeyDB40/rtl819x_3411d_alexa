@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE informaltable PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colwidth="1*"/>
+<colspec colwidth="1*"/>
+<colspec colwidth="1*"/>
+<tbody>
+<row>
+<entry><link linkend="GEnum">GEnum</link></entry>
+<entry><link linkend="GInterface">GInterface</link></entry>
+<entry><link linkend="GObject">GObject</link></entry>
+</row>
+<row>
+<entry><link linkend="GUPnPResourceFactory">GUPnPResourceFactory</link></entry>
+<entry><link linkend="GeeAbstractCollection">GeeAbstractCollection</link></entry>
+<entry><link linkend="GeeAbstractList">GeeAbstractList</link></entry>
+</row>
+<row>
+<entry><link linkend="GeeArrayList">GeeArrayList</link></entry>
+<entry><link linkend="RygelAudioItem">RygelAudioItem</link></entry>
+<entry><link linkend="RygelIconInfo">RygelIconInfo</link></entry>
+</row>
+<row>
+<entry><link linkend="RygelImageItem">RygelImageItem</link></entry>
+<entry><link linkend="RygelLogicalExpression">RygelLogicalExpression</link></entry>
+<entry><link linkend="RygelLogicalOperator">RygelLogicalOperator</link></entry>
+</row>
+<row>
+<entry><link linkend="RygelMediaArtStore">RygelMediaArtStore</link></entry>
+<entry><link linkend="RygelMediaContainer">RygelMediaContainer</link></entry>
+<entry><link linkend="RygelMediaDevice">RygelMediaDevice</link></entry>
+</row>
+<row>
+<entry><link linkend="RygelMediaItem">RygelMediaItem</link></entry>
+<entry><link linkend="RygelMediaObject">RygelMediaObject</link></entry>
+<entry><link linkend="RygelMediaObjects">RygelMediaObjects</link></entry>
+</row>
+<row>
+<entry><link linkend="RygelMediaServer">RygelMediaServer</link></entry>
+<entry><link linkend="RygelMediaServerPlugin">RygelMediaServerPlugin</link></entry>
+<entry><link linkend="RygelMusicItem">RygelMusicItem</link></entry>
+</row>
+<row>
+<entry><link linkend="RygelPhotoItem">RygelPhotoItem</link></entry>
+<entry><link linkend="RygelPlugin">RygelPlugin</link></entry>
+<entry><link linkend="RygelRelationalExpression">RygelRelationalExpression</link></entry>
+</row>
+<row>
+<entry><link linkend="RygelSearchExpression">RygelSearchExpression</link></entry>
+<entry><link linkend="RygelSearchableContainer">RygelSearchableContainer</link></entry>
+<entry><link linkend="RygelSimpleContainer">RygelSimpleContainer</link></entry>
+</row>
+<row>
+<entry><link linkend="RygelSubtitle">RygelSubtitle</link></entry>
+<entry><link linkend="RygelThumbnail">RygelThumbnail</link></entry>
+<entry><link linkend="RygelVideoItem">RygelVideoItem</link></entry>
+</row>
+<row>
+<entry><link linkend="RygelVisualItem">RygelVisualItem</link></entry>
+<entry><link linkend="RygelWritableContainer">RygelWritableContainer</link></entry>
+</row>
+</tbody></tgroup></informaltable>

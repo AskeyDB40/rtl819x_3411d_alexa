@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelStateMachine">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelStateMachine.top_of_page">RygelStateMachine</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-CORE Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelStateMachine</refname>
+<refpurpose>StateMachine interface.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelStateMachine.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis><link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-state-machine-run">rygel_state_machine_run</link>             (<parameter><link linkend="RygelStateMachine"><type>RygelStateMachine</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                                         <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-state-machine-run-finish">rygel_state_machine_run_finish</link>      (<parameter><link linkend="RygelStateMachine"><type>RygelStateMachine</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>);
+<link linkend="GCancellable"><returnvalue>GCancellable</returnvalue></link> *      <link linkend="rygel-state-machine-get-cancellable">rygel_state_machine_get_cancellable</link> (<parameter><link linkend="RygelStateMachine"><type>RygelStateMachine</type></link> *self</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-state-machine-set-cancellable">rygel_state_machine_set_cancellable</link> (<parameter><link linkend="RygelStateMachine"><type>RygelStateMachine</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *value</parameter>);
+                    <link linkend="RygelStateMachine-struct">RygelStateMachine</link>;
+struct              <link linkend="RygelStateMachineIface">RygelStateMachineIface</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelStateMachine.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GInterface">GInterface</link>
+   +----RygelStateMachine
+</synopsis>
+</refsect1>
+<refsect1 id="RygelStateMachine.prerequisites" role="prerequisites">
+<title role="prerequisites.title">Prerequisites</title>
+<para>
+RygelStateMachine requires
+ <link linkend="GObject">GObject</link>.</para>
+</refsect1>
+<refsect1 id="RygelStateMachine.properties" role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+  &quot;<link linkend="RygelStateMachine--cancellable">cancellable</link>&quot;              <link linkend="GCancellable"><type>GCancellable</type></link>*         : Read / Write
+</synopsis>
+</refsect1>
+<refsect1 id="RygelStateMachine.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<synopsis>
+  &quot;<link linkend="RygelStateMachine-completed">completed</link>&quot;                                      : <link linkend="G-SIGNAL-RUN-LAST:CAPS"><literal>Run Last</literal></link>
+</synopsis>
+</refsect1>
+
+<refsect1 id="RygelStateMachine.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="RygelStateMachine.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="rygel-state-machine-run" role="function">
+<title>rygel_state_machine_run ()</title>
+<indexterm zone="rygel-state-machine-run"><primary>rygel_state_machine_run</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_state_machine_run             (<parameter><link linkend="RygelStateMachine"><type>RygelStateMachine</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                                         <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para>
+<emphasis>See also</emphasis>: <link linkend="rygel-state-machine-run-finish"><function><link linkend="rygel-state-machine-run-finish"><function>rygel_state_machine_run_finish()</function></link></function></link>
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelStateMachine"><type>RygelStateMachine</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>_callback_</parameter>&#160;:</term>
+<listitem><simpara>callback to call when the request is satisfied. <emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></simpara></listitem></varlistentry>
+<varlistentry><term><parameter>_user_data_</parameter>&#160;:</term>
+<listitem><simpara>the data to pass to <parameter>_callback_</parameter> function. <emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-state-machine-run-finish" role="function">
+<title>rygel_state_machine_run_finish ()</title>
+<indexterm zone="rygel-state-machine-run-finish"><primary>rygel_state_machine_run_finish</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_state_machine_run_finish      (<parameter><link linkend="RygelStateMachine"><type>RygelStateMachine</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>);</programlisting>
+<para>
+<emphasis>See also</emphasis>: <link linkend="rygel-state-machine-run"><function><link linkend="rygel-state-machine-run"><function>rygel_state_machine_run()</function></link></function></link>
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelStateMachine"><type>RygelStateMachine</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>_res_</parameter>&#160;:</term>
+<listitem><simpara>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-state-machine-get-cancellable" role="function">
+<title>rygel_state_machine_get_cancellable ()</title>
+<indexterm zone="rygel-state-machine-get-cancellable"><primary>rygel_state_machine_get_cancellable</primary></indexterm>
+<programlisting><link linkend="GCancellable"><returnvalue>GCancellable</returnvalue></link> *      rygel_state_machine_get_cancellable (<parameter><link linkend="RygelStateMachine"><type>RygelStateMachine</type></link> *self</parameter>);</programlisting>
+<para>
+Get and return the current value of the <link linkend="RygelStateMachine--cancellable"><type>"cancellable"</type></link> property.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelStateMachine"><type>RygelStateMachine</type></link> instance to query</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>the value of the <link linkend="RygelStateMachine--cancellable"><type>"cancellable"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-state-machine-set-cancellable" role="function">
+<title>rygel_state_machine_set_cancellable ()</title>
+<indexterm zone="rygel-state-machine-set-cancellable"><primary>rygel_state_machine_set_cancellable</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_state_machine_set_cancellable (<parameter><link linkend="RygelStateMachine"><type>RygelStateMachine</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *value</parameter>);</programlisting>
+<para>
+Set the value of the <link linkend="RygelStateMachine--cancellable"><type>"cancellable"</type></link> property to <parameter>value</parameter>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelStateMachine"><type>RygelStateMachine</type></link> instance to modify</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>value</parameter>&#160;:</term>
+<listitem><simpara>the new value of the <link linkend="RygelStateMachine--cancellable"><type>"cancellable"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="RygelStateMachine-struct" role="struct">
+<title>RygelStateMachine</title>
+<indexterm zone="RygelStateMachine-struct"><primary>RygelStateMachine</primary></indexterm>
+<programlisting>typedef struct _RygelStateMachine RygelStateMachine;</programlisting>
+<para>
+StateMachine interface.
+</para></refsect2>
+<refsect2 id="RygelStateMachineIface" role="struct">
+<title>struct RygelStateMachineIface</title>
+<indexterm zone="RygelStateMachineIface"><primary>RygelStateMachineIface</primary></indexterm>
+<programlisting>struct RygelStateMachineIface {
+	GTypeInterface parent_iface;
+	void (*run) (RygelStateMachine* self, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	void (*run_finish) (RygelStateMachine* self, GAsyncResult* _res_);
+	GCancellable* (*get_cancellable) (RygelStateMachine* self);
+	void (*set_cancellable) (RygelStateMachine* self, GCancellable* value);
+};
+</programlisting>
+<para>
+Interface for creating <link linkend="RygelStateMachine"><type>RygelStateMachine</type></link> implementations.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="GTypeInterface"><type>GTypeInterface</type></link>&#160;<structfield id="RygelStateMachineIface.parent-iface">parent_iface</structfield>;</term>
+<listitem><simpara>the parent interface structure</simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelStateMachineIface.run">run</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-state-machine-run"><function><link linkend="rygel-state-machine-run"><function>rygel_state_machine_run()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelStateMachineIface.run-finish">run_finish</structfield>&#160;()</term>
+<listitem><simpara>asynchronous finish function for <structfield>run</structfield>, called by <link linkend="rygel-state-machine-run"><function><link linkend="rygel-state-machine-run"><function>rygel_state_machine_run()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelStateMachineIface.get-cancellable">get_cancellable</structfield>&#160;()</term>
+<listitem><simpara>getter method for the abstract property <link linkend="RygelStateMachine--cancellable"><type>"cancellable"</type></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelStateMachineIface.set-cancellable">set_cancellable</structfield>&#160;()</term>
+<listitem><simpara>setter method for the abstract property <link linkend="RygelStateMachine--cancellable"><type>"cancellable"</type></link></simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 id="RygelStateMachine.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="RygelStateMachine--cancellable" role="property"><title>The <literal>&quot;cancellable&quot;</literal> property</title>
+<indexterm zone="RygelStateMachine--cancellable"><primary>RygelStateMachine:cancellable</primary></indexterm>
+<programlisting>  &quot;cancellable&quot;              <link linkend="GCancellable"><type>GCancellable</type></link>*         : Read / Write</programlisting>
+<para>cancellable.</para></refsect2>
+</refsect1>
+<refsect1 id="RygelStateMachine.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="RygelStateMachine-completed" role="signal"><title>The <literal>&quot;completed&quot;</literal> signal</title>
+<indexterm zone="RygelStateMachine-completed"><primary>RygelStateMachine::completed</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                user_function                      (<link linkend="RygelStateMachine"><type>RygelStateMachine</type></link> *state_machine,
+                                                        <link linkend="gpointer"><type>gpointer</type></link>           user_data)          : <link linkend="G-SIGNAL-RUN-LAST:CAPS"><literal>Run Last</literal></link></programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>state_machine</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelStateMachine"><type>RygelStateMachine</type></link> instance that received the signal</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&#160;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+</refsect1>
+
+</refentry>

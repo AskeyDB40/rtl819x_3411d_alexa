@@ -1,0 +1,664 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ladspa</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="GStreamer Bad Plugins 0.10 Plugins Reference Manual">
+<link rel="up" href="ch02.html" title="gst-plugins-bad Plugins">
+<link rel="prev" href="gst-plugins-bad-plugins-plugin-kate.html" title="kate">
+<link rel="next" href="gst-plugins-bad-plugins-plugin-liveadder.html" title="liveadder">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2"><tr valign="middle">
+<td><a accesskey="p" href="gst-plugins-bad-plugins-plugin-kate.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch02.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GStreamer Bad Plugins 0.10 Plugins Reference Manual</th>
+<td><a accesskey="n" href="gst-plugins-bad-plugins-plugin-liveadder.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="gst-plugins-bad-plugins-plugin-ladspa"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle">ladspa</span></h2>
+<p>ladspa — <a name="plugin-ladspa"></a>All LADSPA plugins</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="idp18651168"></a><h2>Plugin Information</h2>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term">filename</span></p></td>
+<td>libgstladspa.so</td>
+</tr>
+<tr>
+<td><p><span class="term">version</span></p></td>
+<td>0.10.23</td>
+</tr>
+<tr>
+<td><p><span class="term">run-time license</span></p></td>
+<td>LGPL</td>
+</tr>
+<tr>
+<td><p><span class="term">package</span></p></td>
+<td>GStreamer Bad Plug-ins source release</td>
+</tr>
+<tr>
+<td><p><span class="term">origin</span></p></td>
+<td>Unknown package origin</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="idp21378992"></a><h2>Elements</h2>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term">ladspa-Chorus1</span></p></td>
+<td>Chorus1 - Based on CSound orchestra by Sean Costello</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-Chorus2</span></p></td>
+<td>Chorus2 - Based on CSound orchestra by Sean Costello</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-G2reverb</span></p></td>
+<td>Stereo reverb</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-Mvchpf-1</span></p></td>
+<td>Mvchpf-1   Digital implementation of the VC HP filter invented by R.A. Moog</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-Mvclpf-1</span></p></td>
+<td>Mvclpf-1   Digital implementation of the VC filter invented by R.A.Moog</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-Mvclpf-2</span></p></td>
+<td>Mvclpf-2   Digital implementation of the VC filter invented by R.A.Moog</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-Mvclpf-3</span></p></td>
+<td>Mvclpf-3   Digital implementation of the VC filter invented by R.A.Moog</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-Mvclpf-4</span></p></td>
+<td>Mvclpf-4   Digital implementation of the VC filter invented by R.A.Moog</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-Phaser1</span></p></td>
+<td>Phaser1 - Similar to CSound's phaser1 by Sean Costello</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-Phaser1+LFO</span></p></td>
+<td>Phaser1 with LFO</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-TripleChorus</span></p></td>
+<td>Triple chorus</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-alias</span></p></td>
+<td>Aliasing</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-allpass-c</span></p></td>
+<td>Allpass delay line, cubic spline interpolation</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-allpass-l</span></p></td>
+<td>Allpass delay line, linear interpolation</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-allpass-n</span></p></td>
+<td>Allpass delay line, noninterpolating</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-amPitchshift</span></p></td>
+<td>AM pitchshifter</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-amp</span></p></td>
+<td>Simple amplifier</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-amp-mono</span></p></td>
+<td>Mono Amplifier</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-amp-stereo</span></p></td>
+<td>Stereo Amplifier</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-analogueOsc</span></p></td>
+<td>Analogue Oscillator</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-artificialLatency</span></p></td>
+<td>Artificial latency</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-autoPhaser</span></p></td>
+<td>Auto phaser</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-bandpass-a-iir</span></p></td>
+<td>Glame Bandpass Analog Filter</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-bandpass-iir</span></p></td>
+<td>Glame Bandpass Filter</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-bodeShifter</span></p></td>
+<td>Bode frequency shifter</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-bodeShifterCV</span></p></td>
+<td>Bode frequency shifter (CV)</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-butthigh-iir</span></p></td>
+<td>GLAME Butterworth Highpass</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-buttlow-iir</span></p></td>
+<td>GLAME Butterworth Lowpass</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-bwxover-iir</span></p></td>
+<td>Glame Butterworth X-over Filter</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-chebstortion</span></p></td>
+<td>Chebyshev distortion</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-comb</span></p></td>
+<td>Comb Filter</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-comb-c</span></p></td>
+<td>Comb delay line, cubic spline interpolation</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-comb-l</span></p></td>
+<td>Comb delay line, linear interpolation</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-comb-n</span></p></td>
+<td>Comb delay line, noninterpolating</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-combSplitter</span></p></td>
+<td>Comb Splitter</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-const</span></p></td>
+<td>Constant Signal Generator</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-crossoverDist</span></p></td>
+<td>Crossover distortion</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-dcRemove</span></p></td>
+<td>DC Offset Remover</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-decay</span></p></td>
+<td>Exponential signal decay</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-decimator</span></p></td>
+<td>Decimator</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-declip</span></p></td>
+<td>Declipper</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-delay-5s</span></p></td>
+<td>Simple Delay Line</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-delay-c</span></p></td>
+<td>Simple delay line, cubic spline interpolation</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-delay-l</span></p></td>
+<td>Simple delay line, linear interpolation</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-delay-n</span></p></td>
+<td>Simple delay line, noninterpolating</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-delayorama</span></p></td>
+<td>Delayorama</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-diode</span></p></td>
+<td>Diode Processor</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-divider</span></p></td>
+<td>Audio Divider (Suboctave Generator)</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-dj-eq</span></p></td>
+<td>DJ EQ</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-dj-eq-mono</span></p></td>
+<td>DJ EQ (mono)</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-djFlanger</span></p></td>
+<td>DJ flanger</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-dysonCompress</span></p></td>
+<td>Dyson compressor</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-fadDelay</span></p></td>
+<td>Fractionally Addressed Delay Line</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-fastLookaheadLimiter</span></p></td>
+<td>Fast Lookahead limiter</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-flanger</span></p></td>
+<td>Flanger</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-fmOsc</span></p></td>
+<td>FM Oscillator</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-foldover</span></p></td>
+<td>Foldover distortion</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-fourByFourPole</span></p></td>
+<td>4 x 4 pole allpass</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-foverdrive</span></p></td>
+<td>Fast overdrive</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-freqTracker</span></p></td>
+<td>Frequency tracker</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-gate</span></p></td>
+<td>Gate</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-giantFlange</span></p></td>
+<td>Giant flange</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-gong</span></p></td>
+<td>Gong model</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-gongBeater</span></p></td>
+<td>Gong beater</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-gsm</span></p></td>
+<td>GSM simulator</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-gverb</span></p></td>
+<td>GVerb</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-hardLimiter</span></p></td>
+<td>Hard Limiter</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-harmonicGen</span></p></td>
+<td>Harmonic generator</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-hermesFilter</span></p></td>
+<td>Hermes Filter</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-highpass-iir</span></p></td>
+<td>Glame Highpass Filter</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-hilbert</span></p></td>
+<td>Hilbert transformer</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-hpf</span></p></td>
+<td>Simple High Pass Filter</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-imp</span></p></td>
+<td>Impulse convolver</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-impulse-fc</span></p></td>
+<td>Nonbandlimited single-sample impulses (Frequency: Control)</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-inv</span></p></td>
+<td>Inverter</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-karaoke</span></p></td>
+<td>Karaoke</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-lcrDelay</span></p></td>
+<td>L/C/R Delay</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-lfoPhaser</span></p></td>
+<td>LFO Phaser</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-lowpass-iir</span></p></td>
+<td>Glame Lowpass Filter</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-lpf</span></p></td>
+<td>Simple Low Pass Filter</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-lsFilter</span></p></td>
+<td>LS Filter</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-matrixMSSt</span></p></td>
+<td>Matrix: MS to Stereo</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-matrixSpatialiser</span></p></td>
+<td>Matrix Spatialiser</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-matrixStMS</span></p></td>
+<td>Matrix: Stereo to MS</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-mbeq</span></p></td>
+<td>Multiband EQ</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-modDelay</span></p></td>
+<td>Modulatable delay</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-multivoiceChorus</span></p></td>
+<td>Multivoice Chorus</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-noise-white</span></p></td>
+<td>White Noise Source</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-notch-iir</span></p></td>
+<td>Mag's Notch Filter</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-pitchScale</span></p></td>
+<td>Pitch Scaler</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-pitchScaleHQ</span></p></td>
+<td>Higher Quality Pitch Scaler</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-plate</span></p></td>
+<td>Plate reverb</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-pointerCastDistortion</span></p></td>
+<td>Pointer cast distortion</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-rateShifter</span></p></td>
+<td>Rate shifter</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-retroFlange</span></p></td>
+<td>Retro Flanger</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-revdelay</span></p></td>
+<td>Reverse Delay (5s max)</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-ringmod-1i1o1l</span></p></td>
+<td>Ringmod with LFO</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-ringmod-2i1o</span></p></td>
+<td>Ringmod with two inputs</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-satanMaximiser</span></p></td>
+<td>Barry's Satan Maximiser</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-sc1</span></p></td>
+<td>SC1</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-sc2</span></p></td>
+<td>SC2</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-sc3</span></p></td>
+<td>SC3</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-sc4</span></p></td>
+<td>SC4</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-sc4m</span></p></td>
+<td>SC4 mono</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-se4</span></p></td>
+<td>SE4</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-shaper</span></p></td>
+<td>Wave shaper</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-sifter</span></p></td>
+<td>Signal sifter</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-sinCos</span></p></td>
+<td>Sine + cosine oscillator</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-sine-faaa</span></p></td>
+<td>Sine Oscillator (Freq:audio, Amp:audio)</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-sine-faac</span></p></td>
+<td>Sine Oscillator (Freq:audio, Amp:control)</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-sine-fcaa</span></p></td>
+<td>Sine Oscillator (Freq:control, Amp:audio)</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-sine-fcac</span></p></td>
+<td>Sine Oscillator (Freq:control, Amp:control)</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-singlePara</span></p></td>
+<td>Single band parametric</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-sinusWavewrapper</span></p></td>
+<td>Sinus wavewrapper</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-smoothDecimate</span></p></td>
+<td>Smooth Decimator</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-split</span></p></td>
+<td>Mono to Stereo splitter</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-stepMuxer</span></p></td>
+<td>Step Demuxer</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-surroundEncoder</span></p></td>
+<td>Surround matrix encoder</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-svf</span></p></td>
+<td>State Variable Filter</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-tap-autopan</span></p></td>
+<td>TAP AutoPanner</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-tap-chorusflanger</span></p></td>
+<td>TAP Chorus/Flanger</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-tap-deesser</span></p></td>
+<td>TAP DeEsser</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-tap-doubler</span></p></td>
+<td>TAP Fractal Doubler</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-tap-dynamics-m</span></p></td>
+<td>TAP Dynamics (M)</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-tap-dynamics-st</span></p></td>
+<td>TAP Dynamics (St)</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-tap-equalizer</span></p></td>
+<td>TAP Equalizer</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-tap-equalizer-bw</span></p></td>
+<td>TAP Equalizer/BW</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-tap-limiter</span></p></td>
+<td>TAP Scaling Limiter</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-tap-pinknoise</span></p></td>
+<td>TAP Pink/Fractal Noise</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-tap-pitch</span></p></td>
+<td>TAP Pitch Shifter</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-tap-reflector</span></p></td>
+<td>TAP Reflector</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-tap-reverb</span></p></td>
+<td>TAP Reverberator</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-tap-rotspeak</span></p></td>
+<td>TAP Rotary Speaker</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-tap-sigmoid</span></p></td>
+<td>TAP Sigmoid Booster</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-tap-stereo-echo</span></p></td>
+<td>TAP Stereo Echo</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-tap-tremolo</span></p></td>
+<td>TAP Tremolo</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-tap-tubewarmth</span></p></td>
+<td>TAP TubeWarmth</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-tap-vibrato</span></p></td>
+<td>TAP Vibrato</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-tapeDelay</span></p></td>
+<td>Tape Delay Simulation</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-transient</span></p></td>
+<td>Transient mangler</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-triplePara</span></p></td>
+<td>Triple band parametric with shelves</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-valve</span></p></td>
+<td>Valve saturation</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-valveRect</span></p></td>
+<td>Valve rectifier</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-vynil</span></p></td>
+<td>VyNil (Vinyl Effect)</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-waveTerrain</span></p></td>
+<td>Wave Terrain Oscillator</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-xfade</span></p></td>
+<td>Crossfade</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-xfade4</span></p></td>
+<td>Crossfade (4 outs)</td>
+</tr>
+<tr>
+<td><p><span class="term">ladspa-zm1</span></p></td>
+<td>z-1</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

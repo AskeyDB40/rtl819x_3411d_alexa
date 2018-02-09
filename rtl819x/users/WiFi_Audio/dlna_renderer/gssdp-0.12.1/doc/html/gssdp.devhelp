@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE book PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "">
+<book xmlns="http://www.devhelp.net/book" title="GSSDP Reference Manual" link="index.html" author="" name="gssdp">
+  <chapters>
+    <sub name="Annotation Glossary" link="annotation-glossary.html"/>
+    <sub name="GSSDP" link="ch01.html">
+      <sub name="GSSDPClient" link="GSSDPClient.html"/>
+      <sub name="GSSDPResourceBrowser" link="GSSDPResourceBrowser.html"/>
+      <sub name="GSSDPResourceGroup" link="GSSDPResourceGroup.html"/>
+      <sub name="Error codes" link="gssdp-Error-codes.html"/>
+    </sub>
+  </chapters>
+  <functions>
+    <function name="struct GSSDPClient" link="GSSDPClient.html#GSSDPClient-struct"/>
+    <function name="gssdp_client_new ()" link="GSSDPClient.html#gssdp-client-new"/>
+    <function name="gssdp_client_get_main_context ()" link="GSSDPClient.html#gssdp-client-get-main-context"/>
+    <function name="gssdp_client_set_server_id ()" link="GSSDPClient.html#gssdp-client-set-server-id"/>
+    <function name="gssdp_client_get_server_id ()" link="GSSDPClient.html#gssdp-client-get-server-id"/>
+    <function name="gssdp_client_get_interface ()" link="GSSDPClient.html#gssdp-client-get-interface"/>
+    <function name="gssdp_client_get_host_ip ()" link="GSSDPClient.html#gssdp-client-get-host-ip"/>
+    <function name="gssdp_client_set_network ()" link="GSSDPClient.html#gssdp-client-set-network"/>
+    <function name="gssdp_client_get_network ()" link="GSSDPClient.html#gssdp-client-get-network"/>
+    <function name="gssdp_client_get_active ()" link="GSSDPClient.html#gssdp-client-get-active"/>
+    <function name="The &quot;active&quot; property" link="GSSDPClient.html#GSSDPClient--active"/>
+    <function name="The &quot;host-ip&quot; property" link="GSSDPClient.html#GSSDPClient--host-ip"/>
+    <function name="The &quot;interface&quot; property" link="GSSDPClient.html#GSSDPClient--interface"/>
+    <function name="The &quot;main-context&quot; property" link="GSSDPClient.html#GSSDPClient--main-context"/>
+    <function name="The &quot;network&quot; property" link="GSSDPClient.html#GSSDPClient--network"/>
+    <function name="The &quot;server-id&quot; property" link="GSSDPClient.html#GSSDPClient--server-id"/>
+    <function name="The &quot;message-received&quot; signal" link="GSSDPClient.html#GSSDPClient-message-received"/>
+    <function name="struct GSSDPResourceBrowser" link="GSSDPResourceBrowser.html#GSSDPResourceBrowser-struct"/>
+    <function name="GSSDP_ALL_RESOURCES" link="GSSDPResourceBrowser.html#GSSDP-ALL-RESOURCES:CAPS"/>
+    <function name="gssdp_resource_browser_new ()" link="GSSDPResourceBrowser.html#gssdp-resource-browser-new"/>
+    <function name="gssdp_resource_browser_get_client ()" link="GSSDPResourceBrowser.html#gssdp-resource-browser-get-client"/>
+    <function name="gssdp_resource_browser_set_target ()" link="GSSDPResourceBrowser.html#gssdp-resource-browser-set-target"/>
+    <function name="gssdp_resource_browser_get_target ()" link="GSSDPResourceBrowser.html#gssdp-resource-browser-get-target"/>
+    <function name="gssdp_resource_browser_set_mx ()" link="GSSDPResourceBrowser.html#gssdp-resource-browser-set-mx"/>
+    <function name="gssdp_resource_browser_get_mx ()" link="GSSDPResourceBrowser.html#gssdp-resource-browser-get-mx"/>
+    <function name="gssdp_resource_browser_set_active ()" link="GSSDPResourceBrowser.html#gssdp-resource-browser-set-active"/>
+    <function name="gssdp_resource_browser_get_active ()" link="GSSDPResourceBrowser.html#gssdp-resource-browser-get-active"/>
+    <function name="The &quot;active&quot; property" link="GSSDPResourceBrowser.html#GSSDPResourceBrowser--active"/>
+    <function name="The &quot;client&quot; property" link="GSSDPResourceBrowser.html#GSSDPResourceBrowser--client"/>
+    <function name="The &quot;mx&quot; property" link="GSSDPResourceBrowser.html#GSSDPResourceBrowser--mx"/>
+    <function name="The &quot;target&quot; property" link="GSSDPResourceBrowser.html#GSSDPResourceBrowser--target"/>
+    <function name="The &quot;resource-available&quot; signal" link="GSSDPResourceBrowser.html#GSSDPResourceBrowser-resource-available"/>
+    <function name="The &quot;resource-unavailable&quot; signal" link="GSSDPResourceBrowser.html#GSSDPResourceBrowser-resource-unavailable"/>
+    <function name="struct GSSDPResourceGroup" link="GSSDPResourceGroup.html#GSSDPResourceGroup-struct"/>
+    <function name="gssdp_resource_group_new ()" link="GSSDPResourceGroup.html#gssdp-resource-group-new"/>
+    <function name="gssdp_resource_group_get_client ()" link="GSSDPResourceGroup.html#gssdp-resource-group-get-client"/>
+    <function name="gssdp_resource_group_set_max_age ()" link="GSSDPResourceGroup.html#gssdp-resource-group-set-max-age"/>
+    <function name="gssdp_resource_group_get_max_age ()" link="GSSDPResourceGroup.html#gssdp-resource-group-get-max-age"/>
+    <function name="gssdp_resource_group_set_available ()" link="GSSDPResourceGroup.html#gssdp-resource-group-set-available"/>
+    <function name="gssdp_resource_group_get_available ()" link="GSSDPResourceGroup.html#gssdp-resource-group-get-available"/>
+    <function name="gssdp_resource_group_set_message_delay ()" link="GSSDPResourceGroup.html#gssdp-resource-group-set-message-delay"/>
+    <function name="gssdp_resource_group_get_message_delay ()" link="GSSDPResourceGroup.html#gssdp-resource-group-get-message-delay"/>
+    <function name="gssdp_resource_group_add_resource ()" link="GSSDPResourceGroup.html#gssdp-resource-group-add-resource"/>
+    <function name="gssdp_resource_group_add_resource_simple ()" link="GSSDPResourceGroup.html#gssdp-resource-group-add-resource-simple"/>
+    <function name="gssdp_resource_group_remove_resource ()" link="GSSDPResourceGroup.html#gssdp-resource-group-remove-resource"/>
+    <function name="The &quot;available&quot; property" link="GSSDPResourceGroup.html#GSSDPResourceGroup--available"/>
+    <function name="The &quot;client&quot; property" link="GSSDPResourceGroup.html#GSSDPResourceGroup--client"/>
+    <function name="The &quot;max-age&quot; property" link="GSSDPResourceGroup.html#GSSDPResourceGroup--max-age"/>
+    <function name="The &quot;message-delay&quot; property" link="GSSDPResourceGroup.html#GSSDPResourceGroup--message-delay"/>
+    <function name="GSSDP_ERROR" link="gssdp-Error-codes.html#GSSDP-ERROR:CAPS"/>
+    <function name="enum GSSDPError" link="gssdp-Error-codes.html#GSSDPError"/>
+  </functions>
+</book>

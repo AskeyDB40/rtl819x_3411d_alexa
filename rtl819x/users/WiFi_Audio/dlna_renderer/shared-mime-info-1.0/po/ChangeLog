@@ -1,0 +1,717 @@
+2009-10-05  Bastien Nocera  <hadess@hadess.net>
+
+	* LINGUAS:
+	* ca.po:
+	* cs.po:
+	* da.po:
+	* de.po:
+	* es.po:
+	* eu.po:
+	* fi.po:
+	* fr.po:
+	* hu.po:
+	* id.po:
+	* it.po:
+	* ko.po:
+	* lt.po:
+	* nl.po:
+	* pl.po:
+	* pt_BR.po:
+	* ru.po:
+	* sv.po:
+	* vi.po:
+	* zh_CN.po: Updated translations from the TP,
+	add lv
+
+2009-02-21  Bastien Nocera  <hadess@hadess.net>
+
+	* be@latin.po:
+	* bg.po:
+	* ca.po:
+	* cs.po:
+	* es.po:
+	* fi.po:
+	* fr.po:
+	* ga.po:
+	* hu.po:
+	* id.po:
+	* it.po:
+	* ja.po:
+	* ko.po:
+	* lt.po:
+	* nl.po:
+	* nn.po:
+	* pl.po:
+	* pt_BR.po:
+	* ru.po:
+	* sq.po:
+	* sv.po:
+	* vi.po: Updated translations from the TP
+
+2008-07-23  Bastien Nocera  <hadess@hadess.net>
+
+	* be@latin.po:
+	* ca.po:
+	* fr.po:
+	* ga.po:
+	* nl.po: Updated translations from the TP
+
+2008-07-22  Bastien Nocera  <hadess@hadess.net>
+
+	* LINGUAS: Add Indonesian
+	* be@latin.po:
+	* ca.po:
+	* cs.po:
+	* fi.po:
+	* fr.po:
+	* ga.po:
+	* id.po:
+	* it.po:
+	* ko.po:
+	* lt.po:
+	* nl.po:
+	* pt_BR.po:
+	* sv.po:
+	* vi.po: Updated translations from the TP
+
+2008-06-09  Bastien Nocera  <hadess@hadess.net>
+
+	* es.po:
+	* nb.po: Updated translations from the TP
+
+2008-06-02  Bastien Nocera  <hadess@hadess.net>
+
+	* ga.po:
+	* ru.po: Updated translations from the TP
+
+2008-05-27  Bastien Nocera  <hadess@hadess.net>
+
+	* fr.po:
+	* lt.po:
+	* sv.po: Updated translations from the TP
+
+2008-05-13  Bastien Nocera  <hadess@hadess.net>
+
+	* LINGUAS: Add "ga" and "be@latin" to the list
+	* ko.po:
+	* vi.po: Updated translations from the TP
+
+2008-05-12  Bastien Nocera  <hadess@hadess.net>
+
+	* az.po:
+	* be@latin.po:
+	* bg.po:
+	* ca.po:
+	* cs.po:
+	* cy.po:
+	* en_GB.po:
+	* eo.po:
+	* fi.po:
+	* hu.po:
+	* it.po:
+	* ja.po:
+	* nl.po:
+	* pl.po:
+	* pt.po:
+	* pt_BR.po:
+	* ru.po:
+	* sq.po:
+	* sr.po:
+	* vi.po:
+	* zh_CN.po:
+	* zh_TW.po: Updated translations from the TP
+
+2008-05-02  Bastien Nocera  <hadess@hadess.net>
+
+	* cs.po:
+	* fr.po:
+	* ko.po: Updated translation from the TP
+
+2008-04-28  Bastien Nocera  <hadess@hadess.net>
+
+	* it.po:
+	* nl.po: Updated translation from the TP
+
+2008-04-24  Bastien Nocera  <hadess@hadess.net>
+
+	* ca.po:
+	* sv.po:
+	* vi.po: Updated translation from the TP
+
+2008-04-09  Bastien Nocera  <hadess@hadess.net>
+
+	* cs.po:
+	* fi.po:
+	* lt.po:
+	* nl.po: Updated translation from the TP
+
+2008-03-05  Bastien Nocera  <hadess@hadess.net>
+
+	* eu.po: Updated translation from the TP
+
+2008-02-25  Bastien Nocera  <hadess@hadess.net>
+
+	* be@latin.po: Updated translation from the TP
+
+2008-02-21  Bastien Nocera  <hadess@hadess.net>
+
+	* be@latin.po: Add Belarusian Latin
+	translation from Ihar Hrachyshka <ihar.hrachyshka@gmail.com>
+
+2008-02-21  Bastien Nocera  <hadess@hadess.net>
+
+	* ga.po: Add Irish translation from
+	Seán de Búrca <leftmostcat@gmail.com>
+
+2008-02-12  Bastien Nocera  <hadess@hadess.net>
+
+	* ca.po: updated translation from the TP
+
+2008-01-17  Bastien Nocera  <hadess@hadess.net>
+
+	* hu.po: updated translation from the TP
+
+2008-01-14  Bastien Nocera  <hadess@hadess.net>
+
+	* es.po: updated translation from the TP
+
+2007-12-19  Bastien Nocera  <hadess@hadess.net>
+
+	* vi.po: updated translation from the TP
+
+2007-12-18  Bastien Nocera  <hadess@hadess.net>
+
+	* fr.po: updated translation from the TP
+
+2007-12-17  Bastien Nocera  <hadess@hadess.net>
+
+	* ca.po:
+	* nb.po:
+	* sv.po:
+	* it.po:
+	* cs.po:
+	* bg.po: updated translation from the TP
+
+2007-12-13  Bastien Nocera  <hadess@hadess.net>
+
+	* fi.po:
+	* nl.po: updated translation from the TP
+
+2007-12-12  Bastien Nocera  <hadess@hadess.net>
+
+	* LINGUAS: upd
+	* en_GB.po: added
+
+2007-12-12  Bastien Nocera  <hadess@hadess.net>
+
+	* ca.po:
+	* cs.po:
+	* hu.po:
+	* ko.po: updated translation from the TP
+
+2007-10-01  Bastien Nocera  <hadess@hadess.net>
+
+	* fi.po:
+	* nl.po: updated translation from the TP
+
+2007-09-26  Bastien Nocera  <hadess@hadess.net>
+
+	* es.po: updated translation from the TP
+
+2007-09-26  Bastien Nocera  <hadess@hadess.net>
+
+	* fr.po:
+	* uk.po:
+	* vi.po: updated translations from the TP
+
+2007-09-25  Bastien Nocera  <hadess@hadess.net>
+
+	* it.po:
+	* nn.po:
+	* sv.po: updated translations from the TP
+
+2007-09-18  Bastien Nocera  <hadess@hadess.net>
+
+	* es.po: Updated Spanish translation from Jorge González González
+	<aloriel@gmail.com>
+
+2007-08-17  Christian Neumair  <cneumair@gnome.org>
+
+	* ja.po: Updated Japanese translation by Satoru Satoh <ss@gnome.gr.jp>
+
+2007-08-17  Christian Neumair  <cneumair@gnome.org>
+
+	* uk.po: Updated Ukrainian translation by Maxim V. Dziumanenko
+	<dziumanenko@gmail.com>.
+
+2007-08-03  Christian Neumair  <cneumair@gnome.org>
+
+	* pt_BR.po: Updated Brazilian Portuguese translation by Raphael Higino
+	<phhigino@gmail.com>.
+
+2007-08-03  Christian Neumair  <cneumair@gnome.org>
+
+	* hu.po: Updated Hungarian translation by Gabor Kelemen <kelemeng@gnome.hu>.
+	* nl.po: Updated Dutch translation by Taco Witte <info@tacowitte.nl>.
+	* sv.po: Updated Swedish translation by Daniel Nylander
+	<po@danielnylander.se>.
+	* vi.po: Updated Vietnamese translation by Clytie Siddall
+	<clytie@riverland.net.au>.
+
+2007-07-02  Christian Neumair  <chris@gnome-de.org>
+
+	* pl.po: Updated Polish translation by Artur Flinta
+	<aflinta@at.kernel.pl>.
+
+2007-07-01  Christian Neumair  <chris@gnome-de.org>
+
+	* ko.po: Updated Korean translation by Young-Ho, Cha.
+
+2007-06-28  Bastien Nocera   <hadess@hadess.net>
+
+	* it.po: Updated Italian translation by
+	Luca Ferretti <elle.uca@infinito.it>
+
+2007-06-27  Christian Neumair  <cneumair@gnome.org>
+
+	* fi.po: Updated Finnish translation by
+	Tommi Vainikainen <Tommi.Vainikainen@iki.fi>.
+
+2007-06-27  Christian Neumair  <cneumair@gnome.org>
+
+	* de.po: Updated German translation.
+
+2007-06-26  Christian Neumair  <cneumair@gnome.org>
+
+	* de.po: Updated German translation.
+
+2007-06-21  Bastien Nocera  <hadess@hadess.net>
+
+	* es.po: updated Spanish translation from Quique
+	<quique@sindominio.net>
+
+2007-05-17  Bastien Nocera  <hadess@hadess.net>
+
+	* fr.po: Another update of the French translation by
+	Claude Paroz <claude@2xlibre.net>
+
+2007-05-17  Bastien Nocera  <hadess@hadess.net>
+
+	* fr.po: Updated French translation by Claude Paroz
+	<claude@2xlibre.net>
+
+2007-04-29  Bastien Nocera  <hadess@hadess.net>
+
+	* LINGUAS:
+	* ca.po: Add Catalan translation from Josep Ma. Ferrer
+	<txemaq@gmail.com>
+
+2007-04-23  Bastien Nocera  <hadess@hadess.net>
+
+	* nb.po: Updated Norwegian bokmål translation from Kjartan Maraas
+	<kmaraas@gnome.org>
+
+2007-03-12  Christian Neumair  <chris@gnome-de.org>
+
+	* ko.po: Updated Korean translation by Young-Ho, Cha (#10266).
+	* nl.po: Updated Dutch translation by Wouter Bolsterlee (#10264).
+
+2007-02-07  Bastien Nocera  <hadess@hadess.net>
+
+	* bg.po: Updated Bulgarian translation from Alexander Shopov <ash@contact.bg>
+	(Closes: #9899)
+
+2006-11-21  Bastien Nocera  <hadess@hadess.net>
+
+	* nb.po: Updated Norwegian bokmål translation from Kjartan Maraas
+	<kmaraas@gnome.org>
+
+2006-09-18  Bastien Nocera  <hadess@hadess.net>
+
+	* es.po: Update Spanish translation by Francisco Javier F. Serrador
+	<serrador@tecknolabs.com>
+
+2006-09-10  Bastien Nocera  <hadess@hadess.net>
+
+	* cs.po:
+	* de.po:
+	* es.po:
+	* fi.po:
+	* hu.po:
+	* it.po:
+	* ja.po:
+	* pl.po:
+	* pt_BR.po:
+	* zh_CN.po:
+	* zh_TW.po: patch from Stanislav Brabec <sbrabec@suse.cz>
+	to update the translations with the WMA audio translation,
+	from SUSE's packages (Closes: #2178)
+
+2006-09-03  Bastien Nocera  <hadess@hadess.net>
+
+	* bg.po: Updated Bulgarian translation by Alexander Shopov
+	<ash@contact.bg>.
+
+2006-08-25  Bastien Nocera  <hadess@hadess.net>
+
+	* az.po:
+	* bg.po:
+	* cs.po:
+	* cy.po:
+	* da.po:
+	* de.po:
+	* el.po:
+	* eo.po:
+	* es.po:
+	* eu.po:
+	* fi.po:
+	* fr.po:
+	* hu.po:
+	* it.po:
+	* ja.po:
+	* ko.po:
+	* lt.po:
+	* ms.po:
+	* nb.po:
+	* nl.po:
+	* nn.po:
+	* pl.po:
+	* pt.po:
+	* pt_BR.po:
+	* ru.po:
+	* rw.po:
+	* sq.po:
+	* sr.po:
+	* sv.po:
+	* uk.po:
+	* vi.po:
+	* zh_CN.po:
+	* zh_TW.po: update s/Javascript/JavaScript/
+
+2006-08-12  Bastien Nocera  <hadess@hadess.net>
+
+	* nl.po: Updated Dutch translation by
+	Wouter Bolsterlee <uws@xs4all.nl>
+
+2006-07-09  Kjartan Maraas  <kmaraas@gnome.org>
+
+	* nb.po: Updated Norwegian bokmål translation.
+
+2006-07-09  Bastien Nocera  <hadess@hadess.net>
+
+	* .cvsignore: upd
+
+2006-07-09  Bastien Nocera  <hadess@hadess.net>
+
+	* ms.po: Remove translation for the tab-separated document, as it
+	was referencing "commas" instead of "tabs" (Closes: #5456)
+
+2006-05-15  Miloslav Trmac  <mitr@volny.cz>
+
+	* sv.po: Updated Swedish translation by Daniel Nylander
+	<po@danielnylander.se>.
+
+	* eu.po: Updated Basque translation by Mikel Olasagasti
+	<hey_neken@mundurat.net>.
+
+2006-05-05  Miloslav Trmac  <mitr@volny.cz>
+
+	* hu.po: Updated Hungarian translation by Gabor Kelemen
+	<kelemeng@gnome.hu>.
+
+	* sv.po: Updated Swedish translation by Daniel Nylander
+	<po@danielnylander.se>
+
+2006-04-18  Bastien Nocera  <hadess@hadess.net>
+
+	* no.po: Remove Norwegian translation
+
+2006-04-12  Miloslav Trmac  <mitr@volny.cz>
+
+	* bg.po: Updated Bulgarian translation by Alexander Shopov
+	<ash@contact.bg>.
+
+2006-04-11  Miloslav Trmac  <mitr@volny.cz>
+
+	* ko.po: Updated Korean translation by Young-Ho Cha
+	<ganadist@gmail.com>.
+
+	* es.po: Updated Spanish translation by Quique <quique@sindominio.net>.
+
+2006-04-10  Miloslav Trmac  <mitr@volny.cz>
+
+	* it.po: Updated Italian translation by Luca Ferretti
+	<elle.uca@infinito.it>.
+
+2006-04-07  Miloslav Trmac  <mitr@volny.cz>
+
+	* uk.po: Updated Ukrainian translation by Maxim V. Dziumanenko
+	<mvd@mylinux.com.ua>.
+
+	* vi.po: Updated Vietnamese translation by Clytie Siddall
+	<clytie@riverland.net.au>.
+
+2006-04-05  Bastien Nocera  <hadess@hadess.net>
+
+	* cy.po: Updated Welsh translation by Thomas Thurman
+	<thomas@thurman.org.uk>
+
+2006-03-18  Miloslav Trmac  <mitr@volny.cz>
+
+	* cs.po: Updated Czech translation.
+
+	* lt.po: Add Lithuanian translation by
+	Žygimantas Beručka <uid0@akl.lt>.
+
+2006-03-15  Bastien Nocera  <hadess@hadess.net>
+
+	* da.po:
+	* fr.po: Fix a couple of typos, patch from Stanislav Brabec
+	<sbrabec@suse.cz> (Closes: #2051)
+
+2006-03-14  Kjartan Maraas  <kmaraas@gnome.org>
+
+	* nn.po: Updated Norwegian nynorsk translation.
+	* nb.po: Updated Norwegian bokmål translation.
+	* no.po: Same.
+
+2006-02-24  Kjartan Maraas  <kmaraas@gnome.org>
+
+	* nb.po: Updated Norwegian bokmål translation.
+	* no.po: Same.
+
+2006-02-20  Miloslav Trmac  <mitr@volny.cz>
+
+	* vi.po: Add Vietnamese translation by
+	Clytie Siddall <clytie@riverland.net.au>.
+
+2006-02-01  Bastien Nocera  <hadess@hadess.net>
+
+	* fr.po: also change the header to say it's UTF-8
+
+2006-02-01  Bastien Nocera  <hadess@hadess.net>
+
+	* fr.po: Convert the French translation's encoding to UTF-8
+
+2006-01-24  Kjartan Maraas  <kmaraas@gnome.org>
+
+	* nb.po: Updated Norwegian bokmål translation.
+	* no.po: Same.
+
+2005-11-04  Christian Neumair  <chris@gnome-de.org>
+
+	* bg.po: Updated Bulgarian translation by Alexander Shopov
+	<ash@contact.bg>.
+
+2005-10-30  Kjartan Maraas  <kmaraas@gnome.org>
+
+	* nb.po: Updated Norwegian bokmål translation.
+	* no.po: Same
+
+2005-10-29  Christian Neumair  <chris@gnome-de.org>
+
+	* de.po: Updated German translation.
+
+2005-09-09  Miloslav Trmac  <mitr@volny.cz>
+
+	* eu.po: Updated Basque translation by
+	Mikel Olasagasti <hey_neken@mundurat.net>.
+
+2005-08-11  Kjartan Maraas  <kmaraas@gnome.org>
+
+	* nb.po: Updated Norwegian bokmål translation.
+	* no.po: Same
+
+2005-08-02  Miloslav Trmac  <mitr@volny.cz>
+
+	* it.po: Updated Italian translation by
+	Luca Ferretti <elle.uca@infinito.it>.
+
+2005-06-20  Miloslav Trmac  <mitr@volny.cz>
+
+	* fr.po: Updated French translation by
+	Michel Robitaille <robitail@IRO.UMontreal.CA>.
+
+2005-06-07  Miloslav Trmac  <mitr@volny.cz>
+
+	* ru.po: Updated Russian translation by
+	Peter Astakhov <astakhovp@mail.ru>.
+
+	* sr.po: Updated Serbian translation by
+	Danilo Segan <dsegan@gmx.net>.
+
+	* bg.po: Updated Bulgarian translation by
+	Alexander Shopov <ash@contact.bg>.
+
+2005-04-17  Miloslav Trmac  <mitr@volny.cz>
+
+	* ko.po: Updated Korean translation by
+	Young-Ho Cha <ganadist@gmail.com>.
+
+2005-04-15  Miloslav Trmac  <mitr@volny.cz>
+
+	* zh_TW.po: Added traditional Chinese translation by
+	Abel Cheung <abelcheung@gmail.com>.
+
+2005-04-14  Miloslav Trmac  <mitr@volny.cz>
+
+	* cs.po: Updated Czech translation.
+
+	* nl.po: Updated Dutch translation by Taco Witte <tcwitte@cs.uu.nl>.
+
+	* fi.po: Updated Finnish translation by
+	Tommi Vainikainen <Tommi.Vainikainen@iki.fi>.
+
+	* rw.po: Added Kinyarwanda translation by
+	Steven Michael Murphy <murf@e-tools.com>.
+
+2005-03-20  Miloslav Trmac  <mitr@volny.cz>
+
+	* ru.po: Added Russian translation by
+	Peter Astakhov <astakhovp@mail.ru>.
+
+2005-01-21  Miloslav Trmac  <mitr@volny.cz>
+
+	* nb.po: Added Norwegian (bokmål) translation by
+	Kjartan Maraas <kmaraas@gnome.org>.
+
+2005-01-16  Christophe Fergeau  <teuf@gnome.org>
+
+	* it.po: added Italian translation by Alessio Frusciante
+	<algol@firenze.linux.it>
+
+2004-11-04  Bastien Nocera  <hadess@hadess.net>
+
+	* fr.po: convert the french translation to UTF-8
+
+2004-10-07  Miloslav Trmac  <mitr@volny.cz>
+
+	* eo.po: Added Esperanto translation by
+	Артём Попов <tfwo@mail.ru>.
+
+2004-10-05  Miloslav Trmac  <mitr@volny.cz>
+
+	* fr.po: Updated French translation by
+	Michel Robitaille <robitail@IRO.UMontreal.CA>.
+
+2004-09-10  Christophe Fergeau  <teuf@gnome.org>
+
+	* ms.po: Added Malay translation from Sebol <sebol@my-penguin.org>
+
+2004-09-10  Christophe Fergeau  <teuf@gnome.org>
+
+	* ja.po: Added Japanese translation from Satoru Satoh <ss@gnome.gr.jp>
+
+2004-09-10  Christophe Fergeau  <teuf@gnome.org>
+
+	* pl.po: Added Polish translation from Artur Flinta 
+	  <aflinta@at.kernel.pl>
+
+2004-09-09  Ole Laursen  <olau@hardworking.dk>
+
+	* el.po: Greek translation updated by Nikos Charonitakis
+	<frolix68@yahoo.gr>.
+
+2004-09-08  Miloslav Trmac  <mitr@volny.cz>
+
+	* es.po: Added Spanish translation by
+	Quique <quique@sindominio.net>.
+
+2004-09-06  Miloslav Trmac  <mitr@volny.cz>
+
+	* ko.po: Updated Korean translation by
+	Young-Ho Cha <ganadist@gmail.com>.
+
+	* pt.po: Added Portuguese translation by
+	Pedro Miguel Marques Morais <morais@kde.org>.
+
+	* ua.po: Added Ukrainian translation by
+	Maxim V. Dziumanenko <mvd@mylinux.com.ua>.
+
+2004-09-05  Miloslav Trmac  <mitr@volny.cz>
+
+	* nn.po: Updated Norwegian Nynorsk translation
+	by Åsmund Skjæveland <aasmunds@fys.uio.no>.
+
+2004-09-04  Miloslav Trmac  <mitr@volny.cz>
+
+	* hu.po: Updated Hungarian translation by
+	Andras Timar <timar@gnome.hu>.
+
+	* pt_BR.po: Added Brazilian Portuguese translation by
+	Leslie Harlley Watter <leslie@watter.org>.
+
+	* eu.po: Added Basque translation by
+	Mikel Olasagasti <hey_neken@euskal.org>.
+
+2004-09-03  Miloslav Trmac  <mitr@volny.cz>
+
+	* bg.po: Added Bulgarian translation by
+	Alexander Shopov <ash@contact.bg>.
+
+2004-09-02  Miloslav Trmac  <mitr@volny.cz>
+
+	* sr.po: Updated Serbian translation by
+	Danilo Segan <dsegan@gmx.net>.
+
+2004-09-01  Miloslav Trmac  <mitr@volny.cz>
+
+	* nl.po: Updated Dutch translation by
+	Elros Cyriatan <cyriatan@fastmail.fm>.
+
+	* sq.po: Added Albanian translation by
+	Laurent Dhima <laurenti@alblinux.net>.
+
+	* fi.po: Updated Finnish translation by
+	Tommi Vainikainen <Tommi.Vainikainen@iki.fi>.
+
+2004-08-31  Miloslav Trmac  <mitr@volny.cz>
+
+	* sv.po: Updated Swedish translation by
+	Christian Rose <menthos@menthos.com>.
+
+	* zh_CN.po: Added simplified Chinese translation by
+	Funda Wang <fundawang@linux.net.cn>.
+
+	* nl.po: Updated Dutch translation by
+	Elros Cyriatan <cyriatan@fastmail.fm>.
+
+	* cs.po: Updated Czech translation.
+
+=== shared-mime-info 0.15 ===
+
+2004-08-28  Christophe Fergeau   <teuf@gnome.org>
+
+	* el.po: commit the actual file sent by Nikos to the mailing list,
+	  the one which was in CVS didn't pass msgfmt -cv and broke the build.
+
+2004-08-27  Ole Laursen  <olau@hardworking.dk>
+
+	* el.po: Added Greek translation on behalf of Nikos Charonitakis.
+
+2004-08-17  Christophe Fergeau  <teuf@gnome.org>
+
+	* fi.po: Update Finnish translation (patch from Ville Skyttä
+	  <ville.skytta@iki.fi>) 
+	* ko.po: Added Korean translation (file from Cha Young-Ho
+  	  <ganadist@chollian.net>)
+
+2004-07-25  Christian Neumair  <chris@gnome-de.org>
+
+	* de.po: Updated German translation.
+
+2004-07-05  Ole Laursen  <olau@hardworking.dk>
+
+	* .cvsignore, shared-mime-info.pot: Removed shared-mime-info.pot
+	from CVS, since it is a generated file.
+
+	* da.po: Added Danish translation.
+
+2004-04-11  Christian Neumair  <chris@gnome-de.org>
+
+	* shared-mime-info.pot: Regenerated.
+	* de.po: Updated German translation.
+
+2004-04-06  Christian Neumair  <chris@gnome-de.org>
+
+	* de.po: Added German translation.

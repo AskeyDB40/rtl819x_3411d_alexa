@@ -1,0 +1,460 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>RygelWritableContainer</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="librygel-server Reference Manual">
+<link rel="up" href="ch01.html" title="librygel-server API Reference">
+<link rel="prev" href="librygel-server-rygel-content-directory.html" title="rygel-content-directory">
+<link rel="next" href="RygelAudioItem.html" title="RygelAudioItem">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="librygel-server-rygel-content-directory.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">librygel-server Reference Manual</th>
+<td><a accesskey="n" href="RygelAudioItem.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#RygelWritableContainer.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#RygelWritableContainer.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#RygelWritableContainer.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#RygelWritableContainer.prerequisites" class="shortcut">Prerequisites</a>
+                   | 
+                  <a href="#RygelWritableContainer.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="RygelWritableContainer"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="RygelWritableContainer.top_of_page"></a>RygelWritableContainer</span></h2>
+<p>RygelWritableContainer — This interface should be implemented by 'writable' containers - ones that allow adding, removal and editing of items directly under them. Currently, only addition and removal is supported.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="RygelWritableContainer.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="RygelWritableContainer.html#rygel-writable-container-can-create" title="rygel_writable_container_can_create ()">rygel_writable_container_can_create</a> (<em class="parameter"><code><a class="link" href="RygelWritableContainer.html" title="RygelWritableContainer"><span class="type">RygelWritableContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *upnp_class</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="RygelWritableContainer.html#rygel-writable-container-add-item" title="rygel_writable_container_add_item ()">rygel_writable_container_add_item</a>   (<em class="parameter"><code><a class="link" href="RygelWritableContainer.html" title="RygelWritableContainer"><span class="type">RygelWritableContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="RygelMediaItem.html" title="RygelMediaItem"><span class="type">RygelMediaItem</span></a> *item</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="RygelWritableContainer.html#rygel-writable-container-add-item-finish" title="rygel_writable_container_add_item_finish ()">rygel_writable_container_add_item_finish</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelWritableContainer.html" title="RygelWritableContainer"><span class="type">RygelWritableContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="RygelWritableContainer.html#rygel-writable-container-remove-item" title="rygel_writable_container_remove_item ()">rygel_writable_container_remove_item</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelWritableContainer.html" title="RygelWritableContainer"><span class="type">RygelWritableContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *id</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="RygelWritableContainer.html#rygel-writable-container-remove-item-finish" title="rygel_writable_container_remove_item_finish ()">rygel_writable_container_remove_item_finish</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelWritableContainer.html" title="RygelWritableContainer"><span class="type">RygelWritableContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">GeeArrayList</span> *      <a class="link" href="RygelWritableContainer.html#rygel-writable-container-get-create-classes" title="rygel_writable_container_get_create_classes ()">rygel_writable_container_get_create_classes</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelWritableContainer.html" title="RygelWritableContainer"><span class="type">RygelWritableContainer</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="RygelWritableContainer.html#rygel-writable-container-set-create-classes" title="rygel_writable_container_set_create_classes ()">rygel_writable_container_set_create_classes</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelWritableContainer.html" title="RygelWritableContainer"><span class="type">RygelWritableContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><span class="type">GeeArrayList</span> *value</code></em>);
+                    <a class="link" href="RygelWritableContainer.html#RygelWritableContainer-struct" title="RygelWritableContainer">RygelWritableContainer</a>;
+struct              <a class="link" href="RygelWritableContainer.html#RygelWritableContainerIface" title="struct RygelWritableContainerIface">RygelWritableContainerIface</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelWritableContainer.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GInterface
+   +----RygelWritableContainer
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelWritableContainer.prerequisites"></a><h2>Prerequisites</h2>
+<p>
+RygelWritableContainer requires
+ <a class="link" href="RygelMediaContainer.html" title="RygelMediaContainer">RygelMediaContainer</a>.</p>
+</div>
+<div class="refsect1">
+<a name="RygelWritableContainer.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="RygelWritableContainer.html#RygelWritableContainer--create-classes" title='The "create-classes" property'>create-classes</a>"           <span class="type">GeeArrayList</span>*         : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelWritableContainer.description"></a><h2>Description</h2>
+<p>
+</p>
+<p>In addition to implementing this interface, a writable container must also:</p>
+<div class="orderedlist"><ol class="orderedlist" type="1">
+<li class="listitem"><p>Provide one URI that points to a writable folder on a GIO-supported filesystem.</p></li>
+<li class="listitem"><p>Monitor not only its own URI but also that of its child items, though the latter is implied in the former if you use GIO for monitoring.</p></li>
+</ol></div>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="RygelWritableContainer.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="rygel-writable-container-can-create"></a><h3>rygel_writable_container_can_create ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            rygel_writable_container_can_create (<em class="parameter"><code><a class="link" href="RygelWritableContainer.html" title="RygelWritableContainer"><span class="type">RygelWritableContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *upnp_class</code></em>);</pre>
+<p>
+Check if this container can contain an item with the given upnp class, meaning that <a class="link" href="RygelWritableContainer.html#rygel-writable-container-add-item" title="rygel_writable_container_add_item ()"><code class="function">rygel_writable_container_add_item()</code></a> should succeed.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelWritableContainer.html" title="RygelWritableContainer"><span class="type">RygelWritableContainer</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>upnp_class</code></em> :</span></p></td>
+<td>The upnp class of an item to check. <span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>true if it can, false, if not.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-writable-container-add-item"></a><h3>rygel_writable_container_add_item ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                rygel_writable_container_add_item   (<em class="parameter"><code><a class="link" href="RygelWritableContainer.html" title="RygelWritableContainer"><span class="type">RygelWritableContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="RygelMediaItem.html" title="RygelMediaItem"><span class="type">RygelMediaItem</span></a> *item</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);</pre>
+<p>
+Add a new item directly under this container.
+</p>
+<p>
+</p>
+<p>The caller should not first create the file(s) pointed to by the item's URI(s). That is handled by the container class.</p>
+<p>This method corresponds to the UPnP ContentDirectory's CreateObject action. Currently there is no way to add child containers.</p>
+<p>
+</p>
+<p>
+<span class="emphasis"><em>See also</em></span>: <a class="link" href="RygelWritableContainer.html#rygel-writable-container-add-item-finish" title="rygel_writable_container_add_item_finish ()"><code class="function"><a class="link" href="RygelWritableContainer.html#rygel-writable-container-add-item-finish" title="rygel_writable_container_add_item_finish ()"><code class="function">rygel_writable_container_add_item_finish()</code></a></code></a>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelWritableContainer.html" title="RygelWritableContainer"><span class="type">RygelWritableContainer</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>item</code></em> :</span></p></td>
+<td>The item to add to this container. <span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
+<td>optional cancellable for this operation. <span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_callback_</code></em> :</span></p></td>
+<td>callback to call when the request is satisfied. <span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_user_data_</code></em> :</span></p></td>
+<td>the data to pass to <em class="parameter"><code>_callback_</code></em> function. <span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-writable-container-add-item-finish"></a><h3>rygel_writable_container_add_item_finish ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                rygel_writable_container_add_item_finish
+                                                        (<em class="parameter"><code><a class="link" href="RygelWritableContainer.html" title="RygelWritableContainer"><span class="type">RygelWritableContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Add a new item directly under this container.
+</p>
+<p>
+</p>
+<p>The caller should not first create the file(s) pointed to by the item's URI(s). That is handled by the container class.</p>
+<p>This method corresponds to the UPnP ContentDirectory's CreateObject action. Currently there is no way to add child containers.</p>
+<p>
+</p>
+<p>
+<span class="emphasis"><em>See also</em></span>: <a class="link" href="RygelWritableContainer.html#rygel-writable-container-add-item" title="rygel_writable_container_add_item ()"><code class="function"><a class="link" href="RygelWritableContainer.html#rygel-writable-container-add-item" title="rygel_writable_container_add_item ()"><code class="function">rygel_writable_container_add_item()</code></a></code></a>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelWritableContainer.html" title="RygelWritableContainer"><span class="type">RygelWritableContainer</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_res_</code></em> :</span></p></td>
+<td>a <a href="../gio/GAsyncResult.html"><span class="type">GAsyncResult</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>nothing.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-writable-container-remove-item"></a><h3>rygel_writable_container_remove_item ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                rygel_writable_container_remove_item
+                                                        (<em class="parameter"><code><a class="link" href="RygelWritableContainer.html" title="RygelWritableContainer"><span class="type">RygelWritableContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *id</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);</pre>
+<p>
+Remove an item directly under this container that has the ID <em class="parameter"><code>id</code></em>.
+</p>
+<p>
+</p>
+<p>The caller should not first remove the file(s) pointed to by the item's URI(s). That is handled by the container class.</p>
+<p>This method corresponds to the UPnP ContentDirectory's DestroyObject action.</p>
+<p>
+</p>
+<p>
+<span class="emphasis"><em>See also</em></span>: <a class="link" href="RygelWritableContainer.html#rygel-writable-container-remove-item-finish" title="rygel_writable_container_remove_item_finish ()"><code class="function"><a class="link" href="RygelWritableContainer.html#rygel-writable-container-remove-item-finish" title="rygel_writable_container_remove_item_finish ()"><code class="function">rygel_writable_container_remove_item_finish()</code></a></code></a>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelWritableContainer.html" title="RygelWritableContainer"><span class="type">RygelWritableContainer</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id</code></em> :</span></p></td>
+<td>The ID of the item to remove from this container. <span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
+<td>optional cancellable for this operation. <span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_callback_</code></em> :</span></p></td>
+<td>callback to call when the request is satisfied. <span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_user_data_</code></em> :</span></p></td>
+<td>the data to pass to <em class="parameter"><code>_callback_</code></em> function. <span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-writable-container-remove-item-finish"></a><h3>rygel_writable_container_remove_item_finish ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                rygel_writable_container_remove_item_finish
+                                                        (<em class="parameter"><code><a class="link" href="RygelWritableContainer.html" title="RygelWritableContainer"><span class="type">RygelWritableContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Remove an item directly under this container that has the ID <em class="parameter"><code>id</code></em>.
+</p>
+<p>
+</p>
+<p>The caller should not first remove the file(s) pointed to by the item's URI(s). That is handled by the container class.</p>
+<p>This method corresponds to the UPnP ContentDirectory's DestroyObject action.</p>
+<p>
+</p>
+<p>
+<span class="emphasis"><em>See also</em></span>: <a class="link" href="RygelWritableContainer.html#rygel-writable-container-remove-item" title="rygel_writable_container_remove_item ()"><code class="function"><a class="link" href="RygelWritableContainer.html#rygel-writable-container-remove-item" title="rygel_writable_container_remove_item ()"><code class="function">rygel_writable_container_remove_item()</code></a></code></a>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelWritableContainer.html" title="RygelWritableContainer"><span class="type">RygelWritableContainer</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_res_</code></em> :</span></p></td>
+<td>a <a href="../gio/GAsyncResult.html"><span class="type">GAsyncResult</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>nothing.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-writable-container-get-create-classes"></a><h3>rygel_writable_container_get_create_classes ()</h3>
+<pre class="programlisting"><span class="returnvalue">GeeArrayList</span> *      rygel_writable_container_get_create_classes
+                                                        (<em class="parameter"><code><a class="link" href="RygelWritableContainer.html" title="RygelWritableContainer"><span class="type">RygelWritableContainer</span></a> *self</code></em>);</pre>
+<p>
+Get and return the current value of the <a class="link" href="RygelWritableContainer.html#RygelWritableContainer--create-classes" title='The "create-classes" property'><span class="type">"create-classes"</span></a> property.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelWritableContainer.html" title="RygelWritableContainer"><span class="type">RygelWritableContainer</span></a> instance to query</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the value of the <a class="link" href="RygelWritableContainer.html#RygelWritableContainer--create-classes" title='The "create-classes" property'><span class="type">"create-classes"</span></a> property</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-writable-container-set-create-classes"></a><h3>rygel_writable_container_set_create_classes ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                rygel_writable_container_set_create_classes
+                                                        (<em class="parameter"><code><a class="link" href="RygelWritableContainer.html" title="RygelWritableContainer"><span class="type">RygelWritableContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><span class="type">GeeArrayList</span> *value</code></em>);</pre>
+<p>
+Set the value of the <a class="link" href="RygelWritableContainer.html#RygelWritableContainer--create-classes" title='The "create-classes" property'><span class="type">"create-classes"</span></a> property to <em class="parameter"><code>value</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelWritableContainer.html" title="RygelWritableContainer"><span class="type">RygelWritableContainer</span></a> instance to modify</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>the new value of the <a class="link" href="RygelWritableContainer.html#RygelWritableContainer--create-classes" title='The "create-classes" property'><span class="type">"create-classes"</span></a> property</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelWritableContainer-struct"></a><h3>RygelWritableContainer</h3>
+<pre class="programlisting">typedef struct _RygelWritableContainer RygelWritableContainer;</pre>
+<p>
+This interface should be implemented by 'writable' containers - ones that allow adding, removal and editing of items directly under them. Currently, only addition and removal is supported.
+</p>
+<p>
+</p>
+<p>In addition to implementing this interface, a writable container must also:</p>
+<div class="orderedlist"><ol class="orderedlist" type="1">
+<li class="listitem"><p>Provide one URI that points to a writable folder on a GIO-supported filesystem.</p></li>
+<li class="listitem"><p>Monitor not only its own URI but also that of its child items, though the latter is implied in the former if you use GIO for monitoring.</p></li>
+</ol></div>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelWritableContainerIface"></a><h3>struct RygelWritableContainerIface</h3>
+<pre class="programlisting">struct RygelWritableContainerIface {
+	GTypeInterface parent_iface;
+	void (*add_item) (RygelWritableContainer* self, RygelMediaItem* item, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	void (*add_item_finish) (RygelWritableContainer* self, GAsyncResult* _res_, GError** error);
+	void (*remove_item) (RygelWritableContainer* self, const gchar* id, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	void (*remove_item_finish) (RygelWritableContainer* self, GAsyncResult* _res_, GError** error);
+	GeeArrayList* (*get_create_classes) (RygelWritableContainer* self);
+	void (*set_create_classes) (RygelWritableContainer* self, GeeArrayList* value);
+};
+</pre>
+<p>
+Interface for creating <a class="link" href="RygelWritableContainer.html" title="RygelWritableContainer"><span class="type">RygelWritableContainer</span></a> implementations.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><a href="../gobject/gobject-Type-Information.html#GTypeInterface"><span class="type">GTypeInterface</span></a> <em class="structfield"><code><a name="RygelWritableContainerIface.parent-iface"></a>parent_iface</code></em>;</span></p></td>
+<td>the parent interface structure</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelWritableContainerIface.add-item"></a>add_item</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="RygelWritableContainer.html#rygel-writable-container-add-item" title="rygel_writable_container_add_item ()"><code class="function"><a class="link" href="RygelWritableContainer.html#rygel-writable-container-add-item" title="rygel_writable_container_add_item ()"><code class="function">rygel_writable_container_add_item()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelWritableContainerIface.add-item-finish"></a>add_item_finish</code></em> ()</span></p></td>
+<td>asynchronous finish function for <em class="structfield"><code>add_item</code></em>, called by <a class="link" href="RygelWritableContainer.html#rygel-writable-container-add-item" title="rygel_writable_container_add_item ()"><code class="function"><a class="link" href="RygelWritableContainer.html#rygel-writable-container-add-item" title="rygel_writable_container_add_item ()"><code class="function">rygel_writable_container_add_item()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelWritableContainerIface.remove-item"></a>remove_item</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="RygelWritableContainer.html#rygel-writable-container-remove-item" title="rygel_writable_container_remove_item ()"><code class="function"><a class="link" href="RygelWritableContainer.html#rygel-writable-container-remove-item" title="rygel_writable_container_remove_item ()"><code class="function">rygel_writable_container_remove_item()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelWritableContainerIface.remove-item-finish"></a>remove_item_finish</code></em> ()</span></p></td>
+<td>asynchronous finish function for <em class="structfield"><code>remove_item</code></em>, called by <a class="link" href="RygelWritableContainer.html#rygel-writable-container-remove-item" title="rygel_writable_container_remove_item ()"><code class="function"><a class="link" href="RygelWritableContainer.html#rygel-writable-container-remove-item" title="rygel_writable_container_remove_item ()"><code class="function">rygel_writable_container_remove_item()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelWritableContainerIface.get-create-classes"></a>get_create_classes</code></em> ()</span></p></td>
+<td>getter method for the abstract property <a class="link" href="RygelWritableContainer.html#RygelWritableContainer--create-classes" title='The "create-classes" property'><span class="type">"create-classes"</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelWritableContainerIface.set-create-classes"></a>set_create_classes</code></em> ()</span></p></td>
+<td>setter method for the abstract property <a class="link" href="RygelWritableContainer.html#RygelWritableContainer--create-classes" title='The "create-classes" property'><span class="type">"create-classes"</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="RygelWritableContainer.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="RygelWritableContainer--create-classes"></a><h3>The <code class="literal">"create-classes"</code> property</h3>
+<pre class="programlisting">  "create-classes"           <span class="type">GeeArrayList</span>*         : Read / Write</pre>
+<p>
+The list of upnp classes that can be added to this container.
+</p>
+<p>
+</p>
+<p>See <a class="link" href="RygelWritableContainer.html#rygel-writable-container-add-item" title="rygel_writable_container_add_item ()"><code class="function">rygel_writable_container_add_item()</code></a>.</p>
+<p>This corresponds to the UPnP ContentDirectory's createClass properties.</p>
+<p>
+</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

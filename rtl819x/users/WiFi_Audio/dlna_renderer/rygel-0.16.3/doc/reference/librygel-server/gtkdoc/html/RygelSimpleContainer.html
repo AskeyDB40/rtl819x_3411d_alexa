@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>RygelSimpleContainer</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="librygel-server Reference Manual">
+<link rel="up" href="ch01.html" title="librygel-server API Reference">
+<link rel="prev" href="RygelMediaArtStore.html" title="RygelMediaArtStore">
+<link rel="next" href="RygelSubtitle.html" title="RygelSubtitle">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="RygelMediaArtStore.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">librygel-server Reference Manual</th>
+<td><a accesskey="n" href="RygelSubtitle.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#RygelSimpleContainer.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#RygelSimpleContainer.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#RygelSimpleContainer.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#RygelSimpleContainer.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#RygelSimpleContainer.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="RygelSimpleContainer"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="RygelSimpleContainer.top_of_page"></a>RygelSimpleContainer</span></h2>
+<p>RygelSimpleContainer — A simple implementation of RygelMediaContainer that keeps all RygelMediaObjects in memory. You should add children via <a class="link" href="RygelSimpleContainer.html#rygel-simple-container-add-child-item" title="rygel_simple_container_add_child_item ()"><code class="function">rygel_simple_container_add_child_item()</code></a>.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="RygelSimpleContainer.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">#define             <a class="link" href="RygelSimpleContainer.html#RYGEL-TYPE-SIMPLE-CONTAINER:CAPS" title="RYGEL_TYPE_SIMPLE_CONTAINER">RYGEL_TYPE_SIMPLE_CONTAINER</a>
+<span class="returnvalue">void</span>                <a class="link" href="RygelSimpleContainer.html#rygel-simple-container-add-child-item" title="rygel_simple_container_add_child_item ()">rygel_simple_container_add_child_item</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelSimpleContainer.html" title="RygelSimpleContainer"><span class="type">RygelSimpleContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="RygelMediaItem.html" title="RygelMediaItem"><span class="type">RygelMediaItem</span></a> *child</code></em>);
+<a class="link" href="RygelMediaObjects.html" title="RygelMediaObjects"><span class="returnvalue">RygelMediaObjects</span></a> * <a class="link" href="RygelSimpleContainer.html#rygel-simple-container-get-all-children" title="rygel_simple_container_get_all_children ()">rygel_simple_container_get_all_children</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelSimpleContainer.html" title="RygelSimpleContainer"><span class="type">RygelSimpleContainer</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="RygelSimpleContainer.html#rygel-simple-container-add-child-container" title="rygel_simple_container_add_child_container ()">rygel_simple_container_add_child_container</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelSimpleContainer.html" title="RygelSimpleContainer"><span class="type">RygelSimpleContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="RygelMediaContainer.html" title="RygelMediaContainer"><span class="type">RygelMediaContainer</span></a> *child</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="RygelSimpleContainer.html#rygel-simple-container-remove-child" title="rygel_simple_container_remove_child ()">rygel_simple_container_remove_child</a> (<em class="parameter"><code><a class="link" href="RygelSimpleContainer.html" title="RygelSimpleContainer"><span class="type">RygelSimpleContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="type">RygelMediaObject</span></a> *child</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="RygelSimpleContainer.html#rygel-simple-container-clear" title="rygel_simple_container_clear ()">rygel_simple_container_clear</a>        (<em class="parameter"><code><a class="link" href="RygelSimpleContainer.html" title="RygelSimpleContainer"><span class="type">RygelSimpleContainer</span></a> *self</code></em>);
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="RygelSimpleContainer.html#rygel-simple-container-is-child-id-unique" title="rygel_simple_container_is_child_id_unique ()">rygel_simple_container_is_child_id_unique</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelSimpleContainer.html" title="RygelSimpleContainer"><span class="type">RygelSimpleContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *child_id</code></em>);
+<a class="link" href="RygelSimpleContainer.html" title="RygelSimpleContainer"><span class="returnvalue">RygelSimpleContainer</span></a> * <a class="link" href="RygelSimpleContainer.html#rygel-simple-container-new" title="rygel_simple_container_new ()">rygel_simple_container_new</a>       (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *id</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="RygelMediaContainer.html" title="RygelMediaContainer"><span class="type">RygelMediaContainer</span></a> *parent</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *title</code></em>);
+<a class="link" href="RygelSimpleContainer.html" title="RygelSimpleContainer"><span class="returnvalue">RygelSimpleContainer</span></a> * <a class="link" href="RygelSimpleContainer.html#rygel-simple-container-new-root" title="rygel_simple_container_new_root ()">rygel_simple_container_new_root</a>  (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *title</code></em>);
+struct              <a class="link" href="RygelSimpleContainer.html#RygelSimpleContainer-struct" title="struct RygelSimpleContainer">RygelSimpleContainer</a>;
+struct              <a class="link" href="RygelSimpleContainer.html#RygelSimpleContainerClass" title="struct RygelSimpleContainerClass">RygelSimpleContainerClass</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelSimpleContainer.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="../gobject/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="RygelMediaObject.html" title="RygelMediaObject">RygelMediaObject</a>
+         +----<a class="link" href="RygelMediaContainer.html" title="RygelMediaContainer">RygelMediaContainer</a>
+               +----RygelSimpleContainer
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelSimpleContainer.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+RygelSimpleContainer implements
+ <a class="link" href="RygelSearchableContainer.html" title="RygelSearchableContainer">RygelSearchableContainer</a>.</p>
+</div>
+<div class="refsect1">
+<a name="RygelSimpleContainer.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="RygelSimpleContainer.html#RygelSimpleContainer--search-classes" title='The "search-classes" property'>search-classes</a>"           <span class="type">GeeArrayList</span>*         : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelSimpleContainer.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="RygelSimpleContainer.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="RYGEL-TYPE-SIMPLE-CONTAINER:CAPS"></a><h3>RYGEL_TYPE_SIMPLE_CONTAINER</h3>
+<pre class="programlisting">#define RYGEL_TYPE_SIMPLE_CONTAINER (rygel_simple_container_get_type ())
+</pre>
+<p>
+The type for <a class="link" href="RygelSimpleContainer.html" title="RygelSimpleContainer"><span class="type">RygelSimpleContainer</span></a>.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-simple-container-add-child-item"></a><h3>rygel_simple_container_add_child_item ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                rygel_simple_container_add_child_item
+                                                        (<em class="parameter"><code><a class="link" href="RygelSimpleContainer.html" title="RygelSimpleContainer"><span class="type">RygelSimpleContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="RygelMediaItem.html" title="RygelMediaItem"><span class="type">RygelMediaItem</span></a> *child</code></em>);</pre>
+<p>
+Adds an item to the container.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelSimpleContainer.html" title="RygelSimpleContainer"><span class="type">RygelSimpleContainer</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>child</code></em> :</span></p></td>
+<td>The child item to add to the container. <span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-simple-container-get-all-children"></a><h3>rygel_simple_container_get_all_children ()</h3>
+<pre class="programlisting"><a class="link" href="RygelMediaObjects.html" title="RygelMediaObjects"><span class="returnvalue">RygelMediaObjects</span></a> * rygel_simple_container_get_all_children
+                                                        (<em class="parameter"><code><a class="link" href="RygelSimpleContainer.html" title="RygelSimpleContainer"><span class="type">RygelSimpleContainer</span></a> *self</code></em>);</pre>
+<p>
+Get all children, including the empty children.
+</p>
+<p>
+</p>
+<p>This is useful when all children are empty, so <code class="function">get_children()</code> would return no objects, but when you need to add items to the empty items.</p>
+<p>This is useful only when implementing derived classes.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelSimpleContainer.html" title="RygelSimpleContainer"><span class="type">RygelSimpleContainer</span></a> instance</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-simple-container-add-child-container"></a><h3>rygel_simple_container_add_child_container ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                rygel_simple_container_add_child_container
+                                                        (<em class="parameter"><code><a class="link" href="RygelSimpleContainer.html" title="RygelSimpleContainer"><span class="type">RygelSimpleContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="RygelMediaContainer.html" title="RygelMediaContainer"><span class="type">RygelMediaContainer</span></a> *child</code></em>);</pre>
+<p>
+Adds a child container to this container.
+</p>
+<p>
+</p>
+<p>The child container will only be added to the hierarchy if, or when, it contains some children.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelSimpleContainer.html" title="RygelSimpleContainer"><span class="type">RygelSimpleContainer</span></a> instance</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-simple-container-remove-child"></a><h3>rygel_simple_container_remove_child ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                rygel_simple_container_remove_child (<em class="parameter"><code><a class="link" href="RygelSimpleContainer.html" title="RygelSimpleContainer"><span class="type">RygelSimpleContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="type">RygelMediaObject</span></a> *child</code></em>);</pre>
+<p>
+Removes the item from the container.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelSimpleContainer.html" title="RygelSimpleContainer"><span class="type">RygelSimpleContainer</span></a> instance</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-simple-container-clear"></a><h3>rygel_simple_container_clear ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                rygel_simple_container_clear        (<em class="parameter"><code><a class="link" href="RygelSimpleContainer.html" title="RygelSimpleContainer"><span class="type">RygelSimpleContainer</span></a> *self</code></em>);</pre>
+<p>
+Removes all child items and child containers from the container.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelSimpleContainer.html" title="RygelSimpleContainer"><span class="type">RygelSimpleContainer</span></a> instance</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-simple-container-is-child-id-unique"></a><h3>rygel_simple_container_is_child_id_unique ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            rygel_simple_container_is_child_id_unique
+                                                        (<em class="parameter"><code><a class="link" href="RygelSimpleContainer.html" title="RygelSimpleContainer"><span class="type">RygelSimpleContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *child_id</code></em>);</pre>
+<p>
+Check that the ID is unique within this container.
+</p>
+<p>
+</p>
+<p>This is useful only when implementing derived classes.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelSimpleContainer.html" title="RygelSimpleContainer"><span class="type">RygelSimpleContainer</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>child_id</code></em> :</span></p></td>
+<td>The ID to check for uniqueness. <span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>true if the child ID is unique within this container.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-simple-container-new"></a><h3>rygel_simple_container_new ()</h3>
+<pre class="programlisting"><a class="link" href="RygelSimpleContainer.html" title="RygelSimpleContainer"><span class="returnvalue">RygelSimpleContainer</span></a> * rygel_simple_container_new       (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *id</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="RygelMediaContainer.html" title="RygelMediaContainer"><span class="type">RygelMediaContainer</span></a> *parent</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *title</code></em>);</pre>
+<p>
+Creates a child RygelSimpleContainer.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id</code></em> :</span></p></td>
+<td>The ID of the item. This should be unique in the server. <span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>parent</code></em> :</span></p></td>
+<td>The parent of the container. <span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>title</code></em> :</span></p></td>
+<td>The title of the container. <span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-simple-container-new-root"></a><h3>rygel_simple_container_new_root ()</h3>
+<pre class="programlisting"><a class="link" href="RygelSimpleContainer.html" title="RygelSimpleContainer"><span class="returnvalue">RygelSimpleContainer</span></a> * rygel_simple_container_new_root  (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *title</code></em>);</pre>
+<p>
+Creates a RygelSimpleContainer as a root container.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>title</code></em> :</span></p></td>
+<td>The title of the container. <span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelSimpleContainer-struct"></a><h3>struct RygelSimpleContainer</h3>
+<pre class="programlisting">struct RygelSimpleContainer;</pre>
+<p>
+A simple implementation of RygelMediaContainer that keeps all RygelMediaObjects in memory. You should add children via <a class="link" href="RygelSimpleContainer.html#rygel-simple-container-add-child-item" title="rygel_simple_container_add_child_item ()"><code class="function">rygel_simple_container_add_child_item()</code></a>.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelSimpleContainerClass"></a><h3>struct RygelSimpleContainerClass</h3>
+<pre class="programlisting">struct RygelSimpleContainerClass {
+	RygelMediaContainerClass parent_class;
+};
+</pre>
+<p>
+The class structure for <a class="link" href="RygelSimpleContainer.html#RYGEL-TYPE-SIMPLE-CONTAINER:CAPS" title="RYGEL_TYPE_SIMPLE_CONTAINER"><code class="literal">RYGEL_TYPE_SIMPLE_CONTAINER</code></a>. All the fields in this structure are private and should never be accessed directly.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><a class="link" href="RygelMediaContainer.html#RygelMediaContainerClass" title="struct RygelMediaContainerClass"><span class="type">RygelMediaContainerClass</span></a> <em class="structfield"><code><a name="RygelSimpleContainerClass.parent-class"></a>parent_class</code></em>;</span></p></td>
+<td>the parent class structure</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="RygelSimpleContainer.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="RygelSimpleContainer--search-classes"></a><h3>The <code class="literal">"search-classes"</code> property</h3>
+<pre class="programlisting">  "search-classes"           <span class="type">GeeArrayList</span>*         : Read / Write</pre>
+<p>search-classes.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

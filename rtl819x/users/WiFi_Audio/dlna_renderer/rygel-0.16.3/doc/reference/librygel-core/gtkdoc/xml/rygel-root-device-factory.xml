@@ -1,0 +1,220 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelRootDeviceFactory">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelRootDeviceFactory.top_of_page">RygelRootDeviceFactory</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-CORE Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelRootDeviceFactory</refname>
+<refpurpose>Factory for RootDevice objects. Give it a plugin and it will create a Root device for that.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelRootDeviceFactory.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="RYGEL-TYPE-ROOT-DEVICE-FACTORY:CAPS">RYGEL_TYPE_ROOT_DEVICE_FACTORY</link>
+<link linkend="RygelRootDevice"><returnvalue>RygelRootDevice</returnvalue></link> *   <link linkend="rygel-root-device-factory-create">rygel_root_device_factory_create</link>    (<parameter><link linkend="RygelRootDeviceFactory"><type>RygelRootDeviceFactory</type></link> *self</parameter>,
+                                                         <parameter><link linkend="RygelPlugin"><type>RygelPlugin</type></link> *plugin</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="RygelRootDeviceFactory"><returnvalue>RygelRootDeviceFactory</returnvalue></link> * <link linkend="rygel-root-device-factory-new">rygel_root_device_factory_new</link>  (<parameter><link linkend="GUPnPContext"><type>GUPnPContext</type></link> *context</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+struct              <link linkend="RygelRootDeviceFactory-struct">RygelRootDeviceFactory</link>;
+<link linkend="gpointer"><returnvalue>gpointer</returnvalue></link>            <link linkend="rygel-root-device-factory-ref">rygel_root_device_factory_ref</link>       (<parameter><link linkend="gpointer"><type>gpointer</type></link> instance</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-root-device-factory-unref">rygel_root_device_factory_unref</link>     (<parameter><link linkend="gpointer"><type>gpointer</type></link> instance</parameter>);
+<link linkend="GParamSpec"><returnvalue>GParamSpec</returnvalue></link> *        <link linkend="rygel-param-spec-root-device-factory">rygel_param_spec_root_device_factory</link>
+                                                        (<parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *nick</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *blurb</parameter>,
+                                                         <parameter><link linkend="GType"><type>GType</type></link> object_type</parameter>,
+                                                         <parameter><link linkend="GParamFlags"><type>GParamFlags</type></link> flags</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-value-set-root-device-factory">rygel_value_set_root_device_factory</link> (<parameter><link linkend="GValue"><type>GValue</type></link> *value</parameter>,
+                                                         <parameter><link linkend="gpointer"><type>gpointer</type></link> v_object</parameter>);
+<link linkend="gpointer"><returnvalue>gpointer</returnvalue></link>            <link linkend="rygel-value-get-root-device-factory">rygel_value_get_root_device_factory</link> (<parameter>const <link linkend="GValue"><type>GValue</type></link> *value</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-value-take-root-device-factory">rygel_value_take_root_device_factory</link>
+                                                        (<parameter><link linkend="GValue"><type>GValue</type></link> *value</parameter>,
+                                                         <parameter><link linkend="gpointer"><type>gpointer</type></link> v_object</parameter>);
+struct              <link linkend="RygelRootDeviceFactoryClass">RygelRootDeviceFactoryClass</link>;
+enum                <link linkend="RootDeviceFactoryError">RootDeviceFactoryError</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelRootDeviceFactory.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  RygelRootDeviceFactory
+</synopsis>
+</refsect1>
+
+<refsect1 id="RygelRootDeviceFactory.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="RygelRootDeviceFactory.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="RYGEL-TYPE-ROOT-DEVICE-FACTORY:CAPS" role="macro">
+<title>RYGEL_TYPE_ROOT_DEVICE_FACTORY</title>
+<indexterm zone="RYGEL-TYPE-ROOT-DEVICE-FACTORY:CAPS"><primary>RYGEL_TYPE_ROOT_DEVICE_FACTORY</primary></indexterm>
+<programlisting>#define RYGEL_TYPE_ROOT_DEVICE_FACTORY (rygel_root_device_factory_get_type ())
+</programlisting>
+<para>
+The type for <link linkend="RygelRootDeviceFactory"><type>RygelRootDeviceFactory</type></link>.
+</para></refsect2>
+<refsect2 id="rygel-root-device-factory-create" role="function">
+<title>rygel_root_device_factory_create ()</title>
+<indexterm zone="rygel-root-device-factory-create"><primary>rygel_root_device_factory_create</primary></indexterm>
+<programlisting><link linkend="RygelRootDevice"><returnvalue>RygelRootDevice</returnvalue></link> *   rygel_root_device_factory_create    (<parameter><link linkend="RygelRootDeviceFactory"><type>RygelRootDeviceFactory</type></link> *self</parameter>,
+                                                         <parameter><link linkend="RygelPlugin"><type>RygelPlugin</type></link> *plugin</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelRootDeviceFactory"><type>RygelRootDeviceFactory</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-root-device-factory-new" role="function">
+<title>rygel_root_device_factory_new ()</title>
+<indexterm zone="rygel-root-device-factory-new"><primary>rygel_root_device_factory_new</primary></indexterm>
+<programlisting><link linkend="RygelRootDeviceFactory"><returnvalue>RygelRootDeviceFactory</returnvalue></link> * rygel_root_device_factory_new  (<parameter><link linkend="GUPnPContext"><type>GUPnPContext</type></link> *context</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="RygelRootDeviceFactory-struct" role="struct">
+<title>struct RygelRootDeviceFactory</title>
+<indexterm zone="RygelRootDeviceFactory-struct"><primary>RygelRootDeviceFactory</primary></indexterm>
+<programlisting>struct RygelRootDeviceFactory;</programlisting>
+<para>
+Factory for RootDevice objects. Give it a plugin and it will create a Root device for that.
+</para></refsect2>
+<refsect2 id="rygel-root-device-factory-ref" role="function">
+<title>rygel_root_device_factory_ref ()</title>
+<indexterm zone="rygel-root-device-factory-ref"><primary>rygel_root_device_factory_ref</primary></indexterm>
+<programlisting><link linkend="gpointer"><returnvalue>gpointer</returnvalue></link>            rygel_root_device_factory_ref       (<parameter><link linkend="gpointer"><type>gpointer</type></link> instance</parameter>);</programlisting>
+<para>
+Increases the reference count of <parameter>object</parameter>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>instance</parameter>&#160;:</term>
+<listitem><simpara>a <link linkend="RygelRootDeviceFactory"><type>RygelRootDeviceFactory</type></link>.</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>the same <parameter>object</parameter></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-root-device-factory-unref" role="function">
+<title>rygel_root_device_factory_unref ()</title>
+<indexterm zone="rygel-root-device-factory-unref"><primary>rygel_root_device_factory_unref</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_root_device_factory_unref     (<parameter><link linkend="gpointer"><type>gpointer</type></link> instance</parameter>);</programlisting>
+<para>
+Decreases the reference count of <parameter>object</parameter>. When its reference count drops to 0, the object is finalized (i.e. its memory is freed).
+</para><variablelist role="params">
+<varlistentry><term><parameter>instance</parameter>&#160;:</term>
+<listitem><simpara>a <link linkend="RygelRootDeviceFactory"><type>RygelRootDeviceFactory</type></link>.</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-param-spec-root-device-factory" role="function">
+<title>rygel_param_spec_root_device_factory ()</title>
+<indexterm zone="rygel-param-spec-root-device-factory"><primary>rygel_param_spec_root_device_factory</primary></indexterm>
+<programlisting><link linkend="GParamSpec"><returnvalue>GParamSpec</returnvalue></link> *        rygel_param_spec_root_device_factory
+                                                        (<parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *nick</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *blurb</parameter>,
+                                                         <parameter><link linkend="GType"><type>GType</type></link> object_type</parameter>,
+                                                         <parameter><link linkend="GParamFlags"><type>GParamFlags</type></link> flags</parameter>);</programlisting>
+<para>
+Creates a new <link linkend="GParamSpecBoxed"><type>GParamSpecBoxed</type></link> instance specifying a <link linkend="RYGEL-TYPE-ROOT-DEVICE-FACTORY:CAPS"><literal>RYGEL_TYPE_ROOT_DEVICE_FACTORY</literal></link> derived property.
+</para>
+<para>
+See <link linkend="g-param-spec-internal"><function><link linkend="g-param-spec-internal"><function>g_param_spec_internal()</function></link></function></link> for details on property names.
+</para><variablelist role="params">
+<varlistentry><term><parameter>name</parameter>&#160;:</term>
+<listitem><simpara>canonical name of the property specified</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>nick</parameter>&#160;:</term>
+<listitem><simpara>nick name for the property specified</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>blurb</parameter>&#160;:</term>
+<listitem><simpara>description of the property specified</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>object_type</parameter>&#160;:</term>
+<listitem><simpara><link linkend="RYGEL-TYPE-ROOT-DEVICE-FACTORY:CAPS"><literal>RYGEL_TYPE_ROOT_DEVICE_FACTORY</literal></link> derived type of this property</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>flags</parameter>&#160;:</term>
+<listitem><simpara>flags for the property specified</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-value-set-root-device-factory" role="function">
+<title>rygel_value_set_root_device_factory ()</title>
+<indexterm zone="rygel-value-set-root-device-factory"><primary>rygel_value_set_root_device_factory</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_value_set_root_device_factory (<parameter><link linkend="GValue"><type>GValue</type></link> *value</parameter>,
+                                                         <parameter><link linkend="gpointer"><type>gpointer</type></link> v_object</parameter>);</programlisting>
+<para>
+Set the contents of a <link linkend="RYGEL-TYPE-ROOT-DEVICE-FACTORY:CAPS"><literal>RYGEL_TYPE_ROOT_DEVICE_FACTORY</literal></link> derived <link linkend="GValue"><type>GValue</type></link> to <parameter>v_object</parameter>.
+</para>
+<para>
+<link linkend="rygel-value-set-root-device-factory"><function><link linkend="rygel-value-set-root-device-factory"><function>rygel_value_set_root_device_factory()</function></link></function></link> increases the reference count of <parameter>v_object</parameter> (the <link linkend="GValue"><type>GValue</type></link> holds a reference to <parameter>v_object</parameter>). If you do not wish to increase the reference count of the object (i.e. you wish to pass your current reference to the <link linkend="GValue"><type>GValue</type></link> because you no longer need it), use <link linkend="rygel-value-take-root-device-factory"><function><link linkend="rygel-value-take-root-device-factory"><function>rygel_value_take_root_device_factory()</function></link></function></link> instead.
+</para>
+<para>
+It is important that your <link linkend="GValue"><type>GValue</type></link> holds a reference to <parameter>v_object</parameter> (either its own, or one it has taken) to ensure that the object won't be destroyed while the <link linkend="GValue"><type>GValue</type></link> still exists).
+</para><variablelist role="params">
+<varlistentry><term><parameter>value</parameter>&#160;:</term>
+<listitem><simpara>a valid <link linkend="GValue"><type>GValue</type></link> of <link linkend="RYGEL-TYPE-ROOT-DEVICE-FACTORY:CAPS"><literal>RYGEL_TYPE_ROOT_DEVICE_FACTORY</literal></link> derived type</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>v_object</parameter>&#160;:</term>
+<listitem><simpara>object value to be set</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-value-get-root-device-factory" role="function">
+<title>rygel_value_get_root_device_factory ()</title>
+<indexterm zone="rygel-value-get-root-device-factory"><primary>rygel_value_get_root_device_factory</primary></indexterm>
+<programlisting><link linkend="gpointer"><returnvalue>gpointer</returnvalue></link>            rygel_value_get_root_device_factory (<parameter>const <link linkend="GValue"><type>GValue</type></link> *value</parameter>);</programlisting>
+<para>
+Get the contents of a <link linkend="RYGEL-TYPE-ROOT-DEVICE-FACTORY:CAPS"><literal>RYGEL_TYPE_ROOT_DEVICE_FACTORY</literal></link> derived <link linkend="GValue"><type>GValue</type></link>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>value</parameter>&#160;:</term>
+<listitem><simpara>a valid <link linkend="GValue"><type>GValue</type></link> of <link linkend="RYGEL-TYPE-ROOT-DEVICE-FACTORY:CAPS"><literal>RYGEL_TYPE_ROOT_DEVICE_FACTORY</literal></link> derived type</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>object contents of <parameter>value</parameter></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-value-take-root-device-factory" role="function">
+<title>rygel_value_take_root_device_factory ()</title>
+<indexterm zone="rygel-value-take-root-device-factory"><primary>rygel_value_take_root_device_factory</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_value_take_root_device_factory
+                                                        (<parameter><link linkend="GValue"><type>GValue</type></link> *value</parameter>,
+                                                         <parameter><link linkend="gpointer"><type>gpointer</type></link> v_object</parameter>);</programlisting>
+<para>
+Sets the contents of a <link linkend="RYGEL-TYPE-ROOT-DEVICE-FACTORY:CAPS"><literal>RYGEL_TYPE_ROOT_DEVICE_FACTORY</literal></link> derived <link linkend="GValue"><type>GValue</type></link> to <parameter>v_object</parameter> and takes over the ownership of the callers reference to <parameter>v_object</parameter>; the caller doesn't have to unref it any more (i.e. the reference count of the object is not increased).
+</para>
+<para>
+If you want the GValue to hold its own reference to <parameter>v_object</parameter>, use <link linkend="rygel-value-set-root-device-factory"><function><link linkend="rygel-value-set-root-device-factory"><function>rygel_value_set_root_device_factory()</function></link></function></link> instead.
+</para><variablelist role="params">
+<varlistentry><term><parameter>value</parameter>&#160;:</term>
+<listitem><simpara>a valid <link linkend="GValue"><type>GValue</type></link> of <link linkend="RYGEL-TYPE-ROOT-DEVICE-FACTORY:CAPS"><literal>RYGEL_TYPE_ROOT_DEVICE_FACTORY</literal></link> derived type</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>v_object</parameter>&#160;:</term>
+<listitem><simpara>object value to be set</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="RygelRootDeviceFactoryClass" role="struct">
+<title>struct RygelRootDeviceFactoryClass</title>
+<indexterm zone="RygelRootDeviceFactoryClass"><primary>RygelRootDeviceFactoryClass</primary></indexterm>
+<programlisting>struct RygelRootDeviceFactoryClass {
+	GTypeClass parent_class;
+	void (*finalize) (RygelRootDeviceFactory *self);
+};
+</programlisting>
+<para>
+The class structure for <link linkend="RYGEL-TYPE-ROOT-DEVICE-FACTORY:CAPS"><literal>RYGEL_TYPE_ROOT_DEVICE_FACTORY</literal></link>. All the fields in this structure are private and should never be accessed directly.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="GTypeClass"><type>GTypeClass</type></link>&#160;<structfield id="RygelRootDeviceFactoryClass.parent-class">parent_class</structfield>;</term>
+<listitem><simpara>the parent class structure</simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelRootDeviceFactoryClass.finalize">finalize</structfield>&#160;()</term>
+<listitem />
+</varlistentry>
+</variablelist></refsect2>
+<refsect2 id="RootDeviceFactoryError" role="enum">
+<title>enum RootDeviceFactoryError</title>
+<indexterm zone="RootDeviceFactoryError"><primary>RootDeviceFactoryError</primary></indexterm>
+<programlisting>typedef enum {
+	ROOT_DEVICE_FACTORY_ERROR_XML_PARSE
+} RootDeviceFactoryError;
+</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

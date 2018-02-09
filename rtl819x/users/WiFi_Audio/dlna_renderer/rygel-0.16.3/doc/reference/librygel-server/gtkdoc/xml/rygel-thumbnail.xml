@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelThumbnail">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelThumbnail.top_of_page">RygelThumbnail</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-SERVER Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelThumbnail</refname>
+<refpurpose>Represents a picture or video thumbnail.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelThumbnail.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="RYGEL-TYPE-THUMBNAIL:CAPS">RYGEL_TYPE_THUMBNAIL</link>
+<link linkend="RygelThumbnail"><returnvalue>RygelThumbnail</returnvalue></link> *    <link linkend="rygel-thumbnail-new">rygel_thumbnail_new</link>                 (<parameter>const <link linkend="gchar"><type>gchar</type></link> *mime_type</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *dlna_profile</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *file_extension</parameter>);
+struct              <link linkend="RygelThumbnail-struct">RygelThumbnail</link>;
+struct              <link linkend="RygelThumbnailClass">RygelThumbnailClass</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelThumbnail.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="RygelIconInfo">RygelIconInfo</link>
+   +----RygelThumbnail
+</synopsis>
+</refsect1>
+
+<refsect1 id="RygelThumbnail.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="RygelThumbnail.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="RYGEL-TYPE-THUMBNAIL:CAPS" role="macro">
+<title>RYGEL_TYPE_THUMBNAIL</title>
+<indexterm zone="RYGEL-TYPE-THUMBNAIL:CAPS"><primary>RYGEL_TYPE_THUMBNAIL</primary></indexterm>
+<programlisting>#define RYGEL_TYPE_THUMBNAIL (rygel_thumbnail_get_type ())
+</programlisting>
+<para>
+The type for <link linkend="RygelThumbnail"><type>RygelThumbnail</type></link>.
+</para></refsect2>
+<refsect2 id="rygel-thumbnail-new" role="function">
+<title>rygel_thumbnail_new ()</title>
+<indexterm zone="rygel-thumbnail-new"><primary>rygel_thumbnail_new</primary></indexterm>
+<programlisting><link linkend="RygelThumbnail"><returnvalue>RygelThumbnail</returnvalue></link> *    rygel_thumbnail_new                 (<parameter>const <link linkend="gchar"><type>gchar</type></link> *mime_type</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *dlna_profile</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *file_extension</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="RygelThumbnail-struct" role="struct">
+<title>struct RygelThumbnail</title>
+<indexterm zone="RygelThumbnail-struct"><primary>RygelThumbnail</primary></indexterm>
+<programlisting>struct RygelThumbnail;</programlisting>
+<para>
+Represents a picture or video thumbnail.
+</para></refsect2>
+<refsect2 id="RygelThumbnailClass" role="struct">
+<title>struct RygelThumbnailClass</title>
+<indexterm zone="RygelThumbnailClass"><primary>RygelThumbnailClass</primary></indexterm>
+<programlisting>struct RygelThumbnailClass {
+	RygelIconInfoClass parent_class;
+	GUPnPDIDLLiteResource* (*add_resource) (RygelThumbnail* self, GUPnPDIDLLiteItem* didl_item, const gchar* protocol);
+};
+</programlisting>
+<para>
+The class structure for <link linkend="RYGEL-TYPE-THUMBNAIL:CAPS"><literal>RYGEL_TYPE_THUMBNAIL</literal></link>. All the fields in this structure are private and should never be accessed directly.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="RygelIconInfoClass"><type>RygelIconInfoClass</type></link>&#160;<structfield id="RygelThumbnailClass.parent-class">parent_class</structfield>;</term>
+<listitem><simpara>the parent class structure</simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelThumbnailClass.add-resource">add_resource</structfield>&#160;()</term>
+<listitem />
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+</refentry>

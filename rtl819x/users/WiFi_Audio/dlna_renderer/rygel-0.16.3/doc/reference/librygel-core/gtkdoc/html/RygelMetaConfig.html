@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>RygelMetaConfig</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="librygel-core Reference Manual">
+<link rel="up" href="ch01.html" title="librygel-core API Reference">
+<link rel="prev" href="RygelRootDeviceFactory.html" title="RygelRootDeviceFactory">
+<link rel="next" href="RygelXMLUtils.html" title="RygelXMLUtils">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="RygelRootDeviceFactory.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">librygel-core Reference Manual</th>
+<td><a accesskey="n" href="RygelXMLUtils.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#RygelMetaConfig.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#RygelMetaConfig.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#RygelMetaConfig.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#RygelMetaConfig.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="RygelMetaConfig"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="RygelMetaConfig.top_of_page"></a>RygelMetaConfig</span></h2>
+<p>RygelMetaConfig — Manages all the configuration sources for Rygel.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="RygelMetaConfig.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">#define             <a class="link" href="RygelMetaConfig.html#RYGEL-TYPE-META-CONFIG:CAPS" title="RYGEL_TYPE_META_CONFIG">RYGEL_TYPE_META_CONFIG</a>
+<a class="link" href="RygelMetaConfig.html" title="RygelMetaConfig"><span class="returnvalue">RygelMetaConfig</span></a> *   <a class="link" href="RygelMetaConfig.html#rygel-meta-config-new" title="rygel_meta_config_new ()">rygel_meta_config_new</a>               (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a class="link" href="RygelMetaConfig.html" title="RygelMetaConfig"><span class="returnvalue">RygelMetaConfig</span></a> *   <a class="link" href="RygelMetaConfig.html#rygel-meta-config-get-default" title="rygel_meta_config_get_default ()">rygel_meta_config_get_default</a>       (<em class="parameter"><code><span class="type">void</span></code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="RygelMetaConfig.html#rygel-meta-config-register-configuration" title="rygel_meta_config_register_configuration ()">rygel_meta_config_register_configuration</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *config</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="RygelMetaConfig.html#rygel-meta-config-register-default-configurations" title="rygel_meta_config_register_default_configurations ()">rygel_meta_config_register_default_configurations</a>
+                                                        (<em class="parameter"><code><span class="type">void</span></code></em>);
+struct              <a class="link" href="RygelMetaConfig.html#RygelMetaConfig-struct" title="struct RygelMetaConfig">RygelMetaConfig</a>;
+struct              <a class="link" href="RygelMetaConfig.html#RygelMetaConfigClass" title="struct RygelMetaConfigClass">RygelMetaConfigClass</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelMetaConfig.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="../gobject/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----RygelMetaConfig
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelMetaConfig.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+RygelMetaConfig implements
+ <a class="link" href="RygelConfiguration.html" title="RygelConfiguration">RygelConfiguration</a>.</p>
+</div>
+<div class="refsect1">
+<a name="RygelMetaConfig.description"></a><h2>Description</h2>
+<p>
+</p>
+<p>Abstracts Rygel and it's plugins from Configuration implementations. It keeps all real configuration sources in a list and returns the value provided by the first one. If none of them provides the value, it emits an error.</p>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="RygelMetaConfig.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="RYGEL-TYPE-META-CONFIG:CAPS"></a><h3>RYGEL_TYPE_META_CONFIG</h3>
+<pre class="programlisting">#define RYGEL_TYPE_META_CONFIG (rygel_meta_config_get_type ())
+</pre>
+<p>
+The type for <a class="link" href="RygelMetaConfig.html" title="RygelMetaConfig"><span class="type">RygelMetaConfig</span></a>.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-meta-config-new"></a><h3>rygel_meta_config_new ()</h3>
+<pre class="programlisting"><a class="link" href="RygelMetaConfig.html" title="RygelMetaConfig"><span class="returnvalue">RygelMetaConfig</span></a> *   rygel_meta_config_new               (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-meta-config-get-default"></a><h3>rygel_meta_config_get_default ()</h3>
+<pre class="programlisting"><a class="link" href="RygelMetaConfig.html" title="RygelMetaConfig"><span class="returnvalue">RygelMetaConfig</span></a> *   rygel_meta_config_get_default       (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-meta-config-register-configuration"></a><h3>rygel_meta_config_register_configuration ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                rygel_meta_config_register_configuration
+                                                        (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *config</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-meta-config-register-default-configurations"></a><h3>rygel_meta_config_register_default_configurations ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                rygel_meta_config_register_default_configurations
+                                                        (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelMetaConfig-struct"></a><h3>struct RygelMetaConfig</h3>
+<pre class="programlisting">struct RygelMetaConfig;</pre>
+<p>
+Manages all the configuration sources for Rygel.
+</p>
+<p>
+</p>
+<p>Abstracts Rygel and it's plugins from Configuration implementations. It keeps all real configuration sources in a list and returns the value provided by the first one. If none of them provides the value, it emits an error.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelMetaConfigClass"></a><h3>struct RygelMetaConfigClass</h3>
+<pre class="programlisting">struct RygelMetaConfigClass {
+	GObjectClass parent_class;
+};
+</pre>
+<p>
+The class structure for <a class="link" href="RygelMetaConfig.html#RYGEL-TYPE-META-CONFIG:CAPS" title="RYGEL_TYPE_META_CONFIG"><code class="literal">RYGEL_TYPE_META_CONFIG</code></a>. All the fields in this structure are private and should never be accessed directly.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><a href="../gobject/gobject-The-Base-Object-Type.html#GObjectClass"><span class="type">GObjectClass</span></a> <em class="structfield"><code><a name="RygelMetaConfigClass.parent-class"></a>parent_class</code></em>;</span></p></td>
+<td>the parent class structure</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

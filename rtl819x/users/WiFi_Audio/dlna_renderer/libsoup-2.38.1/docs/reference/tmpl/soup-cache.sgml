@@ -1,0 +1,108 @@
+<!-- ##### SECTION Title ##### -->
+SoupCache
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT SoupCache ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG SoupCache:cache-dir ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG SoupCache:cache-type ##### -->
+<para>
+
+</para>
+
+<!-- ##### ENUM SoupCacheType ##### -->
+<para>
+
+</para>
+
+@SOUP_CACHE_SINGLE_USER: 
+@SOUP_CACHE_SHARED: 
+
+<!-- ##### FUNCTION soup_cache_new ##### -->
+<para>
+
+</para>
+
+@cache_dir: 
+@cache_type: 
+@Returns: 
+
+
+<!-- ##### FUNCTION soup_cache_flush ##### -->
+<para>
+
+</para>
+
+@cache: 
+
+
+<!-- ##### FUNCTION soup_cache_clear ##### -->
+<para>
+
+</para>
+
+@cache: 
+
+
+<!-- ##### FUNCTION soup_cache_dump ##### -->
+<para>
+
+</para>
+
+@cache: 
+
+
+<!-- ##### FUNCTION soup_cache_load ##### -->
+<para>
+
+</para>
+
+@cache: 
+
+
+<!-- ##### FUNCTION soup_cache_get_max_size ##### -->
+<para>
+
+</para>
+
+@cache: 
+@Returns: 
+
+
+<!-- ##### FUNCTION soup_cache_set_max_size ##### -->
+<para>
+
+</para>
+
+@cache: 
+@max_size: 
+
+

@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelPlaybinPlayer">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelPlaybinPlayer.top_of_page">RygelPlaybinPlayer</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-RENDERER Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelPlaybinPlayer</refname>
+<refpurpose>Implementation of RygelMediaPlayer for GStreamer.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelPlaybinPlayer.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="RYGEL-PLAYBIN-TYPE-PLAYER:CAPS">RYGEL_PLAYBIN_TYPE_PLAYER</link>
+<link linkend="RygelPlaybinPlayer"><returnvalue>RygelPlaybinPlayer</returnvalue></link> * <link linkend="rygel-playbin-player-new-wrap">rygel_playbin_player_new_wrap</link>      (<parameter><link linkend="GstElement"><type>GstElement</type></link> *playbin</parameter>);
+<link linkend="GstElement"><returnvalue>GstElement</returnvalue></link> *        <link linkend="rygel-playbin-player-get-playbin">rygel_playbin_player_get_playbin</link>    (<parameter><link linkend="RygelPlaybinPlayer"><type>RygelPlaybinPlayer</type></link> *self</parameter>);
+<link linkend="RygelPlaybinPlayer"><returnvalue>RygelPlaybinPlayer</returnvalue></link> * <link linkend="rygel-playbin-player-get-default">rygel_playbin_player_get_default</link>   (<parameter><type>void</type></parameter>);
+struct              <link linkend="RygelPlaybinPlayer-struct">RygelPlaybinPlayer</link>;
+struct              <link linkend="RygelPlaybinPlayerClass">RygelPlaybinPlayerClass</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelPlaybinPlayer.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----RygelPlaybinPlayer
+</synopsis>
+</refsect1>
+<refsect1 id="RygelPlaybinPlayer.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+RygelPlaybinPlayer implements
+ <link linkend="RygelMediaPlayer">RygelMediaPlayer</link>.</para>
+</refsect1>
+<refsect1 id="RygelPlaybinPlayer.properties" role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+  &quot;<link linkend="RygelPlaybinPlayer--content-features">content-features</link>&quot;         <link linkend="gchar"><type>gchar</type></link>*                : Read / Write
+  &quot;<link linkend="RygelPlaybinPlayer--duration">duration</link>&quot;                 <link linkend="gint64"><type>gint64</type></link>                : Read
+  &quot;<link linkend="RygelPlaybinPlayer--metadata">metadata</link>&quot;                 <link linkend="gchar"><type>gchar</type></link>*                : Read / Write
+  &quot;<link linkend="RygelPlaybinPlayer--mime-type">mime-type</link>&quot;                <link linkend="gchar"><type>gchar</type></link>*                : Read / Write
+  &quot;<link linkend="RygelPlaybinPlayer--playback-state">playback-state</link>&quot;           <link linkend="gchar"><type>gchar</type></link>*                : Read / Write
+  &quot;<link linkend="RygelPlaybinPlayer--playbin">playbin</link>&quot;                  <link linkend="GstElement"><type>GstElement</type></link>*           : Read
+  &quot;<link linkend="RygelPlaybinPlayer--position">position</link>&quot;                 <link linkend="gint64"><type>gint64</type></link>                : Read
+  &quot;<link linkend="RygelPlaybinPlayer--uri">uri</link>&quot;                      <link linkend="gchar"><type>gchar</type></link>*                : Read / Write
+  &quot;<link linkend="RygelPlaybinPlayer--volume">volume</link>&quot;                   <link linkend="gdouble"><type>gdouble</type></link>               : Read / Write
+</synopsis>
+</refsect1>
+
+<refsect1 id="RygelPlaybinPlayer.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+<para>This class is useful only when implementing Rygel plugins.</para>
+</para>
+</refsect1>
+<refsect1 id="RygelPlaybinPlayer.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="RYGEL-PLAYBIN-TYPE-PLAYER:CAPS" role="macro">
+<title>RYGEL_PLAYBIN_TYPE_PLAYER</title>
+<indexterm zone="RYGEL-PLAYBIN-TYPE-PLAYER:CAPS"><primary>RYGEL_PLAYBIN_TYPE_PLAYER</primary></indexterm>
+<programlisting>#define RYGEL_PLAYBIN_TYPE_PLAYER (rygel_playbin_player_get_type ())
+</programlisting>
+<para>
+The type for <link linkend="RygelPlaybinPlayer"><type>RygelPlaybinPlayer</type></link>.
+</para></refsect2>
+<refsect2 id="rygel-playbin-player-new-wrap" role="function">
+<title>rygel_playbin_player_new_wrap ()</title>
+<indexterm zone="rygel-playbin-player-new-wrap"><primary>rygel_playbin_player_new_wrap</primary></indexterm>
+<programlisting><link linkend="RygelPlaybinPlayer"><returnvalue>RygelPlaybinPlayer</returnvalue></link> * rygel_playbin_player_new_wrap      (<parameter><link linkend="GstElement"><type>GstElement</type></link> *playbin</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="rygel-playbin-player-get-playbin" role="function">
+<title>rygel_playbin_player_get_playbin ()</title>
+<indexterm zone="rygel-playbin-player-get-playbin"><primary>rygel_playbin_player_get_playbin</primary></indexterm>
+<programlisting><link linkend="GstElement"><returnvalue>GstElement</returnvalue></link> *        rygel_playbin_player_get_playbin    (<parameter><link linkend="RygelPlaybinPlayer"><type>RygelPlaybinPlayer</type></link> *self</parameter>);</programlisting>
+<para>
+Get and return the current value of the <link linkend="RygelPlaybinPlayer--playbin"><type>"playbin"</type></link> property.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelPlaybinPlayer"><type>RygelPlaybinPlayer</type></link> instance to query</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>the value of the <link linkend="RygelPlaybinPlayer--playbin"><type>"playbin"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-playbin-player-get-default" role="function">
+<title>rygel_playbin_player_get_default ()</title>
+<indexterm zone="rygel-playbin-player-get-default"><primary>rygel_playbin_player_get_default</primary></indexterm>
+<programlisting><link linkend="RygelPlaybinPlayer"><returnvalue>RygelPlaybinPlayer</returnvalue></link> * rygel_playbin_player_get_default   (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="RygelPlaybinPlayer-struct" role="struct">
+<title>struct RygelPlaybinPlayer</title>
+<indexterm zone="RygelPlaybinPlayer-struct"><primary>RygelPlaybinPlayer</primary></indexterm>
+<programlisting>struct RygelPlaybinPlayer;</programlisting>
+<para>
+Implementation of RygelMediaPlayer for GStreamer.
+</para>
+<para>
+<para>This class is useful only when implementing Rygel plugins.</para>
+</para></refsect2>
+<refsect2 id="RygelPlaybinPlayerClass" role="struct">
+<title>struct RygelPlaybinPlayerClass</title>
+<indexterm zone="RygelPlaybinPlayerClass"><primary>RygelPlaybinPlayerClass</primary></indexterm>
+<programlisting>struct RygelPlaybinPlayerClass {
+	GObjectClass parent_class;
+};
+</programlisting>
+<para>
+The class structure for <link linkend="RYGEL-PLAYBIN-TYPE-PLAYER:CAPS"><literal>RYGEL_PLAYBIN_TYPE_PLAYER</literal></link>. All the fields in this structure are private and should never be accessed directly.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="GObjectClass"><type>GObjectClass</type></link>&#160;<structfield id="RygelPlaybinPlayerClass.parent-class">parent_class</structfield>;</term>
+<listitem><simpara>the parent class structure</simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 id="RygelPlaybinPlayer.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="RygelPlaybinPlayer--content-features" role="property"><title>The <literal>&quot;content-features&quot;</literal> property</title>
+<indexterm zone="RygelPlaybinPlayer--content-features"><primary>RygelPlaybinPlayer:content-features</primary></indexterm>
+<programlisting>  &quot;content-features&quot;         <link linkend="gchar"><type>gchar</type></link>*                : Read / Write</programlisting>
+<para>content-features.</para><para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="RygelPlaybinPlayer--duration" role="property"><title>The <literal>&quot;duration&quot;</literal> property</title>
+<indexterm zone="RygelPlaybinPlayer--duration"><primary>RygelPlaybinPlayer:duration</primary></indexterm>
+<programlisting>  &quot;duration&quot;                 <link linkend="gint64"><type>gint64</type></link>                : Read</programlisting>
+<para>duration.</para><para>Default value: 0</para>
+</refsect2>
+<refsect2 id="RygelPlaybinPlayer--metadata" role="property"><title>The <literal>&quot;metadata&quot;</literal> property</title>
+<indexterm zone="RygelPlaybinPlayer--metadata"><primary>RygelPlaybinPlayer:metadata</primary></indexterm>
+<programlisting>  &quot;metadata&quot;                 <link linkend="gchar"><type>gchar</type></link>*                : Read / Write</programlisting>
+<para>metadata.</para><para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="RygelPlaybinPlayer--mime-type" role="property"><title>The <literal>&quot;mime-type&quot;</literal> property</title>
+<indexterm zone="RygelPlaybinPlayer--mime-type"><primary>RygelPlaybinPlayer:mime-type</primary></indexterm>
+<programlisting>  &quot;mime-type&quot;                <link linkend="gchar"><type>gchar</type></link>*                : Read / Write</programlisting>
+<para>mime-type.</para><para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="RygelPlaybinPlayer--playback-state" role="property"><title>The <literal>&quot;playback-state&quot;</literal> property</title>
+<indexterm zone="RygelPlaybinPlayer--playback-state"><primary>RygelPlaybinPlayer:playback-state</primary></indexterm>
+<programlisting>  &quot;playback-state&quot;           <link linkend="gchar"><type>gchar</type></link>*                : Read / Write</programlisting>
+<para>playback-state.</para><para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="RygelPlaybinPlayer--playbin" role="property"><title>The <literal>&quot;playbin&quot;</literal> property</title>
+<indexterm zone="RygelPlaybinPlayer--playbin"><primary>RygelPlaybinPlayer:playbin</primary></indexterm>
+<programlisting>  &quot;playbin&quot;                  <link linkend="GstElement"><type>GstElement</type></link>*           : Read</programlisting>
+<para>playbin.</para></refsect2>
+<refsect2 id="RygelPlaybinPlayer--position" role="property"><title>The <literal>&quot;position&quot;</literal> property</title>
+<indexterm zone="RygelPlaybinPlayer--position"><primary>RygelPlaybinPlayer:position</primary></indexterm>
+<programlisting>  &quot;position&quot;                 <link linkend="gint64"><type>gint64</type></link>                : Read</programlisting>
+<para>position.</para><para>Default value: 0</para>
+</refsect2>
+<refsect2 id="RygelPlaybinPlayer--uri" role="property"><title>The <literal>&quot;uri&quot;</literal> property</title>
+<indexterm zone="RygelPlaybinPlayer--uri"><primary>RygelPlaybinPlayer:uri</primary></indexterm>
+<programlisting>  &quot;uri&quot;                      <link linkend="gchar"><type>gchar</type></link>*                : Read / Write</programlisting>
+<para>uri.</para><para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="RygelPlaybinPlayer--volume" role="property"><title>The <literal>&quot;volume&quot;</literal> property</title>
+<indexterm zone="RygelPlaybinPlayer--volume"><primary>RygelPlaybinPlayer:volume</primary></indexterm>
+<programlisting>  &quot;volume&quot;                   <link linkend="gdouble"><type>gdouble</type></link>               : Read / Write</programlisting>
+<para>volume.</para><para>Default value: 0</para>
+</refsect2>
+</refsect1>
+
+</refentry>

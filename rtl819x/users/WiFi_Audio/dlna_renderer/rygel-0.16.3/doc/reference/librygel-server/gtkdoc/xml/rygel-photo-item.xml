@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelPhotoItem">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelPhotoItem.top_of_page">RygelPhotoItem</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-SERVER Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelPhotoItem</refname>
+<refpurpose>Represents a photo item.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelPhotoItem.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="RYGEL-TYPE-PHOTO-ITEM:CAPS">RYGEL_TYPE_PHOTO_ITEM</link>
+#define             <link linkend="RYGEL-PHOTO-ITEM-UPNP-CLASS:CAPS">RYGEL_PHOTO_ITEM_UPNP_CLASS</link>
+<link linkend="RygelPhotoItem"><returnvalue>RygelPhotoItem</returnvalue></link> *    <link linkend="rygel-photo-item-new">rygel_photo_item_new</link>                (<parameter>const <link linkend="gchar"><type>gchar</type></link> *id</parameter>,
+                                                         <parameter><link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> *parent</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *title</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *upnp_class</parameter>);
+struct              <link linkend="RygelPhotoItem-struct">RygelPhotoItem</link>;
+struct              <link linkend="RygelPhotoItemClass">RygelPhotoItemClass</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelPhotoItem.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="RygelMediaObject">RygelMediaObject</link>
+         +----<link linkend="RygelMediaItem">RygelMediaItem</link>
+               +----<link linkend="RygelImageItem">RygelImageItem</link>
+                     +----RygelPhotoItem
+</synopsis>
+</refsect1>
+<refsect1 id="RygelPhotoItem.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+RygelPhotoItem implements
+ <link linkend="RygelVisualItem">RygelVisualItem</link>.</para>
+</refsect1>
+
+<refsect1 id="RygelPhotoItem.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="RygelPhotoItem.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="RYGEL-TYPE-PHOTO-ITEM:CAPS" role="macro">
+<title>RYGEL_TYPE_PHOTO_ITEM</title>
+<indexterm zone="RYGEL-TYPE-PHOTO-ITEM:CAPS"><primary>RYGEL_TYPE_PHOTO_ITEM</primary></indexterm>
+<programlisting>#define RYGEL_TYPE_PHOTO_ITEM (rygel_photo_item_get_type ())
+</programlisting>
+<para>
+The type for <link linkend="RygelPhotoItem"><type>RygelPhotoItem</type></link>.
+</para></refsect2>
+<refsect2 id="RYGEL-PHOTO-ITEM-UPNP-CLASS:CAPS" role="macro">
+<title>RYGEL_PHOTO_ITEM_UPNP_CLASS</title>
+<indexterm zone="RYGEL-PHOTO-ITEM-UPNP-CLASS:CAPS"><primary>RYGEL_PHOTO_ITEM_UPNP_CLASS</primary></indexterm>
+<programlisting>#define RYGEL_PHOTO_ITEM_UPNP_CLASS "object.item.imageItem.photo"
+</programlisting>
+</refsect2>
+<refsect2 id="rygel-photo-item-new" role="function">
+<title>rygel_photo_item_new ()</title>
+<indexterm zone="rygel-photo-item-new"><primary>rygel_photo_item_new</primary></indexterm>
+<programlisting><link linkend="RygelPhotoItem"><returnvalue>RygelPhotoItem</returnvalue></link> *    rygel_photo_item_new                (<parameter>const <link linkend="gchar"><type>gchar</type></link> *id</parameter>,
+                                                         <parameter><link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> *parent</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *title</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *upnp_class</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="RygelPhotoItem-struct" role="struct">
+<title>struct RygelPhotoItem</title>
+<indexterm zone="RygelPhotoItem-struct"><primary>RygelPhotoItem</primary></indexterm>
+<programlisting>struct RygelPhotoItem;</programlisting>
+<para>
+Represents a photo item.
+</para></refsect2>
+<refsect2 id="RygelPhotoItemClass" role="struct">
+<title>struct RygelPhotoItemClass</title>
+<indexterm zone="RygelPhotoItemClass"><primary>RygelPhotoItemClass</primary></indexterm>
+<programlisting>struct RygelPhotoItemClass {
+	RygelImageItemClass parent_class;
+};
+</programlisting>
+<para>
+The class structure for <link linkend="RYGEL-TYPE-PHOTO-ITEM:CAPS"><literal>RYGEL_TYPE_PHOTO_ITEM</literal></link>. All the fields in this structure are private and should never be accessed directly.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="RygelImageItemClass"><type>RygelImageItemClass</type></link>&#160;<structfield id="RygelPhotoItemClass.parent-class">parent_class</structfield>;</term>
+<listitem><simpara>the parent class structure</simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+</refentry>

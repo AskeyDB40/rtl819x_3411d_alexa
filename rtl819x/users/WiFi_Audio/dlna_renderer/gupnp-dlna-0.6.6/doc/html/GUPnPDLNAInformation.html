@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GUPnPDLNAInformation</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GUPnP DLNA Reference Manual">
+<link rel="up" href="ch01.html" title="GUPnP DLNA">
+<link rel="prev" href="GUPnPDLNADiscoverer.html" title="GUPnPDLNADiscoverer">
+<link rel="next" href="GUPnPDLNAProfile.html" title="GUPnPDLNAProfile">
+<meta name="generator" content="GTK-Doc V1.17.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GUPnPDLNADiscoverer.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GUPnP DLNA Reference Manual</th>
+<td><a accesskey="n" href="GUPnPDLNAProfile.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GUPnPDLNAInformation.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#GUPnPDLNAInformation.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#GUPnPDLNAInformation.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#GUPnPDLNAInformation.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="GUPnPDLNAInformation"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GUPnPDLNAInformation.top_of_page"></a>GUPnPDLNAInformation</span></h2>
+<p>GUPnPDLNAInformation — Object containing metadata information returned by the
+<a class="link" href="GUPnPDLNADiscoverer.html" title="GUPnPDLNADiscoverer"><span class="type">GUPnPDLNADiscoverer</span></a> API</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="GUPnPDLNAInformation.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="GUPnPDLNAInformation.html#GUPnPDLNAInformation-struct" title="GUPnPDLNAInformation">GUPnPDLNAInformation</a>;
+<a class="link" href="GUPnPDLNAInformation.html" title="GUPnPDLNAInformation"><span class="returnvalue">GUPnPDLNAInformation</span></a> * <a class="link" href="GUPnPDLNAInformation.html#gupnp-dlna-information-new" title="gupnp_dlna_information_new ()">gupnp_dlna_information_new</a>       (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *mime</code></em>,
+                                                         <em class="parameter"><code><a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-base-libs/html/gst-plugins-base-libs-gstdiscoverer.html#GstDiscovererInfo"><span class="type">GstDiscovererInfo</span></a> *info</code></em>);
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="GUPnPDLNAInformation.html#gupnp-dlna-information-get-name" title="gupnp_dlna_information_get_name ()">gupnp_dlna_information_get_name</a>     (<em class="parameter"><code><a class="link" href="GUPnPDLNAInformation.html" title="GUPnPDLNAInformation"><span class="type">GUPnPDLNAInformation</span></a> *self</code></em>);
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="GUPnPDLNAInformation.html#gupnp-dlna-information-get-mime" title="gupnp_dlna_information_get_mime ()">gupnp_dlna_information_get_mime</a>     (<em class="parameter"><code><a class="link" href="GUPnPDLNAInformation.html" title="GUPnPDLNAInformation"><span class="type">GUPnPDLNAInformation</span></a> *self</code></em>);
+const <a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-base-libs/html/gst-plugins-base-libs-gstdiscoverer.html#GstDiscovererInfo"><span class="returnvalue">GstDiscovererInfo</span></a> * <a class="link" href="GUPnPDLNAInformation.html#gupnp-dlna-information-get-info" title="gupnp_dlna_information_get_info ()">gupnp_dlna_information_get_info</a>
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDLNAInformation.html" title="GUPnPDLNAInformation"><span class="type">GUPnPDLNAInformation</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="GUPnPDLNAInformation.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----GUPnPDLNAInformation
+</pre>
+</div>
+<div class="refsect1">
+<a name="GUPnPDLNAInformation.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="GUPnPDLNAInformation.html#GUPnPDLNAInformation--info" title='The "info" property'>info</a>"                     <a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-base-libs/html/gst-plugins-base-libs-gstdiscoverer.html#GstDiscovererInfo"><span class="type">GstDiscovererInfo</span></a>*    : Read / Write / Construct Only
+  "<a class="link" href="GUPnPDLNAInformation.html#GUPnPDLNAInformation--mime" title='The "mime" property'>mime</a>"                     <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write / Construct Only
+  "<a class="link" href="GUPnPDLNAInformation.html#GUPnPDLNAInformation--name" title='The "name" property'>name</a>"                     <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write / Construct Only
+</pre>
+</div>
+<div class="refsect1">
+<a name="GUPnPDLNAInformation.description"></a><h2>Description</h2>
+<p>
+The GUPnPDLNAInformation object holds metadata information discovered by the
+GUPnPDiscoverer API. The DLNA profile name and MIME type have their own
+fields, and other metadata is held in a GstDiscovererInfo structure.
+All fields are read-only.
+</p>
+</div>
+<div class="refsect1">
+<a name="GUPnPDLNAInformation.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GUPnPDLNAInformation-struct"></a><h3>GUPnPDLNAInformation</h3>
+<pre class="programlisting">typedef struct _GUPnPDLNAInformation GUPnPDLNAInformation;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-dlna-information-new"></a><h3>gupnp_dlna_information_new ()</h3>
+<pre class="programlisting"><a class="link" href="GUPnPDLNAInformation.html" title="GUPnPDLNAInformation"><span class="returnvalue">GUPnPDLNAInformation</span></a> * gupnp_dlna_information_new       (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *mime</code></em>,
+                                                         <em class="parameter"><code><a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-base-libs/html/gst-plugins-base-libs-gstdiscoverer.html#GstDiscovererInfo"><span class="type">GstDiscovererInfo</span></a> *info</code></em>);</pre>
+<p>
+Creates a new <a class="link" href="GUPnPDLNAInformation.html" title="GUPnPDLNAInformation"><span class="type">GUPnPDLNAInformation</span></a> object with the given properties.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td>DLNA media profile name corresponding to the media</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>mime</code></em> :</span></p></td>
+<td>DLNA MIME type for the media</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>info</code></em> :</span></p></td>
+<td>
+<a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-base-libs/html/gst-plugins-base-libs-gstdiscoverer.html#GstDiscovererInfo"><span class="type">GstDiscovererInfo</span></a> type with additional metadata about the
+stream</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A newly created <a class="link" href="GUPnPDLNAInformation.html" title="GUPnPDLNAInformation"><span class="type">GUPnPDLNAInformation</span></a> object.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-dlna-information-get-name"></a><h3>gupnp_dlna_information_get_name ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       gupnp_dlna_information_get_name     (<em class="parameter"><code><a class="link" href="GUPnPDLNAInformation.html" title="GUPnPDLNAInformation"><span class="type">GUPnPDLNAInformation</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GUPnPDLNAInformation.html" title="GUPnPDLNAInformation"><span class="type">GUPnPDLNAInformation</span></a> object</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the DLNA profile name of the stream represented by <em class="parameter"><code>self</code></em>. Do not
+free this string.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-dlna-information-get-mime"></a><h3>gupnp_dlna_information_get_mime ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       gupnp_dlna_information_get_mime     (<em class="parameter"><code><a class="link" href="GUPnPDLNAInformation.html" title="GUPnPDLNAInformation"><span class="type">GUPnPDLNAInformation</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GUPnPDLNAInformation.html" title="GUPnPDLNAInformation"><span class="type">GUPnPDLNAInformation</span></a> object</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the DLNA MIME type of the stream represented by <em class="parameter"><code>self</code></em>. Do not
+free this string.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-dlna-information-get-info"></a><h3>gupnp_dlna_information_get_info ()</h3>
+<pre class="programlisting">const <a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-base-libs/html/gst-plugins-base-libs-gstdiscoverer.html#GstDiscovererInfo"><span class="returnvalue">GstDiscovererInfo</span></a> * gupnp_dlna_information_get_info
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDLNAInformation.html" title="GUPnPDLNAInformation"><span class="type">GUPnPDLNAInformation</span></a> *self</code></em>);</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="GUPnPDLNAInformation.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="GUPnPDLNAInformation--info"></a><h3>The <code class="literal">"info"</code> property</h3>
+<pre class="programlisting">  "info"                     <a href="http://gstreamer.freedesktop.org/data/doc/gstreamer/head/gst-plugins-base-libs/html/gst-plugins-base-libs-gstdiscoverer.html#GstDiscovererInfo"><span class="type">GstDiscovererInfo</span></a>*    : Read / Write / Construct Only</pre>
+<p>Metadata of the stream in a GstDiscovererInfo structure.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GUPnPDLNAInformation--mime"></a><h3>The <code class="literal">"mime"</code> property</h3>
+<pre class="programlisting">  "mime"                     <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write / Construct Only</pre>
+<p>The DLNA MIME type of the stream.</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GUPnPDLNAInformation--name"></a><h3>The <code class="literal">"name"</code> property</h3>
+<pre class="programlisting">  "name"                     <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write / Construct Only</pre>
+<p>The name of the DLNA profile corresponding to the strream.</p>
+<p>Default value: NULL</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17.1</div>
+</body>
+</html>

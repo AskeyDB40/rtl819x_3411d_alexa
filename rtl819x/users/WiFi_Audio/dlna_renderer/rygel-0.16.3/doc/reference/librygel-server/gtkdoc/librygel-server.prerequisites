@@ -1,0 +1,7 @@
+RygelStateMachine GObject
+RygelVisualItem RygelMediaItem
+GeeIterable GObject
+GeeCollection GeeIterable GObject
+GeeList GeeIterable GeeCollection GObject
+RygelSearchableContainer RygelMediaContainer
+RygelWritableContainer RygelMediaContainer

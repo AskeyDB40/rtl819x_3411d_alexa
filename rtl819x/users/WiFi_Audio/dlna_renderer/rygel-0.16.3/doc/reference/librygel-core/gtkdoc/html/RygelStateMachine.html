@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>RygelStateMachine</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="librygel-core Reference Manual">
+<link rel="up" href="ch01.html" title="librygel-core API Reference">
+<link rel="prev" href="RygelXMLUtils.html" title="RygelXMLUtils">
+<link rel="next" href="ch02.html" title="librygel-core D-Bus API Reference">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="RygelXMLUtils.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">librygel-core Reference Manual</th>
+<td><a accesskey="n" href="ch02.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#RygelStateMachine.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#RygelStateMachine.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#RygelStateMachine.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#RygelStateMachine.prerequisites" class="shortcut">Prerequisites</a>
+                   | 
+                  <a href="#RygelStateMachine.properties" class="shortcut">Properties</a>
+                   | 
+                  <a href="#RygelStateMachine.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="RygelStateMachine"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="RygelStateMachine.top_of_page"></a>RygelStateMachine</span></h2>
+<p>RygelStateMachine — StateMachine interface.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="RygelStateMachine.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis"><span class="returnvalue">void</span>                <a class="link" href="RygelStateMachine.html#rygel-state-machine-run" title="rygel_state_machine_run ()">rygel_state_machine_run</a>             (<em class="parameter"><code><a class="link" href="RygelStateMachine.html" title="RygelStateMachine"><span class="type">RygelStateMachine</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="RygelStateMachine.html#rygel-state-machine-run-finish" title="rygel_state_machine_run_finish ()">rygel_state_machine_run_finish</a>      (<em class="parameter"><code><a class="link" href="RygelStateMachine.html" title="RygelStateMachine"><span class="type">RygelStateMachine</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *_res_</code></em>);
+<a href="../gio/GCancellable.html"><span class="returnvalue">GCancellable</span></a> *      <a class="link" href="RygelStateMachine.html#rygel-state-machine-get-cancellable" title="rygel_state_machine_get_cancellable ()">rygel_state_machine_get_cancellable</a> (<em class="parameter"><code><a class="link" href="RygelStateMachine.html" title="RygelStateMachine"><span class="type">RygelStateMachine</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="RygelStateMachine.html#rygel-state-machine-set-cancellable" title="rygel_state_machine_set_cancellable ()">rygel_state_machine_set_cancellable</a> (<em class="parameter"><code><a class="link" href="RygelStateMachine.html" title="RygelStateMachine"><span class="type">RygelStateMachine</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GCancellable.html"><span class="type">GCancellable</span></a> *value</code></em>);
+                    <a class="link" href="RygelStateMachine.html#RygelStateMachine-struct" title="RygelStateMachine">RygelStateMachine</a>;
+struct              <a class="link" href="RygelStateMachine.html#RygelStateMachineIface" title="struct RygelStateMachineIface">RygelStateMachineIface</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelStateMachine.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GInterface
+   +----RygelStateMachine
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelStateMachine.prerequisites"></a><h2>Prerequisites</h2>
+<p>
+RygelStateMachine requires
+ <a href="../gobject/gobject-The-Base-Object-Type.html#GObject">GObject</a>.</p>
+</div>
+<div class="refsect1">
+<a name="RygelStateMachine.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="RygelStateMachine.html#RygelStateMachine--cancellable" title='The "cancellable" property'>cancellable</a>"              <a href="../gio/GCancellable.html"><span class="type">GCancellable</span></a>*         : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelStateMachine.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="RygelStateMachine.html#RygelStateMachine-completed" title='The "completed" signal'>completed</a>"                                      : <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelStateMachine.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="RygelStateMachine.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="rygel-state-machine-run"></a><h3>rygel_state_machine_run ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                rygel_state_machine_run             (<em class="parameter"><code><a class="link" href="RygelStateMachine.html" title="RygelStateMachine"><span class="type">RygelStateMachine</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);</pre>
+<p>
+<span class="emphasis"><em>See also</em></span>: <a class="link" href="RygelStateMachine.html#rygel-state-machine-run-finish" title="rygel_state_machine_run_finish ()"><code class="function"><a class="link" href="RygelStateMachine.html#rygel-state-machine-run-finish" title="rygel_state_machine_run_finish ()"><code class="function">rygel_state_machine_run_finish()</code></a></code></a>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelStateMachine.html" title="RygelStateMachine"><span class="type">RygelStateMachine</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_callback_</code></em> :</span></p></td>
+<td>callback to call when the request is satisfied. <span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_user_data_</code></em> :</span></p></td>
+<td>the data to pass to <em class="parameter"><code>_callback_</code></em> function. <span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-state-machine-run-finish"></a><h3>rygel_state_machine_run_finish ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                rygel_state_machine_run_finish      (<em class="parameter"><code><a class="link" href="RygelStateMachine.html" title="RygelStateMachine"><span class="type">RygelStateMachine</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *_res_</code></em>);</pre>
+<p>
+<span class="emphasis"><em>See also</em></span>: <a class="link" href="RygelStateMachine.html#rygel-state-machine-run" title="rygel_state_machine_run ()"><code class="function"><a class="link" href="RygelStateMachine.html#rygel-state-machine-run" title="rygel_state_machine_run ()"><code class="function">rygel_state_machine_run()</code></a></code></a>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelStateMachine.html" title="RygelStateMachine"><span class="type">RygelStateMachine</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_res_</code></em> :</span></p></td>
+<td>a <a href="../gio/GAsyncResult.html"><span class="type">GAsyncResult</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-state-machine-get-cancellable"></a><h3>rygel_state_machine_get_cancellable ()</h3>
+<pre class="programlisting"><a href="../gio/GCancellable.html"><span class="returnvalue">GCancellable</span></a> *      rygel_state_machine_get_cancellable (<em class="parameter"><code><a class="link" href="RygelStateMachine.html" title="RygelStateMachine"><span class="type">RygelStateMachine</span></a> *self</code></em>);</pre>
+<p>
+Get and return the current value of the <a class="link" href="RygelStateMachine.html#RygelStateMachine--cancellable" title='The "cancellable" property'><span class="type">"cancellable"</span></a> property.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelStateMachine.html" title="RygelStateMachine"><span class="type">RygelStateMachine</span></a> instance to query</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the value of the <a class="link" href="RygelStateMachine.html#RygelStateMachine--cancellable" title='The "cancellable" property'><span class="type">"cancellable"</span></a> property</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-state-machine-set-cancellable"></a><h3>rygel_state_machine_set_cancellable ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                rygel_state_machine_set_cancellable (<em class="parameter"><code><a class="link" href="RygelStateMachine.html" title="RygelStateMachine"><span class="type">RygelStateMachine</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GCancellable.html"><span class="type">GCancellable</span></a> *value</code></em>);</pre>
+<p>
+Set the value of the <a class="link" href="RygelStateMachine.html#RygelStateMachine--cancellable" title='The "cancellable" property'><span class="type">"cancellable"</span></a> property to <em class="parameter"><code>value</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelStateMachine.html" title="RygelStateMachine"><span class="type">RygelStateMachine</span></a> instance to modify</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>the new value of the <a class="link" href="RygelStateMachine.html#RygelStateMachine--cancellable" title='The "cancellable" property'><span class="type">"cancellable"</span></a> property</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelStateMachine-struct"></a><h3>RygelStateMachine</h3>
+<pre class="programlisting">typedef struct _RygelStateMachine RygelStateMachine;</pre>
+<p>
+StateMachine interface.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelStateMachineIface"></a><h3>struct RygelStateMachineIface</h3>
+<pre class="programlisting">struct RygelStateMachineIface {
+	GTypeInterface parent_iface;
+	void (*run) (RygelStateMachine* self, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	void (*run_finish) (RygelStateMachine* self, GAsyncResult* _res_);
+	GCancellable* (*get_cancellable) (RygelStateMachine* self);
+	void (*set_cancellable) (RygelStateMachine* self, GCancellable* value);
+};
+</pre>
+<p>
+Interface for creating <a class="link" href="RygelStateMachine.html" title="RygelStateMachine"><span class="type">RygelStateMachine</span></a> implementations.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><a href="../gobject/gobject-Type-Information.html#GTypeInterface"><span class="type">GTypeInterface</span></a> <em class="structfield"><code><a name="RygelStateMachineIface.parent-iface"></a>parent_iface</code></em>;</span></p></td>
+<td>the parent interface structure</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelStateMachineIface.run"></a>run</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="RygelStateMachine.html#rygel-state-machine-run" title="rygel_state_machine_run ()"><code class="function"><a class="link" href="RygelStateMachine.html#rygel-state-machine-run" title="rygel_state_machine_run ()"><code class="function">rygel_state_machine_run()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelStateMachineIface.run-finish"></a>run_finish</code></em> ()</span></p></td>
+<td>asynchronous finish function for <em class="structfield"><code>run</code></em>, called by <a class="link" href="RygelStateMachine.html#rygel-state-machine-run" title="rygel_state_machine_run ()"><code class="function"><a class="link" href="RygelStateMachine.html#rygel-state-machine-run" title="rygel_state_machine_run ()"><code class="function">rygel_state_machine_run()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelStateMachineIface.get-cancellable"></a>get_cancellable</code></em> ()</span></p></td>
+<td>getter method for the abstract property <a class="link" href="RygelStateMachine.html#RygelStateMachine--cancellable" title='The "cancellable" property'><span class="type">"cancellable"</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelStateMachineIface.set-cancellable"></a>set_cancellable</code></em> ()</span></p></td>
+<td>setter method for the abstract property <a class="link" href="RygelStateMachine.html#RygelStateMachine--cancellable" title='The "cancellable" property'><span class="type">"cancellable"</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="RygelStateMachine.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="RygelStateMachine--cancellable"></a><h3>The <code class="literal">"cancellable"</code> property</h3>
+<pre class="programlisting">  "cancellable"              <a href="../gio/GCancellable.html"><span class="type">GCancellable</span></a>*         : Read / Write</pre>
+<p>cancellable.</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="RygelStateMachine.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="RygelStateMachine-completed"></a><h3>The <code class="literal">"completed"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="RygelStateMachine.html" title="RygelStateMachine"><span class="type">RygelStateMachine</span></a> *state_machine,
+                                                        <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>           user_data)          : <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a></pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>state_machine</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelStateMachine.html" title="RygelStateMachine"><span class="type">RygelStateMachine</span></a> instance that received the signal</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

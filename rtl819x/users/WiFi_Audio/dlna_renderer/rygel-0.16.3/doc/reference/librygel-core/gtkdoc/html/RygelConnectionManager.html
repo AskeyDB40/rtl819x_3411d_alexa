@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>RygelConnectionManager</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="librygel-core Reference Manual">
+<link rel="up" href="ch01.html" title="librygel-core API Reference">
+<link rel="prev" href="ch01.html" title="librygel-core API Reference">
+<link rel="next" href="RygelConfiguration.html" title="RygelConfiguration">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ch01.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">librygel-core Reference Manual</th>
+<td><a accesskey="n" href="RygelConfiguration.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#RygelConnectionManager.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#RygelConnectionManager.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#RygelConnectionManager.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="RygelConnectionManager"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="RygelConnectionManager.top_of_page"></a>RygelConnectionManager</span></h2>
+<p>RygelConnectionManager — Basic implementation of UPnP ConnectionManager service version 2.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="RygelConnectionManager.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">#define             <a class="link" href="RygelConnectionManager.html#RYGEL-TYPE-CONNECTION-MANAGER:CAPS" title="RYGEL_TYPE_CONNECTION_MANAGER">RYGEL_TYPE_CONNECTION_MANAGER</a>
+#define             <a class="link" href="RygelConnectionManager.html#RYGEL-CONNECTION-MANAGER-UPNP-ID:CAPS" title="RYGEL_CONNECTION_MANAGER_UPNP_ID">RYGEL_CONNECTION_MANAGER_UPNP_ID</a>
+#define             <a class="link" href="RygelConnectionManager.html#RYGEL-CONNECTION-MANAGER-UPNP-TYPE:CAPS" title="RYGEL_CONNECTION_MANAGER_UPNP_TYPE">RYGEL_CONNECTION_MANAGER_UPNP_TYPE</a>
+#define             <a class="link" href="RygelConnectionManager.html#RYGEL-CONNECTION-MANAGER-DESCRIPTION-PATH:CAPS" title="RYGEL_CONNECTION_MANAGER_DESCRIPTION_PATH">RYGEL_CONNECTION_MANAGER_DESCRIPTION_PATH</a>
+<a class="link" href="RygelConnectionManager.html" title="RygelConnectionManager"><span class="returnvalue">RygelConnectionManager</span></a> * <a class="link" href="RygelConnectionManager.html#rygel-connection-manager-new" title="rygel_connection_manager_new ()">rygel_connection_manager_new</a>   (<em class="parameter"><code><span class="type">void</span></code></em>);
+struct              <a class="link" href="RygelConnectionManager.html#RygelConnectionManager-struct" title="struct RygelConnectionManager">RygelConnectionManager</a>;
+struct              <a class="link" href="RygelConnectionManager.html#RygelConnectionManagerClass" title="struct RygelConnectionManagerClass">RygelConnectionManagerClass</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelConnectionManager.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="../gobject/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a href="../gupnp/GUPnPServiceInfo.html">GUPnPServiceInfo</a>
+         +----<a href="../gupnp/GUPnPService.html">GUPnPService</a>
+               +----RygelConnectionManager
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelConnectionManager.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="RygelConnectionManager.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="RYGEL-TYPE-CONNECTION-MANAGER:CAPS"></a><h3>RYGEL_TYPE_CONNECTION_MANAGER</h3>
+<pre class="programlisting">#define RYGEL_TYPE_CONNECTION_MANAGER (rygel_connection_manager_get_type ())
+</pre>
+<p>
+The type for <a class="link" href="RygelConnectionManager.html" title="RygelConnectionManager"><span class="type">RygelConnectionManager</span></a>.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RYGEL-CONNECTION-MANAGER-UPNP-ID:CAPS"></a><h3>RYGEL_CONNECTION_MANAGER_UPNP_ID</h3>
+<pre class="programlisting">#define RYGEL_CONNECTION_MANAGER_UPNP_ID "urn:upnp-org:serviceId:ConnectionManager"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RYGEL-CONNECTION-MANAGER-UPNP-TYPE:CAPS"></a><h3>RYGEL_CONNECTION_MANAGER_UPNP_TYPE</h3>
+<pre class="programlisting">#define RYGEL_CONNECTION_MANAGER_UPNP_TYPE "urn:schemas-upnp-org:service:ConnectionManager:2"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RYGEL-CONNECTION-MANAGER-DESCRIPTION-PATH:CAPS"></a><h3>RYGEL_CONNECTION_MANAGER_DESCRIPTION_PATH</h3>
+<pre class="programlisting">#define RYGEL_CONNECTION_MANAGER_DESCRIPTION_PATH "xml/ConnectionManager.xml"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-connection-manager-new"></a><h3>rygel_connection_manager_new ()</h3>
+<pre class="programlisting"><a class="link" href="RygelConnectionManager.html" title="RygelConnectionManager"><span class="returnvalue">RygelConnectionManager</span></a> * rygel_connection_manager_new   (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelConnectionManager-struct"></a><h3>struct RygelConnectionManager</h3>
+<pre class="programlisting">struct RygelConnectionManager;</pre>
+<p>
+Basic implementation of UPnP ConnectionManager service version 2.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelConnectionManagerClass"></a><h3>struct RygelConnectionManagerClass</h3>
+<pre class="programlisting">struct RygelConnectionManagerClass {
+	GUPnPServiceClass parent_class;
+};
+</pre>
+<p>
+The class structure for <a class="link" href="RygelConnectionManager.html#RYGEL-TYPE-CONNECTION-MANAGER:CAPS" title="RYGEL_TYPE_CONNECTION_MANAGER"><code class="literal">RYGEL_TYPE_CONNECTION_MANAGER</code></a>. All the fields in this structure are private and should never be accessed directly.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="type">GUPnPServiceClass</span> <em class="structfield"><code><a name="RygelConnectionManagerClass.parent-class"></a>parent_class</code></em>;</span></p></td>
+<td>the parent class structure</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

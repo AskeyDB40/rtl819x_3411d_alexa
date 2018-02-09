@@ -1,0 +1,2677 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Changwoo Ryu <cwryu@debian.org>, 2011.
+#   <darkcircle.0426@gmail.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: shared-mime-info\n"
+"Report-Msgid-Bugs-To: http://bugzilla.freedesktop.org/\n"
+"POT-Creation-Date: 2011-09-18 03:46+0100\n"
+"PO-Revision-Date: 2011-09-18 02:49+0000\n"
+"Last-Translator: hadess <hadess@hadess.net>\n"
+"Language-Team: Korean (http://www.transifex.net/projects/p/freedesktop/team/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+#: ../freedesktop.org.xml.in.h:1
+msgid "3D Studio image"
+msgstr "3D Studio 그림"
+
+#: ../freedesktop.org.xml.in.h:2
+msgid "3GPP multimedia file"
+msgstr "3GPP 멀티미디어 파일"
+
+#: ../freedesktop.org.xml.in.h:3
+msgid "3GPP2 multimedia file"
+msgstr "3GPP2 멀티미디어 파일"
+
+#: ../freedesktop.org.xml.in.h:4
+msgid "7-zip archive"
+msgstr "7-ZIP 압축 파일"
+
+#: ../freedesktop.org.xml.in.h:5
+msgid "ACE archive"
+msgstr "ACE 묶음 파일"
+
+#: ../freedesktop.org.xml.in.h:6
+msgid "AIFC audio"
+msgstr "AIFC 오디오"
+
+#: ../freedesktop.org.xml.in.h:7
+msgid "AIFF audio"
+msgstr "AIFF 오디오"
+
+#: ../freedesktop.org.xml.in.h:8
+msgid "AIFF/Amiga/Mac audio"
+msgstr "AIFF/Amiga/Mac 오디오"
+
+#: ../freedesktop.org.xml.in.h:9
+msgid "AMR audio"
+msgstr "AMR 오디오"
+
+#: ../freedesktop.org.xml.in.h:10
+msgid "AMR-WB audio"
+msgstr "AMR-WB 오디오"
+
+#: ../freedesktop.org.xml.in.h:11
+msgid "ANIM animation"
+msgstr "ANIM 동화상"
+
+#: ../freedesktop.org.xml.in.h:12
+msgid "AR archive"
+msgstr "AR 묶음 파일"
+
+#: ../freedesktop.org.xml.in.h:13
+msgid "ARC archive"
+msgstr "ARC 압축 파일"
+
+#: ../freedesktop.org.xml.in.h:14
+msgid "ARJ archive"
+msgstr "ARJ 압축 파일"
+
+#: ../freedesktop.org.xml.in.h:15
+msgid "ASF video"
+msgstr "ASF 비디오"
+
+#: ../freedesktop.org.xml.in.h:16
+msgid "ASP page"
+msgstr "ASP 페이지"
+
+#: ../freedesktop.org.xml.in.h:17
+msgid "ATK inset"
+msgstr "ATK inset"
+
+#: ../freedesktop.org.xml.in.h:18
+msgid "AVI video"
+msgstr "AVI 비디오"
+
+#: ../freedesktop.org.xml.in.h:19
+msgid "AWK script"
+msgstr "AWK 스크립트"
+
+#: ../freedesktop.org.xml.in.h:20
+msgid "AbiWord document"
+msgstr "AbiWord 문서"
+
+#: ../freedesktop.org.xml.in.h:21
+msgid "Ada source code"
+msgstr "Ada 소스 코드"
+
+#: ../freedesktop.org.xml.in.h:22
+msgid "Adobe DNG negative"
+msgstr "어도비 DNG 네가티브"
+
+#: ../freedesktop.org.xml.in.h:23
+msgid "Adobe FrameMaker MIF document"
+msgstr "어도비 프레임메이커 MIF 문서"
+
+#: ../freedesktop.org.xml.in.h:24
+msgid "Adobe FrameMaker document"
+msgstr "어도비 프레임메이커 문서"
+
+#: ../freedesktop.org.xml.in.h:25
+msgid "Adobe FrameMaker font"
+msgstr "어도비 프레임메이커 글꼴"
+
+#: ../freedesktop.org.xml.in.h:26
+msgid "Adobe Illustrator document"
+msgstr "어도비 일러스트레이터 문서"
+
+#: ../freedesktop.org.xml.in.h:27
+msgid "Adobe font metrics"
+msgstr "어도비 글꼴 메트릭스"
+
+#: ../freedesktop.org.xml.in.h:28
+msgid "Alzip archive"
+msgstr "알집 압축 파일"
+
+#: ../freedesktop.org.xml.in.h:29
+msgid "Amiga SoundTracker audio"
+msgstr "Amiga SoundTracker 오디오"
+
+#: ../freedesktop.org.xml.in.h:30
+msgid "Android package"
+msgstr "안드로이드 패키지"
+
+#: ../freedesktop.org.xml.in.h:31
+msgid "Annodex Audio"
+msgstr "Annodex 오디오"
+
+#: ../freedesktop.org.xml.in.h:32
+msgid "Annodex Video"
+msgstr "Annodex 비디오"
+
+#: ../freedesktop.org.xml.in.h:33
+msgid "Annodex exchange format"
+msgstr "Annodex 교환 형식"
+
+#: ../freedesktop.org.xml.in.h:34
+msgid "AportisDoc document"
+msgstr "AportisDoc 문서"
+
+#: ../freedesktop.org.xml.in.h:35
+msgid "Apple disk image"
+msgstr "애플 디스크 이미지"
+
+#: ../freedesktop.org.xml.in.h:36
+msgid "Applix Graphics image"
+msgstr "Applix Graphics 그림"
+
+#: ../freedesktop.org.xml.in.h:37
+msgid "Applix Spreadsheets spreadsheet"
+msgstr "Applix 스프레드시트"
+
+#: ../freedesktop.org.xml.in.h:38
+msgid "Applix Words document"
+msgstr "Applix Words 문서"
+
+#: ../freedesktop.org.xml.in.h:39
+msgid "Atom syndication feed"
+msgstr "Atom 묶음 피드"
+
+#: ../freedesktop.org.xml.in.h:40
+msgid "AutoCAD image"
+msgstr "AutoCAD 그림"
+
+#: ../freedesktop.org.xml.in.h:41
+msgid "BCPIO document"
+msgstr "BCPIO 문서"
+
+#: ../freedesktop.org.xml.in.h:42
+msgid "BDF font"
+msgstr "BDF 글꼴"
+
+#: ../freedesktop.org.xml.in.h:43
+msgid "BibTeX document"
+msgstr "BibTeX 문서"
+
+#: ../freedesktop.org.xml.in.h:44
+msgid "BitTorrent seed file"
+msgstr "비트토렌트 시드 파일"
+
+#: ../freedesktop.org.xml.in.h:45
+msgid "Blender scene"
+msgstr "Blender 장면"
+
+#. http://en.wikipedia.org/wiki/Blu-ray_Disc
+#. http://www.blu-raydisc.com/Section-13470/Section-13890/Index.html
+#: ../freedesktop.org.xml.in.h:48
+msgid "Blu-ray video disc"
+msgstr "블루레이 비디오 디스크"
+
+#: ../freedesktop.org.xml.in.h:49
+msgid "Bzip archive"
+msgstr "BZIP 압축 파일"
+
+#: ../freedesktop.org.xml.in.h:50
+msgid "C header"
+msgstr "C 헤더"
+
+#: ../freedesktop.org.xml.in.h:51
+msgid "C shell script"
+msgstr "C쉘 스크립트"
+
+#: ../freedesktop.org.xml.in.h:52
+msgid "C source code"
+msgstr "C 소스 코드"
+
+#: ../freedesktop.org.xml.in.h:53
+msgid "C# source code"
+msgstr "C# 소스 코드"
+
+#: ../freedesktop.org.xml.in.h:54
+msgid "C++ header"
+msgstr "C++ 헤더"
+
+#: ../freedesktop.org.xml.in.h:55
+msgid "C++ source code"
+msgstr "C++ 소스 코드"
+
+#: ../freedesktop.org.xml.in.h:56
+msgid "CCITT G3 fax"
+msgstr "CCITT G3 팩스"
+
+#: ../freedesktop.org.xml.in.h:57
+msgid "CD Table Of Contents"
+msgstr "CD 내용 목록"
+
+#: ../freedesktop.org.xml.in.h:58
+msgid "CD image cuesheet"
+msgstr "CD 이미지 큐시트"
+
+#: ../freedesktop.org.xml.in.h:59
+msgid "CHM document"
+msgstr "CHM 문서"
+
+#: ../freedesktop.org.xml.in.h:60
+msgid "CMU raster image"
+msgstr "CMU 래스터 그림"
+
+#: ../freedesktop.org.xml.in.h:61
+msgid "CMake source code"
+msgstr "CMake 소스 코드"
+
+#: ../freedesktop.org.xml.in.h:62
+msgid "COBOL source file"
+msgstr "COBOL 소스 파일"
+
+#: ../freedesktop.org.xml.in.h:63
+msgid "CPIO archive"
+msgstr "CPIO 묶음 파일"
+
+#: ../freedesktop.org.xml.in.h:64
+msgid "CPIO archive (gzip-compressed)"
+msgstr "CPIO 묶음 파일 (GZIP 압축)"
+
+#: ../freedesktop.org.xml.in.h:65
+msgid "CSS stylesheet"
+msgstr "CSS 스타일시트"
+
+#: ../freedesktop.org.xml.in.h:66
+msgid "CSV document"
+msgstr "CSV 문서"
+
+#: ../freedesktop.org.xml.in.h:67
+msgid "Canon CR2 raw image"
+msgstr "캐논 CR2 원본 이미지"
+
+#: ../freedesktop.org.xml.in.h:68
+msgid "Canon CRW raw image"
+msgstr "캐논 CRW 원본 이미지"
+
+#: ../freedesktop.org.xml.in.h:69
+msgid "Certificate revocation list"
+msgstr "인증서 철회 목록"
+
+#: ../freedesktop.org.xml.in.h:70
+msgid "ChangeLog document"
+msgstr "ChangeLog 문서"
+
+#: ../freedesktop.org.xml.in.h:71
+msgid "Cisco VPN Settings"
+msgstr "Cisco VPN 설정"
+
+#: ../freedesktop.org.xml.in.h:72
+msgid "Citrix ICA settings file"
+msgstr "시트릭스 ICA 설정 파일"
+
+#: ../freedesktop.org.xml.in.h:73
+msgid "Commodore 64 audio"
+msgstr "Commodore 64 오디오"
+
+#: ../freedesktop.org.xml.in.h:74
+msgid "Computer Graphics Metafile"
+msgstr "컴퓨터 그래픽스 메타파일"
+
+#: ../freedesktop.org.xml.in.h:75
+msgid "Corel Draw drawing"
+msgstr "코렐 드로우 드로잉"
+
+#: ../freedesktop.org.xml.in.h:76
+msgid "D source code"
+msgstr "D 소스 코드"
+
+#: ../freedesktop.org.xml.in.h:77
+msgid "DAR archive"
+msgstr "DAR 묶음 파일"
+
+#: ../freedesktop.org.xml.in.h:78
+msgid "DCL script"
+msgstr "DCL 스크립트"
+
+#: ../freedesktop.org.xml.in.h:79
+msgid "DER/PEM/Netscape-encoded X.509 certificate"
+msgstr "DER/PEM/X.509로 인코드된 넷스케이프 인증서"
+
+#: ../freedesktop.org.xml.in.h:80
+msgid "DIB image"
+msgstr "DIB 그림"
+
+#: ../freedesktop.org.xml.in.h:81
+msgid "DICOM image"
+msgstr "DICOM 그림"
+
+#: ../freedesktop.org.xml.in.h:82
+msgid "DOS font"
+msgstr "도스 글꼴"
+
+#: ../freedesktop.org.xml.in.h:83
+msgid "DOS/Windows executable"
+msgstr "DOS/윈도우 실행파일"
+
+#: ../freedesktop.org.xml.in.h:84
+msgid "DPX image"
+msgstr "DPX 그림"
+
+#: ../freedesktop.org.xml.in.h:85
+msgid "DSSSL document"
+msgstr "DSSSL 문서"
+
+#: ../freedesktop.org.xml.in.h:86
+msgid "DTD file"
+msgstr "DTD 파일"
+
+#: ../freedesktop.org.xml.in.h:87
+msgid "DV video"
+msgstr "DV 비디오"
+
+#: ../freedesktop.org.xml.in.h:88
+msgid "DXF vector image"
+msgstr "DXF 벡터 그림"
+
+#: ../freedesktop.org.xml.in.h:89
+msgid "Debian package"
+msgstr "데비안 패키지"
+
+#: ../freedesktop.org.xml.in.h:90
+msgid "Dia diagram"
+msgstr "Dia 도표"
+
+#: ../freedesktop.org.xml.in.h:91
+msgid "Dia shape"
+msgstr "Dia 그림"
+
+#: ../freedesktop.org.xml.in.h:92
+msgid "DirectDraw surface"
+msgstr "DirectDraw 서피스"
+
+#: ../freedesktop.org.xml.in.h:93
+msgid "DjVu image"
+msgstr "DjVu 그림"
+
+#: ../freedesktop.org.xml.in.h:94
+msgid "DocBook document"
+msgstr "DocBook 문서"
+
+#: ../freedesktop.org.xml.in.h:95
+msgid "Dolby Digital audio"
+msgstr "돌비 디지털 오디오"
+
+#: ../freedesktop.org.xml.in.h:96
+msgid "Dreamcast ROM"
+msgstr "드림캐스트 롬"
+
+#: ../freedesktop.org.xml.in.h:97
+msgid "ECMAScript program"
+msgstr "ECMA스크립트 프로그램"
+
+#: ../freedesktop.org.xml.in.h:98
+msgid "EMF image"
+msgstr "EMF 그림"
+
+#: ../freedesktop.org.xml.in.h:99
+msgid "EPS image"
+msgstr "EPS 그림"
+
+#: ../freedesktop.org.xml.in.h:100
+msgid "EPS image (bzip-compressed)"
+msgstr "EPS 그림 (BZIP 압축)"
+
+#: ../freedesktop.org.xml.in.h:101
+msgid "EPS image (gzip-compressed)"
+msgstr "EPS 그림 (GZIP 압축)"
+
+#: ../freedesktop.org.xml.in.h:102
+msgid "EXR image"
+msgstr "EXR 그림"
+
+#: ../freedesktop.org.xml.in.h:103
+msgid "Egon Animator animation"
+msgstr "Egon 애니메이터"
+
+#: ../freedesktop.org.xml.in.h:104
+msgid "Eiffel source code"
+msgstr "Eiffel 소스 코드"
+
+#: ../freedesktop.org.xml.in.h:105
+msgid "Emacs Lisp source code"
+msgstr "Emacs Lisp 소스 코드"
+
+#: ../freedesktop.org.xml.in.h:106
+msgid "Enlightenment theme"
+msgstr "인라이트먼트 테마"
+
+#: ../freedesktop.org.xml.in.h:107
+msgid "Erlang source code"
+msgstr "Erlang 소스 코드"
+
+#: ../freedesktop.org.xml.in.h:108
+msgid "Excel 2007 binary spreadsheet"
+msgstr "엑셀 2007 바이너리 스프레드시트"
+
+#: ../freedesktop.org.xml.in.h:109
+msgid "Excel 2007 spreadsheet"
+msgstr "엑셀 2007 스프레드시트"
+
+#: ../freedesktop.org.xml.in.h:110
+msgid "Excel 2007 spreadsheet template"
+msgstr "엑셀 2007 스프레드쉬트 "
+
+#: ../freedesktop.org.xml.in.h:111
+msgid "Excel add-in"
+msgstr "엑셀 추가 기능"
+
+#: ../freedesktop.org.xml.in.h:112
+msgid "Excel macro-enabled spreadsheet"
+msgstr "엑셀 매크로 사용 스프레드시트"
+
+#: ../freedesktop.org.xml.in.h:113
+msgid "Excel macro-enabled spreadsheet template"
+msgstr "엑셀 매크로 사용 스프레드시트 서식"
+
+#: ../freedesktop.org.xml.in.h:114
+msgid "Excel spreadsheet"
+msgstr "엑셀 스프레드시트"
+
+#: ../freedesktop.org.xml.in.h:115
+msgid "FITS document"
+msgstr "FITS 문서"
+
+#: ../freedesktop.org.xml.in.h:116
+msgid "FLAC audio"
+msgstr "FLAC 오디오"
+
+#: ../freedesktop.org.xml.in.h:117
+msgid "FLIC animation"
+msgstr "FLIC 동화상"
+
+#: ../freedesktop.org.xml.in.h:118
+msgid "FLTK Fluid file"
+msgstr "FLTK 파일"
+
+#: ../freedesktop.org.xml.in.h:119
+msgid "FPX image"
+msgstr "FPX 그림"
+
+#: ../freedesktop.org.xml.in.h:120
+msgid "FastTracker II audio"
+msgstr "FastTracker II 오디오"
+
+#: ../freedesktop.org.xml.in.h:121
+msgid "FictionBook document"
+msgstr "FictionBook 문서"
+
+#: ../freedesktop.org.xml.in.h:122
+msgid "Flash video"
+msgstr "Flash 비디오"
+
+#: ../freedesktop.org.xml.in.h:123
+msgid "Fortran source code"
+msgstr "포트란 소스 코드"
+
+#: ../freedesktop.org.xml.in.h:124
+msgid "Fuji RAF raw image"
+msgstr "후지 RAF 원본 이미지"
+
+#: ../freedesktop.org.xml.in.h:125
+msgid "G3 fax image"
+msgstr "G3 팩스 그림"
+
+#: ../freedesktop.org.xml.in.h:126
+msgid "GDBM database"
+msgstr "GDBM 데이터베이스"
+
+#: ../freedesktop.org.xml.in.h:127
+msgid "GEDCOM family history"
+msgstr "GEDCOM family history"
+
+#: ../freedesktop.org.xml.in.h:128
+msgid "GIF image"
+msgstr "GIF 그림"
+
+#: ../freedesktop.org.xml.in.h:129
+msgid "GIMP image"
+msgstr "GIMP 그림"
+
+#: ../freedesktop.org.xml.in.h:130
+msgid "GMC link"
+msgstr "GMC 연결"
+
+#: ../freedesktop.org.xml.in.h:131
+msgid "GNU Oleo spreadsheet"
+msgstr "GNU Oleo 스프레드시트"
+
+#: ../freedesktop.org.xml.in.h:132
+msgid "GNU mail message"
+msgstr "GNU 메일 메시지"
+
+#: ../freedesktop.org.xml.in.h:133
+msgid "GNUnet search file"
+msgstr "GNUnet 검색 파일"
+
+#: ../freedesktop.org.xml.in.h:134
+msgid "GSM 06.10 audio"
+msgstr "GSM 06.10 오디오"
+
+#: ../freedesktop.org.xml.in.h:135
+msgid "GTKtalog catalog"
+msgstr "GTKtalog 카탈로그"
+
+#: ../freedesktop.org.xml.in.h:136
+msgid "Game Boy Advance ROM"
+msgstr "게임보이 어드밴스 롬"
+
+#: ../freedesktop.org.xml.in.h:137
+msgid "Game Boy ROM"
+msgstr "게임보이 롬"
+
+#. Translate this to Megadrive if the console was known as such in your locale
+#. Should be Megadrive in all but en_US:
+#. http://en.wikipedia.org/wiki/Megadrive#History
+#: ../freedesktop.org.xml.in.h:140
+msgid "Genesis ROM"
+msgstr "제네시스 롬"
+
+#: ../freedesktop.org.xml.in.h:141
+msgid "Glade project"
+msgstr "Glade 프로젝트"
+
+#: ../freedesktop.org.xml.in.h:142
+msgid "GnuCash financial data"
+msgstr "GnuCash 재정 자료"
+
+#: ../freedesktop.org.xml.in.h:143
+msgid "Gnumeric spreadsheet"
+msgstr "Gnumeric 스프레드시트"
+
+#: ../freedesktop.org.xml.in.h:144
+msgid "Gnuplot document"
+msgstr "Gnuplot 문서"
+
+#: ../freedesktop.org.xml.in.h:145
+msgid "Go source code"
+msgstr "Go 소스 코드"
+
+#: ../freedesktop.org.xml.in.h:146
+msgid "Google Video Pointer"
+msgstr "구글 비디오 포인터"
+
+#: ../freedesktop.org.xml.in.h:147
+msgid "Graphite scientific graph"
+msgstr "Graphite 공학 그래프"
+
+#: ../freedesktop.org.xml.in.h:148
+msgid "Graphviz DOT graph"
+msgstr "Graphviz DOT 그래프"
+
+#: ../freedesktop.org.xml.in.h:149
+msgid "Gzip archive"
+msgstr "GZIP 압축 파일"
+
+#. http://en.wikipedia.org/wiki/HD_DVD
+#. http://www.dvdafteredit.com/wiki/The_HVDVD_TS_Folder
+#: ../freedesktop.org.xml.in.h:152
+msgid "HD DVD video disc"
+msgstr "HD DVD 비디오 디스크"
+
+#: ../freedesktop.org.xml.in.h:153
+msgid "HDF document"
+msgstr "HDF 문서"
+
+#: ../freedesktop.org.xml.in.h:154
+msgid "HPGL file"
+msgstr "HPGL 파일"
+
+#: ../freedesktop.org.xml.in.h:155
+msgid "HTML document"
+msgstr "HTML 문서"
+
+#: ../freedesktop.org.xml.in.h:156
+msgid "HTTP Live Streaming playlist"
+msgstr "HTTP 라이브 스트리밍 재생 목록"
+
+#: ../freedesktop.org.xml.in.h:157
+msgid "Haansoft Hangul document"
+msgstr "한소프트 한글 문서"
+
+#: ../freedesktop.org.xml.in.h:158
+msgid "Haansoft Hangul document template"
+msgstr "한소프트 한글 문서 서식"
+
+#: ../freedesktop.org.xml.in.h:159
+msgid "Haskell source code"
+msgstr "Haskell 소스 코드"
+
+#: ../freedesktop.org.xml.in.h:160
+msgid "ICC profile"
+msgstr "ICC 프로파일"
+
+#: ../freedesktop.org.xml.in.h:161
+msgid "IDL document"
+msgstr "IDL 문서"
+
+#: ../freedesktop.org.xml.in.h:162
+msgid "IEF image"
+msgstr "IEF 그림"
+
+#: ../freedesktop.org.xml.in.h:163
+msgid "IFF image"
+msgstr "IFF 그림"
+
+#: ../freedesktop.org.xml.in.h:164
+msgid "ILBM image"
+msgstr "ILBM 그림"
+
+#: ../freedesktop.org.xml.in.h:165
+msgid "ISI video"
+msgstr "ISI 비디오"
+
+#: ../freedesktop.org.xml.in.h:166
+msgid "IT 8.7 color calibration file"
+msgstr "IT 8.7 색 조율 파일"
+
+#: ../freedesktop.org.xml.in.h:167
+msgid "Impulse Tracker audio"
+msgstr "Impulse Tracker 오디오"
+
+#: ../freedesktop.org.xml.in.h:168
+msgid "Internet shortcut"
+msgstr "인터넷 단축아이콘"
+
+#: ../freedesktop.org.xml.in.h:169
+msgid "JAD document"
+msgstr "JAD 문서"
+
+#: ../freedesktop.org.xml.in.h:170
+msgid "JBuilder project"
+msgstr "JBuilder 프로젝트"
+
+#: ../freedesktop.org.xml.in.h:171
+msgid "JET database"
+msgstr "JET 데이터베이스"
+
+#: ../freedesktop.org.xml.in.h:172
+msgid "JNG image"
+msgstr "JNG 그림"
+
+#: ../freedesktop.org.xml.in.h:173
+msgid "JNLP file"
+msgstr "JNLP 파일"
+
+#: ../freedesktop.org.xml.in.h:174
+msgid "JPEG image"
+msgstr "JPEG 그림"
+
+#: ../freedesktop.org.xml.in.h:175
+msgid "JPEG-2000 image"
+msgstr "JPEG-2000 그림"
+
+#: ../freedesktop.org.xml.in.h:176
+msgid "Java JCE keystore"
+msgstr "wkqk JCE 키스토어"
+
+#: ../freedesktop.org.xml.in.h:177
+msgid "Java archive"
+msgstr "자바 묶음 파일"
+
+#: ../freedesktop.org.xml.in.h:178
+msgid "Java byte code"
+msgstr "자바 바이트코드"
+
+#: ../freedesktop.org.xml.in.h:179
+msgid "Java class"
+msgstr "자바 클래스"
+
+#: ../freedesktop.org.xml.in.h:180
+msgid "Java keystore"
+msgstr "자바 키스토어"
+
+#: ../freedesktop.org.xml.in.h:181
+msgid "Java source code"
+msgstr "자바 소스 코드"
+
+#: ../freedesktop.org.xml.in.h:182
+msgid "JavaFX video"
+msgstr "자바FX 비디오"
+
+#: ../freedesktop.org.xml.in.h:183
+msgid "JavaScript program"
+msgstr "자바스크립트 프로그램"
+
+#: ../freedesktop.org.xml.in.h:184
+msgid "KChart chart"
+msgstr "KChart 차트"
+
+#: ../freedesktop.org.xml.in.h:185
+msgid "KFormula formula"
+msgstr "KFormula 수식"
+
+#: ../freedesktop.org.xml.in.h:186
+msgid "KIllustrator drawing"
+msgstr "KIllustrator 그림"
+
+#: ../freedesktop.org.xml.in.h:187
+msgid "KML geographic compressed data"
+msgstr "KML 지리 정보 압축 데이터"
+
+#: ../freedesktop.org.xml.in.h:188
+msgid "KML geographic data"
+msgstr "KML 지리 정보 데이터"
+
+#: ../freedesktop.org.xml.in.h:189
+msgid "KPovModeler scene"
+msgstr "KPovModeler 장면"
+
+#: ../freedesktop.org.xml.in.h:190
+msgid "KPresenter presentation"
+msgstr "KPresenter 프리젠테이션"
+
+#: ../freedesktop.org.xml.in.h:191
+msgid "KSpread spreadsheet"
+msgstr "KSpread 스프레드시트"
+
+#: ../freedesktop.org.xml.in.h:192
+msgid "KSpread spreadsheet (encrypted)"
+msgstr "암호화된 KSpread 스프레드시트"
+
+#: ../freedesktop.org.xml.in.h:193
+msgid "KSysV init package"
+msgstr "KSysV init 패키지"
+
+#: ../freedesktop.org.xml.in.h:194
+msgid "KWord document"
+msgstr "KWord 문서"
+
+#: ../freedesktop.org.xml.in.h:195
+msgid "KWord document (encrypted)"
+msgstr "암호화된 KWord 문서"
+
+#: ../freedesktop.org.xml.in.h:196
+msgid "Karbon14 drawing"
+msgstr "Karbon14 그림"
+
+#: ../freedesktop.org.xml.in.h:197
+msgid "Kexi database file-based project"
+msgstr "Kexi 데이터베이스 파일 사용 프로젝트"
+
+#: ../freedesktop.org.xml.in.h:198
+msgid "Kexi settings for database server connection"
+msgstr "Kexi 데이터베이스 서버 연결 설정"
+
+#: ../freedesktop.org.xml.in.h:199
+msgid "Kivio flowchart"
+msgstr "Kivio 흐름도"
+
+#: ../freedesktop.org.xml.in.h:200
+msgid "Kodak DCR raw image"
+msgstr "코닥 DCR 원본 이미지"
+
+#: ../freedesktop.org.xml.in.h:201
+msgid "Kodak K25 raw image"
+msgstr "코닥 K25 원본 이미지"
+
+#: ../freedesktop.org.xml.in.h:202
+msgid "Kodak KDC raw image"
+msgstr "코닥 KDC 원본 이미지"
+
+#: ../freedesktop.org.xml.in.h:203
+msgid "Kontour drawing"
+msgstr "Kontour 그림"
+
+#: ../freedesktop.org.xml.in.h:204
+msgid "Krita document"
+msgstr "Krita 문서"
+
+#: ../freedesktop.org.xml.in.h:205
+msgid "Kugar document"
+msgstr "Kugar 문서"
+
+#: ../freedesktop.org.xml.in.h:206
+msgid "LDIF address book"
+msgstr "LDIF 주소록"
+
+#: ../freedesktop.org.xml.in.h:207
+msgid "LHA archive"
+msgstr "LHA 압축 파일"
+
+#: ../freedesktop.org.xml.in.h:208
+msgid "LHS source code"
+msgstr "LHS 소스 코드"
+
+#: ../freedesktop.org.xml.in.h:209
+msgid "LHZ archive"
+msgstr "LHZ 압축 파일"
+
+#: ../freedesktop.org.xml.in.h:210
+msgid "LIBGRX font"
+msgstr "LIBGRX 글꼴"
+
+#: ../freedesktop.org.xml.in.h:211
+msgid "LZMA archive"
+msgstr "LZMA 압축 파일"
+
+#: ../freedesktop.org.xml.in.h:212
+msgid "LZO archive"
+msgstr "LZO 압축 파일"
+
+#: ../freedesktop.org.xml.in.h:213
+msgid "LightWave object"
+msgstr "LightWave 개체"
+
+#: ../freedesktop.org.xml.in.h:214
+msgid "LightWave scene"
+msgstr "LightWave 장면"
+
+#: ../freedesktop.org.xml.in.h:215
+msgid "Lilypond music sheet"
+msgstr "Lilypond 음악 시트"
+
+#: ../freedesktop.org.xml.in.h:216
+msgid "Linux PSF console font"
+msgstr "리눅스 PSF 콘솔 글꼴"
+
+#: ../freedesktop.org.xml.in.h:217
+msgid "Linux PSF console font (gzip-compressed)"
+msgstr "리눅스 PSF 콘솔 글꼴 (GZIP 압축)"
+
+#: ../freedesktop.org.xml.in.h:218
+msgid "Lotus 1-2-3 spreadsheet"
+msgstr "Lotus 1-2-3 스프레드시트"
+
+#: ../freedesktop.org.xml.in.h:219
+msgid "Lotus AmiPro document"
+msgstr "Lotus AmiPro 문서"
+
+#: ../freedesktop.org.xml.in.h:220
+msgid "Lrzip archive"
+msgstr "LRZIP 압축 파일"
+
+#: ../freedesktop.org.xml.in.h:221
+msgid "Lua script"
+msgstr "Lua 스크립트"
+
+#: ../freedesktop.org.xml.in.h:222
+msgid "LyX document"
+msgstr "LyX 문서"
+
+#: ../freedesktop.org.xml.in.h:223
+msgid "Lzip archive"
+msgstr "LZIP 압축 파일"
+
+#: ../freedesktop.org.xml.in.h:224
+msgid "M4 macro"
+msgstr "M4 매크로"
+
+#: ../freedesktop.org.xml.in.h:225
+msgid "MATLAB script/function"
+msgstr "MATLAB 스크립트/함수"
+
+#: ../freedesktop.org.xml.in.h:226
+msgid "MIDI audio"
+msgstr "미디 오디오"
+
+#: ../freedesktop.org.xml.in.h:227
+msgid "MNG animation"
+msgstr "MNG 동화상"
+
+#: ../freedesktop.org.xml.in.h:228
+msgid "MP2 audio"
+msgstr "MP2 오디오"
+
+#: ../freedesktop.org.xml.in.h:229
+msgid "MP3 ShoutCast playlist"
+msgstr "MP3 ShoutCast 재생 목록"
+
+#: ../freedesktop.org.xml.in.h:230
+msgid "MP3 audio"
+msgstr "MP3 오디오"
+
+#: ../freedesktop.org.xml.in.h:231
+msgid "MP3 audio (streamed)"
+msgstr "MP3 오디오 (스트림)"
+
+#: ../freedesktop.org.xml.in.h:232
+msgid "MPEG video"
+msgstr "MPEG 비디오"
+
+#: ../freedesktop.org.xml.in.h:233
+msgid "MPEG video (streamed)"
+msgstr "MPEG 비디오 (스트리밍)"
+
+#: ../freedesktop.org.xml.in.h:234
+msgid "MPEG-2 transport stream"
+msgstr "MPEG-2 전송 스트림"
+
+#: ../freedesktop.org.xml.in.h:235
+msgid "MPEG-4 audio"
+msgstr "MPEG-4 오디오"
+
+#: ../freedesktop.org.xml.in.h:236
+msgid "MPEG-4 audio book"
+msgstr "MPEG-4 오디오북"
+
+#: ../freedesktop.org.xml.in.h:237
+msgid "MPEG-4 video"
+msgstr "MPEG-4 비디오"
+
+#: ../freedesktop.org.xml.in.h:238
+msgid "MPSub subtitles"
+msgstr "MPSub 자막 파일"
+
+#: ../freedesktop.org.xml.in.h:239
+msgid "MRML playlist"
+msgstr "MRML 재생 목록"
+
+#: ../freedesktop.org.xml.in.h:240
+msgid "MSX ROM"
+msgstr "MSX 롬"
+
+#: ../freedesktop.org.xml.in.h:241
+msgid "MXF video"
+msgstr "MXF 비디오"
+
+#: ../freedesktop.org.xml.in.h:242
+msgid "MacOS X icon"
+msgstr "MacOS X 아이콘"
+
+#: ../freedesktop.org.xml.in.h:243
+msgid "MacPaint Bitmap image"
+msgstr "맥페인트 비트맵 그림"
+
+#: ../freedesktop.org.xml.in.h:244
+msgid "Macintosh AppleDouble-encoded file"
+msgstr "맥킨토시 AppleDouble-encoded 파일"
+
+#: ../freedesktop.org.xml.in.h:245
+msgid "Macintosh BinHex-encoded file"
+msgstr "맥킨토시 BinHex 인코딩된 압축 파일"
+
+#: ../freedesktop.org.xml.in.h:246
+msgid "Macintosh MacBinary file"
+msgstr "MacBinary 파일"
+
+#: ../freedesktop.org.xml.in.h:247
+msgid "Macintosh Quickdraw/PICT drawing"
+msgstr "맥킨토시 Quickdraw/PICT 그림"
+
+#: ../freedesktop.org.xml.in.h:248
+msgid "MagicPoint presentation"
+msgstr "MagicPoint 프리젠테이션"
+
+#: ../freedesktop.org.xml.in.h:249
+msgid "Makefile"
+msgstr "Makefile"
+
+#: ../freedesktop.org.xml.in.h:250
+msgid "Managed Object Format"
+msgstr "관리되는 오브젝트 형식"
+
+#: ../freedesktop.org.xml.in.h:251
+msgid "Markaby script"
+msgstr "Markaby 스크립트"
+
+#: ../freedesktop.org.xml.in.h:252
+msgid "Markdown document"
+msgstr ""
+
+#: ../freedesktop.org.xml.in.h:253
+msgid "MathML document"
+msgstr "MathML 문서"
+
+#: ../freedesktop.org.xml.in.h:254
+msgid "Mathematica Notebook"
+msgstr "Mathematica 노트북"
+
+#: ../freedesktop.org.xml.in.h:255
+msgid "Matroska audio"
+msgstr "매트로스카 오디오"
+
+#: ../freedesktop.org.xml.in.h:256
+msgid "Matroska stream"
+msgstr "매트로스카 스트림"
+
+#: ../freedesktop.org.xml.in.h:257
+msgid "Matroska video"
+msgstr "매트로스카 비디오"
+
+#: ../freedesktop.org.xml.in.h:258
+msgid "Metalink file"
+msgstr "Metalink 파일"
+
+#: ../freedesktop.org.xml.in.h:259
+msgid "MicroDVD subtitles"
+msgstr "MicroDVD 자막 파일"
+
+#: ../freedesktop.org.xml.in.h:260
+msgid "Microsoft ASX playlist"
+msgstr "마이크로소프트 ASX 재생 목록"
+
+#: ../freedesktop.org.xml.in.h:261
+msgid "Microsoft Cabinet archive"
+msgstr "마이크로소프트 캐비넛 묶음"
+
+#: ../freedesktop.org.xml.in.h:262
+msgid "Microsoft Document Imaging format"
+msgstr "마이크로소프트 문서 이미지 형식"
+
+#: ../freedesktop.org.xml.in.h:263
+msgid "Microsoft Windows theme pack"
+msgstr "마이크로소프트 윈도우 테마 패키지"
+
+#: ../freedesktop.org.xml.in.h:264
+msgid "Microsoft Works document"
+msgstr "마이크로소프트 웍스 문서"
+
+#: ../freedesktop.org.xml.in.h:265
+msgid "Microsoft icon"
+msgstr "마이크로소프트 아이콘"
+
+#: ../freedesktop.org.xml.in.h:266
+msgid "MiniPSF audio"
+msgstr "MiniPSF 오디오"
+
+#: ../freedesktop.org.xml.in.h:267
+msgid "Minolta MRW raw image"
+msgstr "미놀타 MRW 원본 이미지"
+
+#: ../freedesktop.org.xml.in.h:268
+msgid "Mobipocket e-book"
+msgstr "Mobipocket 이북"
+
+#: ../freedesktop.org.xml.in.h:269
+msgid "Monkey's audio"
+msgstr "Monkey's 오디오"
+
+#: ../freedesktop.org.xml.in.h:270
+msgid "Mozilla bookmarks"
+msgstr "모질라 책갈피"
+
+#: ../freedesktop.org.xml.in.h:271
+msgid "Mup publication"
+msgstr "Mup 출판"
+
+#: ../freedesktop.org.xml.in.h:272
+msgid "Musepack audio"
+msgstr "Musepack 오디오"
+
+#. Translate this to Famicom if the console was known as such in your locale
+#: ../freedesktop.org.xml.in.h:274
+msgid "NES ROM"
+msgstr "NES 롬"
+
+#: ../freedesktop.org.xml.in.h:275
+msgid "NFO document"
+msgstr "NFO 문서"
+
+#: ../freedesktop.org.xml.in.h:276
+msgid "NIFF image"
+msgstr "NIFF 그림"
+
+#: ../freedesktop.org.xml.in.h:277
+msgid "Nautilus link"
+msgstr "노틸러스 링크"
+
+#: ../freedesktop.org.xml.in.h:278
+msgid "Network Packet Capture"
+msgstr "네트워크 패킷 캡처"
+
+#: ../freedesktop.org.xml.in.h:279
+msgid "NewzBin usenet index"
+msgstr ""
+
+#: ../freedesktop.org.xml.in.h:280
+msgid "Nikon NEF raw image"
+msgstr "니콘 NEF 원본 이미지"
+
+#: ../freedesktop.org.xml.in.h:281
+msgid "Nintendo DS ROM"
+msgstr "닌텐도 DS 롬"
+
+#: ../freedesktop.org.xml.in.h:282
+msgid "Nintendo64 ROM"
+msgstr "닌텐도 64 롬"
+
+#: ../freedesktop.org.xml.in.h:283
+msgid "NullSoft video"
+msgstr "널소프트 비디오"
+
+#: ../freedesktop.org.xml.in.h:284
+msgid "OCL file"
+msgstr "OCL 파일"
+
+#: ../freedesktop.org.xml.in.h:285
+msgid "OCaml source code"
+msgstr "OCaml 소스 코드"
+
+#: ../freedesktop.org.xml.in.h:286
+msgid "ODA document"
+msgstr "ODA 문서"
+
+#: ../freedesktop.org.xml.in.h:287
+msgid "ODB database"
+msgstr "ODB 데이터베이스"
+
+#: ../freedesktop.org.xml.in.h:288
+msgid "ODC chart"
+msgstr "ODC 차트"
+
+#: ../freedesktop.org.xml.in.h:289
+msgid "ODC template"
+msgstr "ODC 문서 서식"
+
+#: ../freedesktop.org.xml.in.h:290
+msgid "ODF formula"
+msgstr "ODF 수식"
+
+#: ../freedesktop.org.xml.in.h:291
+msgid "ODF template"
+msgstr "ODF 문서 서식"
+
+#: ../freedesktop.org.xml.in.h:292
+msgid "ODG drawing"
+msgstr "ODG 드로잉"
+
+#: ../freedesktop.org.xml.in.h:293
+msgid "ODG drawing (Flat XML)"
+msgstr "ODG 드로잉 (단일 XML)"
+
+#: ../freedesktop.org.xml.in.h:294
+msgid "ODG template"
+msgstr "ODG 문서 서식"
+
+#: ../freedesktop.org.xml.in.h:295
+msgid "ODI image"
+msgstr "ODI 그림"
+
+#: ../freedesktop.org.xml.in.h:296
+msgid "ODM document"
+msgstr "ODM 문서"
+
+#: ../freedesktop.org.xml.in.h:297
+msgid "ODP presentation"
+msgstr "ODP 프리젠테이션"
+
+#: ../freedesktop.org.xml.in.h:298
+msgid "ODP presentation (Flat XML)"
+msgstr "ODP 프리젠테이션 (단일 XML)"
+
+#: ../freedesktop.org.xml.in.h:299
+msgid "ODP template"
+msgstr "ODP 문서 서식"
+
+#: ../freedesktop.org.xml.in.h:300
+msgid "ODS spreadsheet"
+msgstr "ODS 스프레드시트"
+
+#: ../freedesktop.org.xml.in.h:301
+msgid "ODS spreadsheet (Flat XML)"
+msgstr "ODS 스프레드시트 (단일 XML)"
+
+#: ../freedesktop.org.xml.in.h:302
+msgid "ODS template"
+msgstr "ODS 문서 서식"
+
+#: ../freedesktop.org.xml.in.h:303
+msgid "ODT document"
+msgstr "ODT 문서"
+
+#: ../freedesktop.org.xml.in.h:304
+msgid "ODT document (Flat XML)"
+msgstr "ODT 문서 (단일 XML)"
+
+#: ../freedesktop.org.xml.in.h:305
+msgid "ODT template"
+msgstr "ODT 문서 서식"
+
+#: ../freedesktop.org.xml.in.h:306
+msgid "OGM video"
+msgstr "OGM 비디오"
+
+#: ../freedesktop.org.xml.in.h:307
+msgid "OLE2 compound document storage"
+msgstr "OLE2 복합 문서"
+
+#: ../freedesktop.org.xml.in.h:308
+msgid "OOC source code"
+msgstr "OOC 소스 코드"
+
+#: ../freedesktop.org.xml.in.h:309
+msgid "OPML syndication feed"
+msgstr "OPML 묶음 feed"
+
+#: ../freedesktop.org.xml.in.h:310
+msgid "OTH template"
+msgstr "OTH 문서 서식"
+
+#: ../freedesktop.org.xml.in.h:311
+msgid "Objective-C source code"
+msgstr "Objective-C 소스 코드"
+
+#: ../freedesktop.org.xml.in.h:312
+msgid "Office drawing"
+msgstr "오피스 드로잉"
+
+#: ../freedesktop.org.xml.in.h:313
+msgid "Ogg Audio"
+msgstr "Ogg 오디오"
+
+#: ../freedesktop.org.xml.in.h:314
+msgid "Ogg FLAC audio"
+msgstr "Ogg FLAC 오디오"
+
+#: ../freedesktop.org.xml.in.h:315
+msgid "Ogg Speex audio"
+msgstr "Ogg Speex 오디오"
+
+#: ../freedesktop.org.xml.in.h:316
+msgid "Ogg Theora video"
+msgstr "Ogg Theora 비디오"
+
+#: ../freedesktop.org.xml.in.h:317
+msgid "Ogg Video"
+msgstr "Ogg 비디오"
+
+#: ../freedesktop.org.xml.in.h:318
+msgid "Ogg Vorbis audio"
+msgstr "Ogg Vorbis 오디오"
+
+#: ../freedesktop.org.xml.in.h:319
+msgid "Ogg multimedia file"
+msgstr "Ogg 멀티미디어 파일"
+
+#: ../freedesktop.org.xml.in.h:320
+msgid "Olympus ORF raw image"
+msgstr "올림푸스 ORF 원본 이미지"
+
+#: ../freedesktop.org.xml.in.h:321
+msgid "OpenOffice Calc spreadsheet"
+msgstr "OpenOffice Calc 스프레드시트"
+
+#: ../freedesktop.org.xml.in.h:322
+msgid "OpenOffice Calc template"
+msgstr "OpenOffice Calc 스프레드시트 문서 서식"
+
+#: ../freedesktop.org.xml.in.h:323
+msgid "OpenOffice Draw drawing"
+msgstr "OpenOffice Draw 그림"
+
+#: ../freedesktop.org.xml.in.h:324
+msgid "OpenOffice Draw template"
+msgstr "OpenOffice Draw 그림 문서 서식"
+
+#: ../freedesktop.org.xml.in.h:325
+msgid "OpenOffice Impress presentation"
+msgstr "OpenOffice Impress 프리젠테이션"
+
+#: ../freedesktop.org.xml.in.h:326
+msgid "OpenOffice Impress template"
+msgstr "OpenOffice Impress 프리젠테이션 문서 서식"
+
+#: ../freedesktop.org.xml.in.h:327
+msgid "OpenOffice Math formula"
+msgstr "OpenOffice Math 수식"
+
+#: ../freedesktop.org.xml.in.h:328
+msgid "OpenOffice Writer document"
+msgstr "OpenOffice Writer 문서"
+
+#: ../freedesktop.org.xml.in.h:329
+msgid "OpenOffice Writer global document"
+msgstr "OpenOffice Writer 글로벌 문서"
+
+#: ../freedesktop.org.xml.in.h:330
+msgid "OpenOffice Writer template"
+msgstr "OpenOffice Writer 문서 서식"
+
+#: ../freedesktop.org.xml.in.h:331
+msgid "OpenOffice.org extension"
+msgstr "OpenOffice.org 확장"
+
+#: ../freedesktop.org.xml.in.h:332
+msgid "OpenRaster archiving image"
+msgstr "OpenRaster 압축 이미지"
+
+#: ../freedesktop.org.xml.in.h:333
+msgid "OpenType font"
+msgstr "오픈타입 글꼴"
+
+#: ../freedesktop.org.xml.in.h:334
+msgid "PAK archive"
+msgstr "PAK 묶음 파일"
+
+#: ../freedesktop.org.xml.in.h:335
+msgid "PBM image"
+msgstr "PBM 그림"
+
+#: ../freedesktop.org.xml.in.h:336
+msgid "PCD image"
+msgstr "PCD 그림"
+
+#: ../freedesktop.org.xml.in.h:337
+msgid "PCF font"
+msgstr "PCF 글꼴"
+
+#: ../freedesktop.org.xml.in.h:338
+msgid "PCL file"
+msgstr "PCL 파일"
+
+#: ../freedesktop.org.xml.in.h:339
+msgid "PCM audio"
+msgstr "PCM 오디오"
+
+#: ../freedesktop.org.xml.in.h:340
+msgid "PCX image"
+msgstr "PCX 그림"
+
+#: ../freedesktop.org.xml.in.h:341
+msgid "PDF document"
+msgstr "PDF 문서"
+
+#: ../freedesktop.org.xml.in.h:342
+msgid "PDF document (XZ-compressed)"
+msgstr "PDF 문서 (XZ 압축)"
+
+#: ../freedesktop.org.xml.in.h:343
+msgid "PDF document (bzip-compressed)"
+msgstr "PDF 문서 (BZIP 압축)"
+
+#: ../freedesktop.org.xml.in.h:344
+msgid "PDF document (gzip-compressed)"
+msgstr "PDF 문서 (GZIP 압축)"
+
+#: ../freedesktop.org.xml.in.h:345
+msgid "PEF executable"
+msgstr "PEF 실행파일"
+
+#: ../freedesktop.org.xml.in.h:346
+msgid "PGM image"
+msgstr "PGM 그림"
+
+#: ../freedesktop.org.xml.in.h:347
+msgid "PGN chess game notation"
+msgstr "PGN 체스게임 기보"
+
+#: ../freedesktop.org.xml.in.h:348
+msgid "PGP keys"
+msgstr "PGP 키"
+
+#: ../freedesktop.org.xml.in.h:349
+msgid "PGP/MIME-encrypted message header"
+msgstr "PGP/MIME으로 암호화된 메시지 헤더"
+
+#: ../freedesktop.org.xml.in.h:350
+msgid "PHP script"
+msgstr "PHP 스크립트"
+
+#: ../freedesktop.org.xml.in.h:351
+msgid "PKCS#10 certification request"
+msgstr "PKCS#10 인증서 요청"
+
+#: ../freedesktop.org.xml.in.h:352
+msgid "PKCS#12 certificate bundle"
+msgstr "PKCS#12 인증서 묶음"
+
+#: ../freedesktop.org.xml.in.h:353
+msgid "PKCS#7 certificate bundle"
+msgstr "PKCS#7 인증서 묶음"
+
+#: ../freedesktop.org.xml.in.h:354
+msgid "PKCS#8 private key"
+msgstr "PKCS#8 개인 키"
+
+#: ../freedesktop.org.xml.in.h:355
+msgid "PNG image"
+msgstr "PNG 그림"
+
+#: ../freedesktop.org.xml.in.h:356
+msgid "PNM image"
+msgstr "PNM 그림"
+
+#: ../freedesktop.org.xml.in.h:357
+msgid "PPM image"
+msgstr "PPM 그림"
+
+#: ../freedesktop.org.xml.in.h:358
+msgid "PS document"
+msgstr "PS 문서"
+
+#: ../freedesktop.org.xml.in.h:359
+msgid "PSF audio"
+msgstr "PSF 오디오"
+
+#: ../freedesktop.org.xml.in.h:360
+msgid "PSFlib audio library"
+msgstr "PSFlib 오디오 라이브러리"
+
+#: ../freedesktop.org.xml.in.h:361
+msgid "Pack200 Java archive"
+msgstr "Pack200 자바 묶음 파일"
+
+#: ../freedesktop.org.xml.in.h:362
+msgid "Palm OS database"
+msgstr "팜OS 데이터베이스"
+
+#: ../freedesktop.org.xml.in.h:363
+msgid "Panasonic raw image"
+msgstr "파나소닉 원본 이미지"
+
+#: ../freedesktop.org.xml.in.h:364
+msgid "Panasonic raw2 image"
+msgstr "파나소닉 원본 이미지 2"
+
+#: ../freedesktop.org.xml.in.h:365
+msgid "Parchive archive"
+msgstr "Parchive 묶음 파일"
+
+#: ../freedesktop.org.xml.in.h:366
+msgid "Pascal source code"
+msgstr "파스칼 소스 코드"
+
+#: ../freedesktop.org.xml.in.h:367
+msgid "Pathetic Writer document"
+msgstr "Pathetic Writer 문서"
+
+#: ../freedesktop.org.xml.in.h:368
+msgid "Pentax PEF raw image"
+msgstr "펜탁스 PEF 원본 이미지"
+
+#: ../freedesktop.org.xml.in.h:369
+msgid "Perl script"
+msgstr "펄 스크립트"
+
+#: ../freedesktop.org.xml.in.h:370
+msgid "Photoshop image"
+msgstr "포토샵 이미지"
+
+#. TRANSLATORS: This is a brand-name, not a generic term. Please see
+#. http://en.wikipedia.org/wiki/Picture_CD
+#. http://www.re.org/kristin/picturecd.html
+#: ../freedesktop.org.xml.in.h:374
+msgid "Picture CD"
+msgstr "Picture CD"
+
+#: ../freedesktop.org.xml.in.h:375
+msgid "PkiPath certification path"
+msgstr "PkiPath 인증서 요청"
+
+#: ../freedesktop.org.xml.in.h:376
+msgid "PlanPerfect spreadsheet"
+msgstr "PlanPerfect 스프레드시트"
+
+#: ../freedesktop.org.xml.in.h:377
+msgid "Plucker document"
+msgstr "Plucker 문서"
+
+#: ../freedesktop.org.xml.in.h:378
+msgid "Pocket Word document"
+msgstr "Pocket Word 문서"
+
+#: ../freedesktop.org.xml.in.h:379
+msgid "PostScript document (bzip-compressed)"
+msgstr "포스트스크립트 문서 (BZIP 압축)"
+
+#: ../freedesktop.org.xml.in.h:380
+msgid "PostScript document (gzip-compressed)"
+msgstr "포스트스크립트 문서 (GZIP 압축)"
+
+#: ../freedesktop.org.xml.in.h:381
+msgid "Postscript type-1 font"
+msgstr "포스트스크립트 Type-1 글꼴"
+
+#: ../freedesktop.org.xml.in.h:382
+msgid "PowerPoint 2007 presentation"
+msgstr "파워포인트 2007 프리젠테이션"
+
+#: ../freedesktop.org.xml.in.h:383
+msgid "PowerPoint 2007 presentation template"
+msgstr "파워포인트 2007 프리젠테이션 서식"
+
+#: ../freedesktop.org.xml.in.h:384
+msgid "PowerPoint 2007 show"
+msgstr "파워포인트 2007 쇼"
+
+#: ../freedesktop.org.xml.in.h:385
+msgid "PowerPoint 2007 slide"
+msgstr "파워포인트 2007 슬라이드"
+
+#: ../freedesktop.org.xml.in.h:386
+msgid "PowerPoint add-in"
+msgstr "파워포인트 기능 추가"
+
+#: ../freedesktop.org.xml.in.h:387
+msgid "PowerPoint macro-enabled presentation"
+msgstr "파워포인트 매크로 사용 프리젠테이션"
+
+#: ../freedesktop.org.xml.in.h:388
+msgid "PowerPoint macro-enabled presentation template"
+msgstr "파워포인트 매크로 사용 프리젠테이션 서식"
+
+#: ../freedesktop.org.xml.in.h:389
+msgid "PowerPoint macro-enabled slide"
+msgstr "파워포인트 매크로 사용 슬라이드"
+
+#: ../freedesktop.org.xml.in.h:390
+msgid "PowerPoint presentation"
+msgstr "파워포인트 프리젠테이션"
+
+#: ../freedesktop.org.xml.in.h:391
+msgid "Python bytecode"
+msgstr "파이썬 바이트코드"
+
+#: ../freedesktop.org.xml.in.h:392
+msgid "Python script"
+msgstr "파이썬 스크립트"
+
+#: ../freedesktop.org.xml.in.h:393
+msgid "Qt Designer file"
+msgstr "Qt 디자이너 파일"
+
+#: ../freedesktop.org.xml.in.h:394
+msgid "Qt MOC file"
+msgstr "Qt MOC 파일"
+
+#: ../freedesktop.org.xml.in.h:395
+msgid "Qt Markup Language file"
+msgstr "Qt 마크업 언어 파일"
+
+#: ../freedesktop.org.xml.in.h:396
+msgid "Quattro Pro spreadsheet"
+msgstr "Quattro Pro 스프레드시트"
+
+#: ../freedesktop.org.xml.in.h:397
+msgid "QuickTime image"
+msgstr "퀵타임 그림"
+
+#: ../freedesktop.org.xml.in.h:398
+msgid "QuickTime metalink playlist"
+msgstr "퀵타임 metalink 재생 목록"
+
+#: ../freedesktop.org.xml.in.h:399
+msgid "QuickTime video"
+msgstr "퀵타임 비디오"
+
+#: ../freedesktop.org.xml.in.h:400
+msgid "Quicken document"
+msgstr "Quicken 문서"
+
+#: ../freedesktop.org.xml.in.h:401
+msgid "RAR archive"
+msgstr "RAR 압축 파일"
+
+#: ../freedesktop.org.xml.in.h:402
+msgid "RDF file"
+msgstr "RDF 파일"
+
+#: ../freedesktop.org.xml.in.h:403
+msgid "README document"
+msgstr "README 문서"
+
+#: ../freedesktop.org.xml.in.h:404
+msgid "RELAX NG XML schema"
+msgstr "RELAX NG XML 스키마"
+
+#: ../freedesktop.org.xml.in.h:405
+msgid "RGB image"
+msgstr "RGB 그림"
+
+#: ../freedesktop.org.xml.in.h:406
+msgid "RIFF audio"
+msgstr "RIFF 오디오"
+
+#: ../freedesktop.org.xml.in.h:407
+msgid "RPM package"
+msgstr "RPM 패키지"
+
+#: ../freedesktop.org.xml.in.h:408
+msgid "RPM spec file"
+msgstr "RPM spec 파일"
+
+#: ../freedesktop.org.xml.in.h:409
+msgid "RSS summary"
+msgstr "RSS 요약"
+
+#: ../freedesktop.org.xml.in.h:410
+msgid "RTF document"
+msgstr "RTF 문서"
+
+#: ../freedesktop.org.xml.in.h:411
+msgid "RealAudio document"
+msgstr "RealAudio 문서"
+
+#: ../freedesktop.org.xml.in.h:412
+msgid "RealMedia Metafile"
+msgstr "RealMedia 메타파일"
+
+#: ../freedesktop.org.xml.in.h:413
+msgid "RealMedia document"
+msgstr "RealMedia 문서"
+
+#: ../freedesktop.org.xml.in.h:414
+msgid "RealPix document"
+msgstr "RealPix 문서"
+
+#: ../freedesktop.org.xml.in.h:415
+msgid "RealText document"
+msgstr "RealText 문서"
+
+#: ../freedesktop.org.xml.in.h:416
+msgid "RealVideo document"
+msgstr "RealVideo 문서"
+
+#: ../freedesktop.org.xml.in.h:417
+msgid "Ruby script"
+msgstr "루비 스크립트"
+
+#: ../freedesktop.org.xml.in.h:418
+msgid "Run Length Encoded bitmap image"
+msgstr "실행 길이 인코딩된 비트맵 그림"
+
+#: ../freedesktop.org.xml.in.h:419
+msgid "S/MIME file"
+msgstr "S/MIME 파일"
+
+#: ../freedesktop.org.xml.in.h:420
+msgid "SAMI subtitles"
+msgstr "SAMI 자막 파일"
+
+#: ../freedesktop.org.xml.in.h:421
+msgid "SC/Xspread spreadsheet"
+msgstr "SC/Xspread 스프레드시트"
+
+#: ../freedesktop.org.xml.in.h:422
+msgid "SDP multicast stream file"
+msgstr "SDP 멀티캐스트 스트림 파일"
+
+#. translators: a record is in this context a description of a board game
+#. that has been played, and that can be played back again:
+#. http://www.red-bean.com/sgf/
+#: ../freedesktop.org.xml.in.h:426
+msgid "SGF record"
+msgstr "SGF 기록파일"
+
+#: ../freedesktop.org.xml.in.h:427
+msgid "SGI image"
+msgstr "SGI 그림"
+
+#: ../freedesktop.org.xml.in.h:428
+msgid "SGI video"
+msgstr "SGI 비디오"
+
+#: ../freedesktop.org.xml.in.h:429
+msgid "SGML document"
+msgstr "SGML 문서"
+
+#: ../freedesktop.org.xml.in.h:430
+msgid "SIS package"
+msgstr "SIS 패키지"
+
+#: ../freedesktop.org.xml.in.h:431
+msgid "SISX package"
+msgstr "SISX 패키지"
+
+#: ../freedesktop.org.xml.in.h:432
+msgid "SMAF audio"
+msgstr "SMAF 오디오"
+
+#: ../freedesktop.org.xml.in.h:433
+msgid "SMIL document"
+msgstr "SMIL 문서"
+
+#: ../freedesktop.org.xml.in.h:434
+msgid "SPSS Data File"
+msgstr "SPSS 데이터 파일"
+
+#: ../freedesktop.org.xml.in.h:435
+msgid "SPSS Portable Data File"
+msgstr "SPSS 이동식 데이터 파일"
+
+#: ../freedesktop.org.xml.in.h:436
+msgid "SQL code"
+msgstr "SQL 코드"
+
+#: ../freedesktop.org.xml.in.h:437
+msgid "SQLite2 database"
+msgstr "SQLite2 데이터베이스"
+
+#: ../freedesktop.org.xml.in.h:438
+msgid "SQLite3 database"
+msgstr "SQLite3 데이터베이스"
+
+#: ../freedesktop.org.xml.in.h:439
+msgid "SSA subtitles"
+msgstr "SSA 자막 파일"
+
+#: ../freedesktop.org.xml.in.h:440
+msgid "SV4 CPIO archive"
+msgstr "SV4 CPIO 묶음 파일"
+
+#: ../freedesktop.org.xml.in.h:441
+msgid "SV4 CPIO archive (with CRC)"
+msgstr "SV4 CPIO 묶음 파일 (CRC 포함)"
+
+#: ../freedesktop.org.xml.in.h:442
+msgid "SVG image"
+msgstr "SVG 그림"
+
+#: ../freedesktop.org.xml.in.h:443
+msgid "Scala source code"
+msgstr ""
+
+#: ../freedesktop.org.xml.in.h:444
+msgid "Scheme source code"
+msgstr "Scheme 소스 코드"
+
+#: ../freedesktop.org.xml.in.h:445
+msgid "Scream Tracker 3 audio"
+msgstr "Scream Tracker 3 오디오"
+
+#: ../freedesktop.org.xml.in.h:446
+msgid "Scream Tracker audio"
+msgstr "Scream Tracker 오디오"
+
+#: ../freedesktop.org.xml.in.h:447
+msgid "Scream Tracker instrument"
+msgstr "Scream Tracker 악기"
+
+#: ../freedesktop.org.xml.in.h:448
+msgid "Sega Master System/Game Gear ROM"
+msgstr "Sega Master System/Game Gear 롬"
+
+#: ../freedesktop.org.xml.in.h:449
+msgid "Setext document"
+msgstr "Setext 문서"
+
+#: ../freedesktop.org.xml.in.h:450
+msgid "Shockwave Flash file"
+msgstr "Shockwave 플래시 파일"
+
+#. translators: "Shorten" is the name of an audio codec
+#: ../freedesktop.org.xml.in.h:452
+msgid "Shorten audio"
+msgstr "Shorten 오디오"
+
+#: ../freedesktop.org.xml.in.h:453
+msgid "Siag spreadsheet"
+msgstr "Siag 스프레드시트"
+
+#: ../freedesktop.org.xml.in.h:454
+msgid "Sieve mail filter script"
+msgstr "Sieve 메일 필터 스크립트"
+
+#: ../freedesktop.org.xml.in.h:455
+msgid "Sigma X3F raw image"
+msgstr "시그마 X3F 원본 이미지"
+
+#: ../freedesktop.org.xml.in.h:456
+msgid "Skencil document"
+msgstr "Skencil 문서"
+
+#: ../freedesktop.org.xml.in.h:457
+msgid "Sony ARW raw image"
+msgstr "소니 ARW 원본 이미지"
+
+#: ../freedesktop.org.xml.in.h:458
+msgid "Sony SR2 raw image"
+msgstr "소니 SR2 원본 이미지"
+
+#: ../freedesktop.org.xml.in.h:459
+msgid "Sony SRF raw image"
+msgstr "소니 SRF 원본 이미지"
+
+#: ../freedesktop.org.xml.in.h:460
+msgid "Speedo font"
+msgstr "Speedo 글꼴"
+
+#: ../freedesktop.org.xml.in.h:461
+msgid "Speex audio"
+msgstr "Speex 오디오"
+
+#: ../freedesktop.org.xml.in.h:462
+msgid "Stampede package"
+msgstr "스탬피드 패키지"
+
+#: ../freedesktop.org.xml.in.h:463
+msgid "StarCalc spreadsheet"
+msgstr "StarCalc 스프레드시트"
+
+#: ../freedesktop.org.xml.in.h:464
+msgid "StarChart chart"
+msgstr "StarCalc 표"
+
+#: ../freedesktop.org.xml.in.h:465
+msgid "StarDraw drawing"
+msgstr "StarCalc 드로잉"
+
+#: ../freedesktop.org.xml.in.h:466
+msgid "StarImpress presentation"
+msgstr "StarImpress 프리젠테이션"
+
+#: ../freedesktop.org.xml.in.h:467
+msgid "StarMail email"
+msgstr "StarMail 전자우편"
+
+#: ../freedesktop.org.xml.in.h:468
+msgid "StarMath formula"
+msgstr "StarMath 수식"
+
+#: ../freedesktop.org.xml.in.h:469
+msgid "StarWriter document"
+msgstr "StarWriter 문서"
+
+#: ../freedesktop.org.xml.in.h:470
+msgid "StuffIt archive"
+msgstr "StuffIt 압축 파일"
+
+#: ../freedesktop.org.xml.in.h:471
+msgid "SubRip subtitles"
+msgstr "SubRip 자막 파일"
+
+#: ../freedesktop.org.xml.in.h:472
+msgid "SubViewer subtitles"
+msgstr "SubViewer 자막 파일"
+
+#: ../freedesktop.org.xml.in.h:473
+msgid "Sun raster image"
+msgstr "Sun 래스터 그림"
+
+#: ../freedesktop.org.xml.in.h:474
+msgid "SunOS News font"
+msgstr "SunOS News 글꼴"
+
+#. Translate this as Super Famicom (in Far East Asia) or Super Nintendo (in
+#. Europe) if the console was known as such in your locale
+#: ../freedesktop.org.xml.in.h:476
+msgid "Super NES ROM"
+msgstr "슈퍼 NES 롬"
+
+#. TRANSLATORS: This is a brand-name, not a generic term. Please see
+#. http://en.wikipedia.org/wiki/Super_Video_CD
+#. http://everything2.com/index.pl?node_id=1009222
+#: ../freedesktop.org.xml.in.h:480
+msgid "Super Video CD"
+msgstr "슈퍼 비디오 CD"
+
+#: ../freedesktop.org.xml.in.h:481
+msgid "SystemVerilog header"
+msgstr "SystemVerilog 헤더"
+
+#: ../freedesktop.org.xml.in.h:482
+msgid "SystemVerilog source code"
+msgstr "SystemVerilog 소스 코드"
+
+#: ../freedesktop.org.xml.in.h:483
+msgid "T602 document"
+msgstr "T602 문서"
+
+#: ../freedesktop.org.xml.in.h:484
+msgid "TGA image"
+msgstr "TGA 그림"
+
+#: ../freedesktop.org.xml.in.h:485
+msgid "TGIF document"
+msgstr "TGIF 문서"
+
+#: ../freedesktop.org.xml.in.h:486
+msgid "TIFF image"
+msgstr "TIFF 그림"
+
+#: ../freedesktop.org.xml.in.h:487
+msgid "TNEF message"
+msgstr "TNEF 메시지"
+
+#: ../freedesktop.org.xml.in.h:488
+msgid "TSV document"
+msgstr "TSV 문서"
+
+#: ../freedesktop.org.xml.in.h:489
+msgid "Tar archive"
+msgstr "TAR 묶음 파일"
+
+#: ../freedesktop.org.xml.in.h:490
+msgid "Tar archive (LZMA-compressed)"
+msgstr "TAR 묶음 파일 (LZMA 압축)"
+
+#: ../freedesktop.org.xml.in.h:491
+msgid "Tar archive (LZO-compressed)"
+msgstr "TAR 묶음 파일 (LZO 압축)"
+
+#: ../freedesktop.org.xml.in.h:492
+msgid "Tar archive (XZ-compressed)"
+msgstr "TAR 묶음 파일 (XZ 압축)"
+
+#: ../freedesktop.org.xml.in.h:493
+msgid "Tar archive (bzip-compressed)"
+msgstr "TAR 묶음 파일 (BZIP 압축)"
+
+#: ../freedesktop.org.xml.in.h:494
+msgid "Tar archive (compressed)"
+msgstr "TAR 묶음 파일 (압축) "
+
+#: ../freedesktop.org.xml.in.h:495
+msgid "Tar archive (gzip-compressed)"
+msgstr "TAR 묶음 파일 (GZIP 압축)"
+
+#: ../freedesktop.org.xml.in.h:496
+msgid "Tar archive (lrzip-compressed)"
+msgstr "TAR 묶음 파일 (LRZIP 압축)"
+
+#: ../freedesktop.org.xml.in.h:497
+msgid "Tcl script"
+msgstr "Tcl 스크립트"
+
+#: ../freedesktop.org.xml.in.h:498
+msgid "TeX DVI document"
+msgstr "TeX DVI 문서"
+
+#: ../freedesktop.org.xml.in.h:499
+msgid "TeX DVI document (bzip-compressed)"
+msgstr "TeX DVI 문서 (BZIP 압축)"
+
+#: ../freedesktop.org.xml.in.h:500
+msgid "TeX DVI document (gzip-compressed)"
+msgstr "TeX DVI 문서 (GZIP 압축)"
+
+#: ../freedesktop.org.xml.in.h:501
+msgid "TeX document"
+msgstr "TeX 문서"
+
+#: ../freedesktop.org.xml.in.h:502
+msgid "TeX font"
+msgstr "TeX 글꼴"
+
+#: ../freedesktop.org.xml.in.h:503
+msgid "TeX font metrics"
+msgstr "Tex 글꼴 메트릭스"
+
+#: ../freedesktop.org.xml.in.h:504
+msgid "TeXInfo document"
+msgstr "TeXInfo 문서"
+
+#: ../freedesktop.org.xml.in.h:505
+msgid "ToutDoux document"
+msgstr "ToutDoux 문서"
+
+#: ../freedesktop.org.xml.in.h:506
+msgid "Troff ME input document"
+msgstr "Troff ME 입력 문서"
+
+#: ../freedesktop.org.xml.in.h:507
+msgid "Troff MM input document"
+msgstr "Troff MM 입력 문서"
+
+#: ../freedesktop.org.xml.in.h:508
+msgid "Troff MS input document"
+msgstr "Troff Ms 입력 문서"
+
+#: ../freedesktop.org.xml.in.h:509
+msgid "Troff document"
+msgstr "Troff 문서"
+
+#: ../freedesktop.org.xml.in.h:510
+msgid "Troff document (with manpage macros)"
+msgstr "Troff 문서 (맨페이지 매크로 포함)"
+
+#: ../freedesktop.org.xml.in.h:511
+msgid "TrueAudio audio"
+msgstr "TrueAudio 오디오"
+
+#: ../freedesktop.org.xml.in.h:512
+msgid "TrueType XML font"
+msgstr "트루타입 XML 글꼴"
+
+#: ../freedesktop.org.xml.in.h:513
+msgid "TrueType font"
+msgstr "트루타입 글꼴"
+
+#: ../freedesktop.org.xml.in.h:514
+msgid "UFRaw ID image"
+msgstr "UFRaw ID 그림"
+
+#: ../freedesktop.org.xml.in.h:515
+msgid "ULAW (Sun) audio"
+msgstr "ULAW (Sun) 오디오"
+
+#. http://standards.freedesktop.org/autostart-spec/autostart-spec-latest.html
+#. http://bugzilla.gnome.org/show_bug.cgi?id=509823#c3
+#: ../freedesktop.org.xml.in.h:518
+msgid "UNIX software"
+msgstr "유닉스 소프트웨어"
+
+#: ../freedesktop.org.xml.in.h:519
+msgid "UNIX-compressed file"
+msgstr "유닉스 압축 파일"
+
+#: ../freedesktop.org.xml.in.h:520
+msgid "Unidata NetCDF document"
+msgstr "Unidata NetCDF 문서"
+
+#: ../freedesktop.org.xml.in.h:521
+msgid "Usenet news message"
+msgstr "유즈넷 뉴스 메시지"
+
+#: ../freedesktop.org.xml.in.h:522
+msgid "Ustar archive"
+msgstr "Ustar 묶음 파일"
+
+#: ../freedesktop.org.xml.in.h:523
+msgid "V font"
+msgstr "V 글꼴"
+
+#: ../freedesktop.org.xml.in.h:524
+msgid "VCS/ICS calendar"
+msgstr "VCS/ICS 달력"
+
+#: ../freedesktop.org.xml.in.h:525
+msgid "VHDL source code"
+msgstr "VHDL 소스 코드"
+
+#: ../freedesktop.org.xml.in.h:526
+msgid "VOC audio"
+msgstr "VOC 오디오"
+
+#: ../freedesktop.org.xml.in.h:527
+msgid "VRML document"
+msgstr "VRML 문서"
+
+#: ../freedesktop.org.xml.in.h:528
+msgid "Vala source code"
+msgstr "Vala 소스 코드"
+
+#: ../freedesktop.org.xml.in.h:529
+msgid "Verilog source code"
+msgstr "Verilog 소스 코드"
+
+#. TRANSLATORS: This is a brand-name, not a generic term. Please see
+#. http://en.wikipedia.org/wiki/Video_CD
+#. http://www.herongyang.com/CD-DVD/VCD-Movie-File-Directory-Structure.html
+#: ../freedesktop.org.xml.in.h:533
+msgid "Video CD"
+msgstr "비디오 CD"
+
+#: ../freedesktop.org.xml.in.h:534
+msgid "Vivo video"
+msgstr "Vivo 비디오"
+
+#: ../freedesktop.org.xml.in.h:535
+msgid "WAIS source code"
+msgstr "WAIS 소스 코드"
+
+#: ../freedesktop.org.xml.in.h:536
+msgid "WAV audio"
+msgstr "WAV 오디오"
+
+#: ../freedesktop.org.xml.in.h:537
+msgid "WBMP image"
+msgstr "WBMP 그림"
+
+#: ../freedesktop.org.xml.in.h:538
+msgid "WMF image"
+msgstr "WMF 그림"
+
+#: ../freedesktop.org.xml.in.h:539
+msgid "WML document"
+msgstr "WML 문서"
+
+#: ../freedesktop.org.xml.in.h:540
+msgid "WMLScript program"
+msgstr "WML스크립트 프로그램"
+
+#: ../freedesktop.org.xml.in.h:541
+msgid "WPL playlist"
+msgstr "WPL 재생 목록"
+
+#: ../freedesktop.org.xml.in.h:542
+msgid "WRI document"
+msgstr "WRI 문서"
+
+#: ../freedesktop.org.xml.in.h:543
+msgid "WWF document"
+msgstr "WWF 문서"
+
+#: ../freedesktop.org.xml.in.h:544
+msgid "WavPack audio"
+msgstr "WavPack 오디오"
+
+#: ../freedesktop.org.xml.in.h:545
+msgid "WavPack audio correction file"
+msgstr "WavPack 오디오 교정 파일"
+
+#: ../freedesktop.org.xml.in.h:546
+msgid "Wavelet video"
+msgstr "Wavelet 비디오"
+
+#: ../freedesktop.org.xml.in.h:547
+msgid "Web application cache manifest"
+msgstr "웹 애플리케이션 캐시 정의"
+
+#: ../freedesktop.org.xml.in.h:548
+msgid "WebM audio"
+msgstr "WebM 오디오"
+
+#: ../freedesktop.org.xml.in.h:549
+msgid "WebM video"
+msgstr "WebM 비디오"
+
+#: ../freedesktop.org.xml.in.h:550
+msgid "WebVTT subtitles"
+msgstr ""
+
+#: ../freedesktop.org.xml.in.h:551
+msgid "Windows BMP image"
+msgstr "윈도우 BMP 그림"
+
+#: ../freedesktop.org.xml.in.h:552
+msgid "Windows Imaging Format Disk Image"
+msgstr "윈도우 이미지 포맷 디스크 이미지"
+
+#: ../freedesktop.org.xml.in.h:553
+msgid "Windows Installer package"
+msgstr "윈도우 설치 패키지"
+
+#: ../freedesktop.org.xml.in.h:554
+msgid "Windows Media Station file"
+msgstr "윈도우 미디어 방송국 파일"
+
+#: ../freedesktop.org.xml.in.h:555
+msgid "Windows Media audio"
+msgstr "윈도우 미디어 오디오"
+
+#: ../freedesktop.org.xml.in.h:556
+msgid "Windows Media video"
+msgstr "윈도우 미디어 비디오"
+
+#: ../freedesktop.org.xml.in.h:557
+msgid "Windows Registry extract"
+msgstr "윈도우 레지스트리 파일"
+
+#: ../freedesktop.org.xml.in.h:558
+msgid "Windows animated cursor"
+msgstr "윈도우 움직이는 커서"
+
+#: ../freedesktop.org.xml.in.h:559
+msgid "Windows cursor"
+msgstr "윈도우 커서"
+
+#. http://standards.freedesktop.org/autostart-spec/autostart-spec-latest.html
+#. http://bugzilla.gnome.org/show_bug.cgi?id=509823#c3
+#: ../freedesktop.org.xml.in.h:562
+msgid "Windows software"
+msgstr "윈도우 소프트웨어"
+
+#: ../freedesktop.org.xml.in.h:563
+msgid "Word 2007 document"
+msgstr "워드 2007 문서"
+
+#: ../freedesktop.org.xml.in.h:564
+msgid "Word 2007 document template"
+msgstr "워드 2007 문서 서식"
+
+#: ../freedesktop.org.xml.in.h:565
+msgid "Word document"
+msgstr "워드 문서"
+
+#: ../freedesktop.org.xml.in.h:566
+msgid "Word macro-enabled document"
+msgstr "워드 매크로 사용 문서"
+
+#: ../freedesktop.org.xml.in.h:567
+msgid "Word macro-enabled document template"
+msgstr "워드 매크로 사용 문서 서식"
+
+#: ../freedesktop.org.xml.in.h:568
+msgid "Word template"
+msgstr "워드 서식"
+
+#: ../freedesktop.org.xml.in.h:569
+msgid "WordPerfect document"
+msgstr "워드퍼펙트 문서"
+
+#: ../freedesktop.org.xml.in.h:570
+msgid "WordPerfect/Drawperfect image"
+msgstr "워드퍼펙트/드로우퍼펙트 그림"
+
+#: ../freedesktop.org.xml.in.h:571
+msgid "X window image"
+msgstr "X 윈도우 그림"
+
+#: ../freedesktop.org.xml.in.h:572
+msgid "X-Motif UIL table"
+msgstr "X-Motif UIL 테이블"
+
+#: ../freedesktop.org.xml.in.h:573
+msgid "X.509 certificate"
+msgstr "X.509 인증서"
+
+#: ../freedesktop.org.xml.in.h:574
+msgid "X11 cursor"
+msgstr "X11 커서"
+
+#: ../freedesktop.org.xml.in.h:575
+msgid "XBEL bookmarks"
+msgstr "XBEL 책갈피"
+
+#: ../freedesktop.org.xml.in.h:576
+msgid "XBM image"
+msgstr "XBM 그림"
+
+#: ../freedesktop.org.xml.in.h:577
+msgid "XFig image"
+msgstr "XFig 그림"
+
+#: ../freedesktop.org.xml.in.h:578
+msgid "XHTML page"
+msgstr "XHTML 페이지"
+
+#: ../freedesktop.org.xml.in.h:579
+msgid "XLIFF translation file"
+msgstr "XLIFF 번역 파일"
+
+#: ../freedesktop.org.xml.in.h:580
+msgid "XMCD CD database"
+msgstr "XMCD CD 데이터베이스"
+
+#: ../freedesktop.org.xml.in.h:581
+msgid "XMF audio"
+msgstr "XMF 오디오"
+
+#: ../freedesktop.org.xml.in.h:582
+msgid "XMI file"
+msgstr "XMI 파일"
+
+#: ../freedesktop.org.xml.in.h:583
+msgid "XML document"
+msgstr "XML 문서"
+
+#: ../freedesktop.org.xml.in.h:584
+msgid "XML entities document"
+msgstr "XML 엔티티 문서"
+
+#: ../freedesktop.org.xml.in.h:585
+msgid "XPInstall installer module"
+msgstr "XPInstall 설치 프로그램 모듈"
+
+#: ../freedesktop.org.xml.in.h:586
+msgid "XPM image"
+msgstr "XPM 그림"
+
+#: ../freedesktop.org.xml.in.h:587
+msgid "XPS document"
+msgstr "XPS 문서"
+
+#: ../freedesktop.org.xml.in.h:588
+msgid "XSL FO file"
+msgstr "XSL 포매팅 개체 파일"
+
+#: ../freedesktop.org.xml.in.h:589
+msgid "XSLT stylesheet"
+msgstr "XSLT 스타일시트"
+
+#: ../freedesktop.org.xml.in.h:590
+msgid "XSPF playlist"
+msgstr "XSPF 재생 목록"
+
+#: ../freedesktop.org.xml.in.h:591
+msgid "XUL interface document"
+msgstr "XUL 인터페이스 문서"
+
+#: ../freedesktop.org.xml.in.h:592
+msgid "XZ archive"
+msgstr "XZ 압축 파일"
+
+#: ../freedesktop.org.xml.in.h:593
+msgid "Xbase document"
+msgstr "Xbase 문서"
+
+#: ../freedesktop.org.xml.in.h:594
+msgid "YAML document"
+msgstr "YAML 문서"
+
+#: ../freedesktop.org.xml.in.h:595
+msgid "Zip archive"
+msgstr "ZIP 압축 파일"
+
+#: ../freedesktop.org.xml.in.h:596
+msgid "Zoo archive"
+msgstr "ZOO 압축 파일"
+
+#: ../freedesktop.org.xml.in.h:597
+msgid "application log"
+msgstr "프로그램 기록"
+
+#. http://en.wikipedia.org/wiki/Red_Book_(audio_CD_standard)
+#: ../freedesktop.org.xml.in.h:599
+msgid "audio CD"
+msgstr "오디오 CD"
+
+#. http://en.wikipedia.org/wiki/DVD-Audio
+#: ../freedesktop.org.xml.in.h:601
+msgid "audio DVD"
+msgstr "오디오 DVD"
+
+#: ../freedesktop.org.xml.in.h:602
+msgid "author credits"
+msgstr "저작자 크레디트"
+
+#: ../freedesktop.org.xml.in.h:603
+msgid "author list"
+msgstr "저자 목록"
+
+#: ../freedesktop.org.xml.in.h:604
+msgid "backup file"
+msgstr "백업 파일"
+
+#. http://en.wikipedia.org/wiki/Blu-ray_Disc
+#: ../freedesktop.org.xml.in.h:606
+msgid "blank Blu-ray disc"
+msgstr "빈 블루레이 디스크"
+
+#. http://en.wikipedia.org/wiki/Compact_Disc
+#: ../freedesktop.org.xml.in.h:608
+msgid "blank CD disc"
+msgstr "빈 CD 디스크"
+
+#. http://en.wikipedia.org/wiki/DVD
+#: ../freedesktop.org.xml.in.h:610
+msgid "blank DVD disc"
+msgstr "빈 DVD 디스크"
+
+#. http://en.wikipedia.org/wiki/HD_DVD
+#: ../freedesktop.org.xml.in.h:612
+msgid "blank HD DVD disc"
+msgstr "빈 HD DVD 디스크"
+
+#: ../freedesktop.org.xml.in.h:613
+msgid "block device"
+msgstr "블럭 장치"
+
+#: ../freedesktop.org.xml.in.h:614
+msgid "character device"
+msgstr "문자 장치"
+
+#: ../freedesktop.org.xml.in.h:615
+msgid "comic book archive"
+msgstr "코믹북 묶음 파일"
+
+#: ../freedesktop.org.xml.in.h:616
+msgid "compound document"
+msgstr "복합 문서"
+
+#: ../freedesktop.org.xml.in.h:617
+msgid "compound documents"
+msgstr "복합 문서"
+
+#: ../freedesktop.org.xml.in.h:618
+msgid "compressed GIMP image"
+msgstr "압축한 GIMP 그림"
+
+#: ../freedesktop.org.xml.in.h:619
+msgid "compressed SVG image"
+msgstr "압축한 SVG 그림"
+
+#: ../freedesktop.org.xml.in.h:620
+msgid "compressed Tracker audio"
+msgstr "압축한 Tracker 오디오"
+
+#: ../freedesktop.org.xml.in.h:621
+msgid "desktop configuration file"
+msgstr "데스크톱 설정 파일"
+
+#: ../freedesktop.org.xml.in.h:622
+msgid "detached OpenPGP signature"
+msgstr "분리된 OpenPGP 서명"
+
+#: ../freedesktop.org.xml.in.h:623
+msgid "detached S/MIME signature"
+msgstr "분리된 S/MIME 서명"
+
+#: ../freedesktop.org.xml.in.h:624
+msgid "differences between files"
+msgstr "파일 사이의 바뀐점"
+
+#. http://en.wikipedia.org/wiki/Design_rule_for_Camera_File_system
+#: ../freedesktop.org.xml.in.h:626
+msgid "digital photos"
+msgstr "디지털 사진"
+
+#: ../freedesktop.org.xml.in.h:627
+msgid "digital raw image"
+msgstr "디지털 원본 이미지"
+
+#. see fd.o hal spec
+#: ../freedesktop.org.xml.in.h:629
+msgid "e-book reader"
+msgstr "이북 리더"
+
+#: ../freedesktop.org.xml.in.h:630
+msgid "eMusic download package"
+msgstr "eMusic 다운로드 패키지"
+
+#: ../freedesktop.org.xml.in.h:631
+msgid "electronic book document"
+msgstr "전자책 문서"
+
+#: ../freedesktop.org.xml.in.h:632
+msgid "electronic business card"
+msgstr "전자 명함"
+
+#: ../freedesktop.org.xml.in.h:633
+msgid "email headers"
+msgstr "전자우편 헤더"
+
+#: ../freedesktop.org.xml.in.h:634
+msgid "email message"
+msgstr "전자우편 본문"
+
+#: ../freedesktop.org.xml.in.h:635
+msgid "empty document"
+msgstr "빈 문서"
+
+#: ../freedesktop.org.xml.in.h:636
+msgid "encrypted message"
+msgstr "암호화된 메시지"
+
+#: ../freedesktop.org.xml.in.h:637
+msgid "enriched text document"
+msgstr "enriched text 문서"
+
+#: ../freedesktop.org.xml.in.h:638
+msgid "executable"
+msgstr "실행파일"
+
+#: ../freedesktop.org.xml.in.h:639
+msgid "folder"
+msgstr "폴더"
+
+#: ../freedesktop.org.xml.in.h:640
+msgid "generic font file"
+msgstr "일반 글꼴 파일"
+
+#: ../freedesktop.org.xml.in.h:641
+msgid "help page"
+msgstr "도움말 페이지"
+
+#: ../freedesktop.org.xml.in.h:642
+msgid "iMelody ringtone"
+msgstr "iMelody 벨소리"
+
+#: ../freedesktop.org.xml.in.h:643
+msgid "iPod firmware"
+msgstr "iPod 펌웨어"
+
+#: ../freedesktop.org.xml.in.h:644
+msgid "iRiver Playlist"
+msgstr "iRiver 재생 목록"
+
+#: ../freedesktop.org.xml.in.h:645
+msgid "installation instructions"
+msgstr "설치 방법"
+
+#: ../freedesktop.org.xml.in.h:646
+msgid "iptables configuration file"
+msgstr "iptables 설정 파일"
+
+#: ../freedesktop.org.xml.in.h:647
+msgid "libtool shared library"
+msgstr "libtool 공유 라이브러리"
+
+#: ../freedesktop.org.xml.in.h:648
+msgid "license terms"
+msgstr "라이선스 조항"
+
+#: ../freedesktop.org.xml.in.h:649
+msgid "mail delivery report"
+msgstr "메일 배달 보고서"
+
+#: ../freedesktop.org.xml.in.h:650
+msgid "mail disposition report"
+msgstr "메일 처리 보고서"
+
+#: ../freedesktop.org.xml.in.h:651
+msgid "mail system report"
+msgstr "메일 시스템 보고서"
+
+#: ../freedesktop.org.xml.in.h:652
+msgid "mailbox file"
+msgstr "메일함 파일"
+
+#: ../freedesktop.org.xml.in.h:653
+msgid "manual page (compressed)"
+msgstr "설명서 페이지 (압축)"
+
+#: ../freedesktop.org.xml.in.h:654
+msgid "message catalog"
+msgstr "메시지 카탈로그"
+
+#: ../freedesktop.org.xml.in.h:655
+msgid "message digest"
+msgstr "메시지 묶음"
+
+#: ../freedesktop.org.xml.in.h:656
+msgid "message in several formats"
+msgstr "여러가지 형식의 메시지"
+
+#: ../freedesktop.org.xml.in.h:657
+msgid "mount point"
+msgstr "마운트 위치"
+
+#: ../freedesktop.org.xml.in.h:658
+msgid "object code"
+msgstr "개체 코드"
+
+#: ../freedesktop.org.xml.in.h:659
+msgid "packed font file"
+msgstr "글꼴 묶음 파일"
+
+#: ../freedesktop.org.xml.in.h:660
+msgid "partial email message"
+msgstr "부분적인 전자메일 메시지"
+
+#: ../freedesktop.org.xml.in.h:661
+msgid "pipe"
+msgstr "파이프"
+
+#: ../freedesktop.org.xml.in.h:662
+msgid "plain text document"
+msgstr "보통 text 문서"
+
+#. see fd.o hal spec
+#: ../freedesktop.org.xml.in.h:664
+msgid "portable audio player"
+msgstr "휴대용 오디오 플레이어"
+
+#: ../freedesktop.org.xml.in.h:665
+msgid "profiler results"
+msgstr "프로파일러 결과"
+
+#: ../freedesktop.org.xml.in.h:666
+msgid "program crash data"
+msgstr "프로그램 비정상 종료 데이터"
+
+#: ../freedesktop.org.xml.in.h:667
+msgid "raw CD image"
+msgstr "CD 이미지"
+
+#: ../freedesktop.org.xml.in.h:668
+msgid "reference to remote file"
+msgstr "원격 파일 참조"
+
+#: ../freedesktop.org.xml.in.h:669
+msgid "rejected patch"
+msgstr "거부된 패치 파일"
+
+#: ../freedesktop.org.xml.in.h:670
+msgid "resource location"
+msgstr "자원 위치"
+
+#: ../freedesktop.org.xml.in.h:671
+msgid "rich text document"
+msgstr "rich text 문서"
+
+#: ../freedesktop.org.xml.in.h:672
+msgid "shared library"
+msgstr "공유 라이브러리"
+
+#: ../freedesktop.org.xml.in.h:673
+msgid "shell archive"
+msgstr "쉘 묶음 파일"
+
+#: ../freedesktop.org.xml.in.h:674
+msgid "shell script"
+msgstr "쉘 스크립트"
+
+#: ../freedesktop.org.xml.in.h:675
+msgid "shortcut to Kexi project on database server"
+msgstr "Kexi 데이터베이스 서버 사용 프로젝트 바로 가기"
+
+#: ../freedesktop.org.xml.in.h:676
+msgid "signed message"
+msgstr "서명된 메시지"
+
+#: ../freedesktop.org.xml.in.h:677
+msgid "socket"
+msgstr "소켓"
+
+#. http://standards.freedesktop.org/autostart-spec/autostart-spec-latest.html
+#. http://bugzilla.gnome.org/show_bug.cgi?id=509823#c3
+#: ../freedesktop.org.xml.in.h:680
+msgid "software"
+msgstr "소프트웨어"
+
+#: ../freedesktop.org.xml.in.h:681
+msgid "spreadsheet interchange document"
+msgstr "spreadsheet 교환 문서"
+
+#: ../freedesktop.org.xml.in.h:682
+msgid "stream of data (server push)"
+msgstr "스트림 데이터 (서버 푸시)"
+
+#: ../freedesktop.org.xml.in.h:683
+msgid "symbolic link"
+msgstr "심볼릭 링크"
+
+#: ../freedesktop.org.xml.in.h:684
+msgid "theme"
+msgstr "테마"
+
+#: ../freedesktop.org.xml.in.h:685
+msgid "translated messages (machine-readable)"
+msgstr "번역 메시지 (컴퓨터 사용 형식)"
+
+#: ../freedesktop.org.xml.in.h:686
+msgid "translation file"
+msgstr "번역 파일"
+
+#: ../freedesktop.org.xml.in.h:687
+msgid "translation template"
+msgstr "메세지 번역 서식"
+
+#: ../freedesktop.org.xml.in.h:688
+msgid "txt2tags document"
+msgstr "txt2tags 문서"
+
+#: ../freedesktop.org.xml.in.h:689
+msgid "unknown"
+msgstr "알 수 없음"
+
+#. http://en.wikipedia.org/wiki/DVD-Video
+#: ../freedesktop.org.xml.in.h:691
+msgid "video DVD"
+msgstr "비디오 CD"
+
+

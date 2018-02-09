@@ -1,0 +1,117 @@
+<!-- ##### SECTION Title ##### -->
+GUPnPRootDevice
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT GUPnPRootDevice ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG GUPnPRootDevice:available ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GUPnPRootDevice:description-dir ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GUPnPRootDevice:description-doc ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GUPnPRootDevice:description-path ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION gupnp_root_device_new ##### -->
+<para>
+
+</para>
+
+@context: 
+@description_path: 
+@description_dir: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_root_device_new_full ##### -->
+<para>
+
+</para>
+
+@context: 
+@factory: 
+@description_doc: 
+@description_path: 
+@description_dir: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_root_device_set_available ##### -->
+<para>
+
+</para>
+
+@root_device: 
+@available: 
+
+
+<!-- ##### FUNCTION gupnp_root_device_get_available ##### -->
+<para>
+
+</para>
+
+@root_device: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_root_device_get_relative_location ##### -->
+<para>
+
+</para>
+
+@root_device: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_root_device_get_description_dir ##### -->
+<para>
+
+</para>
+
+@root_device: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_root_device_get_description_path ##### -->
+<para>
+
+</para>
+
+@root_device: 
+@Returns: 
+
+

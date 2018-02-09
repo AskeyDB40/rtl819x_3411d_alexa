@@ -1,0 +1,8 @@
+<SIGNAL>
+<NAME>RygelMediaContainer::container-updated</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>l</FLAGS>
+RygelMediaContainer *rygelmediacontainer
+RygelMediaContainer *arg1
+</SIGNAL>
+

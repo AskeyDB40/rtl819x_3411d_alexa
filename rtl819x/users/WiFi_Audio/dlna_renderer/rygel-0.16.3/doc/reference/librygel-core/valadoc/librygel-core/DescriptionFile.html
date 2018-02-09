@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <title>DescriptionFile &ndash; librygel-core &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">DescriptionFile &ndash; librygel-core Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">librygel-core</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="class">DescriptionFile</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="creation_method"><a href="DescriptionFile.DescriptionFile.html">DescriptionFile</a></li>
+          <li class="creation_method"><a href="DescriptionFile.DescriptionFile.from_xml_document.html">DescriptionFile.from_xml_document</a></li>
+          <li class="method"><a href="DescriptionFile.get_friendly_name.html">get_friendly_name</a></li>
+          <li class="method"><a href="DescriptionFile.modify_service_type.html">modify_service_type</a></li>
+          <li class="method"><a href="DescriptionFile.save.html">save</a></li>
+          <li class="method"><a href="DescriptionFile.set_device_type.html">set_device_type</a></li>
+          <li class="method"><a href="DescriptionFile.set_friendly_name.html">set_friendly_name</a></li>
+          <li class="method"><a href="DescriptionFile.set_model_name.html">set_model_name</a></li>
+          <li class="method"><a href="DescriptionFile.set_model_number.html">set_model_number</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">DescriptionFile</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        <img class="main_diagram" usemap="#DescriptionFile" alt="Object hierarchy for DescriptionFile" src="img/DescriptionFile.png"/>
+
+      <map id="DescriptionFile" name="DescriptionFile">
+<area shape="rect" id="node1" href="DescriptionFile.html" title="DescriptionFile" alt="" coords="5,101,139,149"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">class</span> <b><span css="class">DescriptionFile</span></b> : <span class="main_type"><code>Object</code></span>
+        </div>
+        <div class="description">
+          <p>Represents a device description document and offers methods for easy manipulation of those.</p>
+        </div><br/>
+        <div class="package_note"><b>Package:</b> <a href="index.htm">librygel-core</a>
+        </div>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Creation methods:</h3>
+        <ul class="navi_inline">
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="DescriptionFile.DescriptionFile.html" class="creation_method">DescriptionFile</a></b> (<span class="main_basic_type"><code>string</code></span> template) <span class="main_keyword">throws</span> <span class="main_type"><code>Error</code></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Constructor to load a description file from disk</span>
+            </div></li>
+          <li class="creation_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <b><a href="DescriptionFile.DescriptionFile.from_xml_document.html" class="creation_method">DescriptionFile.from_xml_document</a></b> (<span class="main_type"><code>XMLDoc</code></span> doc)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Constructor which wraps an existing GUPnP.XMLDoc as a description 
+                file.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Methods:</h3>
+        <ul class="navi_inline">
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="DescriptionFile.set_device_type.html" class="method">set_device_type</a></b> (<span class="main_basic_type"><code>string</code></span> device_type)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Change the type of a service.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="DescriptionFile.set_model_name.html" class="method">set_model_name</a></b> (<span class="main_basic_type"><code>string</code></span> model_name)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Modify the model name.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="DescriptionFile.set_model_number.html" class="method">set_model_number</a></b> (<span class="main_basic_type"><code>string</code></span> model_number)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Modify the model number.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="DescriptionFile.set_friendly_name.html" class="method">set_friendly_name</a></b> (<span class="main_basic_type"><code>string</code></span> friendly_name)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Set the friendly name of the device.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_basic_type"><code>string</code></span> <b><a href="DescriptionFile.get_friendly_name.html" class="method">get_friendly_name</a></b> ()
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Get the current friendly name of the device.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="DescriptionFile.modify_service_type.html" class="method">modify_service_type</a></b> (<span class="main_basic_type"><code>string</code></span> old_type, <span class="main_basic_type"><code>string</code></span> new_type)
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Change the type of a service.</span>
+            </div></li>
+          <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">void</span> <b><a href="DescriptionFile.save.html" class="method">save</a></b> (<span class="main_basic_type"><code>string</code></span> path) <span class="main_keyword">throws</span> <span class="main_type"><code>Error</code></span>
+            </span>
+            <div class="leaf_brief_description"><span class="brief_description">Writes the current document to a file.</span>
+            </div></li>
+        </ul>
+        <h3 class="main_title">Inherited Members:</h3>
+        <div class="box">
+          <div class="headline">
+            <div class="text">All known members inherited from class GLib.Object</div>
+            <div class="toggle">
+              <img onclick="toggle_box  (this, 'box-content-0')" src="../coll_open.png">&nbsp;</div>
+            </div>
+            <div class="content" id="box-content-0">
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="static_method">@new</li>
+                  <li class="static_method">newv</li>
+                  <li class="static_method">new_valist</li>
+                  <li class="method">get_type</li>
+                  <li class="method">get_class</li>
+                  <li class="method">@ref</li>
+                  <li class="method">unref</li>
+                  <li class="method">ref_sink</li>
+                  <li class="method">weak_ref</li>
+                  <li class="method">weak_unref</li>
+                  <li class="method">add_weak_pointer</li>
+                  <li class="method">remove_weak_pointer</li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="method">@get</li>
+                  <li class="method">@set</li>
+                  <li class="method">get_property</li>
+                  <li class="method">set_property</li>
+                  <li class="method">get_data</li>
+                  <li class="method">set_data</li>
+                  <li class="method">set_data_full</li>
+                  <li class="method">steal_data</li>
+                  <li class="method">get_qdata</li>
+                  <li class="method">set_qdata</li>
+                  <li class="method">set_qdata_full</li>
+                  <li class="method">steal_qdata</li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="method">freeze_notify</li>
+                  <li class="method">thaw_notify</li>
+                  <li class="virtual_method">dispose</li>
+                  <li class="virtual_method">constructed</li>
+                  <li class="method">notify_property</li>
+                  <li class="method">connect</li>
+                  <li class="method">disconnect</li>
+                  <li class="method">add_toggle_ref</li>
+                  <li class="method">remove_toggle_ref</li>
+                  <li class="method">bind_property</li>
+                  <li class="signal">notify</li>
+                  <li class="field">ref_count</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><br/>
+      <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+      </div>
+    </body>
+  </html>

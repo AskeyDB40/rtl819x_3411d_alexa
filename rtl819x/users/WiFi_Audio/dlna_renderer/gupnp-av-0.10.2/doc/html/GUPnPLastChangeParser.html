@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GUPnPLastChangeParser</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GUPnP A/V Reference Manual">
+<link rel="up" href="ch01.html" title="GUPnP A/V">
+<link rel="prev" href="GUPnPDIDLLiteContributor.html" title="GUPnPDIDLLiteContributor">
+<link rel="next" href="GUPnPSearchCriteriaParser.html" title="GUPnPSearchCriteriaParser">
+<meta name="generator" content="GTK-Doc V1.17.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GUPnPDIDLLiteContributor.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GUPnP A/V Reference Manual</th>
+<td><a accesskey="n" href="GUPnPSearchCriteriaParser.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GUPnPLastChangeParser.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#GUPnPLastChangeParser.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#GUPnPLastChangeParser.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="GUPnPLastChangeParser"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GUPnPLastChangeParser.top_of_page"></a>GUPnPLastChangeParser</span></h2>
+<p>GUPnPLastChangeParser — A/V LastChange event XML parser</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="GUPnPLastChangeParser.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="GUPnPLastChangeParser.html#GUPnPLastChangeParser-struct" title="GUPnPLastChangeParser">GUPnPLastChangeParser</a>;
+<a class="link" href="GUPnPLastChangeParser.html" title="GUPnPLastChangeParser"><span class="returnvalue">GUPnPLastChangeParser</span></a> * <a class="link" href="GUPnPLastChangeParser.html#gupnp-last-change-parser-new" title="gupnp_last_change_parser_new ()">gupnp_last_change_parser_new</a>    (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="GUPnPLastChangeParser.html#gupnp-last-change-parser-parse-last-change-valist" title="gupnp_last_change_parser_parse_last_change_valist ()">gupnp_last_change_parser_parse_last_change_valist</a>
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPLastChangeParser.html" title="GUPnPLastChangeParser"><span class="type">GUPnPLastChangeParser</span></a> *parser</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> instance_id</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *last_change_xml</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>,
+                                                         <em class="parameter"><code><span class="type">va_list</span> var_args</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="GUPnPLastChangeParser.html#gupnp-last-change-parser-parse-last-change" title="gupnp_last_change_parser_parse_last_change ()">gupnp_last_change_parser_parse_last_change</a>
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPLastChangeParser.html" title="GUPnPLastChangeParser"><span class="type">GUPnPLastChangeParser</span></a> *parser</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> instance_id</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *last_change_xml</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>,
+                                                         <em class="parameter"><code>...</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="GUPnPLastChangeParser.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----GUPnPLastChangeParser
+</pre>
+</div>
+<div class="refsect1">
+<a name="GUPnPLastChangeParser.description"></a><h2>Description</h2>
+<p>
+<a class="link" href="GUPnPLastChangeParser.html" title="GUPnPLastChangeParser"><span class="type">GUPnPLastChangeParser</span></a> parses XML strings from LastChange events that are
+generated by AVTransport and RenderingControl services.
+</p>
+</div>
+<div class="refsect1">
+<a name="GUPnPLastChangeParser.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GUPnPLastChangeParser-struct"></a><h3>GUPnPLastChangeParser</h3>
+<pre class="programlisting">typedef struct _GUPnPLastChangeParser GUPnPLastChangeParser;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-last-change-parser-new"></a><h3>gupnp_last_change_parser_new ()</h3>
+<pre class="programlisting"><a class="link" href="GUPnPLastChangeParser.html" title="GUPnPLastChangeParser"><span class="returnvalue">GUPnPLastChangeParser</span></a> * gupnp_last_change_parser_new    (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A new <a class="link" href="GUPnPLastChangeParser.html" title="GUPnPLastChangeParser"><span class="type">GUPnPLastChangeParser</span></a>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-last-change-parser-parse-last-change-valist"></a><h3>gupnp_last_change_parser_parse_last_change_valist ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gupnp_last_change_parser_parse_last_change_valist
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPLastChangeParser.html" title="GUPnPLastChangeParser"><span class="type">GUPnPLastChangeParser</span></a> *parser</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> instance_id</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *last_change_xml</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>,
+                                                         <em class="parameter"><code><span class="type">va_list</span> var_args</code></em>);</pre>
+<p>
+See <a class="link" href="GUPnPLastChangeParser.html#gupnp-last-change-parser-parse-last-change" title="gupnp_last_change_parser_parse_last_change ()"><code class="function">gupnp_last_change_parser_parse_last_change()</code></a>; this version takes a
+va_list for use by language bindings.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>parser</code></em> :</span></p></td>
+<td>A <a class="link" href="GUPnPLastChangeParser.html" title="GUPnPLastChangeParser"><span class="type">GUPnPLastChangeParser</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>instance_id</code></em> :</span></p></td>
+<td>The ID of the AV instance caller is interested in</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>last_change_xml</code></em> :</span></p></td>
+<td>The xml from the "LastChange" event to parse</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>The location where to store any error, or NULL</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>var_args</code></em> :</span></p></td>
+<td>A va_list of tuples of state variable name, state variable type,
+and state variable value location, terminated with NULL. The state variable
+values should be freed after use</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>TRUE on success.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-last-change-parser-parse-last-change"></a><h3>gupnp_last_change_parser_parse_last_change ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gupnp_last_change_parser_parse_last_change
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPLastChangeParser.html" title="GUPnPLastChangeParser"><span class="type">GUPnPLastChangeParser</span></a> *parser</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> instance_id</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *last_change_xml</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>,
+                                                         <em class="parameter"><code>...</code></em>);</pre>
+<p>
+Parses the xml fragment from a LastChange event.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>parser</code></em> :</span></p></td>
+<td>A <a class="link" href="GUPnPLastChangeParser.html" title="GUPnPLastChangeParser"><span class="type">GUPnPLastChangeParser</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>instance_id</code></em> :</span></p></td>
+<td>The ID of the AV instance caller is interested in</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>last_change_xml</code></em> :</span></p></td>
+<td>The xml from the "LastChange" event to parse</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>The location where to store any error, or NULL</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>...</code></em> :</span></p></td>
+<td>tuples of state variable name, state variable type, and state
+variable value location, terminated with NULL. The state variable values
+should be freed after use.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>TRUE on success.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17.1</div>
+</body>
+</html>

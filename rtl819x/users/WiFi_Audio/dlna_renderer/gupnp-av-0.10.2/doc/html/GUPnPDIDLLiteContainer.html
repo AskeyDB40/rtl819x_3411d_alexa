@@ -1,0 +1,454 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GUPnPDIDLLiteContainer</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GUPnP A/V Reference Manual">
+<link rel="up" href="ch01.html" title="GUPnP A/V">
+<link rel="prev" href="GUPnPDIDLLiteObject.html" title="GUPnPDIDLLiteObject">
+<link rel="next" href="GUPnPDIDLLiteItem.html" title="GUPnPDIDLLiteItem">
+<meta name="generator" content="GTK-Doc V1.17.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GUPnPDIDLLiteObject.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GUPnP A/V Reference Manual</th>
+<td><a accesskey="n" href="GUPnPDIDLLiteItem.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GUPnPDIDLLiteContainer.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#GUPnPDIDLLiteContainer.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#GUPnPDIDLLiteContainer.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#GUPnPDIDLLiteContainer.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="GUPnPDIDLLiteContainer"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GUPnPDIDLLiteContainer.top_of_page"></a>GUPnPDIDLLiteContainer</span></h2>
+<p>GUPnPDIDLLiteContainer — DIDL-Lite Container</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="GUPnPDIDLLiteContainer.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="GUPnPDIDLLiteContainer.html#GUPnPDIDLLiteContainer-struct" title="GUPnPDIDLLiteContainer">GUPnPDIDLLiteContainer</a>;
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="GUPnPDIDLLiteContainer.html#gupnp-didl-lite-container-get-searchable" title="gupnp_didl_lite_container_get_searchable ()">gupnp_didl_lite_container_get_searchable</a>
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a> *container</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                <a class="link" href="GUPnPDIDLLiteContainer.html#gupnp-didl-lite-container-get-child-count" title="gupnp_didl_lite_container_get_child_count ()">gupnp_didl_lite_container_get_child_count</a>
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a> *container</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             <a class="link" href="GUPnPDIDLLiteContainer.html#gupnp-didl-lite-container-get-create-classes" title="gupnp_didl_lite_container_get_create_classes ()">gupnp_didl_lite_container_get_create_classes</a>
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a> *container</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             <a class="link" href="GUPnPDIDLLiteContainer.html#gupnp-didl-lite-container-get-search-classes" title="gupnp_didl_lite_container_get_search_classes ()">gupnp_didl_lite_container_get_search_classes</a>
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a> *container</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint64"><span class="returnvalue">gint64</span></a>              <a class="link" href="GUPnPDIDLLiteContainer.html#gupnp-didl-lite-container-get-storage-used" title="gupnp_didl_lite_container_get_storage_used ()">gupnp_didl_lite_container_get_storage_used</a>
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a> *container</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="GUPnPDIDLLiteContainer.html#gupnp-didl-lite-container-set-searchable" title="gupnp_didl_lite_container_set_searchable ()">gupnp_didl_lite_container_set_searchable</a>
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a> *container</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> searchable</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="GUPnPDIDLLiteContainer.html#gupnp-didl-lite-container-set-child-count" title="gupnp_didl_lite_container_set_child_count ()">gupnp_didl_lite_container_set_child_count</a>
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a> *container</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> child_count</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="GUPnPDIDLLiteContainer.html#gupnp-didl-lite-container-set-storage-used" title="gupnp_didl_lite_container_set_storage_used ()">gupnp_didl_lite_container_set_storage_used</a>
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a> *container</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint64"><span class="type">gint64</span></a> storage_used</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="GUPnPDIDLLiteContainer.html#gupnp-didl-lite-container-add-create-class" title="gupnp_didl_lite_container_add_create_class ()">gupnp_didl_lite_container_add_create_class</a>
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a> *container</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *create_class</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="GUPnPDIDLLiteContainer.html#gupnp-didl-lite-container-add-create-class-full" title="gupnp_didl_lite_container_add_create_class_full ()">gupnp_didl_lite_container_add_create_class_full</a>
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a> *container</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *create_class</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> include_derived</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="GUPnPDIDLLiteContainer.html#gupnp-didl-lite-container-add-search-class" title="gupnp_didl_lite_container_add_search_class ()">gupnp_didl_lite_container_add_search_class</a>
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a> *container</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *search_class</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="GUPnPDIDLLiteContainer.html#gupnp-didl-lite-container-add-search-class-full" title="gupnp_didl_lite_container_add_search_class_full ()">gupnp_didl_lite_container_add_search_class_full</a>
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a> *container</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *search_class</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> include_derived</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="GUPnPDIDLLiteContainer.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="GUPnPDIDLLiteObject.html" title="GUPnPDIDLLiteObject">GUPnPDIDLLiteObject</a>
+         +----GUPnPDIDLLiteContainer
+</pre>
+</div>
+<div class="refsect1">
+<a name="GUPnPDIDLLiteContainer.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="GUPnPDIDLLiteContainer.html#GUPnPDIDLLiteContainer--child-count" title='The "child-count" property'>child-count</a>"              <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write
+  "<a class="link" href="GUPnPDIDLLiteContainer.html#GUPnPDIDLLiteContainer--searchable" title='The "searchable" property'>searchable</a>"               <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="GUPnPDIDLLiteContainer.html#GUPnPDIDLLiteContainer--storage-used" title='The "storage-used" property'>storage-used</a>"             <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint64"><span class="type">gint64</span></a>                : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="GUPnPDIDLLiteContainer.description"></a><h2>Description</h2>
+<p>
+<a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a> respresents a DIDL-Lite container element.
+</p>
+</div>
+<div class="refsect1">
+<a name="GUPnPDIDLLiteContainer.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GUPnPDIDLLiteContainer-struct"></a><h3>GUPnPDIDLLiteContainer</h3>
+<pre class="programlisting">typedef struct _GUPnPDIDLLiteContainer GUPnPDIDLLiteContainer;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-didl-lite-container-get-searchable"></a><h3>gupnp_didl_lite_container_get_searchable ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gupnp_didl_lite_container_get_searchable
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a> *container</code></em>);</pre>
+<p>
+Checks whether <em class="parameter"><code>container</code></em> is searchable.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>container</code></em> :</span></p></td>
+<td><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a></td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><span class="type">TRUE</span></a> if <em class="parameter"><code>container</code></em> is searchable.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-didl-lite-container-get-child-count"></a><h3>gupnp_didl_lite_container_get_child_count ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                gupnp_didl_lite_container_get_child_count
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a> *container</code></em>);</pre>
+<p>
+Get the child count of the <em class="parameter"><code>container</code></em>.  If the child count is unknown, -1 is
+returned.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>container</code></em> :</span></p></td>
+<td><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a></td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The child count of the <em class="parameter"><code>container</code></em>, or -1 if it is unknown.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-didl-lite-container-get-create-classes"></a><h3>gupnp_didl_lite_container_get_create_classes ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             gupnp_didl_lite_container_get_create_classes
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a> *container</code></em>);</pre>
+<p>
+Gets the list of create classes of the <em class="parameter"><code>object</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>container</code></em> :</span></p></td>
+<td><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a></td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The list of create classes
+belonging to <em class="parameter"><code>object</code></em>, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#g-list-free"><span class="type">g_list_free</span></a> the returned list after usage and <a href="http://library.gnome.org/devel/glib/unstable/glib-Memory-Allocation.html#g-free"><span class="type">g_free</span></a> each string in it. <span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-didl-lite-container-get-search-classes"></a><h3>gupnp_didl_lite_container_get_search_classes ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             gupnp_didl_lite_container_get_search_classes
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a> *container</code></em>);</pre>
+<p>
+Gets the list of search classes of the <em class="parameter"><code>object</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>container</code></em> :</span></p></td>
+<td><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a></td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The list of search classes
+belonging to <em class="parameter"><code>object</code></em>, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#g-list-free"><span class="type">g_list_free</span></a> the returned list after usage
+and <a href="http://library.gnome.org/devel/glib/unstable/glib-Memory-Allocation.html#g-free"><span class="type">g_free</span></a> each string in it. <span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8][<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-didl-lite-container-get-storage-used"></a><h3>gupnp_didl_lite_container_get_storage_used ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint64"><span class="returnvalue">gint64</span></a>              gupnp_didl_lite_container_get_storage_used
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a> *container</code></em>);</pre>
+<p>
+Get the number of bytes used by all child items of the <em class="parameter"><code>container</code></em>.
+If storage used is unknown, -1 is returned.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>container</code></em> :</span></p></td>
+<td><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a></td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The number of bytes used by all children of the <em class="parameter"><code>container</code></em>,
+or -1 if it is unknown.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-didl-lite-container-set-searchable"></a><h3>gupnp_didl_lite_container_set_searchable ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gupnp_didl_lite_container_set_searchable
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a> *container</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> searchable</code></em>);</pre>
+<p>
+(Un)set the searchibility of <em class="parameter"><code>container</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>container</code></em> :</span></p></td>
+<td><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a></td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>searchable</code></em> :</span></p></td>
+<td>The searchibility</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-didl-lite-container-set-child-count"></a><h3>gupnp_didl_lite_container_set_child_count ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gupnp_didl_lite_container_set_child_count
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a> *container</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> child_count</code></em>);</pre>
+<p>
+Set the child count of the <em class="parameter"><code>container</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>container</code></em> :</span></p></td>
+<td><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a></td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>child_count</code></em> :</span></p></td>
+<td>The child count</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-didl-lite-container-set-storage-used"></a><h3>gupnp_didl_lite_container_set_storage_used ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gupnp_didl_lite_container_set_storage_used
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a> *container</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint64"><span class="type">gint64</span></a> storage_used</code></em>);</pre>
+<p>
+Set the number of bytes used by all child items of the <em class="parameter"><code>container</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>container</code></em> :</span></p></td>
+<td><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a></td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>storage_used</code></em> :</span></p></td>
+<td>The number of bytes used by all child items of the
+<em class="parameter"><code>container</code></em> or -1 if unknown.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-didl-lite-container-add-create-class"></a><h3>gupnp_didl_lite_container_add_create_class ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gupnp_didl_lite_container_add_create_class
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a> *container</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *create_class</code></em>);</pre>
+<p>
+Add a new create class to the <em class="parameter"><code>object</code></em>. includeDerived defaults to "0".
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>container</code></em> :</span></p></td>
+<td><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a></td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>create_class</code></em> :</span></p></td>
+<td>The createClass to add.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>None.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-didl-lite-container-add-create-class-full"></a><h3>gupnp_didl_lite_container_add_create_class_full ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gupnp_didl_lite_container_add_create_class_full
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a> *container</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *create_class</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> include_derived</code></em>);</pre>
+<p>
+Add a new create class to the <em class="parameter"><code>object</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>container</code></em> :</span></p></td>
+<td><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a></td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>create_class</code></em> :</span></p></td>
+<td>The createClass to add.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>include_derived</code></em> :</span></p></td>
+<td>Whether object with dervied classes may be created in
+this container or not.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>None.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-didl-lite-container-add-search-class"></a><h3>gupnp_didl_lite_container_add_search_class ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gupnp_didl_lite_container_add_search_class
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a> *container</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *search_class</code></em>);</pre>
+<p>
+Add a new search class to the <em class="parameter"><code>object</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>container</code></em> :</span></p></td>
+<td><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a></td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>search_class</code></em> :</span></p></td>
+<td>The searchClass to add.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>None.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-didl-lite-container-add-search-class-full"></a><h3>gupnp_didl_lite_container_add_search_class_full ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gupnp_didl_lite_container_add_search_class_full
+                                                        (<em class="parameter"><code><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a> *container</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *search_class</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> include_derived</code></em>);</pre>
+<p>
+Add a new search class to the <em class="parameter"><code>object</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>container</code></em> :</span></p></td>
+<td><a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a></td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>search_class</code></em> :</span></p></td>
+<td>The searchClass to add.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>include_derived</code></em> :</span></p></td>
+<td>includeDerived attribute of the DIDL</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>None.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="GUPnPDIDLLiteContainer.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="GUPnPDIDLLiteContainer--child-count"></a><h3>The <code class="literal">"child-count"</code> property</h3>
+<pre class="programlisting">  "child-count"              <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write</pre>
+<p>
+The child count of this container.
+</p>
+<p>Allowed values: &gt;= 0</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GUPnPDIDLLiteContainer--searchable"></a><h3>The <code class="literal">"searchable"</code> property</h3>
+<pre class="programlisting">  "searchable"               <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>
+Whether this container is searchable.
+</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GUPnPDIDLLiteContainer--storage-used"></a><h3>The <code class="literal">"storage-used"</code> property</h3>
+<pre class="programlisting">  "storage-used"             <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint64"><span class="type">gint64</span></a>                : Read / Write</pre>
+<p>
+The number of bytes used by all child items of this container.
+</p>
+<p>Allowed values: &gt;= -1</p>
+<p>Default value: -1</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17.1</div>
+</body>
+</html>

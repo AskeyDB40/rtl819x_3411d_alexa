@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelMediaArtStore">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelMediaArtStore.top_of_page">RygelMediaArtStore</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-SERVER Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelMediaArtStore</refname>
+<refpurpose>This maps RygelMusicItem objects to their cached cover art, implementing the GNOME <ulink url="https://live.gnome.org/MediaArtStorageSpec">MediaArt storage specification</ulink> and the simplified version that Banshee uses.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelMediaArtStore.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="RYGEL-TYPE-MEDIA-ART-STORE:CAPS">RYGEL_TYPE_MEDIA_ART_STORE</link>
+<link linkend="RygelThumbnail"><returnvalue>RygelThumbnail</returnvalue></link> *    <link linkend="rygel-media-art-store-find-media-art">rygel_media_art_store_find_media_art</link>
+                                                        (<parameter><link linkend="RygelMediaArtStore"><type>RygelMediaArtStore</type></link> *self</parameter>,
+                                                         <parameter><link linkend="RygelMusicItem"><type>RygelMusicItem</type></link> *item</parameter>,
+                                                         <parameter><link linkend="gboolean"><type>gboolean</type></link> simple</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="RygelThumbnail"><returnvalue>RygelThumbnail</returnvalue></link> *    <link linkend="rygel-media-art-store-find-media-art-any">rygel_media_art_store_find_media_art_any</link>
+                                                        (<parameter><link linkend="RygelMediaArtStore"><type>RygelMediaArtStore</type></link> *self</parameter>,
+                                                         <parameter><link linkend="RygelMusicItem"><type>RygelMusicItem</type></link> *item</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="GFile"><returnvalue>GFile</returnvalue></link> *             <link linkend="rygel-media-art-store-get-media-art-file">rygel_media_art_store_get_media_art_file</link>
+                                                        (<parameter><link linkend="RygelMediaArtStore"><type>RygelMediaArtStore</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *type</parameter>,
+                                                         <parameter><link linkend="RygelMusicItem"><type>RygelMusicItem</type></link> *item</parameter>,
+                                                         <parameter><link linkend="gboolean"><type>gboolean</type></link> simple</parameter>);
+<link linkend="RygelMediaArtStore"><returnvalue>RygelMediaArtStore</returnvalue></link> * <link linkend="rygel-media-art-store-get-default">rygel_media_art_store_get_default</link>  (<parameter><type>void</type></parameter>);
+struct              <link linkend="RygelMediaArtStore-struct">RygelMediaArtStore</link>;
+struct              <link linkend="RygelMediaArtStoreClass">RygelMediaArtStoreClass</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelMediaArtStore.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----RygelMediaArtStore
+</synopsis>
+</refsect1>
+
+<refsect1 id="RygelMediaArtStore.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="RygelMediaArtStore.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="RYGEL-TYPE-MEDIA-ART-STORE:CAPS" role="macro">
+<title>RYGEL_TYPE_MEDIA_ART_STORE</title>
+<indexterm zone="RYGEL-TYPE-MEDIA-ART-STORE:CAPS"><primary>RYGEL_TYPE_MEDIA_ART_STORE</primary></indexterm>
+<programlisting>#define RYGEL_TYPE_MEDIA_ART_STORE (rygel_media_art_store_get_type ())
+</programlisting>
+<para>
+The type for <link linkend="RygelMediaArtStore"><type>RygelMediaArtStore</type></link>.
+</para></refsect2>
+<refsect2 id="rygel-media-art-store-find-media-art" role="function">
+<title>rygel_media_art_store_find_media_art ()</title>
+<indexterm zone="rygel-media-art-store-find-media-art"><primary>rygel_media_art_store_find_media_art</primary></indexterm>
+<programlisting><link linkend="RygelThumbnail"><returnvalue>RygelThumbnail</returnvalue></link> *    rygel_media_art_store_find_media_art
+                                                        (<parameter><link linkend="RygelMediaArtStore"><type>RygelMediaArtStore</type></link> *self</parameter>,
+                                                         <parameter><link linkend="RygelMusicItem"><type>RygelMusicItem</type></link> *item</parameter>,
+                                                         <parameter><link linkend="gboolean"><type>gboolean</type></link> simple</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaArtStore"><type>RygelMediaArtStore</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-art-store-find-media-art-any" role="function">
+<title>rygel_media_art_store_find_media_art_any ()</title>
+<indexterm zone="rygel-media-art-store-find-media-art-any"><primary>rygel_media_art_store_find_media_art_any</primary></indexterm>
+<programlisting><link linkend="RygelThumbnail"><returnvalue>RygelThumbnail</returnvalue></link> *    rygel_media_art_store_find_media_art_any
+                                                        (<parameter><link linkend="RygelMediaArtStore"><type>RygelMediaArtStore</type></link> *self</parameter>,
+                                                         <parameter><link linkend="RygelMusicItem"><type>RygelMusicItem</type></link> *item</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaArtStore"><type>RygelMediaArtStore</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-art-store-get-media-art-file" role="function">
+<title>rygel_media_art_store_get_media_art_file ()</title>
+<indexterm zone="rygel-media-art-store-get-media-art-file"><primary>rygel_media_art_store_get_media_art_file</primary></indexterm>
+<programlisting><link linkend="GFile"><returnvalue>GFile</returnvalue></link> *             rygel_media_art_store_get_media_art_file
+                                                        (<parameter><link linkend="RygelMediaArtStore"><type>RygelMediaArtStore</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *type</parameter>,
+                                                         <parameter><link linkend="RygelMusicItem"><type>RygelMusicItem</type></link> *item</parameter>,
+                                                         <parameter><link linkend="gboolean"><type>gboolean</type></link> simple</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaArtStore"><type>RygelMediaArtStore</type></link> instance</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-art-store-get-default" role="function">
+<title>rygel_media_art_store_get_default ()</title>
+<indexterm zone="rygel-media-art-store-get-default"><primary>rygel_media_art_store_get_default</primary></indexterm>
+<programlisting><link linkend="RygelMediaArtStore"><returnvalue>RygelMediaArtStore</returnvalue></link> * rygel_media_art_store_get_default  (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="RygelMediaArtStore-struct" role="struct">
+<title>struct RygelMediaArtStore</title>
+<indexterm zone="RygelMediaArtStore-struct"><primary>RygelMediaArtStore</primary></indexterm>
+<programlisting>struct RygelMediaArtStore;</programlisting>
+<para>
+This maps RygelMusicItem objects to their cached cover art, implementing the GNOME <ulink url="https://live.gnome.org/MediaArtStorageSpec">MediaArt storage specification</ulink> and the simplified version that Banshee uses.
+</para></refsect2>
+<refsect2 id="RygelMediaArtStoreClass" role="struct">
+<title>struct RygelMediaArtStoreClass</title>
+<indexterm zone="RygelMediaArtStoreClass"><primary>RygelMediaArtStoreClass</primary></indexterm>
+<programlisting>struct RygelMediaArtStoreClass {
+	GObjectClass parent_class;
+};
+</programlisting>
+<para>
+The class structure for <link linkend="RYGEL-TYPE-MEDIA-ART-STORE:CAPS"><literal>RYGEL_TYPE_MEDIA_ART_STORE</literal></link>. All the fields in this structure are private and should never be accessed directly.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="GObjectClass"><type>GObjectClass</type></link>&#160;<structfield id="RygelMediaArtStoreClass.parent-class">parent_class</structfield>;</term>
+<listitem><simpara>the parent class structure</simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+</refentry>

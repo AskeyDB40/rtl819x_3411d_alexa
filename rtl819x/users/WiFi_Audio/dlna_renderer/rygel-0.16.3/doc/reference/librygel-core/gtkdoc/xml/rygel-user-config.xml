@@ -1,0 +1,247 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelUserConfig">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelUserConfig.top_of_page">RygelUserConfig</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-CORE Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelUserConfig</refname>
+<refpurpose>Manages the user configuration for Rygel.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelUserConfig.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="RYGEL-TYPE-USER-CONFIG:CAPS">RYGEL_TYPE_USER_CONFIG</link>
+#define             <link linkend="RYGEL-USER-CONFIG-CONFIG-FILE:CAPS">RYGEL_USER_CONFIG_CONFIG_FILE</link>
+#define             <link linkend="RYGEL-USER-CONFIG-IFACE-KEY:CAPS">RYGEL_USER_CONFIG_IFACE_KEY</link>
+#define             <link linkend="RYGEL-USER-CONFIG-PORT-KEY:CAPS">RYGEL_USER_CONFIG_PORT_KEY</link>
+#define             <link linkend="RYGEL-USER-CONFIG-ENABLED-KEY:CAPS">RYGEL_USER_CONFIG_ENABLED_KEY</link>
+#define             <link linkend="RYGEL-USER-CONFIG-UPNP-ENABLED-KEY:CAPS">RYGEL_USER_CONFIG_UPNP_ENABLED_KEY</link>
+#define             <link linkend="RYGEL-USER-CONFIG-TITLE-KEY:CAPS">RYGEL_USER_CONFIG_TITLE_KEY</link>
+#define             <link linkend="RYGEL-USER-CONFIG-TRANSCODING-KEY:CAPS">RYGEL_USER_CONFIG_TRANSCODING_KEY</link>
+#define             <link linkend="RYGEL-USER-CONFIG-MP3-TRANSCODER-KEY:CAPS">RYGEL_USER_CONFIG_MP3_TRANSCODER_KEY</link>
+#define             <link linkend="RYGEL-USER-CONFIG-MP2TS-TRANSCODER-KEY:CAPS">RYGEL_USER_CONFIG_MP2TS_TRANSCODER_KEY</link>
+#define             <link linkend="RYGEL-USER-CONFIG-LPCM-TRANSCODER-KEY:CAPS">RYGEL_USER_CONFIG_LPCM_TRANSCODER_KEY</link>
+#define             <link linkend="RYGEL-USER-CONFIG-WMV-TRANSCODER-KEY:CAPS">RYGEL_USER_CONFIG_WMV_TRANSCODER_KEY</link>
+#define             <link linkend="RYGEL-USER-CONFIG-AAC-TRANSCODER-KEY:CAPS">RYGEL_USER_CONFIG_AAC_TRANSCODER_KEY</link>
+#define             <link linkend="RYGEL-USER-CONFIG-AVC-TRANSCODER-KEY:CAPS">RYGEL_USER_CONFIG_AVC_TRANSCODER_KEY</link>
+#define             <link linkend="RYGEL-USER-CONFIG-ALLOW-UPLOAD-KEY:CAPS">RYGEL_USER_CONFIG_ALLOW_UPLOAD_KEY</link>
+#define             <link linkend="RYGEL-USER-CONFIG-ALLOW-DELETION-KEY:CAPS">RYGEL_USER_CONFIG_ALLOW_DELETION_KEY</link>
+#define             <link linkend="RYGEL-USER-CONFIG-LOG-LEVELS-KEY:CAPS">RYGEL_USER_CONFIG_LOG_LEVELS_KEY</link>
+#define             <link linkend="RYGEL-USER-CONFIG-PLUGIN-PATH-KEY:CAPS">RYGEL_USER_CONFIG_PLUGIN_PATH_KEY</link>
+#define             <link linkend="RYGEL-USER-CONFIG-UPLOAD-FOLDER-KEY:CAPS">RYGEL_USER_CONFIG_UPLOAD_FOLDER_KEY</link>
+#define             <link linkend="RYGEL-USER-CONFIG-VIDEO-UPLOAD-DIR-PATH-KEY:CAPS">RYGEL_USER_CONFIG_VIDEO_UPLOAD_DIR_PATH_KEY</link>
+#define             <link linkend="RYGEL-USER-CONFIG-MUSIC-UPLOAD-DIR-PATH-KEY:CAPS">RYGEL_USER_CONFIG_MUSIC_UPLOAD_DIR_PATH_KEY</link>
+#define             <link linkend="RYGEL-USER-CONFIG-PICTURE-UPLOAD-DIR-PATH-KEY:CAPS">RYGEL_USER_CONFIG_PICTURE_UPLOAD_DIR_PATH_KEY</link>
+<link linkend="RygelUserConfig"><returnvalue>RygelUserConfig</returnvalue></link> *   <link linkend="rygel-user-config-new">rygel_user_config_new</link>               (<parameter>const <link linkend="gchar"><type>gchar</type></link> *file</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="RygelUserConfig"><returnvalue>RygelUserConfig</returnvalue></link> *   <link linkend="rygel-user-config-get-default">rygel_user_config_get_default</link>       (<parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+struct              <link linkend="RygelUserConfig-struct">RygelUserConfig</link>;
+struct              <link linkend="RygelUserConfigClass">RygelUserConfigClass</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelUserConfig.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----RygelUserConfig
+</synopsis>
+</refsect1>
+<refsect1 id="RygelUserConfig.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+RygelUserConfig implements
+ <link linkend="RygelConfiguration">RygelConfiguration</link>.</para>
+</refsect1>
+
+<refsect1 id="RygelUserConfig.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="RygelUserConfig.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="RYGEL-TYPE-USER-CONFIG:CAPS" role="macro">
+<title>RYGEL_TYPE_USER_CONFIG</title>
+<indexterm zone="RYGEL-TYPE-USER-CONFIG:CAPS"><primary>RYGEL_TYPE_USER_CONFIG</primary></indexterm>
+<programlisting>#define RYGEL_TYPE_USER_CONFIG (rygel_user_config_get_type ())
+</programlisting>
+<para>
+The type for <link linkend="RygelUserConfig"><type>RygelUserConfig</type></link>.
+</para></refsect2>
+<refsect2 id="RYGEL-USER-CONFIG-CONFIG-FILE:CAPS" role="macro">
+<title>RYGEL_USER_CONFIG_CONFIG_FILE</title>
+<indexterm zone="RYGEL-USER-CONFIG-CONFIG-FILE:CAPS"><primary>RYGEL_USER_CONFIG_CONFIG_FILE</primary></indexterm>
+<programlisting>#define RYGEL_USER_CONFIG_CONFIG_FILE "rygel.conf"
+</programlisting>
+</refsect2>
+<refsect2 id="RYGEL-USER-CONFIG-IFACE-KEY:CAPS" role="macro">
+<title>RYGEL_USER_CONFIG_IFACE_KEY</title>
+<indexterm zone="RYGEL-USER-CONFIG-IFACE-KEY:CAPS"><primary>RYGEL_USER_CONFIG_IFACE_KEY</primary></indexterm>
+<programlisting>#define RYGEL_USER_CONFIG_IFACE_KEY "interface"
+</programlisting>
+</refsect2>
+<refsect2 id="RYGEL-USER-CONFIG-PORT-KEY:CAPS" role="macro">
+<title>RYGEL_USER_CONFIG_PORT_KEY</title>
+<indexterm zone="RYGEL-USER-CONFIG-PORT-KEY:CAPS"><primary>RYGEL_USER_CONFIG_PORT_KEY</primary></indexterm>
+<programlisting>#define RYGEL_USER_CONFIG_PORT_KEY "port"
+</programlisting>
+</refsect2>
+<refsect2 id="RYGEL-USER-CONFIG-ENABLED-KEY:CAPS" role="macro">
+<title>RYGEL_USER_CONFIG_ENABLED_KEY</title>
+<indexterm zone="RYGEL-USER-CONFIG-ENABLED-KEY:CAPS"><primary>RYGEL_USER_CONFIG_ENABLED_KEY</primary></indexterm>
+<programlisting>#define RYGEL_USER_CONFIG_ENABLED_KEY "enabled"
+</programlisting>
+</refsect2>
+<refsect2 id="RYGEL-USER-CONFIG-UPNP-ENABLED-KEY:CAPS" role="macro">
+<title>RYGEL_USER_CONFIG_UPNP_ENABLED_KEY</title>
+<indexterm zone="RYGEL-USER-CONFIG-UPNP-ENABLED-KEY:CAPS"><primary>RYGEL_USER_CONFIG_UPNP_ENABLED_KEY</primary></indexterm>
+<programlisting>#define RYGEL_USER_CONFIG_UPNP_ENABLED_KEY "upnp-" RYGEL_USER_CONFIG_ENABLED_KEY
+</programlisting>
+</refsect2>
+<refsect2 id="RYGEL-USER-CONFIG-TITLE-KEY:CAPS" role="macro">
+<title>RYGEL_USER_CONFIG_TITLE_KEY</title>
+<indexterm zone="RYGEL-USER-CONFIG-TITLE-KEY:CAPS"><primary>RYGEL_USER_CONFIG_TITLE_KEY</primary></indexterm>
+<programlisting>#define RYGEL_USER_CONFIG_TITLE_KEY "title"
+</programlisting>
+</refsect2>
+<refsect2 id="RYGEL-USER-CONFIG-TRANSCODING-KEY:CAPS" role="macro">
+<title>RYGEL_USER_CONFIG_TRANSCODING_KEY</title>
+<indexterm zone="RYGEL-USER-CONFIG-TRANSCODING-KEY:CAPS"><primary>RYGEL_USER_CONFIG_TRANSCODING_KEY</primary></indexterm>
+<programlisting>#define RYGEL_USER_CONFIG_TRANSCODING_KEY "enable-transcoding"
+</programlisting>
+</refsect2>
+<refsect2 id="RYGEL-USER-CONFIG-MP3-TRANSCODER-KEY:CAPS" role="macro">
+<title>RYGEL_USER_CONFIG_MP3_TRANSCODER_KEY</title>
+<indexterm zone="RYGEL-USER-CONFIG-MP3-TRANSCODER-KEY:CAPS"><primary>RYGEL_USER_CONFIG_MP3_TRANSCODER_KEY</primary></indexterm>
+<programlisting>#define RYGEL_USER_CONFIG_MP3_TRANSCODER_KEY "enable-mp3-transcoder"
+</programlisting>
+</refsect2>
+<refsect2 id="RYGEL-USER-CONFIG-MP2TS-TRANSCODER-KEY:CAPS" role="macro">
+<title>RYGEL_USER_CONFIG_MP2TS_TRANSCODER_KEY</title>
+<indexterm zone="RYGEL-USER-CONFIG-MP2TS-TRANSCODER-KEY:CAPS"><primary>RYGEL_USER_CONFIG_MP2TS_TRANSCODER_KEY</primary></indexterm>
+<programlisting>#define RYGEL_USER_CONFIG_MP2TS_TRANSCODER_KEY "enable-mp2ts-transcoder"
+</programlisting>
+</refsect2>
+<refsect2 id="RYGEL-USER-CONFIG-LPCM-TRANSCODER-KEY:CAPS" role="macro">
+<title>RYGEL_USER_CONFIG_LPCM_TRANSCODER_KEY</title>
+<indexterm zone="RYGEL-USER-CONFIG-LPCM-TRANSCODER-KEY:CAPS"><primary>RYGEL_USER_CONFIG_LPCM_TRANSCODER_KEY</primary></indexterm>
+<programlisting>#define RYGEL_USER_CONFIG_LPCM_TRANSCODER_KEY "enable-lpcm-transcoder"
+</programlisting>
+</refsect2>
+<refsect2 id="RYGEL-USER-CONFIG-WMV-TRANSCODER-KEY:CAPS" role="macro">
+<title>RYGEL_USER_CONFIG_WMV_TRANSCODER_KEY</title>
+<indexterm zone="RYGEL-USER-CONFIG-WMV-TRANSCODER-KEY:CAPS"><primary>RYGEL_USER_CONFIG_WMV_TRANSCODER_KEY</primary></indexterm>
+<programlisting>#define RYGEL_USER_CONFIG_WMV_TRANSCODER_KEY "enable-wmv-transcoder"
+</programlisting>
+</refsect2>
+<refsect2 id="RYGEL-USER-CONFIG-AAC-TRANSCODER-KEY:CAPS" role="macro">
+<title>RYGEL_USER_CONFIG_AAC_TRANSCODER_KEY</title>
+<indexterm zone="RYGEL-USER-CONFIG-AAC-TRANSCODER-KEY:CAPS"><primary>RYGEL_USER_CONFIG_AAC_TRANSCODER_KEY</primary></indexterm>
+<programlisting>#define RYGEL_USER_CONFIG_AAC_TRANSCODER_KEY "enable-aac-transcoder"
+</programlisting>
+</refsect2>
+<refsect2 id="RYGEL-USER-CONFIG-AVC-TRANSCODER-KEY:CAPS" role="macro">
+<title>RYGEL_USER_CONFIG_AVC_TRANSCODER_KEY</title>
+<indexterm zone="RYGEL-USER-CONFIG-AVC-TRANSCODER-KEY:CAPS"><primary>RYGEL_USER_CONFIG_AVC_TRANSCODER_KEY</primary></indexterm>
+<programlisting>#define RYGEL_USER_CONFIG_AVC_TRANSCODER_KEY "enable-avc-transcoder"
+</programlisting>
+</refsect2>
+<refsect2 id="RYGEL-USER-CONFIG-ALLOW-UPLOAD-KEY:CAPS" role="macro">
+<title>RYGEL_USER_CONFIG_ALLOW_UPLOAD_KEY</title>
+<indexterm zone="RYGEL-USER-CONFIG-ALLOW-UPLOAD-KEY:CAPS"><primary>RYGEL_USER_CONFIG_ALLOW_UPLOAD_KEY</primary></indexterm>
+<programlisting>#define RYGEL_USER_CONFIG_ALLOW_UPLOAD_KEY "allow-upload"
+</programlisting>
+</refsect2>
+<refsect2 id="RYGEL-USER-CONFIG-ALLOW-DELETION-KEY:CAPS" role="macro">
+<title>RYGEL_USER_CONFIG_ALLOW_DELETION_KEY</title>
+<indexterm zone="RYGEL-USER-CONFIG-ALLOW-DELETION-KEY:CAPS"><primary>RYGEL_USER_CONFIG_ALLOW_DELETION_KEY</primary></indexterm>
+<programlisting>#define RYGEL_USER_CONFIG_ALLOW_DELETION_KEY "allow-deletion"
+</programlisting>
+</refsect2>
+<refsect2 id="RYGEL-USER-CONFIG-LOG-LEVELS-KEY:CAPS" role="macro">
+<title>RYGEL_USER_CONFIG_LOG_LEVELS_KEY</title>
+<indexterm zone="RYGEL-USER-CONFIG-LOG-LEVELS-KEY:CAPS"><primary>RYGEL_USER_CONFIG_LOG_LEVELS_KEY</primary></indexterm>
+<programlisting>#define RYGEL_USER_CONFIG_LOG_LEVELS_KEY "log-level"
+</programlisting>
+</refsect2>
+<refsect2 id="RYGEL-USER-CONFIG-PLUGIN-PATH-KEY:CAPS" role="macro">
+<title>RYGEL_USER_CONFIG_PLUGIN_PATH_KEY</title>
+<indexterm zone="RYGEL-USER-CONFIG-PLUGIN-PATH-KEY:CAPS"><primary>RYGEL_USER_CONFIG_PLUGIN_PATH_KEY</primary></indexterm>
+<programlisting>#define RYGEL_USER_CONFIG_PLUGIN_PATH_KEY "plugin-path"
+</programlisting>
+</refsect2>
+<refsect2 id="RYGEL-USER-CONFIG-UPLOAD-FOLDER-KEY:CAPS" role="macro">
+<title>RYGEL_USER_CONFIG_UPLOAD_FOLDER_KEY</title>
+<indexterm zone="RYGEL-USER-CONFIG-UPLOAD-FOLDER-KEY:CAPS"><primary>RYGEL_USER_CONFIG_UPLOAD_FOLDER_KEY</primary></indexterm>
+<programlisting>#define RYGEL_USER_CONFIG_UPLOAD_FOLDER_KEY "upload-folder"
+</programlisting>
+</refsect2>
+<refsect2 id="RYGEL-USER-CONFIG-VIDEO-UPLOAD-DIR-PATH-KEY:CAPS" role="macro">
+<title>RYGEL_USER_CONFIG_VIDEO_UPLOAD_DIR_PATH_KEY</title>
+<indexterm zone="RYGEL-USER-CONFIG-VIDEO-UPLOAD-DIR-PATH-KEY:CAPS"><primary>RYGEL_USER_CONFIG_VIDEO_UPLOAD_DIR_PATH_KEY</primary></indexterm>
+<programlisting>#define RYGEL_USER_CONFIG_VIDEO_UPLOAD_DIR_PATH_KEY "video-" RYGEL_USER_CONFIG_UPLOAD_FOLDER_KEY
+</programlisting>
+</refsect2>
+<refsect2 id="RYGEL-USER-CONFIG-MUSIC-UPLOAD-DIR-PATH-KEY:CAPS" role="macro">
+<title>RYGEL_USER_CONFIG_MUSIC_UPLOAD_DIR_PATH_KEY</title>
+<indexterm zone="RYGEL-USER-CONFIG-MUSIC-UPLOAD-DIR-PATH-KEY:CAPS"><primary>RYGEL_USER_CONFIG_MUSIC_UPLOAD_DIR_PATH_KEY</primary></indexterm>
+<programlisting>#define RYGEL_USER_CONFIG_MUSIC_UPLOAD_DIR_PATH_KEY "music-" RYGEL_USER_CONFIG_UPLOAD_FOLDER_KEY
+</programlisting>
+</refsect2>
+<refsect2 id="RYGEL-USER-CONFIG-PICTURE-UPLOAD-DIR-PATH-KEY:CAPS" role="macro">
+<title>RYGEL_USER_CONFIG_PICTURE_UPLOAD_DIR_PATH_KEY</title>
+<indexterm zone="RYGEL-USER-CONFIG-PICTURE-UPLOAD-DIR-PATH-KEY:CAPS"><primary>RYGEL_USER_CONFIG_PICTURE_UPLOAD_DIR_PATH_KEY</primary></indexterm>
+<programlisting>#define RYGEL_USER_CONFIG_PICTURE_UPLOAD_DIR_PATH_KEY "picture-" RYGEL_USER_CONFIG_UPLOAD_FOLDER_KEY
+</programlisting>
+</refsect2>
+<refsect2 id="rygel-user-config-new" role="function">
+<title>rygel_user_config_new ()</title>
+<indexterm zone="rygel-user-config-new"><primary>rygel_user_config_new</primary></indexterm>
+<programlisting><link linkend="RygelUserConfig"><returnvalue>RygelUserConfig</returnvalue></link> *   rygel_user_config_new               (<parameter>const <link linkend="gchar"><type>gchar</type></link> *file</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-user-config-get-default" role="function">
+<title>rygel_user_config_get_default ()</title>
+<indexterm zone="rygel-user-config-get-default"><primary>rygel_user_config_get_default</primary></indexterm>
+<programlisting><link linkend="RygelUserConfig"><returnvalue>RygelUserConfig</returnvalue></link> *   rygel_user_config_get_default       (<parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="RygelUserConfig-struct" role="struct">
+<title>struct RygelUserConfig</title>
+<indexterm zone="RygelUserConfig-struct"><primary>RygelUserConfig</primary></indexterm>
+<programlisting>struct RygelUserConfig;</programlisting>
+<para>
+Manages the user configuration for Rygel.
+</para></refsect2>
+<refsect2 id="RygelUserConfigClass" role="struct">
+<title>struct RygelUserConfigClass</title>
+<indexterm zone="RygelUserConfigClass"><primary>RygelUserConfigClass</primary></indexterm>
+<programlisting>struct RygelUserConfigClass {
+	GObjectClass parent_class;
+};
+</programlisting>
+<para>
+The class structure for <link linkend="RYGEL-TYPE-USER-CONFIG:CAPS"><literal>RYGEL_TYPE_USER_CONFIG</literal></link>. All the fields in this structure are private and should never be accessed directly.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="GObjectClass"><type>GObjectClass</type></link>&#160;<structfield id="RygelUserConfigClass.parent-class">parent_class</structfield>;</term>
+<listitem><simpara>the parent class structure</simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+</refentry>

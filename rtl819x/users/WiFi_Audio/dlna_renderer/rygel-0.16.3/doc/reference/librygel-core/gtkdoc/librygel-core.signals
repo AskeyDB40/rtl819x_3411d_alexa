@@ -1,0 +1,25 @@
+<SIGNAL>
+<NAME>FreeDesktopDBusObject::name-owner-changed</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>l</FLAGS>
+FreeDesktopDBusObject *freedesktopdbusobject
+gchar *arg1
+gchar *arg2
+gchar *arg3
+</SIGNAL>
+
+<SIGNAL>
+<NAME>RygelPluginLoader::plugin-available</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>l</FLAGS>
+RygelPluginLoader *rygelpluginloader
+RygelPlugin *arg1
+</SIGNAL>
+
+<SIGNAL>
+<NAME>RygelStateMachine::completed</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>l</FLAGS>
+RygelStateMachine *rygelstatemachine
+</SIGNAL>
+

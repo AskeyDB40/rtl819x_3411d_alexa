@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelSimpleContainer">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelSimpleContainer.top_of_page">RygelSimpleContainer</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-SERVER Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelSimpleContainer</refname>
+<refpurpose>A simple implementation of RygelMediaContainer that keeps all RygelMediaObjects in memory. You should add children via <link linkend="rygel-simple-container-add-child-item"><function>rygel_simple_container_add_child_item()</function></link>.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelSimpleContainer.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="RYGEL-TYPE-SIMPLE-CONTAINER:CAPS">RYGEL_TYPE_SIMPLE_CONTAINER</link>
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-simple-container-add-child-item">rygel_simple_container_add_child_item</link>
+                                                        (<parameter><link linkend="RygelSimpleContainer"><type>RygelSimpleContainer</type></link> *self</parameter>,
+                                                         <parameter><link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> *child</parameter>);
+<link linkend="RygelMediaObjects"><returnvalue>RygelMediaObjects</returnvalue></link> * <link linkend="rygel-simple-container-get-all-children">rygel_simple_container_get_all_children</link>
+                                                        (<parameter><link linkend="RygelSimpleContainer"><type>RygelSimpleContainer</type></link> *self</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-simple-container-add-child-container">rygel_simple_container_add_child_container</link>
+                                                        (<parameter><link linkend="RygelSimpleContainer"><type>RygelSimpleContainer</type></link> *self</parameter>,
+                                                         <parameter><link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> *child</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-simple-container-remove-child">rygel_simple_container_remove_child</link> (<parameter><link linkend="RygelSimpleContainer"><type>RygelSimpleContainer</type></link> *self</parameter>,
+                                                         <parameter><link linkend="RygelMediaObject"><type>RygelMediaObject</type></link> *child</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-simple-container-clear">rygel_simple_container_clear</link>        (<parameter><link linkend="RygelSimpleContainer"><type>RygelSimpleContainer</type></link> *self</parameter>);
+<link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            <link linkend="rygel-simple-container-is-child-id-unique">rygel_simple_container_is_child_id_unique</link>
+                                                        (<parameter><link linkend="RygelSimpleContainer"><type>RygelSimpleContainer</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *child_id</parameter>);
+<link linkend="RygelSimpleContainer"><returnvalue>RygelSimpleContainer</returnvalue></link> * <link linkend="rygel-simple-container-new">rygel_simple_container_new</link>       (<parameter>const <link linkend="gchar"><type>gchar</type></link> *id</parameter>,
+                                                         <parameter><link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> *parent</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *title</parameter>);
+<link linkend="RygelSimpleContainer"><returnvalue>RygelSimpleContainer</returnvalue></link> * <link linkend="rygel-simple-container-new-root">rygel_simple_container_new_root</link>  (<parameter>const <link linkend="gchar"><type>gchar</type></link> *title</parameter>);
+struct              <link linkend="RygelSimpleContainer-struct">RygelSimpleContainer</link>;
+struct              <link linkend="RygelSimpleContainerClass">RygelSimpleContainerClass</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelSimpleContainer.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="RygelMediaObject">RygelMediaObject</link>
+         +----<link linkend="RygelMediaContainer">RygelMediaContainer</link>
+               +----RygelSimpleContainer
+</synopsis>
+</refsect1>
+<refsect1 id="RygelSimpleContainer.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+RygelSimpleContainer implements
+ <link linkend="RygelSearchableContainer">RygelSearchableContainer</link>.</para>
+</refsect1>
+<refsect1 id="RygelSimpleContainer.properties" role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+  &quot;<link linkend="RygelSimpleContainer--search-classes">search-classes</link>&quot;           <link linkend="GeeArrayList"><type>GeeArrayList</type></link>*         : Read / Write
+</synopsis>
+</refsect1>
+
+<refsect1 id="RygelSimpleContainer.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="RygelSimpleContainer.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="RYGEL-TYPE-SIMPLE-CONTAINER:CAPS" role="macro">
+<title>RYGEL_TYPE_SIMPLE_CONTAINER</title>
+<indexterm zone="RYGEL-TYPE-SIMPLE-CONTAINER:CAPS"><primary>RYGEL_TYPE_SIMPLE_CONTAINER</primary></indexterm>
+<programlisting>#define RYGEL_TYPE_SIMPLE_CONTAINER (rygel_simple_container_get_type ())
+</programlisting>
+<para>
+The type for <link linkend="RygelSimpleContainer"><type>RygelSimpleContainer</type></link>.
+</para></refsect2>
+<refsect2 id="rygel-simple-container-add-child-item" role="function">
+<title>rygel_simple_container_add_child_item ()</title>
+<indexterm zone="rygel-simple-container-add-child-item"><primary>rygel_simple_container_add_child_item</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_simple_container_add_child_item
+                                                        (<parameter><link linkend="RygelSimpleContainer"><type>RygelSimpleContainer</type></link> *self</parameter>,
+                                                         <parameter><link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> *child</parameter>);</programlisting>
+<para>
+Adds an item to the container.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelSimpleContainer"><type>RygelSimpleContainer</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>child</parameter>&#160;:</term>
+<listitem><simpara>The child item to add to the container. <emphasis role="annotation">[<acronym>in</acronym>]</emphasis></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-simple-container-get-all-children" role="function">
+<title>rygel_simple_container_get_all_children ()</title>
+<indexterm zone="rygel-simple-container-get-all-children"><primary>rygel_simple_container_get_all_children</primary></indexterm>
+<programlisting><link linkend="RygelMediaObjects"><returnvalue>RygelMediaObjects</returnvalue></link> * rygel_simple_container_get_all_children
+                                                        (<parameter><link linkend="RygelSimpleContainer"><type>RygelSimpleContainer</type></link> *self</parameter>);</programlisting>
+<para>
+Get all children, including the empty children.
+</para>
+<para>
+<para>This is useful when all children are empty, so <link linkend="get-children"><function>get_children()</function></link> would return no objects, but when you need to add items to the empty items.</para><para>This is useful only when implementing derived classes.</para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelSimpleContainer"><type>RygelSimpleContainer</type></link> instance</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-simple-container-add-child-container" role="function">
+<title>rygel_simple_container_add_child_container ()</title>
+<indexterm zone="rygel-simple-container-add-child-container"><primary>rygel_simple_container_add_child_container</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_simple_container_add_child_container
+                                                        (<parameter><link linkend="RygelSimpleContainer"><type>RygelSimpleContainer</type></link> *self</parameter>,
+                                                         <parameter><link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> *child</parameter>);</programlisting>
+<para>
+Adds a child container to this container.
+</para>
+<para>
+<para>The child container will only be added to the hierarchy if, or when, it contains some children.</para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelSimpleContainer"><type>RygelSimpleContainer</type></link> instance</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-simple-container-remove-child" role="function">
+<title>rygel_simple_container_remove_child ()</title>
+<indexterm zone="rygel-simple-container-remove-child"><primary>rygel_simple_container_remove_child</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_simple_container_remove_child (<parameter><link linkend="RygelSimpleContainer"><type>RygelSimpleContainer</type></link> *self</parameter>,
+                                                         <parameter><link linkend="RygelMediaObject"><type>RygelMediaObject</type></link> *child</parameter>);</programlisting>
+<para>
+Removes the item from the container.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelSimpleContainer"><type>RygelSimpleContainer</type></link> instance</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-simple-container-clear" role="function">
+<title>rygel_simple_container_clear ()</title>
+<indexterm zone="rygel-simple-container-clear"><primary>rygel_simple_container_clear</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_simple_container_clear        (<parameter><link linkend="RygelSimpleContainer"><type>RygelSimpleContainer</type></link> *self</parameter>);</programlisting>
+<para>
+Removes all child items and child containers from the container.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelSimpleContainer"><type>RygelSimpleContainer</type></link> instance</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-simple-container-is-child-id-unique" role="function">
+<title>rygel_simple_container_is_child_id_unique ()</title>
+<indexterm zone="rygel-simple-container-is-child-id-unique"><primary>rygel_simple_container_is_child_id_unique</primary></indexterm>
+<programlisting><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            rygel_simple_container_is_child_id_unique
+                                                        (<parameter><link linkend="RygelSimpleContainer"><type>RygelSimpleContainer</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *child_id</parameter>);</programlisting>
+<para>
+Check that the ID is unique within this container.
+</para>
+<para>
+<para>This is useful only when implementing derived classes.</para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelSimpleContainer"><type>RygelSimpleContainer</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>child_id</parameter>&#160;:</term>
+<listitem><simpara>The ID to check for uniqueness. <emphasis role="annotation">[<acronym>in</acronym>]</emphasis></simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>true if the child ID is unique within this container.</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-simple-container-new" role="function">
+<title>rygel_simple_container_new ()</title>
+<indexterm zone="rygel-simple-container-new"><primary>rygel_simple_container_new</primary></indexterm>
+<programlisting><link linkend="RygelSimpleContainer"><returnvalue>RygelSimpleContainer</returnvalue></link> * rygel_simple_container_new       (<parameter>const <link linkend="gchar"><type>gchar</type></link> *id</parameter>,
+                                                         <parameter><link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> *parent</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *title</parameter>);</programlisting>
+<para>
+Creates a child RygelSimpleContainer.
+</para><variablelist role="params">
+<varlistentry><term><parameter>id</parameter>&#160;:</term>
+<listitem><simpara>The ID of the item. This should be unique in the server. <emphasis role="annotation">[<acronym>in</acronym>]</emphasis></simpara></listitem></varlistentry>
+<varlistentry><term><parameter>parent</parameter>&#160;:</term>
+<listitem><simpara>The parent of the container. <emphasis role="annotation">[<acronym>in</acronym>][<acronym>allow-none</acronym>]</emphasis></simpara></listitem></varlistentry>
+<varlistentry><term><parameter>title</parameter>&#160;:</term>
+<listitem><simpara>The title of the container. <emphasis role="annotation">[<acronym>in</acronym>]</emphasis></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-simple-container-new-root" role="function">
+<title>rygel_simple_container_new_root ()</title>
+<indexterm zone="rygel-simple-container-new-root"><primary>rygel_simple_container_new_root</primary></indexterm>
+<programlisting><link linkend="RygelSimpleContainer"><returnvalue>RygelSimpleContainer</returnvalue></link> * rygel_simple_container_new_root  (<parameter>const <link linkend="gchar"><type>gchar</type></link> *title</parameter>);</programlisting>
+<para>
+Creates a RygelSimpleContainer as a root container.
+</para><variablelist role="params">
+<varlistentry><term><parameter>title</parameter>&#160;:</term>
+<listitem><simpara>The title of the container. <emphasis role="annotation">[<acronym>in</acronym>]</emphasis></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="RygelSimpleContainer-struct" role="struct">
+<title>struct RygelSimpleContainer</title>
+<indexterm zone="RygelSimpleContainer-struct"><primary>RygelSimpleContainer</primary></indexterm>
+<programlisting>struct RygelSimpleContainer;</programlisting>
+<para>
+A simple implementation of RygelMediaContainer that keeps all RygelMediaObjects in memory. You should add children via <link linkend="rygel-simple-container-add-child-item"><function>rygel_simple_container_add_child_item()</function></link>.
+</para></refsect2>
+<refsect2 id="RygelSimpleContainerClass" role="struct">
+<title>struct RygelSimpleContainerClass</title>
+<indexterm zone="RygelSimpleContainerClass"><primary>RygelSimpleContainerClass</primary></indexterm>
+<programlisting>struct RygelSimpleContainerClass {
+	RygelMediaContainerClass parent_class;
+};
+</programlisting>
+<para>
+The class structure for <link linkend="RYGEL-TYPE-SIMPLE-CONTAINER:CAPS"><literal>RYGEL_TYPE_SIMPLE_CONTAINER</literal></link>. All the fields in this structure are private and should never be accessed directly.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="RygelMediaContainerClass"><type>RygelMediaContainerClass</type></link>&#160;<structfield id="RygelSimpleContainerClass.parent-class">parent_class</structfield>;</term>
+<listitem><simpara>the parent class structure</simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 id="RygelSimpleContainer.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="RygelSimpleContainer--search-classes" role="property"><title>The <literal>&quot;search-classes&quot;</literal> property</title>
+<indexterm zone="RygelSimpleContainer--search-classes"><primary>RygelSimpleContainer:search-classes</primary></indexterm>
+<programlisting>  &quot;search-classes&quot;           <link linkend="GeeArrayList"><type>GeeArrayList</type></link>*         : Read / Write</programlisting>
+<para>search-classes.</para></refsect2>
+</refsect1>
+
+</refentry>

@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>RygelVideoItem</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="librygel-server Reference Manual">
+<link rel="up" href="ch01.html" title="librygel-server API Reference">
+<link rel="prev" href="RygelMediaObjects.html" title="RygelMediaObjects">
+<link rel="next" href="RygelMediaObject.html" title="RygelMediaObject">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="RygelMediaObjects.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">librygel-server Reference Manual</th>
+<td><a accesskey="n" href="RygelMediaObject.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#RygelVideoItem.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#RygelVideoItem.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#RygelVideoItem.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#RygelVideoItem.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#RygelVideoItem.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="RygelVideoItem"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="RygelVideoItem.top_of_page"></a>RygelVideoItem</span></h2>
+<p>RygelVideoItem — Represents a video item.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="RygelVideoItem.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">#define             <a class="link" href="RygelVideoItem.html#RYGEL-TYPE-VIDEO-ITEM:CAPS" title="RYGEL_TYPE_VIDEO_ITEM">RYGEL_TYPE_VIDEO_ITEM</a>
+#define             <a class="link" href="RygelVideoItem.html#RYGEL-VIDEO-ITEM-UPNP-CLASS:CAPS" title="RYGEL_VIDEO_ITEM_UPNP_CLASS">RYGEL_VIDEO_ITEM_UPNP_CLASS</a>
+<a class="link" href="RygelVideoItem.html" title="RygelVideoItem"><span class="returnvalue">RygelVideoItem</span></a> *    <a class="link" href="RygelVideoItem.html#rygel-video-item-new" title="rygel_video_item_new ()">rygel_video_item_new</a>                (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *id</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="RygelMediaContainer.html" title="RygelMediaContainer"><span class="type">RygelMediaContainer</span></a> *parent</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *title</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *upnp_class</code></em>);
+struct              <a class="link" href="RygelVideoItem.html#RygelVideoItem-struct" title="struct RygelVideoItem">RygelVideoItem</a>;
+struct              <a class="link" href="RygelVideoItem.html#RygelVideoItemClass" title="struct RygelVideoItemClass">RygelVideoItemClass</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelVideoItem.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="../gobject/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="RygelMediaObject.html" title="RygelMediaObject">RygelMediaObject</a>
+         +----<a class="link" href="RygelMediaItem.html" title="RygelMediaItem">RygelMediaItem</a>
+               +----<a class="link" href="RygelAudioItem.html" title="RygelAudioItem">RygelAudioItem</a>
+                     +----RygelVideoItem
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelVideoItem.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+RygelVideoItem implements
+ <a class="link" href="RygelVisualItem.html" title="RygelVisualItem">RygelVisualItem</a>.</p>
+</div>
+<div class="refsect1">
+<a name="RygelVideoItem.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="RygelVideoItem.html#RygelVideoItem--color-depth" title='The "color-depth" property'>color-depth</a>"              <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write
+  "<a class="link" href="RygelVideoItem.html#RygelVideoItem--height" title='The "height" property'>height</a>"                   <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write
+  "<a class="link" href="RygelVideoItem.html#RygelVideoItem--pixel-height" title='The "pixel-height" property'>pixel-height</a>"             <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write
+  "<a class="link" href="RygelVideoItem.html#RygelVideoItem--pixel-width" title='The "pixel-width" property'>pixel-width</a>"              <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write
+  "<a class="link" href="RygelVideoItem.html#RygelVideoItem--thumbnails" title='The "thumbnails" property'>thumbnails</a>"               <span class="type">GeeArrayList</span>*         : Read / Write
+  "<a class="link" href="RygelVideoItem.html#RygelVideoItem--width" title='The "width" property'>width</a>"                    <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelVideoItem.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="RygelVideoItem.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="RYGEL-TYPE-VIDEO-ITEM:CAPS"></a><h3>RYGEL_TYPE_VIDEO_ITEM</h3>
+<pre class="programlisting">#define RYGEL_TYPE_VIDEO_ITEM (rygel_video_item_get_type ())
+</pre>
+<p>
+The type for <a class="link" href="RygelVideoItem.html" title="RygelVideoItem"><span class="type">RygelVideoItem</span></a>.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RYGEL-VIDEO-ITEM-UPNP-CLASS:CAPS"></a><h3>RYGEL_VIDEO_ITEM_UPNP_CLASS</h3>
+<pre class="programlisting">#define RYGEL_VIDEO_ITEM_UPNP_CLASS "object.item.videoItem"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-video-item-new"></a><h3>rygel_video_item_new ()</h3>
+<pre class="programlisting"><a class="link" href="RygelVideoItem.html" title="RygelVideoItem"><span class="returnvalue">RygelVideoItem</span></a> *    rygel_video_item_new                (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *id</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="RygelMediaContainer.html" title="RygelMediaContainer"><span class="type">RygelMediaContainer</span></a> *parent</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *title</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *upnp_class</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelVideoItem-struct"></a><h3>struct RygelVideoItem</h3>
+<pre class="programlisting">struct RygelVideoItem;</pre>
+<p>
+Represents a video item.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelVideoItemClass"></a><h3>struct RygelVideoItemClass</h3>
+<pre class="programlisting">struct RygelVideoItemClass {
+	RygelAudioItemClass parent_class;
+};
+</pre>
+<p>
+The class structure for <a class="link" href="RygelVideoItem.html#RYGEL-TYPE-VIDEO-ITEM:CAPS" title="RYGEL_TYPE_VIDEO_ITEM"><code class="literal">RYGEL_TYPE_VIDEO_ITEM</code></a>. All the fields in this structure are private and should never be accessed directly.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><a class="link" href="RygelAudioItem.html#RygelAudioItemClass" title="struct RygelAudioItemClass"><span class="type">RygelAudioItemClass</span></a> <em class="structfield"><code><a name="RygelVideoItemClass.parent-class"></a>parent_class</code></em>;</span></p></td>
+<td>the parent class structure</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="RygelVideoItem.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="RygelVideoItem--color-depth"></a><h3>The <code class="literal">"color-depth"</code> property</h3>
+<pre class="programlisting">  "color-depth"              <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write</pre>
+<p>color-depth.</p>
+<p>Default value: -1</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelVideoItem--height"></a><h3>The <code class="literal">"height"</code> property</h3>
+<pre class="programlisting">  "height"                   <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write</pre>
+<p>height.</p>
+<p>Default value: -1</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelVideoItem--pixel-height"></a><h3>The <code class="literal">"pixel-height"</code> property</h3>
+<pre class="programlisting">  "pixel-height"             <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write</pre>
+<p>pixel-height.</p>
+<p>Default value: -1</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelVideoItem--pixel-width"></a><h3>The <code class="literal">"pixel-width"</code> property</h3>
+<pre class="programlisting">  "pixel-width"              <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write</pre>
+<p>pixel-width.</p>
+<p>Default value: -1</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelVideoItem--thumbnails"></a><h3>The <code class="literal">"thumbnails"</code> property</h3>
+<pre class="programlisting">  "thumbnails"               <span class="type">GeeArrayList</span>*         : Read / Write</pre>
+<p>thumbnails.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelVideoItem--width"></a><h3>The <code class="literal">"width"</code> property</h3>
+<pre class="programlisting">  "width"                    <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a>                  : Read / Write</pre>
+<p>width.</p>
+<p>Default value: -1</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

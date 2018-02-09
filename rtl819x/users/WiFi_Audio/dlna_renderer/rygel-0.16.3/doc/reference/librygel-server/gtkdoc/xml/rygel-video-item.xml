@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelVideoItem">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelVideoItem.top_of_page">RygelVideoItem</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-SERVER Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelVideoItem</refname>
+<refpurpose>Represents a video item.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelVideoItem.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="RYGEL-TYPE-VIDEO-ITEM:CAPS">RYGEL_TYPE_VIDEO_ITEM</link>
+#define             <link linkend="RYGEL-VIDEO-ITEM-UPNP-CLASS:CAPS">RYGEL_VIDEO_ITEM_UPNP_CLASS</link>
+<link linkend="RygelVideoItem"><returnvalue>RygelVideoItem</returnvalue></link> *    <link linkend="rygel-video-item-new">rygel_video_item_new</link>                (<parameter>const <link linkend="gchar"><type>gchar</type></link> *id</parameter>,
+                                                         <parameter><link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> *parent</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *title</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *upnp_class</parameter>);
+struct              <link linkend="RygelVideoItem-struct">RygelVideoItem</link>;
+struct              <link linkend="RygelVideoItemClass">RygelVideoItemClass</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelVideoItem.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="RygelMediaObject">RygelMediaObject</link>
+         +----<link linkend="RygelMediaItem">RygelMediaItem</link>
+               +----<link linkend="RygelAudioItem">RygelAudioItem</link>
+                     +----RygelVideoItem
+</synopsis>
+</refsect1>
+<refsect1 id="RygelVideoItem.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+RygelVideoItem implements
+ <link linkend="RygelVisualItem">RygelVisualItem</link>.</para>
+</refsect1>
+<refsect1 id="RygelVideoItem.properties" role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+  &quot;<link linkend="RygelVideoItem--color-depth">color-depth</link>&quot;              <link linkend="gint"><type>gint</type></link>                  : Read / Write
+  &quot;<link linkend="RygelVideoItem--height">height</link>&quot;                   <link linkend="gint"><type>gint</type></link>                  : Read / Write
+  &quot;<link linkend="RygelVideoItem--pixel-height">pixel-height</link>&quot;             <link linkend="gint"><type>gint</type></link>                  : Read / Write
+  &quot;<link linkend="RygelVideoItem--pixel-width">pixel-width</link>&quot;              <link linkend="gint"><type>gint</type></link>                  : Read / Write
+  &quot;<link linkend="RygelVideoItem--thumbnails">thumbnails</link>&quot;               <link linkend="GeeArrayList"><type>GeeArrayList</type></link>*         : Read / Write
+  &quot;<link linkend="RygelVideoItem--width">width</link>&quot;                    <link linkend="gint"><type>gint</type></link>                  : Read / Write
+</synopsis>
+</refsect1>
+
+<refsect1 id="RygelVideoItem.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="RygelVideoItem.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="RYGEL-TYPE-VIDEO-ITEM:CAPS" role="macro">
+<title>RYGEL_TYPE_VIDEO_ITEM</title>
+<indexterm zone="RYGEL-TYPE-VIDEO-ITEM:CAPS"><primary>RYGEL_TYPE_VIDEO_ITEM</primary></indexterm>
+<programlisting>#define RYGEL_TYPE_VIDEO_ITEM (rygel_video_item_get_type ())
+</programlisting>
+<para>
+The type for <link linkend="RygelVideoItem"><type>RygelVideoItem</type></link>.
+</para></refsect2>
+<refsect2 id="RYGEL-VIDEO-ITEM-UPNP-CLASS:CAPS" role="macro">
+<title>RYGEL_VIDEO_ITEM_UPNP_CLASS</title>
+<indexterm zone="RYGEL-VIDEO-ITEM-UPNP-CLASS:CAPS"><primary>RYGEL_VIDEO_ITEM_UPNP_CLASS</primary></indexterm>
+<programlisting>#define RYGEL_VIDEO_ITEM_UPNP_CLASS "object.item.videoItem"
+</programlisting>
+</refsect2>
+<refsect2 id="rygel-video-item-new" role="function">
+<title>rygel_video_item_new ()</title>
+<indexterm zone="rygel-video-item-new"><primary>rygel_video_item_new</primary></indexterm>
+<programlisting><link linkend="RygelVideoItem"><returnvalue>RygelVideoItem</returnvalue></link> *    rygel_video_item_new                (<parameter>const <link linkend="gchar"><type>gchar</type></link> *id</parameter>,
+                                                         <parameter><link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> *parent</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *title</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *upnp_class</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="RygelVideoItem-struct" role="struct">
+<title>struct RygelVideoItem</title>
+<indexterm zone="RygelVideoItem-struct"><primary>RygelVideoItem</primary></indexterm>
+<programlisting>struct RygelVideoItem;</programlisting>
+<para>
+Represents a video item.
+</para></refsect2>
+<refsect2 id="RygelVideoItemClass" role="struct">
+<title>struct RygelVideoItemClass</title>
+<indexterm zone="RygelVideoItemClass"><primary>RygelVideoItemClass</primary></indexterm>
+<programlisting>struct RygelVideoItemClass {
+	RygelAudioItemClass parent_class;
+};
+</programlisting>
+<para>
+The class structure for <link linkend="RYGEL-TYPE-VIDEO-ITEM:CAPS"><literal>RYGEL_TYPE_VIDEO_ITEM</literal></link>. All the fields in this structure are private and should never be accessed directly.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="RygelAudioItemClass"><type>RygelAudioItemClass</type></link>&#160;<structfield id="RygelVideoItemClass.parent-class">parent_class</structfield>;</term>
+<listitem><simpara>the parent class structure</simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 id="RygelVideoItem.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="RygelVideoItem--color-depth" role="property"><title>The <literal>&quot;color-depth&quot;</literal> property</title>
+<indexterm zone="RygelVideoItem--color-depth"><primary>RygelVideoItem:color-depth</primary></indexterm>
+<programlisting>  &quot;color-depth&quot;              <link linkend="gint"><type>gint</type></link>                  : Read / Write</programlisting>
+<para>color-depth.</para><para>Default value: -1</para>
+</refsect2>
+<refsect2 id="RygelVideoItem--height" role="property"><title>The <literal>&quot;height&quot;</literal> property</title>
+<indexterm zone="RygelVideoItem--height"><primary>RygelVideoItem:height</primary></indexterm>
+<programlisting>  &quot;height&quot;                   <link linkend="gint"><type>gint</type></link>                  : Read / Write</programlisting>
+<para>height.</para><para>Default value: -1</para>
+</refsect2>
+<refsect2 id="RygelVideoItem--pixel-height" role="property"><title>The <literal>&quot;pixel-height&quot;</literal> property</title>
+<indexterm zone="RygelVideoItem--pixel-height"><primary>RygelVideoItem:pixel-height</primary></indexterm>
+<programlisting>  &quot;pixel-height&quot;             <link linkend="gint"><type>gint</type></link>                  : Read / Write</programlisting>
+<para>pixel-height.</para><para>Default value: -1</para>
+</refsect2>
+<refsect2 id="RygelVideoItem--pixel-width" role="property"><title>The <literal>&quot;pixel-width&quot;</literal> property</title>
+<indexterm zone="RygelVideoItem--pixel-width"><primary>RygelVideoItem:pixel-width</primary></indexterm>
+<programlisting>  &quot;pixel-width&quot;              <link linkend="gint"><type>gint</type></link>                  : Read / Write</programlisting>
+<para>pixel-width.</para><para>Default value: -1</para>
+</refsect2>
+<refsect2 id="RygelVideoItem--thumbnails" role="property"><title>The <literal>&quot;thumbnails&quot;</literal> property</title>
+<indexterm zone="RygelVideoItem--thumbnails"><primary>RygelVideoItem:thumbnails</primary></indexterm>
+<programlisting>  &quot;thumbnails&quot;               <link linkend="GeeArrayList"><type>GeeArrayList</type></link>*         : Read / Write</programlisting>
+<para>thumbnails.</para></refsect2>
+<refsect2 id="RygelVideoItem--width" role="property"><title>The <literal>&quot;width&quot;</literal> property</title>
+<indexterm zone="RygelVideoItem--width"><primary>RygelVideoItem:width</primary></indexterm>
+<programlisting>  &quot;width&quot;                    <link linkend="gint"><type>gint</type></link>                  : Read / Write</programlisting>
+<para>width.</para><para>Default value: -1</para>
+</refsect2>
+</refsect1>
+
+</refentry>

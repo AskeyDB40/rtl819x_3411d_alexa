@@ -1,0 +1,92 @@
+<!-- ##### SECTION Title ##### -->
+Error codes
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### MACRO GUPNP_SERVER_ERROR ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### ENUM GUPnPServerError ##### -->
+<para>
+
+</para>
+
+@GUPNP_SERVER_ERROR_INTERNAL_SERVER_ERROR: 
+@GUPNP_SERVER_ERROR_NOT_FOUND: 
+@GUPNP_SERVER_ERROR_NOT_IMPLEMENTED: 
+@GUPNP_SERVER_ERROR_INVALID_RESPONSE: 
+@GUPNP_SERVER_ERROR_INVALID_URL: 
+@GUPNP_SERVER_ERROR_OTHER: 
+
+<!-- ##### MACRO GUPNP_EVENTING_ERROR ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### ENUM GUPnPEventingError ##### -->
+<para>
+
+</para>
+
+@GUPNP_EVENTING_ERROR_SUBSCRIPTION_FAILED: 
+@GUPNP_EVENTING_ERROR_SUBSCRIPTION_LOST: 
+@GUPNP_EVENTING_ERROR_NOTIFY_FAILED: 
+
+<!-- ##### MACRO GUPNP_CONTROL_ERROR ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### ENUM GUPnPControlError ##### -->
+<para>
+
+</para>
+
+@GUPNP_CONTROL_ERROR_INVALID_ACTION: 
+@GUPNP_CONTROL_ERROR_INVALID_ARGS: 
+@GUPNP_CONTROL_ERROR_OUT_OF_SYNC: 
+@GUPNP_CONTROL_ERROR_ACTION_FAILED: 
+
+<!-- ##### MACRO GUPNP_XML_ERROR ##### -->
+<para>
+
+</para>
+
+
+
+<!-- ##### ENUM GUPnPXMLError ##### -->
+<para>
+
+</para>
+
+@GUPNP_XML_ERROR_PARSE: 
+@GUPNP_XML_ERROR_NO_NODE: 
+@GUPNP_XML_ERROR_EMPTY_NODE: 
+@GUPNP_XML_ERROR_INVALID_ATTRIBUTE: 
+@GUPNP_XML_ERROR_OTHER: 
+

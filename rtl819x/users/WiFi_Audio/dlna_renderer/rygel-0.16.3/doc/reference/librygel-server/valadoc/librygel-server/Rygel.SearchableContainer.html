@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <title>Rygel.SearchableContainer &ndash; librygel-server &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">Rygel.SearchableContainer &ndash; librygel-server Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package"><a href="index.htm">librygel-server</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="Rygel.html">Rygel</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="interface">SearchableContainer</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="abstract_property"><a href="Rygel.SearchableContainer.search_classes.html">search_classes</a></li>
+          <li class="method"><a href="Rygel.SearchableContainer.find_object.html">find_object</a></li>
+          <li class="abstract_method"><a href="Rygel.SearchableContainer.search.html">search</a></li>
+          <li class="method"><a href="Rygel.SearchableContainer.simple_search.html">simple_search</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title">SearchableContainer</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Object Hierarchy:</h2>
+        
+        <img class="main_diagram" usemap="#Rygel.SearchableContainer" alt="Object hierarchy for SearchableContainer" src="img/Rygel.SearchableContainer.png"/>
+      
+
+      <map id="Rygel.SearchableContainer" name="Rygel.SearchableContainer">
+<area shape="rect" id="node1" href="Rygel.SearchableContainer.html" title="Rygel.SearchableContainer" alt="" coords="5,293,224,341"/>
+<area shape="rect" id="node2" href="Rygel.MediaContainer.html" title="Rygel.MediaContainer" alt="" coords="21,197,208,245"/>
+<area shape="rect" id="node3" href="Rygel.MediaObject.html" title="Rygel.MediaObject" alt="" coords="32,101,197,149"/>
+</map>
+
+        <h2 class="main_title">Description:</h2>
+        <div class="main_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">interface</span> <b><span css="interface">SearchableContainer</span></b> : <span class="main_type"><a href="Rygel.MediaContainer.html" class="abstract_class">MediaContainer</a></span>
+        </div>
+        <div class="description">
+          <p>The base class for searchable containers.</p>
+          <p>Classes that implement this interface can, for instance:</p>
+          <ol>
+            <li>Allow backends to implement a UPnP Search call using native searching (such as SQL or SPARQL queries).</li>
+            <li>Provide the naïve default implementation of search, from this base class, which does a recursive tree walk.</li>
+          </ol>
+          <p>The search_classes property lists what information this container may be searched for. It is mapped to upnp:searchClass (with 
+            includeDerived assumed to be false),</p>
+        </div>
+        <div class="box">
+          <div class="headline">
+            <div class="text">All known implementing classes:</div>
+            <div class="toggle">
+              <img onclick="toggle_box  (this, 'box-content-54')" src="../coll_open.png">&nbsp;</div>
+            </div>
+            <div class="content" id="box-content-54">
+              <div class="column">
+                <ul class="navi_inline">
+                  <li class="class"><a href="Rygel.SimpleContainer.html">SimpleContainer</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                </ul>
+              </div>
+              <div class="column">
+                <ul class="navi_inline">
+                </ul>
+              </div>
+            </div>
+          </div><br/>
+          <div class="namespace_note"><b>Namespace:</b> <a href="Rygel.html">Rygel</a>
+          </div>
+          <div class="package_note"><b>Package:</b> <a href="index.htm">librygel-server</a>
+          </div>
+          <h2 class="main_title">Content:</h2>
+          <h3 class="main_title">Properties:</h3>
+          <ul class="navi_inline">
+            <li class="abstract_property"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_type"><code>ArrayList</code></span>&lt;<span class="main_basic_type"><code>string</code></span>&gt; <b><a href="Rygel.SearchableContainer.search_classes.html" class="abstract_property">search_classes</a></b> { <span class="main_keyword">set</span>; <span class="main_keyword">get</span>; }
+              </span>
+              <div class="leaf_brief_description">
+              </div></li>
+          </ul>
+          <h3 class="main_title">Methods:</h3>
+          <ul class="navi_inline">
+            <li class="abstract_method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">abstract</span> <span class="main_keyword">async</span> <span class="main_type"><a href="Rygel.MediaObjects.html" class="class">MediaObjects</a></span>? <b><a href="Rygel.SearchableContainer.search.html" class="abstract_method">search</a></b> (<span class="main_type"><a href="Rygel.SearchExpression.html" class="abstract_class">SearchExpression</a></span>? expression, <span class="main_basic_type"><code>uint</code></span> offset, <span class="main_basic_type"><code>uint</code></span> max_count, <span class="main_keyword">out</span> <span class="main_basic_type"><code>uint</code></span> total_matches, <span class="main_basic_type"><code>string</code></span> sort_criteria, <span class="main_type"><code>Cancellable</code></span>? cancellable) <span class="main_keyword">throws</span> <span class="main_type"><code>Error</code></span>
+              </span>
+              <div class="leaf_brief_description"><span class="brief_description">Recursively searches for all media objects that satisfy the given 
+                  search expression in this container.</span>
+              </div></li>
+            <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">async</span> <span class="main_type"><a href="Rygel.MediaObjects.html" class="class">MediaObjects</a></span>? <b><a href="Rygel.SearchableContainer.simple_search.html" class="method">simple_search</a></b> (<span class="main_type"><a href="Rygel.SearchExpression.html" class="abstract_class">SearchExpression</a></span>? expression, <span class="main_basic_type"><code>uint</code></span> offset, <span class="main_basic_type"><code>uint</code></span> max_count, <span class="main_keyword">out</span> <span class="main_basic_type"><code>uint</code></span> total_matches, <span class="main_basic_type"><code>string</code></span> sort_criteria, <span class="main_type"><code>Cancellable</code></span>? cancellable) <span class="main_keyword">throws</span> <span class="main_type"><code>Error</code></span>
+              </span>
+              <div class="leaf_brief_description"><span class="brief_description">Utility method that retrieves all children and recursively searches 
+                  for all media objects that satisfy the given search expression in this container.</span>
+              </div></li>
+            <li class="method"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">async</span> <span class="main_type"><a href="Rygel.MediaObject.html" class="abstract_class">MediaObject</a></span>? <b><a href="Rygel.SearchableContainer.find_object.html" class="method">find_object</a></b> (<span class="main_basic_type"><code>string</code></span> id, <span class="main_type"><code>Cancellable</code></span>? cancellable) <span class="main_keyword">throws</span> <span class="main_type"><code>Error</code></span>
+              </span>
+              <div class="leaf_brief_description"><span class="brief_description">Recursively searches for media object with the given id in this 
+                  container.</span>
+              </div></li>
+          </ul>
+          <h3 class="main_title">Inherited Members:</h3>
+          <div class="box">
+            <div class="headline">
+              <div class="text">All known members inherited from class Rygel.MediaContainer</div>
+              <div class="toggle">
+                <img onclick="toggle_box  (this, 'box-content-55')" src="../coll_open.png">&nbsp;</div>
+              </div>
+              <div class="content" id="box-content-55">
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="constant"><a href="Rygel.MediaContainer.UPNP_CLASS.html">UPNP_CLASS</a></li>
+                    <li class="constant"><a href="Rygel.MediaContainer.STORAGE_FOLDER.html">STORAGE_FOLDER</a></li>
+                    <li class="constant"><a href="Rygel.MediaContainer.MUSIC_ALBUM.html">MUSIC_ALBUM</a></li>
+                    <li class="constant"><a href="Rygel.MediaContainer.MUSIC_ARTIST.html">MUSIC_ARTIST</a></li>
+                    <li class="constant"><a href="Rygel.MediaContainer.MUSIC_GENRE.html">MUSIC_GENRE</a></li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="constant"><a href="Rygel.MediaContainer.ALBUM_SORT_CRITERIA.html">ALBUM_SORT_CRITERIA</a></li>
+                    <li class="property"><a href="Rygel.MediaContainer.sort_criteria.html">sort_criteria</a></li>
+                    <li class="abstract_method"><a href="Rygel.MediaContainer.get_children.html">get_children</a></li>
+                    <li class="abstract_method"><a href="Rygel.MediaContainer.find_object.html">find_object</a></li>
+                    <li class="method"><a href="Rygel.MediaContainer.updated.html">updated</a></li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <ul class="navi_inline">
+                    <li class="signal"><a href="Rygel.MediaContainer.container_updated.html">container_updated</a></li>
+                    <li class="field"><a href="Rygel.MediaContainer.child_count.html">child_count</a></li>
+                    <li class="field"><a href="Rygel.MediaContainer.update_id.html">update_id</a></li>
+                    <li class="field"><a href="Rygel.MediaContainer.storage_used.html">storage_used</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="headline">
+                <div class="text">All known members inherited from class Rygel.MediaObject</div>
+                <div class="toggle">
+                  <img onclick="toggle_box  (this, 'box-content-56')" src="../coll_open.png">&nbsp;</div>
+                </div>
+                <div class="content" id="box-content-56">
+                  <div class="column">
+                    <ul class="navi_inline">
+                      <li class="property"><a href="Rygel.MediaObject.parent_ref.html">parent_ref</a></li>
+                      <li class="property"><a href="Rygel.MediaObject.title.html">title</a></li>
+                      <li class="method"><a href="Rygel.MediaObject.get_writable.html">get_writable</a></li>
+                      <li class="method"><a href="Rygel.MediaObject.get_writables.html">get_writables</a></li>
+                    </ul>
+                  </div>
+                  <div class="column">
+                    <ul class="navi_inline">
+                      <li class="method"><a href="Rygel.MediaObject.compare_string_props.html">compare_string_props</a></li>
+                      <li class="method"><a href="Rygel.MediaObject.compare_int_props.html">compare_int_props</a></li>
+                      <li class="field"><a href="Rygel.MediaObject.id.html">id</a></li>
+                      <li class="field"><a href="Rygel.MediaObject.ref_id.html">ref_id</a></li>
+                    </ul>
+                  </div>
+                  <div class="column">
+                    <ul class="navi_inline">
+                      <li class="field"><a href="Rygel.MediaObject.upnp_class.html">upnp_class</a></li>
+                      <li class="field"><a href="Rygel.MediaObject.modified.html">modified</a></li>
+                      <li class="field"><a href="Rygel.MediaObject.uris.html">uris</a></li>
+                      <li class="field"><a href="Rygel.MediaObject.parent.html">parent</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="box">
+                <div class="headline">
+                  <div class="text">All known members inherited from class GLib.Object</div>
+                  <div class="toggle">
+                    <img onclick="toggle_box  (this, 'box-content-57')" src="../coll_open.png">&nbsp;</div>
+                  </div>
+                  <div class="content" id="box-content-57">
+                    <div class="column">
+                      <ul class="navi_inline">
+                        <li class="static_method">@new</li>
+                        <li class="static_method">newv</li>
+                        <li class="static_method">new_valist</li>
+                        <li class="method">get_type</li>
+                        <li class="method">get_class</li>
+                        <li class="method">@ref</li>
+                        <li class="method">unref</li>
+                        <li class="method">ref_sink</li>
+                        <li class="method">weak_ref</li>
+                        <li class="method">weak_unref</li>
+                        <li class="method">add_weak_pointer</li>
+                        <li class="method">remove_weak_pointer</li>
+                      </ul>
+                    </div>
+                    <div class="column">
+                      <ul class="navi_inline">
+                        <li class="method">@get</li>
+                        <li class="method">@set</li>
+                        <li class="method">get_property</li>
+                        <li class="method">set_property</li>
+                        <li class="method">get_data</li>
+                        <li class="method">set_data</li>
+                        <li class="method">set_data_full</li>
+                        <li class="method">steal_data</li>
+                        <li class="method">get_qdata</li>
+                        <li class="method">set_qdata</li>
+                        <li class="method">set_qdata_full</li>
+                        <li class="method">steal_qdata</li>
+                      </ul>
+                    </div>
+                    <div class="column">
+                      <ul class="navi_inline">
+                        <li class="method">freeze_notify</li>
+                        <li class="method">thaw_notify</li>
+                        <li class="virtual_method">dispose</li>
+                        <li class="virtual_method">constructed</li>
+                        <li class="method">notify_property</li>
+                        <li class="method">connect</li>
+                        <li class="method">disconnect</li>
+                        <li class="method">add_toggle_ref</li>
+                        <li class="method">remove_toggle_ref</li>
+                        <li class="method">bind_property</li>
+                        <li class="signal">notify</li>
+                        <li class="field">ref_count</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><br/>
+            <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+            </div>
+          </body>
+        </html>

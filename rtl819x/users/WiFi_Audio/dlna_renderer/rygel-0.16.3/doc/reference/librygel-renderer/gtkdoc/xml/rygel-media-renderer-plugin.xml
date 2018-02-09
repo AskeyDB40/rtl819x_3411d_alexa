@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelMediaRendererPlugin">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelMediaRendererPlugin.top_of_page">RygelMediaRendererPlugin</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-RENDERER Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelMediaRendererPlugin</refname>
+<refpurpose>Base class for every Rygel UPnP renderer plugin.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelMediaRendererPlugin.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="RYGEL-TYPE-MEDIA-RENDERER-PLUGIN:CAPS">RYGEL_TYPE_MEDIA_RENDERER_PLUGIN</link>
+<link linkend="RygelMediaPlayer"><returnvalue>RygelMediaPlayer</returnvalue></link> *  <link linkend="rygel-media-renderer-plugin-get-player">rygel_media_renderer_plugin_get_player</link>
+                                                        (<parameter><link linkend="RygelMediaRendererPlugin"><type>RygelMediaRendererPlugin</type></link> *self</parameter>);
+<link linkend="RygelMediaRendererPlugin"><returnvalue>RygelMediaRendererPlugin</returnvalue></link> * <link linkend="rygel-media-renderer-plugin-new">rygel_media_renderer_plugin_new</link>
+                                                        (<parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *title</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *description</parameter>);
+struct              <link linkend="RygelMediaRendererPlugin-struct">RygelMediaRendererPlugin</link>;
+struct              <link linkend="RygelMediaRendererPluginClass">RygelMediaRendererPluginClass</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelMediaRendererPlugin.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GUPnPResourceFactory">GUPnPResourceFactory</link>
+         +----<link linkend="RygelPlugin">RygelPlugin</link>
+               +----RygelMediaRendererPlugin
+                     +----<link linkend="RygelPlaybinPlugin">RygelPlaybinPlugin</link>
+</synopsis>
+</refsect1>
+
+<refsect1 id="RygelMediaRendererPlugin.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+<para>This class is useful only when implementing Rygel plugins.</para>
+</para>
+</refsect1>
+<refsect1 id="RygelMediaRendererPlugin.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="RYGEL-TYPE-MEDIA-RENDERER-PLUGIN:CAPS" role="macro">
+<title>RYGEL_TYPE_MEDIA_RENDERER_PLUGIN</title>
+<indexterm zone="RYGEL-TYPE-MEDIA-RENDERER-PLUGIN:CAPS"><primary>RYGEL_TYPE_MEDIA_RENDERER_PLUGIN</primary></indexterm>
+<programlisting>#define RYGEL_TYPE_MEDIA_RENDERER_PLUGIN (rygel_media_renderer_plugin_get_type ())
+</programlisting>
+<para>
+The type for <link linkend="RygelMediaRendererPlugin"><type>RygelMediaRendererPlugin</type></link>.
+</para></refsect2>
+<refsect2 id="rygel-media-renderer-plugin-get-player" role="function">
+<title>rygel_media_renderer_plugin_get_player ()</title>
+<indexterm zone="rygel-media-renderer-plugin-get-player"><primary>rygel_media_renderer_plugin_get_player</primary></indexterm>
+<programlisting><link linkend="RygelMediaPlayer"><returnvalue>RygelMediaPlayer</returnvalue></link> *  rygel_media_renderer_plugin_get_player
+                                                        (<parameter><link linkend="RygelMediaRendererPlugin"><type>RygelMediaRendererPlugin</type></link> *self</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaRendererPlugin"><type>RygelMediaRendererPlugin</type></link> instance</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-renderer-plugin-new" role="function">
+<title>rygel_media_renderer_plugin_new ()</title>
+<indexterm zone="rygel-media-renderer-plugin-new"><primary>rygel_media_renderer_plugin_new</primary></indexterm>
+<programlisting><link linkend="RygelMediaRendererPlugin"><returnvalue>RygelMediaRendererPlugin</returnvalue></link> * rygel_media_renderer_plugin_new
+                                                        (<parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *title</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *description</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="RygelMediaRendererPlugin-struct" role="struct">
+<title>struct RygelMediaRendererPlugin</title>
+<indexterm zone="RygelMediaRendererPlugin-struct"><primary>RygelMediaRendererPlugin</primary></indexterm>
+<programlisting>struct RygelMediaRendererPlugin;</programlisting>
+<para>
+Base class for every Rygel UPnP renderer plugin.
+</para>
+<para>
+<para>This class is useful only when implementing Rygel plugins.</para>
+</para></refsect2>
+<refsect2 id="RygelMediaRendererPluginClass" role="struct">
+<title>struct RygelMediaRendererPluginClass</title>
+<indexterm zone="RygelMediaRendererPluginClass"><primary>RygelMediaRendererPluginClass</primary></indexterm>
+<programlisting>struct RygelMediaRendererPluginClass {
+	RygelPluginClass parent_class;
+	RygelMediaPlayer* (*get_player) (RygelMediaRendererPlugin* self);
+};
+</programlisting>
+<para>
+The class structure for <link linkend="RYGEL-TYPE-MEDIA-RENDERER-PLUGIN:CAPS"><literal>RYGEL_TYPE_MEDIA_RENDERER_PLUGIN</literal></link>. All the fields in this structure are private and should never be accessed directly.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="RygelPluginClass"><type>RygelPluginClass</type></link>&#160;<structfield id="RygelMediaRendererPluginClass.parent-class">parent_class</structfield>;</term>
+<listitem><simpara>the parent class structure</simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelMediaRendererPluginClass.get-player">get_player</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-media-renderer-plugin-get-player"><function><link linkend="rygel-media-renderer-plugin-get-player"><function>rygel_media_renderer_plugin_get_player()</function></link></function></link></simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+</refentry>

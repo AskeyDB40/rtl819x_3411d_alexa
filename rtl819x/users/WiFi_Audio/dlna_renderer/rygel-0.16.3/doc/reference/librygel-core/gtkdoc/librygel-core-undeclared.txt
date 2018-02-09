@@ -1,0 +1,1 @@
+rygel_root_device_set_services

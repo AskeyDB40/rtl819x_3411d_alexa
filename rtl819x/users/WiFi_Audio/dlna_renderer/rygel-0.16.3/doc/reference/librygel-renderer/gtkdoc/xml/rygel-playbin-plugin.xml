@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelPlaybinPlugin">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelPlaybinPlugin.top_of_page">RygelPlaybinPlugin</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-RENDERER Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelPlaybinPlugin</refname>
+<refpurpose>Implementation of RygelMediaRendererPlugin for GStreamer.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelPlaybinPlugin.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="RYGEL-PLAYBIN-TYPE-PLUGIN:CAPS">RYGEL_PLAYBIN_TYPE_PLUGIN</link>
+#define             <link linkend="RYGEL-PLAYBIN-PLUGIN-NAME:CAPS">RYGEL_PLAYBIN_PLUGIN_NAME</link>
+<link linkend="RygelPlaybinPlugin"><returnvalue>RygelPlaybinPlugin</returnvalue></link> * <link linkend="rygel-playbin-plugin-new">rygel_playbin_plugin_new</link>           (<parameter><type>void</type></parameter>);
+struct              <link linkend="RygelPlaybinPlugin-struct">RygelPlaybinPlugin</link>;
+struct              <link linkend="RygelPlaybinPluginClass">RygelPlaybinPluginClass</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelPlaybinPlugin.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GUPnPResourceFactory">GUPnPResourceFactory</link>
+         +----<link linkend="RygelPlugin">RygelPlugin</link>
+               +----<link linkend="RygelMediaRendererPlugin">RygelMediaRendererPlugin</link>
+                     +----RygelPlaybinPlugin
+</synopsis>
+</refsect1>
+
+<refsect1 id="RygelPlaybinPlugin.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+<para>This class is useful only when implementing Rygel plugins.</para>
+</para>
+</refsect1>
+<refsect1 id="RygelPlaybinPlugin.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="RYGEL-PLAYBIN-TYPE-PLUGIN:CAPS" role="macro">
+<title>RYGEL_PLAYBIN_TYPE_PLUGIN</title>
+<indexterm zone="RYGEL-PLAYBIN-TYPE-PLUGIN:CAPS"><primary>RYGEL_PLAYBIN_TYPE_PLUGIN</primary></indexterm>
+<programlisting>#define RYGEL_PLAYBIN_TYPE_PLUGIN (rygel_playbin_plugin_get_type ())
+</programlisting>
+<para>
+The type for <link linkend="RygelPlaybinPlugin"><type>RygelPlaybinPlugin</type></link>.
+</para></refsect2>
+<refsect2 id="RYGEL-PLAYBIN-PLUGIN-NAME:CAPS" role="macro">
+<title>RYGEL_PLAYBIN_PLUGIN_NAME</title>
+<indexterm zone="RYGEL-PLAYBIN-PLUGIN-NAME:CAPS"><primary>RYGEL_PLAYBIN_PLUGIN_NAME</primary></indexterm>
+<programlisting>#define RYGEL_PLAYBIN_PLUGIN_NAME "Playbin"
+</programlisting>
+</refsect2>
+<refsect2 id="rygel-playbin-plugin-new" role="function">
+<title>rygel_playbin_plugin_new ()</title>
+<indexterm zone="rygel-playbin-plugin-new"><primary>rygel_playbin_plugin_new</primary></indexterm>
+<programlisting><link linkend="RygelPlaybinPlugin"><returnvalue>RygelPlaybinPlugin</returnvalue></link> * rygel_playbin_plugin_new           (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="RygelPlaybinPlugin-struct" role="struct">
+<title>struct RygelPlaybinPlugin</title>
+<indexterm zone="RygelPlaybinPlugin-struct"><primary>RygelPlaybinPlugin</primary></indexterm>
+<programlisting>struct RygelPlaybinPlugin;</programlisting>
+<para>
+Implementation of RygelMediaRendererPlugin for GStreamer.
+</para>
+<para>
+<para>This class is useful only when implementing Rygel plugins.</para>
+</para></refsect2>
+<refsect2 id="RygelPlaybinPluginClass" role="struct">
+<title>struct RygelPlaybinPluginClass</title>
+<indexterm zone="RygelPlaybinPluginClass"><primary>RygelPlaybinPluginClass</primary></indexterm>
+<programlisting>struct RygelPlaybinPluginClass {
+	RygelMediaRendererPluginClass parent_class;
+};
+</programlisting>
+<para>
+The class structure for <link linkend="RYGEL-PLAYBIN-TYPE-PLUGIN:CAPS"><literal>RYGEL_PLAYBIN_TYPE_PLUGIN</literal></link>. All the fields in this structure are private and should never be accessed directly.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="RygelMediaRendererPluginClass"><type>RygelMediaRendererPluginClass</type></link>&#160;<structfield id="RygelPlaybinPluginClass.parent-class">parent_class</structfield>;</term>
+<listitem><simpara>the parent class structure</simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+</refentry>

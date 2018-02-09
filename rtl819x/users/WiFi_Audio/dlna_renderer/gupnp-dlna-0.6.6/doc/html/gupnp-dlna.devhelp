@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE book PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "">
+<book xmlns="http://www.devhelp.net/book" title="GUPnP DLNA Reference Manual" link="index.html" author="" name="gupnp-dlna">
+  <chapters>
+    <sub name="GUPnP DLNA" link="ch01.html">
+      <sub name="GUPnPDLNADiscoverer" link="GUPnPDLNADiscoverer.html"/>
+      <sub name="GUPnPDLNAInformation" link="GUPnPDLNAInformation.html"/>
+      <sub name="GUPnPDLNAProfile" link="GUPnPDLNAProfile.html"/>
+    </sub>
+    <sub name="Annotation Glossary" link="annotation-glossary.html"/>
+  </chapters>
+  <functions>
+    <function name="GUPnPDLNADiscoverer" link="GUPnPDLNADiscoverer.html#GUPnPDLNADiscoverer-struct"/>
+    <function name="gupnp_dlna_discoverer_new ()" link="GUPnPDLNADiscoverer.html#gupnp-dlna-discoverer-new"/>
+    <function name="gupnp_dlna_discoverer_start()" link="GUPnPDLNADiscoverer.html#gupnp-dlna-discoverer-start"/>
+    <function name="gupnp_dlna_discoverer_stop()" link="GUPnPDLNADiscoverer.html#gupnp-dlna-discoverer-stop"/>
+    <function name="gupnp_dlna_discoverer_discover_uri ()" link="GUPnPDLNADiscoverer.html#gupnp-dlna-discoverer-discover-uri"/>
+    <function name="gupnp_dlna_discoverer_discover_uri_sync ()" link="GUPnPDLNADiscoverer.html#gupnp-dlna-discoverer-discover-uri-sync"/>
+    <function name="gupnp_dlna_discoverer_get_profile ()" link="GUPnPDLNADiscoverer.html#gupnp-dlna-discoverer-get-profile"/>
+    <function name="gupnp_dlna_discoverer_list_profiles ()" link="GUPnPDLNADiscoverer.html#gupnp-dlna-discoverer-list-profiles"/>
+    <function name="gupnp_dlna_discoverer_get_relaxed_mode ()" link="GUPnPDLNADiscoverer.html#gupnp-dlna-discoverer-get-relaxed-mode"/>
+    <function name="gupnp_dlna_discoverer_get_extended_mode ()" link="GUPnPDLNADiscoverer.html#gupnp-dlna-discoverer-get-extended-mode"/>
+    <function name="The &quot;extended-mode&quot; property" link="GUPnPDLNADiscoverer.html#GUPnPDLNADiscoverer--extended-mode"/>
+    <function name="The &quot;relaxed-mode&quot; property" link="GUPnPDLNADiscoverer.html#GUPnPDLNADiscoverer--relaxed-mode"/>
+    <function name="The &quot;done&quot; signal" link="GUPnPDLNADiscoverer.html#GUPnPDLNADiscoverer-done"/>
+    <function name="GUPnPDLNAInformation" link="GUPnPDLNAInformation.html#GUPnPDLNAInformation-struct"/>
+    <function name="gupnp_dlna_information_new ()" link="GUPnPDLNAInformation.html#gupnp-dlna-information-new"/>
+    <function name="gupnp_dlna_information_get_name ()" link="GUPnPDLNAInformation.html#gupnp-dlna-information-get-name"/>
+    <function name="gupnp_dlna_information_get_mime ()" link="GUPnPDLNAInformation.html#gupnp-dlna-information-get-mime"/>
+    <function name="gupnp_dlna_information_get_info ()" link="GUPnPDLNAInformation.html#gupnp-dlna-information-get-info"/>
+    <function name="The &quot;info&quot; property" link="GUPnPDLNAInformation.html#GUPnPDLNAInformation--info"/>
+    <function name="The &quot;mime&quot; property" link="GUPnPDLNAInformation.html#GUPnPDLNAInformation--mime"/>
+    <function name="The &quot;name&quot; property" link="GUPnPDLNAInformation.html#GUPnPDLNAInformation--name"/>
+    <function name="GUPnPDLNAProfile" link="GUPnPDLNAProfile.html#GUPnPDLNAProfile-struct"/>
+    <function name="GUPnPDLNAProfileClass" link="GUPnPDLNAProfile.html#GUPnPDLNAProfileClass"/>
+    <function name="gupnp_dlna_profile_new ()" link="GUPnPDLNAProfile.html#gupnp-dlna-profile-new"/>
+    <function name="gupnp_dlna_profile_get_name ()" link="GUPnPDLNAProfile.html#gupnp-dlna-profile-get-name"/>
+    <function name="gupnp_dlna_profile_get_mime ()" link="GUPnPDLNAProfile.html#gupnp-dlna-profile-get-mime"/>
+    <function name="gupnp_dlna_profile_get_encoding_profile ()" link="GUPnPDLNAProfile.html#gupnp-dlna-profile-get-encoding-profile"/>
+    <function name="The &quot;encoding-profile&quot; property" link="GUPnPDLNAProfile.html#GUPnPDLNAProfile--encoding-profile"/>
+    <function name="The &quot;extended&quot; property" link="GUPnPDLNAProfile.html#GUPnPDLNAProfile--extended"/>
+    <function name="The &quot;mime&quot; property" link="GUPnPDLNAProfile.html#GUPnPDLNAProfile--mime"/>
+    <function name="The &quot;name&quot; property" link="GUPnPDLNAProfile.html#GUPnPDLNAProfile--name"/>
+  </functions>
+</book>

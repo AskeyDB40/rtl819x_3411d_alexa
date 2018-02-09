@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelRelationalExpression">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelRelationalExpression.top_of_page">RygelRelationalExpression</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-SERVER Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelRelationalExpression</refname>
+<refpurpose>This is a parsed UPnP search expression consisting of two strings joined by a relational operator such as such &lt;, &lt;=, ==, !=, &gt;, &gt;=, derivedFrom or exists.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelRelationalExpression.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="RYGEL-TYPE-RELATIONAL-EXPRESSION:CAPS">RYGEL_TYPE_RELATIONAL_EXPRESSION</link>
+<link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            <link linkend="rygel-relational-expression-compare-string">rygel_relational_expression_compare_string</link>
+                                                        (<parameter><link linkend="RygelRelationalExpression"><type>RygelRelationalExpression</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *str</parameter>);
+<link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            <link linkend="rygel-relational-expression-compare-int">rygel_relational_expression_compare_int</link>
+                                                        (<parameter><link linkend="RygelRelationalExpression"><type>RygelRelationalExpression</type></link> *self</parameter>,
+                                                         <parameter><link linkend="gint"><type>gint</type></link> integer</parameter>);
+<link linkend="RygelRelationalExpression"><returnvalue>RygelRelationalExpression</returnvalue></link> * <link linkend="rygel-relational-expression-new">rygel_relational_expression_new</link>
+                                                        (<parameter><type>void</type></parameter>);
+struct              <link linkend="RygelRelationalExpression-struct">RygelRelationalExpression</link>;
+struct              <link linkend="RygelRelationalExpressionClass">RygelRelationalExpressionClass</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelRelationalExpression.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="RygelSearchExpression">RygelSearchExpression</link>
+   +----RygelRelationalExpression
+</synopsis>
+</refsect1>
+
+<refsect1 id="RygelRelationalExpression.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="RygelRelationalExpression.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="RYGEL-TYPE-RELATIONAL-EXPRESSION:CAPS" role="macro">
+<title>RYGEL_TYPE_RELATIONAL_EXPRESSION</title>
+<indexterm zone="RYGEL-TYPE-RELATIONAL-EXPRESSION:CAPS"><primary>RYGEL_TYPE_RELATIONAL_EXPRESSION</primary></indexterm>
+<programlisting>#define RYGEL_TYPE_RELATIONAL_EXPRESSION (rygel_relational_expression_get_type ())
+</programlisting>
+<para>
+The type for <link linkend="RygelRelationalExpression"><type>RygelRelationalExpression</type></link>.
+</para></refsect2>
+<refsect2 id="rygel-relational-expression-compare-string" role="function">
+<title>rygel_relational_expression_compare_string ()</title>
+<indexterm zone="rygel-relational-expression-compare-string"><primary>rygel_relational_expression_compare_string</primary></indexterm>
+<programlisting><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            rygel_relational_expression_compare_string
+                                                        (<parameter><link linkend="RygelRelationalExpression"><type>RygelRelationalExpression</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *str</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelRelationalExpression"><type>RygelRelationalExpression</type></link> instance</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-relational-expression-compare-int" role="function">
+<title>rygel_relational_expression_compare_int ()</title>
+<indexterm zone="rygel-relational-expression-compare-int"><primary>rygel_relational_expression_compare_int</primary></indexterm>
+<programlisting><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            rygel_relational_expression_compare_int
+                                                        (<parameter><link linkend="RygelRelationalExpression"><type>RygelRelationalExpression</type></link> *self</parameter>,
+                                                         <parameter><link linkend="gint"><type>gint</type></link> integer</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelRelationalExpression"><type>RygelRelationalExpression</type></link> instance</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-relational-expression-new" role="function">
+<title>rygel_relational_expression_new ()</title>
+<indexterm zone="rygel-relational-expression-new"><primary>rygel_relational_expression_new</primary></indexterm>
+<programlisting><link linkend="RygelRelationalExpression"><returnvalue>RygelRelationalExpression</returnvalue></link> * rygel_relational_expression_new
+                                                        (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="RygelRelationalExpression-struct" role="struct">
+<title>struct RygelRelationalExpression</title>
+<indexterm zone="RygelRelationalExpression-struct"><primary>RygelRelationalExpression</primary></indexterm>
+<programlisting>struct RygelRelationalExpression;</programlisting>
+<para>
+This is a parsed UPnP search expression consisting of two strings joined by a relational operator such as such &lt;, &lt;=, ==, !=, &gt;, &gt;=, derivedFrom or exists.
+</para></refsect2>
+<refsect2 id="RygelRelationalExpressionClass" role="struct">
+<title>struct RygelRelationalExpressionClass</title>
+<indexterm zone="RygelRelationalExpressionClass"><primary>RygelRelationalExpressionClass</primary></indexterm>
+<programlisting>struct RygelRelationalExpressionClass {
+	RygelSearchExpressionClass parent_class;
+};
+</programlisting>
+<para>
+The class structure for <link linkend="RYGEL-TYPE-RELATIONAL-EXPRESSION:CAPS"><literal>RYGEL_TYPE_RELATIONAL_EXPRESSION</literal></link>. All the fields in this structure are private and should never be accessed directly.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="RygelSearchExpressionClass"><type>RygelSearchExpressionClass</type></link>&#160;<structfield id="RygelRelationalExpressionClass.parent-class">parent_class</structfield>;</term>
+<listitem><simpara>the parent class structure</simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+</refentry>

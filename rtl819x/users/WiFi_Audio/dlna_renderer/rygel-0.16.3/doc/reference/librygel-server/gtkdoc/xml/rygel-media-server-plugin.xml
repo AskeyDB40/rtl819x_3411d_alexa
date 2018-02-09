@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelMediaServerPlugin">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelMediaServerPlugin.top_of_page">RygelMediaServerPlugin</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-SERVER Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelMediaServerPlugin</refname>
+<refpurpose>This is the base class for every Rygel implementation of a UPnP media server. It should be used either for a real plug-in for the rygel process or used in-process via the librygel-server API (see the standalone-server.c example).</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelMediaServerPlugin.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="RYGEL-TYPE-MEDIA-SERVER-PLUGIN:CAPS">RYGEL_TYPE_MEDIA_SERVER_PLUGIN</link>
+struct              <link linkend="RygelMediaServerPlugin-struct">RygelMediaServerPlugin</link>;
+struct              <link linkend="RygelMediaServerPluginClass">RygelMediaServerPluginClass</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelMediaServerPlugin.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GUPnPResourceFactory">GUPnPResourceFactory</link>
+         +----<link linkend="RygelPlugin">RygelPlugin</link>
+               +----RygelMediaServerPlugin
+</synopsis>
+</refsect1>
+
+<refsect1 id="RygelMediaServerPlugin.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="RygelMediaServerPlugin.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="RYGEL-TYPE-MEDIA-SERVER-PLUGIN:CAPS" role="macro">
+<title>RYGEL_TYPE_MEDIA_SERVER_PLUGIN</title>
+<indexterm zone="RYGEL-TYPE-MEDIA-SERVER-PLUGIN:CAPS"><primary>RYGEL_TYPE_MEDIA_SERVER_PLUGIN</primary></indexterm>
+<programlisting>#define RYGEL_TYPE_MEDIA_SERVER_PLUGIN (rygel_media_server_plugin_get_type ())
+</programlisting>
+<para>
+The type for <link linkend="RygelMediaServerPlugin"><type>RygelMediaServerPlugin</type></link>.
+</para></refsect2>
+<refsect2 id="RygelMediaServerPlugin-struct" role="struct">
+<title>struct RygelMediaServerPlugin</title>
+<indexterm zone="RygelMediaServerPlugin-struct"><primary>RygelMediaServerPlugin</primary></indexterm>
+<programlisting>struct RygelMediaServerPlugin;</programlisting>
+<para>
+This is the base class for every Rygel implementation of a UPnP media server. It should be used either for a real plug-in for the rygel process or used in-process via the librygel-server API (see the standalone-server.c example).
+</para></refsect2>
+<refsect2 id="RygelMediaServerPluginClass" role="struct">
+<title>struct RygelMediaServerPluginClass</title>
+<indexterm zone="RygelMediaServerPluginClass"><primary>RygelMediaServerPluginClass</primary></indexterm>
+<programlisting>struct RygelMediaServerPluginClass {
+	RygelPluginClass parent_class;
+};
+</programlisting>
+<para>
+The class structure for <link linkend="RYGEL-TYPE-MEDIA-SERVER-PLUGIN:CAPS"><literal>RYGEL_TYPE_MEDIA_SERVER_PLUGIN</literal></link>. All the fields in this structure are private and should never be accessed directly.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="RygelPluginClass"><type>RygelPluginClass</type></link>&#160;<structfield id="RygelMediaServerPluginClass.parent-class">parent_class</structfield>;</term>
+<listitem><simpara>the parent class structure</simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+</refentry>

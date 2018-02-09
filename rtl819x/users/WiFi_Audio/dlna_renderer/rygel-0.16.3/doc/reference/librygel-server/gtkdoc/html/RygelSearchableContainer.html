@@ -1,0 +1,538 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>RygelSearchableContainer</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="librygel-server Reference Manual">
+<link rel="up" href="ch01.html" title="librygel-server API Reference">
+<link rel="prev" href="RygelMediaServerPlugin.html" title="RygelMediaServerPlugin">
+<link rel="next" href="object-tree.html" title="Object Hierarchy">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="RygelMediaServerPlugin.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">librygel-server Reference Manual</th>
+<td><a accesskey="n" href="object-tree.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#RygelSearchableContainer.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#RygelSearchableContainer.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#RygelSearchableContainer.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#RygelSearchableContainer.prerequisites" class="shortcut">Prerequisites</a>
+                   | 
+                  <a href="#RygelSearchableContainer.implementations" class="shortcut">Known Implementations</a>
+                   | 
+                  <a href="#RygelSearchableContainer.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="RygelSearchableContainer"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="RygelSearchableContainer.top_of_page"></a>RygelSearchableContainer</span></h2>
+<p>RygelSearchableContainer — The base class for searchable containers.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="RygelSearchableContainer.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis"><span class="returnvalue">void</span>                <a class="link" href="RygelSearchableContainer.html#rygel-searchable-container-search" title="rygel_searchable_container_search ()">rygel_searchable_container_search</a>   (<em class="parameter"><code><a class="link" href="RygelSearchableContainer.html" title="RygelSearchableContainer"><span class="type">RygelSearchableContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="RygelSearchExpression.html" title="RygelSearchExpression"><span class="type">RygelSearchExpression</span></a> *expression</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> offset</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> max_count</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *sort_criteria</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);
+<a class="link" href="RygelMediaObjects.html" title="RygelMediaObjects"><span class="returnvalue">RygelMediaObjects</span></a> * <a class="link" href="RygelSearchableContainer.html#rygel-searchable-container-search-finish" title="rygel_searchable_container_search_finish ()">rygel_searchable_container_search_finish</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelSearchableContainer.html" title="RygelSearchableContainer"><span class="type">RygelSearchableContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> *total_matches</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="RygelSearchableContainer.html#rygel-searchable-container-simple-search" title="rygel_searchable_container_simple_search ()">rygel_searchable_container_simple_search</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelSearchableContainer.html" title="RygelSearchableContainer"><span class="type">RygelSearchableContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="RygelSearchExpression.html" title="RygelSearchExpression"><span class="type">RygelSearchExpression</span></a> *expression</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> offset</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> max_count</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *sort_criteria</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);
+<a class="link" href="RygelMediaObjects.html" title="RygelMediaObjects"><span class="returnvalue">RygelMediaObjects</span></a> * <a class="link" href="RygelSearchableContainer.html#rygel-searchable-container-simple-search-finish" title="rygel_searchable_container_simple_search_finish ()">rygel_searchable_container_simple_search_finish</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelSearchableContainer.html" title="RygelSearchableContainer"><span class="type">RygelSearchableContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> *total_matches</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="RygelSearchableContainer.html#rygel-searchable-container-find-object" title="rygel_searchable_container_find_object ()">rygel_searchable_container_find_object</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelSearchableContainer.html" title="RygelSearchableContainer"><span class="type">RygelSearchableContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *id</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);
+<a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="returnvalue">RygelMediaObject</span></a> *  <a class="link" href="RygelSearchableContainer.html#rygel-searchable-container-find-object-finish" title="rygel_searchable_container_find_object_finish ()">rygel_searchable_container_find_object_finish</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelSearchableContainer.html" title="RygelSearchableContainer"><span class="type">RygelSearchableContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">GeeArrayList</span> *      <a class="link" href="RygelSearchableContainer.html#rygel-searchable-container-get-search-classes" title="rygel_searchable_container_get_search_classes ()">rygel_searchable_container_get_search_classes</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelSearchableContainer.html" title="RygelSearchableContainer"><span class="type">RygelSearchableContainer</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="RygelSearchableContainer.html#rygel-searchable-container-set-search-classes" title="rygel_searchable_container_set_search_classes ()">rygel_searchable_container_set_search_classes</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelSearchableContainer.html" title="RygelSearchableContainer"><span class="type">RygelSearchableContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><span class="type">GeeArrayList</span> *value</code></em>);
+                    <a class="link" href="RygelSearchableContainer.html#RygelSearchableContainer-struct" title="RygelSearchableContainer">RygelSearchableContainer</a>;
+struct              <a class="link" href="RygelSearchableContainer.html#RygelSearchableContainerIface" title="struct RygelSearchableContainerIface">RygelSearchableContainerIface</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelSearchableContainer.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GInterface
+   +----RygelSearchableContainer
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelSearchableContainer.prerequisites"></a><h2>Prerequisites</h2>
+<p>
+RygelSearchableContainer requires
+ <a class="link" href="RygelMediaContainer.html" title="RygelMediaContainer">RygelMediaContainer</a>.</p>
+</div>
+<div class="refsect1">
+<a name="RygelSearchableContainer.implementations"></a><h2>Known Implementations</h2>
+<p>
+RygelSearchableContainer is implemented by
+ <a class="link" href="RygelSimpleContainer.html" title="RygelSimpleContainer">RygelSimpleContainer</a>.</p>
+</div>
+<div class="refsect1">
+<a name="RygelSearchableContainer.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="RygelSearchableContainer.html#RygelSearchableContainer--search-classes" title='The "search-classes" property'>search-classes</a>"           <span class="type">GeeArrayList</span>*         : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelSearchableContainer.description"></a><h2>Description</h2>
+<p>
+</p>
+<p>Classes that implement this interface can, for instance:</p>
+<div class="orderedlist"><ol class="orderedlist" type="1">
+<li class="listitem"><p>Allow backends to implement a UPnP Search call using native searching (such as SQL or SPARQL queries).</p></li>
+<li class="listitem"><p>Provide the naïve default implementation of search, from this base class, which does a recursive tree walk.</p></li>
+</ol></div>
+<p>The search_classes property lists what information this container may be searched for. It is mapped to upnp:searchClass (with includeDerived assumed to be false),</p>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="RygelSearchableContainer.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="rygel-searchable-container-search"></a><h3>rygel_searchable_container_search ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                rygel_searchable_container_search   (<em class="parameter"><code><a class="link" href="RygelSearchableContainer.html" title="RygelSearchableContainer"><span class="type">RygelSearchableContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="RygelSearchExpression.html" title="RygelSearchExpression"><span class="type">RygelSearchExpression</span></a> *expression</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> offset</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> max_count</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *sort_criteria</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);</pre>
+<p>
+Recursively searches for all media objects that satisfy the given search expression in this container.
+</p>
+<p>
+<span class="emphasis"><em>See also</em></span>: <a class="link" href="RygelSearchableContainer.html#rygel-searchable-container-search-finish" title="rygel_searchable_container_search_finish ()"><code class="function"><a class="link" href="RygelSearchableContainer.html#rygel-searchable-container-search-finish" title="rygel_searchable_container_search_finish ()"><code class="function">rygel_searchable_container_search_finish()</code></a></code></a>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelSearchableContainer.html" title="RygelSearchableContainer"><span class="type">RygelSearchableContainer</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>expression</code></em> :</span></p></td>
+<td>the search expression or null for wildcard. <span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>offset</code></em> :</span></p></td>
+<td>zero-based index of the first object to return. <span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>max_count</code></em> :</span></p></td>
+<td>maximum number of objects to return. <span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>total_matches</code></em> :</span></p></td>
+<td>sets it to the actual number of objects that satisfy. <span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
+<td>optional cancellable for this operation. <span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_callback_</code></em> :</span></p></td>
+<td>callback to call when the request is satisfied. <span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_user_data_</code></em> :</span></p></td>
+<td>the data to pass to <em class="parameter"><code>_callback_</code></em> function. <span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-searchable-container-search-finish"></a><h3>rygel_searchable_container_search_finish ()</h3>
+<pre class="programlisting"><a class="link" href="RygelMediaObjects.html" title="RygelMediaObjects"><span class="returnvalue">RygelMediaObjects</span></a> * rygel_searchable_container_search_finish
+                                                        (<em class="parameter"><code><a class="link" href="RygelSearchableContainer.html" title="RygelSearchableContainer"><span class="type">RygelSearchableContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> *total_matches</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Recursively searches for all media objects that satisfy the given search expression in this container.
+</p>
+<p>
+<span class="emphasis"><em>See also</em></span>: <a class="link" href="RygelSearchableContainer.html#rygel-searchable-container-search" title="rygel_searchable_container_search ()"><code class="function"><a class="link" href="RygelSearchableContainer.html#rygel-searchable-container-search" title="rygel_searchable_container_search ()"><code class="function">rygel_searchable_container_search()</code></a></code></a>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelSearchableContainer.html" title="RygelSearchableContainer"><span class="type">RygelSearchableContainer</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_res_</code></em> :</span></p></td>
+<td>a <a href="../gio/GAsyncResult.html"><span class="type">GAsyncResult</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A list of matching media objects or null if no object matched.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-searchable-container-simple-search"></a><h3>rygel_searchable_container_simple_search ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                rygel_searchable_container_simple_search
+                                                        (<em class="parameter"><code><a class="link" href="RygelSearchableContainer.html" title="RygelSearchableContainer"><span class="type">RygelSearchableContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="RygelSearchExpression.html" title="RygelSearchExpression"><span class="type">RygelSearchExpression</span></a> *expression</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> offset</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> max_count</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *sort_criteria</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);</pre>
+<p>
+Utility method that retrieves all children and recursively searches for all media objects that satisfy the given search expression in this container.
+</p>
+<p>
+<span class="emphasis"><em>See also</em></span>: <a class="link" href="RygelSearchableContainer.html#rygel-searchable-container-simple-search-finish" title="rygel_searchable_container_simple_search_finish ()"><code class="function"><a class="link" href="RygelSearchableContainer.html#rygel-searchable-container-simple-search-finish" title="rygel_searchable_container_simple_search_finish ()"><code class="function">rygel_searchable_container_simple_search_finish()</code></a></code></a>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelSearchableContainer.html" title="RygelSearchableContainer"><span class="type">RygelSearchableContainer</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>expression</code></em> :</span></p></td>
+<td>the search expression or `null` for wildcard. <span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>offset</code></em> :</span></p></td>
+<td>zero-based index of the first object to return. <span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>max_count</code></em> :</span></p></td>
+<td>maximum number of objects to return. <span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>total_matches</code></em> :</span></p></td>
+<td>sets it to the actual number of objects that satisfy the given search expression. If it is not possible to compute this value (in a timely mannger), it is set to '0'. <span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
+<td>optional cancellable for this operation. <span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_callback_</code></em> :</span></p></td>
+<td>callback to call when the request is satisfied. <span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_user_data_</code></em> :</span></p></td>
+<td>the data to pass to <em class="parameter"><code>_callback_</code></em> function. <span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-searchable-container-simple-search-finish"></a><h3>rygel_searchable_container_simple_search_finish ()</h3>
+<pre class="programlisting"><a class="link" href="RygelMediaObjects.html" title="RygelMediaObjects"><span class="returnvalue">RygelMediaObjects</span></a> * rygel_searchable_container_simple_search_finish
+                                                        (<em class="parameter"><code><a class="link" href="RygelSearchableContainer.html" title="RygelSearchableContainer"><span class="type">RygelSearchableContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> *total_matches</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Utility method that retrieves all children and recursively searches for all media objects that satisfy the given search expression in this container.
+</p>
+<p>
+<span class="emphasis"><em>See also</em></span>: <a class="link" href="RygelSearchableContainer.html#rygel-searchable-container-simple-search" title="rygel_searchable_container_simple_search ()"><code class="function"><a class="link" href="RygelSearchableContainer.html#rygel-searchable-container-simple-search" title="rygel_searchable_container_simple_search ()"><code class="function">rygel_searchable_container_simple_search()</code></a></code></a>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelSearchableContainer.html" title="RygelSearchableContainer"><span class="type">RygelSearchableContainer</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_res_</code></em> :</span></p></td>
+<td>a <a href="../gio/GAsyncResult.html"><span class="type">GAsyncResult</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A list of media objects.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-searchable-container-find-object"></a><h3>rygel_searchable_container_find_object ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                rygel_searchable_container_find_object
+                                                        (<em class="parameter"><code><a class="link" href="RygelSearchableContainer.html" title="RygelSearchableContainer"><span class="type">RygelSearchableContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *id</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);</pre>
+<p>
+Recursively searches for media object with the given id in this container.
+</p>
+<p>
+<span class="emphasis"><em>See also</em></span>: <a class="link" href="RygelSearchableContainer.html#rygel-searchable-container-find-object-finish" title="rygel_searchable_container_find_object_finish ()"><code class="function"><a class="link" href="RygelSearchableContainer.html#rygel-searchable-container-find-object-finish" title="rygel_searchable_container_find_object_finish ()"><code class="function">rygel_searchable_container_find_object_finish()</code></a></code></a>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>callback</code></em> :</span></p></td>
+<td>function to call when result is ready</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelSearchableContainer.html" title="RygelSearchableContainer"><span class="type">RygelSearchableContainer</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id</code></em> :</span></p></td>
+<td>ID of the media object to search for. <span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
+<td>optional cancellable for this operation. <span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_callback_</code></em> :</span></p></td>
+<td>callback to call when the request is satisfied. <span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_user_data_</code></em> :</span></p></td>
+<td>the data to pass to <em class="parameter"><code>_callback_</code></em> function. <span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-searchable-container-find-object-finish"></a><h3>rygel_searchable_container_find_object_finish ()</h3>
+<pre class="programlisting"><a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="returnvalue">RygelMediaObject</span></a> *  rygel_searchable_container_find_object_finish
+                                                        (<em class="parameter"><code><a class="link" href="RygelSearchableContainer.html" title="RygelSearchableContainer"><span class="type">RygelSearchableContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Recursively searches for media object with the given id in this container.
+</p>
+<p>
+<span class="emphasis"><em>See also</em></span>: <a class="link" href="RygelSearchableContainer.html#rygel-searchable-container-find-object" title="rygel_searchable_container_find_object ()"><code class="function"><a class="link" href="RygelSearchableContainer.html#rygel-searchable-container-find-object" title="rygel_searchable_container_find_object ()"><code class="function">rygel_searchable_container_find_object()</code></a></code></a>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelSearchableContainer.html" title="RygelSearchableContainer"><span class="type">RygelSearchableContainer</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_res_</code></em> :</span></p></td>
+<td>a <a href="../gio/GAsyncResult.html"><span class="type">GAsyncResult</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the found media object.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-searchable-container-get-search-classes"></a><h3>rygel_searchable_container_get_search_classes ()</h3>
+<pre class="programlisting"><span class="returnvalue">GeeArrayList</span> *      rygel_searchable_container_get_search_classes
+                                                        (<em class="parameter"><code><a class="link" href="RygelSearchableContainer.html" title="RygelSearchableContainer"><span class="type">RygelSearchableContainer</span></a> *self</code></em>);</pre>
+<p>
+Get and return the current value of the <a class="link" href="RygelSearchableContainer.html#RygelSearchableContainer--search-classes" title='The "search-classes" property'><span class="type">"search-classes"</span></a> property.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelSearchableContainer.html" title="RygelSearchableContainer"><span class="type">RygelSearchableContainer</span></a> instance to query</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the value of the <a class="link" href="RygelSearchableContainer.html#RygelSearchableContainer--search-classes" title='The "search-classes" property'><span class="type">"search-classes"</span></a> property</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-searchable-container-set-search-classes"></a><h3>rygel_searchable_container_set_search_classes ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                rygel_searchable_container_set_search_classes
+                                                        (<em class="parameter"><code><a class="link" href="RygelSearchableContainer.html" title="RygelSearchableContainer"><span class="type">RygelSearchableContainer</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><span class="type">GeeArrayList</span> *value</code></em>);</pre>
+<p>
+Set the value of the <a class="link" href="RygelSearchableContainer.html#RygelSearchableContainer--search-classes" title='The "search-classes" property'><span class="type">"search-classes"</span></a> property to <em class="parameter"><code>value</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelSearchableContainer.html" title="RygelSearchableContainer"><span class="type">RygelSearchableContainer</span></a> instance to modify</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>the new value of the <a class="link" href="RygelSearchableContainer.html#RygelSearchableContainer--search-classes" title='The "search-classes" property'><span class="type">"search-classes"</span></a> property</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelSearchableContainer-struct"></a><h3>RygelSearchableContainer</h3>
+<pre class="programlisting">typedef struct _RygelSearchableContainer RygelSearchableContainer;</pre>
+<p>
+The base class for searchable containers.
+</p>
+<p>
+</p>
+<p>Classes that implement this interface can, for instance:</p>
+<div class="orderedlist"><ol class="orderedlist" type="1">
+<li class="listitem"><p>Allow backends to implement a UPnP Search call using native searching (such as SQL or SPARQL queries).</p></li>
+<li class="listitem"><p>Provide the naïve default implementation of search, from this base class, which does a recursive tree walk.</p></li>
+</ol></div>
+<p>The search_classes property lists what information this container may be searched for. It is mapped to upnp:searchClass (with includeDerived assumed to be false),</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelSearchableContainerIface"></a><h3>struct RygelSearchableContainerIface</h3>
+<pre class="programlisting">struct RygelSearchableContainerIface {
+	GTypeInterface parent_iface;
+	void (*search) (RygelSearchableContainer* self, RygelSearchExpression* expression, guint offset, guint max_count, const gchar* sort_criteria, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	RygelMediaObjects* (*search_finish) (RygelSearchableContainer* self, GAsyncResult* _res_, guint* total_matches, GError** error);
+	GeeArrayList* (*get_search_classes) (RygelSearchableContainer* self);
+	void (*set_search_classes) (RygelSearchableContainer* self, GeeArrayList* value);
+};
+</pre>
+<p>
+Interface for creating <a class="link" href="RygelSearchableContainer.html" title="RygelSearchableContainer"><span class="type">RygelSearchableContainer</span></a> implementations.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><a href="../gobject/gobject-Type-Information.html#GTypeInterface"><span class="type">GTypeInterface</span></a> <em class="structfield"><code><a name="RygelSearchableContainerIface.parent-iface"></a>parent_iface</code></em>;</span></p></td>
+<td>the parent interface structure</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelSearchableContainerIface.search"></a>search</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="RygelSearchableContainer.html#rygel-searchable-container-search" title="rygel_searchable_container_search ()"><code class="function"><a class="link" href="RygelSearchableContainer.html#rygel-searchable-container-search" title="rygel_searchable_container_search ()"><code class="function">rygel_searchable_container_search()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelSearchableContainerIface.search-finish"></a>search_finish</code></em> ()</span></p></td>
+<td>asynchronous finish function for <em class="structfield"><code>search</code></em>, called by <a class="link" href="RygelSearchableContainer.html#rygel-searchable-container-search" title="rygel_searchable_container_search ()"><code class="function"><a class="link" href="RygelSearchableContainer.html#rygel-searchable-container-search" title="rygel_searchable_container_search ()"><code class="function">rygel_searchable_container_search()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelSearchableContainerIface.get-search-classes"></a>get_search_classes</code></em> ()</span></p></td>
+<td>getter method for the abstract property <a class="link" href="RygelSearchableContainer.html#RygelSearchableContainer--search-classes" title='The "search-classes" property'><span class="type">"search-classes"</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelSearchableContainerIface.set-search-classes"></a>set_search_classes</code></em> ()</span></p></td>
+<td>setter method for the abstract property <a class="link" href="RygelSearchableContainer.html#RygelSearchableContainer--search-classes" title='The "search-classes" property'><span class="type">"search-classes"</span></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="RygelSearchableContainer.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="RygelSearchableContainer--search-classes"></a><h3>The <code class="literal">"search-classes"</code> property</h3>
+<pre class="programlisting">  "search-classes"           <span class="type">GeeArrayList</span>*         : Read / Write</pre>
+<p>search-classes.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

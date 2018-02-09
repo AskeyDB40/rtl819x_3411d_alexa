@@ -1,0 +1,20 @@
+
+menuconfig APP_WIFIAUDIO
+	bool "WiFi Audio Support"
+	default n
+	---help---
+	Enable Audio releated application
+	
+config DLNA_RENDERER_SUPPORT
+	depends on APP_WIFIAUDIO
+	bool "Dlna Renderer Support"	  
+	
+config INTERNET_RADIO_SUPPORT
+	depends on APP_WIFIAUDIO
+	bool "Internet Radio Support"	
+	
+config AMAZON_ALEXA_SUPPORT
+	depends on APP_WIFIAUDIO
+	bool "Amazon Alexa Voice service Support"	
+	
+

@@ -1,0 +1,175 @@
+<!-- ##### SECTION Title ##### -->
+GUPnPServiceInfo
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT GUPnPServiceInfo ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG GUPnPServiceInfo:context ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GUPnPServiceInfo:document ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GUPnPServiceInfo:element ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GUPnPServiceInfo:location ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GUPnPServiceInfo:service-type ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GUPnPServiceInfo:udn ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GUPnPServiceInfo:url-base ##### -->
+<para>
+
+</para>
+
+<!-- ##### USER_FUNCTION GUPnPServiceIntrospectionCallback ##### -->
+<para>
+
+</para>
+
+@info: 
+@introspection: 
+@error: 
+@user_data: 
+
+
+<!-- ##### FUNCTION gupnp_service_info_get_context ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_info_get_location ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_info_get_url_base ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_info_get_udn ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_info_get_service_type ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_info_get_id ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_info_get_scpd_url ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_info_get_control_url ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_info_get_event_subscription_url ##### -->
+<para>
+
+</para>
+
+@info: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_info_get_introspection ##### -->
+<para>
+
+</para>
+
+@info: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_info_get_introspection_async ##### -->
+<para>
+
+</para>
+
+@info: 
+@callback: 
+@user_data: 
+
+

@@ -1,0 +1,296 @@
+'\" t
+.\"     Title: RYGEL
+.\"    Author: Jens Georg <mail@jensge.org>
+.\" Generator: DocBook XSL Stylesheets v1.76.1 <http://docbook.sf.net/>
+.\"      Date: 11/13/2012
+.\"    Manual: Rygel User Manual
+.\"    Source: rygel
+.\"  Language: English
+.\"
+.TH "RYGEL" "1" "11/13/2012" "rygel" "Rygel User Manual"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+rygel \- a collection of DLNA/UPnP AV services
+.SH "SYNOPSIS"
+.HP \w'\fBrygel\fR\ 'u
+\fBrygel\fR [\fBoptions\fR]
+.SH "DESCRIPTION"
+.PP
+\fBrygel\fR
+is a home media solution that allows you to easily share audio, video and pictures, and control of media player on your home network\&. In technical terms it is both a UPnP AV MediaServer and MediaRenderer implemented through a plug\-in mechanism\&. Interoperability with other devices in the market is achieved by conformance to very strict requirements of DLNA and on the fly conversion of media to format that client devices are capable of handling\&.
+.SH "OPTIONS"
+.PP
+The program follows the usual GNU command line syntax, with long options starting with two dashes (`\-\*(Aq)\&. A summary of options is included below\&.
+.PP
+\fB\-h\fR, \fB\-\-help\fR
+.RS 4
+Show summary of options\&.
+.RE
+.PP
+\fB\-\-help\-all\fR
+.RS 4
+Show all help options\&.
+.RE
+.PP
+\fB\-\-help\-gst\fR
+.RS 4
+Show GStreamer related help options\&.
+.RE
+.PP
+\fB\-\-version\fR
+.RS 4
+Show version of program\&.
+.RE
+.PP
+\fB\-n\fR, \fB\-\-network\-interface=\fR\fB\fIINTERFACE\fR\fR
+.RS 4
+Set the network\-interface rygel listens on\&.
+.RE
+.PP
+\fB\-p\fR, \fB\-\-port=\fR\fB\fIPORT\fR\fR
+.RS 4
+Set the listen\-port\&.
+.RE
+.PP
+\fB\-t\fR, \fB\-\-disable\-transcoding\fR
+.RS 4
+Disable any transcoding\&.
+.RE
+.PP
+\fB\-m\fR, \fB\-\-disable\-mp3\-transcoder\fR
+.RS 4
+Disable transcoding to MP3\&.
+.RE
+.PP
+\fB\-s\fR, \fB\-\-disable\-mp2ts\-transcoder\fR
+.RS 4
+Disable transcoding to MPEG2 in TS container\&.
+.RE
+.PP
+\fB\-l\fR, \fB\-\-disable\-lpcm\-transcoder\fR
+.RS 4
+Disable transcoding to Linear PCM\&.
+.RE
+.PP
+\fB\-w\fR, \fB\-\-disable\-wmv\-transcoder\fR
+.RS 4
+Disable transcoding to WMV\&.
+.RE
+.PP
+\fB\-a\fR, \fB\-\-disable\-aac\-transcoder\fR
+.RS 4
+Disable transcoding to AAC\&.
+.RE
+.PP
+\fB\-z\fR, \fB\-\-disable\-avc\-transcoder\fR
+.RS 4
+Disable transcoding to AVC\&.
+.RE
+.PP
+\fB\-U\fR, \fB\-\-disallow\-upload\fR
+.RS 4
+Disable uploading of media files via UPnP\&.
+.RE
+.PP
+\fB\-D\fR, \fB\-\-disallow\-deletion\fR
+.RS 4
+UPnP clients are not allowed to delete media files on the server\&.
+.RE
+.PP
+\fB\-g\fR, \fB\-\-log\-level=\fR\fB\fILEVEL\fR\fR
+.RS 4
+Comma\-separated list of
+\fIDOMAIN\fR:\fILEVEL\fR
+pairs, allowing to set the log level individually for each domain, where
+\fIDOMAIN\fR
+is eiher
+\fB"*"\fR, "\fBrygel\fR" or the name of a plugin\&. Allowed log levels are 1=critical, 2=error, 3=warning, 4=message/info, 5=debug\&.
+.RE
+.PP
+\fB\-u\fR, \fB\-\-plugin\-path=\fR\fB\fIPATH\fR\fR
+.RS 4
+Set the plugin search path\&.
+.RE
+.PP
+\fB\-d\fR, \fB\-\-disable\-plugin=\fR\fB\fIPLUGIN_NAME\fR\fR
+.RS 4
+Disable the plugin
+\fIPLUGIN_NAME\fR\&.
+.RE
+.PP
+\fB\-i\fR, \fB\-\-title=\fR\fB\fIPLUGIN_NAME\fR\fR\fB:\fR\fB\fITITLE\fR\fR
+.RS 4
+Set the title of plugin
+\fIPLUGIN_NAME\fR
+to
+\fITITLE\fR
+You can use this option more than once for every plugin you want to set the name of\&.
+.RE
+.PP
+\fB\-o\fR, \fB\-\-plugin\-option=\fR\fB\fIPLUGIN_NAME\fR\fR\fB:\fR \fB\fIOPTION\fR\fR\fB:\fR\fB\fIVALUE1[,VALUE2,\&...]\fR\fR
+.RS 4
+Set options for a plugin\&.
+.RE
+.PP
+\fB\-P\fR, \fB\-\-disable\-upnp\fR
+.RS 4
+Disable advertisement via UPnP and set
+rygel
+into streaming\-only mode\&.
+.RE
+.PP
+\fB\-c\fR \fB\-\-config=\fR\fB\fICONFIG_FILE\fR\fR
+.RS 4
+Use
+\fICONFIG_FILE\fR
+instead of
+${XDG_CONFIG_DIR}/rygel\&.conf\&.
+.RE
+.SH "FILES"
+.PP
+/etc/rygel\&.conf
+.RS 4
+The system\-wide configuration file to control the behaviour of
+rygel\&. See
+\fBrygel.conf\fR(5)
+for further details\&.
+.RE
+.PP
+${XDG_CONFIG_DIR}/rygel\&.conf
+.RS 4
+The per\-user configuration file to control the behaviour of
+rygel\&. See
+\fBrygel.conf\fR(5)
+for further details\&.
+.RE
+.PP
+${XDG_CONFIG_DIR}/Rygel/*\&.xml
+.RS 4
+Cached UPnP device description files\&.
+.RE
+.SH "ENVIONMENT"
+.PP
+\fBRYGEL_DISABLE_UPNP\fR
+.RS 4
+Disable advertisement via UPnP and set
+rygel
+into streaming\-only mode\&.
+.RE
+.PP
+\fBRYGEL_IFACE\fR
+.RS 4
+Set the network interface to bind to\&.
+.RE
+.PP
+\fBRYGEL_PORT\fR
+.RS 4
+Define the network port to bind to\&.
+.RE
+.PP
+\fBRYGEL_DISABLE_TRANSCODING\fR
+.RS 4
+Disable transcoding globally\&.
+.RE
+.PP
+\fBRYGEL_DISABLE_MP3_TRANS\fR
+.RS 4
+Disable the MP3 transcoder\&.
+.RE
+.PP
+\fBRYGEL_DISABLE_LPCM_TRANS\fR
+.RS 4
+Disable the Linear PCM transcoder\&.
+.RE
+.PP
+\fBRYGEL_DISABLE_MP2TS_TRANS\fR
+.RS 4
+Disable the MPEG2 in TS transcoder\&.
+.RE
+.PP
+\fBRYGEL_DISABLE_WMV_TRANS\fR
+.RS 4
+Disable transcoding to WMV format\&.
+.RE
+.PP
+\fBRYGEL_DISABLE_AAC_TRANS\fR
+.RS 4
+Disable transcoding to AAC format\&.
+.RE
+.PP
+\fBRYGEL_DISABLE_AVC_TRANS\fR
+.RS 4
+Disable transcoding to AVC format\&.
+.RE
+.PP
+\fBRYGEL_LOG\fR
+.RS 4
+Set the log level of
+rygel\&.
+.RE
+.PP
+\fBRYGEL_PLUGIN_PATH\fR
+.RS 4
+Set the plugin search path of
+rygel\&.
+.RE
+.PP
+\fBRYGEL_DISABLE_UPLOAD\fR
+.RS 4
+Disable media file upload via UPnP\&.
+.RE
+.PP
+\fBRYGEL_DISABLE_DELETION\fR
+.RS 4
+Disable remote file deletion via UPnP\&.
+.RE
+.PP
+\fBRYGEL_PLUGIN_TIMEOUT\fR
+.RS 4
+Set the time\-out for finding the plugins\&. Useful to increase when running inside valgrind\&.
+.RE
+.PP
+Also for every plugin you can set the following environment variables:
+.PP
+.PP
+\fBRYGEL_PLUGIN_NAME_TITLE\fR
+.RS 4
+Set the title of the plugin\&.
+.RE
+.PP
+\fBRYGEL_PLUGIN_NAME_ENABLED\fR
+.RS 4
+Enable or disable the plugin\&.
+.RE
+.SH "BUGS"
+.PP
+The
+BTS
+can be found at
+\m[blue]\fB\%https://bugzilla.gnome.org/buglist.cgi?product=rygel\fR\m[]\&.
+.SH "SEE ALSO"
+.PP
+\fBrygel.conf\fR(5)
+.SH "AUTHOR"
+.PP
+\fBJens Georg\fR <\&mail@jensge\&.org\&>
+.RS 4
+Wrote this manpage\&.
+.RE

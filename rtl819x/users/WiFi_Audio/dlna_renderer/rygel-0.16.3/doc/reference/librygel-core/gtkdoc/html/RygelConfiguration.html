@@ -1,0 +1,817 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>RygelConfiguration</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="librygel-core Reference Manual">
+<link rel="up" href="ch01.html" title="librygel-core API Reference">
+<link rel="prev" href="RygelConnectionManager.html" title="RygelConnectionManager">
+<link rel="next" href="RygelLogHandler.html" title="RygelLogHandler">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="RygelConnectionManager.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">librygel-core Reference Manual</th>
+<td><a accesskey="n" href="RygelLogHandler.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#RygelConfiguration.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#RygelConfiguration.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#RygelConfiguration.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#RygelConfiguration.prerequisites" class="shortcut">Prerequisites</a>
+                   | 
+                  <a href="#RygelConfiguration.implementations" class="shortcut">Known Implementations</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="RygelConfiguration"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="RygelConfiguration.top_of_page"></a>RygelConfiguration</span></h2>
+<p>RygelConfiguration — Interface for dealing with Rygel configuration.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="RygelConfiguration.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">enum                <a class="link" href="RygelConfiguration.html#RygelConfigurationError" title="enum RygelConfigurationError">RygelConfigurationError</a>;
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="RygelConfiguration.html#rygel-configuration-get-upnp-enabled" title="rygel_configuration_get_upnp_enabled ()">rygel_configuration_get_upnp_enabled</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="RygelConfiguration.html#rygel-configuration-get-interface" title="rygel_configuration_get_interface ()">rygel_configuration_get_interface</a>   (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                <a class="link" href="RygelConfiguration.html#rygel-configuration-get-port" title="rygel_configuration_get_port ()">rygel_configuration_get_port</a>        (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="RygelConfiguration.html#rygel-configuration-get-transcoding" title="rygel_configuration_get_transcoding ()">rygel_configuration_get_transcoding</a> (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="RygelConfiguration.html#rygel-configuration-get-mp3-transcoder" title="rygel_configuration_get_mp3_transcoder ()">rygel_configuration_get_mp3_transcoder</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="RygelConfiguration.html#rygel-configuration-get-mp2ts-transcoder" title="rygel_configuration_get_mp2ts_transcoder ()">rygel_configuration_get_mp2ts_transcoder</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="RygelConfiguration.html#rygel-configuration-get-lpcm-transcoder" title="rygel_configuration_get_lpcm_transcoder ()">rygel_configuration_get_lpcm_transcoder</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="RygelConfiguration.html#rygel-configuration-get-wmv-transcoder" title="rygel_configuration_get_wmv_transcoder ()">rygel_configuration_get_wmv_transcoder</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="RygelConfiguration.html#rygel-configuration-get-aac-transcoder" title="rygel_configuration_get_aac_transcoder ()">rygel_configuration_get_aac_transcoder</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="RygelConfiguration.html#rygel-configuration-get-avc-transcoder" title="rygel_configuration_get_avc_transcoder ()">rygel_configuration_get_avc_transcoder</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="RygelConfiguration.html#rygel-configuration-get-allow-upload" title="rygel_configuration_get_allow_upload ()">rygel_configuration_get_allow_upload</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="RygelConfiguration.html#rygel-configuration-get-allow-deletion" title="rygel_configuration_get_allow_deletion ()">rygel_configuration_get_allow_deletion</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="RygelConfiguration.html#rygel-configuration-get-log-levels" title="rygel_configuration_get_log_levels ()">rygel_configuration_get_log_levels</a>  (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="RygelConfiguration.html#rygel-configuration-get-plugin-path" title="rygel_configuration_get_plugin_path ()">rygel_configuration_get_plugin_path</a> (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="RygelConfiguration.html#rygel-configuration-get-video-upload-folder" title="rygel_configuration_get_video_upload_folder ()">rygel_configuration_get_video_upload_folder</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="RygelConfiguration.html#rygel-configuration-get-music-upload-folder" title="rygel_configuration_get_music_upload_folder ()">rygel_configuration_get_music_upload_folder</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="RygelConfiguration.html#rygel-configuration-get-picture-upload-folder" title="rygel_configuration_get_picture_upload_folder ()">rygel_configuration_get_picture_upload_folder</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="RygelConfiguration.html#rygel-configuration-get-enabled" title="rygel_configuration_get_enabled ()">rygel_configuration_get_enabled</a>     (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *section</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="RygelConfiguration.html#rygel-configuration-get-title" title="rygel_configuration_get_title ()">rygel_configuration_get_title</a>       (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *section</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="RygelConfiguration.html#rygel-configuration-get-string" title="rygel_configuration_get_string ()">rygel_configuration_get_string</a>      (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *section</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *key</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">GeeArrayList</span> *      <a class="link" href="RygelConfiguration.html#rygel-configuration-get-string-list" title="rygel_configuration_get_string_list ()">rygel_configuration_get_string_list</a> (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *section</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *key</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                <a class="link" href="RygelConfiguration.html#rygel-configuration-get-int" title="rygel_configuration_get_int ()">rygel_configuration_get_int</a>         (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *section</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *key</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> min</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> max</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">GeeArrayList</span> *      <a class="link" href="RygelConfiguration.html#rygel-configuration-get-int-list" title="rygel_configuration_get_int_list ()">rygel_configuration_get_int_list</a>    (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *section</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *key</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="RygelConfiguration.html#rygel-configuration-get-bool" title="rygel_configuration_get_bool ()">rygel_configuration_get_bool</a>        (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *section</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *key</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+                    <a class="link" href="RygelConfiguration.html#RygelConfiguration-struct" title="RygelConfiguration">RygelConfiguration</a>;
+struct              <a class="link" href="RygelConfiguration.html#RygelConfigurationIface" title="struct RygelConfigurationIface">RygelConfigurationIface</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelConfiguration.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GInterface
+   +----RygelConfiguration
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelConfiguration.prerequisites"></a><h2>Prerequisites</h2>
+<p>
+RygelConfiguration requires
+ <a href="../gobject/gobject-The-Base-Object-Type.html#GObject">GObject</a>.</p>
+</div>
+<div class="refsect1">
+<a name="RygelConfiguration.implementations"></a><h2>Known Implementations</h2>
+<p>
+RygelConfiguration is implemented by
+ <a class="link" href="RygelCmdlineConfig.html" title="RygelCmdlineConfig">RygelCmdlineConfig</a>,  <a class="link" href="RygelMetaConfig.html" title="RygelMetaConfig">RygelMetaConfig</a> and  <a class="link" href="RygelUserConfig.html" title="RygelUserConfig">RygelUserConfig</a>.</p>
+</div>
+<div class="refsect1">
+<a name="RygelConfiguration.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="RygelConfiguration.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="RygelConfigurationError"></a><h3>enum RygelConfigurationError</h3>
+<pre class="programlisting">typedef enum {
+	RYGEL_CONFIGURATION_ERROR_NO_VALUE_SET,
+	RYGEL_CONFIGURATION_ERROR_VALUE_OUT_OF_RANGE
+} RygelConfigurationError;
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-configuration-get-upnp-enabled"></a><h3>rygel_configuration_get_upnp_enabled ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            rygel_configuration_get_upnp_enabled
+                                                        (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-configuration-get-interface"></a><h3>rygel_configuration_get_interface ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             rygel_configuration_get_interface   (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-configuration-get-port"></a><h3>rygel_configuration_get_port ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                rygel_configuration_get_port        (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-configuration-get-transcoding"></a><h3>rygel_configuration_get_transcoding ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            rygel_configuration_get_transcoding (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-configuration-get-mp3-transcoder"></a><h3>rygel_configuration_get_mp3_transcoder ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            rygel_configuration_get_mp3_transcoder
+                                                        (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-configuration-get-mp2ts-transcoder"></a><h3>rygel_configuration_get_mp2ts_transcoder ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            rygel_configuration_get_mp2ts_transcoder
+                                                        (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-configuration-get-lpcm-transcoder"></a><h3>rygel_configuration_get_lpcm_transcoder ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            rygel_configuration_get_lpcm_transcoder
+                                                        (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-configuration-get-wmv-transcoder"></a><h3>rygel_configuration_get_wmv_transcoder ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            rygel_configuration_get_wmv_transcoder
+                                                        (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-configuration-get-aac-transcoder"></a><h3>rygel_configuration_get_aac_transcoder ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            rygel_configuration_get_aac_transcoder
+                                                        (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-configuration-get-avc-transcoder"></a><h3>rygel_configuration_get_avc_transcoder ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            rygel_configuration_get_avc_transcoder
+                                                        (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-configuration-get-allow-upload"></a><h3>rygel_configuration_get_allow_upload ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            rygel_configuration_get_allow_upload
+                                                        (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-configuration-get-allow-deletion"></a><h3>rygel_configuration_get_allow_deletion ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            rygel_configuration_get_allow_deletion
+                                                        (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-configuration-get-log-levels"></a><h3>rygel_configuration_get_log_levels ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             rygel_configuration_get_log_levels  (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-configuration-get-plugin-path"></a><h3>rygel_configuration_get_plugin_path ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             rygel_configuration_get_plugin_path (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-configuration-get-video-upload-folder"></a><h3>rygel_configuration_get_video_upload_folder ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             rygel_configuration_get_video_upload_folder
+                                                        (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-configuration-get-music-upload-folder"></a><h3>rygel_configuration_get_music_upload_folder ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             rygel_configuration_get_music_upload_folder
+                                                        (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-configuration-get-picture-upload-folder"></a><h3>rygel_configuration_get_picture_upload_folder ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             rygel_configuration_get_picture_upload_folder
+                                                        (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-configuration-get-enabled"></a><h3>rygel_configuration_get_enabled ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            rygel_configuration_get_enabled     (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *section</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-configuration-get-title"></a><h3>rygel_configuration_get_title ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             rygel_configuration_get_title       (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *section</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-configuration-get-string"></a><h3>rygel_configuration_get_string ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             rygel_configuration_get_string      (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *section</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *key</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-configuration-get-string-list"></a><h3>rygel_configuration_get_string_list ()</h3>
+<pre class="programlisting"><span class="returnvalue">GeeArrayList</span> *      rygel_configuration_get_string_list (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *section</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *key</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-configuration-get-int"></a><h3>rygel_configuration_get_int ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                rygel_configuration_get_int         (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *section</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *key</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> min</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> max</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-configuration-get-int-list"></a><h3>rygel_configuration_get_int_list ()</h3>
+<pre class="programlisting"><span class="returnvalue">GeeArrayList</span> *      rygel_configuration_get_int_list    (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *section</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *key</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-configuration-get-bool"></a><h3>rygel_configuration_get_bool ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            rygel_configuration_get_bool        (<em class="parameter"><code><a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *section</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *key</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelConfiguration-struct"></a><h3>RygelConfiguration</h3>
+<pre class="programlisting">typedef struct _RygelConfiguration RygelConfiguration;</pre>
+<p>
+Interface for dealing with Rygel configuration.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelConfigurationIface"></a><h3>struct RygelConfigurationIface</h3>
+<pre class="programlisting">struct RygelConfigurationIface {
+	GTypeInterface parent_iface;
+	gboolean (*get_upnp_enabled) (RygelConfiguration* self, GError** error);
+	gchar* (*get_interface) (RygelConfiguration* self, GError** error);
+	gint (*get_port) (RygelConfiguration* self, GError** error);
+	gboolean (*get_transcoding) (RygelConfiguration* self, GError** error);
+	gboolean (*get_mp3_transcoder) (RygelConfiguration* self, GError** error);
+	gboolean (*get_mp2ts_transcoder) (RygelConfiguration* self, GError** error);
+	gboolean (*get_lpcm_transcoder) (RygelConfiguration* self, GError** error);
+	gboolean (*get_wmv_transcoder) (RygelConfiguration* self, GError** error);
+	gboolean (*get_aac_transcoder) (RygelConfiguration* self, GError** error);
+	gboolean (*get_avc_transcoder) (RygelConfiguration* self, GError** error);
+	gboolean (*get_allow_upload) (RygelConfiguration* self, GError** error);
+	gboolean (*get_allow_deletion) (RygelConfiguration* self, GError** error);
+	gchar* (*get_log_levels) (RygelConfiguration* self, GError** error);
+	gchar* (*get_plugin_path) (RygelConfiguration* self, GError** error);
+	gchar* (*get_video_upload_folder) (RygelConfiguration* self, GError** error);
+	gchar* (*get_music_upload_folder) (RygelConfiguration* self, GError** error);
+	gchar* (*get_picture_upload_folder) (RygelConfiguration* self, GError** error);
+	gboolean (*get_enabled) (RygelConfiguration* self, const gchar* section, GError** error);
+	gchar* (*get_title) (RygelConfiguration* self, const gchar* section, GError** error);
+	gchar* (*get_string) (RygelConfiguration* self, const gchar* section, const gchar* key, GError** error);
+	GeeArrayList* (*get_string_list) (RygelConfiguration* self, const gchar* section, const gchar* key, GError** error);
+	gint (*get_int) (RygelConfiguration* self, const gchar* section, const gchar* key, gint min, gint max, GError** error);
+	GeeArrayList* (*get_int_list) (RygelConfiguration* self, const gchar* section, const gchar* key, GError** error);
+	gboolean (*get_bool) (RygelConfiguration* self, const gchar* section, const gchar* key, GError** error);
+};
+</pre>
+<p>
+Interface for creating <a class="link" href="RygelConfiguration.html" title="RygelConfiguration"><span class="type">RygelConfiguration</span></a> implementations.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><a href="../gobject/gobject-Type-Information.html#GTypeInterface"><span class="type">GTypeInterface</span></a> <em class="structfield"><code><a name="RygelConfigurationIface.parent-iface"></a>parent_iface</code></em>;</span></p></td>
+<td>the parent interface structure</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelConfigurationIface.get-upnp-enabled"></a>get_upnp_enabled</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="RygelConfiguration.html#rygel-configuration-get-upnp-enabled" title="rygel_configuration_get_upnp_enabled ()"><code class="function"><a class="link" href="RygelConfiguration.html#rygel-configuration-get-upnp-enabled" title="rygel_configuration_get_upnp_enabled ()"><code class="function">rygel_configuration_get_upnp_enabled()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelConfigurationIface.get-interface"></a>get_interface</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="RygelConfiguration.html#rygel-configuration-get-interface" title="rygel_configuration_get_interface ()"><code class="function"><a class="link" href="RygelConfiguration.html#rygel-configuration-get-interface" title="rygel_configuration_get_interface ()"><code class="function">rygel_configuration_get_interface()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelConfigurationIface.get-port"></a>get_port</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="RygelConfiguration.html#rygel-configuration-get-port" title="rygel_configuration_get_port ()"><code class="function"><a class="link" href="RygelConfiguration.html#rygel-configuration-get-port" title="rygel_configuration_get_port ()"><code class="function">rygel_configuration_get_port()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelConfigurationIface.get-transcoding"></a>get_transcoding</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="RygelConfiguration.html#rygel-configuration-get-transcoding" title="rygel_configuration_get_transcoding ()"><code class="function"><a class="link" href="RygelConfiguration.html#rygel-configuration-get-transcoding" title="rygel_configuration_get_transcoding ()"><code class="function">rygel_configuration_get_transcoding()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelConfigurationIface.get-mp3-transcoder"></a>get_mp3_transcoder</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="RygelConfiguration.html#rygel-configuration-get-mp3-transcoder" title="rygel_configuration_get_mp3_transcoder ()"><code class="function"><a class="link" href="RygelConfiguration.html#rygel-configuration-get-mp3-transcoder" title="rygel_configuration_get_mp3_transcoder ()"><code class="function">rygel_configuration_get_mp3_transcoder()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelConfigurationIface.get-mp2ts-transcoder"></a>get_mp2ts_transcoder</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="RygelConfiguration.html#rygel-configuration-get-mp2ts-transcoder" title="rygel_configuration_get_mp2ts_transcoder ()"><code class="function"><a class="link" href="RygelConfiguration.html#rygel-configuration-get-mp2ts-transcoder" title="rygel_configuration_get_mp2ts_transcoder ()"><code class="function">rygel_configuration_get_mp2ts_transcoder()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelConfigurationIface.get-lpcm-transcoder"></a>get_lpcm_transcoder</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="RygelConfiguration.html#rygel-configuration-get-lpcm-transcoder" title="rygel_configuration_get_lpcm_transcoder ()"><code class="function"><a class="link" href="RygelConfiguration.html#rygel-configuration-get-lpcm-transcoder" title="rygel_configuration_get_lpcm_transcoder ()"><code class="function">rygel_configuration_get_lpcm_transcoder()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelConfigurationIface.get-wmv-transcoder"></a>get_wmv_transcoder</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="RygelConfiguration.html#rygel-configuration-get-wmv-transcoder" title="rygel_configuration_get_wmv_transcoder ()"><code class="function"><a class="link" href="RygelConfiguration.html#rygel-configuration-get-wmv-transcoder" title="rygel_configuration_get_wmv_transcoder ()"><code class="function">rygel_configuration_get_wmv_transcoder()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelConfigurationIface.get-aac-transcoder"></a>get_aac_transcoder</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="RygelConfiguration.html#rygel-configuration-get-aac-transcoder" title="rygel_configuration_get_aac_transcoder ()"><code class="function"><a class="link" href="RygelConfiguration.html#rygel-configuration-get-aac-transcoder" title="rygel_configuration_get_aac_transcoder ()"><code class="function">rygel_configuration_get_aac_transcoder()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelConfigurationIface.get-avc-transcoder"></a>get_avc_transcoder</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="RygelConfiguration.html#rygel-configuration-get-avc-transcoder" title="rygel_configuration_get_avc_transcoder ()"><code class="function"><a class="link" href="RygelConfiguration.html#rygel-configuration-get-avc-transcoder" title="rygel_configuration_get_avc_transcoder ()"><code class="function">rygel_configuration_get_avc_transcoder()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelConfigurationIface.get-allow-upload"></a>get_allow_upload</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="RygelConfiguration.html#rygel-configuration-get-allow-upload" title="rygel_configuration_get_allow_upload ()"><code class="function"><a class="link" href="RygelConfiguration.html#rygel-configuration-get-allow-upload" title="rygel_configuration_get_allow_upload ()"><code class="function">rygel_configuration_get_allow_upload()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelConfigurationIface.get-allow-deletion"></a>get_allow_deletion</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="RygelConfiguration.html#rygel-configuration-get-allow-deletion" title="rygel_configuration_get_allow_deletion ()"><code class="function"><a class="link" href="RygelConfiguration.html#rygel-configuration-get-allow-deletion" title="rygel_configuration_get_allow_deletion ()"><code class="function">rygel_configuration_get_allow_deletion()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelConfigurationIface.get-log-levels"></a>get_log_levels</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="RygelConfiguration.html#rygel-configuration-get-log-levels" title="rygel_configuration_get_log_levels ()"><code class="function"><a class="link" href="RygelConfiguration.html#rygel-configuration-get-log-levels" title="rygel_configuration_get_log_levels ()"><code class="function">rygel_configuration_get_log_levels()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelConfigurationIface.get-plugin-path"></a>get_plugin_path</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="RygelConfiguration.html#rygel-configuration-get-plugin-path" title="rygel_configuration_get_plugin_path ()"><code class="function"><a class="link" href="RygelConfiguration.html#rygel-configuration-get-plugin-path" title="rygel_configuration_get_plugin_path ()"><code class="function">rygel_configuration_get_plugin_path()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelConfigurationIface.get-video-upload-folder"></a>get_video_upload_folder</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="RygelConfiguration.html#rygel-configuration-get-video-upload-folder" title="rygel_configuration_get_video_upload_folder ()"><code class="function"><a class="link" href="RygelConfiguration.html#rygel-configuration-get-video-upload-folder" title="rygel_configuration_get_video_upload_folder ()"><code class="function">rygel_configuration_get_video_upload_folder()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelConfigurationIface.get-music-upload-folder"></a>get_music_upload_folder</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="RygelConfiguration.html#rygel-configuration-get-music-upload-folder" title="rygel_configuration_get_music_upload_folder ()"><code class="function"><a class="link" href="RygelConfiguration.html#rygel-configuration-get-music-upload-folder" title="rygel_configuration_get_music_upload_folder ()"><code class="function">rygel_configuration_get_music_upload_folder()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelConfigurationIface.get-picture-upload-folder"></a>get_picture_upload_folder</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="RygelConfiguration.html#rygel-configuration-get-picture-upload-folder" title="rygel_configuration_get_picture_upload_folder ()"><code class="function"><a class="link" href="RygelConfiguration.html#rygel-configuration-get-picture-upload-folder" title="rygel_configuration_get_picture_upload_folder ()"><code class="function">rygel_configuration_get_picture_upload_folder()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelConfigurationIface.get-enabled"></a>get_enabled</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="RygelConfiguration.html#rygel-configuration-get-enabled" title="rygel_configuration_get_enabled ()"><code class="function"><a class="link" href="RygelConfiguration.html#rygel-configuration-get-enabled" title="rygel_configuration_get_enabled ()"><code class="function">rygel_configuration_get_enabled()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelConfigurationIface.get-title"></a>get_title</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="RygelConfiguration.html#rygel-configuration-get-title" title="rygel_configuration_get_title ()"><code class="function"><a class="link" href="RygelConfiguration.html#rygel-configuration-get-title" title="rygel_configuration_get_title ()"><code class="function">rygel_configuration_get_title()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelConfigurationIface.get-string"></a>get_string</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="RygelConfiguration.html#rygel-configuration-get-string" title="rygel_configuration_get_string ()"><code class="function"><a class="link" href="RygelConfiguration.html#rygel-configuration-get-string" title="rygel_configuration_get_string ()"><code class="function">rygel_configuration_get_string()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelConfigurationIface.get-string-list"></a>get_string_list</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="RygelConfiguration.html#rygel-configuration-get-string-list" title="rygel_configuration_get_string_list ()"><code class="function"><a class="link" href="RygelConfiguration.html#rygel-configuration-get-string-list" title="rygel_configuration_get_string_list ()"><code class="function">rygel_configuration_get_string_list()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelConfigurationIface.get-int"></a>get_int</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="RygelConfiguration.html#rygel-configuration-get-int" title="rygel_configuration_get_int ()"><code class="function"><a class="link" href="RygelConfiguration.html#rygel-configuration-get-int" title="rygel_configuration_get_int ()"><code class="function">rygel_configuration_get_int()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelConfigurationIface.get-int-list"></a>get_int_list</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="RygelConfiguration.html#rygel-configuration-get-int-list" title="rygel_configuration_get_int_list ()"><code class="function"><a class="link" href="RygelConfiguration.html#rygel-configuration-get-int-list" title="rygel_configuration_get_int_list ()"><code class="function">rygel_configuration_get_int_list()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelConfigurationIface.get-bool"></a>get_bool</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="RygelConfiguration.html#rygel-configuration-get-bool" title="rygel_configuration_get_bool ()"><code class="function"><a class="link" href="RygelConfiguration.html#rygel-configuration-get-bool" title="rygel_configuration_get_bool ()"><code class="function">rygel_configuration_get_bool()</code></a></code></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

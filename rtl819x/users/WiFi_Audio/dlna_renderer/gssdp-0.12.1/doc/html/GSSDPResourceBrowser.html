@@ -1,0 +1,390 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GSSDPResourceBrowser</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GSSDP Reference Manual">
+<link rel="up" href="ch01.html" title="GSSDP">
+<link rel="prev" href="GSSDPClient.html" title="GSSDPClient">
+<link rel="next" href="GSSDPResourceGroup.html" title="GSSDPResourceGroup">
+<meta name="generator" content="GTK-Doc V1.17.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GSSDPClient.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GSSDP Reference Manual</th>
+<td><a accesskey="n" href="GSSDPResourceGroup.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GSSDPResourceBrowser.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#GSSDPResourceBrowser.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#GSSDPResourceBrowser.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#GSSDPResourceBrowser.properties" class="shortcut">Properties</a>
+                   | 
+                  <a href="#GSSDPResourceBrowser.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="GSSDPResourceBrowser"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GSSDPResourceBrowser.top_of_page"></a>GSSDPResourceBrowser</span></h2>
+<p>GSSDPResourceBrowser — Class handling resource discovery.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="GSSDPResourceBrowser.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="GSSDPResourceBrowser.html#GSSDPResourceBrowser-struct" title="struct GSSDPResourceBrowser">GSSDPResourceBrowser</a>;
+#define             <a class="link" href="GSSDPResourceBrowser.html#GSSDP-ALL-RESOURCES:CAPS" title="GSSDP_ALL_RESOURCES">GSSDP_ALL_RESOURCES</a>
+<a class="link" href="GSSDPResourceBrowser.html" title="GSSDPResourceBrowser"><span class="returnvalue">GSSDPResourceBrowser</span></a> * <a class="link" href="GSSDPResourceBrowser.html#gssdp-resource-browser-new" title="gssdp_resource_browser_new ()">gssdp_resource_browser_new</a>       (<em class="parameter"><code><a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a> *client</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *target</code></em>);
+<a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="returnvalue">GSSDPClient</span></a> *       <a class="link" href="GSSDPResourceBrowser.html#gssdp-resource-browser-get-client" title="gssdp_resource_browser_get_client ()">gssdp_resource_browser_get_client</a>   (<em class="parameter"><code><a class="link" href="GSSDPResourceBrowser.html" title="GSSDPResourceBrowser"><span class="type">GSSDPResourceBrowser</span></a> *resource_browser</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="GSSDPResourceBrowser.html#gssdp-resource-browser-set-target" title="gssdp_resource_browser_set_target ()">gssdp_resource_browser_set_target</a>   (<em class="parameter"><code><a class="link" href="GSSDPResourceBrowser.html" title="GSSDPResourceBrowser"><span class="type">GSSDPResourceBrowser</span></a> *resource_browser</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *target</code></em>);
+const <span class="returnvalue">char</span> *        <a class="link" href="GSSDPResourceBrowser.html#gssdp-resource-browser-get-target" title="gssdp_resource_browser_get_target ()">gssdp_resource_browser_get_target</a>   (<em class="parameter"><code><a class="link" href="GSSDPResourceBrowser.html" title="GSSDPResourceBrowser"><span class="type">GSSDPResourceBrowser</span></a> *resource_browser</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="GSSDPResourceBrowser.html#gssdp-resource-browser-set-mx" title="gssdp_resource_browser_set_mx ()">gssdp_resource_browser_set_mx</a>       (<em class="parameter"><code><a class="link" href="GSSDPResourceBrowser.html" title="GSSDPResourceBrowser"><span class="type">GSSDPResourceBrowser</span></a> *resource_browser</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gushort"><span class="type">gushort</span></a> mx</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gushort"><span class="returnvalue">gushort</span></a>             <a class="link" href="GSSDPResourceBrowser.html#gssdp-resource-browser-get-mx" title="gssdp_resource_browser_get_mx ()">gssdp_resource_browser_get_mx</a>       (<em class="parameter"><code><a class="link" href="GSSDPResourceBrowser.html" title="GSSDPResourceBrowser"><span class="type">GSSDPResourceBrowser</span></a> *resource_browser</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="GSSDPResourceBrowser.html#gssdp-resource-browser-set-active" title="gssdp_resource_browser_set_active ()">gssdp_resource_browser_set_active</a>   (<em class="parameter"><code><a class="link" href="GSSDPResourceBrowser.html" title="GSSDPResourceBrowser"><span class="type">GSSDPResourceBrowser</span></a> *resource_browser</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> active</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="GSSDPResourceBrowser.html#gssdp-resource-browser-get-active" title="gssdp_resource_browser_get_active ()">gssdp_resource_browser_get_active</a>   (<em class="parameter"><code><a class="link" href="GSSDPResourceBrowser.html" title="GSSDPResourceBrowser"><span class="type">GSSDPResourceBrowser</span></a> *resource_browser</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSSDPResourceBrowser.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----GSSDPResourceBrowser
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSSDPResourceBrowser.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="GSSDPResourceBrowser.html#GSSDPResourceBrowser--active" title='The "active" property'>active</a>"                   <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="GSSDPResourceBrowser.html#GSSDPResourceBrowser--client" title='The "client" property'>client</a>"                   <a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a>*          : Read / Write / Construct Only
+  "<a class="link" href="GSSDPResourceBrowser.html#GSSDPResourceBrowser--mx" title='The "mx" property'>mx</a>"                       <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read / Write
+  "<a class="link" href="GSSDPResourceBrowser.html#GSSDPResourceBrowser--target" title='The "target" property'>target</a>"                   <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSSDPResourceBrowser.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="GSSDPResourceBrowser.html#GSSDPResourceBrowser-resource-available" title='The "resource-available" signal'>resource-available</a>"                             : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
+  "<a class="link" href="GSSDPResourceBrowser.html#GSSDPResourceBrowser-resource-unavailable" title='The "resource-unavailable" signal'>resource-unavailable</a>"                           : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSSDPResourceBrowser.description"></a><h2>Description</h2>
+<p>
+<a class="link" href="GSSDPResourceBrowser.html" title="GSSDPResourceBrowser"><span class="type">GSSDPResourceBrowser</span></a> handles resource discovery. After creating a browser
+and activating it, the ::resource-available and ::resource-unavailable
+signals will be emitted whenever the availability of a resource matching the
+specified discovery target changes. A discovery request is sent out
+automatically when activating the browser.
+</p>
+</div>
+<div class="refsect1">
+<a name="GSSDPResourceBrowser.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GSSDPResourceBrowser-struct"></a><h3>struct GSSDPResourceBrowser</h3>
+<pre class="programlisting">struct GSSDPResourceBrowser;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GSSDP-ALL-RESOURCES:CAPS"></a><h3>GSSDP_ALL_RESOURCES</h3>
+<pre class="programlisting">#define GSSDP_ALL_RESOURCES "ssdp:all"
+</pre>
+<p>
+SSDP search target for finding all possible resources.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gssdp-resource-browser-new"></a><h3>gssdp_resource_browser_new ()</h3>
+<pre class="programlisting"><a class="link" href="GSSDPResourceBrowser.html" title="GSSDPResourceBrowser"><span class="returnvalue">GSSDPResourceBrowser</span></a> * gssdp_resource_browser_new       (<em class="parameter"><code><a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a> *client</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *target</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>client</code></em> :</span></p></td>
+<td>The <a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a> to associate with</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A new <a class="link" href="GSSDPResourceBrowser.html" title="GSSDPResourceBrowser"><span class="type">GSSDPResourceBrowser</span></a> object.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gssdp-resource-browser-get-client"></a><h3>gssdp_resource_browser_get_client ()</h3>
+<pre class="programlisting"><a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="returnvalue">GSSDPClient</span></a> *       gssdp_resource_browser_get_client   (<em class="parameter"><code><a class="link" href="GSSDPResourceBrowser.html" title="GSSDPResourceBrowser"><span class="type">GSSDPResourceBrowser</span></a> *resource_browser</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>resource_browser</code></em> :</span></p></td>
+<td>A <a class="link" href="GSSDPResourceBrowser.html" title="GSSDPResourceBrowser"><span class="type">GSSDPResourceBrowser</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The <a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a> <em class="parameter"><code>resource_browser</code></em> is associated with. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gssdp-resource-browser-set-target"></a><h3>gssdp_resource_browser_set_target ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gssdp_resource_browser_set_target   (<em class="parameter"><code><a class="link" href="GSSDPResourceBrowser.html" title="GSSDPResourceBrowser"><span class="type">GSSDPResourceBrowser</span></a> *resource_browser</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *target</code></em>);</pre>
+<p>
+Sets the browser target of <em class="parameter"><code>resource_browser</code></em> to <em class="parameter"><code>target</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>resource_browser</code></em> :</span></p></td>
+<td>A <a class="link" href="GSSDPResourceBrowser.html" title="GSSDPResourceBrowser"><span class="type">GSSDPResourceBrowser</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>target</code></em> :</span></p></td>
+<td>The browser target</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gssdp-resource-browser-get-target"></a><h3>gssdp_resource_browser_get_target ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *        gssdp_resource_browser_get_target   (<em class="parameter"><code><a class="link" href="GSSDPResourceBrowser.html" title="GSSDPResourceBrowser"><span class="type">GSSDPResourceBrowser</span></a> *resource_browser</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>resource_browser</code></em> :</span></p></td>
+<td>A <a class="link" href="GSSDPResourceBrowser.html" title="GSSDPResourceBrowser"><span class="type">GSSDPResourceBrowser</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The browser target.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gssdp-resource-browser-set-mx"></a><h3>gssdp_resource_browser_set_mx ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gssdp_resource_browser_set_mx       (<em class="parameter"><code><a class="link" href="GSSDPResourceBrowser.html" title="GSSDPResourceBrowser"><span class="type">GSSDPResourceBrowser</span></a> *resource_browser</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gushort"><span class="type">gushort</span></a> mx</code></em>);</pre>
+<p>
+Sets the used MX value of <em class="parameter"><code>resource_browser</code></em> to <em class="parameter"><code>mx</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>resource_browser</code></em> :</span></p></td>
+<td>A <a class="link" href="GSSDPResourceBrowser.html" title="GSSDPResourceBrowser"><span class="type">GSSDPResourceBrowser</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>mx</code></em> :</span></p></td>
+<td>The to be used MX value</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gssdp-resource-browser-get-mx"></a><h3>gssdp_resource_browser_get_mx ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gushort"><span class="returnvalue">gushort</span></a>             gssdp_resource_browser_get_mx       (<em class="parameter"><code><a class="link" href="GSSDPResourceBrowser.html" title="GSSDPResourceBrowser"><span class="type">GSSDPResourceBrowser</span></a> *resource_browser</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>resource_browser</code></em> :</span></p></td>
+<td>A <a class="link" href="GSSDPResourceBrowser.html" title="GSSDPResourceBrowser"><span class="type">GSSDPResourceBrowser</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The used MX value.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gssdp-resource-browser-set-active"></a><h3>gssdp_resource_browser_set_active ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gssdp_resource_browser_set_active   (<em class="parameter"><code><a class="link" href="GSSDPResourceBrowser.html" title="GSSDPResourceBrowser"><span class="type">GSSDPResourceBrowser</span></a> *resource_browser</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> active</code></em>);</pre>
+<p>
+(De)activates <em class="parameter"><code>resource_browser</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>resource_browser</code></em> :</span></p></td>
+<td>A <a class="link" href="GSSDPResourceBrowser.html" title="GSSDPResourceBrowser"><span class="type">GSSDPResourceBrowser</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>active</code></em> :</span></p></td>
+<td>TRUE to activate <em class="parameter"><code>resource_browser</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gssdp-resource-browser-get-active"></a><h3>gssdp_resource_browser_get_active ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gssdp_resource_browser_get_active   (<em class="parameter"><code><a class="link" href="GSSDPResourceBrowser.html" title="GSSDPResourceBrowser"><span class="type">GSSDPResourceBrowser</span></a> *resource_browser</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>resource_browser</code></em> :</span></p></td>
+<td>A <a class="link" href="GSSDPResourceBrowser.html" title="GSSDPResourceBrowser"><span class="type">GSSDPResourceBrowser</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>TRUE if <em class="parameter"><code>resource_browser</code></em> is active.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="GSSDPResourceBrowser.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="GSSDPResourceBrowser--active"></a><h3>The <code class="literal">"active"</code> property</h3>
+<pre class="programlisting">  "active"                   <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>
+Whether this browser is active or not.
+</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GSSDPResourceBrowser--client"></a><h3>The <code class="literal">"client"</code> property</h3>
+<pre class="programlisting">  "client"                   <a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a>*          : Read / Write / Construct Only</pre>
+<p>
+The <a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a> to use.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GSSDPResourceBrowser--mx"></a><h3>The <code class="literal">"mx"</code> property</h3>
+<pre class="programlisting">  "mx"                       <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read / Write</pre>
+<p>
+The maximum number of seconds in which to request other parties
+to respond.
+</p>
+<p>Allowed values: [1,65535]</p>
+<p>Default value: 3</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GSSDPResourceBrowser--target"></a><h3>The <code class="literal">"target"</code> property</h3>
+<pre class="programlisting">  "target"                   <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>
+The discovery target.
+</p>
+<p>Default value: NULL</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="GSSDPResourceBrowser.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="GSSDPResourceBrowser-resource-available"></a><h3>The <code class="literal">"resource-available"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="GSSDPResourceBrowser.html" title="GSSDPResourceBrowser"><span class="type">GSSDPResourceBrowser</span></a> *resource_browser,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>                *usn,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>              locations,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>              user_data)             : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a></pre>
+<p>
+The ::resource-available signal is emitted whenever a new resource
+has become available.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>resource_browser</code></em> :</span></p></td>
+<td>The <a class="link" href="GSSDPResourceBrowser.html" title="GSSDPResourceBrowser"><span class="type">GSSDPResourceBrowser</span></a> that received the
+signal</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>usn</code></em> :</span></p></td>
+<td>The USN of the discovered resource</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>locations</code></em> :</span></p></td>
+<td>A <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> of strings describing the locations of the
+discovered resource. <span class="annotation">[<acronym title="Override the parsed C type with given type"><span class="acronym">type</span></acronym> GList*][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> utf8]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GSSDPResourceBrowser-resource-unavailable"></a><h3>The <code class="literal">"resource-unavailable"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="GSSDPResourceBrowser.html" title="GSSDPResourceBrowser"><span class="type">GSSDPResourceBrowser</span></a> *resource_browser,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>                *usn,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>              user_data)             : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a></pre>
+<p>
+The ::resource-unavailable signal is emitted whenever a resource
+is not available any more.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>resource_browser</code></em> :</span></p></td>
+<td>The <a class="link" href="GSSDPResourceBrowser.html" title="GSSDPResourceBrowser"><span class="type">GSSDPResourceBrowser</span></a> that received the
+signal</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>usn</code></em> :</span></p></td>
+<td>The USN of the resource</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17.1</div>
+</body>
+</html>

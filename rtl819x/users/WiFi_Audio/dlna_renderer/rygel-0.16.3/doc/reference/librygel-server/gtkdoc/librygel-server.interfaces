@@ -1,0 +1,9 @@
+RygelVideoItem RygelVisualItem
+RygelImageItem RygelVisualItem
+RygelPhotoItem RygelVisualItem
+RygelSimpleContainer RygelSearchableContainer
+RygelHTTPServer RygelStateMachine
+GeeAbstractCollection GeeIterable GeeCollection
+GeeAbstractList GeeIterable GeeCollection GeeList
+GeeArrayList GeeIterable GeeCollection GeeList
+RygelMediaObjects GeeIterable GeeCollection GeeList

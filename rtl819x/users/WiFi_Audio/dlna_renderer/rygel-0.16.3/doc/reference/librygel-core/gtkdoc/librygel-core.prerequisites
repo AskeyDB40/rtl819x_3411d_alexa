@@ -1,0 +1,11 @@
+FreeDesktopDBusObject GObject
+GDBusInterface GObject
+GInitable GObject
+GAsyncInitable GObject
+FreeDesktopProperties GObject
+RygelConfiguration GObject
+RygelDBusInterface GObject
+RygelStateMachine GObject
+GeeIterable GObject
+GeeCollection GeeIterable GObject
+GeeList GeeCollection GeeIterable GObject

@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>RygelMediaServer</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="librygel-server Reference Manual">
+<link rel="up" href="ch01.html" title="librygel-server API Reference">
+<link rel="prev" href="RygelRelationalExpression.html" title="RygelRelationalExpression">
+<link rel="next" href="RygelMediaArtStore.html" title="RygelMediaArtStore">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="RygelRelationalExpression.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">librygel-server Reference Manual</th>
+<td><a accesskey="n" href="RygelMediaArtStore.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#RygelMediaServer.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#RygelMediaServer.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#RygelMediaServer.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="RygelMediaServer"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="RygelMediaServer.top_of_page"></a>RygelMediaServer</span></h2>
+<p>RygelMediaServer — This class may be used to implement in-process UPnP-AV media servers.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="RygelMediaServer.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">#define             <a class="link" href="RygelMediaServer.html#RYGEL-TYPE-MEDIA-SERVER:CAPS" title="RYGEL_TYPE_MEDIA_SERVER">RYGEL_TYPE_MEDIA_SERVER</a>
+<a class="link" href="RygelMediaServer.html" title="RygelMediaServer"><span class="returnvalue">RygelMediaServer</span></a> *  <a class="link" href="RygelMediaServer.html#rygel-media-server-new" title="rygel_media_server_new ()">rygel_media_server_new</a>              (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *title</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="RygelMediaContainer.html" title="RygelMediaContainer"><span class="type">RygelMediaContainer</span></a> *root_container</code></em>);
+struct              <a class="link" href="RygelMediaServer.html#RygelMediaServer-struct" title="struct RygelMediaServer">RygelMediaServer</a>;
+struct              <a class="link" href="RygelMediaServer.html#RygelMediaServerClass" title="struct RygelMediaServerClass">RygelMediaServerClass</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelMediaServer.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="../gobject/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----RygelMediaDevice
+         +----RygelMediaServer
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelMediaServer.description"></a><h2>Description</h2>
+<p>
+</p>
+<p>Call <code class="function">rygel_media_device_add_interface()</code> on the RygelMediaServer to allow it to serve media via that network interface.</p>
+<p>See the standalone-server.c example.</p>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="RygelMediaServer.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="RYGEL-TYPE-MEDIA-SERVER:CAPS"></a><h3>RYGEL_TYPE_MEDIA_SERVER</h3>
+<pre class="programlisting">#define RYGEL_TYPE_MEDIA_SERVER (rygel_media_server_get_type ())
+</pre>
+<p>
+The type for <a class="link" href="RygelMediaServer.html" title="RygelMediaServer"><span class="type">RygelMediaServer</span></a>.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-media-server-new"></a><h3>rygel_media_server_new ()</h3>
+<pre class="programlisting"><a class="link" href="RygelMediaServer.html" title="RygelMediaServer"><span class="returnvalue">RygelMediaServer</span></a> *  rygel_media_server_new              (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *title</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="RygelMediaContainer.html" title="RygelMediaContainer"><span class="type">RygelMediaContainer</span></a> *root_container</code></em>);</pre>
+<p>
+Create a MediaServer to serve the media in the RygelMediaContainer. For instance, you might use a RygelSimpleContainer. Alternatively, you might use your own RygelMediaContainer implementation.
+</p>
+<p>
+</p>
+<p>Assuming that the RygelMediaContainer is correctly implemented, the RygelMediaServer will respond appropriately to changes in the RygelMediaContainer.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelMediaServer-struct"></a><h3>struct RygelMediaServer</h3>
+<pre class="programlisting">struct RygelMediaServer;</pre>
+<p>
+This class may be used to implement in-process UPnP-AV media servers.
+</p>
+<p>
+</p>
+<p>Call <code class="function">rygel_media_device_add_interface()</code> on the RygelMediaServer to allow it to serve media via that network interface.</p>
+<p>See the standalone-server.c example.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelMediaServerClass"></a><h3>struct RygelMediaServerClass</h3>
+<pre class="programlisting">struct RygelMediaServerClass {
+	RygelMediaDeviceClass parent_class;
+};
+</pre>
+<p>
+The class structure for <a class="link" href="RygelMediaServer.html#RYGEL-TYPE-MEDIA-SERVER:CAPS" title="RYGEL_TYPE_MEDIA_SERVER"><code class="literal">RYGEL_TYPE_MEDIA_SERVER</code></a>. All the fields in this structure are private and should never be accessed directly.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="type">RygelMediaDeviceClass</span> <em class="structfield"><code><a name="RygelMediaServerClass.parent-class"></a>parent_class</code></em>;</span></p></td>
+<td>the parent class structure</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

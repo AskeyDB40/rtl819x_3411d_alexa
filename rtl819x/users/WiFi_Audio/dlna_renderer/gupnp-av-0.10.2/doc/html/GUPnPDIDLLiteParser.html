@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GUPnPDIDLLiteParser</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GUPnP A/V Reference Manual">
+<link rel="up" href="ch01.html" title="GUPnP A/V">
+<link rel="prev" href="ch01.html" title="GUPnP A/V">
+<link rel="next" href="GUPnPDIDLLiteObject.html" title="GUPnPDIDLLiteObject">
+<meta name="generator" content="GTK-Doc V1.17.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ch01.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GUPnP A/V Reference Manual</th>
+<td><a accesskey="n" href="GUPnPDIDLLiteObject.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GUPnPDIDLLiteParser.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#GUPnPDIDLLiteParser.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#GUPnPDIDLLiteParser.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#GUPnPDIDLLiteParser.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="GUPnPDIDLLiteParser"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GUPnPDIDLLiteParser.top_of_page"></a>GUPnPDIDLLiteParser</span></h2>
+<p>GUPnPDIDLLiteParser — A/V DIDL-Lite XML parser</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="GUPnPDIDLLiteParser.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">                    <a class="link" href="GUPnPDIDLLiteParser.html#GUPnPDIDLLiteParser-struct" title="GUPnPDIDLLiteParser">GUPnPDIDLLiteParser</a>;
+<a class="link" href="GUPnPDIDLLiteParser.html" title="GUPnPDIDLLiteParser"><span class="returnvalue">GUPnPDIDLLiteParser</span></a> * <a class="link" href="GUPnPDIDLLiteParser.html#gupnp-didl-lite-parser-new" title="gupnp_didl_lite_parser_new ()">gupnp_didl_lite_parser_new</a>        (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="GUPnPDIDLLiteParser.html#gupnp-didl-lite-parser-parse-didl" title="gupnp_didl_lite_parser_parse_didl ()">gupnp_didl_lite_parser_parse_didl</a>   (<em class="parameter"><code><a class="link" href="GUPnPDIDLLiteParser.html" title="GUPnPDIDLLiteParser"><span class="type">GUPnPDIDLLiteParser</span></a> *parser</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *didl</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="GUPnPDIDLLiteParser.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----GUPnPDIDLLiteParser
+</pre>
+</div>
+<div class="refsect1">
+<a name="GUPnPDIDLLiteParser.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="GUPnPDIDLLiteParser.html#GUPnPDIDLLiteParser-container-available" title='The "container-available" signal'>container-available</a>"                            : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
+  "<a class="link" href="GUPnPDIDLLiteParser.html#GUPnPDIDLLiteParser-item-available" title='The "item-available" signal'>item-available</a>"                                 : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
+  "<a class="link" href="GUPnPDIDLLiteParser.html#GUPnPDIDLLiteParser-object-available" title='The "object-available" signal'>object-available</a>"                               : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="GUPnPDIDLLiteParser.description"></a><h2>Description</h2>
+<p>
+<a class="link" href="GUPnPDIDLLiteParser.html" title="GUPnPDIDLLiteParser"><span class="type">GUPnPDIDLLiteParser</span></a> parses DIDL-Lite XML strings.
+</p>
+</div>
+<div class="refsect1">
+<a name="GUPnPDIDLLiteParser.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GUPnPDIDLLiteParser-struct"></a><h3>GUPnPDIDLLiteParser</h3>
+<pre class="programlisting">typedef struct _GUPnPDIDLLiteParser GUPnPDIDLLiteParser;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-didl-lite-parser-new"></a><h3>gupnp_didl_lite_parser_new ()</h3>
+<pre class="programlisting"><a class="link" href="GUPnPDIDLLiteParser.html" title="GUPnPDIDLLiteParser"><span class="returnvalue">GUPnPDIDLLiteParser</span></a> * gupnp_didl_lite_parser_new        (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A new <a class="link" href="GUPnPDIDLLiteParser.html" title="GUPnPDIDLLiteParser"><span class="type">GUPnPDIDLLiteParser</span></a> object.</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gupnp-didl-lite-parser-parse-didl"></a><h3>gupnp_didl_lite_parser_parse_didl ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gupnp_didl_lite_parser_parse_didl   (<em class="parameter"><code><a class="link" href="GUPnPDIDLLiteParser.html" title="GUPnPDIDLLiteParser"><span class="type">GUPnPDIDLLiteParser</span></a> *parser</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *didl</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Parses DIDL-Lite XML string <em class="parameter"><code>didl</code></em>, emitting the ::object-available,
+::item-available and ::container-available signals appropriately during the
+process.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>parser</code></em> :</span></p></td>
+<td>A <a class="link" href="GUPnPDIDLLiteParser.html" title="GUPnPDIDLLiteParser"><span class="type">GUPnPDIDLLiteParser</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>didl</code></em> :</span></p></td>
+<td>The DIDL-Lite XML string to be parsed</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>The location where to store any error, or NULL</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>TRUE on success.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="GUPnPDIDLLiteParser.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="GUPnPDIDLLiteParser-container-available"></a><h3>The <code class="literal">"container-available"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="GUPnPDIDLLiteParser.html" title="GUPnPDIDLLiteParser"><span class="type">GUPnPDIDLLiteParser</span></a>    *parser,
+                                                        <a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a> *container,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>                user_data)      : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a></pre>
+<p>
+The ::container-available signal is emitted each time a container is
+found in the DIDL-Lite XML being parsed.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>parser</code></em> :</span></p></td>
+<td>The <a class="link" href="GUPnPDIDLLiteParser.html" title="GUPnPDIDLLiteParser"><span class="type">GUPnPDIDLLiteParser</span></a> that received the signal</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>container</code></em> :</span></p></td>
+<td>The now available <a class="link" href="GUPnPDIDLLiteContainer.html" title="GUPnPDIDLLiteContainer"><span class="type">GUPnPDIDLLiteContainer</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GUPnPDIDLLiteParser-item-available"></a><h3>The <code class="literal">"item-available"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="GUPnPDIDLLiteParser.html" title="GUPnPDIDLLiteParser"><span class="type">GUPnPDIDLLiteParser</span></a> *parser,
+                                                        <a class="link" href="GUPnPDIDLLiteItem.html" title="GUPnPDIDLLiteItem"><span class="type">GUPnPDIDLLiteItem</span></a>   *item,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>             user_data)      : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a></pre>
+<p>
+The ::item-available signal is emitted each time an item is found in
+the DIDL-Lite XML being parsed.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>parser</code></em> :</span></p></td>
+<td>The <a class="link" href="GUPnPDIDLLiteParser.html" title="GUPnPDIDLLiteParser"><span class="type">GUPnPDIDLLiteParser</span></a> that received the signal</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>item</code></em> :</span></p></td>
+<td>The now available <a class="link" href="GUPnPDIDLLiteItem.html" title="GUPnPDIDLLiteItem"><span class="type">GUPnPDIDLLiteItem</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GUPnPDIDLLiteParser-object-available"></a><h3>The <code class="literal">"object-available"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="GUPnPDIDLLiteParser.html" title="GUPnPDIDLLiteParser"><span class="type">GUPnPDIDLLiteParser</span></a> *parser,
+                                                        <a class="link" href="GUPnPDIDLLiteObject.html" title="GUPnPDIDLLiteObject"><span class="type">GUPnPDIDLLiteObject</span></a> *object,
+                                                        <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>             user_data)      : <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a></pre>
+<p>
+The ::object-available signal is emitted each time an object is
+found in the DIDL-Lite XML being parsed.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>parser</code></em> :</span></p></td>
+<td>The <a class="link" href="GUPnPDIDLLiteParser.html" title="GUPnPDIDLLiteParser"><span class="type">GUPnPDIDLLiteParser</span></a> that received the signal</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>object</code></em> :</span></p></td>
+<td>The now available <a class="link" href="GUPnPDIDLLiteObject.html" title="GUPnPDIDLLiteObject"><span class="type">GUPnPDIDLLiteObject</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17.1</div>
+</body>
+</html>

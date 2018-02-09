@@ -1,0 +1,276 @@
+<!-- ##### SECTION Title ##### -->
+GUPnPServiceProxy
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT GUPnPServiceProxy ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL GUPnPServiceProxy::subscription-lost ##### -->
+<para>
+
+</para>
+
+@gupnpserviceproxy: the object which received the signal.
+@arg1: 
+
+<!-- ##### ARG GUPnPServiceProxy:subscribed ##### -->
+<para>
+
+</para>
+
+<!-- ##### STRUCT GUPnPServiceProxyAction ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### USER_FUNCTION GUPnPServiceProxyActionCallback ##### -->
+<para>
+
+</para>
+
+@proxy: 
+@action: 
+@user_data: 
+
+
+<!-- ##### USER_FUNCTION GUPnPServiceProxyNotifyCallback ##### -->
+<para>
+
+</para>
+
+@proxy: 
+@variable: 
+@value: 
+@user_data: 
+
+
+<!-- ##### FUNCTION gupnp_service_proxy_send_action ##### -->
+<para>
+
+</para>
+
+@proxy: 
+@action: 
+@error: 
+@...: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_proxy_send_action_valist ##### -->
+<para>
+
+</para>
+
+@proxy: 
+@action: 
+@error: 
+@var_args: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_proxy_send_action_hash ##### -->
+<para>
+
+</para>
+
+@proxy: 
+@action: 
+@error: 
+@in_hash: 
+@out_hash: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_proxy_send_action_list ##### -->
+<para>
+
+</para>
+
+@proxy: 
+@action: 
+@error: 
+@in_names: 
+@in_values: 
+@out_names: 
+@out_types: 
+@out_values: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_proxy_begin_action ##### -->
+<para>
+
+</para>
+
+@proxy: 
+@action: 
+@callback: 
+@user_data: 
+@...: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_proxy_begin_action_valist ##### -->
+<para>
+
+</para>
+
+@proxy: 
+@action: 
+@callback: 
+@user_data: 
+@var_args: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_proxy_begin_action_hash ##### -->
+<para>
+
+</para>
+
+@proxy: 
+@action: 
+@callback: 
+@user_data: 
+@hash: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_proxy_begin_action_list ##### -->
+<para>
+
+</para>
+
+@proxy: 
+@action: 
+@in_names: 
+@in_values: 
+@callback: 
+@user_data: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_proxy_end_action ##### -->
+<para>
+
+</para>
+
+@proxy: 
+@action: 
+@error: 
+@...: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_proxy_end_action_valist ##### -->
+<para>
+
+</para>
+
+@proxy: 
+@action: 
+@error: 
+@var_args: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_proxy_end_action_hash ##### -->
+<para>
+
+</para>
+
+@proxy: 
+@action: 
+@error: 
+@hash: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_proxy_end_action_list ##### -->
+<para>
+
+</para>
+
+@proxy: 
+@action: 
+@error: 
+@out_names: 
+@out_types: 
+@out_values: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_proxy_cancel_action ##### -->
+<para>
+
+</para>
+
+@proxy: 
+@action: 
+
+
+<!-- ##### FUNCTION gupnp_service_proxy_add_notify ##### -->
+<para>
+
+</para>
+
+@proxy: 
+@variable: 
+@type: 
+@callback: 
+@user_data: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_proxy_remove_notify ##### -->
+<para>
+
+</para>
+
+@proxy: 
+@variable: 
+@callback: 
+@user_data: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_proxy_set_subscribed ##### -->
+<para>
+
+</para>
+
+@proxy: 
+@subscribed: 
+
+
+<!-- ##### FUNCTION gupnp_service_proxy_get_subscribed ##### -->
+<para>
+
+</para>
+
+@proxy: 
+@Returns: 
+
+

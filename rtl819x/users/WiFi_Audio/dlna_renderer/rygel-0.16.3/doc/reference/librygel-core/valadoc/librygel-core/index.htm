@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <title>librygel-core &ndash; Vala Binding Reference</title>
+    <link href="../style.css" rel="stylesheet" type="text/css"/><script src="../scripts.js" type="text/javascript">
+    </script>
+  </head>
+  <body>
+    <div class="site_header">librygel-core Reference Manual</div>
+    <div class="site_body">
+      <div class="site_navigation">
+        <ul class="navi_main">
+          <li class="package_index"><a href="../index.html">Packages</a></li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="package">librygel-core</li>
+        </ul>
+        <hr class="navi_hr"/>
+        <ul class="navi_main">
+          <li class="namespace"><a href="FreeDesktop.html">FreeDesktop</a></li>
+          <li class="namespace"><a href="Rygel.html">Rygel</a></li>
+          <li class="class"><a href="DescriptionFile.html">DescriptionFile</a></li>
+        </ul>
+      </div>
+      <div class="site_content">
+        <h1 class="main_title" id="librygel-core">librygel-core</h1>
+        <hr class="main_hr"/>
+        <h2 class="main_title">Description:</h2>
+        <h2 class="main_title">Content:</h2>
+        <h3 class="main_title">Namespaces:</h3>
+        <ul class="navi_inline">
+          <li class="namespace"><a href="FreeDesktop.html">FreeDesktop</a> - </li>
+          <h3 class="main_title">Interfaces:</h3>
+          <ul class="navi_inline">
+            <li class="interface"><a href="FreeDesktop.DBusObject.html">DBusObject</a> - </li>
+            <li class="interface"><a href="FreeDesktop.Properties.html">Properties</a> - </li>
+          </ul>
+          <h3 class="main_title">Enums:</h3>
+          <ul class="navi_inline">
+            <li class="enum"><a href="FreeDesktop.DBusRequestNameReply.html">DBusRequestNameReply</a> - </li>
+          </ul>
+          <h3 class="main_title">Constants:</h3>
+          <ul class="navi_inline">
+            <li class="constant"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">const</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><code>string</code></span> <b><a href="FreeDesktop.DBUS_SERVICE.html" class="constant">DBUS_SERVICE</a></b>
+              </span>
+              <div class="leaf_brief_description">
+              </div></li>
+            <li class="constant"><span class="leaf_code_definition"><span class="main_keyword">public</span> <span class="main_keyword">const</span> <span class="main_keyword">unowned</span> <span class="main_basic_type"><code>string</code></span> <b><a href="FreeDesktop.DBUS_OBJECT_PATH.html" class="constant">DBUS_OBJECT_PATH</a></b>
+              </span>
+              <div class="leaf_brief_description">
+              </div></li>
+          </ul>
+          <li class="namespace"><a href="Rygel.html">Rygel</a> - </li>
+          <h3 class="main_title">Interfaces:</h3>
+          <ul class="navi_inline">
+            <li class="interface"><a href="Rygel.DBusInterface.html">DBusInterface</a> - </li>
+            <li class="interface"><a href="Rygel.Configuration.html">Configuration</a> - <span class="brief_description">Interface for dealing with 
+                Rygel configuration.</span></li>
+            <li class="interface"><a href="Rygel.StateMachine.html">StateMachine</a> - <span class="brief_description">StateMachine interface.</span>
+            </li>
+          </ul>
+          <h3 class="main_title">Classes:</h3>
+          <ul class="navi_inline">
+            <li class="class"><a href="Rygel.CmdlineConfig.html">CmdlineConfig</a> - <span class="brief_description">Manages configuration from 
+                Commandline arguments.</span></li>
+            <li class="class"><a href="Rygel.ConnectionManager.html">ConnectionManager</a> - <span class="brief_description">Basic implementation of 
+                UPnP ConnectionManager service version 2.</span></li>
+            <li class="class"><a href="Rygel.RootDevice.html">RootDevice</a> - <span class="brief_description">Represents a Root device.</span></li>
+            <li class="class"><a href="Rygel.RootDeviceFactory.html">RootDeviceFactory</a> - <span class="brief_description">Factory for RootDevice 
+                objects. Give it a plugin and it will create a Root device for that.</span></li>
+            <li class="class"><a href="Rygel.LogHandler.html">LogHandler</a> - </li>
+            <li class="class"><a href="Rygel.MetaConfig.html">MetaConfig</a> - <span class="brief_description">Manages all the configuration sources 
+                for Rygel.</span></li>
+            <li class="class"><a href="Rygel.PluginLoader.html">PluginLoader</a> - <span class="brief_description">Responsible for plugin loading. 
+                Probes for shared library files in a specific directry and tries to grab a function with a specific name and signature, calls it. The 
+                loaded module can then add plugins to Rygel by calling the add_plugin method. NOTE: The module SHOULD make sure that plugin is not 
+                disabled by user using plugin_disabled method before creating the plugin instance and resources related to that instance.</span></li>
+            <li class="class"><a href="Rygel.Plugin.html">Plugin</a> - <span class="brief_description">Represents a Rygel plugin. Plugins are supposed
+                to provide an object of this class or a subclass.</span></li>
+            <li class="class"><a href="Rygel.ResourceInfo.html">ResourceInfo</a> - <span class="brief_description">Holds information about a 
+                particular resource (device and service) implementation.</span></li>
+            <li class="class"><a href="Rygel.UserConfig.html">UserConfig</a> - <span class="brief_description">Manages the user configuration for 
+                Rygel.</span></li>
+            <li class="abstract_class"><a href="Rygel.MediaDevice.html">MediaDevice</a> - </li>
+            <li class="class"><a href="Rygel.IconInfo.html">IconInfo</a> - <span class="brief_description">Holds information about an icon.</span>
+            </li>
+            <li class="class"><a href="Rygel.XMLUtils.html">XMLUtils</a> - <span class="brief_description">XML utility API.</span></li>
+          </ul>
+          <h3 class="main_title">Enums:</h3>
+          <ul class="navi_inline">
+            <li class="enum"><a href="Rygel.LogLevel.html">LogLevel</a> - </li>
+          </ul>
+          <h3 class="main_title">Error domains:</h3>
+          <ul class="navi_inline">
+            <li class="errordomain"><a href="Rygel.CmdlineConfigError.html">CmdlineConfigError</a> - </li>
+            <li class="errordomain"><a href="Rygel.ConfigurationError.html">ConfigurationError</a> - </li>
+          </ul>
+        </ul>
+        <h3 class="main_title">Classes:</h3>
+        <ul class="navi_inline">
+          <li class="class"><a href="DescriptionFile.html">DescriptionFile</a> - <span class="brief_description">Represents a device description 
+              document and offers methods for easy manipulation of those.</span></li>
+        </ul>
+        <h3 class="main_title">Error domains:</h3>
+        <ul class="navi_inline">
+          <li class="errordomain"><a href="RootDeviceFactoryError.html">RootDeviceFactoryError</a> - </li>
+        </ul>
+      </div>
+    </div><br/>
+    <div class="site_footer">Generated by <a href="http://www.valadoc.org/">Valadoc</a>
+    </div>
+  </body>
+</html>

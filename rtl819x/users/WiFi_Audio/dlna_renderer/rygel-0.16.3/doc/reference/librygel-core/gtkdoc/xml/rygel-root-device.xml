@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelRootDevice">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelRootDevice.top_of_page">RygelRootDevice</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-CORE Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelRootDevice</refname>
+<refpurpose>Represents a Root device.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelRootDevice.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="RYGEL-TYPE-ROOT-DEVICE:CAPS">RYGEL_TYPE_ROOT_DEVICE</link>
+<link linkend="RygelRootDevice"><returnvalue>RygelRootDevice</returnvalue></link> *   <link linkend="rygel-root-device-new">rygel_root_device_new</link>               (<parameter><link linkend="GUPnPContext"><type>GUPnPContext</type></link> *context</parameter>,
+                                                         <parameter><link linkend="RygelPlugin"><type>RygelPlugin</type></link> *plugin</parameter>,
+                                                         <parameter><link linkend="GUPnPXMLDoc"><type>GUPnPXMLDoc</type></link> *description_doc</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *description_path</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *description_dir</parameter>);
+<link linkend="GeeArrayList"><returnvalue>GeeArrayList</returnvalue></link> *      <link linkend="rygel-root-device-get-services">rygel_root_device_get_services</link>      (<parameter><link linkend="RygelRootDevice"><type>RygelRootDevice</type></link> *self</parameter>);
+struct              <link linkend="RygelRootDevice-struct">RygelRootDevice</link>;
+struct              <link linkend="RygelRootDeviceClass">RygelRootDeviceClass</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelRootDevice.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="GUPnPDeviceInfo">GUPnPDeviceInfo</link>
+         +----<link linkend="GUPnPDevice">GUPnPDevice</link>
+               +----<link linkend="GUPnPRootDevice">GUPnPRootDevice</link>
+                     +----RygelRootDevice
+</synopsis>
+</refsect1>
+<refsect1 id="RygelRootDevice.properties" role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+  &quot;<link linkend="RygelRootDevice--services">services</link>&quot;                 <link linkend="GeeArrayList"><type>GeeArrayList</type></link>*         : Read / Write
+</synopsis>
+</refsect1>
+
+<refsect1 id="RygelRootDevice.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="RygelRootDevice.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="RYGEL-TYPE-ROOT-DEVICE:CAPS" role="macro">
+<title>RYGEL_TYPE_ROOT_DEVICE</title>
+<indexterm zone="RYGEL-TYPE-ROOT-DEVICE:CAPS"><primary>RYGEL_TYPE_ROOT_DEVICE</primary></indexterm>
+<programlisting>#define RYGEL_TYPE_ROOT_DEVICE (rygel_root_device_get_type ())
+</programlisting>
+<para>
+The type for <link linkend="RygelRootDevice"><type>RygelRootDevice</type></link>.
+</para></refsect2>
+<refsect2 id="rygel-root-device-new" role="function">
+<title>rygel_root_device_new ()</title>
+<indexterm zone="rygel-root-device-new"><primary>rygel_root_device_new</primary></indexterm>
+<programlisting><link linkend="RygelRootDevice"><returnvalue>RygelRootDevice</returnvalue></link> *   rygel_root_device_new               (<parameter><link linkend="GUPnPContext"><type>GUPnPContext</type></link> *context</parameter>,
+                                                         <parameter><link linkend="RygelPlugin"><type>RygelPlugin</type></link> *plugin</parameter>,
+                                                         <parameter><link linkend="GUPnPXMLDoc"><type>GUPnPXMLDoc</type></link> *description_doc</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *description_path</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *description_dir</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="rygel-root-device-get-services" role="function">
+<title>rygel_root_device_get_services ()</title>
+<indexterm zone="rygel-root-device-get-services"><primary>rygel_root_device_get_services</primary></indexterm>
+<programlisting><link linkend="GeeArrayList"><returnvalue>GeeArrayList</returnvalue></link> *      rygel_root_device_get_services      (<parameter><link linkend="RygelRootDevice"><type>RygelRootDevice</type></link> *self</parameter>);</programlisting>
+<para>
+Get and return the current value of the <link linkend="RygelRootDevice--services"><type>"services"</type></link> property.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelRootDevice"><type>RygelRootDevice</type></link> instance to query</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>the value of the <link linkend="RygelRootDevice--services"><type>"services"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="RygelRootDevice-struct" role="struct">
+<title>struct RygelRootDevice</title>
+<indexterm zone="RygelRootDevice-struct"><primary>RygelRootDevice</primary></indexterm>
+<programlisting>struct RygelRootDevice;</programlisting>
+<para>
+Represents a Root device.
+</para></refsect2>
+<refsect2 id="RygelRootDeviceClass" role="struct">
+<title>struct RygelRootDeviceClass</title>
+<indexterm zone="RygelRootDeviceClass"><primary>RygelRootDeviceClass</primary></indexterm>
+<programlisting>struct RygelRootDeviceClass {
+	GUPnPRootDeviceClass parent_class;
+};
+</programlisting>
+<para>
+The class structure for <link linkend="RYGEL-TYPE-ROOT-DEVICE:CAPS"><literal>RYGEL_TYPE_ROOT_DEVICE</literal></link>. All the fields in this structure are private and should never be accessed directly.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="GUPnPRootDeviceClass"><type>GUPnPRootDeviceClass</type></link>&#160;<structfield id="RygelRootDeviceClass.parent-class">parent_class</structfield>;</term>
+<listitem><simpara>the parent class structure</simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 id="RygelRootDevice.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="RygelRootDevice--services" role="property"><title>The <literal>&quot;services&quot;</literal> property</title>
+<indexterm zone="RygelRootDevice--services"><primary>RygelRootDevice:services</primary></indexterm>
+<programlisting>  &quot;services&quot;                 <link linkend="GeeArrayList"><type>GeeArrayList</type></link>*         : Read / Write</programlisting>
+<para>services.</para></refsect2>
+</refsect1>
+
+</refentry>

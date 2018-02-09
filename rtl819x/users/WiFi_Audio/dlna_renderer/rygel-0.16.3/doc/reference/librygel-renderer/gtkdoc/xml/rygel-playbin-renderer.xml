@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelPlaybinRenderer">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelPlaybinRenderer.top_of_page">RygelPlaybinRenderer</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-RENDERER Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelPlaybinRenderer</refname>
+<refpurpose>A UPnP renderer that uses a GStreamer Playbin2 element.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelPlaybinRenderer.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="RYGEL-PLAYBIN-TYPE-RENDERER:CAPS">RYGEL_PLAYBIN_TYPE_RENDERER</link>
+<link linkend="RygelPlaybinRenderer"><returnvalue>RygelPlaybinRenderer</returnvalue></link> * <link linkend="rygel-playbin-renderer-new">rygel_playbin_renderer_new</link>       (<parameter>const <link linkend="gchar"><type>gchar</type></link> *title</parameter>);
+<link linkend="RygelPlaybinRenderer"><returnvalue>RygelPlaybinRenderer</returnvalue></link> * <link linkend="rygel-playbin-renderer-new-wrap">rygel_playbin_renderer_new_wrap</link>  (<parameter><link linkend="GstElement"><type>GstElement</type></link> *pipeline</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *title</parameter>);
+struct              <link linkend="RygelPlaybinRenderer-struct">RygelPlaybinRenderer</link>;
+struct              <link linkend="RygelPlaybinRendererClass">RygelPlaybinRendererClass</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelPlaybinRenderer.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="RygelMediaDevice">RygelMediaDevice</link>
+         +----RygelPlaybinRenderer
+</synopsis>
+</refsect1>
+
+<refsect1 id="RygelPlaybinRenderer.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+<para>Using GstPlayBin2 as a model, it reflects any changes done externally, such as changing the currently played URI, volume, pause/play etc., to UPnP.</para><para>Likewise, the playbin can be modified externally using UPnP.</para><para>You can retrieve the GstPlayBin2 by calling <link linkend="rygel-playbin-player-get-playbin"><function>rygel_playbin_player_get_playbin()</function></link> on the default player - see <link linkend="rygel-playbin-player-get-default"><function>rygel_playbin_player_get_default()</function></link>. You should then set the &quot;video-sink&quot; and &quot;audio-sink&quot; properties of the playbin.</para><para>Call <link linkend="rygel-media-device-add-interface"><function>rygel_media_device_add_interface()</function></link> on the Renderer to allow it to be controlled by a control point and to retrieve data streams via that network interface.</para><para>See the standalone-renderer.c example.</para>
+</para>
+</refsect1>
+<refsect1 id="RygelPlaybinRenderer.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="RYGEL-PLAYBIN-TYPE-RENDERER:CAPS" role="macro">
+<title>RYGEL_PLAYBIN_TYPE_RENDERER</title>
+<indexterm zone="RYGEL-PLAYBIN-TYPE-RENDERER:CAPS"><primary>RYGEL_PLAYBIN_TYPE_RENDERER</primary></indexterm>
+<programlisting>#define RYGEL_PLAYBIN_TYPE_RENDERER (rygel_playbin_renderer_get_type ())
+</programlisting>
+<para>
+The type for <link linkend="RygelPlaybinRenderer"><type>RygelPlaybinRenderer</type></link>.
+</para></refsect2>
+<refsect2 id="rygel-playbin-renderer-new" role="function">
+<title>rygel_playbin_renderer_new ()</title>
+<indexterm zone="rygel-playbin-renderer-new"><primary>rygel_playbin_renderer_new</primary></indexterm>
+<programlisting><link linkend="RygelPlaybinRenderer"><returnvalue>RygelPlaybinRenderer</returnvalue></link> * rygel_playbin_renderer_new       (<parameter>const <link linkend="gchar"><type>gchar</type></link> *title</parameter>);</programlisting>
+<para>
+Create a new instance of Renderer.
+</para>
+<para>
+<para>Renderer will instantiate its own instance of GstPlayBin2. The GstPlayBin2 can be accessed by using <link linkend="rygel-playbin-player-get-playbin"><function>rygel_playbin_player_get_playbin()</function></link>.</para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>title</parameter>&#160;:</term>
+<listitem><simpara>Friendly name of the new UPnP renderer on the network. <emphasis role="annotation">[<acronym>in</acronym>]</emphasis></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-playbin-renderer-new-wrap" role="function">
+<title>rygel_playbin_renderer_new_wrap ()</title>
+<indexterm zone="rygel-playbin-renderer-new-wrap"><primary>rygel_playbin_renderer_new_wrap</primary></indexterm>
+<programlisting><link linkend="RygelPlaybinRenderer"><returnvalue>RygelPlaybinRenderer</returnvalue></link> * rygel_playbin_renderer_new_wrap  (<parameter><link linkend="GstElement"><type>GstElement</type></link> *pipeline</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *title</parameter>);</programlisting>
+<para>
+Create a new instance of Renderer, wrapping an existing GstPlayBin2 instance.
+</para><variablelist role="params">
+<varlistentry><term><parameter>pipeline</parameter>&#160;:</term>
+<listitem><simpara>Instance of GstPlayBin2 to wrap. <emphasis role="annotation">[<acronym>in</acronym>]</emphasis></simpara></listitem></varlistentry>
+<varlistentry><term><parameter>title</parameter>&#160;:</term>
+<listitem><simpara>Friendly name of the new UPnP renderer on the network. <emphasis role="annotation">[<acronym>in</acronym>]</emphasis></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="RygelPlaybinRenderer-struct" role="struct">
+<title>struct RygelPlaybinRenderer</title>
+<indexterm zone="RygelPlaybinRenderer-struct"><primary>RygelPlaybinRenderer</primary></indexterm>
+<programlisting>struct RygelPlaybinRenderer;</programlisting>
+<para>
+A UPnP renderer that uses a GStreamer Playbin2 element.
+</para>
+<para>
+<para>Using GstPlayBin2 as a model, it reflects any changes done externally, such as changing the currently played URI, volume, pause/play etc., to UPnP.</para><para>Likewise, the playbin can be modified externally using UPnP.</para><para>You can retrieve the GstPlayBin2 by calling <link linkend="rygel-playbin-player-get-playbin"><function>rygel_playbin_player_get_playbin()</function></link> on the default player - see <link linkend="rygel-playbin-player-get-default"><function>rygel_playbin_player_get_default()</function></link>. You should then set the &quot;video-sink&quot; and &quot;audio-sink&quot; properties of the playbin.</para><para>Call <link linkend="rygel-media-device-add-interface"><function>rygel_media_device_add_interface()</function></link> on the Renderer to allow it to be controlled by a control point and to retrieve data streams via that network interface.</para><para>See the standalone-renderer.c example.</para>
+</para></refsect2>
+<refsect2 id="RygelPlaybinRendererClass" role="struct">
+<title>struct RygelPlaybinRendererClass</title>
+<indexterm zone="RygelPlaybinRendererClass"><primary>RygelPlaybinRendererClass</primary></indexterm>
+<programlisting>struct RygelPlaybinRendererClass {
+	RygelMediaDeviceClass parent_class;
+};
+</programlisting>
+<para>
+The class structure for <link linkend="RYGEL-PLAYBIN-TYPE-RENDERER:CAPS"><literal>RYGEL_PLAYBIN_TYPE_RENDERER</literal></link>. All the fields in this structure are private and should never be accessed directly.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="RygelMediaDeviceClass"><type>RygelMediaDeviceClass</type></link>&#160;<structfield id="RygelPlaybinRendererClass.parent-class">parent_class</structfield>;</term>
+<listitem><simpara>the parent class structure</simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,347 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="FreeDesktopDBusObject">
+<refmeta>
+<refentrytitle role="top_of_page" id="FreeDesktopDBusObject.top_of_page">FreeDesktopDBusObject</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-CORE Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>FreeDesktopDBusObject</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="FreeDesktopDBusObject.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+<anchor id="FreeDesktopDBusRequestNameReply"/><anchor id="FreeDesktopProperties"/>
+<synopsis>#define             <link linkend="FREE-DESKTOP-DBUS-SERVICE:CAPS">FREE_DESKTOP_DBUS_SERVICE</link>
+#define             <link linkend="FREE-DESKTOP-DBUS-OBJECT-PATH:CAPS">FREE_DESKTOP_DBUS_OBJECT_PATH</link>
+enum                <link linkend="FreeDesktopDBusRequestNameReply-enum">FreeDesktopDBusRequestNameReply</link>;
+<link linkend="guint32"><returnvalue>guint32</returnvalue></link>             <link linkend="free-desktop-dbus-object-request-name">free_desktop_dbus_object_request_name</link>
+                                                        (<parameter><link linkend="FreeDesktopDBusObject"><type>FreeDesktopDBusObject</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                                                         <parameter><link linkend="guint32"><type>guint32</type></link> flags</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="guint32"><returnvalue>guint32</returnvalue></link>             <link linkend="free-desktop-dbus-object-start-service-by-name">free_desktop_dbus_object_start_service_by_name</link>
+                                                        (<parameter><link linkend="FreeDesktopDBusObject"><type>FreeDesktopDBusObject</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                                                         <parameter><link linkend="guint32"><type>guint32</type></link> flags</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="free-desktop-dbus-object-list-names">free_desktop_dbus_object_list_names</link> (<parameter><link linkend="FreeDesktopDBusObject"><type>FreeDesktopDBusObject</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                                         <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);
+<link linkend="gchar"><returnvalue>gchar</returnvalue></link> **            <link linkend="free-desktop-dbus-object-list-names-finish">free_desktop_dbus_object_list_names_finish</link>
+                                                        (<parameter><link linkend="FreeDesktopDBusObject"><type>FreeDesktopDBusObject</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> *result_length1</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="free-desktop-dbus-object-list-activatable-names">free_desktop_dbus_object_list_activatable_names</link>
+                                                        (<parameter><link linkend="FreeDesktopDBusObject"><type>FreeDesktopDBusObject</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                                         <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);
+<link linkend="gchar"><returnvalue>gchar</returnvalue></link> **            <link linkend="free-desktop-dbus-object-list-activatable-names-finish">free_desktop_dbus_object_list_activatable_names_finish</link>
+                                                        (<parameter><link linkend="FreeDesktopDBusObject"><type>FreeDesktopDBusObject</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> *result_length1</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+                    <link linkend="FreeDesktopDBusObject-struct">FreeDesktopDBusObject</link>;
+struct              <link linkend="FreeDesktopDBusObjectIface">FreeDesktopDBusObjectIface</link>;
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="free-desktop-properties-get-all">free_desktop_properties_get_all</link>     (<parameter><link linkend="FreeDesktopProperties"><type>FreeDesktopProperties</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *iface</parameter>,
+                                                         <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                                         <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);
+<link linkend="GHashTable"><returnvalue>GHashTable</returnvalue></link> *        <link linkend="free-desktop-properties-get-all-finish">free_desktop_properties_get_all_finish</link>
+                                                        (<parameter><link linkend="FreeDesktopProperties"><type>FreeDesktopProperties</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+                    <link linkend="FreeDesktopProperties-struct">FreeDesktopProperties</link>;
+struct              <link linkend="FreeDesktopPropertiesIface">FreeDesktopPropertiesIface</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="FreeDesktopDBusObject.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GEnum">GEnum</link>
+   +----FreeDesktopDBusRequestNameReply
+</synopsis>
+<synopsis>
+  <link linkend="GInterface">GInterface</link>
+   +----FreeDesktopDBusObject
+</synopsis>
+<synopsis>
+  <link linkend="GInterface">GInterface</link>
+   +----FreeDesktopProperties
+</synopsis>
+</refsect1>
+<refsect1 id="FreeDesktopDBusObject.prerequisites" role="prerequisites">
+<title role="prerequisites.title">Prerequisites</title>
+<para>
+FreeDesktopDBusObject requires
+ <link linkend="GObject">GObject</link>.</para>
+<para>
+FreeDesktopProperties requires
+ <link linkend="GObject">GObject</link>.</para>
+</refsect1>
+<refsect1 id="FreeDesktopDBusObject.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<synopsis>
+  &quot;<link linkend="FreeDesktopDBusObject-name-owner-changed">name-owner-changed</link>&quot;                             : <link linkend="G-SIGNAL-RUN-LAST:CAPS"><literal>Run Last</literal></link>
+</synopsis>
+</refsect1>
+
+<refsect1 id="FreeDesktopDBusObject.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="FreeDesktopDBusObject.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="FREE-DESKTOP-DBUS-SERVICE:CAPS" role="macro">
+<title>FREE_DESKTOP_DBUS_SERVICE</title>
+<indexterm zone="FREE-DESKTOP-DBUS-SERVICE:CAPS"><primary>FREE_DESKTOP_DBUS_SERVICE</primary></indexterm>
+<programlisting>#define FREE_DESKTOP_DBUS_SERVICE "org.freedesktop.DBus"
+</programlisting>
+</refsect2>
+<refsect2 id="FREE-DESKTOP-DBUS-OBJECT-PATH:CAPS" role="macro">
+<title>FREE_DESKTOP_DBUS_OBJECT_PATH</title>
+<indexterm zone="FREE-DESKTOP-DBUS-OBJECT-PATH:CAPS"><primary>FREE_DESKTOP_DBUS_OBJECT_PATH</primary></indexterm>
+<programlisting>#define FREE_DESKTOP_DBUS_OBJECT_PATH "/org/freedesktop/DBus"
+</programlisting>
+</refsect2>
+<refsect2 id="FreeDesktopDBusRequestNameReply-enum" role="enum">
+<title>enum FreeDesktopDBusRequestNameReply</title>
+<indexterm zone="FreeDesktopDBusRequestNameReply-enum"><primary>FreeDesktopDBusRequestNameReply</primary></indexterm>
+<programlisting>typedef enum {
+	FREE_DESKTOP_DBUS_REQUEST_NAME_REPLY_PRIMARY_OWNER = 1,
+	FREE_DESKTOP_DBUS_REQUEST_NAME_REPLY_IN_QUEUE,
+	FREE_DESKTOP_DBUS_REQUEST_NAME_REPLY_EXISTS,
+	FREE_DESKTOP_DBUS_REQUEST_NAME_REPLY_ALREADY_OWNER
+} FreeDesktopDBusRequestNameReply;
+</programlisting>
+</refsect2>
+<refsect2 id="free-desktop-dbus-object-request-name" role="function">
+<title>free_desktop_dbus_object_request_name ()</title>
+<indexterm zone="free-desktop-dbus-object-request-name"><primary>free_desktop_dbus_object_request_name</primary></indexterm>
+<programlisting><link linkend="guint32"><returnvalue>guint32</returnvalue></link>             free_desktop_dbus_object_request_name
+                                                        (<parameter><link linkend="FreeDesktopDBusObject"><type>FreeDesktopDBusObject</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                                                         <parameter><link linkend="guint32"><type>guint32</type></link> flags</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="FreeDesktopDBusObject"><type>FreeDesktopDBusObject</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore. <emphasis role="annotation">[<acronym>error-domains</acronym> GDBusError]</emphasis></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="free-desktop-dbus-object-start-service-by-name" role="function">
+<title>free_desktop_dbus_object_start_service_by_name ()</title>
+<indexterm zone="free-desktop-dbus-object-start-service-by-name"><primary>free_desktop_dbus_object_start_service_by_name</primary></indexterm>
+<programlisting><link linkend="guint32"><returnvalue>guint32</returnvalue></link>             free_desktop_dbus_object_start_service_by_name
+                                                        (<parameter><link linkend="FreeDesktopDBusObject"><type>FreeDesktopDBusObject</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                                                         <parameter><link linkend="guint32"><type>guint32</type></link> flags</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="FreeDesktopDBusObject"><type>FreeDesktopDBusObject</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore. <emphasis role="annotation">[<acronym>error-domains</acronym> GDBusError]</emphasis></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="free-desktop-dbus-object-list-names" role="function">
+<title>free_desktop_dbus_object_list_names ()</title>
+<indexterm zone="free-desktop-dbus-object-list-names"><primary>free_desktop_dbus_object_list_names</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                free_desktop_dbus_object_list_names (<parameter><link linkend="FreeDesktopDBusObject"><type>FreeDesktopDBusObject</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                                         <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para>
+<emphasis>See also</emphasis>: <link linkend="free-desktop-dbus-object-list-names-finish"><function><link linkend="free-desktop-dbus-object-list-names-finish"><function>free_desktop_dbus_object_list_names_finish()</function></link></function></link>
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="FreeDesktopDBusObject"><type>FreeDesktopDBusObject</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>_callback_</parameter>&#160;:</term>
+<listitem><simpara>callback to call when the request is satisfied. <emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></simpara></listitem></varlistentry>
+<varlistentry><term><parameter>_user_data_</parameter>&#160;:</term>
+<listitem><simpara>the data to pass to <parameter>_callback_</parameter> function. <emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="free-desktop-dbus-object-list-names-finish" role="function">
+<title>free_desktop_dbus_object_list_names_finish ()</title>
+<indexterm zone="free-desktop-dbus-object-list-names-finish"><primary>free_desktop_dbus_object_list_names_finish</primary></indexterm>
+<programlisting><link linkend="gchar"><returnvalue>gchar</returnvalue></link> **            free_desktop_dbus_object_list_names_finish
+                                                        (<parameter><link linkend="FreeDesktopDBusObject"><type>FreeDesktopDBusObject</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> *result_length1</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>
+<emphasis>See also</emphasis>: <link linkend="free-desktop-dbus-object-list-names"><function><link linkend="free-desktop-dbus-object-list-names"><function>free_desktop_dbus_object_list_names()</function></link></function></link>
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="FreeDesktopDBusObject"><type>FreeDesktopDBusObject</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>_res_</parameter>&#160;:</term>
+<listitem><simpara>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore. <emphasis role="annotation">[<acronym>error-domains</acronym> GDBusError]</emphasis></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="free-desktop-dbus-object-list-activatable-names" role="function">
+<title>free_desktop_dbus_object_list_activatable_names ()</title>
+<indexterm zone="free-desktop-dbus-object-list-activatable-names"><primary>free_desktop_dbus_object_list_activatable_names</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                free_desktop_dbus_object_list_activatable_names
+                                                        (<parameter><link linkend="FreeDesktopDBusObject"><type>FreeDesktopDBusObject</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                                         <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para>
+<emphasis>See also</emphasis>: <link linkend="free-desktop-dbus-object-list-activatable-names-finish"><function><link linkend="free-desktop-dbus-object-list-activatable-names-finish"><function>free_desktop_dbus_object_list_activatable_names_finish()</function></link></function></link>
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="FreeDesktopDBusObject"><type>FreeDesktopDBusObject</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>_callback_</parameter>&#160;:</term>
+<listitem><simpara>callback to call when the request is satisfied. <emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></simpara></listitem></varlistentry>
+<varlistentry><term><parameter>_user_data_</parameter>&#160;:</term>
+<listitem><simpara>the data to pass to <parameter>_callback_</parameter> function. <emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="free-desktop-dbus-object-list-activatable-names-finish" role="function">
+<title>free_desktop_dbus_object_list_activatable_names_finish ()</title>
+<indexterm zone="free-desktop-dbus-object-list-activatable-names-finish"><primary>free_desktop_dbus_object_list_activatable_names_finish</primary></indexterm>
+<programlisting><link linkend="gchar"><returnvalue>gchar</returnvalue></link> **            free_desktop_dbus_object_list_activatable_names_finish
+                                                        (<parameter><link linkend="FreeDesktopDBusObject"><type>FreeDesktopDBusObject</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> *result_length1</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>
+<emphasis>See also</emphasis>: <link linkend="free-desktop-dbus-object-list-activatable-names"><function><link linkend="free-desktop-dbus-object-list-activatable-names"><function>free_desktop_dbus_object_list_activatable_names()</function></link></function></link>
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="FreeDesktopDBusObject"><type>FreeDesktopDBusObject</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>_res_</parameter>&#160;:</term>
+<listitem><simpara>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore. <emphasis role="annotation">[<acronym>error-domains</acronym> GDBusError]</emphasis></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="FreeDesktopDBusObject-struct" role="struct">
+<title>FreeDesktopDBusObject</title>
+<indexterm zone="FreeDesktopDBusObject-struct"><primary>FreeDesktopDBusObject</primary></indexterm>
+<programlisting>typedef struct _FreeDesktopDBusObject FreeDesktopDBusObject;</programlisting>
+</refsect2>
+<refsect2 id="FreeDesktopDBusObjectIface" role="struct">
+<title>struct FreeDesktopDBusObjectIface</title>
+<indexterm zone="FreeDesktopDBusObjectIface"><primary>FreeDesktopDBusObjectIface</primary></indexterm>
+<programlisting>struct FreeDesktopDBusObjectIface {
+	GTypeInterface parent_iface;
+	guint32 (*request_name) (FreeDesktopDBusObject* self, const gchar* name, guint32 flags, GError** error);
+	guint32 (*start_service_by_name) (FreeDesktopDBusObject* self, const gchar* name, guint32 flags, GError** error);
+	void (*list_names) (FreeDesktopDBusObject* self, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	gchar** (*list_names_finish) (FreeDesktopDBusObject* self, GAsyncResult* _res_, int* result_length1, GError** error);
+	void (*list_activatable_names) (FreeDesktopDBusObject* self, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	gchar** (*list_activatable_names_finish) (FreeDesktopDBusObject* self, GAsyncResult* _res_, int* result_length1, GError** error);
+};
+</programlisting>
+<para>
+Interface for creating <link linkend="FreeDesktopDBusObject"><type>FreeDesktopDBusObject</type></link> implementations.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="GTypeInterface"><type>GTypeInterface</type></link>&#160;<structfield id="FreeDesktopDBusObjectIface.parent-iface">parent_iface</structfield>;</term>
+<listitem><simpara>the parent interface structure</simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="FreeDesktopDBusObjectIface.request-name">request_name</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="free-desktop-dbus-object-request-name"><function><link linkend="free-desktop-dbus-object-request-name"><function>free_desktop_dbus_object_request_name()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="FreeDesktopDBusObjectIface.start-service-by-name">start_service_by_name</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="free-desktop-dbus-object-start-service-by-name"><function><link linkend="free-desktop-dbus-object-start-service-by-name"><function>free_desktop_dbus_object_start_service_by_name()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="FreeDesktopDBusObjectIface.list-names">list_names</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="free-desktop-dbus-object-list-names"><function><link linkend="free-desktop-dbus-object-list-names"><function>free_desktop_dbus_object_list_names()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="FreeDesktopDBusObjectIface.list-names-finish">list_names_finish</structfield>&#160;()</term>
+<listitem><simpara>asynchronous finish function for <structfield>list_names</structfield>, called by <link linkend="free-desktop-dbus-object-list-names"><function><link linkend="free-desktop-dbus-object-list-names"><function>free_desktop_dbus_object_list_names()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="FreeDesktopDBusObjectIface.list-activatable-names">list_activatable_names</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="free-desktop-dbus-object-list-activatable-names"><function><link linkend="free-desktop-dbus-object-list-activatable-names"><function>free_desktop_dbus_object_list_activatable_names()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="FreeDesktopDBusObjectIface.list-activatable-names-finish">list_activatable_names_finish</structfield>&#160;()</term>
+<listitem><simpara>asynchronous finish function for <structfield>list_activatable_names</structfield>, called by <link linkend="free-desktop-dbus-object-list-activatable-names"><function><link linkend="free-desktop-dbus-object-list-activatable-names"><function>free_desktop_dbus_object_list_activatable_names()</function></link></function></link></simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+<refsect2 id="free-desktop-properties-get-all" role="function">
+<title>free_desktop_properties_get_all ()</title>
+<indexterm zone="free-desktop-properties-get-all"><primary>free_desktop_properties_get_all</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                free_desktop_properties_get_all     (<parameter><link linkend="FreeDesktopProperties"><type>FreeDesktopProperties</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *iface</parameter>,
+                                                         <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                                         <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para>
+<emphasis>See also</emphasis>: <link linkend="free-desktop-properties-get-all-finish"><function><link linkend="free-desktop-properties-get-all-finish"><function>free_desktop_properties_get_all_finish()</function></link></function></link>
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="FreeDesktopProperties"><type>FreeDesktopProperties</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>_callback_</parameter>&#160;:</term>
+<listitem><simpara>callback to call when the request is satisfied. <emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></simpara></listitem></varlistentry>
+<varlistentry><term><parameter>_user_data_</parameter>&#160;:</term>
+<listitem><simpara>the data to pass to <parameter>_callback_</parameter> function. <emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="free-desktop-properties-get-all-finish" role="function">
+<title>free_desktop_properties_get_all_finish ()</title>
+<indexterm zone="free-desktop-properties-get-all-finish"><primary>free_desktop_properties_get_all_finish</primary></indexterm>
+<programlisting><link linkend="GHashTable"><returnvalue>GHashTable</returnvalue></link> *        free_desktop_properties_get_all_finish
+                                                        (<parameter><link linkend="FreeDesktopProperties"><type>FreeDesktopProperties</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>
+<emphasis>See also</emphasis>: <link linkend="free-desktop-properties-get-all"><function><link linkend="free-desktop-properties-get-all"><function>free_desktop_properties_get_all()</function></link></function></link>
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="FreeDesktopProperties"><type>FreeDesktopProperties</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>_res_</parameter>&#160;:</term>
+<listitem><simpara>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore. <emphasis role="annotation">[<acronym>error-domains</acronym> GDBusError]</emphasis></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="FreeDesktopProperties-struct" role="struct">
+<title>FreeDesktopProperties</title>
+<indexterm zone="FreeDesktopProperties-struct"><primary>FreeDesktopProperties</primary></indexterm>
+<programlisting>typedef struct _FreeDesktopProperties FreeDesktopProperties;</programlisting>
+</refsect2>
+<refsect2 id="FreeDesktopPropertiesIface" role="struct">
+<title>struct FreeDesktopPropertiesIface</title>
+<indexterm zone="FreeDesktopPropertiesIface"><primary>FreeDesktopPropertiesIface</primary></indexterm>
+<programlisting>struct FreeDesktopPropertiesIface {
+	GTypeInterface parent_iface;
+	void (*get_all) (FreeDesktopProperties* self, const gchar* iface, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	GHashTable* (*get_all_finish) (FreeDesktopProperties* self, GAsyncResult* _res_, GError** error);
+};
+</programlisting>
+<para>
+Interface for creating <link linkend="FreeDesktopProperties"><type>FreeDesktopProperties</type></link> implementations.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="GTypeInterface"><type>GTypeInterface</type></link>&#160;<structfield id="FreeDesktopPropertiesIface.parent-iface">parent_iface</structfield>;</term>
+<listitem><simpara>the parent interface structure</simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="FreeDesktopPropertiesIface.get-all">get_all</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="free-desktop-properties-get-all"><function><link linkend="free-desktop-properties-get-all"><function>free_desktop_properties_get_all()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="FreeDesktopPropertiesIface.get-all-finish">get_all_finish</structfield>&#160;()</term>
+<listitem><simpara>asynchronous finish function for <structfield>get_all</structfield>, called by <link linkend="free-desktop-properties-get-all"><function><link linkend="free-desktop-properties-get-all"><function>free_desktop_properties_get_all()</function></link></function></link></simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 id="FreeDesktopDBusObject.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="FreeDesktopDBusObject-name-owner-changed" role="signal"><title>The <literal>&quot;name-owner-changed&quot;</literal> signal</title>
+<indexterm zone="FreeDesktopDBusObject-name-owner-changed"><primary>FreeDesktopDBusObject::name-owner-changed</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                user_function                      (<link linkend="FreeDesktopDBusObject"><type>FreeDesktopDBusObject</type></link> *dbus_object,
+                                                        <link linkend="gchar"><type>gchar</type></link>                 *name,
+                                                        <link linkend="gchar"><type>gchar</type></link>                 *old_owner,
+                                                        <link linkend="gchar"><type>gchar</type></link>                 *new_owner,
+                                                        <link linkend="gpointer"><type>gpointer</type></link>               user_data)        : <link linkend="G-SIGNAL-RUN-LAST:CAPS"><literal>Run Last</literal></link></programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>dbus_object</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="FreeDesktopDBusObject"><type>FreeDesktopDBusObject</type></link> instance that received the signal</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&#160;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+</refsect1>
+
+</refentry>

@@ -1,0 +1,122 @@
+<!-- ##### SECTION Title ##### -->
+GUPnPControlPoint
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT GUPnPControlPoint ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL GUPnPControlPoint::device-proxy-available ##### -->
+<para>
+
+</para>
+
+@gupnpcontrolpoint: the object which received the signal.
+@arg1: 
+
+<!-- ##### SIGNAL GUPnPControlPoint::device-proxy-unavailable ##### -->
+<para>
+
+</para>
+
+@gupnpcontrolpoint: the object which received the signal.
+@arg1: 
+
+<!-- ##### SIGNAL GUPnPControlPoint::service-proxy-available ##### -->
+<para>
+
+</para>
+
+@gupnpcontrolpoint: the object which received the signal.
+@arg1: 
+
+<!-- ##### SIGNAL GUPnPControlPoint::service-proxy-unavailable ##### -->
+<para>
+
+</para>
+
+@gupnpcontrolpoint: the object which received the signal.
+@arg1: 
+
+<!-- ##### ARG GUPnPControlPoint:resource-factory ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION gupnp_control_point_new ##### -->
+<para>
+
+</para>
+
+@context: 
+@target: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_control_point_new_full ##### -->
+<para>
+
+</para>
+
+@context: 
+@factory: 
+@target: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_control_point_get_resource_factory ##### -->
+<para>
+
+</para>
+
+@control_point: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_control_point_get_context ##### -->
+<para>
+
+</para>
+
+@control_point: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_control_point_list_device_proxies ##### -->
+<para>
+
+</para>
+
+@control_point: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_control_point_list_service_proxies ##### -->
+<para>
+
+</para>
+
+@control_point: 
+@Returns: 
+
+

@@ -1,0 +1,336 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelVisualItem">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelVisualItem.top_of_page">RygelVisualItem</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-SERVER Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelVisualItem</refname>
+<refpurpose>An interface that visual (video and image) items must implement.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelVisualItem.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis><link linkend="gint"><returnvalue>gint</returnvalue></link>                <link linkend="rygel-visual-item-get-width">rygel_visual_item_get_width</link>         (<parameter><link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> *self</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-visual-item-set-width">rygel_visual_item_set_width</link>         (<parameter><link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> *self</parameter>,
+                                                         <parameter><link linkend="gint"><type>gint</type></link> value</parameter>);
+<link linkend="gint"><returnvalue>gint</returnvalue></link>                <link linkend="rygel-visual-item-get-height">rygel_visual_item_get_height</link>        (<parameter><link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> *self</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-visual-item-set-height">rygel_visual_item_set_height</link>        (<parameter><link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> *self</parameter>,
+                                                         <parameter><link linkend="gint"><type>gint</type></link> value</parameter>);
+<link linkend="gint"><returnvalue>gint</returnvalue></link>                <link linkend="rygel-visual-item-get-pixel-width">rygel_visual_item_get_pixel_width</link>   (<parameter><link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> *self</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-visual-item-set-pixel-width">rygel_visual_item_set_pixel_width</link>   (<parameter><link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> *self</parameter>,
+                                                         <parameter><link linkend="gint"><type>gint</type></link> value</parameter>);
+<link linkend="gint"><returnvalue>gint</returnvalue></link>                <link linkend="rygel-visual-item-get-pixel-height">rygel_visual_item_get_pixel_height</link>  (<parameter><link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> *self</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-visual-item-set-pixel-height">rygel_visual_item_set_pixel_height</link>  (<parameter><link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> *self</parameter>,
+                                                         <parameter><link linkend="gint"><type>gint</type></link> value</parameter>);
+<link linkend="gint"><returnvalue>gint</returnvalue></link>                <link linkend="rygel-visual-item-get-color-depth">rygel_visual_item_get_color_depth</link>   (<parameter><link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> *self</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-visual-item-set-color-depth">rygel_visual_item_set_color_depth</link>   (<parameter><link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> *self</parameter>,
+                                                         <parameter><link linkend="gint"><type>gint</type></link> value</parameter>);
+<link linkend="GeeArrayList"><returnvalue>GeeArrayList</returnvalue></link> *      <link linkend="rygel-visual-item-get-thumbnails">rygel_visual_item_get_thumbnails</link>    (<parameter><link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> *self</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-visual-item-set-thumbnails">rygel_visual_item_set_thumbnails</link>    (<parameter><link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GeeArrayList"><type>GeeArrayList</type></link> *value</parameter>);
+                    <link linkend="RygelVisualItem-struct">RygelVisualItem</link>;
+struct              <link linkend="RygelVisualItemIface">RygelVisualItemIface</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelVisualItem.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GInterface">GInterface</link>
+   +----RygelVisualItem
+</synopsis>
+</refsect1>
+<refsect1 id="RygelVisualItem.prerequisites" role="prerequisites">
+<title role="prerequisites.title">Prerequisites</title>
+<para>
+RygelVisualItem requires
+ <link linkend="RygelMediaItem">RygelMediaItem</link>.</para>
+</refsect1>
+<refsect1 id="RygelVisualItem.implementations" role="implementations">
+<title role="implementations.title">Known Implementations</title>
+<para>
+RygelVisualItem is implemented by
+ <link linkend="RygelImageItem">RygelImageItem</link>,  <link linkend="RygelPhotoItem">RygelPhotoItem</link> and  <link linkend="RygelVideoItem">RygelVideoItem</link>.</para>
+</refsect1>
+<refsect1 id="RygelVisualItem.properties" role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+  &quot;<link linkend="RygelVisualItem--color-depth">color-depth</link>&quot;              <link linkend="gint"><type>gint</type></link>                  : Read / Write
+  &quot;<link linkend="RygelVisualItem--height">height</link>&quot;                   <link linkend="gint"><type>gint</type></link>                  : Read / Write
+  &quot;<link linkend="RygelVisualItem--pixel-height">pixel-height</link>&quot;             <link linkend="gint"><type>gint</type></link>                  : Read / Write
+  &quot;<link linkend="RygelVisualItem--pixel-width">pixel-width</link>&quot;              <link linkend="gint"><type>gint</type></link>                  : Read / Write
+  &quot;<link linkend="RygelVisualItem--thumbnails">thumbnails</link>&quot;               <link linkend="GeeArrayList"><type>GeeArrayList</type></link>*         : Read / Write
+  &quot;<link linkend="RygelVisualItem--width">width</link>&quot;                    <link linkend="gint"><type>gint</type></link>                  : Read / Write
+</synopsis>
+</refsect1>
+
+<refsect1 id="RygelVisualItem.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="RygelVisualItem.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="rygel-visual-item-get-width" role="function">
+<title>rygel_visual_item_get_width ()</title>
+<indexterm zone="rygel-visual-item-get-width"><primary>rygel_visual_item_get_width</primary></indexterm>
+<programlisting><link linkend="gint"><returnvalue>gint</returnvalue></link>                rygel_visual_item_get_width         (<parameter><link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> *self</parameter>);</programlisting>
+<para>
+Get and return the current value of the <link linkend="RygelVisualItem--width"><type>"width"</type></link> property.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> instance to query</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>the value of the <link linkend="RygelVisualItem--width"><type>"width"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-visual-item-set-width" role="function">
+<title>rygel_visual_item_set_width ()</title>
+<indexterm zone="rygel-visual-item-set-width"><primary>rygel_visual_item_set_width</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_visual_item_set_width         (<parameter><link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> *self</parameter>,
+                                                         <parameter><link linkend="gint"><type>gint</type></link> value</parameter>);</programlisting>
+<para>
+Set the value of the <link linkend="RygelVisualItem--width"><type>"width"</type></link> property to <parameter>value</parameter>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> instance to modify</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>value</parameter>&#160;:</term>
+<listitem><simpara>the new value of the <link linkend="RygelVisualItem--width"><type>"width"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-visual-item-get-height" role="function">
+<title>rygel_visual_item_get_height ()</title>
+<indexterm zone="rygel-visual-item-get-height"><primary>rygel_visual_item_get_height</primary></indexterm>
+<programlisting><link linkend="gint"><returnvalue>gint</returnvalue></link>                rygel_visual_item_get_height        (<parameter><link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> *self</parameter>);</programlisting>
+<para>
+Get and return the current value of the <link linkend="RygelVisualItem--height"><type>"height"</type></link> property.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> instance to query</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>the value of the <link linkend="RygelVisualItem--height"><type>"height"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-visual-item-set-height" role="function">
+<title>rygel_visual_item_set_height ()</title>
+<indexterm zone="rygel-visual-item-set-height"><primary>rygel_visual_item_set_height</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_visual_item_set_height        (<parameter><link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> *self</parameter>,
+                                                         <parameter><link linkend="gint"><type>gint</type></link> value</parameter>);</programlisting>
+<para>
+Set the value of the <link linkend="RygelVisualItem--height"><type>"height"</type></link> property to <parameter>value</parameter>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> instance to modify</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>value</parameter>&#160;:</term>
+<listitem><simpara>the new value of the <link linkend="RygelVisualItem--height"><type>"height"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-visual-item-get-pixel-width" role="function">
+<title>rygel_visual_item_get_pixel_width ()</title>
+<indexterm zone="rygel-visual-item-get-pixel-width"><primary>rygel_visual_item_get_pixel_width</primary></indexterm>
+<programlisting><link linkend="gint"><returnvalue>gint</returnvalue></link>                rygel_visual_item_get_pixel_width   (<parameter><link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> *self</parameter>);</programlisting>
+<para>
+Get and return the current value of the <link linkend="RygelVisualItem--pixel-width"><type>"pixel-width"</type></link> property.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> instance to query</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>the value of the <link linkend="RygelVisualItem--pixel-width"><type>"pixel-width"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-visual-item-set-pixel-width" role="function">
+<title>rygel_visual_item_set_pixel_width ()</title>
+<indexterm zone="rygel-visual-item-set-pixel-width"><primary>rygel_visual_item_set_pixel_width</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_visual_item_set_pixel_width   (<parameter><link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> *self</parameter>,
+                                                         <parameter><link linkend="gint"><type>gint</type></link> value</parameter>);</programlisting>
+<para>
+Set the value of the <link linkend="RygelVisualItem--pixel-width"><type>"pixel-width"</type></link> property to <parameter>value</parameter>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> instance to modify</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>value</parameter>&#160;:</term>
+<listitem><simpara>the new value of the <link linkend="RygelVisualItem--pixel-width"><type>"pixel-width"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-visual-item-get-pixel-height" role="function">
+<title>rygel_visual_item_get_pixel_height ()</title>
+<indexterm zone="rygel-visual-item-get-pixel-height"><primary>rygel_visual_item_get_pixel_height</primary></indexterm>
+<programlisting><link linkend="gint"><returnvalue>gint</returnvalue></link>                rygel_visual_item_get_pixel_height  (<parameter><link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> *self</parameter>);</programlisting>
+<para>
+Get and return the current value of the <link linkend="RygelVisualItem--pixel-height"><type>"pixel-height"</type></link> property.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> instance to query</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>the value of the <link linkend="RygelVisualItem--pixel-height"><type>"pixel-height"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-visual-item-set-pixel-height" role="function">
+<title>rygel_visual_item_set_pixel_height ()</title>
+<indexterm zone="rygel-visual-item-set-pixel-height"><primary>rygel_visual_item_set_pixel_height</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_visual_item_set_pixel_height  (<parameter><link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> *self</parameter>,
+                                                         <parameter><link linkend="gint"><type>gint</type></link> value</parameter>);</programlisting>
+<para>
+Set the value of the <link linkend="RygelVisualItem--pixel-height"><type>"pixel-height"</type></link> property to <parameter>value</parameter>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> instance to modify</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>value</parameter>&#160;:</term>
+<listitem><simpara>the new value of the <link linkend="RygelVisualItem--pixel-height"><type>"pixel-height"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-visual-item-get-color-depth" role="function">
+<title>rygel_visual_item_get_color_depth ()</title>
+<indexterm zone="rygel-visual-item-get-color-depth"><primary>rygel_visual_item_get_color_depth</primary></indexterm>
+<programlisting><link linkend="gint"><returnvalue>gint</returnvalue></link>                rygel_visual_item_get_color_depth   (<parameter><link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> *self</parameter>);</programlisting>
+<para>
+Get and return the current value of the <link linkend="RygelVisualItem--color-depth"><type>"color-depth"</type></link> property.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> instance to query</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>the value of the <link linkend="RygelVisualItem--color-depth"><type>"color-depth"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-visual-item-set-color-depth" role="function">
+<title>rygel_visual_item_set_color_depth ()</title>
+<indexterm zone="rygel-visual-item-set-color-depth"><primary>rygel_visual_item_set_color_depth</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_visual_item_set_color_depth   (<parameter><link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> *self</parameter>,
+                                                         <parameter><link linkend="gint"><type>gint</type></link> value</parameter>);</programlisting>
+<para>
+Set the value of the <link linkend="RygelVisualItem--color-depth"><type>"color-depth"</type></link> property to <parameter>value</parameter>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> instance to modify</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>value</parameter>&#160;:</term>
+<listitem><simpara>the new value of the <link linkend="RygelVisualItem--color-depth"><type>"color-depth"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-visual-item-get-thumbnails" role="function">
+<title>rygel_visual_item_get_thumbnails ()</title>
+<indexterm zone="rygel-visual-item-get-thumbnails"><primary>rygel_visual_item_get_thumbnails</primary></indexterm>
+<programlisting><link linkend="GeeArrayList"><returnvalue>GeeArrayList</returnvalue></link> *      rygel_visual_item_get_thumbnails    (<parameter><link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> *self</parameter>);</programlisting>
+<para>
+Get and return the current value of the <link linkend="RygelVisualItem--thumbnails"><type>"thumbnails"</type></link> property.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> instance to query</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>the value of the <link linkend="RygelVisualItem--thumbnails"><type>"thumbnails"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-visual-item-set-thumbnails" role="function">
+<title>rygel_visual_item_set_thumbnails ()</title>
+<indexterm zone="rygel-visual-item-set-thumbnails"><primary>rygel_visual_item_set_thumbnails</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_visual_item_set_thumbnails    (<parameter><link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GeeArrayList"><type>GeeArrayList</type></link> *value</parameter>);</programlisting>
+<para>
+Set the value of the <link linkend="RygelVisualItem--thumbnails"><type>"thumbnails"</type></link> property to <parameter>value</parameter>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> instance to modify</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>value</parameter>&#160;:</term>
+<listitem><simpara>the new value of the <link linkend="RygelVisualItem--thumbnails"><type>"thumbnails"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="RygelVisualItem-struct" role="struct">
+<title>RygelVisualItem</title>
+<indexterm zone="RygelVisualItem-struct"><primary>RygelVisualItem</primary></indexterm>
+<programlisting>typedef struct _RygelVisualItem RygelVisualItem;</programlisting>
+<para>
+An interface that visual (video and image) items must implement.
+</para></refsect2>
+<refsect2 id="RygelVisualItemIface" role="struct">
+<title>struct RygelVisualItemIface</title>
+<indexterm zone="RygelVisualItemIface"><primary>RygelVisualItemIface</primary></indexterm>
+<programlisting>struct RygelVisualItemIface {
+	GTypeInterface parent_iface;
+	gint (*get_width) (RygelVisualItem* self);
+	void (*set_width) (RygelVisualItem* self, gint value);
+	gint (*get_height) (RygelVisualItem* self);
+	void (*set_height) (RygelVisualItem* self, gint value);
+	gint (*get_pixel_width) (RygelVisualItem* self);
+	void (*set_pixel_width) (RygelVisualItem* self, gint value);
+	gint (*get_pixel_height) (RygelVisualItem* self);
+	void (*set_pixel_height) (RygelVisualItem* self, gint value);
+	gint (*get_color_depth) (RygelVisualItem* self);
+	void (*set_color_depth) (RygelVisualItem* self, gint value);
+	GeeArrayList* (*get_thumbnails) (RygelVisualItem* self);
+	void (*set_thumbnails) (RygelVisualItem* self, GeeArrayList* value);
+};
+</programlisting>
+<para>
+Interface for creating <link linkend="RygelVisualItem"><type>RygelVisualItem</type></link> implementations.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="GTypeInterface"><type>GTypeInterface</type></link>&#160;<structfield id="RygelVisualItemIface.parent-iface">parent_iface</structfield>;</term>
+<listitem><simpara>the parent interface structure</simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelVisualItemIface.get-width">get_width</structfield>&#160;()</term>
+<listitem><simpara>getter method for the abstract property <link linkend="RygelVisualItem--width"><type>"width"</type></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelVisualItemIface.set-width">set_width</structfield>&#160;()</term>
+<listitem><simpara>setter method for the abstract property <link linkend="RygelVisualItem--width"><type>"width"</type></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelVisualItemIface.get-height">get_height</structfield>&#160;()</term>
+<listitem><simpara>getter method for the abstract property <link linkend="RygelVisualItem--height"><type>"height"</type></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelVisualItemIface.set-height">set_height</structfield>&#160;()</term>
+<listitem><simpara>setter method for the abstract property <link linkend="RygelVisualItem--height"><type>"height"</type></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelVisualItemIface.get-pixel-width">get_pixel_width</structfield>&#160;()</term>
+<listitem><simpara>getter method for the abstract property <link linkend="RygelVisualItem--pixel-width"><type>"pixel-width"</type></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelVisualItemIface.set-pixel-width">set_pixel_width</structfield>&#160;()</term>
+<listitem><simpara>setter method for the abstract property <link linkend="RygelVisualItem--pixel-width"><type>"pixel-width"</type></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelVisualItemIface.get-pixel-height">get_pixel_height</structfield>&#160;()</term>
+<listitem><simpara>getter method for the abstract property <link linkend="RygelVisualItem--pixel-height"><type>"pixel-height"</type></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelVisualItemIface.set-pixel-height">set_pixel_height</structfield>&#160;()</term>
+<listitem><simpara>setter method for the abstract property <link linkend="RygelVisualItem--pixel-height"><type>"pixel-height"</type></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelVisualItemIface.get-color-depth">get_color_depth</structfield>&#160;()</term>
+<listitem><simpara>getter method for the abstract property <link linkend="RygelVisualItem--color-depth"><type>"color-depth"</type></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelVisualItemIface.set-color-depth">set_color_depth</structfield>&#160;()</term>
+<listitem><simpara>setter method for the abstract property <link linkend="RygelVisualItem--color-depth"><type>"color-depth"</type></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelVisualItemIface.get-thumbnails">get_thumbnails</structfield>&#160;()</term>
+<listitem><simpara>getter method for the abstract property <link linkend="RygelVisualItem--thumbnails"><type>"thumbnails"</type></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelVisualItemIface.set-thumbnails">set_thumbnails</structfield>&#160;()</term>
+<listitem><simpara>setter method for the abstract property <link linkend="RygelVisualItem--thumbnails"><type>"thumbnails"</type></link></simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 id="RygelVisualItem.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="RygelVisualItem--color-depth" role="property"><title>The <literal>&quot;color-depth&quot;</literal> property</title>
+<indexterm zone="RygelVisualItem--color-depth"><primary>RygelVisualItem:color-depth</primary></indexterm>
+<programlisting>  &quot;color-depth&quot;              <link linkend="gint"><type>gint</type></link>                  : Read / Write</programlisting>
+<para>
+The number of bits per pixel used to represent the video or image resource. A value of -1 means that the color depth is unknown and will not, or did not, appear in DIDL-Lite XML.
+</para><para>Default value: 0</para>
+</refsect2>
+<refsect2 id="RygelVisualItem--height" role="property"><title>The <literal>&quot;height&quot;</literal> property</title>
+<indexterm zone="RygelVisualItem--height"><primary>RygelVisualItem:height</primary></indexterm>
+<programlisting>  &quot;height&quot;                   <link linkend="gint"><type>gint</type></link>                  : Read / Write</programlisting>
+<para>
+The height of the item in pixels. A value of -1 means that the height is unknown and will not, or did not, appear in DIDL-Lite XML.
+</para><para>Default value: 0</para>
+</refsect2>
+<refsect2 id="RygelVisualItem--pixel-height" role="property"><title>The <literal>&quot;pixel-height&quot;</literal> property</title>
+<indexterm zone="RygelVisualItem--pixel-height"><primary>RygelVisualItem:pixel-height</primary></indexterm>
+<programlisting>  &quot;pixel-height&quot;             <link linkend="gint"><type>gint</type></link>                  : Read / Write</programlisting>
+<para>pixel-height.</para><para>Default value: 0</para>
+</refsect2>
+<refsect2 id="RygelVisualItem--pixel-width" role="property"><title>The <literal>&quot;pixel-width&quot;</literal> property</title>
+<indexterm zone="RygelVisualItem--pixel-width"><primary>RygelVisualItem:pixel-width</primary></indexterm>
+<programlisting>  &quot;pixel-width&quot;              <link linkend="gint"><type>gint</type></link>                  : Read / Write</programlisting>
+<para>pixel-width.</para><para>Default value: 0</para>
+</refsect2>
+<refsect2 id="RygelVisualItem--thumbnails" role="property"><title>The <literal>&quot;thumbnails&quot;</literal> property</title>
+<indexterm zone="RygelVisualItem--thumbnails"><primary>RygelVisualItem:thumbnails</primary></indexterm>
+<programlisting>  &quot;thumbnails&quot;               <link linkend="GeeArrayList"><type>GeeArrayList</type></link>*         : Read / Write</programlisting>
+<para>thumbnails.</para></refsect2>
+<refsect2 id="RygelVisualItem--width" role="property"><title>The <literal>&quot;width&quot;</literal> property</title>
+<indexterm zone="RygelVisualItem--width"><primary>RygelVisualItem:width</primary></indexterm>
+<programlisting>  &quot;width&quot;                    <link linkend="gint"><type>gint</type></link>                  : Read / Write</programlisting>
+<para>
+The width of the item in pixels. A value of -1 means that the width is unknown and will not, or did not, appear in DIDL-Lite XML.
+</para><para>Default value: 0</para>
+</refsect2>
+</refsect1>
+
+</refentry>

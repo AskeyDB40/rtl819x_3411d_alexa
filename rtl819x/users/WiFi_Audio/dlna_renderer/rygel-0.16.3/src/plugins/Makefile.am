@@ -1,0 +1,45 @@
+if BUILD_TEST_PLUGIN
+TEST_PLUGIN = test
+endif
+
+if BUILD_TRACKER_PLUGIN
+TRACKER_PLUGIN = tracker
+endif
+
+if BUILD_MEDIATHEK_PLUGIN
+MEDIATHEK_PLUGIN = mediathek
+endif
+
+if BUILD_MEDIA_EXPORT_PLUGIN
+MEDIA_EXPORT_PLUGIN = media-export
+endif
+
+if BUILD_EXTERNAL_PLUGIN
+EXTERNAL_PLUGIN = external
+endif
+
+if BUILD_MPRIS_PLUGIN
+MPRIS_PLUGIN = mpris
+endif
+
+if BUILD_GST_LAUNCH_PLUGIN
+GST_LAUNCH_PLUGIN = gst-launch
+endif
+
+if BUILD_PLAYBIN_PLUGIN
+PLAYBIN = playbin
+endif
+
+SUBDIRS = $(TEST_PLUGIN) \
+	  $(TRACKER_PLUGIN) \
+	  $(MEDIATHEK_PLUGIN) \
+	  $(MEDIA_EXPORT_PLUGIN) \
+	  $(EXTERNAL_PLUGIN) \
+	  $(MPRIS_PLUGIN) \
+	  $(GST_LAUNCH_PLUGIN) \
+          $(PLAYBIN)
+
+MAINTAINERCLEANFILES = Makefile.in
+
+vala-clean:
+	rm -f `find . -name "*.stamp"`

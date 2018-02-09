@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="librygel-server-rygel-content-directory">
+<refmeta>
+<refentrytitle role="top_of_page" id="librygel-server-rygel-content-directory.top_of_page">rygel-content-directory</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-SERVER Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>rygel-content-directory</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="librygel-server-rygel-content-directory.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>enum                <link linkend="RygelContentDirectoryError">RygelContentDirectoryError</link>;
+</synopsis>
+</refsynopsisdiv>
+
+<refsect1 id="librygel-server-rygel-content-directory.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="librygel-server-rygel-content-directory.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="RygelContentDirectoryError" role="enum">
+<title>enum RygelContentDirectoryError</title>
+<indexterm zone="RygelContentDirectoryError"><primary>RygelContentDirectoryError</primary></indexterm>
+<programlisting>typedef enum {
+	RYGEL_CONTENT_DIRECTORY_ERROR_NO_SUCH_OBJECT = 701,
+	RYGEL_CONTENT_DIRECTORY_ERROR_INVALID_SORT_CRITERIA = 709,
+	RYGEL_CONTENT_DIRECTORY_ERROR_RESTRICTED_OBJECT = 711,
+	RYGEL_CONTENT_DIRECTORY_ERROR_BAD_METADATA = 712,
+	RYGEL_CONTENT_DIRECTORY_ERROR_RESTRICTED_PARENT = 713,
+	RYGEL_CONTENT_DIRECTORY_ERROR_NO_SUCH_DESTINATION_RESOURCE = 718,
+	RYGEL_CONTENT_DIRECTORY_ERROR_CANT_PROCESS = 720,
+	RYGEL_CONTENT_DIRECTORY_ERROR_INVALID_ARGS = 402
+} RygelContentDirectoryError;
+</programlisting>
+<para>
+Errors used by ContentDirectory and deriving classes.
+</para></refsect2>
+
+</refsect1>
+
+</refentry>

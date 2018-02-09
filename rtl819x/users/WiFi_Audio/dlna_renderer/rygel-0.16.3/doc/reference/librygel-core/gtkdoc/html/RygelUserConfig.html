@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>RygelUserConfig</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="librygel-core Reference Manual">
+<link rel="up" href="ch01.html" title="librygel-core API Reference">
+<link rel="prev" href="RygelRootDevice.html" title="RygelRootDevice">
+<link rel="next" href="RygelCmdlineConfig.html" title="RygelCmdlineConfig">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="RygelRootDevice.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">librygel-core Reference Manual</th>
+<td><a accesskey="n" href="RygelCmdlineConfig.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#RygelUserConfig.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#RygelUserConfig.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#RygelUserConfig.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#RygelUserConfig.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="RygelUserConfig"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="RygelUserConfig.top_of_page"></a>RygelUserConfig</span></h2>
+<p>RygelUserConfig — Manages the user configuration for Rygel.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="RygelUserConfig.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">#define             <a class="link" href="RygelUserConfig.html#RYGEL-TYPE-USER-CONFIG:CAPS" title="RYGEL_TYPE_USER_CONFIG">RYGEL_TYPE_USER_CONFIG</a>
+#define             <a class="link" href="RygelUserConfig.html#RYGEL-USER-CONFIG-CONFIG-FILE:CAPS" title="RYGEL_USER_CONFIG_CONFIG_FILE">RYGEL_USER_CONFIG_CONFIG_FILE</a>
+#define             <a class="link" href="RygelUserConfig.html#RYGEL-USER-CONFIG-IFACE-KEY:CAPS" title="RYGEL_USER_CONFIG_IFACE_KEY">RYGEL_USER_CONFIG_IFACE_KEY</a>
+#define             <a class="link" href="RygelUserConfig.html#RYGEL-USER-CONFIG-PORT-KEY:CAPS" title="RYGEL_USER_CONFIG_PORT_KEY">RYGEL_USER_CONFIG_PORT_KEY</a>
+#define             <a class="link" href="RygelUserConfig.html#RYGEL-USER-CONFIG-ENABLED-KEY:CAPS" title="RYGEL_USER_CONFIG_ENABLED_KEY">RYGEL_USER_CONFIG_ENABLED_KEY</a>
+#define             <a class="link" href="RygelUserConfig.html#RYGEL-USER-CONFIG-UPNP-ENABLED-KEY:CAPS" title="RYGEL_USER_CONFIG_UPNP_ENABLED_KEY">RYGEL_USER_CONFIG_UPNP_ENABLED_KEY</a>
+#define             <a class="link" href="RygelUserConfig.html#RYGEL-USER-CONFIG-TITLE-KEY:CAPS" title="RYGEL_USER_CONFIG_TITLE_KEY">RYGEL_USER_CONFIG_TITLE_KEY</a>
+#define             <a class="link" href="RygelUserConfig.html#RYGEL-USER-CONFIG-TRANSCODING-KEY:CAPS" title="RYGEL_USER_CONFIG_TRANSCODING_KEY">RYGEL_USER_CONFIG_TRANSCODING_KEY</a>
+#define             <a class="link" href="RygelUserConfig.html#RYGEL-USER-CONFIG-MP3-TRANSCODER-KEY:CAPS" title="RYGEL_USER_CONFIG_MP3_TRANSCODER_KEY">RYGEL_USER_CONFIG_MP3_TRANSCODER_KEY</a>
+#define             <a class="link" href="RygelUserConfig.html#RYGEL-USER-CONFIG-MP2TS-TRANSCODER-KEY:CAPS" title="RYGEL_USER_CONFIG_MP2TS_TRANSCODER_KEY">RYGEL_USER_CONFIG_MP2TS_TRANSCODER_KEY</a>
+#define             <a class="link" href="RygelUserConfig.html#RYGEL-USER-CONFIG-LPCM-TRANSCODER-KEY:CAPS" title="RYGEL_USER_CONFIG_LPCM_TRANSCODER_KEY">RYGEL_USER_CONFIG_LPCM_TRANSCODER_KEY</a>
+#define             <a class="link" href="RygelUserConfig.html#RYGEL-USER-CONFIG-WMV-TRANSCODER-KEY:CAPS" title="RYGEL_USER_CONFIG_WMV_TRANSCODER_KEY">RYGEL_USER_CONFIG_WMV_TRANSCODER_KEY</a>
+#define             <a class="link" href="RygelUserConfig.html#RYGEL-USER-CONFIG-AAC-TRANSCODER-KEY:CAPS" title="RYGEL_USER_CONFIG_AAC_TRANSCODER_KEY">RYGEL_USER_CONFIG_AAC_TRANSCODER_KEY</a>
+#define             <a class="link" href="RygelUserConfig.html#RYGEL-USER-CONFIG-AVC-TRANSCODER-KEY:CAPS" title="RYGEL_USER_CONFIG_AVC_TRANSCODER_KEY">RYGEL_USER_CONFIG_AVC_TRANSCODER_KEY</a>
+#define             <a class="link" href="RygelUserConfig.html#RYGEL-USER-CONFIG-ALLOW-UPLOAD-KEY:CAPS" title="RYGEL_USER_CONFIG_ALLOW_UPLOAD_KEY">RYGEL_USER_CONFIG_ALLOW_UPLOAD_KEY</a>
+#define             <a class="link" href="RygelUserConfig.html#RYGEL-USER-CONFIG-ALLOW-DELETION-KEY:CAPS" title="RYGEL_USER_CONFIG_ALLOW_DELETION_KEY">RYGEL_USER_CONFIG_ALLOW_DELETION_KEY</a>
+#define             <a class="link" href="RygelUserConfig.html#RYGEL-USER-CONFIG-LOG-LEVELS-KEY:CAPS" title="RYGEL_USER_CONFIG_LOG_LEVELS_KEY">RYGEL_USER_CONFIG_LOG_LEVELS_KEY</a>
+#define             <a class="link" href="RygelUserConfig.html#RYGEL-USER-CONFIG-PLUGIN-PATH-KEY:CAPS" title="RYGEL_USER_CONFIG_PLUGIN_PATH_KEY">RYGEL_USER_CONFIG_PLUGIN_PATH_KEY</a>
+#define             <a class="link" href="RygelUserConfig.html#RYGEL-USER-CONFIG-UPLOAD-FOLDER-KEY:CAPS" title="RYGEL_USER_CONFIG_UPLOAD_FOLDER_KEY">RYGEL_USER_CONFIG_UPLOAD_FOLDER_KEY</a>
+#define             <a class="link" href="RygelUserConfig.html#RYGEL-USER-CONFIG-VIDEO-UPLOAD-DIR-PATH-KEY:CAPS" title="RYGEL_USER_CONFIG_VIDEO_UPLOAD_DIR_PATH_KEY">RYGEL_USER_CONFIG_VIDEO_UPLOAD_DIR_PATH_KEY</a>
+#define             <a class="link" href="RygelUserConfig.html#RYGEL-USER-CONFIG-MUSIC-UPLOAD-DIR-PATH-KEY:CAPS" title="RYGEL_USER_CONFIG_MUSIC_UPLOAD_DIR_PATH_KEY">RYGEL_USER_CONFIG_MUSIC_UPLOAD_DIR_PATH_KEY</a>
+#define             <a class="link" href="RygelUserConfig.html#RYGEL-USER-CONFIG-PICTURE-UPLOAD-DIR-PATH-KEY:CAPS" title="RYGEL_USER_CONFIG_PICTURE_UPLOAD_DIR_PATH_KEY">RYGEL_USER_CONFIG_PICTURE_UPLOAD_DIR_PATH_KEY</a>
+<a class="link" href="RygelUserConfig.html" title="RygelUserConfig"><span class="returnvalue">RygelUserConfig</span></a> *   <a class="link" href="RygelUserConfig.html#rygel-user-config-new" title="rygel_user_config_new ()">rygel_user_config_new</a>               (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *file</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a class="link" href="RygelUserConfig.html" title="RygelUserConfig"><span class="returnvalue">RygelUserConfig</span></a> *   <a class="link" href="RygelUserConfig.html#rygel-user-config-get-default" title="rygel_user_config_get_default ()">rygel_user_config_get_default</a>       (<em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+struct              <a class="link" href="RygelUserConfig.html#RygelUserConfig-struct" title="struct RygelUserConfig">RygelUserConfig</a>;
+struct              <a class="link" href="RygelUserConfig.html#RygelUserConfigClass" title="struct RygelUserConfigClass">RygelUserConfigClass</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelUserConfig.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="../gobject/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----RygelUserConfig
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelUserConfig.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+RygelUserConfig implements
+ <a class="link" href="RygelConfiguration.html" title="RygelConfiguration">RygelConfiguration</a>.</p>
+</div>
+<div class="refsect1">
+<a name="RygelUserConfig.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="RygelUserConfig.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="RYGEL-TYPE-USER-CONFIG:CAPS"></a><h3>RYGEL_TYPE_USER_CONFIG</h3>
+<pre class="programlisting">#define RYGEL_TYPE_USER_CONFIG (rygel_user_config_get_type ())
+</pre>
+<p>
+The type for <a class="link" href="RygelUserConfig.html" title="RygelUserConfig"><span class="type">RygelUserConfig</span></a>.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RYGEL-USER-CONFIG-CONFIG-FILE:CAPS"></a><h3>RYGEL_USER_CONFIG_CONFIG_FILE</h3>
+<pre class="programlisting">#define RYGEL_USER_CONFIG_CONFIG_FILE "rygel.conf"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RYGEL-USER-CONFIG-IFACE-KEY:CAPS"></a><h3>RYGEL_USER_CONFIG_IFACE_KEY</h3>
+<pre class="programlisting">#define RYGEL_USER_CONFIG_IFACE_KEY "interface"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RYGEL-USER-CONFIG-PORT-KEY:CAPS"></a><h3>RYGEL_USER_CONFIG_PORT_KEY</h3>
+<pre class="programlisting">#define RYGEL_USER_CONFIG_PORT_KEY "port"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RYGEL-USER-CONFIG-ENABLED-KEY:CAPS"></a><h3>RYGEL_USER_CONFIG_ENABLED_KEY</h3>
+<pre class="programlisting">#define RYGEL_USER_CONFIG_ENABLED_KEY "enabled"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RYGEL-USER-CONFIG-UPNP-ENABLED-KEY:CAPS"></a><h3>RYGEL_USER_CONFIG_UPNP_ENABLED_KEY</h3>
+<pre class="programlisting">#define RYGEL_USER_CONFIG_UPNP_ENABLED_KEY "upnp-" RYGEL_USER_CONFIG_ENABLED_KEY
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RYGEL-USER-CONFIG-TITLE-KEY:CAPS"></a><h3>RYGEL_USER_CONFIG_TITLE_KEY</h3>
+<pre class="programlisting">#define RYGEL_USER_CONFIG_TITLE_KEY "title"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RYGEL-USER-CONFIG-TRANSCODING-KEY:CAPS"></a><h3>RYGEL_USER_CONFIG_TRANSCODING_KEY</h3>
+<pre class="programlisting">#define RYGEL_USER_CONFIG_TRANSCODING_KEY "enable-transcoding"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RYGEL-USER-CONFIG-MP3-TRANSCODER-KEY:CAPS"></a><h3>RYGEL_USER_CONFIG_MP3_TRANSCODER_KEY</h3>
+<pre class="programlisting">#define RYGEL_USER_CONFIG_MP3_TRANSCODER_KEY "enable-mp3-transcoder"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RYGEL-USER-CONFIG-MP2TS-TRANSCODER-KEY:CAPS"></a><h3>RYGEL_USER_CONFIG_MP2TS_TRANSCODER_KEY</h3>
+<pre class="programlisting">#define RYGEL_USER_CONFIG_MP2TS_TRANSCODER_KEY "enable-mp2ts-transcoder"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RYGEL-USER-CONFIG-LPCM-TRANSCODER-KEY:CAPS"></a><h3>RYGEL_USER_CONFIG_LPCM_TRANSCODER_KEY</h3>
+<pre class="programlisting">#define RYGEL_USER_CONFIG_LPCM_TRANSCODER_KEY "enable-lpcm-transcoder"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RYGEL-USER-CONFIG-WMV-TRANSCODER-KEY:CAPS"></a><h3>RYGEL_USER_CONFIG_WMV_TRANSCODER_KEY</h3>
+<pre class="programlisting">#define RYGEL_USER_CONFIG_WMV_TRANSCODER_KEY "enable-wmv-transcoder"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RYGEL-USER-CONFIG-AAC-TRANSCODER-KEY:CAPS"></a><h3>RYGEL_USER_CONFIG_AAC_TRANSCODER_KEY</h3>
+<pre class="programlisting">#define RYGEL_USER_CONFIG_AAC_TRANSCODER_KEY "enable-aac-transcoder"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RYGEL-USER-CONFIG-AVC-TRANSCODER-KEY:CAPS"></a><h3>RYGEL_USER_CONFIG_AVC_TRANSCODER_KEY</h3>
+<pre class="programlisting">#define RYGEL_USER_CONFIG_AVC_TRANSCODER_KEY "enable-avc-transcoder"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RYGEL-USER-CONFIG-ALLOW-UPLOAD-KEY:CAPS"></a><h3>RYGEL_USER_CONFIG_ALLOW_UPLOAD_KEY</h3>
+<pre class="programlisting">#define RYGEL_USER_CONFIG_ALLOW_UPLOAD_KEY "allow-upload"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RYGEL-USER-CONFIG-ALLOW-DELETION-KEY:CAPS"></a><h3>RYGEL_USER_CONFIG_ALLOW_DELETION_KEY</h3>
+<pre class="programlisting">#define RYGEL_USER_CONFIG_ALLOW_DELETION_KEY "allow-deletion"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RYGEL-USER-CONFIG-LOG-LEVELS-KEY:CAPS"></a><h3>RYGEL_USER_CONFIG_LOG_LEVELS_KEY</h3>
+<pre class="programlisting">#define RYGEL_USER_CONFIG_LOG_LEVELS_KEY "log-level"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RYGEL-USER-CONFIG-PLUGIN-PATH-KEY:CAPS"></a><h3>RYGEL_USER_CONFIG_PLUGIN_PATH_KEY</h3>
+<pre class="programlisting">#define RYGEL_USER_CONFIG_PLUGIN_PATH_KEY "plugin-path"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RYGEL-USER-CONFIG-UPLOAD-FOLDER-KEY:CAPS"></a><h3>RYGEL_USER_CONFIG_UPLOAD_FOLDER_KEY</h3>
+<pre class="programlisting">#define RYGEL_USER_CONFIG_UPLOAD_FOLDER_KEY "upload-folder"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RYGEL-USER-CONFIG-VIDEO-UPLOAD-DIR-PATH-KEY:CAPS"></a><h3>RYGEL_USER_CONFIG_VIDEO_UPLOAD_DIR_PATH_KEY</h3>
+<pre class="programlisting">#define RYGEL_USER_CONFIG_VIDEO_UPLOAD_DIR_PATH_KEY "video-" RYGEL_USER_CONFIG_UPLOAD_FOLDER_KEY
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RYGEL-USER-CONFIG-MUSIC-UPLOAD-DIR-PATH-KEY:CAPS"></a><h3>RYGEL_USER_CONFIG_MUSIC_UPLOAD_DIR_PATH_KEY</h3>
+<pre class="programlisting">#define RYGEL_USER_CONFIG_MUSIC_UPLOAD_DIR_PATH_KEY "music-" RYGEL_USER_CONFIG_UPLOAD_FOLDER_KEY
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RYGEL-USER-CONFIG-PICTURE-UPLOAD-DIR-PATH-KEY:CAPS"></a><h3>RYGEL_USER_CONFIG_PICTURE_UPLOAD_DIR_PATH_KEY</h3>
+<pre class="programlisting">#define RYGEL_USER_CONFIG_PICTURE_UPLOAD_DIR_PATH_KEY "picture-" RYGEL_USER_CONFIG_UPLOAD_FOLDER_KEY
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-user-config-new"></a><h3>rygel_user_config_new ()</h3>
+<pre class="programlisting"><a class="link" href="RygelUserConfig.html" title="RygelUserConfig"><span class="returnvalue">RygelUserConfig</span></a> *   rygel_user_config_new               (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *file</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-user-config-get-default"></a><h3>rygel_user_config_get_default ()</h3>
+<pre class="programlisting"><a class="link" href="RygelUserConfig.html" title="RygelUserConfig"><span class="returnvalue">RygelUserConfig</span></a> *   rygel_user_config_get_default       (<em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelUserConfig-struct"></a><h3>struct RygelUserConfig</h3>
+<pre class="programlisting">struct RygelUserConfig;</pre>
+<p>
+Manages the user configuration for Rygel.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelUserConfigClass"></a><h3>struct RygelUserConfigClass</h3>
+<pre class="programlisting">struct RygelUserConfigClass {
+	GObjectClass parent_class;
+};
+</pre>
+<p>
+The class structure for <a class="link" href="RygelUserConfig.html#RYGEL-TYPE-USER-CONFIG:CAPS" title="RYGEL_TYPE_USER_CONFIG"><code class="literal">RYGEL_TYPE_USER_CONFIG</code></a>. All the fields in this structure are private and should never be accessed directly.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><a href="../gobject/gobject-The-Base-Object-Type.html#GObjectClass"><span class="type">GObjectClass</span></a> <em class="structfield"><code><a name="RygelUserConfigClass.parent-class"></a>parent_class</code></em>;</span></p></td>
+<td>the parent class structure</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

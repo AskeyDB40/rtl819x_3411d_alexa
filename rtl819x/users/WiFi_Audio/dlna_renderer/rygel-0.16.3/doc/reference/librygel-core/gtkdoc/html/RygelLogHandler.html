@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>RygelLogHandler</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="librygel-core Reference Manual">
+<link rel="up" href="ch01.html" title="librygel-core API Reference">
+<link rel="prev" href="RygelConfiguration.html" title="RygelConfiguration">
+<link rel="next" href="RygelResourceInfo.html" title="RygelResourceInfo">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="RygelConfiguration.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">librygel-core Reference Manual</th>
+<td><a accesskey="n" href="RygelResourceInfo.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#RygelLogHandler.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#RygelLogHandler.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#RygelLogHandler.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="RygelLogHandler"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="RygelLogHandler.top_of_page"></a>RygelLogHandler</span></h2>
+<p>RygelLogHandler</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="RygelLogHandler.synopsis"></a><h2>Synopsis</h2>
+<a name="RygelLogLevel"></a><pre class="synopsis">#define             <a class="link" href="RygelLogHandler.html#RYGEL-TYPE-LOG-HANDLER:CAPS" title="RYGEL_TYPE_LOG_HANDLER">RYGEL_TYPE_LOG_HANDLER</a>
+<a class="link" href="RygelLogHandler.html" title="RygelLogHandler"><span class="returnvalue">RygelLogHandler</span></a> *   <a class="link" href="RygelLogHandler.html#rygel-log-handler-get-default" title="rygel_log_handler_get_default ()">rygel_log_handler_get_default</a>       (<em class="parameter"><code><span class="type">void</span></code></em>);
+struct              <a class="link" href="RygelLogHandler.html#RygelLogHandler-struct" title="struct RygelLogHandler">RygelLogHandler</a>;
+struct              <a class="link" href="RygelLogHandler.html#RygelLogHandlerClass" title="struct RygelLogHandlerClass">RygelLogHandlerClass</a>;
+enum                <a class="link" href="RygelLogHandler.html#RygelLogLevel-enum" title="enum RygelLogLevel">RygelLogLevel</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelLogHandler.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="../gobject/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----RygelLogHandler
+</pre>
+<pre class="synopsis">
+  GEnum
+   +----RygelLogLevel
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelLogHandler.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="RygelLogHandler.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="RYGEL-TYPE-LOG-HANDLER:CAPS"></a><h3>RYGEL_TYPE_LOG_HANDLER</h3>
+<pre class="programlisting">#define RYGEL_TYPE_LOG_HANDLER (rygel_log_handler_get_type ())
+</pre>
+<p>
+The type for <a class="link" href="RygelLogHandler.html" title="RygelLogHandler"><span class="type">RygelLogHandler</span></a>.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-log-handler-get-default"></a><h3>rygel_log_handler_get_default ()</h3>
+<pre class="programlisting"><a class="link" href="RygelLogHandler.html" title="RygelLogHandler"><span class="returnvalue">RygelLogHandler</span></a> *   rygel_log_handler_get_default       (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelLogHandler-struct"></a><h3>struct RygelLogHandler</h3>
+<pre class="programlisting">struct RygelLogHandler;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelLogHandlerClass"></a><h3>struct RygelLogHandlerClass</h3>
+<pre class="programlisting">struct RygelLogHandlerClass {
+	GObjectClass parent_class;
+};
+</pre>
+<p>
+The class structure for <a class="link" href="RygelLogHandler.html#RYGEL-TYPE-LOG-HANDLER:CAPS" title="RYGEL_TYPE_LOG_HANDLER"><code class="literal">RYGEL_TYPE_LOG_HANDLER</code></a>. All the fields in this structure are private and should never be accessed directly.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><a href="../gobject/gobject-The-Base-Object-Type.html#GObjectClass"><span class="type">GObjectClass</span></a> <em class="structfield"><code><a name="RygelLogHandlerClass.parent-class"></a>parent_class</code></em>;</span></p></td>
+<td>the parent class structure</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelLogLevel-enum"></a><h3>enum RygelLogLevel</h3>
+<pre class="programlisting">typedef enum {
+	RYGEL_LOG_LEVEL_INVALID = 0,
+	RYGEL_LOG_LEVEL_CRITICAL = 1,
+	RYGEL_LOG_LEVEL_ERROR = 2,
+	RYGEL_LOG_LEVEL_WARNING = 3,
+	RYGEL_LOG_LEVEL_INFO = 4,
+	RYGEL_LOG_LEVEL_DEFAULT = 4,
+	RYGEL_LOG_LEVEL_DEBUG = 5
+} RygelLogLevel;
+</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

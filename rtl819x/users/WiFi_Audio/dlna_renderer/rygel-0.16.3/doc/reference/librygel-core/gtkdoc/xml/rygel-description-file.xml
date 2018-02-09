@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="DescriptionFile">
+<refmeta>
+<refentrytitle role="top_of_page" id="DescriptionFile.top_of_page">DescriptionFile</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-CORE Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>DescriptionFile</refname>
+<refpurpose>Represents a device description document and offers methods for easy manipulation of those.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="DescriptionFile.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="TYPE-DESCRIPTION-FILE:CAPS">TYPE_DESCRIPTION_FILE</link>
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="description-file-set-device-type">description_file_set_device_type</link>    (<parameter><link linkend="DescriptionFile"><type>DescriptionFile</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *device_type</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="description-file-set-model-name">description_file_set_model_name</link>     (<parameter><link linkend="DescriptionFile"><type>DescriptionFile</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *model_name</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="description-file-set-model-number">description_file_set_model_number</link>   (<parameter><link linkend="DescriptionFile"><type>DescriptionFile</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *model_number</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="description-file-set-friendly-name">description_file_set_friendly_name</link>  (<parameter><link linkend="DescriptionFile"><type>DescriptionFile</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *friendly_name</parameter>);
+<link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             <link linkend="description-file-get-friendly-name">description_file_get_friendly_name</link>  (<parameter><link linkend="DescriptionFile"><type>DescriptionFile</type></link> *self</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="description-file-modify-service-type">description_file_modify_service_type</link>
+                                                        (<parameter><link linkend="DescriptionFile"><type>DescriptionFile</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *old_type</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *new_type</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="description-file-save">description_file_save</link>               (<parameter><link linkend="DescriptionFile"><type>DescriptionFile</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *path</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="DescriptionFile"><returnvalue>DescriptionFile</returnvalue></link> *   <link linkend="description-file-new">description_file_new</link>                (<parameter>const <link linkend="gchar"><type>gchar</type></link> *template</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="DescriptionFile"><returnvalue>DescriptionFile</returnvalue></link> *   <link linkend="description-file-new-from-xml-document">description_file_new_from_xml_document</link>
+                                                        (<parameter><link linkend="GUPnPXMLDoc"><type>GUPnPXMLDoc</type></link> *doc</parameter>);
+struct              <link linkend="DescriptionFile-struct">DescriptionFile</link>;
+struct              <link linkend="DescriptionFileClass">DescriptionFileClass</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="DescriptionFile.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----DescriptionFile
+</synopsis>
+</refsect1>
+
+<refsect1 id="DescriptionFile.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="DescriptionFile.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="TYPE-DESCRIPTION-FILE:CAPS" role="macro">
+<title>TYPE_DESCRIPTION_FILE</title>
+<indexterm zone="TYPE-DESCRIPTION-FILE:CAPS"><primary>TYPE_DESCRIPTION_FILE</primary></indexterm>
+<programlisting>#define TYPE_DESCRIPTION_FILE (description_file_get_type ())
+</programlisting>
+<para>
+The type for <link linkend="DescriptionFile"><type>DescriptionFile</type></link>.
+</para></refsect2>
+<refsect2 id="description-file-set-device-type" role="function">
+<title>description_file_set_device_type ()</title>
+<indexterm zone="description-file-set-device-type"><primary>description_file_set_device_type</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                description_file_set_device_type    (<parameter><link linkend="DescriptionFile"><type>DescriptionFile</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *device_type</parameter>);</programlisting>
+<para>
+Change the type of a service.
+</para>
+<para>
+<para>Usually used to modify the device version, e.g. default device type is &quot;MediaServer:2&quot; and device_type = &quot;MediaServer:1&quot;.</para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="DescriptionFile"><type>DescriptionFile</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>device_type</parameter>&#160;:</term>
+<listitem><simpara>is the current content of serviceType. <emphasis role="annotation">[<acronym>in</acronym>]</emphasis></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="description-file-set-model-name" role="function">
+<title>description_file_set_model_name ()</title>
+<indexterm zone="description-file-set-model-name"><primary>description_file_set_model_name</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                description_file_set_model_name     (<parameter><link linkend="DescriptionFile"><type>DescriptionFile</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *model_name</parameter>);</programlisting>
+<para>
+Modify the model name.
+</para>
+<para>
+<para>Usually the name of the software implementing this device.</para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="DescriptionFile"><type>DescriptionFile</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>model_name</parameter>&#160;:</term>
+<listitem><simpara>is the new model name. <emphasis role="annotation">[<acronym>in</acronym>]</emphasis></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="description-file-set-model-number" role="function">
+<title>description_file_set_model_number ()</title>
+<indexterm zone="description-file-set-model-number"><primary>description_file_set_model_number</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                description_file_set_model_number   (<parameter><link linkend="DescriptionFile"><type>DescriptionFile</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *model_number</parameter>);</programlisting>
+<para>
+Modify the model number.
+</para>
+<para>
+<para>Usually the version of the software implementing this device.</para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="DescriptionFile"><type>DescriptionFile</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>model_number</parameter>&#160;:</term>
+<listitem><simpara>is the new model number. <emphasis role="annotation">[<acronym>in</acronym>]</emphasis></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="description-file-set-friendly-name" role="function">
+<title>description_file_set_friendly_name ()</title>
+<indexterm zone="description-file-set-friendly-name"><primary>description_file_set_friendly_name</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                description_file_set_friendly_name  (<parameter><link linkend="DescriptionFile"><type>DescriptionFile</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *friendly_name</parameter>);</programlisting>
+<para>
+Set the friendly name of the device.
+</para>
+<para>
+<para>The friendly name is the one usually presented to the user in control points or DMPs</para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="DescriptionFile"><type>DescriptionFile</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>friendly_name</parameter>&#160;:</term>
+<listitem><simpara>is the new friendly name of the device. <emphasis role="annotation">[<acronym>in</acronym>]</emphasis></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="description-file-get-friendly-name" role="function">
+<title>description_file_get_friendly_name ()</title>
+<indexterm zone="description-file-get-friendly-name"><primary>description_file_get_friendly_name</primary></indexterm>
+<programlisting><link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             description_file_get_friendly_name  (<parameter><link linkend="DescriptionFile"><type>DescriptionFile</type></link> *self</parameter>);</programlisting>
+<para>
+Get the current friendly name of the device.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="DescriptionFile"><type>DescriptionFile</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>The currenly set friendly name.</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="description-file-modify-service-type" role="function">
+<title>description_file_modify_service_type ()</title>
+<indexterm zone="description-file-modify-service-type"><primary>description_file_modify_service_type</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                description_file_modify_service_type
+                                                        (<parameter><link linkend="DescriptionFile"><type>DescriptionFile</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *old_type</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *new_type</parameter>);</programlisting>
+<para>
+Change the type of a service.
+</para>
+<para>
+<para>Usually used to modify the service version, e.g. old_type = &quot;ContentDirectory:2&quot; and new_type = &quot;ContentDirectory:1&quot;.</para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="DescriptionFile"><type>DescriptionFile</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>old_type</parameter>&#160;:</term>
+<listitem><simpara>is the current content of serviceType. <emphasis role="annotation">[<acronym>in</acronym>]</emphasis></simpara></listitem></varlistentry>
+<varlistentry><term><parameter>new_type</parameter>&#160;:</term>
+<listitem><simpara>is the content serviceType will be set to. <emphasis role="annotation">[<acronym>in</acronym>]</emphasis></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="description-file-save" role="function">
+<title>description_file_save ()</title>
+<indexterm zone="description-file-save"><primary>description_file_save</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                description_file_save               (<parameter><link linkend="DescriptionFile"><type>DescriptionFile</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *path</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>
+Writes the current document to a file.
+</para>
+<para>
+<para>It makes sure that the resulting file has the correct UTF-8 encoding and does not have any kind of newlines. This is necessary as some devices with broken XML parsers can&apos;t cope with UNIX newlines. If a file with the same name exists it will be overwritten.</para>
+<para><link linkend="GError"><type>GError</type></link> will be returned in <parameter>error</parameter> if anything fails while creating the XML dump. </para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="DescriptionFile"><type>DescriptionFile</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>path</parameter>&#160;:</term>
+<listitem><simpara>is a path to a file. <emphasis role="annotation">[<acronym>in</acronym>]</emphasis></simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="description-file-new" role="function">
+<title>description_file_new ()</title>
+<indexterm zone="description-file-new"><primary>description_file_new</primary></indexterm>
+<programlisting><link linkend="DescriptionFile"><returnvalue>DescriptionFile</returnvalue></link> *   description_file_new                (<parameter>const <link linkend="gchar"><type>gchar</type></link> *template</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>
+Constructor to load a description file from disk
+</para>
+<para>
+<para><link linkend="GUPNP-XML-ERROR-PARSE"><type>GUPNP_XML_ERROR_PARSE</type></link> will be returned in <parameter>error</parameter> if there was an error reading or parsing the file. </para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>template</parameter>&#160;:</term>
+<listitem><simpara>the path to the description file. <emphasis role="annotation">[<acronym>in</acronym>]</emphasis></simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="description-file-new-from-xml-document" role="function">
+<title>description_file_new_from_xml_document ()</title>
+<indexterm zone="description-file-new-from-xml-document"><primary>description_file_new_from_xml_document</primary></indexterm>
+<programlisting><link linkend="DescriptionFile"><returnvalue>DescriptionFile</returnvalue></link> *   description_file_new_from_xml_document
+                                                        (<parameter><link linkend="GUPnPXMLDoc"><type>GUPnPXMLDoc</type></link> *doc</parameter>);</programlisting>
+<para>
+Constructor which wraps an existing GUPnP.XMLDoc as a description file.
+</para><variablelist role="params">
+<varlistentry><term><parameter>doc</parameter>&#160;:</term>
+<listitem><simpara>is the GUPnP.XMLDoc to wrap. <emphasis role="annotation">[<acronym>in</acronym>]</emphasis></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="DescriptionFile-struct" role="struct">
+<title>struct DescriptionFile</title>
+<indexterm zone="DescriptionFile-struct"><primary>DescriptionFile</primary></indexterm>
+<programlisting>struct DescriptionFile;</programlisting>
+<para>
+Represents a device description document and offers methods for easy manipulation of those.
+</para></refsect2>
+<refsect2 id="DescriptionFileClass" role="struct">
+<title>struct DescriptionFileClass</title>
+<indexterm zone="DescriptionFileClass"><primary>DescriptionFileClass</primary></indexterm>
+<programlisting>struct DescriptionFileClass {
+	GObjectClass parent_class;
+};
+</programlisting>
+<para>
+The class structure for <link linkend="TYPE-DESCRIPTION-FILE:CAPS"><literal>TYPE_DESCRIPTION_FILE</literal></link>. All the fields in this structure are private and should never be accessed directly.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="GObjectClass"><type>GObjectClass</type></link>&#160;<structfield id="DescriptionFileClass.parent-class">parent_class</structfield>;</term>
+<listitem><simpara>the parent class structure</simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+</refentry>

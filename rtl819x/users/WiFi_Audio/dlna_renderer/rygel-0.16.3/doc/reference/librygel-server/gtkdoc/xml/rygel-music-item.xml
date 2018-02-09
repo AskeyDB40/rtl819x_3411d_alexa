@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelMusicItem">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelMusicItem.top_of_page">RygelMusicItem</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-SERVER Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelMusicItem</refname>
+<refpurpose>Represents a music item.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelMusicItem.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="RYGEL-TYPE-MUSIC-ITEM:CAPS">RYGEL_TYPE_MUSIC_ITEM</link>
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-music-item-lookup-album-art">rygel_music_item_lookup_album_art</link>   (<parameter><link linkend="RygelMusicItem"><type>RygelMusicItem</type></link> *self</parameter>);
+#define             <link linkend="RYGEL-MUSIC-ITEM-UPNP-CLASS:CAPS">RYGEL_MUSIC_ITEM_UPNP_CLASS</link>
+<link linkend="RygelMusicItem"><returnvalue>RygelMusicItem</returnvalue></link> *    <link linkend="rygel-music-item-new">rygel_music_item_new</link>                (<parameter>const <link linkend="gchar"><type>gchar</type></link> *id</parameter>,
+                                                         <parameter><link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> *parent</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *title</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *upnp_class</parameter>);
+struct              <link linkend="RygelMusicItem-struct">RygelMusicItem</link>;
+struct              <link linkend="RygelMusicItemClass">RygelMusicItemClass</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelMusicItem.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="RygelMediaObject">RygelMediaObject</link>
+         +----<link linkend="RygelMediaItem">RygelMediaItem</link>
+               +----<link linkend="RygelAudioItem">RygelAudioItem</link>
+                     +----RygelMusicItem
+</synopsis>
+</refsect1>
+
+<refsect1 id="RygelMusicItem.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="RygelMusicItem.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="RYGEL-TYPE-MUSIC-ITEM:CAPS" role="macro">
+<title>RYGEL_TYPE_MUSIC_ITEM</title>
+<indexterm zone="RYGEL-TYPE-MUSIC-ITEM:CAPS"><primary>RYGEL_TYPE_MUSIC_ITEM</primary></indexterm>
+<programlisting>#define RYGEL_TYPE_MUSIC_ITEM (rygel_music_item_get_type ())
+</programlisting>
+<para>
+The type for <link linkend="RygelMusicItem"><type>RygelMusicItem</type></link>.
+</para></refsect2>
+<refsect2 id="rygel-music-item-lookup-album-art" role="function">
+<title>rygel_music_item_lookup_album_art ()</title>
+<indexterm zone="rygel-music-item-lookup-album-art"><primary>rygel_music_item_lookup_album_art</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_music_item_lookup_album_art   (<parameter><link linkend="RygelMusicItem"><type>RygelMusicItem</type></link> *self</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMusicItem"><type>RygelMusicItem</type></link> instance</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="RYGEL-MUSIC-ITEM-UPNP-CLASS:CAPS" role="macro">
+<title>RYGEL_MUSIC_ITEM_UPNP_CLASS</title>
+<indexterm zone="RYGEL-MUSIC-ITEM-UPNP-CLASS:CAPS"><primary>RYGEL_MUSIC_ITEM_UPNP_CLASS</primary></indexterm>
+<programlisting>#define RYGEL_MUSIC_ITEM_UPNP_CLASS "object.item.audioItem.musicTrack"
+</programlisting>
+</refsect2>
+<refsect2 id="rygel-music-item-new" role="function">
+<title>rygel_music_item_new ()</title>
+<indexterm zone="rygel-music-item-new"><primary>rygel_music_item_new</primary></indexterm>
+<programlisting><link linkend="RygelMusicItem"><returnvalue>RygelMusicItem</returnvalue></link> *    rygel_music_item_new                (<parameter>const <link linkend="gchar"><type>gchar</type></link> *id</parameter>,
+                                                         <parameter><link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> *parent</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *title</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *upnp_class</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="RygelMusicItem-struct" role="struct">
+<title>struct RygelMusicItem</title>
+<indexterm zone="RygelMusicItem-struct"><primary>RygelMusicItem</primary></indexterm>
+<programlisting>struct RygelMusicItem;</programlisting>
+<para>
+Represents a music item.
+</para></refsect2>
+<refsect2 id="RygelMusicItemClass" role="struct">
+<title>struct RygelMusicItemClass</title>
+<indexterm zone="RygelMusicItemClass"><primary>RygelMusicItemClass</primary></indexterm>
+<programlisting>struct RygelMusicItemClass {
+	RygelAudioItemClass parent_class;
+};
+</programlisting>
+<para>
+The class structure for <link linkend="RYGEL-TYPE-MUSIC-ITEM:CAPS"><literal>RYGEL_TYPE_MUSIC_ITEM</literal></link>. All the fields in this structure are private and should never be accessed directly.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="RygelAudioItemClass"><type>RygelAudioItemClass</type></link>&#160;<structfield id="RygelMusicItemClass.parent-class">parent_class</structfield>;</term>
+<listitem><simpara>the parent class structure</simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+</refentry>

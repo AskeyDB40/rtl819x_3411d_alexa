@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>RygelMusicItem</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="librygel-server Reference Manual">
+<link rel="up" href="ch01.html" title="librygel-server API Reference">
+<link rel="prev" href="RygelLogicalExpression.html" title="RygelLogicalExpression">
+<link rel="next" href="RygelMediaServerPlugin.html" title="RygelMediaServerPlugin">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="RygelLogicalExpression.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">librygel-server Reference Manual</th>
+<td><a accesskey="n" href="RygelMediaServerPlugin.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#RygelMusicItem.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#RygelMusicItem.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#RygelMusicItem.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="RygelMusicItem"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="RygelMusicItem.top_of_page"></a>RygelMusicItem</span></h2>
+<p>RygelMusicItem — Represents a music item.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="RygelMusicItem.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">#define             <a class="link" href="RygelMusicItem.html#RYGEL-TYPE-MUSIC-ITEM:CAPS" title="RYGEL_TYPE_MUSIC_ITEM">RYGEL_TYPE_MUSIC_ITEM</a>
+<span class="returnvalue">void</span>                <a class="link" href="RygelMusicItem.html#rygel-music-item-lookup-album-art" title="rygel_music_item_lookup_album_art ()">rygel_music_item_lookup_album_art</a>   (<em class="parameter"><code><a class="link" href="RygelMusicItem.html" title="RygelMusicItem"><span class="type">RygelMusicItem</span></a> *self</code></em>);
+#define             <a class="link" href="RygelMusicItem.html#RYGEL-MUSIC-ITEM-UPNP-CLASS:CAPS" title="RYGEL_MUSIC_ITEM_UPNP_CLASS">RYGEL_MUSIC_ITEM_UPNP_CLASS</a>
+<a class="link" href="RygelMusicItem.html" title="RygelMusicItem"><span class="returnvalue">RygelMusicItem</span></a> *    <a class="link" href="RygelMusicItem.html#rygel-music-item-new" title="rygel_music_item_new ()">rygel_music_item_new</a>                (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *id</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="RygelMediaContainer.html" title="RygelMediaContainer"><span class="type">RygelMediaContainer</span></a> *parent</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *title</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *upnp_class</code></em>);
+struct              <a class="link" href="RygelMusicItem.html#RygelMusicItem-struct" title="struct RygelMusicItem">RygelMusicItem</a>;
+struct              <a class="link" href="RygelMusicItem.html#RygelMusicItemClass" title="struct RygelMusicItemClass">RygelMusicItemClass</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelMusicItem.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="../gobject/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="RygelMediaObject.html" title="RygelMediaObject">RygelMediaObject</a>
+         +----<a class="link" href="RygelMediaItem.html" title="RygelMediaItem">RygelMediaItem</a>
+               +----<a class="link" href="RygelAudioItem.html" title="RygelAudioItem">RygelAudioItem</a>
+                     +----RygelMusicItem
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelMusicItem.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="RygelMusicItem.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="RYGEL-TYPE-MUSIC-ITEM:CAPS"></a><h3>RYGEL_TYPE_MUSIC_ITEM</h3>
+<pre class="programlisting">#define RYGEL_TYPE_MUSIC_ITEM (rygel_music_item_get_type ())
+</pre>
+<p>
+The type for <a class="link" href="RygelMusicItem.html" title="RygelMusicItem"><span class="type">RygelMusicItem</span></a>.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-music-item-lookup-album-art"></a><h3>rygel_music_item_lookup_album_art ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                rygel_music_item_lookup_album_art   (<em class="parameter"><code><a class="link" href="RygelMusicItem.html" title="RygelMusicItem"><span class="type">RygelMusicItem</span></a> *self</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelMusicItem.html" title="RygelMusicItem"><span class="type">RygelMusicItem</span></a> instance</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RYGEL-MUSIC-ITEM-UPNP-CLASS:CAPS"></a><h3>RYGEL_MUSIC_ITEM_UPNP_CLASS</h3>
+<pre class="programlisting">#define RYGEL_MUSIC_ITEM_UPNP_CLASS "object.item.audioItem.musicTrack"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-music-item-new"></a><h3>rygel_music_item_new ()</h3>
+<pre class="programlisting"><a class="link" href="RygelMusicItem.html" title="RygelMusicItem"><span class="returnvalue">RygelMusicItem</span></a> *    rygel_music_item_new                (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *id</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="RygelMediaContainer.html" title="RygelMediaContainer"><span class="type">RygelMediaContainer</span></a> *parent</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *title</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *upnp_class</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelMusicItem-struct"></a><h3>struct RygelMusicItem</h3>
+<pre class="programlisting">struct RygelMusicItem;</pre>
+<p>
+Represents a music item.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelMusicItemClass"></a><h3>struct RygelMusicItemClass</h3>
+<pre class="programlisting">struct RygelMusicItemClass {
+	RygelAudioItemClass parent_class;
+};
+</pre>
+<p>
+The class structure for <a class="link" href="RygelMusicItem.html#RYGEL-TYPE-MUSIC-ITEM:CAPS" title="RYGEL_TYPE_MUSIC_ITEM"><code class="literal">RYGEL_TYPE_MUSIC_ITEM</code></a>. All the fields in this structure are private and should never be accessed directly.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><a class="link" href="RygelAudioItem.html#RygelAudioItemClass" title="struct RygelAudioItemClass"><span class="type">RygelAudioItemClass</span></a> <em class="structfield"><code><a name="RygelMusicItemClass.parent-class"></a>parent_class</code></em>;</span></p></td>
+<td>the parent class structure</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

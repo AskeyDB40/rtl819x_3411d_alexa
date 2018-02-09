@@ -1,0 +1,417 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GSSDPResourceGroup</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="GSSDP Reference Manual">
+<link rel="up" href="ch01.html" title="GSSDP">
+<link rel="prev" href="GSSDPResourceBrowser.html" title="GSSDPResourceBrowser">
+<link rel="next" href="gssdp-Error-codes.html" title="Error codes">
+<meta name="generator" content="GTK-Doc V1.17.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GSSDPResourceBrowser.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GSSDP Reference Manual</th>
+<td><a accesskey="n" href="gssdp-Error-codes.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GSSDPResourceGroup.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#GSSDPResourceGroup.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#GSSDPResourceGroup.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#GSSDPResourceGroup.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="GSSDPResourceGroup"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GSSDPResourceGroup.top_of_page"></a>GSSDPResourceGroup</span></h2>
+<p>GSSDPResourceGroup — Class for controlling resource announcement.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="GSSDPResourceGroup.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="GSSDPResourceGroup.html#GSSDPResourceGroup-struct" title="struct GSSDPResourceGroup">GSSDPResourceGroup</a>;
+<a class="link" href="GSSDPResourceGroup.html" title="GSSDPResourceGroup"><span class="returnvalue">GSSDPResourceGroup</span></a> * <a class="link" href="GSSDPResourceGroup.html#gssdp-resource-group-new" title="gssdp_resource_group_new ()">gssdp_resource_group_new</a>           (<em class="parameter"><code><a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a> *client</code></em>);
+<a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="returnvalue">GSSDPClient</span></a> *       <a class="link" href="GSSDPResourceGroup.html#gssdp-resource-group-get-client" title="gssdp_resource_group_get_client ()">gssdp_resource_group_get_client</a>     (<em class="parameter"><code><a class="link" href="GSSDPResourceGroup.html" title="GSSDPResourceGroup"><span class="type">GSSDPResourceGroup</span></a> *resource_group</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="GSSDPResourceGroup.html#gssdp-resource-group-set-max-age" title="gssdp_resource_group_set_max_age ()">gssdp_resource_group_set_max_age</a>    (<em class="parameter"><code><a class="link" href="GSSDPResourceGroup.html" title="GSSDPResourceGroup"><span class="type">GSSDPResourceGroup</span></a> *resource_group</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> max_age</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="GSSDPResourceGroup.html#gssdp-resource-group-get-max-age" title="gssdp_resource_group_get_max_age ()">gssdp_resource_group_get_max_age</a>    (<em class="parameter"><code><a class="link" href="GSSDPResourceGroup.html" title="GSSDPResourceGroup"><span class="type">GSSDPResourceGroup</span></a> *resource_group</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="GSSDPResourceGroup.html#gssdp-resource-group-set-available" title="gssdp_resource_group_set_available ()">gssdp_resource_group_set_available</a>  (<em class="parameter"><code><a class="link" href="GSSDPResourceGroup.html" title="GSSDPResourceGroup"><span class="type">GSSDPResourceGroup</span></a> *resource_group</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> available</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="GSSDPResourceGroup.html#gssdp-resource-group-get-available" title="gssdp_resource_group_get_available ()">gssdp_resource_group_get_available</a>  (<em class="parameter"><code><a class="link" href="GSSDPResourceGroup.html" title="GSSDPResourceGroup"><span class="type">GSSDPResourceGroup</span></a> *resource_group</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="GSSDPResourceGroup.html#gssdp-resource-group-set-message-delay" title="gssdp_resource_group_set_message_delay ()">gssdp_resource_group_set_message_delay</a>
+                                                        (<em class="parameter"><code><a class="link" href="GSSDPResourceGroup.html" title="GSSDPResourceGroup"><span class="type">GSSDPResourceGroup</span></a> *resource_group</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> message_delay</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="GSSDPResourceGroup.html#gssdp-resource-group-get-message-delay" title="gssdp_resource_group_get_message_delay ()">gssdp_resource_group_get_message_delay</a>
+                                                        (<em class="parameter"><code><a class="link" href="GSSDPResourceGroup.html" title="GSSDPResourceGroup"><span class="type">GSSDPResourceGroup</span></a> *resource_group</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="GSSDPResourceGroup.html#gssdp-resource-group-add-resource" title="gssdp_resource_group_add_resource ()">gssdp_resource_group_add_resource</a>   (<em class="parameter"><code><a class="link" href="GSSDPResourceGroup.html" title="GSSDPResourceGroup"><span class="type">GSSDPResourceGroup</span></a> *resource_group</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *target</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *usn</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> *locations</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="GSSDPResourceGroup.html#gssdp-resource-group-add-resource-simple" title="gssdp_resource_group_add_resource_simple ()">gssdp_resource_group_add_resource_simple</a>
+                                                        (<em class="parameter"><code><a class="link" href="GSSDPResourceGroup.html" title="GSSDPResourceGroup"><span class="type">GSSDPResourceGroup</span></a> *resource_group</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *target</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *usn</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *location</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="GSSDPResourceGroup.html#gssdp-resource-group-remove-resource" title="gssdp_resource_group_remove_resource ()">gssdp_resource_group_remove_resource</a>
+                                                        (<em class="parameter"><code><a class="link" href="GSSDPResourceGroup.html" title="GSSDPResourceGroup"><span class="type">GSSDPResourceGroup</span></a> *resource_group</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> resource_id</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSSDPResourceGroup.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----GSSDPResourceGroup
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSSDPResourceGroup.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="GSSDPResourceGroup.html#GSSDPResourceGroup--available" title='The "available" property'>available</a>"                <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write
+  "<a class="link" href="GSSDPResourceGroup.html#GSSDPResourceGroup--client" title='The "client" property'>client</a>"                   <a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a>*          : Read / Write / Construct Only
+  "<a class="link" href="GSSDPResourceGroup.html#GSSDPResourceGroup--max-age" title='The "max-age" property'>max-age</a>"                  <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read / Write
+  "<a class="link" href="GSSDPResourceGroup.html#GSSDPResourceGroup--message-delay" title='The "message-delay" property'>message-delay</a>"            <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSSDPResourceGroup.description"></a><h2>Description</h2>
+<p>
+A <a class="link" href="GSSDPResourceGroup.html" title="GSSDPResourceGroup"><span class="type">GSSDPResourceGroup</span></a> is a group of SSDP resources whose availability can
+be controlled as one. This is useful when one needs to announce a single
+service as multiple SSDP resources (UPnP does this for example).
+</p>
+</div>
+<div class="refsect1">
+<a name="GSSDPResourceGroup.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GSSDPResourceGroup-struct"></a><h3>struct GSSDPResourceGroup</h3>
+<pre class="programlisting">struct GSSDPResourceGroup;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gssdp-resource-group-new"></a><h3>gssdp_resource_group_new ()</h3>
+<pre class="programlisting"><a class="link" href="GSSDPResourceGroup.html" title="GSSDPResourceGroup"><span class="returnvalue">GSSDPResourceGroup</span></a> * gssdp_resource_group_new           (<em class="parameter"><code><a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a> *client</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>client</code></em> :</span></p></td>
+<td>The <a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a> to associate with</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A new <a class="link" href="GSSDPResourceGroup.html" title="GSSDPResourceGroup"><span class="type">GSSDPResourceGroup</span></a> object.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gssdp-resource-group-get-client"></a><h3>gssdp_resource_group_get_client ()</h3>
+<pre class="programlisting"><a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="returnvalue">GSSDPClient</span></a> *       gssdp_resource_group_get_client     (<em class="parameter"><code><a class="link" href="GSSDPResourceGroup.html" title="GSSDPResourceGroup"><span class="type">GSSDPResourceGroup</span></a> *resource_group</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>resource_group</code></em> :</span></p></td>
+<td>A <a class="link" href="GSSDPResourceGroup.html" title="GSSDPResourceGroup"><span class="type">GSSDPResourceGroup</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The <a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a> <em class="parameter"><code>resource_group</code></em> is associated with. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gssdp-resource-group-set-max-age"></a><h3>gssdp_resource_group_set_max_age ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gssdp_resource_group_set_max_age    (<em class="parameter"><code><a class="link" href="GSSDPResourceGroup.html" title="GSSDPResourceGroup"><span class="type">GSSDPResourceGroup</span></a> *resource_group</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> max_age</code></em>);</pre>
+<p>
+Sets the number of seconds advertisements are valid to <em class="parameter"><code>max_age</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>resource_group</code></em> :</span></p></td>
+<td>A <a class="link" href="GSSDPResourceGroup.html" title="GSSDPResourceGroup"><span class="type">GSSDPResourceGroup</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>max_age</code></em> :</span></p></td>
+<td>The number of seconds advertisements are valid</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gssdp-resource-group-get-max-age"></a><h3>gssdp_resource_group_get_max_age ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               gssdp_resource_group_get_max_age    (<em class="parameter"><code><a class="link" href="GSSDPResourceGroup.html" title="GSSDPResourceGroup"><span class="type">GSSDPResourceGroup</span></a> *resource_group</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>resource_group</code></em> :</span></p></td>
+<td>A <a class="link" href="GSSDPResourceGroup.html" title="GSSDPResourceGroup"><span class="type">GSSDPResourceGroup</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The number of seconds advertisements are valid.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gssdp-resource-group-set-available"></a><h3>gssdp_resource_group_set_available ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gssdp_resource_group_set_available  (<em class="parameter"><code><a class="link" href="GSSDPResourceGroup.html" title="GSSDPResourceGroup"><span class="type">GSSDPResourceGroup</span></a> *resource_group</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> available</code></em>);</pre>
+<p>
+Sets <em class="parameter"><code>resource_group</code></em>s availability to <em class="parameter"><code>available</code></em>. Changing
+<em class="parameter"><code>resource_group</code></em>s availability causes it to announce its new state
+to listening SSDP clients.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>resource_group</code></em> :</span></p></td>
+<td>A <a class="link" href="GSSDPResourceGroup.html" title="GSSDPResourceGroup"><span class="type">GSSDPResourceGroup</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>available</code></em> :</span></p></td>
+<td>TRUE if <em class="parameter"><code>resource_group</code></em> should be available (advertised)</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gssdp-resource-group-get-available"></a><h3>gssdp_resource_group_get_available ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gssdp_resource_group_get_available  (<em class="parameter"><code><a class="link" href="GSSDPResourceGroup.html" title="GSSDPResourceGroup"><span class="type">GSSDPResourceGroup</span></a> *resource_group</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>resource_group</code></em> :</span></p></td>
+<td>A <a class="link" href="GSSDPResourceGroup.html" title="GSSDPResourceGroup"><span class="type">GSSDPResourceGroup</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>TRUE if <em class="parameter"><code>resource_group</code></em> is available (advertised).</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gssdp-resource-group-set-message-delay"></a><h3>gssdp_resource_group_set_message_delay ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gssdp_resource_group_set_message_delay
+                                                        (<em class="parameter"><code><a class="link" href="GSSDPResourceGroup.html" title="GSSDPResourceGroup"><span class="type">GSSDPResourceGroup</span></a> *resource_group</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> message_delay</code></em>);</pre>
+<p>
+Sets the minimum time between each SSDP message.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>resource_group</code></em> :</span></p></td>
+<td>A <a class="link" href="GSSDPResourceGroup.html" title="GSSDPResourceGroup"><span class="type">GSSDPResourceGroup</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>message_delay</code></em> :</span></p></td>
+<td>The message delay in ms.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gssdp-resource-group-get-message-delay"></a><h3>gssdp_resource_group_get_message_delay ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               gssdp_resource_group_get_message_delay
+                                                        (<em class="parameter"><code><a class="link" href="GSSDPResourceGroup.html" title="GSSDPResourceGroup"><span class="type">GSSDPResourceGroup</span></a> *resource_group</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>resource_group</code></em> :</span></p></td>
+<td>A <a class="link" href="GSSDPResourceGroup.html" title="GSSDPResourceGroup"><span class="type">GSSDPResourceGroup</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the minimum time between each SSDP message in ms.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gssdp-resource-group-add-resource"></a><h3>gssdp_resource_group_add_resource ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               gssdp_resource_group_add_resource   (<em class="parameter"><code><a class="link" href="GSSDPResourceGroup.html" title="GSSDPResourceGroup"><span class="type">GSSDPResourceGroup</span></a> *resource_group</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *target</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *usn</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> *locations</code></em>);</pre>
+<p>
+Adds a resource with target <em class="parameter"><code>target</code></em>, USN <em class="parameter"><code>usn</code></em>, and locations <em class="parameter"><code>locations</code></em>
+to <em class="parameter"><code>resource_group</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>resource_group</code></em> :</span></p></td>
+<td>An <em class="parameter"><code>GSSDPResourceGroup</code></em>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>target</code></em> :</span></p></td>
+<td>The resource's target</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>usn</code></em> :</span></p></td>
+<td>The resource's USN</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>locations</code></em> :</span></p></td>
+<td>A <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> of the resource's locations</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The ID of the added resource.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gssdp-resource-group-add-resource-simple"></a><h3>gssdp_resource_group_add_resource_simple ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               gssdp_resource_group_add_resource_simple
+                                                        (<em class="parameter"><code><a class="link" href="GSSDPResourceGroup.html" title="GSSDPResourceGroup"><span class="type">GSSDPResourceGroup</span></a> *resource_group</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *target</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *usn</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *location</code></em>);</pre>
+<p>
+Adds a resource with target <em class="parameter"><code>target</code></em>, USN <em class="parameter"><code>usn</code></em>, and location <em class="parameter"><code>location</code></em>
+to <em class="parameter"><code>resource_group</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>resource_group</code></em> :</span></p></td>
+<td>An <em class="parameter"><code>GSSDPResourceGroup</code></em>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>target</code></em> :</span></p></td>
+<td>The resource's target</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>usn</code></em> :</span></p></td>
+<td>The resource's USN</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>location</code></em> :</span></p></td>
+<td>The resource's location</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The ID of the added resource.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gssdp-resource-group-remove-resource"></a><h3>gssdp_resource_group_remove_resource ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gssdp_resource_group_remove_resource
+                                                        (<em class="parameter"><code><a class="link" href="GSSDPResourceGroup.html" title="GSSDPResourceGroup"><span class="type">GSSDPResourceGroup</span></a> *resource_group</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> resource_id</code></em>);</pre>
+<p>
+Removes the resource with ID <em class="parameter"><code>resource_id</code></em> from <em class="parameter"><code>resource_group</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>resource_group</code></em> :</span></p></td>
+<td>An <em class="parameter"><code>GSSDPResourceGroup</code></em>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>resource_id</code></em> :</span></p></td>
+<td>The ID of the resource to remove</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="GSSDPResourceGroup.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="GSSDPResourceGroup--available"></a><h3>The <code class="literal">"available"</code> property</h3>
+<pre class="programlisting">  "available"                <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read / Write</pre>
+<p>
+Whether this group of resources is available or not.
+</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GSSDPResourceGroup--client"></a><h3>The <code class="literal">"client"</code> property</h3>
+<pre class="programlisting">  "client"                   <a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a>*          : Read / Write / Construct Only</pre>
+<p>
+The <a class="link" href="GSSDPClient.html" title="GSSDPClient"><span class="type">GSSDPClient</span></a> to use.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GSSDPResourceGroup--max-age"></a><h3>The <code class="literal">"max-age"</code> property</h3>
+<pre class="programlisting">  "max-age"                  <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read / Write</pre>
+<p>
+The number of seconds our advertisements are valid.
+</p>
+<p>Default value: 1800</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GSSDPResourceGroup--message-delay"></a><h3>The <code class="literal">"message-delay"</code> property</h3>
+<pre class="programlisting">  "message-delay"            <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a>                 : Read / Write</pre>
+<p>
+The minimum number of milliseconds between SSDP messages.
+The default is 120 based on DLNA specification.
+</p>
+<p>Default value: 120</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.17.1</div>
+</body>
+</html>

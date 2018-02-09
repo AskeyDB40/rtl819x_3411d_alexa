@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelMediaServer">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelMediaServer.top_of_page">RygelMediaServer</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-SERVER Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelMediaServer</refname>
+<refpurpose>This class may be used to implement in-process UPnP-AV media servers.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelMediaServer.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="RYGEL-TYPE-MEDIA-SERVER:CAPS">RYGEL_TYPE_MEDIA_SERVER</link>
+<link linkend="RygelMediaServer"><returnvalue>RygelMediaServer</returnvalue></link> *  <link linkend="rygel-media-server-new">rygel_media_server_new</link>              (<parameter>const <link linkend="gchar"><type>gchar</type></link> *title</parameter>,
+                                                         <parameter><link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> *root_container</parameter>);
+struct              <link linkend="RygelMediaServer-struct">RygelMediaServer</link>;
+struct              <link linkend="RygelMediaServerClass">RygelMediaServerClass</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelMediaServer.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="RygelMediaDevice">RygelMediaDevice</link>
+         +----RygelMediaServer
+</synopsis>
+</refsect1>
+
+<refsect1 id="RygelMediaServer.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+<para>Call <link linkend="rygel-media-device-add-interface"><function>rygel_media_device_add_interface()</function></link> on the RygelMediaServer to allow it to serve media via that network interface.</para><para>See the standalone-server.c example.</para>
+</para>
+</refsect1>
+<refsect1 id="RygelMediaServer.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="RYGEL-TYPE-MEDIA-SERVER:CAPS" role="macro">
+<title>RYGEL_TYPE_MEDIA_SERVER</title>
+<indexterm zone="RYGEL-TYPE-MEDIA-SERVER:CAPS"><primary>RYGEL_TYPE_MEDIA_SERVER</primary></indexterm>
+<programlisting>#define RYGEL_TYPE_MEDIA_SERVER (rygel_media_server_get_type ())
+</programlisting>
+<para>
+The type for <link linkend="RygelMediaServer"><type>RygelMediaServer</type></link>.
+</para></refsect2>
+<refsect2 id="rygel-media-server-new" role="function">
+<title>rygel_media_server_new ()</title>
+<indexterm zone="rygel-media-server-new"><primary>rygel_media_server_new</primary></indexterm>
+<programlisting><link linkend="RygelMediaServer"><returnvalue>RygelMediaServer</returnvalue></link> *  rygel_media_server_new              (<parameter>const <link linkend="gchar"><type>gchar</type></link> *title</parameter>,
+                                                         <parameter><link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> *root_container</parameter>);</programlisting>
+<para>
+Create a MediaServer to serve the media in the RygelMediaContainer. For instance, you might use a RygelSimpleContainer. Alternatively, you might use your own RygelMediaContainer implementation.
+</para>
+<para>
+<para>Assuming that the RygelMediaContainer is correctly implemented, the RygelMediaServer will respond appropriately to changes in the RygelMediaContainer.</para>
+</para></refsect2>
+<refsect2 id="RygelMediaServer-struct" role="struct">
+<title>struct RygelMediaServer</title>
+<indexterm zone="RygelMediaServer-struct"><primary>RygelMediaServer</primary></indexterm>
+<programlisting>struct RygelMediaServer;</programlisting>
+<para>
+This class may be used to implement in-process UPnP-AV media servers.
+</para>
+<para>
+<para>Call <link linkend="rygel-media-device-add-interface"><function>rygel_media_device_add_interface()</function></link> on the RygelMediaServer to allow it to serve media via that network interface.</para><para>See the standalone-server.c example.</para>
+</para></refsect2>
+<refsect2 id="RygelMediaServerClass" role="struct">
+<title>struct RygelMediaServerClass</title>
+<indexterm zone="RygelMediaServerClass"><primary>RygelMediaServerClass</primary></indexterm>
+<programlisting>struct RygelMediaServerClass {
+	RygelMediaDeviceClass parent_class;
+};
+</programlisting>
+<para>
+The class structure for <link linkend="RYGEL-TYPE-MEDIA-SERVER:CAPS"><literal>RYGEL_TYPE_MEDIA_SERVER</literal></link>. All the fields in this structure are private and should never be accessed directly.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="RygelMediaDeviceClass"><type>RygelMediaDeviceClass</type></link>&#160;<structfield id="RygelMediaServerClass.parent-class">parent_class</structfield>;</term>
+<listitem><simpara>the parent class structure</simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,168 @@
+<!-- ##### SECTION Title ##### -->
+GUPnPContext
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT GUPnPContext ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG GUPnPContext:default-language ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GUPnPContext:port ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GUPnPContext:server ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GUPnPContext:session ##### -->
+<para>
+
+</para>
+
+<!-- ##### ARG GUPnPContext:subscription-timeout ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION gupnp_context_new ##### -->
+<para>
+
+</para>
+
+@main_context: 
+@interface: 
+@port: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_context_get_host_ip ##### -->
+<para>
+
+</para>
+
+@context: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_context_get_port ##### -->
+<para>
+
+</para>
+
+@context: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_context_get_server ##### -->
+<para>
+
+</para>
+
+@context: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_context_get_session ##### -->
+<para>
+
+</para>
+
+@context: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_context_set_subscription_timeout ##### -->
+<para>
+
+</para>
+
+@context: 
+@timeout: 
+
+
+<!-- ##### FUNCTION gupnp_context_get_subscription_timeout ##### -->
+<para>
+
+</para>
+
+@context: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_context_get_default_language ##### -->
+<para>
+
+</para>
+
+@context: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_context_set_default_language ##### -->
+<para>
+
+</para>
+
+@context: 
+@language: 
+
+
+<!-- ##### FUNCTION gupnp_context_host_path ##### -->
+<para>
+
+</para>
+
+@context: 
+@local_path: 
+@server_path: 
+
+
+<!-- ##### FUNCTION gupnp_context_host_path_for_agent ##### -->
+<para>
+
+</para>
+
+@context: 
+@local_path: 
+@server_path: 
+@user_agent: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_context_unhost_path ##### -->
+<para>
+
+</para>
+
+@context: 
+@server_path: 
+
+

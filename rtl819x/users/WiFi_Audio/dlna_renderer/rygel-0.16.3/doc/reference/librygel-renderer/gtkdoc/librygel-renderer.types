@@ -1,0 +1,5 @@
+rygel_media_player_get_type
+rygel_media_renderer_plugin_get_type
+rygel_playbin_player_get_type
+rygel_playbin_plugin_get_type
+rygel_playbin_renderer_get_type

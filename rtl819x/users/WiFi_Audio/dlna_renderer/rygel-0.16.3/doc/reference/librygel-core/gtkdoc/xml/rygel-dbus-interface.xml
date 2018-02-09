@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelDBusInterface">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelDBusInterface.top_of_page">RygelDBusInterface</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-CORE Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelDBusInterface</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelDBusInterface.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis><link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-dbus-interface-shutdown">rygel_dbus_interface_shutdown</link>       (<parameter><link linkend="RygelDBusInterface"><type>RygelDBusInterface</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+#define             <link linkend="RYGEL-DBUS-INTERFACE-SERVICE-NAME:CAPS">RYGEL_DBUS_INTERFACE_SERVICE_NAME</link>
+#define             <link linkend="RYGEL-DBUS-INTERFACE-OBJECT-PATH:CAPS">RYGEL_DBUS_INTERFACE_OBJECT_PATH</link>
+                    <link linkend="RygelDBusInterface-struct">RygelDBusInterface</link>;
+struct              <link linkend="RygelDBusInterfaceIface">RygelDBusInterfaceIface</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelDBusInterface.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GInterface">GInterface</link>
+   +----RygelDBusInterface
+</synopsis>
+</refsect1>
+<refsect1 id="RygelDBusInterface.prerequisites" role="prerequisites">
+<title role="prerequisites.title">Prerequisites</title>
+<para>
+RygelDBusInterface requires
+ <link linkend="GObject">GObject</link>.</para>
+</refsect1>
+
+<refsect1 id="RygelDBusInterface.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="RygelDBusInterface.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="rygel-dbus-interface-shutdown" role="function">
+<title>rygel_dbus_interface_shutdown ()</title>
+<indexterm zone="rygel-dbus-interface-shutdown"><primary>rygel_dbus_interface_shutdown</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_dbus_interface_shutdown       (<parameter><link linkend="RygelDBusInterface"><type>RygelDBusInterface</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelDBusInterface"><type>RygelDBusInterface</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore. <emphasis role="annotation">[<acronym>error-domains</acronym> GIOErrorEnum]</emphasis></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="RYGEL-DBUS-INTERFACE-SERVICE-NAME:CAPS" role="macro">
+<title>RYGEL_DBUS_INTERFACE_SERVICE_NAME</title>
+<indexterm zone="RYGEL-DBUS-INTERFACE-SERVICE-NAME:CAPS"><primary>RYGEL_DBUS_INTERFACE_SERVICE_NAME</primary></indexterm>
+<programlisting>#define RYGEL_DBUS_INTERFACE_SERVICE_NAME "org.gnome.Rygel1"
+</programlisting>
+</refsect2>
+<refsect2 id="RYGEL-DBUS-INTERFACE-OBJECT-PATH:CAPS" role="macro">
+<title>RYGEL_DBUS_INTERFACE_OBJECT_PATH</title>
+<indexterm zone="RYGEL-DBUS-INTERFACE-OBJECT-PATH:CAPS"><primary>RYGEL_DBUS_INTERFACE_OBJECT_PATH</primary></indexterm>
+<programlisting>#define RYGEL_DBUS_INTERFACE_OBJECT_PATH "/org/gnome/Rygel1"
+</programlisting>
+</refsect2>
+<refsect2 id="RygelDBusInterface-struct" role="struct">
+<title>RygelDBusInterface</title>
+<indexterm zone="RygelDBusInterface-struct"><primary>RygelDBusInterface</primary></indexterm>
+<programlisting>typedef struct _RygelDBusInterface RygelDBusInterface;</programlisting>
+</refsect2>
+<refsect2 id="RygelDBusInterfaceIface" role="struct">
+<title>struct RygelDBusInterfaceIface</title>
+<indexterm zone="RygelDBusInterfaceIface"><primary>RygelDBusInterfaceIface</primary></indexterm>
+<programlisting>struct RygelDBusInterfaceIface {
+	GTypeInterface parent_iface;
+	void (*shutdown) (RygelDBusInterface* self, GError** error);
+};
+</programlisting>
+<para>
+Interface for creating <link linkend="RygelDBusInterface"><type>RygelDBusInterface</type></link> implementations.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="GTypeInterface"><type>GTypeInterface</type></link>&#160;<structfield id="RygelDBusInterfaceIface.parent-iface">parent_iface</structfield>;</term>
+<listitem><simpara>the parent interface structure</simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelDBusInterfaceIface.shutdown">shutdown</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-dbus-interface-shutdown"><function><link linkend="rygel-dbus-interface-shutdown"><function>rygel_dbus_interface_shutdown()</function></link></function></link></simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+</refentry>

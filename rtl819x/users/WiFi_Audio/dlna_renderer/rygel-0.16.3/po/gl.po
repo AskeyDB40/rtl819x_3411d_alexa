@@ -1,0 +1,965 @@
+# Galician translations for rygel.
+# Copyright (C) 2012 Leandro Regueiro
+# This file is distributed under the same license as the rygel package.
+#
+# Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas
+# colaborar connosco, podes atopar máis información en http://www.trasno.net
+#
+# Fran Diéguez <frandieguez@gnome.org>, 2010, 2011, 2012.
+# Leandro Regueiro <leandro.regueiro@gmail.com>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: rygel master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-08-17 00:06+0200\n"
+"PO-Revision-Date: 2012-08-16 12:18+0200\n"
+"Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
+"Language-Team: Galego <kde-i18n-doc@kde.org>\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Lokalize 1.0\n"
+
+#: ../data/rygel-preferences.ui.h:1
+#: ../data/rygel-preferences.desktop.in.in.h:1
+msgid "Rygel Preferences"
+msgstr "Preferencias de Rygel"
+
+#: ../data/rygel-preferences.ui.h:2
+msgid "_Share media through DLNA"
+msgstr "_Compartir multimedia mediante DLNA"
+
+#: ../data/rygel-preferences.ui.h:3
+msgid "Enable sharing of media, such as photos, videos and music, with DLNA"
+msgstr ""
+"Activar a compartición de medios, tales como fotos, vídeos e múscia, con DLNA"
+
+#: ../data/rygel-preferences.ui.h:4
+msgid "Add a directory to the list of shared directories"
+msgstr "Engadir un cartafol da lista de cartafoles compartidos"
+
+#: ../data/rygel-preferences.ui.h:5
+msgid "Add shared directory"
+msgstr "Engadir un cartafol compartido"
+
+#: ../data/rygel-preferences.ui.h:6
+msgid "Remove a directory from the list of shared directories"
+msgstr "Retirar un cartafol da lista de cartafoles compartidos"
+
+#: ../data/rygel-preferences.ui.h:7
+msgid "Remove shared directory"
+msgstr "Retirar cartafol compartido"
+
+#. Network Interface
+#: ../data/rygel-preferences.ui.h:9
+msgid "_Network:"
+msgstr "_Rede:"
+
+#: ../data/rygel-preferences.ui.h:10
+msgid ""
+"Select the network interface that DLNA media will be shared on, or share "
+"media on all interfaces"
+msgstr ""
+"Seleccione a interface de rede na que se compartirán os medios DLNS, ou "
+"compartir os medios en todas as interfaces"
+
+#: ../data/rygel-preferences.ui.h:11
+msgid "Any"
+msgstr "Calquera"
+
+#: ../data/rygel-preferences.ui.h:12
+msgid "Select folders"
+msgstr "Seleccionar cartafoles"
+
+#: ../data/rygel-preferences.desktop.in.in.h:2
+msgid "UPnP/DLNA Preferences"
+msgstr "Preferencias de UPnP/DLNA"
+
+#: ../data/rygel.desktop.in.in.h:1
+msgid "Rygel"
+msgstr "Rygel"
+
+#: ../data/rygel.desktop.in.in.h:2
+msgid "UPnP/DLNA Services"
+msgstr "Servizos de UPnP/DLNA"
+
+#: ../src/plugins/media-export/rygel-media-export-database.vala:210
+#, c-format
+msgid "Failed to roll back transaction: %s"
+msgstr "Produciuse un erro ao desfacer a transacción: %s"
+
+#: ../src/plugins/media-export/rygel-media-export-metadata-extractor.vala:134
+#: ../src/librygel-core/rygel-plugin-loader.vala:194
+#, c-format
+msgid "Failed to query content type for '%s'"
+msgstr "Produciuse un erro ao consultar o tipo de contido para «%s»"
+
+#: ../src/plugins/media-export/rygel-media-export-media-cache.vala:112
+#, c-format
+msgid "Failed to add item with ID %s: %s"
+msgstr "Produciuse un erro ao engadir o elemento con ID %s: %s"
+
+#: ../src/plugins/media-export/rygel-media-export-dbus-service.vala:38
+#, c-format
+msgid "Failed to attach to D-Bus session bus: %s"
+msgstr "Produciuse un erro ao anexarse ao bus de sesión D-Bus: %s"
+
+#: ../src/plugins/media-export/rygel-media-export-harvester.vala:78
+msgid "No metadata extractor available. Will not crawl."
+msgstr "Non hai dispoñíbel ningún extractor de metadatos. Non se analizará."
+
+#: ../src/plugins/media-export/rygel-media-export-harvester.vala:121
+#, c-format
+msgid "'%s' harvested"
+msgstr "«%s» recolectado"
+
+#: ../src/plugins/media-export/rygel-media-export-harvester.vala:211
+#, c-format
+msgid "Error fetching object '%s' from database: %s"
+msgstr "Produciuse un erro ao obter o obxecto «%s» desde a base de datos: %s"
+
+#: ../src/plugins/media-export/rygel-media-export-harvester.vala:217
+#, c-format
+msgid "Failed to access media cache: %s"
+msgstr "Produciuse un erro ao acceder á caché multimedia: %s"
+
+#: ../src/plugins/media-export/rygel-media-export-harvester.vala:256
+#, c-format
+msgid "Error removing object from database: %s"
+msgstr "Produciuse un erro ao retirar o obxecto da base de datos: %s"
+
+#: ../src/plugins/media-export/rygel-media-export-recursive-file-monitor.vala:40
+msgid "Will not monitor file changes"
+msgstr "Non se monitorizarán cambios en ficheiros"
+
+#: ../src/plugins/media-export/rygel-media-export-recursive-file-monitor.vala:98
+#, c-format
+msgid "Failed to get file info for %s"
+msgstr "Produciuse un erro ao obter o ficheiro de información para %s"
+
+#: ../src/plugins/media-export/rygel-media-export-root-container.vala:30
+#: ../src/plugins/tracker/rygel-tracker-years.vala:33
+msgid "Year"
+msgstr "Ano"
+
+#: ../src/plugins/media-export/rygel-media-export-root-container.vala:31
+msgid "All"
+msgstr "Todo"
+
+#: ../src/plugins/media-export/rygel-media-export-root-container.vala:35
+msgid "Artist"
+msgstr "Artista"
+
+#: ../src/plugins/media-export/rygel-media-export-root-container.vala:36
+msgid "Album"
+msgstr "Álbum"
+
+#: ../src/plugins/media-export/rygel-media-export-root-container.vala:37
+#: ../src/plugins/tracker/rygel-tracker-genre.vala:31
+msgid "Genre"
+msgstr "Xénero"
+
+#: ../src/plugins/media-export/rygel-media-export-root-container.vala:53
+msgid "Files & Folders"
+msgstr "Ficheiros e cartafoles"
+
+#: ../src/plugins/media-export/rygel-media-export-root-container.vala:104
+#, c-format
+msgid "Failed to remove URI: %s"
+msgstr "Produciuse un erro ao retirar o URI: %s"
+
+#: ../src/plugins/media-export/rygel-media-export-root-container.vala:355
+#: ../src/plugins/tracker/rygel-tracker-plugin.vala:34
+msgid "@REALNAME@'s media"
+msgstr "Multimedia de @REALNAME@"
+
+#: ../src/plugins/media-export/rygel-media-export-root-container.vala:362
+#, c-format
+msgid "Failed to create MediaExport D-Bus service: %s"
+msgstr "Produciuse un erro ao crear o servizo de D-Bus MediaExpot: %s"
+
+#: ../src/plugins/media-export/rygel-media-export-root-container.vala:402
+#, c-format
+msgid "Failed to remove entry: %s"
+msgstr "Produciuse un erro ao retirar a entrada: %s"
+
+#: ../src/plugins/media-export/rygel-media-export-root-container.vala:423
+msgid "Music"
+msgstr "Música"
+
+#: ../src/plugins/media-export/rygel-media-export-root-container.vala:426
+msgid "Pictures"
+msgstr "Imaxes"
+
+#: ../src/plugins/media-export/rygel-media-export-root-container.vala:428
+msgid "Videos"
+msgstr "Vídeos"
+
+#: ../src/plugins/tracker/rygel-tracker-category-all-container.vala:54
+#, c-format
+msgid "Failed to create a Tracker connection: %s"
+msgstr "Produciuse un erro ao crear a conexión a Tracker: %s"
+
+#: ../src/plugins/tracker/rygel-tracker-category-all-container.vala:62
+#, c-format
+msgid "Failed to construct URI for folder '%s': %s"
+msgstr "Produciuse un erro ao construir o URI para o cartafol «%s»: %s"
+
+#: ../src/plugins/tracker/rygel-tracker-category-all-container.vala:77
+#, c-format
+msgid "Could not subscribe to tracker signals: %s"
+msgstr "Non foi posíbel subscribirse ás sinais de tracker: %s"
+
+#: ../src/plugins/tracker/rygel-tracker-plugin-factory.vala:42
+#, c-format
+msgid "Failed to start Tracker service: %s. Plugin disabled."
+msgstr ""
+"Produciuse un erro ao iniciar o servizo Tracker: %s. Engadido desactivado."
+
+#: ../src/plugins/tracker/rygel-tracker-search-container.vala:104
+#, c-format
+msgid "Failed to get Tracker connection: %s"
+msgstr "Produciuse un erro ao obter a conexión de Tracker: %s"
+
+#: ../src/plugins/tracker/rygel-tracker-search-container.vala:228
+#, c-format
+msgid "Error getting item count under category '%s': %s"
+msgstr ""
+"Produciuse un erro ao obter a contía de elementos baixo a categoría «%s»: %s"
+
+#: ../src/plugins/tracker/rygel-tracker-albums.vala:31
+msgid "Albums"
+msgstr "Álbumes"
+
+#: ../src/plugins/tracker/rygel-tracker-artists.vala:31
+msgid "Artists"
+msgstr "Artistas"
+
+#: ../src/plugins/tracker/rygel-tracker-titles.vala:58
+msgid "Titles"
+msgstr "Títulos"
+
+#: ../src/librygel-core/rygel-cmdline-config.vala:158
+#: ../src/librygel-core/rygel-cmdline-config.vala:166
+#: ../src/librygel-core/rygel-cmdline-config.vala:174
+#: ../src/librygel-core/rygel-cmdline-config.vala:182
+#: ../src/librygel-core/rygel-cmdline-config.vala:190
+#: ../src/librygel-core/rygel-cmdline-config.vala:198
+#: ../src/librygel-core/rygel-cmdline-config.vala:206
+#: ../src/librygel-core/rygel-cmdline-config.vala:214
+#: ../src/librygel-core/rygel-cmdline-config.vala:222
+#: ../src/librygel-core/rygel-cmdline-config.vala:230
+#: ../src/librygel-core/rygel-cmdline-config.vala:238
+#: ../src/librygel-core/rygel-cmdline-config.vala:246
+#: ../src/librygel-core/rygel-cmdline-config.vala:254
+#: ../src/librygel-core/rygel-cmdline-config.vala:280
+#: ../src/librygel-core/rygel-cmdline-config.vala:299
+#: ../src/librygel-core/rygel-cmdline-config.vala:305
+#: ../src/librygel-core/rygel-cmdline-config.vala:312
+#: ../src/librygel-core/rygel-cmdline-config.vala:316
+#: ../src/librygel-core/rygel-cmdline-config.vala:320
+#: ../src/librygel-core/rygel-cmdline-config.vala:343
+#: ../src/librygel-core/rygel-cmdline-config.vala:369
+#: ../src/librygel-core/rygel-cmdline-config.vala:398
+#: ../src/librygel-core/rygel-cmdline-config.vala:424
+#: ../src/librygel-core/rygel-cmdline-config.vala:449
+#: ../src/librygel-core/rygel-meta-config.vala:95
+#: ../src/librygel-core/rygel-meta-config.vala:114
+#: ../src/librygel-core/rygel-meta-config.vala:133
+#: ../src/librygel-core/rygel-meta-config.vala:152
+#: ../src/librygel-core/rygel-meta-config.vala:171
+#: ../src/librygel-core/rygel-meta-config.vala:190
+#: ../src/librygel-core/rygel-meta-config.vala:209
+#: ../src/librygel-core/rygel-meta-config.vala:228
+#: ../src/librygel-core/rygel-meta-config.vala:247
+#: ../src/librygel-core/rygel-meta-config.vala:266
+#: ../src/librygel-core/rygel-meta-config.vala:285
+#: ../src/librygel-core/rygel-meta-config.vala:304
+#: ../src/librygel-core/rygel-meta-config.vala:323
+msgid "No value available"
+msgstr "Non está dispoñíbel o valor"
+
+#: ../src/librygel-core/rygel-connection-manager.vala:89
+#: ../src/librygel-core/rygel-connection-manager.vala:103
+#: ../src/librygel-core/rygel-connection-manager.vala:125
+#: ../src/librygel-renderer/rygel-av-transport.vala:215
+#: ../src/librygel-renderer/rygel-rendering-control.vala:123
+#: ../src/librygel-server/rygel-content-directory.vala:198
+#: ../src/librygel-server/rygel-content-directory.vala:225
+#: ../src/librygel-server/rygel-content-directory.vala:244
+#: ../src/librygel-server/rygel-content-directory.vala:279
+#: ../src/librygel-server/rygel-content-directory.vala:304
+#: ../src/librygel-server/rygel-content-directory.vala:329
+#: ../src/librygel-server/rygel-media-receiver-registrar.vala:59
+msgid "Invalid argument"
+msgstr "Argumento non válido"
+
+#: ../src/librygel-core/rygel-connection-manager.vala:119
+msgid "Invalid connection reference"
+msgstr "Referencia de conexión non válida"
+
+#: ../src/librygel-core/rygel-log-handler.vala:68
+#, c-format
+msgid "Failed to get log level from configuration: %s"
+msgstr ""
+"Produciuse un erro ao obter o nivel de rexistro desde a configuración: %s"
+
+#: ../src/librygel-core/rygel-meta-config.vala:77
+#, c-format
+msgid "Failed to load user configuration: %s"
+msgstr "Produciuse un erro ao cargar a configuración do usuario: %s"
+
+#: ../src/librygel-core/rygel-meta-config.vala:406
+#: ../src/librygel-core/rygel-meta-config.vala:425
+#, c-format
+msgid "No value set for '%s/enabled'"
+msgstr "Non se estabeleceu o valor para «%s/enabled»"
+
+#: ../src/librygel-core/rygel-meta-config.vala:445
+#: ../src/librygel-core/rygel-meta-config.vala:467
+#: ../src/librygel-core/rygel-meta-config.vala:493
+#: ../src/librygel-core/rygel-meta-config.vala:515
+#: ../src/librygel-core/rygel-meta-config.vala:539
+#, c-format
+msgid "No value available for '%s/%s'"
+msgstr "Non hai un valor dispoñíbel para «%s/%s»"
+
+#: ../src/librygel-core/rygel-plugin-loader.vala:85
+#, c-format
+msgid "New plugin '%s' available"
+msgstr "Está dispoñíbel o engadido «%s» novo"
+
+#: ../src/librygel-core/rygel-plugin-loader.vala:119
+#, c-format
+msgid "Error listing contents of folder '%s': %s"
+msgstr "Produciuse un erro ao listar os contidos do cartafol «%s»: %s"
+
+#: ../src/librygel-core/rygel-plugin-loader.vala:147
+#, c-format
+msgid "A module named %s is already loaded"
+msgstr "Xa se cargou un módulo chamado %s"
+
+#: ../src/librygel-core/rygel-plugin-loader.vala:156
+#, c-format
+msgid "Failed to load module from path '%s': %s"
+msgstr "Produciuse un erro ao cargar o módulo desde a ruta «%s»: %s"
+
+#: ../src/librygel-core/rygel-plugin-loader.vala:166
+#, c-format
+msgid "Failed to find entry point function '%s' in '%s': %s"
+msgstr ""
+"Produciuse un erro ao buscar a función do punto de entrada  «%s» en «%s»: %s"
+
+#: ../src/librygel-core/rygel-root-device-factory.vala:98
+#: ../src/librygel-core/rygel-root-device-factory.vala:132
+#: ../src/librygel-core/rygel-root-device-factory.vala:154
+#: ../src/librygel-core/rygel-root-device-factory.vala:209
+#, c-format
+msgid "XML node '%s' not found."
+msgstr "Non foi posíbel atopar o nodo XML «%s»."
+
+#: ../src/librygel-core/rygel-user-config.vala:198
+#, c-format
+msgid "No value available for '%s'"
+msgstr "Non existe un valor dispoñíbel para «%s»"
+
+#: ../src/librygel-core/rygel-user-config.vala:248
+#, c-format
+msgid "Value of '%s' out of range"
+msgstr "O valor «%s» está fora de rango"
+
+#: ../src/librygel-renderer/rygel-av-transport.vala:221
+#: ../src/librygel-renderer/rygel-rendering-control.vala:129
+msgid "Invalid InstanceID"
+msgstr "InstanceID non válido"
+
+#: ../src/librygel-renderer/rygel-av-transport.vala:481
+msgid "Play speed not supported"
+msgstr "Velocidade de reprodución non admitida"
+
+#: ../src/librygel-renderer/rygel-av-transport.vala:497
+#: ../src/librygel-renderer/rygel-av-transport.vala:542
+#: ../src/librygel-renderer/rygel-av-transport.vala:546
+msgid "Transition not available"
+msgstr "Transición non dispoñíbel"
+
+#: ../src/librygel-renderer/rygel-av-transport.vala:526
+#: ../src/librygel-renderer/rygel-av-transport.vala:535
+msgid "Seek mode not supported"
+msgstr "Non se admite o modo de busca"
+
+#: ../src/librygel-renderer/rygel-playbin-plugin.vala:34
+msgid "GStreamer Player"
+msgstr "Reprodutor de GStreamer"
+
+#: ../src/librygel-renderer/rygel-rendering-control.vala:160
+msgid "Invalid Name"
+msgstr "Nome non válido"
+
+#: ../src/librygel-renderer/rygel-rendering-control.vala:174
+msgid "Invalid Channel"
+msgstr "Canle non válida"
+
+#: ../src/librygel-renderer/rygel-rendering-control.vala:210
+#: ../src/librygel-renderer/rygel-rendering-control.vala:252
+#: ../src/librygel-renderer/rygel-rendering-control.vala:261
+msgid "Action Failed"
+msgstr "Produciuse un fallo na acción"
+
+#: ../src/librygel-server/rygel-browse.vala:63
+msgid "Invalid Arguments"
+msgstr "Argumentos non válidos"
+
+#: ../src/librygel-server/rygel-browse.vala:94
+msgid "Cannot browse children on item"
+msgstr "Non é posíbel examinar no elemento fillo"
+
+#: ../src/librygel-server/rygel-browse.vala:128
+#, c-format
+msgid "Failed to browse '%s': %s\n"
+msgstr "Produciuse un erro ao explorar «%s»: %s\n"
+
+#: ../src/librygel-server/rygel-content-directory.vala:217
+#: ../src/librygel-server/rygel-content-directory.vala:236
+msgid "No such file transfer"
+msgstr "Non existe tal transferencia de ficheiro"
+
+#: ../src/librygel-server/rygel-gst-utils.vala:38
+#, c-format
+msgid "Required element %s missing"
+msgstr "Falta o elemento %s requirido"
+
+#. Range header was present but invalid
+#: ../src/librygel-server/rygel-http-byte-seek.vala:47
+#: ../src/librygel-server/rygel-http-byte-seek.vala:52
+#: ../src/librygel-server/rygel-http-time-seek.vala:49
+#: ../src/librygel-server/rygel-http-time-seek.vala:61
+#: ../src/librygel-server/rygel-http-time-seek.vala:68
+#: ../src/librygel-server/rygel-http-time-seek.vala:83
+#, c-format
+msgid "Invalid Range '%s'"
+msgstr "Rango «%s» non válido"
+
+#: ../src/librygel-server/rygel-http-get.vala:59
+msgid "Invalid Request"
+msgstr "Solicitude non válida"
+
+#: ../src/librygel-server/rygel-http-identity-handler.vala:89
+#: ../src/librygel-server/rygel-http-transcode-handler.vala:57
+msgid "Not found"
+msgstr "Non se atopou"
+
+#: ../src/librygel-server/rygel-http-item-uri.vala:127
+#, c-format
+msgid "Invalid URI '%s'"
+msgstr "URI «%s» non válida"
+
+#: ../src/librygel-server/rygel-http-item-uri.vala:166
+msgid "Not Found"
+msgstr "Non se atopou"
+
+#: ../src/librygel-server/rygel-http-post.vala:62
+#: ../src/librygel-server/rygel-import-resource.vala:191
+#, c-format
+msgid "Pushing data to non-empty item '%s' not allowed"
+msgstr "Non se permite empurrar os datos ao elemento «%s» non baleiro"
+
+#: ../src/librygel-server/rygel-http-post.vala:70
+#, c-format
+msgid "No writable URI for %s available"
+msgstr "Non está dispoñíbel un URI escribíbel para %s"
+
+#. translators: Dotfile is the filename with prefix "."
+#: ../src/librygel-server/rygel-http-post.vala:185
+#, c-format
+msgid "Failed to move dotfile %s: %s"
+msgstr "Produciuse un erro ao mover o ficheiro %s: %s"
+
+#: ../src/librygel-server/rygel-http-request.vala:89
+#, c-format
+msgid "Requested item '%s' not found"
+msgstr "O elemento «%s» solicitado non se atopou"
+
+#: ../src/librygel-server/rygel-http-response.vala:156
+#: ../src/librygel-server/rygel-http-response.vala:177
+#, c-format
+msgid "Failed to link %s to %s"
+msgstr "Produciuse un erro ao ligar %s a %s"
+
+#: ../src/librygel-server/rygel-http-response.vala:192
+#, c-format
+msgid "Failed to link pad %s to %s"
+msgstr "Produciuse un erro ao ligar o recheo %s a %s"
+
+#: ../src/librygel-server/rygel-http-response.vala:235
+#, c-format
+msgid "Error from pipeline %s: %s"
+msgstr "Erro desde a tubería %s: %s"
+
+#: ../src/librygel-server/rygel-http-response.vala:242
+#, c-format
+msgid "Warning from pipeline %s: %s"
+msgstr "Aviso desde a tubería %s: %s"
+
+#: ../src/librygel-server/rygel-http-response.vala:285
+#, c-format
+msgid "Failed to seek to offset %lld"
+msgstr "Produciuse un erro ao buscar ao desprazamento: %lld"
+
+#: ../src/librygel-server/rygel-http-seek.vala:51
+#, c-format
+msgid "Out Of Range Start '%ld'"
+msgstr "Fóra de rango de inicio «%ld»"
+
+#: ../src/librygel-server/rygel-http-seek.vala:55
+#, c-format
+msgid "Out Of Range Stop '%ld'"
+msgstr "Fóra do rango de fin «%ld»"
+
+#: ../src/librygel-server/rygel-import-resource.vala:124
+#, c-format
+msgid "Failed to get original URI for '%s': %s"
+msgstr "Produciuse un erro ao obter o URI orixinal para «%s»: %s"
+
+#: ../src/librygel-server/rygel-import-resource.vala:188
+#, c-format
+msgid "URI '%s' invalid for importing contents to"
+msgstr "O URI «%s» non é válido para importar contido a el"
+
+#: ../src/librygel-server/rygel-item-creator.vala:118
+msgid "'Elements' argument missing."
+msgstr "Falta o argumento «Elements»"
+
+#: ../src/librygel-server/rygel-item-creator.vala:121
+msgid "Comments not allowed in XML"
+msgstr "Non se permiten os comentarios no XML"
+
+#: ../src/librygel-server/rygel-item-creator.vala:127
+#: ../src/librygel-server/rygel-item-creator.vala:280
+#: ../src/librygel-server/rygel-item-destroyer.vala:53
+#: ../src/librygel-server/rygel-item-destroyer.vala:100
+#: ../src/librygel-server/rygel-media-query-action.vala:115
+#: ../src/librygel-server/rygel-media-query-action.vala:182
+msgid "No such object"
+msgstr "Non existe o obxecto"
+
+#: ../src/librygel-server/rygel-item-creator.vala:149
+#, c-format
+msgid "No items in DIDL-Lite from client: '%s'"
+msgstr "Non hai elementos en DIDL-Lite desde o cliente «%s»"
+
+#: ../src/librygel-server/rygel-item-creator.vala:284
+#: ../src/librygel-server/rygel-item-creator.vala:519
+#, c-format
+msgid "Object creation in %s not allowed"
+msgstr "A creación do obxecto en %s non está permitida"
+
+#: ../src/librygel-server/rygel-item-creator.vala:312
+#, c-format
+msgid "Failed to create item under '%s': %s"
+msgstr "Produciuse un erro ao crear o elemento baixo «%s»: %s"
+
+#: ../src/librygel-server/rygel-item-destroyer.vala:60
+#, c-format
+msgid "Successfully destroyed object '%s'"
+msgstr "Obxecto «%s» destruído correctamente"
+
+#: ../src/librygel-server/rygel-item-destroyer.vala:68
+#, c-format
+msgid "Failed to destroy object '%s': %s"
+msgstr "Produciuse un erro ao destruír o obxecto «%s»: %s"
+
+#: ../src/librygel-server/rygel-item-destroyer.vala:103
+#, c-format
+msgid "Removal of object %s not allowed"
+msgstr "Non se permite quitar o obxecto %s"
+
+#: ../src/librygel-server/rygel-item-destroyer.vala:106
+#, c-format
+msgid "Object removal from %s not allowed"
+msgstr "Non se permite quitar obxectos de %s"
+
+#: ../src/librygel-server/rygel-media-item.vala:273
+#, c-format
+msgid "Bad URI: %s"
+msgstr "URI erróneo: %s"
+
+#. Assume the protocol to be the scheme of the URI
+#: ../src/librygel-server/rygel-media-item.vala:285
+#, c-format
+msgid "Failed to probe protocol for URI %s. Assuming '%s'"
+msgstr "Produciuse un erro ao probar o protocolo para o URI %s. Asumindo «%s»"
+
+#: ../src/librygel-server/rygel-media-query-action.vala:120
+msgid "Invalid range"
+msgstr "Rango non válido"
+
+#: ../src/librygel-server/rygel-search.vala:91
+#, c-format
+msgid "Failed to search in '%s': %s"
+msgstr "Produciuse un erro ao buscar en «%s»: %s"
+
+#: ../src/librygel-server/rygel-subtitle-manager.vala:65
+msgid "No subtitle available"
+msgstr "Non hai subtítulos dispoñíbeis"
+
+#: ../src/librygel-server/rygel-thumbnailer.vala:60
+#, c-format
+msgid "No thumbnailer available: %s"
+msgstr "Non está dispoñíbel o xerador de miniaturas: %s"
+
+#: ../src/librygel-server/rygel-thumbnailer.vala:82
+#: ../src/librygel-server/rygel-thumbnailer.vala:91
+#: ../src/librygel-server/rygel-thumbnailer.vala:96
+#: ../src/librygel-server/rygel-thumbnailer.vala:107
+msgid "No thumbnail available"
+msgstr "Non está dispoñíbel a miniatura"
+
+#: ../src/librygel-server/rygel-thumbnailer.vala:126
+msgid "No D-Bus thumbnailer available"
+msgstr "No hai ningún xerador de miniaturas de D-Bus dispoñíbel"
+
+#: ../src/librygel-server/rygel-transcode-manager.vala:130
+#, c-format
+msgid "No transcoder available for target format '%s'"
+msgstr "Non hai un transcodificador dispoñíbel par ao formato destino «%s»"
+
+#: ../src/rygel/rygel-main.vala:105
+#, c-format
+msgid "No plugins found in %d second; giving up.."
+msgid_plural "No plugins found in %d seconds; giving up.."
+msgstr[0] "Non foi posíbel atopar engadidos en %d segundo, abortando.."
+msgstr[1] "Non foi posíbel atopar engadidos en %d segundos, abortando.."
+
+#: ../src/rygel/rygel-main.vala:166
+#, c-format
+msgid "Failed to create root device factory: %s"
+msgstr "Produciuse un erro ao crear a factoría de dispositivo raíz: %s"
+
+#: ../src/rygel/rygel-main.vala:224
+#, c-format
+msgid "Failed to create RootDevice for %s. Reason: %s"
+msgstr "Produciuse un erro ao crear o RootDevice para %s. Razón: %s"
+
+#: ../src/ui/rygel-preferences-dialog.vala:94
+#, c-format
+msgid "Failed to create preferences dialog: %s"
+msgstr "Produciuse un erro ao crear o diálogo de preferencias: %s"
+
+#: ../src/ui/rygel-writable-user-config.vala:122
+#, c-format
+msgid "Failed to save configuration data to file '%s': %s"
+msgstr ""
+"Produciuse un erro ao gardar os datos de configuración no ficheiro «%s»: %s"
+
+#: ../src/ui/rygel-writable-user-config.vala:210
+#, c-format
+msgid "Failed to start Rygel service: %s"
+msgstr "Produciuse un erro ao iniciar o servizo Rygel: %s"
+
+#: ../src/ui/rygel-writable-user-config.vala:212
+#, c-format
+msgid "Failed to stop Rygel service: %s"
+msgstr "Produciuse un erro ao deter o servizo Rygel: %s"
+
+#~ msgid "Invalid Args"
+#~ msgstr "Argumentos non válidos"
+
+#~ msgid "Seek failed"
+#~ msgstr "Fallou a busca"
+
+#~ msgid "ActionFailed"
+#~ msgstr "AcciónFallada"
+
+#~ msgid "Failed to create D-Bus proxies: %s"
+#~ msgstr "Produciuse un fallo ao iniciar o servizo de D-Bus: %s"
+
+#~ msgid "Failed to connect to session bus: %s"
+#~ msgstr "Produciuse un fallo ao conectarse ao bus de sesió: %s"
+
+#~ msgid "Error getting all values for '%s': %s"
+#~ msgstr "Produciuse un erro ao obter todos os valores para «%s»: %s"
+
+#~ msgid "Failed to find thumbnails folder."
+#~ msgstr "Produciuse un fallo ao atopar o cartafol de miniaturas."
+
+#~ msgid "Failed to open database: %d (%s)"
+#~ msgstr "Produciuse un fallo ao abrir a base de datos %d (%s)"
+
+#~ msgid "Unsupported type %s"
+#~ msgstr "Tipo %s non admitido"
+
+#~ msgid "Object %s is not an item"
+#~ msgstr "O obxecto %s non é un elemento"
+
+#~ msgid "Item '%s' didn't provide a URI"
+#~ msgstr "O elemento «%s» non forneceu un URI"
+
+#~ msgid "Plugin 'fakesink' missing"
+#~ msgstr "Falta o engadido «fakesink»"
+
+#~ msgid "Failed to start D-Bus service: %s"
+#~ msgstr "Produciuse unf allo ao iniciar o servizo de D-Bus: %s"
+
+#~ msgid "Failed to write modified description to %s"
+#~ msgstr "Produciuse un fallo ao gravar a descrición modificada en %s"
+
+#~ msgid "Failed to read from URI: %s: %s"
+#~ msgstr "Produciuse un fallo ao ler do URI %s: %s"
+
+#~ msgid "Failed to seek to %s-%s on URI %s: %s"
+#~ msgstr "Produciuse un fallo ao buscar ao %s-%s no URI %s:%s"
+
+#~ msgid "Failed to read contents from URI: %s: %s"
+#~ msgstr "Produciuse un fallo ao ler o contido do URI %s: %s"
+
+#~ msgid "Failed to close stream to URI %s: %s"
+#~ msgstr "Produciuse un fallo ao pechar o fluxo no URI %s: %s"
+
+#~ msgid "Not Applicable"
+#~ msgstr "Non é aplicábel"
+
+#~ msgid "Failed to write modified description to %s."
+#~ msgstr "Produciuse un fallo ao escribir a descrición modificada en %s."
+
+#~ msgid "General"
+#~ msgstr "Xeral"
+
+#~ msgid "MPE_G TS"
+#~ msgstr "MPE_G TS"
+
+#~ msgid "Plugins"
+#~ msgstr "Engadidos"
+
+#~ msgid "Share M_usic"
+#~ msgstr "Compartir m_úsica"
+
+#~ msgid "Share _Pictures"
+#~ msgstr "Compartir _fotos"
+
+#~ msgid "Share _Videos"
+#~ msgstr "Compartir _vídeos"
+
+#~ msgid "T_itle"
+#~ msgstr "T_ítulo"
+
+#~ msgid "Ti_tle"
+#~ msgstr "T_ítulo"
+
+#~ msgid ""
+#~ "Write %u for username, %n for real name of the user and %h for host name"
+#~ msgstr ""
+#~ "Escribir %s para o nome de usuarios, %n para o nome real do usuario e %h "
+#~ "para o nome do equipo"
+
+#~ msgid "_Enable UPnP/DLNA"
+#~ msgstr "_Activar UPnP/DLNA"
+
+#~ msgid "_Interface"
+#~ msgstr "_Interface"
+
+#~ msgid "_LPCM"
+#~ msgstr "_LPCM"
+
+#~ msgid "_MP3"
+#~ msgstr "_MP3"
+
+#~ msgid "_Media Export"
+#~ msgstr "Exportar _multimedia"
+
+#~ msgid "_Port"
+#~ msgstr "_Porto"
+
+#~ msgid "_Transcoding support"
+#~ msgstr "Compatibilidade de _transcodificación"
+
+#~ msgid "_URIs"
+#~ msgstr "_URIs"
+
+#~ msgid "Failed to create instance of database"
+#~ msgstr "Produciuse un fallo ao crear unha instancia da base de datos"
+
+#~ msgid "Changing playback state to %s."
+#~ msgstr "Cambiando o estado de reprodución a %s."
+
+#~ msgid "URI set to %s."
+#~ msgstr "URI estabelecida a %s."
+
+#~ msgid "volume set to %f."
+#~ msgstr "volume estabelecido a %f."
+
+#~ msgid "Using database file %s"
+#~ msgstr "Usando o ficheiro da base de datos %s"
+
+#~ msgid "Failed to extract metadata from %s: %s"
+#~ msgstr "Produciuse un fallo ao extraer os metadatos desde %s: %s"
+
+#~ msgid "Original search: %s"
+#~ msgstr "Busca orixinal: %s"
+
+#~ msgid "Parsed search expression: %s"
+#~ msgstr "Expresión de busca analizada: %s"
+
+#~ msgid "Trying to harvest %s because of %d"
+#~ msgstr "Tentando recolectar %s por mor de %d"
+
+#~ msgid "Folder %s gone; removing watch"
+#~ msgstr "O cartafol %s desapareceu. Eliminando a vixilancia"
+
+#~ msgid "ID %s no longer in config; deleting..."
+#~ msgstr "O ID %s xa non está na configuración, eliminándoo..."
+
+#~ msgid "Changing playback state to %s.."
+#~ msgstr "Cambiando o estado de reprodución a %s..."
+
+#~ msgid "Executing SPARQL query: %s"
+#~ msgstr "Executando a consulta SPARQL: %s"
+
+#~ msgid "Seeking to %s."
+#~ msgstr "Buscando até %s"
+
+#~ msgid "Following HTTP headers appended to response:"
+#~ msgstr "As seguintes cabeceiras HTTP engadiranse á resposta:"
+
+#~ msgid "HTTP %s request for URI '%s' handled."
+#~ msgstr "Xestionouse a solicitude HTTP %s para o URI «%s»"
+
+#~ msgid "HTTP %s request for URI '%s'. Headers:"
+#~ msgstr "Solicitude HTTP %s para o URI «%s». Cabeceiras:"
+
+#~ msgid "HTTP client aborted %s request for URI '%s'."
+#~ msgstr "O cliente HTTP abortou a solicitude %s para o URI «%s»."
+
+#~ msgid "HTTP POST request for URI '%s'"
+#~ msgstr "Solicitude POST HTTP para o URI «%s»"
+
+#~ msgid "Import of '%s' to '%s' completed"
+#~ msgstr "Completouse a importación de «%s» a «%s»"
+
+#~ msgid "new network context %s (%s) available."
+#~ msgstr "novo contexto de rede %s (%s) dispoñíbel."
+
+#~ msgid "Ignoring network context %s (%s)."
+#~ msgstr "Ignorando o contexto de rede %s (%s)"
+
+#~ msgid "Network context %s (%s) now unavailable."
+#~ msgstr "O contexto de rede %s (%s) está agora dispoñíbel."
+
+#~ msgid "Plugin '%s' disabled in user configuration; ignoring.."
+#~ msgstr ""
+#~ "O engadido «%s» está desactivado na configuración do usuario, ignorando..."
+
+#~ msgid "Searching for modules in folder '%s'."
+#~ msgstr "Buscando módulos no cartafol «%s»."
+
+#~ msgid "Finished searching for modules in folder '%s'"
+#~ msgstr "Rematou a busca dos módulos no cartafol «%s»"
+
+#~ msgid "Loaded module source: '%s'"
+#~ msgstr "Orixe do módulo cargada: «%s»"
+
+#~ msgid "No icon provided by plugin '%s'. Using Rygel logo."
+#~ msgstr ""
+#~ "O engadido %s non forneceu ningunha icona. Usando o logotipo de Rygel."
+
+#~ msgid "Executing search request: %s"
+#~ msgstr "Executando a consulta de busca: %s"
+
+#~ msgid "Loaded user configuration from file '%s'"
+#~ msgstr "Configuración de usuario cargada do ficheiro «%s»"
+
+#~ msgid "Setting up timeout for LastChange"
+#~ msgstr "Configurar o tempo máximo de espera para o LastChange"
+
+#~ msgid "Unable to serialize unsupported object"
+#~ msgstr "Non é posíbel serializar un obxecto non compatíbel"
+
+#~ msgid "No object satisfies given search criteria."
+#~ msgstr "Ningún obxecto satisfai o criterio de busca fornecido."
+
+#~ msgid "Failed to query database: %s"
+#~ msgstr "Produciuse un fallo ao consultar a base de datos: %s"
+
+#~ msgid "failed to enumerate folder: %s"
+#~ msgstr "Produciuse un fallo ao enumerar o cartafol: %s"
+
+#~ msgid "Failed to get children of container %s: %s"
+#~ msgstr "Produciuse un fallo ao obter o fillo do contedor %s: %s"
+
+#~ msgid "File %s does not need harvesting"
+#~ msgstr "O ficheiro %s non necesita recolección"
+
+#~ msgid "ID does not contain pairs"
+#~ msgstr "O ID non contén pares"
+
+#~ msgid "Empty part not allowed in virtual ID"
+#~ msgstr "O ID virtual non permite unha parte baleira"
+
+#~ msgid "Placeholder can only be on second place"
+#~ msgstr "O marcador de posición só pode estar no segundo lugar"
+
+#~ msgid "%s is not a valid virtual ID"
+#~ msgstr "%s non é un ID virtual válido"
+
+#~ msgid "Got error while trying to find virtual folders: %s"
+#~ msgstr "Obtívose un erro ao tentar encontrar cartafoles virtuais: %s"
+
+#~ msgid "Already harvesting; cancelling"
+#~ msgstr "Xa foi recolectado; cancelando"
+
+#~ msgid "Error creating URI from %s: %s"
+#~ msgstr "Produciuse un fallo ao crear o URI desde %s: %s"
+
+#~ msgid "Failed to create HTTP server for %s: %s"
+#~ msgstr "Produciuse un fallo ao crear o servidor HTTP para %s: %s"
+
+#~ msgid "Using playbin2"
+#~ msgstr "Usando playbin2"
+
+#~ msgid "Could not create Playbin2, trying Playbin"
+#~ msgstr "Non foi posíbel crear o «Playbin2», tentándoo con «Playbin»."
+
+#~ msgid "Using playbin"
+#~ msgstr "Usando playbin"
+
+#~ msgid "Could not find any playbin."
+#~ msgstr "Non foi posíbel encontrar ningún «playbin»."
+
+#~ msgid "Please check your gstreamer setup"
+#~ msgstr "Comprobe a súa configuración de Gstreamer"
+
+#~ msgid "Metadata extractor timed out on %s, restarting"
+#~ msgstr "O tempo expirou para o extractor de metadatos en %s, reiniciando"
+
+#~ msgid "Pipeline stuck while reading file info"
+#~ msgstr "A tubería parouse ao ler a información do ficheiro"
+
+#~ msgid "Scheduling file %s for metadata extraction"
+#~ msgstr "Planificando o ficheiro %s para a extracción de metadatos"
+
+#~ msgid "File '%s' is of unknown format/type."
+#~ msgstr "O ficheiro «%s» é dun tipo/formato descoñecido."
+
+#~ msgid "Trying to guess from content type %s"
+#~ msgstr "Tentando adiviñalo desde o tipo de contido %s"
+
+#~ msgid "Failed to detect UPnP class for '%s', assuming '%s'"
+#~ msgstr ""
+#~ "Produciuse un fallo ao detectar a clase UPnP para «%s», asumindo «%s»"
+
+#~ msgid "Got empty taglist for file %s"
+#~ msgstr "Obtívose unha lista de etiquetas baleiras para o ficheiro %s"
+
+#~ msgid "Nothing configured, using XDG special folders"
+#~ msgstr "Non hai nada configurado, usando os cartafoles especiais XDG"
+
+#~ msgid "Failed to parse query: %s"
+#~ msgstr "Produciuse un fallo ao analizar a consulta: %s"
+
+#~ msgid "No such container"
+#~ msgstr "Non existe tal contedor"
+
+#~ msgid "Specified container does not exist."
+#~ msgstr "O contedor especificado non existe."

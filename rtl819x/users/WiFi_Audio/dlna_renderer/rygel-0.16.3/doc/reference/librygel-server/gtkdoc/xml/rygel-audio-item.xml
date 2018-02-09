@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelAudioItem">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelAudioItem.top_of_page">RygelAudioItem</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-SERVER Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelAudioItem</refname>
+<refpurpose>Represents an audio item.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelAudioItem.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="RYGEL-TYPE-AUDIO-ITEM:CAPS">RYGEL_TYPE_AUDIO_ITEM</link>
+#define             <link linkend="RYGEL-AUDIO-ITEM-UPNP-CLASS:CAPS">RYGEL_AUDIO_ITEM_UPNP_CLASS</link>
+<link linkend="RygelAudioItem"><returnvalue>RygelAudioItem</returnvalue></link> *    <link linkend="rygel-audio-item-new">rygel_audio_item_new</link>                (<parameter>const <link linkend="gchar"><type>gchar</type></link> *id</parameter>,
+                                                         <parameter><link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> *parent</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *title</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *upnp_class</parameter>);
+struct              <link linkend="RygelAudioItem-struct">RygelAudioItem</link>;
+struct              <link linkend="RygelAudioItemClass">RygelAudioItemClass</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelAudioItem.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----<link linkend="RygelMediaObject">RygelMediaObject</link>
+         +----<link linkend="RygelMediaItem">RygelMediaItem</link>
+               +----RygelAudioItem
+                     +----<link linkend="RygelMusicItem">RygelMusicItem</link>
+                     +----<link linkend="RygelVideoItem">RygelVideoItem</link>
+</synopsis>
+</refsect1>
+
+<refsect1 id="RygelAudioItem.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="RygelAudioItem.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="RYGEL-TYPE-AUDIO-ITEM:CAPS" role="macro">
+<title>RYGEL_TYPE_AUDIO_ITEM</title>
+<indexterm zone="RYGEL-TYPE-AUDIO-ITEM:CAPS"><primary>RYGEL_TYPE_AUDIO_ITEM</primary></indexterm>
+<programlisting>#define RYGEL_TYPE_AUDIO_ITEM (rygel_audio_item_get_type ())
+</programlisting>
+<para>
+The type for <link linkend="RygelAudioItem"><type>RygelAudioItem</type></link>.
+</para></refsect2>
+<refsect2 id="RYGEL-AUDIO-ITEM-UPNP-CLASS:CAPS" role="macro">
+<title>RYGEL_AUDIO_ITEM_UPNP_CLASS</title>
+<indexterm zone="RYGEL-AUDIO-ITEM-UPNP-CLASS:CAPS"><primary>RYGEL_AUDIO_ITEM_UPNP_CLASS</primary></indexterm>
+<programlisting>#define RYGEL_AUDIO_ITEM_UPNP_CLASS "object.item.audioItem"
+</programlisting>
+</refsect2>
+<refsect2 id="rygel-audio-item-new" role="function">
+<title>rygel_audio_item_new ()</title>
+<indexterm zone="rygel-audio-item-new"><primary>rygel_audio_item_new</primary></indexterm>
+<programlisting><link linkend="RygelAudioItem"><returnvalue>RygelAudioItem</returnvalue></link> *    rygel_audio_item_new                (<parameter>const <link linkend="gchar"><type>gchar</type></link> *id</parameter>,
+                                                         <parameter><link linkend="RygelMediaContainer"><type>RygelMediaContainer</type></link> *parent</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *title</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *upnp_class</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="RygelAudioItem-struct" role="struct">
+<title>struct RygelAudioItem</title>
+<indexterm zone="RygelAudioItem-struct"><primary>RygelAudioItem</primary></indexterm>
+<programlisting>struct RygelAudioItem;</programlisting>
+<para>
+Represents an audio item.
+</para></refsect2>
+<refsect2 id="RygelAudioItemClass" role="struct">
+<title>struct RygelAudioItemClass</title>
+<indexterm zone="RygelAudioItemClass"><primary>RygelAudioItemClass</primary></indexterm>
+<programlisting>struct RygelAudioItemClass {
+	RygelMediaItemClass parent_class;
+};
+</programlisting>
+<para>
+The class structure for <link linkend="RYGEL-TYPE-AUDIO-ITEM:CAPS"><literal>RYGEL_TYPE_AUDIO_ITEM</literal></link>. All the fields in this structure are private and should never be accessed directly.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="RygelMediaItemClass"><type>RygelMediaItemClass</type></link>&#160;<structfield id="RygelAudioItemClass.parent-class">parent_class</structfield>;</term>
+<listitem><simpara>the parent class structure</simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+</refentry>

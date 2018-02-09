@@ -1,0 +1,76 @@
+<!-- ##### SECTION Title ##### -->
+SoupRequester
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT SoupRequester ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### FUNCTION soup_requester_new ##### -->
+<para>
+
+</para>
+
+@void: 
+@Returns: 
+
+
+<!-- ##### FUNCTION soup_requester_request ##### -->
+<para>
+
+</para>
+
+@requester: 
+@uri_string: 
+@error: 
+@Returns: 
+
+
+<!-- ##### FUNCTION soup_requester_request_uri ##### -->
+<para>
+
+</para>
+
+@requester: 
+@uri: 
+@error: 
+@Returns: 
+
+
+<!-- ##### ENUM SoupRequesterError ##### -->
+<para>
+
+</para>
+
+@SOUP_REQUESTER_ERROR_BAD_URI: 
+@SOUP_REQUESTER_ERROR_UNSUPPORTED_URI_SCHEME: 
+
+<!-- ##### MACRO SOUP_REQUESTER_ERROR ##### -->
+<para>
+
+</para>
+
+
+

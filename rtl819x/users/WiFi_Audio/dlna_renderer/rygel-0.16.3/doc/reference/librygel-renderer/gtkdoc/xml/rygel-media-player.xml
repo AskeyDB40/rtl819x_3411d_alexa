@@ -1,0 +1,463 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelMediaPlayer">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelMediaPlayer.top_of_page">RygelMediaPlayer</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-RENDERER Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelMediaPlayer</refname>
+<refpurpose>Interface for mapping AVTransport:2 methods to the specific implementation.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelMediaPlayer.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            <link linkend="rygel-media-player-seek">rygel_media_player_seek</link>             (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> time</parameter>);
+<link linkend="gchar"><returnvalue>gchar</returnvalue></link> **            <link linkend="rygel-media-player-get-protocols">rygel_media_player_get_protocols</link>    (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> *result_length1</parameter>);
+<link linkend="gchar"><returnvalue>gchar</returnvalue></link> **            <link linkend="rygel-media-player-get-mime-types">rygel_media_player_get_mime_types</link>   (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> *result_length1</parameter>);
+<link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             <link linkend="rygel-media-player-get-playback-state">rygel_media_player_get_playback_state</link>
+                                                        (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-media-player-set-playback-state">rygel_media_player_set_playback_state</link>
+                                                        (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *value</parameter>);
+<link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             <link linkend="rygel-media-player-get-uri">rygel_media_player_get_uri</link>          (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-media-player-set-uri">rygel_media_player_set_uri</link>          (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *value</parameter>);
+<link linkend="gdouble"><returnvalue>gdouble</returnvalue></link>             <link linkend="rygel-media-player-get-volume">rygel_media_player_get_volume</link>       (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-media-player-set-volume">rygel_media_player_set_volume</link>       (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>,
+                                                         <parameter><link linkend="gdouble"><type>gdouble</type></link> value</parameter>);
+<link linkend="gint64"><returnvalue>gint64</returnvalue></link>              <link linkend="rygel-media-player-get-duration">rygel_media_player_get_duration</link>     (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>);
+<link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             <link linkend="rygel-media-player-get-metadata">rygel_media_player_get_metadata</link>     (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-media-player-set-metadata">rygel_media_player_set_metadata</link>     (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *value</parameter>);
+<link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             <link linkend="rygel-media-player-get-mime-type">rygel_media_player_get_mime_type</link>    (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-media-player-set-mime-type">rygel_media_player_set_mime_type</link>    (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *value</parameter>);
+<link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             <link linkend="rygel-media-player-get-content-features">rygel_media_player_get_content_features</link>
+                                                        (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-media-player-set-content-features">rygel_media_player_set_content_features</link>
+                                                        (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *value</parameter>);
+<link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             <link linkend="rygel-media-player-get-duration-as-str">rygel_media_player_get_duration_as_str</link>
+                                                        (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>);
+<link linkend="gint64"><returnvalue>gint64</returnvalue></link>              <link linkend="rygel-media-player-get-position">rygel_media_player_get_position</link>     (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>);
+<link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             <link linkend="rygel-media-player-get-position-as-str">rygel_media_player_get_position_as_str</link>
+                                                        (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>);
+                    <link linkend="RygelMediaPlayer-struct">RygelMediaPlayer</link>;
+struct              <link linkend="RygelMediaPlayerIface">RygelMediaPlayerIface</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelMediaPlayer.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GInterface">GInterface</link>
+   +----RygelMediaPlayer
+</synopsis>
+</refsect1>
+<refsect1 id="RygelMediaPlayer.prerequisites" role="prerequisites">
+<title role="prerequisites.title">Prerequisites</title>
+<para>
+RygelMediaPlayer requires
+ <link linkend="GObject">GObject</link>.</para>
+</refsect1>
+<refsect1 id="RygelMediaPlayer.implementations" role="implementations">
+<title role="implementations.title">Known Implementations</title>
+<para>
+RygelMediaPlayer is implemented by
+ <link linkend="RygelPlaybinPlayer">RygelPlaybinPlayer</link>.</para>
+</refsect1>
+<refsect1 id="RygelMediaPlayer.properties" role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+  &quot;<link linkend="RygelMediaPlayer--content-features">content-features</link>&quot;         <link linkend="gchar"><type>gchar</type></link>*                : Read / Write
+  &quot;<link linkend="RygelMediaPlayer--duration">duration</link>&quot;                 <link linkend="gint64"><type>gint64</type></link>                : Read
+  &quot;<link linkend="RygelMediaPlayer--metadata">metadata</link>&quot;                 <link linkend="gchar"><type>gchar</type></link>*                : Read / Write
+  &quot;<link linkend="RygelMediaPlayer--mime-type">mime-type</link>&quot;                <link linkend="gchar"><type>gchar</type></link>*                : Read / Write
+  &quot;<link linkend="RygelMediaPlayer--playback-state">playback-state</link>&quot;           <link linkend="gchar"><type>gchar</type></link>*                : Read / Write
+  &quot;<link linkend="RygelMediaPlayer--position">position</link>&quot;                 <link linkend="gint64"><type>gint64</type></link>                : Read
+  &quot;<link linkend="RygelMediaPlayer--uri">uri</link>&quot;                      <link linkend="gchar"><type>gchar</type></link>*                : Read / Write
+  &quot;<link linkend="RygelMediaPlayer--volume">volume</link>&quot;                   <link linkend="gdouble"><type>gdouble</type></link>               : Read / Write
+</synopsis>
+</refsect1>
+
+<refsect1 id="RygelMediaPlayer.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+<para>This class is useful only when implementing Rygel plugins.</para>
+</para>
+</refsect1>
+<refsect1 id="RygelMediaPlayer.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="rygel-media-player-seek" role="function">
+<title>rygel_media_player_seek ()</title>
+<indexterm zone="rygel-media-player-seek"><primary>rygel_media_player_seek</primary></indexterm>
+<programlisting><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            rygel_media_player_seek             (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> time</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> instance</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-player-get-protocols" role="function">
+<title>rygel_media_player_get_protocols ()</title>
+<indexterm zone="rygel-media-player-get-protocols"><primary>rygel_media_player_get_protocols</primary></indexterm>
+<programlisting><link linkend="gchar"><returnvalue>gchar</returnvalue></link> **            rygel_media_player_get_protocols    (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> *result_length1</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>. <emphasis role="annotation">[<acronym>array</acronym> length=result_length1]</emphasis></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-player-get-mime-types" role="function">
+<title>rygel_media_player_get_mime_types ()</title>
+<indexterm zone="rygel-media-player-get-mime-types"><primary>rygel_media_player_get_mime_types</primary></indexterm>
+<programlisting><link linkend="gchar"><returnvalue>gchar</returnvalue></link> **            rygel_media_player_get_mime_types   (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>,
+                                                         <parameter><link linkend="int"><type>int</type></link> *result_length1</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>. <emphasis role="annotation">[<acronym>array</acronym> length=result_length1]</emphasis></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-player-get-playback-state" role="function">
+<title>rygel_media_player_get_playback_state ()</title>
+<indexterm zone="rygel-media-player-get-playback-state"><primary>rygel_media_player_get_playback_state</primary></indexterm>
+<programlisting><link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             rygel_media_player_get_playback_state
+                                                        (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>);</programlisting>
+<para>
+Get and return the current value of the <link linkend="RygelMediaPlayer--playback-state"><type>"playback-state"</type></link> property.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> instance to query</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>the value of the <link linkend="RygelMediaPlayer--playback-state"><type>"playback-state"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-player-set-playback-state" role="function">
+<title>rygel_media_player_set_playback_state ()</title>
+<indexterm zone="rygel-media-player-set-playback-state"><primary>rygel_media_player_set_playback_state</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_media_player_set_playback_state
+                                                        (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *value</parameter>);</programlisting>
+<para>
+Set the value of the <link linkend="RygelMediaPlayer--playback-state"><type>"playback-state"</type></link> property to <parameter>value</parameter>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> instance to modify</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>value</parameter>&#160;:</term>
+<listitem><simpara>the new value of the <link linkend="RygelMediaPlayer--playback-state"><type>"playback-state"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-player-get-uri" role="function">
+<title>rygel_media_player_get_uri ()</title>
+<indexterm zone="rygel-media-player-get-uri"><primary>rygel_media_player_get_uri</primary></indexterm>
+<programlisting><link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             rygel_media_player_get_uri          (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>);</programlisting>
+<para>
+Get and return the current value of the <link linkend="RygelMediaPlayer--uri"><type>"uri"</type></link> property.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> instance to query</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>the value of the <link linkend="RygelMediaPlayer--uri"><type>"uri"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-player-set-uri" role="function">
+<title>rygel_media_player_set_uri ()</title>
+<indexterm zone="rygel-media-player-set-uri"><primary>rygel_media_player_set_uri</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_media_player_set_uri          (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *value</parameter>);</programlisting>
+<para>
+Set the value of the <link linkend="RygelMediaPlayer--uri"><type>"uri"</type></link> property to <parameter>value</parameter>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> instance to modify</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>value</parameter>&#160;:</term>
+<listitem><simpara>the new value of the <link linkend="RygelMediaPlayer--uri"><type>"uri"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-player-get-volume" role="function">
+<title>rygel_media_player_get_volume ()</title>
+<indexterm zone="rygel-media-player-get-volume"><primary>rygel_media_player_get_volume</primary></indexterm>
+<programlisting><link linkend="gdouble"><returnvalue>gdouble</returnvalue></link>             rygel_media_player_get_volume       (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>);</programlisting>
+<para>
+Get and return the current value of the <link linkend="RygelMediaPlayer--volume"><type>"volume"</type></link> property.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> instance to query</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>the value of the <link linkend="RygelMediaPlayer--volume"><type>"volume"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-player-set-volume" role="function">
+<title>rygel_media_player_set_volume ()</title>
+<indexterm zone="rygel-media-player-set-volume"><primary>rygel_media_player_set_volume</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_media_player_set_volume       (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>,
+                                                         <parameter><link linkend="gdouble"><type>gdouble</type></link> value</parameter>);</programlisting>
+<para>
+Set the value of the <link linkend="RygelMediaPlayer--volume"><type>"volume"</type></link> property to <parameter>value</parameter>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> instance to modify</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>value</parameter>&#160;:</term>
+<listitem><simpara>the new value of the <link linkend="RygelMediaPlayer--volume"><type>"volume"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-player-get-duration" role="function">
+<title>rygel_media_player_get_duration ()</title>
+<indexterm zone="rygel-media-player-get-duration"><primary>rygel_media_player_get_duration</primary></indexterm>
+<programlisting><link linkend="gint64"><returnvalue>gint64</returnvalue></link>              rygel_media_player_get_duration     (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>);</programlisting>
+<para>
+Get and return the current value of the <link linkend="RygelMediaPlayer--duration"><type>"duration"</type></link> property.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> instance to query</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>the value of the <link linkend="RygelMediaPlayer--duration"><type>"duration"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-player-get-metadata" role="function">
+<title>rygel_media_player_get_metadata ()</title>
+<indexterm zone="rygel-media-player-get-metadata"><primary>rygel_media_player_get_metadata</primary></indexterm>
+<programlisting><link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             rygel_media_player_get_metadata     (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>);</programlisting>
+<para>
+Get and return the current value of the <link linkend="RygelMediaPlayer--metadata"><type>"metadata"</type></link> property.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> instance to query</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>the value of the <link linkend="RygelMediaPlayer--metadata"><type>"metadata"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-player-set-metadata" role="function">
+<title>rygel_media_player_set_metadata ()</title>
+<indexterm zone="rygel-media-player-set-metadata"><primary>rygel_media_player_set_metadata</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_media_player_set_metadata     (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *value</parameter>);</programlisting>
+<para>
+Set the value of the <link linkend="RygelMediaPlayer--metadata"><type>"metadata"</type></link> property to <parameter>value</parameter>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> instance to modify</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>value</parameter>&#160;:</term>
+<listitem><simpara>the new value of the <link linkend="RygelMediaPlayer--metadata"><type>"metadata"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-player-get-mime-type" role="function">
+<title>rygel_media_player_get_mime_type ()</title>
+<indexterm zone="rygel-media-player-get-mime-type"><primary>rygel_media_player_get_mime_type</primary></indexterm>
+<programlisting><link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             rygel_media_player_get_mime_type    (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>);</programlisting>
+<para>
+Get and return the current value of the <link linkend="RygelMediaPlayer--mime-type"><type>"mime-type"</type></link> property.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> instance to query</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>the value of the <link linkend="RygelMediaPlayer--mime-type"><type>"mime-type"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-player-set-mime-type" role="function">
+<title>rygel_media_player_set_mime_type ()</title>
+<indexterm zone="rygel-media-player-set-mime-type"><primary>rygel_media_player_set_mime_type</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_media_player_set_mime_type    (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *value</parameter>);</programlisting>
+<para>
+Set the value of the <link linkend="RygelMediaPlayer--mime-type"><type>"mime-type"</type></link> property to <parameter>value</parameter>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> instance to modify</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>value</parameter>&#160;:</term>
+<listitem><simpara>the new value of the <link linkend="RygelMediaPlayer--mime-type"><type>"mime-type"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-player-get-content-features" role="function">
+<title>rygel_media_player_get_content_features ()</title>
+<indexterm zone="rygel-media-player-get-content-features"><primary>rygel_media_player_get_content_features</primary></indexterm>
+<programlisting><link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             rygel_media_player_get_content_features
+                                                        (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>);</programlisting>
+<para>
+Get and return the current value of the <link linkend="RygelMediaPlayer--content-features"><type>"content-features"</type></link> property.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> instance to query</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>the value of the <link linkend="RygelMediaPlayer--content-features"><type>"content-features"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-player-set-content-features" role="function">
+<title>rygel_media_player_set_content_features ()</title>
+<indexterm zone="rygel-media-player-set-content-features"><primary>rygel_media_player_set_content_features</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_media_player_set_content_features
+                                                        (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *value</parameter>);</programlisting>
+<para>
+Set the value of the <link linkend="RygelMediaPlayer--content-features"><type>"content-features"</type></link> property to <parameter>value</parameter>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> instance to modify</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>value</parameter>&#160;:</term>
+<listitem><simpara>the new value of the <link linkend="RygelMediaPlayer--content-features"><type>"content-features"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-player-get-duration-as-str" role="function">
+<title>rygel_media_player_get_duration_as_str ()</title>
+<indexterm zone="rygel-media-player-get-duration-as-str"><primary>rygel_media_player_get_duration_as_str</primary></indexterm>
+<programlisting><link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             rygel_media_player_get_duration_as_str
+                                                        (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>);</programlisting>
+<para>
+Get and return the current value of the <link linkend="RygelMediaPlayer--duration-as-str"><type>"duration-as-str"</type></link> property.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> instance to query</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>the value of the <link linkend="RygelMediaPlayer--duration-as-str"><type>"duration-as-str"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-player-get-position" role="function">
+<title>rygel_media_player_get_position ()</title>
+<indexterm zone="rygel-media-player-get-position"><primary>rygel_media_player_get_position</primary></indexterm>
+<programlisting><link linkend="gint64"><returnvalue>gint64</returnvalue></link>              rygel_media_player_get_position     (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>);</programlisting>
+<para>
+Get and return the current value of the <link linkend="RygelMediaPlayer--position"><type>"position"</type></link> property.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> instance to query</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>the value of the <link linkend="RygelMediaPlayer--position"><type>"position"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-player-get-position-as-str" role="function">
+<title>rygel_media_player_get_position_as_str ()</title>
+<indexterm zone="rygel-media-player-get-position-as-str"><primary>rygel_media_player_get_position_as_str</primary></indexterm>
+<programlisting><link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             rygel_media_player_get_position_as_str
+                                                        (<parameter><link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> *self</parameter>);</programlisting>
+<para>
+Get and return the current value of the <link linkend="RygelMediaPlayer--position-as-str"><type>"position-as-str"</type></link> property.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> instance to query</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>the value of the <link linkend="RygelMediaPlayer--position-as-str"><type>"position-as-str"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="RygelMediaPlayer-struct" role="struct">
+<title>RygelMediaPlayer</title>
+<indexterm zone="RygelMediaPlayer-struct"><primary>RygelMediaPlayer</primary></indexterm>
+<programlisting>typedef struct _RygelMediaPlayer RygelMediaPlayer;</programlisting>
+<para>
+Interface for mapping AVTransport:2 methods to the specific implementation.
+</para>
+<para>
+<para>This class is useful only when implementing Rygel plugins.</para>
+</para></refsect2>
+<refsect2 id="RygelMediaPlayerIface" role="struct">
+<title>struct RygelMediaPlayerIface</title>
+<indexterm zone="RygelMediaPlayerIface"><primary>RygelMediaPlayerIface</primary></indexterm>
+<programlisting>struct RygelMediaPlayerIface {
+	GTypeInterface parent_iface;
+	gboolean (*seek) (RygelMediaPlayer* self, GstClockTime time);
+	gchar** (*get_protocols) (RygelMediaPlayer* self, int* result_length1);
+	gchar** (*get_mime_types) (RygelMediaPlayer* self, int* result_length1);
+	gchar* (*get_playback_state) (RygelMediaPlayer* self);
+	void (*set_playback_state) (RygelMediaPlayer* self, const gchar* value);
+	gchar* (*get_uri) (RygelMediaPlayer* self);
+	void (*set_uri) (RygelMediaPlayer* self, const gchar* value);
+	gdouble (*get_volume) (RygelMediaPlayer* self);
+	void (*set_volume) (RygelMediaPlayer* self, gdouble value);
+	gint64 (*get_duration) (RygelMediaPlayer* self);
+	gchar* (*get_metadata) (RygelMediaPlayer* self);
+	void (*set_metadata) (RygelMediaPlayer* self, const gchar* value);
+	gchar* (*get_mime_type) (RygelMediaPlayer* self);
+	void (*set_mime_type) (RygelMediaPlayer* self, const gchar* value);
+	gchar* (*get_content_features) (RygelMediaPlayer* self);
+	void (*set_content_features) (RygelMediaPlayer* self, const gchar* value);
+	gint64 (*get_position) (RygelMediaPlayer* self);
+};
+</programlisting>
+<para>
+Interface for creating <link linkend="RygelMediaPlayer"><type>RygelMediaPlayer</type></link> implementations.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="GTypeInterface"><type>GTypeInterface</type></link>&#160;<structfield id="RygelMediaPlayerIface.parent-iface">parent_iface</structfield>;</term>
+<listitem><simpara>the parent interface structure</simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelMediaPlayerIface.seek">seek</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-media-player-seek"><function><link linkend="rygel-media-player-seek"><function>rygel_media_player_seek()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelMediaPlayerIface.get-protocols">get_protocols</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-media-player-get-protocols"><function><link linkend="rygel-media-player-get-protocols"><function>rygel_media_player_get_protocols()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelMediaPlayerIface.get-mime-types">get_mime_types</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-media-player-get-mime-types"><function><link linkend="rygel-media-player-get-mime-types"><function>rygel_media_player_get_mime_types()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelMediaPlayerIface.get-playback-state">get_playback_state</structfield>&#160;()</term>
+<listitem><simpara>getter method for the abstract property <link linkend="RygelMediaPlayer--playback-state"><type>"playback-state"</type></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelMediaPlayerIface.set-playback-state">set_playback_state</structfield>&#160;()</term>
+<listitem><simpara>setter method for the abstract property <link linkend="RygelMediaPlayer--playback-state"><type>"playback-state"</type></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelMediaPlayerIface.get-uri">get_uri</structfield>&#160;()</term>
+<listitem><simpara>getter method for the abstract property <link linkend="RygelMediaPlayer--uri"><type>"uri"</type></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelMediaPlayerIface.set-uri">set_uri</structfield>&#160;()</term>
+<listitem><simpara>setter method for the abstract property <link linkend="RygelMediaPlayer--uri"><type>"uri"</type></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelMediaPlayerIface.get-volume">get_volume</structfield>&#160;()</term>
+<listitem><simpara>getter method for the abstract property <link linkend="RygelMediaPlayer--volume"><type>"volume"</type></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelMediaPlayerIface.set-volume">set_volume</structfield>&#160;()</term>
+<listitem><simpara>setter method for the abstract property <link linkend="RygelMediaPlayer--volume"><type>"volume"</type></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelMediaPlayerIface.get-duration">get_duration</structfield>&#160;()</term>
+<listitem><simpara>getter method for the abstract property <link linkend="RygelMediaPlayer--duration"><type>"duration"</type></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelMediaPlayerIface.get-metadata">get_metadata</structfield>&#160;()</term>
+<listitem><simpara>getter method for the abstract property <link linkend="RygelMediaPlayer--metadata"><type>"metadata"</type></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelMediaPlayerIface.set-metadata">set_metadata</structfield>&#160;()</term>
+<listitem><simpara>setter method for the abstract property <link linkend="RygelMediaPlayer--metadata"><type>"metadata"</type></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelMediaPlayerIface.get-mime-type">get_mime_type</structfield>&#160;()</term>
+<listitem><simpara>getter method for the abstract property <link linkend="RygelMediaPlayer--mime-type"><type>"mime-type"</type></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelMediaPlayerIface.set-mime-type">set_mime_type</structfield>&#160;()</term>
+<listitem><simpara>setter method for the abstract property <link linkend="RygelMediaPlayer--mime-type"><type>"mime-type"</type></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelMediaPlayerIface.get-content-features">get_content_features</structfield>&#160;()</term>
+<listitem><simpara>getter method for the abstract property <link linkend="RygelMediaPlayer--content-features"><type>"content-features"</type></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelMediaPlayerIface.set-content-features">set_content_features</structfield>&#160;()</term>
+<listitem><simpara>setter method for the abstract property <link linkend="RygelMediaPlayer--content-features"><type>"content-features"</type></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelMediaPlayerIface.get-position">get_position</structfield>&#160;()</term>
+<listitem><simpara>getter method for the abstract property <link linkend="RygelMediaPlayer--position"><type>"position"</type></link></simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 id="RygelMediaPlayer.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="RygelMediaPlayer--content-features" role="property"><title>The <literal>&quot;content-features&quot;</literal> property</title>
+<indexterm zone="RygelMediaPlayer--content-features"><primary>RygelMediaPlayer:content-features</primary></indexterm>
+<programlisting>  &quot;content-features&quot;         <link linkend="gchar"><type>gchar</type></link>*                : Read / Write</programlisting>
+<para>content-features.</para><para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="RygelMediaPlayer--duration" role="property"><title>The <literal>&quot;duration&quot;</literal> property</title>
+<indexterm zone="RygelMediaPlayer--duration"><primary>RygelMediaPlayer:duration</primary></indexterm>
+<programlisting>  &quot;duration&quot;                 <link linkend="gint64"><type>gint64</type></link>                : Read</programlisting>
+<para>duration.</para><para>Default value: 0</para>
+</refsect2>
+<refsect2 id="RygelMediaPlayer--metadata" role="property"><title>The <literal>&quot;metadata&quot;</literal> property</title>
+<indexterm zone="RygelMediaPlayer--metadata"><primary>RygelMediaPlayer:metadata</primary></indexterm>
+<programlisting>  &quot;metadata&quot;                 <link linkend="gchar"><type>gchar</type></link>*                : Read / Write</programlisting>
+<para>metadata.</para><para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="RygelMediaPlayer--mime-type" role="property"><title>The <literal>&quot;mime-type&quot;</literal> property</title>
+<indexterm zone="RygelMediaPlayer--mime-type"><primary>RygelMediaPlayer:mime-type</primary></indexterm>
+<programlisting>  &quot;mime-type&quot;                <link linkend="gchar"><type>gchar</type></link>*                : Read / Write</programlisting>
+<para>mime-type.</para><para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="RygelMediaPlayer--playback-state" role="property"><title>The <literal>&quot;playback-state&quot;</literal> property</title>
+<indexterm zone="RygelMediaPlayer--playback-state"><primary>RygelMediaPlayer:playback-state</primary></indexterm>
+<programlisting>  &quot;playback-state&quot;           <link linkend="gchar"><type>gchar</type></link>*                : Read / Write</programlisting>
+<para>playback-state.</para><para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="RygelMediaPlayer--position" role="property"><title>The <literal>&quot;position&quot;</literal> property</title>
+<indexterm zone="RygelMediaPlayer--position"><primary>RygelMediaPlayer:position</primary></indexterm>
+<programlisting>  &quot;position&quot;                 <link linkend="gint64"><type>gint64</type></link>                : Read</programlisting>
+<para>position.</para><para>Default value: 0</para>
+</refsect2>
+<refsect2 id="RygelMediaPlayer--uri" role="property"><title>The <literal>&quot;uri&quot;</literal> property</title>
+<indexterm zone="RygelMediaPlayer--uri"><primary>RygelMediaPlayer:uri</primary></indexterm>
+<programlisting>  &quot;uri&quot;                      <link linkend="gchar"><type>gchar</type></link>*                : Read / Write</programlisting>
+<para>uri.</para><para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="RygelMediaPlayer--volume" role="property"><title>The <literal>&quot;volume&quot;</literal> property</title>
+<indexterm zone="RygelMediaPlayer--volume"><primary>RygelMediaPlayer:volume</primary></indexterm>
+<programlisting>  &quot;volume&quot;                   <link linkend="gdouble"><type>gdouble</type></link>               : Read / Write</programlisting>
+<para>volume.</para><para>Default value: 0</para>
+</refsect2>
+</refsect1>
+
+</refentry>

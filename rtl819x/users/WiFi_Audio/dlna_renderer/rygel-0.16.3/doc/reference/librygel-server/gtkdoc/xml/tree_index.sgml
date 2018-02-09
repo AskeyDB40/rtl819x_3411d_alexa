@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE screen PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<screen>
+    <link linkend="GObject">GObject</link>
+        <link linkend="RygelMediaObject">RygelMediaObject</link>
+            <link linkend="RygelMediaItem">RygelMediaItem</link>
+                <link linkend="RygelAudioItem">RygelAudioItem</link>
+                    <link linkend="RygelMusicItem">RygelMusicItem</link>
+                    <link linkend="RygelVideoItem">RygelVideoItem</link>
+                <link linkend="RygelImageItem">RygelImageItem</link>
+                    <link linkend="RygelPhotoItem">RygelPhotoItem</link>
+            <link linkend="RygelMediaContainer">RygelMediaContainer</link>
+                <link linkend="RygelSimpleContainer">RygelSimpleContainer</link>
+        <link linkend="RygelMediaArtStore">RygelMediaArtStore</link>
+        <link linkend="GeeAbstractCollection">GeeAbstractCollection</link>
+            <link linkend="GeeAbstractList">GeeAbstractList</link>
+                <link linkend="GeeArrayList">GeeArrayList</link>
+                    <link linkend="RygelMediaObjects">RygelMediaObjects</link>
+        <link linkend="RygelMediaDevice">RygelMediaDevice</link>
+            <link linkend="RygelMediaServer">RygelMediaServer</link>
+        <link linkend="GUPnPResourceFactory">GUPnPResourceFactory</link>
+            <link linkend="RygelPlugin">RygelPlugin</link>
+                <link linkend="RygelMediaServerPlugin">RygelMediaServerPlugin</link>
+    <link linkend="GInterface">GInterface</link>
+        <link linkend="RygelVisualItem">RygelVisualItem</link>
+        <link linkend="RygelSearchableContainer">RygelSearchableContainer</link>
+        <link linkend="RygelWritableContainer">RygelWritableContainer</link>
+    <link linkend="RygelSearchExpression">RygelSearchExpression</link>
+        <link linkend="RygelLogicalExpression">RygelLogicalExpression</link>
+        <link linkend="RygelRelationalExpression">RygelRelationalExpression</link>
+    <link linkend="GEnum">GEnum</link>
+        <link linkend="RygelLogicalOperator">RygelLogicalOperator</link>
+    <link linkend="RygelSubtitle">RygelSubtitle</link>
+    <link linkend="RygelIconInfo">RygelIconInfo</link>
+        <link linkend="RygelThumbnail">RygelThumbnail</link>
+</screen>

@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelPluginLoader">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelPluginLoader.top_of_page">RygelPluginLoader</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-CORE Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelPluginLoader</refname>
+<refpurpose>Responsible for plugin loading. Probes for shared library files in a specific directry and tries to grab a function with a specific name and signature, calls it. The loaded module can then add plugins to Rygel by calling the add_plugin method. NOTE: The module SHOULD make sure that plugin is not disabled by user using plugin_disabled method before creating the plugin instance and resources related to that instance.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelPluginLoader.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="RYGEL-TYPE-PLUGIN-LOADER:CAPS">RYGEL_TYPE_PLUGIN_LOADER</link>
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-plugin-loader-load-plugins">rygel_plugin_loader_load_plugins</link>    (<parameter><link linkend="RygelPluginLoader"><type>RygelPluginLoader</type></link> *self</parameter>);
+<link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            <link linkend="rygel-plugin-loader-plugin-disabled">rygel_plugin_loader_plugin_disabled</link> (<parameter><link linkend="RygelPluginLoader"><type>RygelPluginLoader</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-plugin-loader-add-plugin">rygel_plugin_loader_add_plugin</link>      (<parameter><link linkend="RygelPluginLoader"><type>RygelPluginLoader</type></link> *self</parameter>,
+                                                         <parameter><link linkend="RygelPlugin"><type>RygelPlugin</type></link> *plugin</parameter>);
+<link linkend="RygelPlugin"><returnvalue>RygelPlugin</returnvalue></link> *       <link linkend="rygel-plugin-loader-get-plugin-by-name">rygel_plugin_loader_get_plugin_by_name</link>
+                                                        (<parameter><link linkend="RygelPluginLoader"><type>RygelPluginLoader</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>);
+<link linkend="GeeCollection"><returnvalue>GeeCollection</returnvalue></link> *     <link linkend="rygel-plugin-loader-list-plugins">rygel_plugin_loader_list_plugins</link>    (<parameter><link linkend="RygelPluginLoader"><type>RygelPluginLoader</type></link> *self</parameter>);
+<link linkend="RygelPluginLoader"><returnvalue>RygelPluginLoader</returnvalue></link> * <link linkend="rygel-plugin-loader-new">rygel_plugin_loader_new</link>             (<parameter><type>void</type></parameter>);
+struct              <link linkend="RygelPluginLoader-struct">RygelPluginLoader</link>;
+struct              <link linkend="RygelPluginLoaderClass">RygelPluginLoaderClass</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelPluginLoader.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----RygelPluginLoader
+</synopsis>
+</refsect1>
+<refsect1 id="RygelPluginLoader.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<synopsis>
+  &quot;<link linkend="RygelPluginLoader-plugin-available">plugin-available</link>&quot;                               : <link linkend="G-SIGNAL-RUN-LAST:CAPS"><literal>Run Last</literal></link>
+</synopsis>
+</refsect1>
+
+<refsect1 id="RygelPluginLoader.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="RygelPluginLoader.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="RYGEL-TYPE-PLUGIN-LOADER:CAPS" role="macro">
+<title>RYGEL_TYPE_PLUGIN_LOADER</title>
+<indexterm zone="RYGEL-TYPE-PLUGIN-LOADER:CAPS"><primary>RYGEL_TYPE_PLUGIN_LOADER</primary></indexterm>
+<programlisting>#define RYGEL_TYPE_PLUGIN_LOADER (rygel_plugin_loader_get_type ())
+</programlisting>
+<para>
+The type for <link linkend="RygelPluginLoader"><type>RygelPluginLoader</type></link>.
+</para></refsect2>
+<refsect2 id="rygel-plugin-loader-load-plugins" role="function">
+<title>rygel_plugin_loader_load_plugins ()</title>
+<indexterm zone="rygel-plugin-loader-load-plugins"><primary>rygel_plugin_loader_load_plugins</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_plugin_loader_load_plugins    (<parameter><link linkend="RygelPluginLoader"><type>RygelPluginLoader</type></link> *self</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelPluginLoader"><type>RygelPluginLoader</type></link> instance</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-plugin-loader-plugin-disabled" role="function">
+<title>rygel_plugin_loader_plugin_disabled ()</title>
+<indexterm zone="rygel-plugin-loader-plugin-disabled"><primary>rygel_plugin_loader_plugin_disabled</primary></indexterm>
+<programlisting><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            rygel_plugin_loader_plugin_disabled (<parameter><link linkend="RygelPluginLoader"><type>RygelPluginLoader</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>);</programlisting>
+<para>
+Checks if a plugin is disabled by user
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelPluginLoader"><type>RygelPluginLoader</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>name</parameter>&#160;:</term>
+<listitem><simpara>the name of plugin to check for. <emphasis role="annotation">[<acronym>in</acronym>]</emphasis></simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>true if plugin is disabled, false if not.</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-plugin-loader-add-plugin" role="function">
+<title>rygel_plugin_loader_add_plugin ()</title>
+<indexterm zone="rygel-plugin-loader-add-plugin"><primary>rygel_plugin_loader_add_plugin</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_plugin_loader_add_plugin      (<parameter><link linkend="RygelPluginLoader"><type>RygelPluginLoader</type></link> *self</parameter>,
+                                                         <parameter><link linkend="RygelPlugin"><type>RygelPlugin</type></link> *plugin</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelPluginLoader"><type>RygelPluginLoader</type></link> instance</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-plugin-loader-get-plugin-by-name" role="function">
+<title>rygel_plugin_loader_get_plugin_by_name ()</title>
+<indexterm zone="rygel-plugin-loader-get-plugin-by-name"><primary>rygel_plugin_loader_get_plugin_by_name</primary></indexterm>
+<programlisting><link linkend="RygelPlugin"><returnvalue>RygelPlugin</returnvalue></link> *       rygel_plugin_loader_get_plugin_by_name
+                                                        (<parameter><link linkend="RygelPluginLoader"><type>RygelPluginLoader</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelPluginLoader"><type>RygelPluginLoader</type></link> instance</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-plugin-loader-list-plugins" role="function">
+<title>rygel_plugin_loader_list_plugins ()</title>
+<indexterm zone="rygel-plugin-loader-list-plugins"><primary>rygel_plugin_loader_list_plugins</primary></indexterm>
+<programlisting><link linkend="GeeCollection"><returnvalue>GeeCollection</returnvalue></link> *     rygel_plugin_loader_list_plugins    (<parameter><link linkend="RygelPluginLoader"><type>RygelPluginLoader</type></link> *self</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelPluginLoader"><type>RygelPluginLoader</type></link> instance</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-plugin-loader-new" role="function">
+<title>rygel_plugin_loader_new ()</title>
+<indexterm zone="rygel-plugin-loader-new"><primary>rygel_plugin_loader_new</primary></indexterm>
+<programlisting><link linkend="RygelPluginLoader"><returnvalue>RygelPluginLoader</returnvalue></link> * rygel_plugin_loader_new             (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="RygelPluginLoader-struct" role="struct">
+<title>struct RygelPluginLoader</title>
+<indexterm zone="RygelPluginLoader-struct"><primary>RygelPluginLoader</primary></indexterm>
+<programlisting>struct RygelPluginLoader;</programlisting>
+<para>
+Responsible for plugin loading. Probes for shared library files in a specific directry and tries to grab a function with a specific name and signature, calls it. The loaded module can then add plugins to Rygel by calling the add_plugin method. NOTE: The module SHOULD make sure that plugin is not disabled by user using plugin_disabled method before creating the plugin instance and resources related to that instance.
+</para></refsect2>
+<refsect2 id="RygelPluginLoaderClass" role="struct">
+<title>struct RygelPluginLoaderClass</title>
+<indexterm zone="RygelPluginLoaderClass"><primary>RygelPluginLoaderClass</primary></indexterm>
+<programlisting>struct RygelPluginLoaderClass {
+	GObjectClass parent_class;
+};
+</programlisting>
+<para>
+The class structure for <link linkend="RYGEL-TYPE-PLUGIN-LOADER:CAPS"><literal>RYGEL_TYPE_PLUGIN_LOADER</literal></link>. All the fields in this structure are private and should never be accessed directly.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="GObjectClass"><type>GObjectClass</type></link>&#160;<structfield id="RygelPluginLoaderClass.parent-class">parent_class</structfield>;</term>
+<listitem><simpara>the parent class structure</simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 id="RygelPluginLoader.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="RygelPluginLoader-plugin-available" role="signal"><title>The <literal>&quot;plugin-available&quot;</literal> signal</title>
+<indexterm zone="RygelPluginLoader-plugin-available"><primary>RygelPluginLoader::plugin-available</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                user_function                      (<link linkend="RygelPluginLoader"><type>RygelPluginLoader</type></link> *plugin_loader,
+                                                        <link linkend="RygelPlugin"><type>RygelPlugin</type></link>       *plugin,
+                                                        <link linkend="gpointer"><type>gpointer</type></link>           user_data)          : <link linkend="G-SIGNAL-RUN-LAST:CAPS"><literal>Run Last</literal></link></programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>plugin_loader</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelPluginLoader"><type>RygelPluginLoader</type></link> instance that received the signal</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>user_data</parameter>&#160;:</term>
+<listitem><simpara>user data set when the signal handler was connected.</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+</refsect1>
+
+</refentry>

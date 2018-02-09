@@ -1,0 +1,532 @@
+'\" t
+.\"     Title: rygel.conf
+.\"    Author: Jens Georg <mail@jensge.org>
+.\" Generator: DocBook XSL Stylesheets v1.76.1 <http://docbook.sf.net/>
+.\"      Date: 11/13/2012
+.\"    Manual: Rygel User Manual
+.\"    Source: rygel
+.\"  Language: English
+.\"
+.TH "RYGEL\&.CONF" "5" "11/13/2012" "rygel" "Rygel User Manual"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+rygel.conf \- Rygel configuration file
+.SH "SYNOPSIS"
+.HP \w'\fB$XDG_CONFIG_DIR/rygel\&.conf\fR\ 'u
+\fB$XDG_CONFIG_DIR/rygel\&.conf\fR
+.HP \w'\fB/etc/rygel\&.conf\fR\ 'u
+\fB/etc/rygel\&.conf\fR
+.SH "DESCRIPTION"
+.PP
+\fBrygel\fR
+reads its configuration values from the file
+$XDG_CONFIG_DIR/rygel\&.conf
+or a file given on command line with the
+\fB\-\-config\fR
+option\&. If that file does not exist it uses the file
+/etc/rygel\&.conf\&.
+.PP
+Most of the options may be overriden by commandline arguments or envronment variables\&. See
+\fBrygel\fR(1)
+for details on those\&.
+.SH "GENERAL DIRECTIVES"
+.PP
+Lists in the configuration files are separated by a semicolon (\fB;\fR)\&. Boolean values may be either
+\fBtrue\fR
+or
+\fBfalse\fR\&.
+.PP
+\fBupnp\-enabled\fR
+.RS 4
+Enable/disable UPnP sharing of the media files\&. If set to
+\fBfalse\fR,
+rygel
+will still offer HTTP proxy URLs for its media files but not actively advertise them via UPnP\&.
+.RE
+.PP
+\fBinterface=\fR\fB\fIINTERFACE\fR\fR
+.RS 4
+Set the network\-interface
+rygel
+listens on\&.
+.RE
+.PP
+\fBport=\fR\fB\fIPORT\fR\fR
+.RS 4
+Set the listen\-port\&.
+.RE
+.PP
+\fBenable\-transcoding\fR
+.RS 4
+Set to
+\fBtrue\fR
+to enable transcoding in general\&.
+.RE
+.PP
+\fBenable\-mp3\-transcoder\fR
+.RS 4
+Set to
+\fBtrue\fR
+to enable transcoding to MP3\&.
+.RE
+.PP
+\fBenable\-mp2ts\-transcoder\fR
+.RS 4
+Set to
+\fBtrue\fR
+to enable transcoding to MPEG2 in TS container\&.
+.RE
+.PP
+\fBenable\-lpcm\-transcoder\fR
+.RS 4
+Set to
+\fBtrue\fR
+to enable transcoding to Linear PCM\&.
+.RE
+.PP
+\fBenable\-wmv\-transcoder\fR
+.RS 4
+Set to
+\fBtrue\fR
+to enable transcoding to WMV\&.
+.RE
+.PP
+\fBenable\-aac\-transcoder\fR
+.RS 4
+Set to
+\fBtrue\fR
+to enable transcoding to AAC\&.
+.RE
+.PP
+\fBenable\-avc\-transcoder\fR
+.RS 4
+Set to
+\fBtrue\fR
+to enable transcoding to AVC\&.
+.RE
+.PP
+\fBlog\-level=\fR\fB\fIDOMAIN\fR\fR\fB:\fR\fB\fILEVEL\fR\fR\fB[,\fR\fB\fIDOMAIN\fR\fR\fB:\fR\fB\fILEVEL\fR\fR\fB,\&...]\fR
+.RS 4
+Comma\-separated list of
+\fIDOMAIN\fR:\fILEVEL\fR
+pairs, allowing to set the log level individually for each domain, where
+\fIDOMAIN\fR
+is eiher
+\fB"*"\fR, "\fBrygel\fR" or the name of a plugin\&. Allowed log levels are 1=critical, 2=error, 3=warning, 4=message/info, 5=debug\&.
+.RE
+.PP
+\fBplugin\-path=\fR\fB\fIPATH\fR\fR
+.RS 4
+Set the plugin search path\&.
+.RE
+.PP
+\fBallow\-upload\fR
+.RS 4
+Allow uploading of media files via UPnP\&.
+.RE
+.PP
+\fBallow\-deletion\fR
+.RS 4
+Allow remote media file deletion via UPnP\&.
+.RE
+.PP
+\fBvideo\-upload\-folder\fR
+.RS 4
+If
+\fBallow\-upload\fR
+is
+\fBtrue\fR, use this folder to store uploaded videos\&. It defaults to
+\fB@VIDEOS@\fR
+which expands to the default directory for video files (usually
+\fB$HOME\fR/Videos)\&.
+.RE
+.PP
+\fBmusic\-upload\-folder\fR
+.RS 4
+If
+\fBallow\-upload\fR
+is
+\fBtrue\fR, use this folder to store uploaded music files\&. It defaults to
+\fB@MUSIC@\fR
+which expands to the default directory for music files (usually
+\fB$HOME\fR/Music)\&.
+.RE
+.PP
+\fBpicture\-upload\-folder\fR
+.RS 4
+If
+\fBallow\-upload\fR
+is
+\fBtrue\fR, use this folder to store uploaded pictures\&. It defaults to
+\fB@PICTURES@\fR
+which expands to the default directory for picture files (usually
+\fB$HOME\fR/Pictures)\&.
+.RE
+.PP
+\fBforce\-downgrade\-for\fR
+.RS 4
+Semicolon\-separated list of device user\-agents (or parts thereof) which need a forced downgrade to
+\fBMediaServer:1\fR
+and/or
+\fBContentDirectory:1\fR\&.
+.sp
+.if n \{\
+.sp
+.\}
+.RS 4
+.it 1 an-trap
+.nr an-no-space-flag 1
+.nr an-break-flag 1
+.br
+.ps +1
+\fBWarning\fR
+.ps -1
+.br
+Only use this parameter if you know what your\*(Aqre doing or are being told to do so; overriding the default value might cause incompatibilites\&. If you find that adding your device here enables its usage with Rygel, please
+\m[blue]\fBfile an IOP bug\fR\m[]\&\s-2\u[1]\d\s+2
+so we can include it into the default configuration\&.
+.sp .5v
+.RE
+.RE
+.PP
+Sections for plugins are denoted with
+\fB[PluginName]\fR
+and can contain options specific to a plugin (see below) as well these common options:
+.PP
+\fBtitle\fR=\fITITLE\fR
+.RS 4
+Title of the device implemented by this plugin\&. There are some variables which will be replaced by
+rygel\&.
+\fI@REALNAME@\fR
+will be subsituted by the user\*(Aqs real name,
+\fI@USERNAME@\fR
+by the user\*(Aqs login id and
+\fI@HOSTNAME@\fR
+by the name of the machine
+rygel
+runs on\&.
+.RE
+.PP
+\fBenabled\fR
+.RS 4
+You can individually enable or disable plugins by setting this to
+\fBtrue\fR
+or
+\fBfalse\fR\&.
+.RE
+.SH "TRACKER PLUGIN"
+.PP
+The tracker plugin uses the centralized database of meta information from the tracker project\&. See the
+\m[blue]\fBtracker project website\fR\m[]\&\s-2\u[2]\d\s+2
+for more information about tracker\&.
+.PP
+\fBshare\-pictures\fR
+.RS 4
+Enable or disable sharing of all pictures in the Tracker database\&.
+.RE
+.PP
+\fBshare\-videos\fR
+.RS 4
+Enable or disable sharing of all videos in the Tracker database\&.
+.RE
+.PP
+\fBshare\-music\fR
+.RS 4
+Enable or disable sharing of all music in the Tracker database\&.
+.RE
+.SH "MEDIAEXPORT PLUGIN"
+.PP
+The MediaExport plugin is an alternative to the tracker\-backed media export\&. It extracts meta\-data by itself and stores it in a
+\m[blue]\fBSQLite\fR\m[]\&\s-2\u[3]\d\s+2
+database in
+$XDG_CACHE_DIR/rygel/media\-export\&.db
+on UNIX platforms\&.
+.if n \{\
+.sp
+.\}
+.RS 4
+.it 1 an-trap
+.nr an-no-space-flag 1
+.nr an-break-flag 1
+.br
+.ps +1
+\fBNote\fR
+.ps -1
+.br
+.PP
+If both plugins, Tracker as well as MediaExport are enabled, MediaExport will disable itself in favour of the Tracker plugin\&.
+.sp .5v
+.RE
+.PP
+There are several options supported by this plugin:
+.PP
+\fBuris\fR
+.RS 4
+A list of URIS to expose via UPnP\&. May be files, folders or anything supported by GVFS\&. If left emtpy it defaults to export the user\*(Aqs music, video and picture folders as defined per XDG special user directories spec\&. These default folders can be referenced by
+\fB@MUSIC@\fR,
+\fB@PICTURES@\fR
+and
+\fB@VIDEOS@\fR\&. Locations can be entered as either fully escaped URIS or normal paths\&.
+.sp
+.if n \{\
+.sp
+.\}
+.RS 4
+.it 1 an-trap
+.nr an-no-space-flag 1
+.nr an-break-flag 1
+.br
+.ps +1
+\fBNote\fR
+.ps -1
+.br
+If you enter a normal path that contains whitespace there is no need to escape them with either a backslash or putting the string in quotes\&.
+.sp .5v
+.RE
+.PP
+\fBExample\ \&1.\ \&Possible values for uris\fR
+.sp
+\fBuris=@MUSIC@;/home/user/My Pictures;file:///home/user/My%20Videos\fR
+.RE
+.PP
+\fBextract\-metadata\fR
+.RS 4
+Set to
+\fBfalse\fR
+if you do not care about duration or any other meta\-data like artist\&. This speeds up the initial crawl of the media a lot\&. Use it to quickly share some files via UPnP\&. Make sure to define an
+\fBinclude\-filter\fR, otherwise you will end up with a lot of files exposed which the client cannot display anyway\&.
+.RE
+.PP
+\fBmonitor\-changes\fR
+.RS 4
+Set to
+\fBfalse\fR
+if you don\*(Aqt want to have new files picked up automatically by rygel\&.
+.RE
+.SH "PLAYBIN PLUGIN"
+.PP
+The Playbin plugin implements a media renderer (Digtal Media Renderer, DMR in DLNA terms)\&. This plugin was known as GstRenderer\&.
+.PP
+This plugin has no special options\&.
+.SH "ZDFMEDIATHEK"
+.PP
+The
+\m[blue]\fBZDF Mediathek\fR\m[]\&\s-2\u[4]\d\s+2
+is an online archive of broadcasts from the second german television\&. This plugin can be used to subscribes to the RSS feeds of this service and expose the broadcasts via UPnP\&.
+.PP
+\fBrss\fR
+.RS 4
+A list of broadcast ids\&. How to get the broadcast ids from the web site is described in the file
+README\&.Mediathek
+(in german only)\&.
+.RE
+.PP
+\fBupdate\-interval\fR
+.RS 4
+Time in seconds after which the plugin checks for new content\&. The default interval is 1800 seconds (30 minutes), the minimum interval 10 minutes\&.
+.RE
+.PP
+\fBvideo\-format\fR
+.RS 4
+The mediathek usually offers the videos in two formats, WMV and H\&.264\&. Possible values here are wmv and mp4\&. The default video format is wmv\&.
+.if n \{\
+.sp
+.\}
+.RS 4
+.it 1 an-trap
+.nr an-no-space-flag 1
+.nr an-break-flag 1
+.br
+.ps +1
+\fBNote\fR
+.ps -1
+.br
+Proxying of general RTSP in
+rygel
+as used by the H\&.264 streams is currently not working very well\&. Please enable mp4 only if your renderer can handle RTSP by itself\&.
+.sp .5v
+.RE
+.RE
+.SH "GSTLAUNCH PLUGIN"
+.PP
+The GstLaunch plugin allows to expose GStreamer pipelines using the same syntax as the gst\-launch utilty\&. You can configure several items in this plugins\&.
+.PP
+\fBlaunch\-items\fR
+.RS 4
+A list of of identifiers for the pipelines to be exposed\&.
+.RE
+.PP
+\fBidentifier\-title\fR
+.RS 4
+Title of the device represented by this pipeline\&. Identifier is the identifier as set in launch\-items
+.RE
+.PP
+\fBidentifier\-mime\fR
+.RS 4
+Mime\-type of the pipeline\&.
+.RE
+.PP
+\fBidentifier\-launch\fR
+.RS 4
+Definition of the pipeline in gst\-launch syntax\&. For some examples on writing pipelines see
+\fBgst-launch\fR(1)\&.
+.RE
+.PP
+\fBidentifier\-dlnaprofile\fR
+.RS 4
+DLNA profile for the stream\&.
+.RE
+.PP
+An example configuration is available in the distributed configuration file
+/etc/rygel\&.conf\&.
+.SH "EXTERNAL"
+.PP
+The External plugin is an consumer of the
+\m[blue]\fBMediaServer2 DBus interface specification\fR\m[]\&\s-2\u[5]\d\s+2\&. This allows external programs to share their data via UPnP by implementing this DBus specification\&. The plugin picks up any implementation of this interface on the session bus and exposes the presented media via UPnP\&. Known implementors of this spec are
+\m[blue]\fBgnome\-dvb\-daemon\fR\m[]\&\s-2\u[6]\d\s+2,
+\m[blue]\fBRhythmbox\fR\m[]\&\s-2\u[7]\d\s+2
+and
+\m[blue]\fBGrilo\fR\m[]\&\s-2\u[8]\d\s+2
+via the grilo\-ms2 project\&.
+.PP
+You can disable the whole functionality by setting
+\fBenabled=false\fR
+in the
+\fB[External]\fR
+section of the configuration file\&.
+.PP
+Individual peers may be enabled or disabled by creating sections corresponding to the D\-Bus names of the peer:
+.sp
+.if n \{\
+.RS 4
+.\}
+.nf
+[org\&.gnome\&.UPnP\&.MediaServer2\&.Rhythmbox]
+enabled=false
+.fi
+.if n \{\
+.RE
+.\}
+.PP
+This plugin has no additional options\&.
+.SH "MPRIS"
+.PP
+The MPRIS plugin is a consumer of the
+\m[blue]\fBMPRIS2 DBus interface specification\fR\m[]\&\s-2\u[9]\d\s+2\&. The implementation conforms to version 2\&.0 of the standard\&.
+.PP
+rygel
+exposes media players that implement the provider side of this DBus specification as DLNA Digital Media Renderers (DMR) similar to the Playbin plugin\&. This means that you can easily turn your media player into a DMR by implementing this DBus specification\&.
+.PP
+Players that implement this spec and are known to work with
+rygel
+are
+\m[blue]\fBBanshee\fR\m[]\&\s-2\u[10]\d\s+2,
+\m[blue]\fBRhythmbox\fR\m[]\&\s-2\u[7]\d\s+2
+and
+\m[blue]\fBTotem\fR\m[]\&\s-2\u[11]\d\s+2
+.PP
+You can disable the whole functionality by setting
+\fBenabled=false\fR
+in the
+\fB[MRPIS]\fR
+section of the configuration file\&.
+.PP
+The configuration of this plugin is special\&. Plugin configuration is not done on the plugin but rather per peer that is found providing the MPRIS2 interface\&. See the following example to set the title for Banshee on MPRIS:
+.PP
+.if n \{\
+.RS 4
+.\}
+.nf
+[org\&.mpris\&.MediaPlayer2\&.banshee]
+title=@REALNAME@\*(Aqs Banshee on @HOSTNAME@
+.fi
+.if n \{\
+.RE
+.\}
+.PP
+This plugin has no additional options\&.
+.SH "SEE ALSO"
+.PP
+\fBrygel\fR(1),
+README\&.Mediathek,
+\fBgst-launch\fR(1)
+.SH "AUTHOR"
+.PP
+\fBJens Georg\fR <\&mail@jensge\&.org\&>
+.RS 4
+Wrote this manpage\&.
+.RE
+.SH "NOTES"
+.IP " 1." 4
+file an IOP bug
+.RS 4
+\%https://bugzilla.gnome.org/enter_bug.cgi?product=Rygel&component=IOP
+.RE
+.IP " 2." 4
+tracker project website
+.RS 4
+\%http://projects.gnome.org/tracker/
+.RE
+.IP " 3." 4
+SQLite
+.RS 4
+\%http://sqlite.org
+.RE
+.IP " 4." 4
+ZDF Mediathek
+.RS 4
+\%http://www.zdf.de/ZDFmediathek
+.RE
+.IP " 5." 4
+MediaServer2 DBus interface specification
+.RS 4
+\%http://live.gnome.org/Rygel/MediaServer2Spec
+.RE
+.IP " 6." 4
+gnome-dvb-daemon
+.RS 4
+\%http://live.gnome.org/DVBDaemon
+.RE
+.IP " 7." 4
+Rhythmbox
+.RS 4
+\%http://www.rhythmbox.org
+.RE
+.IP " 8." 4
+Grilo
+.RS 4
+\%http://live.gnome.org/Grilo
+.RE
+.IP " 9." 4
+MPRIS2 DBus interface specification
+.RS 4
+\%http://www.mpris.org
+.RE
+.IP "10." 4
+Banshee
+.RS 4
+\%http://banshee.fm
+.RE
+.IP "11." 4
+Totem
+.RS 4
+\%http://live.gnome.org/Totem
+.RE

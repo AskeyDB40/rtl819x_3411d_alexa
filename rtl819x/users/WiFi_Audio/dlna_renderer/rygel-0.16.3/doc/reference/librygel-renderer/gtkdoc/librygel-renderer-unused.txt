@@ -1,0 +1,2 @@
+rygel_playbin_plugin_construct
+rygel_playbin_renderer_construct

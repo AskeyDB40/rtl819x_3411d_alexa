@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<root xmlns="urn:schemas-upnp-org:device-1-0" xmlns:dlna="urn:schemas-dlna-org:device-1-0">
+  <specVersion>
+    <major>1</major>
+    <minor>0</minor>
+  </specVersion>
+  <device>
+  <deviceType>urn:schemas-upnp-org:device:MediaRenderer:1</deviceType>
+  <dlna:X_DLNADOC xmlns:dlna="urn:schemas-dlna-org:device-1-0">DMR-1.51</dlna:X_DLNADOC>
+    <friendlyName>RTKWiFiSP</friendlyName>
+    <manufacturer>RTKWiFiSP Developers</manufacturer>
+    <manufacturerURL>http://www.realtek.com/RTKWiFiSP</manufacturerURL>
+    <modelName>RTKWiFiSP</modelName>
+    <modelNumber>0.1</modelNumber>
+    <modelURL>http://www.realtek.com/RTKWiFiSP</modelURL>
+    <UDN></UDN>
+    <serviceList>
+    </serviceList>
+  </device>
+</root>

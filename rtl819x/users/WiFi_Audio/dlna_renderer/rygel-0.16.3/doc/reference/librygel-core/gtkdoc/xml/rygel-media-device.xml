@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelMediaDevice">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelMediaDevice.top_of_page">RygelMediaDevice</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-CORE Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelMediaDevice</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelMediaDevice.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>#define             <link linkend="RYGEL-TYPE-MEDIA-DEVICE:CAPS">RYGEL_TYPE_MEDIA_DEVICE</link>
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-media-device-add-interface">rygel_media_device_add_interface</link>    (<parameter><link linkend="RygelMediaDevice"><type>RygelMediaDevice</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *iface</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-media-device-remove-interface">rygel_media_device_remove_interface</link> (<parameter><link linkend="RygelMediaDevice"><type>RygelMediaDevice</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *iface</parameter>);
+<link linkend="GList"><returnvalue>GList</returnvalue></link> *             <link linkend="rygel-media-device-get-interfaces">rygel_media_device_get_interfaces</link>   (<parameter><link linkend="RygelMediaDevice"><type>RygelMediaDevice</type></link> *self</parameter>);
+<link linkend="RygelPlugin"><returnvalue>RygelPlugin</returnvalue></link> *       <link linkend="rygel-media-device-get-plugin">rygel_media_device_get_plugin</link>       (<parameter><link linkend="RygelMediaDevice"><type>RygelMediaDevice</type></link> *self</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-media-device-set-plugin">rygel_media_device_set_plugin</link>       (<parameter><link linkend="RygelMediaDevice"><type>RygelMediaDevice</type></link> *self</parameter>,
+                                                         <parameter><link linkend="RygelPlugin"><type>RygelPlugin</type></link> *value</parameter>);
+struct              <link linkend="RygelMediaDevice-struct">RygelMediaDevice</link>;
+struct              <link linkend="RygelMediaDeviceClass">RygelMediaDeviceClass</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelMediaDevice.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----RygelMediaDevice
+</synopsis>
+</refsect1>
+<refsect1 id="RygelMediaDevice.properties" role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+  &quot;<link linkend="RygelMediaDevice--plugin">plugin</link>&quot;                   <link linkend="RygelPlugin"><type>RygelPlugin</type></link>*          : Read / Write
+</synopsis>
+</refsect1>
+
+<refsect1 id="RygelMediaDevice.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="RygelMediaDevice.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="RYGEL-TYPE-MEDIA-DEVICE:CAPS" role="macro">
+<title>RYGEL_TYPE_MEDIA_DEVICE</title>
+<indexterm zone="RYGEL-TYPE-MEDIA-DEVICE:CAPS"><primary>RYGEL_TYPE_MEDIA_DEVICE</primary></indexterm>
+<programlisting>#define RYGEL_TYPE_MEDIA_DEVICE (rygel_media_device_get_type ())
+</programlisting>
+<para>
+The type for <link linkend="RygelMediaDevice"><type>RygelMediaDevice</type></link>.
+</para></refsect2>
+<refsect2 id="rygel-media-device-add-interface" role="function">
+<title>rygel_media_device_add_interface ()</title>
+<indexterm zone="rygel-media-device-add-interface"><primary>rygel_media_device_add_interface</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_media_device_add_interface    (<parameter><link linkend="RygelMediaDevice"><type>RygelMediaDevice</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *iface</parameter>);</programlisting>
+<para>
+Add a network interface the device should listen on.
+</para>
+<para>
+<para>If the network interface is not already up, it will be used as soon as it&apos;s ready, otherwise it&apos;s used right away.</para>
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaDevice"><type>RygelMediaDevice</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>iface</parameter>&#160;:</term>
+<listitem><simpara>Name of the network interface, e.g. eth0. <emphasis role="annotation">[<acronym>in</acronym>]</emphasis></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-device-remove-interface" role="function">
+<title>rygel_media_device_remove_interface ()</title>
+<indexterm zone="rygel-media-device-remove-interface"><primary>rygel_media_device_remove_interface</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_media_device_remove_interface (<parameter><link linkend="RygelMediaDevice"><type>RygelMediaDevice</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *iface</parameter>);</programlisting>
+<para>
+Remove a previously added network interface from the device.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaDevice"><type>RygelMediaDevice</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>iface</parameter>&#160;:</term>
+<listitem><simpara>Name of the network interface, e.g. eth0. <emphasis role="annotation">[<acronym>in</acronym>]</emphasis></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-device-get-interfaces" role="function">
+<title>rygel_media_device_get_interfaces ()</title>
+<indexterm zone="rygel-media-device-get-interfaces"><primary>rygel_media_device_get_interfaces</primary></indexterm>
+<programlisting><link linkend="GList"><returnvalue>GList</returnvalue></link> *             rygel_media_device_get_interfaces   (<parameter><link linkend="RygelMediaDevice"><type>RygelMediaDevice</type></link> *self</parameter>);</programlisting>
+<para>
+Get a list of the network interfaces the device is currently allowed to use.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaDevice"><type>RygelMediaDevice</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>list of interface names.</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-device-get-plugin" role="function">
+<title>rygel_media_device_get_plugin ()</title>
+<indexterm zone="rygel-media-device-get-plugin"><primary>rygel_media_device_get_plugin</primary></indexterm>
+<programlisting><link linkend="RygelPlugin"><returnvalue>RygelPlugin</returnvalue></link> *       rygel_media_device_get_plugin       (<parameter><link linkend="RygelMediaDevice"><type>RygelMediaDevice</type></link> *self</parameter>);</programlisting>
+<para>
+Get and return the current value of the <link linkend="RygelMediaDevice--plugin"><type>"plugin"</type></link> property.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaDevice"><type>RygelMediaDevice</type></link> instance to query</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>the value of the <link linkend="RygelMediaDevice--plugin"><type>"plugin"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-media-device-set-plugin" role="function">
+<title>rygel_media_device_set_plugin ()</title>
+<indexterm zone="rygel-media-device-set-plugin"><primary>rygel_media_device_set_plugin</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_media_device_set_plugin       (<parameter><link linkend="RygelMediaDevice"><type>RygelMediaDevice</type></link> *self</parameter>,
+                                                         <parameter><link linkend="RygelPlugin"><type>RygelPlugin</type></link> *value</parameter>);</programlisting>
+<para>
+Set the value of the <link linkend="RygelMediaDevice--plugin"><type>"plugin"</type></link> property to <parameter>value</parameter>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelMediaDevice"><type>RygelMediaDevice</type></link> instance to modify</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>value</parameter>&#160;:</term>
+<listitem><simpara>the new value of the <link linkend="RygelMediaDevice--plugin"><type>"plugin"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="RygelMediaDevice-struct" role="struct">
+<title>struct RygelMediaDevice</title>
+<indexterm zone="RygelMediaDevice-struct"><primary>RygelMediaDevice</primary></indexterm>
+<programlisting>struct RygelMediaDevice;</programlisting>
+</refsect2>
+<refsect2 id="RygelMediaDeviceClass" role="struct">
+<title>struct RygelMediaDeviceClass</title>
+<indexterm zone="RygelMediaDeviceClass"><primary>RygelMediaDeviceClass</primary></indexterm>
+<programlisting>struct RygelMediaDeviceClass {
+	GObjectClass parent_class;
+};
+</programlisting>
+<para>
+The class structure for <link linkend="RYGEL-TYPE-MEDIA-DEVICE:CAPS"><literal>RYGEL_TYPE_MEDIA_DEVICE</literal></link>. All the fields in this structure are private and should never be accessed directly.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="GObjectClass"><type>GObjectClass</type></link>&#160;<structfield id="RygelMediaDeviceClass.parent-class">parent_class</structfield>;</term>
+<listitem><simpara>the parent class structure</simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 id="RygelMediaDevice.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="RygelMediaDevice--plugin" role="property"><title>The <literal>&quot;plugin&quot;</literal> property</title>
+<indexterm zone="RygelMediaDevice--plugin"><primary>RygelMediaDevice:plugin</primary></indexterm>
+<programlisting>  &quot;plugin&quot;                   <link linkend="RygelPlugin"><type>RygelPlugin</type></link>*          : Read / Write</programlisting>
+<para>plugin.</para></refsect2>
+</refsect1>
+
+</refentry>

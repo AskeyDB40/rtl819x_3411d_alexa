@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>RygelMediaObjects</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="librygel-server Reference Manual">
+<link rel="up" href="ch01.html" title="librygel-server API Reference">
+<link rel="prev" href="RygelThumbnail.html" title="RygelThumbnail">
+<link rel="next" href="RygelVideoItem.html" title="RygelVideoItem">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="RygelThumbnail.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">librygel-server Reference Manual</th>
+<td><a accesskey="n" href="RygelVideoItem.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#RygelMediaObjects.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#RygelMediaObjects.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#RygelMediaObjects.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#RygelMediaObjects.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="RygelMediaObjects"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="RygelMediaObjects.top_of_page"></a>RygelMediaObjects</span></h2>
+<p>RygelMediaObjects — An array list that keeps media objects.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="RygelMediaObjects.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">#define             <a class="link" href="RygelMediaObjects.html#RYGEL-TYPE-MEDIA-OBJECTS:CAPS" title="RYGEL_TYPE_MEDIA_OBJECTS">RYGEL_TYPE_MEDIA_OBJECTS</a>
+<span class="returnvalue">void</span>                <a class="link" href="RygelMediaObjects.html#rygel-media-objects-sort-by-criteria" title="rygel_media_objects_sort_by_criteria ()">rygel_media_objects_sort_by_criteria</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelMediaObjects.html" title="RygelMediaObjects"><span class="type">RygelMediaObjects</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *sort_criteria</code></em>);
+#define             <a class="link" href="RygelMediaObjects.html#RYGEL-MEDIA-OBJECTS-SORT-CAPS" title="RYGEL_MEDIA_OBJECTS_SORT_CAPS">RYGEL_MEDIA_OBJECTS_SORT_CAPS</a>
+<a class="link" href="RygelMediaObjects.html" title="RygelMediaObjects"><span class="returnvalue">RygelMediaObjects</span></a> * <a class="link" href="RygelMediaObjects.html#rygel-media-objects-new" title="rygel_media_objects_new ()">rygel_media_objects_new</a>             (<em class="parameter"><code><span class="type">void</span></code></em>);
+struct              <a class="link" href="RygelMediaObjects.html#RygelMediaObjects-struct" title="struct RygelMediaObjects">RygelMediaObjects</a>;
+struct              <a class="link" href="RygelMediaObjects.html#RygelMediaObjectsClass" title="struct RygelMediaObjectsClass">RygelMediaObjectsClass</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelMediaObjects.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="../gobject/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----GeeAbstractCollection
+         +----GeeAbstractList
+               +----GeeArrayList
+                     +----RygelMediaObjects
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelMediaObjects.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+RygelMediaObjects implements
+ GeeIterable,  GeeCollection and  GeeList.</p>
+</div>
+<div class="refsect1">
+<a name="RygelMediaObjects.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="RygelMediaObjects.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="RYGEL-TYPE-MEDIA-OBJECTS:CAPS"></a><h3>RYGEL_TYPE_MEDIA_OBJECTS</h3>
+<pre class="programlisting">#define RYGEL_TYPE_MEDIA_OBJECTS (rygel_media_objects_get_type ())
+</pre>
+<p>
+The type for <a class="link" href="RygelMediaObjects.html" title="RygelMediaObjects"><span class="type">RygelMediaObjects</span></a>.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-media-objects-sort-by-criteria"></a><h3>rygel_media_objects_sort_by_criteria ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                rygel_media_objects_sort_by_criteria
+                                                        (<em class="parameter"><code><a class="link" href="RygelMediaObjects.html" title="RygelMediaObjects"><span class="type">RygelMediaObjects</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *sort_criteria</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelMediaObjects.html" title="RygelMediaObjects"><span class="type">RygelMediaObjects</span></a> instance</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RYGEL-MEDIA-OBJECTS-SORT-CAPS"></a><h3>RYGEL_MEDIA_OBJECTS_SORT_CAPS</h3>
+<pre class="programlisting">#define RYGEL_MEDIA_OBJECTS_SORT_CAPS "@id,@parentID,dc:title,upnp:class," "upnp:artist,upnp:author,upnp:album," "dc:date,upnp:originalTrackNumber"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-media-objects-new"></a><h3>rygel_media_objects_new ()</h3>
+<pre class="programlisting"><a class="link" href="RygelMediaObjects.html" title="RygelMediaObjects"><span class="returnvalue">RygelMediaObjects</span></a> * rygel_media_objects_new             (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelMediaObjects-struct"></a><h3>struct RygelMediaObjects</h3>
+<pre class="programlisting">struct RygelMediaObjects;</pre>
+<p>
+An array list that keeps media objects.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelMediaObjectsClass"></a><h3>struct RygelMediaObjectsClass</h3>
+<pre class="programlisting">struct RygelMediaObjectsClass {
+	GeeArrayListClass parent_class;
+};
+</pre>
+<p>
+The class structure for <a class="link" href="RygelMediaObjects.html#RYGEL-TYPE-MEDIA-OBJECTS:CAPS" title="RYGEL_TYPE_MEDIA_OBJECTS"><code class="literal">RYGEL_TYPE_MEDIA_OBJECTS</code></a>. All the fields in this structure are private and should never be accessed directly.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="type">GeeArrayListClass</span> <em class="structfield"><code><a name="RygelMediaObjectsClass.parent-class"></a>parent_class</code></em>;</span></p></td>
+<td>the parent class structure</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

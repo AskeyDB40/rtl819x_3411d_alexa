@@ -1,0 +1,289 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelWritableContainer">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelWritableContainer.top_of_page">RygelWritableContainer</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-SERVER Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelWritableContainer</refname>
+<refpurpose>This interface should be implemented by &apos;writable&apos; containers - ones that allow adding, removal and editing of items directly under them. Currently, only addition and removal is supported.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelWritableContainer.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            <link linkend="rygel-writable-container-can-create">rygel_writable_container_can_create</link> (<parameter><link linkend="RygelWritableContainer"><type>RygelWritableContainer</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *upnp_class</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-writable-container-add-item">rygel_writable_container_add_item</link>   (<parameter><link linkend="RygelWritableContainer"><type>RygelWritableContainer</type></link> *self</parameter>,
+                                                         <parameter><link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> *item</parameter>,
+                                                         <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                                                         <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                                         <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-writable-container-add-item-finish">rygel_writable_container_add_item_finish</link>
+                                                        (<parameter><link linkend="RygelWritableContainer"><type>RygelWritableContainer</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-writable-container-remove-item">rygel_writable_container_remove_item</link>
+                                                        (<parameter><link linkend="RygelWritableContainer"><type>RygelWritableContainer</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *id</parameter>,
+                                                         <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                                                         <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                                         <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-writable-container-remove-item-finish">rygel_writable_container_remove_item_finish</link>
+                                                        (<parameter><link linkend="RygelWritableContainer"><type>RygelWritableContainer</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="GeeArrayList"><returnvalue>GeeArrayList</returnvalue></link> *      <link linkend="rygel-writable-container-get-create-classes">rygel_writable_container_get_create_classes</link>
+                                                        (<parameter><link linkend="RygelWritableContainer"><type>RygelWritableContainer</type></link> *self</parameter>);
+<link linkend="void"><returnvalue>void</returnvalue></link>                <link linkend="rygel-writable-container-set-create-classes">rygel_writable_container_set_create_classes</link>
+                                                        (<parameter><link linkend="RygelWritableContainer"><type>RygelWritableContainer</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GeeArrayList"><type>GeeArrayList</type></link> *value</parameter>);
+                    <link linkend="RygelWritableContainer-struct">RygelWritableContainer</link>;
+struct              <link linkend="RygelWritableContainerIface">RygelWritableContainerIface</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelWritableContainer.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GInterface">GInterface</link>
+   +----RygelWritableContainer
+</synopsis>
+</refsect1>
+<refsect1 id="RygelWritableContainer.prerequisites" role="prerequisites">
+<title role="prerequisites.title">Prerequisites</title>
+<para>
+RygelWritableContainer requires
+ <link linkend="RygelMediaContainer">RygelMediaContainer</link>.</para>
+</refsect1>
+<refsect1 id="RygelWritableContainer.properties" role="properties">
+<title role="properties.title">Properties</title>
+<synopsis>
+  &quot;<link linkend="RygelWritableContainer--create-classes">create-classes</link>&quot;           <link linkend="GeeArrayList"><type>GeeArrayList</type></link>*         : Read / Write
+</synopsis>
+</refsect1>
+
+<refsect1 id="RygelWritableContainer.description" role="desc">
+<title role="desc.title">Description</title>
+<para>
+<para>In addition to implementing this interface, a writable container must also:</para><orderedlist><listitem><para>Provide one URI that points to a writable folder on a GIO-supported filesystem.</para></listitem><listitem><para>Monitor not only its own URI but also that of its child items, though the latter is implied in the former if you use GIO for monitoring.</para></listitem></orderedlist>
+</para>
+</refsect1>
+<refsect1 id="RygelWritableContainer.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="rygel-writable-container-can-create" role="function">
+<title>rygel_writable_container_can_create ()</title>
+<indexterm zone="rygel-writable-container-can-create"><primary>rygel_writable_container_can_create</primary></indexterm>
+<programlisting><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            rygel_writable_container_can_create (<parameter><link linkend="RygelWritableContainer"><type>RygelWritableContainer</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *upnp_class</parameter>);</programlisting>
+<para>
+Check if this container can contain an item with the given upnp class, meaning that <link linkend="rygel-writable-container-add-item"><function>rygel_writable_container_add_item()</function></link> should succeed.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelWritableContainer"><type>RygelWritableContainer</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>upnp_class</parameter>&#160;:</term>
+<listitem><simpara>The upnp class of an item to check. <emphasis role="annotation">[<acronym>in</acronym>]</emphasis></simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>true if it can, false, if not.</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-writable-container-add-item" role="function">
+<title>rygel_writable_container_add_item ()</title>
+<indexterm zone="rygel-writable-container-add-item"><primary>rygel_writable_container_add_item</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_writable_container_add_item   (<parameter><link linkend="RygelWritableContainer"><type>RygelWritableContainer</type></link> *self</parameter>,
+                                                         <parameter><link linkend="RygelMediaItem"><type>RygelMediaItem</type></link> *item</parameter>,
+                                                         <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                                                         <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                                         <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para>
+Add a new item directly under this container.
+</para>
+<para>
+<para>The caller should not first create the file(s) pointed to by the item&apos;s URI(s). That is handled by the container class.</para><para>This method corresponds to the UPnP ContentDirectory&apos;s CreateObject action. Currently there is no way to add child containers.</para>
+</para>
+<para>
+<emphasis>See also</emphasis>: <link linkend="rygel-writable-container-add-item-finish"><function><link linkend="rygel-writable-container-add-item-finish"><function>rygel_writable_container_add_item_finish()</function></link></function></link>
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelWritableContainer"><type>RygelWritableContainer</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>item</parameter>&#160;:</term>
+<listitem><simpara>The item to add to this container. <emphasis role="annotation">[<acronym>in</acronym>]</emphasis></simpara></listitem></varlistentry>
+<varlistentry><term><parameter>cancellable</parameter>&#160;:</term>
+<listitem><simpara>optional cancellable for this operation. <emphasis role="annotation">[<acronym>in</acronym>][<acronym>allow-none</acronym>]</emphasis></simpara></listitem></varlistentry>
+<varlistentry><term><parameter>_callback_</parameter>&#160;:</term>
+<listitem><simpara>callback to call when the request is satisfied. <emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></simpara></listitem></varlistentry>
+<varlistentry><term><parameter>_user_data_</parameter>&#160;:</term>
+<listitem><simpara>the data to pass to <parameter>_callback_</parameter> function. <emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-writable-container-add-item-finish" role="function">
+<title>rygel_writable_container_add_item_finish ()</title>
+<indexterm zone="rygel-writable-container-add-item-finish"><primary>rygel_writable_container_add_item_finish</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_writable_container_add_item_finish
+                                                        (<parameter><link linkend="RygelWritableContainer"><type>RygelWritableContainer</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>
+Add a new item directly under this container.
+</para>
+<para>
+<para>The caller should not first create the file(s) pointed to by the item&apos;s URI(s). That is handled by the container class.</para><para>This method corresponds to the UPnP ContentDirectory&apos;s CreateObject action. Currently there is no way to add child containers.</para>
+</para>
+<para>
+<emphasis>See also</emphasis>: <link linkend="rygel-writable-container-add-item"><function><link linkend="rygel-writable-container-add-item"><function>rygel_writable_container_add_item()</function></link></function></link>
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelWritableContainer"><type>RygelWritableContainer</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>_res_</parameter>&#160;:</term>
+<listitem><simpara>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>nothing.</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-writable-container-remove-item" role="function">
+<title>rygel_writable_container_remove_item ()</title>
+<indexterm zone="rygel-writable-container-remove-item"><primary>rygel_writable_container_remove_item</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_writable_container_remove_item
+                                                        (<parameter><link linkend="RygelWritableContainer"><type>RygelWritableContainer</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *id</parameter>,
+                                                         <parameter><link linkend="GCancellable"><type>GCancellable</type></link> *cancellable</parameter>,
+                                                         <parameter><link linkend="GAsyncReadyCallback"><type>GAsyncReadyCallback</type></link> _callback_</parameter>,
+                                                         <parameter><link linkend="gpointer"><type>gpointer</type></link> _user_data_</parameter>);</programlisting>
+<para>
+Remove an item directly under this container that has the ID <parameter>id</parameter>.
+</para>
+<para>
+<para>The caller should not first remove the file(s) pointed to by the item&apos;s URI(s). That is handled by the container class.</para><para>This method corresponds to the UPnP ContentDirectory&apos;s DestroyObject action.</para>
+</para>
+<para>
+<emphasis>See also</emphasis>: <link linkend="rygel-writable-container-remove-item-finish"><function><link linkend="rygel-writable-container-remove-item-finish"><function>rygel_writable_container_remove_item_finish()</function></link></function></link>
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelWritableContainer"><type>RygelWritableContainer</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>id</parameter>&#160;:</term>
+<listitem><simpara>The ID of the item to remove from this container. <emphasis role="annotation">[<acronym>in</acronym>]</emphasis></simpara></listitem></varlistentry>
+<varlistentry><term><parameter>cancellable</parameter>&#160;:</term>
+<listitem><simpara>optional cancellable for this operation. <emphasis role="annotation">[<acronym>in</acronym>][<acronym>allow-none</acronym>]</emphasis></simpara></listitem></varlistentry>
+<varlistentry><term><parameter>_callback_</parameter>&#160;:</term>
+<listitem><simpara>callback to call when the request is satisfied. <emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></simpara></listitem></varlistentry>
+<varlistentry><term><parameter>_user_data_</parameter>&#160;:</term>
+<listitem><simpara>the data to pass to <parameter>_callback_</parameter> function. <emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-writable-container-remove-item-finish" role="function">
+<title>rygel_writable_container_remove_item_finish ()</title>
+<indexterm zone="rygel-writable-container-remove-item-finish"><primary>rygel_writable_container_remove_item_finish</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_writable_container_remove_item_finish
+                                                        (<parameter><link linkend="RygelWritableContainer"><type>RygelWritableContainer</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GAsyncResult"><type>GAsyncResult</type></link> *_res_</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>
+Remove an item directly under this container that has the ID <parameter>id</parameter>.
+</para>
+<para>
+<para>The caller should not first remove the file(s) pointed to by the item&apos;s URI(s). That is handled by the container class.</para><para>This method corresponds to the UPnP ContentDirectory&apos;s DestroyObject action.</para>
+</para>
+<para>
+<emphasis>See also</emphasis>: <link linkend="rygel-writable-container-remove-item"><function><link linkend="rygel-writable-container-remove-item"><function>rygel_writable_container_remove_item()</function></link></function></link>
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelWritableContainer"><type>RygelWritableContainer</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>_res_</parameter>&#160;:</term>
+<listitem><simpara>a <link linkend="GAsyncResult"><type>GAsyncResult</type></link></simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>nothing.</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-writable-container-get-create-classes" role="function">
+<title>rygel_writable_container_get_create_classes ()</title>
+<indexterm zone="rygel-writable-container-get-create-classes"><primary>rygel_writable_container_get_create_classes</primary></indexterm>
+<programlisting><link linkend="GeeArrayList"><returnvalue>GeeArrayList</returnvalue></link> *      rygel_writable_container_get_create_classes
+                                                        (<parameter><link linkend="RygelWritableContainer"><type>RygelWritableContainer</type></link> *self</parameter>);</programlisting>
+<para>
+Get and return the current value of the <link linkend="RygelWritableContainer--create-classes"><type>"create-classes"</type></link> property.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelWritableContainer"><type>RygelWritableContainer</type></link> instance to query</simpara></listitem></varlistentry>
+<varlistentry><term><emphasis>Returns</emphasis>&#160;:</term><listitem><simpara>the value of the <link linkend="RygelWritableContainer--create-classes"><type>"create-classes"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-writable-container-set-create-classes" role="function">
+<title>rygel_writable_container_set_create_classes ()</title>
+<indexterm zone="rygel-writable-container-set-create-classes"><primary>rygel_writable_container_set_create_classes</primary></indexterm>
+<programlisting><link linkend="void"><returnvalue>void</returnvalue></link>                rygel_writable_container_set_create_classes
+                                                        (<parameter><link linkend="RygelWritableContainer"><type>RygelWritableContainer</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GeeArrayList"><type>GeeArrayList</type></link> *value</parameter>);</programlisting>
+<para>
+Set the value of the <link linkend="RygelWritableContainer--create-classes"><type>"create-classes"</type></link> property to <parameter>value</parameter>.
+</para><variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelWritableContainer"><type>RygelWritableContainer</type></link> instance to modify</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>value</parameter>&#160;:</term>
+<listitem><simpara>the new value of the <link linkend="RygelWritableContainer--create-classes"><type>"create-classes"</type></link> property</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="RygelWritableContainer-struct" role="struct">
+<title>RygelWritableContainer</title>
+<indexterm zone="RygelWritableContainer-struct"><primary>RygelWritableContainer</primary></indexterm>
+<programlisting>typedef struct _RygelWritableContainer RygelWritableContainer;</programlisting>
+<para>
+This interface should be implemented by &apos;writable&apos; containers - ones that allow adding, removal and editing of items directly under them. Currently, only addition and removal is supported.
+</para>
+<para>
+<para>In addition to implementing this interface, a writable container must also:</para><orderedlist><listitem><para>Provide one URI that points to a writable folder on a GIO-supported filesystem.</para></listitem><listitem><para>Monitor not only its own URI but also that of its child items, though the latter is implied in the former if you use GIO for monitoring.</para></listitem></orderedlist>
+</para></refsect2>
+<refsect2 id="RygelWritableContainerIface" role="struct">
+<title>struct RygelWritableContainerIface</title>
+<indexterm zone="RygelWritableContainerIface"><primary>RygelWritableContainerIface</primary></indexterm>
+<programlisting>struct RygelWritableContainerIface {
+	GTypeInterface parent_iface;
+	void (*add_item) (RygelWritableContainer* self, RygelMediaItem* item, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	void (*add_item_finish) (RygelWritableContainer* self, GAsyncResult* _res_, GError** error);
+	void (*remove_item) (RygelWritableContainer* self, const gchar* id, GCancellable* cancellable, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	void (*remove_item_finish) (RygelWritableContainer* self, GAsyncResult* _res_, GError** error);
+	GeeArrayList* (*get_create_classes) (RygelWritableContainer* self);
+	void (*set_create_classes) (RygelWritableContainer* self, GeeArrayList* value);
+};
+</programlisting>
+<para>
+Interface for creating <link linkend="RygelWritableContainer"><type>RygelWritableContainer</type></link> implementations.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="GTypeInterface"><type>GTypeInterface</type></link>&#160;<structfield id="RygelWritableContainerIface.parent-iface">parent_iface</structfield>;</term>
+<listitem><simpara>the parent interface structure</simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelWritableContainerIface.add-item">add_item</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-writable-container-add-item"><function><link linkend="rygel-writable-container-add-item"><function>rygel_writable_container_add_item()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelWritableContainerIface.add-item-finish">add_item_finish</structfield>&#160;()</term>
+<listitem><simpara>asynchronous finish function for <structfield>add_item</structfield>, called by <link linkend="rygel-writable-container-add-item"><function><link linkend="rygel-writable-container-add-item"><function>rygel_writable_container_add_item()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelWritableContainerIface.remove-item">remove_item</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-writable-container-remove-item"><function><link linkend="rygel-writable-container-remove-item"><function>rygel_writable_container_remove_item()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelWritableContainerIface.remove-item-finish">remove_item_finish</structfield>&#160;()</term>
+<listitem><simpara>asynchronous finish function for <structfield>remove_item</structfield>, called by <link linkend="rygel-writable-container-remove-item"><function><link linkend="rygel-writable-container-remove-item"><function>rygel_writable_container_remove_item()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelWritableContainerIface.get-create-classes">get_create_classes</structfield>&#160;()</term>
+<listitem><simpara>getter method for the abstract property <link linkend="RygelWritableContainer--create-classes"><type>"create-classes"</type></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelWritableContainerIface.set-create-classes">set_create_classes</structfield>&#160;()</term>
+<listitem><simpara>setter method for the abstract property <link linkend="RygelWritableContainer--create-classes"><type>"create-classes"</type></link></simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+<refsect1 id="RygelWritableContainer.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="RygelWritableContainer--create-classes" role="property"><title>The <literal>&quot;create-classes&quot;</literal> property</title>
+<indexterm zone="RygelWritableContainer--create-classes"><primary>RygelWritableContainer:create-classes</primary></indexterm>
+<programlisting>  &quot;create-classes&quot;           <link linkend="GeeArrayList"><type>GeeArrayList</type></link>*         : Read / Write</programlisting>
+<para>
+The list of upnp classes that can be added to this container.
+</para>
+<para>
+<para>See <link linkend="rygel-writable-container-add-item"><function>rygel_writable_container_add_item()</function></link>.</para><para>This corresponds to the UPnP ContentDirectory&apos;s createClass properties.</para>
+</para></refsect2>
+</refsect1>
+
+</refentry>

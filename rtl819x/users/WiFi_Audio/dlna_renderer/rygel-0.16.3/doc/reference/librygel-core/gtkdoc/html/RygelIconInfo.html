@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>RygelIconInfo</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="librygel-core Reference Manual">
+<link rel="up" href="ch01.html" title="librygel-core API Reference">
+<link rel="prev" href="RygelPluginLoader.html" title="RygelPluginLoader">
+<link rel="next" href="FreeDesktopDBusObject.html" title="FreeDesktopDBusObject">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="RygelPluginLoader.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">librygel-core Reference Manual</th>
+<td><a accesskey="n" href="FreeDesktopDBusObject.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#RygelIconInfo.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#RygelIconInfo.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#RygelIconInfo.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="RygelIconInfo"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="RygelIconInfo.top_of_page"></a>RygelIconInfo</span></h2>
+<p>RygelIconInfo — Holds information about an icon.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="RygelIconInfo.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">#define             <a class="link" href="RygelIconInfo.html#RYGEL-TYPE-ICON-INFO:CAPS" title="RYGEL_TYPE_ICON_INFO">RYGEL_TYPE_ICON_INFO</a>
+<a class="link" href="RygelIconInfo.html" title="RygelIconInfo"><span class="returnvalue">RygelIconInfo</span></a> *     <a class="link" href="RygelIconInfo.html#rygel-icon-info-new" title="rygel_icon_info_new ()">rygel_icon_info_new</a>                 (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *mime_type</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *file_extension</code></em>);
+struct              <a class="link" href="RygelIconInfo.html#RygelIconInfo-struct" title="struct RygelIconInfo">RygelIconInfo</a>;
+<a href="../glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>            <a class="link" href="RygelIconInfo.html#rygel-icon-info-ref" title="rygel_icon_info_ref ()">rygel_icon_info_ref</a>                 (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> instance</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="RygelIconInfo.html#rygel-icon-info-unref" title="rygel_icon_info_unref ()">rygel_icon_info_unref</a>               (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> instance</code></em>);
+<a href="../gobject/gobject-GParamSpec.html#GParamSpec"><span class="returnvalue">GParamSpec</span></a> *        <a class="link" href="RygelIconInfo.html#rygel-param-spec-icon-info" title="rygel_param_spec_icon_info ()">rygel_param_spec_icon_info</a>          (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *nick</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *blurb</code></em>,
+                                                         <em class="parameter"><code><a href="../gobject/gobject-Type-Information.html#GType"><span class="type">GType</span></a> object_type</code></em>,
+                                                         <em class="parameter"><code><a href="../gobject/gobject-GParamSpec.html#GParamFlags"><span class="type">GParamFlags</span></a> flags</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="RygelIconInfo.html#rygel-value-set-icon-info" title="rygel_value_set_icon_info ()">rygel_value_set_icon_info</a>           (<em class="parameter"><code><a href="../gobject/gobject-Generic-values.html#GValue"><span class="type">GValue</span></a> *value</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> v_object</code></em>);
+<a href="../glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>            <a class="link" href="RygelIconInfo.html#rygel-value-get-icon-info" title="rygel_value_get_icon_info ()">rygel_value_get_icon_info</a>           (<em class="parameter"><code>const <a href="../gobject/gobject-Generic-values.html#GValue"><span class="type">GValue</span></a> *value</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="RygelIconInfo.html#rygel-value-take-icon-info" title="rygel_value_take_icon_info ()">rygel_value_take_icon_info</a>          (<em class="parameter"><code><a href="../gobject/gobject-Generic-values.html#GValue"><span class="type">GValue</span></a> *value</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> v_object</code></em>);
+struct              <a class="link" href="RygelIconInfo.html#RygelIconInfoClass" title="struct RygelIconInfoClass">RygelIconInfoClass</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelIconInfo.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  RygelIconInfo
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelIconInfo.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="RygelIconInfo.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="RYGEL-TYPE-ICON-INFO:CAPS"></a><h3>RYGEL_TYPE_ICON_INFO</h3>
+<pre class="programlisting">#define RYGEL_TYPE_ICON_INFO (rygel_icon_info_get_type ())
+</pre>
+<p>
+The type for <a class="link" href="RygelIconInfo.html" title="RygelIconInfo"><span class="type">RygelIconInfo</span></a>.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-icon-info-new"></a><h3>rygel_icon_info_new ()</h3>
+<pre class="programlisting"><a class="link" href="RygelIconInfo.html" title="RygelIconInfo"><span class="returnvalue">RygelIconInfo</span></a> *     rygel_icon_info_new                 (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *mime_type</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *file_extension</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelIconInfo-struct"></a><h3>struct RygelIconInfo</h3>
+<pre class="programlisting">struct RygelIconInfo;</pre>
+<p>
+Holds information about an icon.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-icon-info-ref"></a><h3>rygel_icon_info_ref ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>            rygel_icon_info_ref                 (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> instance</code></em>);</pre>
+<p>
+Increases the reference count of <em class="parameter"><code>object</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>instance</code></em> :</span></p></td>
+<td>a <a class="link" href="RygelIconInfo.html" title="RygelIconInfo"><span class="type">RygelIconInfo</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the same <em class="parameter"><code>object</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-icon-info-unref"></a><h3>rygel_icon_info_unref ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                rygel_icon_info_unref               (<em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> instance</code></em>);</pre>
+<p>
+Decreases the reference count of <em class="parameter"><code>object</code></em>. When its reference count drops to 0, the object is finalized (i.e. its memory is freed).
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>instance</code></em> :</span></p></td>
+<td>a <a class="link" href="RygelIconInfo.html" title="RygelIconInfo"><span class="type">RygelIconInfo</span></a>.</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-param-spec-icon-info"></a><h3>rygel_param_spec_icon_info ()</h3>
+<pre class="programlisting"><a href="../gobject/gobject-GParamSpec.html#GParamSpec"><span class="returnvalue">GParamSpec</span></a> *        rygel_param_spec_icon_info          (<em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *nick</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *blurb</code></em>,
+                                                         <em class="parameter"><code><a href="../gobject/gobject-Type-Information.html#GType"><span class="type">GType</span></a> object_type</code></em>,
+                                                         <em class="parameter"><code><a href="../gobject/gobject-GParamSpec.html#GParamFlags"><span class="type">GParamFlags</span></a> flags</code></em>);</pre>
+<p>
+Creates a new <a href="../gobject/gobject-Standard-Parameter-and-Value-Types.html#GParamSpecBoxed"><span class="type">GParamSpecBoxed</span></a> instance specifying a <a class="link" href="RygelIconInfo.html#RYGEL-TYPE-ICON-INFO:CAPS" title="RYGEL_TYPE_ICON_INFO"><code class="literal">RYGEL_TYPE_ICON_INFO</code></a> derived property.
+</p>
+<p>
+See <a href="../gobject/gobject-GParamSpec.html#g-param-spec-internal"><code class="function"><GTKDOCLINK HREF="g-param-spec-internal"><code class="function">g_param_spec_internal()</code></a></code></GTKDOCLINK> for details on property names.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td>canonical name of the property specified</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>nick</code></em> :</span></p></td>
+<td>nick name for the property specified</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>blurb</code></em> :</span></p></td>
+<td>description of the property specified</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>object_type</code></em> :</span></p></td>
+<td>
+<a class="link" href="RygelIconInfo.html#RYGEL-TYPE-ICON-INFO:CAPS" title="RYGEL_TYPE_ICON_INFO"><code class="literal">RYGEL_TYPE_ICON_INFO</code></a> derived type of this property</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flags</code></em> :</span></p></td>
+<td>flags for the property specified</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-value-set-icon-info"></a><h3>rygel_value_set_icon_info ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                rygel_value_set_icon_info           (<em class="parameter"><code><a href="../gobject/gobject-Generic-values.html#GValue"><span class="type">GValue</span></a> *value</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> v_object</code></em>);</pre>
+<p>
+Set the contents of a <a class="link" href="RygelIconInfo.html#RYGEL-TYPE-ICON-INFO:CAPS" title="RYGEL_TYPE_ICON_INFO"><code class="literal">RYGEL_TYPE_ICON_INFO</code></a> derived <a href="../gobject/gobject-Generic-values.html#GValue"><span class="type">GValue</span></a> to <em class="parameter"><code>v_object</code></em>.
+</p>
+<p>
+<a class="link" href="RygelIconInfo.html#rygel-value-set-icon-info" title="rygel_value_set_icon_info ()"><code class="function"><a class="link" href="RygelIconInfo.html#rygel-value-set-icon-info" title="rygel_value_set_icon_info ()"><code class="function">rygel_value_set_icon_info()</code></a></code></a> increases the reference count of <em class="parameter"><code>v_object</code></em> (the <a href="../gobject/gobject-Generic-values.html#GValue"><span class="type">GValue</span></a> holds a reference to <em class="parameter"><code>v_object</code></em>). If you do not wish to increase the reference count of the object (i.e. you wish to pass your current reference to the <a href="../gobject/gobject-Generic-values.html#GValue"><span class="type">GValue</span></a> because you no longer need it), use <a class="link" href="RygelIconInfo.html#rygel-value-take-icon-info" title="rygel_value_take_icon_info ()"><code class="function"><a class="link" href="RygelIconInfo.html#rygel-value-take-icon-info" title="rygel_value_take_icon_info ()"><code class="function">rygel_value_take_icon_info()</code></a></code></a> instead.
+</p>
+<p>
+It is important that your <a href="../gobject/gobject-Generic-values.html#GValue"><span class="type">GValue</span></a> holds a reference to <em class="parameter"><code>v_object</code></em> (either its own, or one it has taken) to ensure that the object won't be destroyed while the <a href="../gobject/gobject-Generic-values.html#GValue"><span class="type">GValue</span></a> still exists).
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>a valid <a href="../gobject/gobject-Generic-values.html#GValue"><span class="type">GValue</span></a> of <a class="link" href="RygelIconInfo.html#RYGEL-TYPE-ICON-INFO:CAPS" title="RYGEL_TYPE_ICON_INFO"><code class="literal">RYGEL_TYPE_ICON_INFO</code></a> derived type</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>v_object</code></em> :</span></p></td>
+<td>object value to be set</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-value-get-icon-info"></a><h3>rygel_value_get_icon_info ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>            rygel_value_get_icon_info           (<em class="parameter"><code>const <a href="../gobject/gobject-Generic-values.html#GValue"><span class="type">GValue</span></a> *value</code></em>);</pre>
+<p>
+Get the contents of a <a class="link" href="RygelIconInfo.html#RYGEL-TYPE-ICON-INFO:CAPS" title="RYGEL_TYPE_ICON_INFO"><code class="literal">RYGEL_TYPE_ICON_INFO</code></a> derived <a href="../gobject/gobject-Generic-values.html#GValue"><span class="type">GValue</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>a valid <a href="../gobject/gobject-Generic-values.html#GValue"><span class="type">GValue</span></a> of <a class="link" href="RygelIconInfo.html#RYGEL-TYPE-ICON-INFO:CAPS" title="RYGEL_TYPE_ICON_INFO"><code class="literal">RYGEL_TYPE_ICON_INFO</code></a> derived type</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>object contents of <em class="parameter"><code>value</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-value-take-icon-info"></a><h3>rygel_value_take_icon_info ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                rygel_value_take_icon_info          (<em class="parameter"><code><a href="../gobject/gobject-Generic-values.html#GValue"><span class="type">GValue</span></a> *value</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> v_object</code></em>);</pre>
+<p>
+Sets the contents of a <a class="link" href="RygelIconInfo.html#RYGEL-TYPE-ICON-INFO:CAPS" title="RYGEL_TYPE_ICON_INFO"><code class="literal">RYGEL_TYPE_ICON_INFO</code></a> derived <a href="../gobject/gobject-Generic-values.html#GValue"><span class="type">GValue</span></a> to <em class="parameter"><code>v_object</code></em> and takes over the ownership of the callers reference to <em class="parameter"><code>v_object</code></em>; the caller doesn't have to unref it any more (i.e. the reference count of the object is not increased).
+</p>
+<p>
+If you want the GValue to hold its own reference to <em class="parameter"><code>v_object</code></em>, use <a class="link" href="RygelIconInfo.html#rygel-value-set-icon-info" title="rygel_value_set_icon_info ()"><code class="function"><a class="link" href="RygelIconInfo.html#rygel-value-set-icon-info" title="rygel_value_set_icon_info ()"><code class="function">rygel_value_set_icon_info()</code></a></code></a> instead.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>a valid <a href="../gobject/gobject-Generic-values.html#GValue"><span class="type">GValue</span></a> of <a class="link" href="RygelIconInfo.html#RYGEL-TYPE-ICON-INFO:CAPS" title="RYGEL_TYPE_ICON_INFO"><code class="literal">RYGEL_TYPE_ICON_INFO</code></a> derived type</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>v_object</code></em> :</span></p></td>
+<td>object value to be set</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelIconInfoClass"></a><h3>struct RygelIconInfoClass</h3>
+<pre class="programlisting">struct RygelIconInfoClass {
+	GTypeClass parent_class;
+	void (*finalize) (RygelIconInfo *self);
+};
+</pre>
+<p>
+The class structure for <a class="link" href="RygelIconInfo.html#RYGEL-TYPE-ICON-INFO:CAPS" title="RYGEL_TYPE_ICON_INFO"><code class="literal">RYGEL_TYPE_ICON_INFO</code></a>. All the fields in this structure are private and should never be accessed directly.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><a href="../gobject/gobject-Type-Information.html#GTypeClass"><span class="type">GTypeClass</span></a> <em class="structfield"><code><a name="RygelIconInfoClass.parent-class"></a>parent_class</code></em>;</span></p></td>
+<td>the parent class structure</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelIconInfoClass.finalize"></a>finalize</code></em> ()</span></p></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

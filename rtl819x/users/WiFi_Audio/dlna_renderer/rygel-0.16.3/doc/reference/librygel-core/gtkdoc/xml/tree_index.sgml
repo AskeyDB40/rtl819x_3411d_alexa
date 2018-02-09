@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE screen PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<screen>
+    <link linkend="GObject">GObject</link>
+        <link linkend="DescriptionFile">DescriptionFile</link>
+        <link linkend="RygelCmdlineConfig">RygelCmdlineConfig</link>
+        <link linkend="GUPnPServiceInfo">GUPnPServiceInfo</link>
+            <link linkend="GUPnPService">GUPnPService</link>
+                <link linkend="RygelConnectionManager">RygelConnectionManager</link>
+        <link linkend="RygelLogHandler">RygelLogHandler</link>
+        <link linkend="RygelMediaDevice">RygelMediaDevice</link>
+        <link linkend="RygelMetaConfig">RygelMetaConfig</link>
+        <link linkend="GUPnPResourceFactory">GUPnPResourceFactory</link>
+            <link linkend="RygelPlugin">RygelPlugin</link>
+        <link linkend="RygelPluginLoader">RygelPluginLoader</link>
+        <link linkend="GUPnPDeviceInfo">GUPnPDeviceInfo</link>
+            <link linkend="GUPnPDevice">GUPnPDevice</link>
+                <link linkend="GUPnPRootDevice">GUPnPRootDevice</link>
+                    <link linkend="RygelRootDevice">RygelRootDevice</link>
+        <link linkend="RygelUserConfig">RygelUserConfig</link>
+    <link linkend="GInterface">GInterface</link>
+        <link linkend="FreeDesktopDBusObject">FreeDesktopDBusObject</link>
+        <link linkend="FreeDesktopProperties">FreeDesktopProperties</link>
+        <link linkend="RygelConfiguration">RygelConfiguration</link>
+        <link linkend="RygelDBusInterface">RygelDBusInterface</link>
+        <link linkend="RygelStateMachine">RygelStateMachine</link>
+    <link linkend="GEnum">GEnum</link>
+        <link linkend="FreeDesktopDBusRequestNameReply">FreeDesktopDBusRequestNameReply</link>
+        <link linkend="RygelLogLevel">RygelLogLevel</link>
+    <link linkend="RygelIconInfo">RygelIconInfo</link>
+    <link linkend="RygelResourceInfo">RygelResourceInfo</link>
+    <link linkend="RygelRootDeviceFactory">RygelRootDeviceFactory</link>
+    <link linkend="RygelXMLUtils">RygelXMLUtils</link>
+</screen>

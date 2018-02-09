@@ -1,0 +1,502 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>FreeDesktopDBusObject</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="librygel-core Reference Manual">
+<link rel="up" href="ch01.html" title="librygel-core API Reference">
+<link rel="prev" href="RygelIconInfo.html" title="RygelIconInfo">
+<link rel="next" href="RygelRootDevice.html" title="RygelRootDevice">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="RygelIconInfo.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">librygel-core Reference Manual</th>
+<td><a accesskey="n" href="RygelRootDevice.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#FreeDesktopDBusObject.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#FreeDesktopDBusObject.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#FreeDesktopDBusObject.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#FreeDesktopDBusObject.prerequisites" class="shortcut">Prerequisites</a>
+                   | 
+                  <a href="#FreeDesktopDBusObject.signals" class="shortcut">Signals</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="FreeDesktopDBusObject"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="FreeDesktopDBusObject.top_of_page"></a>FreeDesktopDBusObject</span></h2>
+<p>FreeDesktopDBusObject</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="FreeDesktopDBusObject.synopsis"></a><h2>Synopsis</h2>
+<a name="FreeDesktopDBusRequestNameReply"></a><a name="FreeDesktopProperties"></a><pre class="synopsis">#define             <a class="link" href="FreeDesktopDBusObject.html#FREE-DESKTOP-DBUS-SERVICE:CAPS" title="FREE_DESKTOP_DBUS_SERVICE">FREE_DESKTOP_DBUS_SERVICE</a>
+#define             <a class="link" href="FreeDesktopDBusObject.html#FREE-DESKTOP-DBUS-OBJECT-PATH:CAPS" title="FREE_DESKTOP_DBUS_OBJECT_PATH">FREE_DESKTOP_DBUS_OBJECT_PATH</a>
+enum                <a class="link" href="FreeDesktopDBusObject.html#FreeDesktopDBusRequestNameReply-enum" title="enum FreeDesktopDBusRequestNameReply">FreeDesktopDBusRequestNameReply</a>;
+<span class="returnvalue">guint32</span>             <a class="link" href="FreeDesktopDBusObject.html#free-desktop-dbus-object-request-name" title="free_desktop_dbus_object_request_name ()">free_desktop_dbus_object_request_name</a>
+                                                        (<em class="parameter"><code><a class="link" href="FreeDesktopDBusObject.html" title="FreeDesktopDBusObject"><span class="type">FreeDesktopDBusObject</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
+                                                         <em class="parameter"><code><span class="type">guint32</span> flags</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">guint32</span>             <a class="link" href="FreeDesktopDBusObject.html#free-desktop-dbus-object-start-service-by-name" title="free_desktop_dbus_object_start_service_by_name ()">free_desktop_dbus_object_start_service_by_name</a>
+                                                        (<em class="parameter"><code><a class="link" href="FreeDesktopDBusObject.html" title="FreeDesktopDBusObject"><span class="type">FreeDesktopDBusObject</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
+                                                         <em class="parameter"><code><span class="type">guint32</span> flags</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="FreeDesktopDBusObject.html#free-desktop-dbus-object-list-names" title="free_desktop_dbus_object_list_names ()">free_desktop_dbus_object_list_names</a> (<em class="parameter"><code><a class="link" href="FreeDesktopDBusObject.html" title="FreeDesktopDBusObject"><span class="type">FreeDesktopDBusObject</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **            <a class="link" href="FreeDesktopDBusObject.html#free-desktop-dbus-object-list-names-finish" title="free_desktop_dbus_object_list_names_finish ()">free_desktop_dbus_object_list_names_finish</a>
+                                                        (<em class="parameter"><code><a class="link" href="FreeDesktopDBusObject.html" title="FreeDesktopDBusObject"><span class="type">FreeDesktopDBusObject</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> *result_length1</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="FreeDesktopDBusObject.html#free-desktop-dbus-object-list-activatable-names" title="free_desktop_dbus_object_list_activatable_names ()">free_desktop_dbus_object_list_activatable_names</a>
+                                                        (<em class="parameter"><code><a class="link" href="FreeDesktopDBusObject.html" title="FreeDesktopDBusObject"><span class="type">FreeDesktopDBusObject</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **            <a class="link" href="FreeDesktopDBusObject.html#free-desktop-dbus-object-list-activatable-names-finish" title="free_desktop_dbus_object_list_activatable_names_finish ()">free_desktop_dbus_object_list_activatable_names_finish</a>
+                                                        (<em class="parameter"><code><a class="link" href="FreeDesktopDBusObject.html" title="FreeDesktopDBusObject"><span class="type">FreeDesktopDBusObject</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> *result_length1</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+                    <a class="link" href="FreeDesktopDBusObject.html#FreeDesktopDBusObject-struct" title="FreeDesktopDBusObject">FreeDesktopDBusObject</a>;
+struct              <a class="link" href="FreeDesktopDBusObject.html#FreeDesktopDBusObjectIface" title="struct FreeDesktopDBusObjectIface">FreeDesktopDBusObjectIface</a>;
+<span class="returnvalue">void</span>                <a class="link" href="FreeDesktopDBusObject.html#free-desktop-properties-get-all" title="free_desktop_properties_get_all ()">free_desktop_properties_get_all</a>     (<em class="parameter"><code><a class="link" href="FreeDesktopDBusObject.html#FreeDesktopProperties"><span class="type">FreeDesktopProperties</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *iface</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);
+<a href="../glib/glib-Hash-Tables.html#GHashTable"><span class="returnvalue">GHashTable</span></a> *        <a class="link" href="FreeDesktopDBusObject.html#free-desktop-properties-get-all-finish" title="free_desktop_properties_get_all_finish ()">free_desktop_properties_get_all_finish</a>
+                                                        (<em class="parameter"><code><a class="link" href="FreeDesktopDBusObject.html#FreeDesktopProperties"><span class="type">FreeDesktopProperties</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+                    <a class="link" href="FreeDesktopDBusObject.html#FreeDesktopProperties-struct" title="FreeDesktopProperties">FreeDesktopProperties</a>;
+struct              <a class="link" href="FreeDesktopDBusObject.html#FreeDesktopPropertiesIface" title="struct FreeDesktopPropertiesIface">FreeDesktopPropertiesIface</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="FreeDesktopDBusObject.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GEnum
+   +----FreeDesktopDBusRequestNameReply
+</pre>
+<pre class="synopsis">
+  GInterface
+   +----FreeDesktopDBusObject
+</pre>
+<pre class="synopsis">
+  GInterface
+   +----FreeDesktopProperties
+</pre>
+</div>
+<div class="refsect1">
+<a name="FreeDesktopDBusObject.prerequisites"></a><h2>Prerequisites</h2>
+<p>
+FreeDesktopDBusObject requires
+ <a href="../gobject/gobject-The-Base-Object-Type.html#GObject">GObject</a>.</p>
+<p>
+FreeDesktopProperties requires
+ <a href="../gobject/gobject-The-Base-Object-Type.html#GObject">GObject</a>.</p>
+</div>
+<div class="refsect1">
+<a name="FreeDesktopDBusObject.signals"></a><h2>Signals</h2>
+<pre class="synopsis">
+  "<a class="link" href="FreeDesktopDBusObject.html#FreeDesktopDBusObject-name-owner-changed" title='The "name-owner-changed" signal'>name-owner-changed</a>"                             : <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="FreeDesktopDBusObject.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="FreeDesktopDBusObject.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="FREE-DESKTOP-DBUS-SERVICE:CAPS"></a><h3>FREE_DESKTOP_DBUS_SERVICE</h3>
+<pre class="programlisting">#define FREE_DESKTOP_DBUS_SERVICE "org.freedesktop.DBus"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="FREE-DESKTOP-DBUS-OBJECT-PATH:CAPS"></a><h3>FREE_DESKTOP_DBUS_OBJECT_PATH</h3>
+<pre class="programlisting">#define FREE_DESKTOP_DBUS_OBJECT_PATH "/org/freedesktop/DBus"
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="FreeDesktopDBusRequestNameReply-enum"></a><h3>enum FreeDesktopDBusRequestNameReply</h3>
+<pre class="programlisting">typedef enum {
+	FREE_DESKTOP_DBUS_REQUEST_NAME_REPLY_PRIMARY_OWNER = 1,
+	FREE_DESKTOP_DBUS_REQUEST_NAME_REPLY_IN_QUEUE,
+	FREE_DESKTOP_DBUS_REQUEST_NAME_REPLY_EXISTS,
+	FREE_DESKTOP_DBUS_REQUEST_NAME_REPLY_ALREADY_OWNER
+} FreeDesktopDBusRequestNameReply;
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="free-desktop-dbus-object-request-name"></a><h3>free_desktop_dbus_object_request_name ()</h3>
+<pre class="programlisting"><span class="returnvalue">guint32</span>             free_desktop_dbus_object_request_name
+                                                        (<em class="parameter"><code><a class="link" href="FreeDesktopDBusObject.html" title="FreeDesktopDBusObject"><span class="type">FreeDesktopDBusObject</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
+                                                         <em class="parameter"><code><span class="type">guint32</span> flags</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="FreeDesktopDBusObject.html" title="FreeDesktopDBusObject"><span class="type">FreeDesktopDBusObject</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore. <span class="annotation">[<acronym title="Typed errors. Similar to throws in Java."><span class="acronym">error-domains</span></acronym> GDBusError]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="free-desktop-dbus-object-start-service-by-name"></a><h3>free_desktop_dbus_object_start_service_by_name ()</h3>
+<pre class="programlisting"><span class="returnvalue">guint32</span>             free_desktop_dbus_object_start_service_by_name
+                                                        (<em class="parameter"><code><a class="link" href="FreeDesktopDBusObject.html" title="FreeDesktopDBusObject"><span class="type">FreeDesktopDBusObject</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
+                                                         <em class="parameter"><code><span class="type">guint32</span> flags</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="FreeDesktopDBusObject.html" title="FreeDesktopDBusObject"><span class="type">FreeDesktopDBusObject</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore. <span class="annotation">[<acronym title="Typed errors. Similar to throws in Java."><span class="acronym">error-domains</span></acronym> GDBusError]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="free-desktop-dbus-object-list-names"></a><h3>free_desktop_dbus_object_list_names ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                free_desktop_dbus_object_list_names (<em class="parameter"><code><a class="link" href="FreeDesktopDBusObject.html" title="FreeDesktopDBusObject"><span class="type">FreeDesktopDBusObject</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);</pre>
+<p>
+<span class="emphasis"><em>See also</em></span>: <a class="link" href="FreeDesktopDBusObject.html#free-desktop-dbus-object-list-names-finish" title="free_desktop_dbus_object_list_names_finish ()"><code class="function"><a class="link" href="FreeDesktopDBusObject.html#free-desktop-dbus-object-list-names-finish" title="free_desktop_dbus_object_list_names_finish ()"><code class="function">free_desktop_dbus_object_list_names_finish()</code></a></code></a>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="FreeDesktopDBusObject.html" title="FreeDesktopDBusObject"><span class="type">FreeDesktopDBusObject</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_callback_</code></em> :</span></p></td>
+<td>callback to call when the request is satisfied. <span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_user_data_</code></em> :</span></p></td>
+<td>the data to pass to <em class="parameter"><code>_callback_</code></em> function. <span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="free-desktop-dbus-object-list-names-finish"></a><h3>free_desktop_dbus_object_list_names_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **            free_desktop_dbus_object_list_names_finish
+                                                        (<em class="parameter"><code><a class="link" href="FreeDesktopDBusObject.html" title="FreeDesktopDBusObject"><span class="type">FreeDesktopDBusObject</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> *result_length1</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+<span class="emphasis"><em>See also</em></span>: <a class="link" href="FreeDesktopDBusObject.html#free-desktop-dbus-object-list-names" title="free_desktop_dbus_object_list_names ()"><code class="function"><a class="link" href="FreeDesktopDBusObject.html#free-desktop-dbus-object-list-names" title="free_desktop_dbus_object_list_names ()"><code class="function">free_desktop_dbus_object_list_names()</code></a></code></a>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="FreeDesktopDBusObject.html" title="FreeDesktopDBusObject"><span class="type">FreeDesktopDBusObject</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_res_</code></em> :</span></p></td>
+<td>a <a href="../gio/GAsyncResult.html"><span class="type">GAsyncResult</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore. <span class="annotation">[<acronym title="Typed errors. Similar to throws in Java."><span class="acronym">error-domains</span></acronym> GDBusError]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="free-desktop-dbus-object-list-activatable-names"></a><h3>free_desktop_dbus_object_list_activatable_names ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                free_desktop_dbus_object_list_activatable_names
+                                                        (<em class="parameter"><code><a class="link" href="FreeDesktopDBusObject.html" title="FreeDesktopDBusObject"><span class="type">FreeDesktopDBusObject</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);</pre>
+<p>
+<span class="emphasis"><em>See also</em></span>: <a class="link" href="FreeDesktopDBusObject.html#free-desktop-dbus-object-list-activatable-names-finish" title="free_desktop_dbus_object_list_activatable_names_finish ()"><code class="function"><a class="link" href="FreeDesktopDBusObject.html#free-desktop-dbus-object-list-activatable-names-finish" title="free_desktop_dbus_object_list_activatable_names_finish ()"><code class="function">free_desktop_dbus_object_list_activatable_names_finish()</code></a></code></a>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="FreeDesktopDBusObject.html" title="FreeDesktopDBusObject"><span class="type">FreeDesktopDBusObject</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_callback_</code></em> :</span></p></td>
+<td>callback to call when the request is satisfied. <span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_user_data_</code></em> :</span></p></td>
+<td>the data to pass to <em class="parameter"><code>_callback_</code></em> function. <span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="free-desktop-dbus-object-list-activatable-names-finish"></a><h3>free_desktop_dbus_object_list_activatable_names_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> **            free_desktop_dbus_object_list_activatable_names_finish
+                                                        (<em class="parameter"><code><a class="link" href="FreeDesktopDBusObject.html" title="FreeDesktopDBusObject"><span class="type">FreeDesktopDBusObject</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                                         <em class="parameter"><code><span class="type">int</span> *result_length1</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+<span class="emphasis"><em>See also</em></span>: <a class="link" href="FreeDesktopDBusObject.html#free-desktop-dbus-object-list-activatable-names" title="free_desktop_dbus_object_list_activatable_names ()"><code class="function"><a class="link" href="FreeDesktopDBusObject.html#free-desktop-dbus-object-list-activatable-names" title="free_desktop_dbus_object_list_activatable_names ()"><code class="function">free_desktop_dbus_object_list_activatable_names()</code></a></code></a>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="FreeDesktopDBusObject.html" title="FreeDesktopDBusObject"><span class="type">FreeDesktopDBusObject</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_res_</code></em> :</span></p></td>
+<td>a <a href="../gio/GAsyncResult.html"><span class="type">GAsyncResult</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore. <span class="annotation">[<acronym title="Typed errors. Similar to throws in Java."><span class="acronym">error-domains</span></acronym> GDBusError]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="FreeDesktopDBusObject-struct"></a><h3>FreeDesktopDBusObject</h3>
+<pre class="programlisting">typedef struct _FreeDesktopDBusObject FreeDesktopDBusObject;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="FreeDesktopDBusObjectIface"></a><h3>struct FreeDesktopDBusObjectIface</h3>
+<pre class="programlisting">struct FreeDesktopDBusObjectIface {
+	GTypeInterface parent_iface;
+	guint32 (*request_name) (FreeDesktopDBusObject* self, const gchar* name, guint32 flags, GError** error);
+	guint32 (*start_service_by_name) (FreeDesktopDBusObject* self, const gchar* name, guint32 flags, GError** error);
+	void (*list_names) (FreeDesktopDBusObject* self, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	gchar** (*list_names_finish) (FreeDesktopDBusObject* self, GAsyncResult* _res_, int* result_length1, GError** error);
+	void (*list_activatable_names) (FreeDesktopDBusObject* self, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	gchar** (*list_activatable_names_finish) (FreeDesktopDBusObject* self, GAsyncResult* _res_, int* result_length1, GError** error);
+};
+</pre>
+<p>
+Interface for creating <a class="link" href="FreeDesktopDBusObject.html" title="FreeDesktopDBusObject"><span class="type">FreeDesktopDBusObject</span></a> implementations.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><a href="../gobject/gobject-Type-Information.html#GTypeInterface"><span class="type">GTypeInterface</span></a> <em class="structfield"><code><a name="FreeDesktopDBusObjectIface.parent-iface"></a>parent_iface</code></em>;</span></p></td>
+<td>the parent interface structure</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="FreeDesktopDBusObjectIface.request-name"></a>request_name</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="FreeDesktopDBusObject.html#free-desktop-dbus-object-request-name" title="free_desktop_dbus_object_request_name ()"><code class="function"><a class="link" href="FreeDesktopDBusObject.html#free-desktop-dbus-object-request-name" title="free_desktop_dbus_object_request_name ()"><code class="function">free_desktop_dbus_object_request_name()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="FreeDesktopDBusObjectIface.start-service-by-name"></a>start_service_by_name</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="FreeDesktopDBusObject.html#free-desktop-dbus-object-start-service-by-name" title="free_desktop_dbus_object_start_service_by_name ()"><code class="function"><a class="link" href="FreeDesktopDBusObject.html#free-desktop-dbus-object-start-service-by-name" title="free_desktop_dbus_object_start_service_by_name ()"><code class="function">free_desktop_dbus_object_start_service_by_name()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="FreeDesktopDBusObjectIface.list-names"></a>list_names</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="FreeDesktopDBusObject.html#free-desktop-dbus-object-list-names" title="free_desktop_dbus_object_list_names ()"><code class="function"><a class="link" href="FreeDesktopDBusObject.html#free-desktop-dbus-object-list-names" title="free_desktop_dbus_object_list_names ()"><code class="function">free_desktop_dbus_object_list_names()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="FreeDesktopDBusObjectIface.list-names-finish"></a>list_names_finish</code></em> ()</span></p></td>
+<td>asynchronous finish function for <em class="structfield"><code>list_names</code></em>, called by <a class="link" href="FreeDesktopDBusObject.html#free-desktop-dbus-object-list-names" title="free_desktop_dbus_object_list_names ()"><code class="function"><a class="link" href="FreeDesktopDBusObject.html#free-desktop-dbus-object-list-names" title="free_desktop_dbus_object_list_names ()"><code class="function">free_desktop_dbus_object_list_names()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="FreeDesktopDBusObjectIface.list-activatable-names"></a>list_activatable_names</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="FreeDesktopDBusObject.html#free-desktop-dbus-object-list-activatable-names" title="free_desktop_dbus_object_list_activatable_names ()"><code class="function"><a class="link" href="FreeDesktopDBusObject.html#free-desktop-dbus-object-list-activatable-names" title="free_desktop_dbus_object_list_activatable_names ()"><code class="function">free_desktop_dbus_object_list_activatable_names()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="FreeDesktopDBusObjectIface.list-activatable-names-finish"></a>list_activatable_names_finish</code></em> ()</span></p></td>
+<td>asynchronous finish function for <em class="structfield"><code>list_activatable_names</code></em>, called by <a class="link" href="FreeDesktopDBusObject.html#free-desktop-dbus-object-list-activatable-names" title="free_desktop_dbus_object_list_activatable_names ()"><code class="function"><a class="link" href="FreeDesktopDBusObject.html#free-desktop-dbus-object-list-activatable-names" title="free_desktop_dbus_object_list_activatable_names ()"><code class="function">free_desktop_dbus_object_list_activatable_names()</code></a></code></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="free-desktop-properties-get-all"></a><h3>free_desktop_properties_get_all ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                free_desktop_properties_get_all     (<em class="parameter"><code><a class="link" href="FreeDesktopDBusObject.html#FreeDesktopProperties"><span class="type">FreeDesktopProperties</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *iface</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);</pre>
+<p>
+<span class="emphasis"><em>See also</em></span>: <a class="link" href="FreeDesktopDBusObject.html#free-desktop-properties-get-all-finish" title="free_desktop_properties_get_all_finish ()"><code class="function"><a class="link" href="FreeDesktopDBusObject.html#free-desktop-properties-get-all-finish" title="free_desktop_properties_get_all_finish ()"><code class="function">free_desktop_properties_get_all_finish()</code></a></code></a>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="FreeDesktopDBusObject.html#FreeDesktopProperties"><span class="type">FreeDesktopProperties</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_callback_</code></em> :</span></p></td>
+<td>callback to call when the request is satisfied. <span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_user_data_</code></em> :</span></p></td>
+<td>the data to pass to <em class="parameter"><code>_callback_</code></em> function. <span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="free-desktop-properties-get-all-finish"></a><h3>free_desktop_properties_get_all_finish ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Hash-Tables.html#GHashTable"><span class="returnvalue">GHashTable</span></a> *        free_desktop_properties_get_all_finish
+                                                        (<em class="parameter"><code><a class="link" href="FreeDesktopDBusObject.html#FreeDesktopProperties"><span class="type">FreeDesktopProperties</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+<span class="emphasis"><em>See also</em></span>: <a class="link" href="FreeDesktopDBusObject.html#free-desktop-properties-get-all" title="free_desktop_properties_get_all ()"><code class="function"><a class="link" href="FreeDesktopDBusObject.html#free-desktop-properties-get-all" title="free_desktop_properties_get_all ()"><code class="function">free_desktop_properties_get_all()</code></a></code></a>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="FreeDesktopDBusObject.html#FreeDesktopProperties"><span class="type">FreeDesktopProperties</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_res_</code></em> :</span></p></td>
+<td>a <a href="../gio/GAsyncResult.html"><span class="type">GAsyncResult</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore. <span class="annotation">[<acronym title="Typed errors. Similar to throws in Java."><span class="acronym">error-domains</span></acronym> GDBusError]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="FreeDesktopProperties-struct"></a><h3>FreeDesktopProperties</h3>
+<pre class="programlisting">typedef struct _FreeDesktopProperties FreeDesktopProperties;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="FreeDesktopPropertiesIface"></a><h3>struct FreeDesktopPropertiesIface</h3>
+<pre class="programlisting">struct FreeDesktopPropertiesIface {
+	GTypeInterface parent_iface;
+	void (*get_all) (FreeDesktopProperties* self, const gchar* iface, GAsyncReadyCallback _callback_, gpointer _user_data_);
+	GHashTable* (*get_all_finish) (FreeDesktopProperties* self, GAsyncResult* _res_, GError** error);
+};
+</pre>
+<p>
+Interface for creating <a class="link" href="FreeDesktopDBusObject.html#FreeDesktopProperties"><span class="type">FreeDesktopProperties</span></a> implementations.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><a href="../gobject/gobject-Type-Information.html#GTypeInterface"><span class="type">GTypeInterface</span></a> <em class="structfield"><code><a name="FreeDesktopPropertiesIface.parent-iface"></a>parent_iface</code></em>;</span></p></td>
+<td>the parent interface structure</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="FreeDesktopPropertiesIface.get-all"></a>get_all</code></em> ()</span></p></td>
+<td>virtual method called by <a class="link" href="FreeDesktopDBusObject.html#free-desktop-properties-get-all" title="free_desktop_properties_get_all ()"><code class="function"><a class="link" href="FreeDesktopDBusObject.html#free-desktop-properties-get-all" title="free_desktop_properties_get_all ()"><code class="function">free_desktop_properties_get_all()</code></a></code></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="FreeDesktopPropertiesIface.get-all-finish"></a>get_all_finish</code></em> ()</span></p></td>
+<td>asynchronous finish function for <em class="structfield"><code>get_all</code></em>, called by <a class="link" href="FreeDesktopDBusObject.html#free-desktop-properties-get-all" title="free_desktop_properties_get_all ()"><code class="function"><a class="link" href="FreeDesktopDBusObject.html#free-desktop-properties-get-all" title="free_desktop_properties_get_all ()"><code class="function">free_desktop_properties_get_all()</code></a></code></a>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="FreeDesktopDBusObject.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="FreeDesktopDBusObject-name-owner-changed"></a><h3>The <code class="literal">"name-owner-changed"</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                user_function                      (<a class="link" href="FreeDesktopDBusObject.html" title="FreeDesktopDBusObject"><span class="type">FreeDesktopDBusObject</span></a> *dbus_object,
+                                                        <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>                 *name,
+                                                        <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>                 *old_owner,
+                                                        <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>                 *new_owner,
+                                                        <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>               user_data)        : <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS"><code class="literal">Run Last</code></a></pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>dbus_object</code></em> :</span></p></td>
+<td>the <a class="link" href="FreeDesktopDBusObject.html" title="FreeDesktopDBusObject"><span class="type">FreeDesktopDBusObject</span></a> instance that received the signal</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!-- ##### SECTION Title ##### -->
+GUPnPServiceIntrospection
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### ENUM GUPnPServiceActionArgDirection ##### -->
+<para>
+
+</para>
+
+@GUPNP_SERVICE_ACTION_ARG_DIRECTION_IN: 
+@GUPNP_SERVICE_ACTION_ARG_DIRECTION_OUT: 
+
+<!-- ##### STRUCT GUPnPServiceActionArgInfo ##### -->
+<para>
+
+</para>
+
+@name: 
+@direction: 
+@related_state_variable: 
+@retval: 
+
+<!-- ##### STRUCT GUPnPServiceActionInfo ##### -->
+<para>
+
+</para>
+
+@name: 
+@arguments: 
+
+<!-- ##### STRUCT GUPnPServiceStateVariableInfo ##### -->
+<para>
+
+</para>
+
+@name: 
+@send_events: 
+@is_numeric: 
+@type: 
+@default_value: 
+@minimum: 
+@maximum: 
+@step: 
+@allowed_values: 
+
+<!-- ##### STRUCT GUPnPServiceIntrospection ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### ARG GUPnPServiceIntrospection:scpd ##### -->
+<para>
+
+</para>
+
+<!-- ##### FUNCTION gupnp_service_introspection_list_action_names ##### -->
+<para>
+
+</para>
+
+@introspection: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_introspection_list_actions ##### -->
+<para>
+
+</para>
+
+@introspection: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_introspection_get_action ##### -->
+<para>
+
+</para>
+
+@introspection: 
+@action_name: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_introspection_list_state_variable_names ##### -->
+<para>
+
+</para>
+
+@introspection: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_introspection_list_state_variables ##### -->
+<para>
+
+</para>
+
+@introspection: 
+@Returns: 
+
+
+<!-- ##### FUNCTION gupnp_service_introspection_get_state_variable ##### -->
+<para>
+
+</para>
+
+@introspection: 
+@variable_name: 
+@Returns: 
+
+

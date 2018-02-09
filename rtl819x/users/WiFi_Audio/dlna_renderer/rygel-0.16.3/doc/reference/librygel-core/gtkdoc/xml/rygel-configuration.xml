@@ -1,0 +1,547 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelConfiguration">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelConfiguration.top_of_page">RygelConfiguration</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-CORE Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelConfiguration</refname>
+<refpurpose>Interface for dealing with Rygel configuration.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelConfiguration.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+
+<synopsis>enum                <link linkend="RygelConfigurationError">RygelConfigurationError</link>;
+<link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            <link linkend="rygel-configuration-get-upnp-enabled">rygel_configuration_get_upnp_enabled</link>
+                                                        (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             <link linkend="rygel-configuration-get-interface">rygel_configuration_get_interface</link>   (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="gint"><returnvalue>gint</returnvalue></link>                <link linkend="rygel-configuration-get-port">rygel_configuration_get_port</link>        (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            <link linkend="rygel-configuration-get-transcoding">rygel_configuration_get_transcoding</link> (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            <link linkend="rygel-configuration-get-mp3-transcoder">rygel_configuration_get_mp3_transcoder</link>
+                                                        (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            <link linkend="rygel-configuration-get-mp2ts-transcoder">rygel_configuration_get_mp2ts_transcoder</link>
+                                                        (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            <link linkend="rygel-configuration-get-lpcm-transcoder">rygel_configuration_get_lpcm_transcoder</link>
+                                                        (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            <link linkend="rygel-configuration-get-wmv-transcoder">rygel_configuration_get_wmv_transcoder</link>
+                                                        (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            <link linkend="rygel-configuration-get-aac-transcoder">rygel_configuration_get_aac_transcoder</link>
+                                                        (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            <link linkend="rygel-configuration-get-avc-transcoder">rygel_configuration_get_avc_transcoder</link>
+                                                        (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            <link linkend="rygel-configuration-get-allow-upload">rygel_configuration_get_allow_upload</link>
+                                                        (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            <link linkend="rygel-configuration-get-allow-deletion">rygel_configuration_get_allow_deletion</link>
+                                                        (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             <link linkend="rygel-configuration-get-log-levels">rygel_configuration_get_log_levels</link>  (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             <link linkend="rygel-configuration-get-plugin-path">rygel_configuration_get_plugin_path</link> (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             <link linkend="rygel-configuration-get-video-upload-folder">rygel_configuration_get_video_upload_folder</link>
+                                                        (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             <link linkend="rygel-configuration-get-music-upload-folder">rygel_configuration_get_music_upload_folder</link>
+                                                        (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             <link linkend="rygel-configuration-get-picture-upload-folder">rygel_configuration_get_picture_upload_folder</link>
+                                                        (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            <link linkend="rygel-configuration-get-enabled">rygel_configuration_get_enabled</link>     (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *section</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             <link linkend="rygel-configuration-get-title">rygel_configuration_get_title</link>       (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *section</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             <link linkend="rygel-configuration-get-string">rygel_configuration_get_string</link>      (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *section</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *key</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="GeeArrayList"><returnvalue>GeeArrayList</returnvalue></link> *      <link linkend="rygel-configuration-get-string-list">rygel_configuration_get_string_list</link> (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *section</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *key</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="gint"><returnvalue>gint</returnvalue></link>                <link linkend="rygel-configuration-get-int">rygel_configuration_get_int</link>         (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *section</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *key</parameter>,
+                                                         <parameter><link linkend="gint"><type>gint</type></link> min</parameter>,
+                                                         <parameter><link linkend="gint"><type>gint</type></link> max</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="GeeArrayList"><returnvalue>GeeArrayList</returnvalue></link> *      <link linkend="rygel-configuration-get-int-list">rygel_configuration_get_int_list</link>    (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *section</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *key</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+<link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            <link linkend="rygel-configuration-get-bool">rygel_configuration_get_bool</link>        (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *section</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *key</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);
+                    <link linkend="RygelConfiguration-struct">RygelConfiguration</link>;
+struct              <link linkend="RygelConfigurationIface">RygelConfigurationIface</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelConfiguration.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GInterface">GInterface</link>
+   +----RygelConfiguration
+</synopsis>
+</refsect1>
+<refsect1 id="RygelConfiguration.prerequisites" role="prerequisites">
+<title role="prerequisites.title">Prerequisites</title>
+<para>
+RygelConfiguration requires
+ <link linkend="GObject">GObject</link>.</para>
+</refsect1>
+<refsect1 id="RygelConfiguration.implementations" role="implementations">
+<title role="implementations.title">Known Implementations</title>
+<para>
+RygelConfiguration is implemented by
+ <link linkend="RygelCmdlineConfig">RygelCmdlineConfig</link>,  <link linkend="RygelMetaConfig">RygelMetaConfig</link> and  <link linkend="RygelUserConfig">RygelUserConfig</link>.</para>
+</refsect1>
+
+<refsect1 id="RygelConfiguration.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="RygelConfiguration.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="RygelConfigurationError" role="enum">
+<title>enum RygelConfigurationError</title>
+<indexterm zone="RygelConfigurationError"><primary>RygelConfigurationError</primary></indexterm>
+<programlisting>typedef enum {
+	RYGEL_CONFIGURATION_ERROR_NO_VALUE_SET,
+	RYGEL_CONFIGURATION_ERROR_VALUE_OUT_OF_RANGE
+} RygelConfigurationError;
+</programlisting>
+</refsect2>
+<refsect2 id="rygel-configuration-get-upnp-enabled" role="function">
+<title>rygel_configuration_get_upnp_enabled ()</title>
+<indexterm zone="rygel-configuration-get-upnp-enabled"><primary>rygel_configuration_get_upnp_enabled</primary></indexterm>
+<programlisting><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            rygel_configuration_get_upnp_enabled
+                                                        (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-configuration-get-interface" role="function">
+<title>rygel_configuration_get_interface ()</title>
+<indexterm zone="rygel-configuration-get-interface"><primary>rygel_configuration_get_interface</primary></indexterm>
+<programlisting><link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             rygel_configuration_get_interface   (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-configuration-get-port" role="function">
+<title>rygel_configuration_get_port ()</title>
+<indexterm zone="rygel-configuration-get-port"><primary>rygel_configuration_get_port</primary></indexterm>
+<programlisting><link linkend="gint"><returnvalue>gint</returnvalue></link>                rygel_configuration_get_port        (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-configuration-get-transcoding" role="function">
+<title>rygel_configuration_get_transcoding ()</title>
+<indexterm zone="rygel-configuration-get-transcoding"><primary>rygel_configuration_get_transcoding</primary></indexterm>
+<programlisting><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            rygel_configuration_get_transcoding (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-configuration-get-mp3-transcoder" role="function">
+<title>rygel_configuration_get_mp3_transcoder ()</title>
+<indexterm zone="rygel-configuration-get-mp3-transcoder"><primary>rygel_configuration_get_mp3_transcoder</primary></indexterm>
+<programlisting><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            rygel_configuration_get_mp3_transcoder
+                                                        (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-configuration-get-mp2ts-transcoder" role="function">
+<title>rygel_configuration_get_mp2ts_transcoder ()</title>
+<indexterm zone="rygel-configuration-get-mp2ts-transcoder"><primary>rygel_configuration_get_mp2ts_transcoder</primary></indexterm>
+<programlisting><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            rygel_configuration_get_mp2ts_transcoder
+                                                        (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-configuration-get-lpcm-transcoder" role="function">
+<title>rygel_configuration_get_lpcm_transcoder ()</title>
+<indexterm zone="rygel-configuration-get-lpcm-transcoder"><primary>rygel_configuration_get_lpcm_transcoder</primary></indexterm>
+<programlisting><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            rygel_configuration_get_lpcm_transcoder
+                                                        (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-configuration-get-wmv-transcoder" role="function">
+<title>rygel_configuration_get_wmv_transcoder ()</title>
+<indexterm zone="rygel-configuration-get-wmv-transcoder"><primary>rygel_configuration_get_wmv_transcoder</primary></indexterm>
+<programlisting><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            rygel_configuration_get_wmv_transcoder
+                                                        (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-configuration-get-aac-transcoder" role="function">
+<title>rygel_configuration_get_aac_transcoder ()</title>
+<indexterm zone="rygel-configuration-get-aac-transcoder"><primary>rygel_configuration_get_aac_transcoder</primary></indexterm>
+<programlisting><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            rygel_configuration_get_aac_transcoder
+                                                        (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-configuration-get-avc-transcoder" role="function">
+<title>rygel_configuration_get_avc_transcoder ()</title>
+<indexterm zone="rygel-configuration-get-avc-transcoder"><primary>rygel_configuration_get_avc_transcoder</primary></indexterm>
+<programlisting><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            rygel_configuration_get_avc_transcoder
+                                                        (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-configuration-get-allow-upload" role="function">
+<title>rygel_configuration_get_allow_upload ()</title>
+<indexterm zone="rygel-configuration-get-allow-upload"><primary>rygel_configuration_get_allow_upload</primary></indexterm>
+<programlisting><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            rygel_configuration_get_allow_upload
+                                                        (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-configuration-get-allow-deletion" role="function">
+<title>rygel_configuration_get_allow_deletion ()</title>
+<indexterm zone="rygel-configuration-get-allow-deletion"><primary>rygel_configuration_get_allow_deletion</primary></indexterm>
+<programlisting><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            rygel_configuration_get_allow_deletion
+                                                        (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-configuration-get-log-levels" role="function">
+<title>rygel_configuration_get_log_levels ()</title>
+<indexterm zone="rygel-configuration-get-log-levels"><primary>rygel_configuration_get_log_levels</primary></indexterm>
+<programlisting><link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             rygel_configuration_get_log_levels  (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-configuration-get-plugin-path" role="function">
+<title>rygel_configuration_get_plugin_path ()</title>
+<indexterm zone="rygel-configuration-get-plugin-path"><primary>rygel_configuration_get_plugin_path</primary></indexterm>
+<programlisting><link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             rygel_configuration_get_plugin_path (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-configuration-get-video-upload-folder" role="function">
+<title>rygel_configuration_get_video_upload_folder ()</title>
+<indexterm zone="rygel-configuration-get-video-upload-folder"><primary>rygel_configuration_get_video_upload_folder</primary></indexterm>
+<programlisting><link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             rygel_configuration_get_video_upload_folder
+                                                        (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-configuration-get-music-upload-folder" role="function">
+<title>rygel_configuration_get_music_upload_folder ()</title>
+<indexterm zone="rygel-configuration-get-music-upload-folder"><primary>rygel_configuration_get_music_upload_folder</primary></indexterm>
+<programlisting><link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             rygel_configuration_get_music_upload_folder
+                                                        (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-configuration-get-picture-upload-folder" role="function">
+<title>rygel_configuration_get_picture_upload_folder ()</title>
+<indexterm zone="rygel-configuration-get-picture-upload-folder"><primary>rygel_configuration_get_picture_upload_folder</primary></indexterm>
+<programlisting><link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             rygel_configuration_get_picture_upload_folder
+                                                        (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-configuration-get-enabled" role="function">
+<title>rygel_configuration_get_enabled ()</title>
+<indexterm zone="rygel-configuration-get-enabled"><primary>rygel_configuration_get_enabled</primary></indexterm>
+<programlisting><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            rygel_configuration_get_enabled     (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *section</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-configuration-get-title" role="function">
+<title>rygel_configuration_get_title ()</title>
+<indexterm zone="rygel-configuration-get-title"><primary>rygel_configuration_get_title</primary></indexterm>
+<programlisting><link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             rygel_configuration_get_title       (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *section</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-configuration-get-string" role="function">
+<title>rygel_configuration_get_string ()</title>
+<indexterm zone="rygel-configuration-get-string"><primary>rygel_configuration_get_string</primary></indexterm>
+<programlisting><link linkend="gchar"><returnvalue>gchar</returnvalue></link> *             rygel_configuration_get_string      (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *section</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *key</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-configuration-get-string-list" role="function">
+<title>rygel_configuration_get_string_list ()</title>
+<indexterm zone="rygel-configuration-get-string-list"><primary>rygel_configuration_get_string_list</primary></indexterm>
+<programlisting><link linkend="GeeArrayList"><returnvalue>GeeArrayList</returnvalue></link> *      rygel_configuration_get_string_list (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *section</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *key</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-configuration-get-int" role="function">
+<title>rygel_configuration_get_int ()</title>
+<indexterm zone="rygel-configuration-get-int"><primary>rygel_configuration_get_int</primary></indexterm>
+<programlisting><link linkend="gint"><returnvalue>gint</returnvalue></link>                rygel_configuration_get_int         (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *section</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *key</parameter>,
+                                                         <parameter><link linkend="gint"><type>gint</type></link> min</parameter>,
+                                                         <parameter><link linkend="gint"><type>gint</type></link> max</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-configuration-get-int-list" role="function">
+<title>rygel_configuration_get_int_list ()</title>
+<indexterm zone="rygel-configuration-get-int-list"><primary>rygel_configuration_get_int_list</primary></indexterm>
+<programlisting><link linkend="GeeArrayList"><returnvalue>GeeArrayList</returnvalue></link> *      rygel_configuration_get_int_list    (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *section</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *key</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="rygel-configuration-get-bool" role="function">
+<title>rygel_configuration_get_bool ()</title>
+<indexterm zone="rygel-configuration-get-bool"><primary>rygel_configuration_get_bool</primary></indexterm>
+<programlisting><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>            rygel_configuration_get_bool        (<parameter><link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> *self</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *section</parameter>,
+                                                         <parameter>const <link linkend="gchar"><type>gchar</type></link> *key</parameter>,
+                                                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<variablelist role="params">
+<varlistentry><term><parameter>self</parameter>&#160;:</term>
+<listitem><simpara>the <link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> instance</simpara></listitem></varlistentry>
+<varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara>location to store the error occuring, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</simpara></listitem></varlistentry>
+</variablelist></refsect2>
+<refsect2 id="RygelConfiguration-struct" role="struct">
+<title>RygelConfiguration</title>
+<indexterm zone="RygelConfiguration-struct"><primary>RygelConfiguration</primary></indexterm>
+<programlisting>typedef struct _RygelConfiguration RygelConfiguration;</programlisting>
+<para>
+Interface for dealing with Rygel configuration.
+</para></refsect2>
+<refsect2 id="RygelConfigurationIface" role="struct">
+<title>struct RygelConfigurationIface</title>
+<indexterm zone="RygelConfigurationIface"><primary>RygelConfigurationIface</primary></indexterm>
+<programlisting>struct RygelConfigurationIface {
+	GTypeInterface parent_iface;
+	gboolean (*get_upnp_enabled) (RygelConfiguration* self, GError** error);
+	gchar* (*get_interface) (RygelConfiguration* self, GError** error);
+	gint (*get_port) (RygelConfiguration* self, GError** error);
+	gboolean (*get_transcoding) (RygelConfiguration* self, GError** error);
+	gboolean (*get_mp3_transcoder) (RygelConfiguration* self, GError** error);
+	gboolean (*get_mp2ts_transcoder) (RygelConfiguration* self, GError** error);
+	gboolean (*get_lpcm_transcoder) (RygelConfiguration* self, GError** error);
+	gboolean (*get_wmv_transcoder) (RygelConfiguration* self, GError** error);
+	gboolean (*get_aac_transcoder) (RygelConfiguration* self, GError** error);
+	gboolean (*get_avc_transcoder) (RygelConfiguration* self, GError** error);
+	gboolean (*get_allow_upload) (RygelConfiguration* self, GError** error);
+	gboolean (*get_allow_deletion) (RygelConfiguration* self, GError** error);
+	gchar* (*get_log_levels) (RygelConfiguration* self, GError** error);
+	gchar* (*get_plugin_path) (RygelConfiguration* self, GError** error);
+	gchar* (*get_video_upload_folder) (RygelConfiguration* self, GError** error);
+	gchar* (*get_music_upload_folder) (RygelConfiguration* self, GError** error);
+	gchar* (*get_picture_upload_folder) (RygelConfiguration* self, GError** error);
+	gboolean (*get_enabled) (RygelConfiguration* self, const gchar* section, GError** error);
+	gchar* (*get_title) (RygelConfiguration* self, const gchar* section, GError** error);
+	gchar* (*get_string) (RygelConfiguration* self, const gchar* section, const gchar* key, GError** error);
+	GeeArrayList* (*get_string_list) (RygelConfiguration* self, const gchar* section, const gchar* key, GError** error);
+	gint (*get_int) (RygelConfiguration* self, const gchar* section, const gchar* key, gint min, gint max, GError** error);
+	GeeArrayList* (*get_int_list) (RygelConfiguration* self, const gchar* section, const gchar* key, GError** error);
+	gboolean (*get_bool) (RygelConfiguration* self, const gchar* section, const gchar* key, GError** error);
+};
+</programlisting>
+<para>
+Interface for creating <link linkend="RygelConfiguration"><type>RygelConfiguration</type></link> implementations.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="GTypeInterface"><type>GTypeInterface</type></link>&#160;<structfield id="RygelConfigurationIface.parent-iface">parent_iface</structfield>;</term>
+<listitem><simpara>the parent interface structure</simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelConfigurationIface.get-upnp-enabled">get_upnp_enabled</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-configuration-get-upnp-enabled"><function><link linkend="rygel-configuration-get-upnp-enabled"><function>rygel_configuration_get_upnp_enabled()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelConfigurationIface.get-interface">get_interface</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-configuration-get-interface"><function><link linkend="rygel-configuration-get-interface"><function>rygel_configuration_get_interface()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelConfigurationIface.get-port">get_port</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-configuration-get-port"><function><link linkend="rygel-configuration-get-port"><function>rygel_configuration_get_port()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelConfigurationIface.get-transcoding">get_transcoding</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-configuration-get-transcoding"><function><link linkend="rygel-configuration-get-transcoding"><function>rygel_configuration_get_transcoding()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelConfigurationIface.get-mp3-transcoder">get_mp3_transcoder</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-configuration-get-mp3-transcoder"><function><link linkend="rygel-configuration-get-mp3-transcoder"><function>rygel_configuration_get_mp3_transcoder()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelConfigurationIface.get-mp2ts-transcoder">get_mp2ts_transcoder</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-configuration-get-mp2ts-transcoder"><function><link linkend="rygel-configuration-get-mp2ts-transcoder"><function>rygel_configuration_get_mp2ts_transcoder()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelConfigurationIface.get-lpcm-transcoder">get_lpcm_transcoder</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-configuration-get-lpcm-transcoder"><function><link linkend="rygel-configuration-get-lpcm-transcoder"><function>rygel_configuration_get_lpcm_transcoder()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelConfigurationIface.get-wmv-transcoder">get_wmv_transcoder</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-configuration-get-wmv-transcoder"><function><link linkend="rygel-configuration-get-wmv-transcoder"><function>rygel_configuration_get_wmv_transcoder()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelConfigurationIface.get-aac-transcoder">get_aac_transcoder</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-configuration-get-aac-transcoder"><function><link linkend="rygel-configuration-get-aac-transcoder"><function>rygel_configuration_get_aac_transcoder()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelConfigurationIface.get-avc-transcoder">get_avc_transcoder</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-configuration-get-avc-transcoder"><function><link linkend="rygel-configuration-get-avc-transcoder"><function>rygel_configuration_get_avc_transcoder()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelConfigurationIface.get-allow-upload">get_allow_upload</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-configuration-get-allow-upload"><function><link linkend="rygel-configuration-get-allow-upload"><function>rygel_configuration_get_allow_upload()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelConfigurationIface.get-allow-deletion">get_allow_deletion</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-configuration-get-allow-deletion"><function><link linkend="rygel-configuration-get-allow-deletion"><function>rygel_configuration_get_allow_deletion()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelConfigurationIface.get-log-levels">get_log_levels</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-configuration-get-log-levels"><function><link linkend="rygel-configuration-get-log-levels"><function>rygel_configuration_get_log_levels()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelConfigurationIface.get-plugin-path">get_plugin_path</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-configuration-get-plugin-path"><function><link linkend="rygel-configuration-get-plugin-path"><function>rygel_configuration_get_plugin_path()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelConfigurationIface.get-video-upload-folder">get_video_upload_folder</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-configuration-get-video-upload-folder"><function><link linkend="rygel-configuration-get-video-upload-folder"><function>rygel_configuration_get_video_upload_folder()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelConfigurationIface.get-music-upload-folder">get_music_upload_folder</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-configuration-get-music-upload-folder"><function><link linkend="rygel-configuration-get-music-upload-folder"><function>rygel_configuration_get_music_upload_folder()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelConfigurationIface.get-picture-upload-folder">get_picture_upload_folder</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-configuration-get-picture-upload-folder"><function><link linkend="rygel-configuration-get-picture-upload-folder"><function>rygel_configuration_get_picture_upload_folder()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelConfigurationIface.get-enabled">get_enabled</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-configuration-get-enabled"><function><link linkend="rygel-configuration-get-enabled"><function>rygel_configuration_get_enabled()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelConfigurationIface.get-title">get_title</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-configuration-get-title"><function><link linkend="rygel-configuration-get-title"><function>rygel_configuration_get_title()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelConfigurationIface.get-string">get_string</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-configuration-get-string"><function><link linkend="rygel-configuration-get-string"><function>rygel_configuration_get_string()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelConfigurationIface.get-string-list">get_string_list</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-configuration-get-string-list"><function><link linkend="rygel-configuration-get-string-list"><function>rygel_configuration_get_string_list()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelConfigurationIface.get-int">get_int</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-configuration-get-int"><function><link linkend="rygel-configuration-get-int"><function>rygel_configuration_get_int()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelConfigurationIface.get-int-list">get_int_list</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-configuration-get-int-list"><function><link linkend="rygel-configuration-get-int-list"><function>rygel_configuration_get_int_list()</function></link></function></link></simpara></listitem>
+</varlistentry>
+<varlistentry><term><structfield id="RygelConfigurationIface.get-bool">get_bool</structfield>&#160;()</term>
+<listitem><simpara>virtual method called by <link linkend="rygel-configuration-get-bool"><function><link linkend="rygel-configuration-get-bool"><function>rygel_configuration_get_bool()</function></link></function></link></simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+
+</refsect1>
+
+</refentry>

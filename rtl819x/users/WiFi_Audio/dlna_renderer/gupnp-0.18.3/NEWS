@@ -1,0 +1,677 @@
+0.18.3
+======
+
+Changes since 0.18.2:
+
+- Add a Connman (http://connman.net) context manager.
+- Add a work-around for one of the lock-ups in bug 667494.
+- Don't leak private symbols.
+- Don't leak DBus proxies in network-manager context-manager.
+- Fix some g-i annotations.
+
+All contributors to this release:
+Ludovic Ferrandis <ludovic.ferrandis@linux.intel.com>
+Jens Georg <mail@jensge.org>
+Andreas Henriksson <andreas@fatal.se>
+
+Changes in dependencies:
+If the Connman context-manager is enabled (--with-context-manager=connman),
+the required glib version is 2.28.
+
+Bugs fixed:
+- https://bugzilla.gnome.org/show_bug.cgi?id=673933
+- https://bugzilla.gnome.org/show_bug.cgi?id=674410
+- https://bugzilla.gnome.org/show_bug.cgi?id=672998
+
+
+0.18.2
+======
+
+Changes since 0.18.1:
+
+- Revert the charset quoting patch from 0.18.1. Apparently this issue
+  was only present in a special version of libsoup.
+- Fix subscription timeout calculation.
+- Minor fixes from static code analysis.
+- Fix byte-range requests.
+- Add a unit-test for byte-range requests.
+
+All contributors:
+Jens Georg <mail@jensge.org>
+Sven Neumann <s.neumann@raumfeld.com>
+Lukasz Pawlik <lukasz.pawlik@comarch.com>
+
+Bugs fixed:
+- https://bugzilla.gnome.org/show_bug.cgi?id=670518
+
+0.18.1
+======
+
+Changes since 0.18.0:
+
+- Properly quote charset in SOAP requests.
+- Fix GUPnPContextManager documentation.
+- Fix several build warnings.
+- Several documentation fixes.
+- Error handling fix in gupnp-binding-tool.
+- Always send the initial event after a subscribtion even if the client
+  immediately unsubscribes.
+- Some minor code clean-up.
+
+All contributors:
+Jens Georg <mail@jensge.org>
+Zeeshan Ali (Khattak) <zeeshanak@gnome.org>
+Ville Skyttä <ville.skytta@iki.fi>
+Lukasz Pawlik <lucas.pawlik@gmail.com>
+
+Bugs fixed:
+- https://bugzilla.gnome.org/show_bug.cgi?id=658633
+- https://bugzilla.gnome.org/show_bug.cgi?id=658486
+
+
+0.18.0
+======
+
+Changes since 0.17.2:
+
+- Fix a crash in Linux context manager if the USB cable is unplugged from a
+  USB network device interface.
+
+All contributors:
+Jens Georg <mail@jensge.org>
+
+0.17.2
+======
+
+Changes since 0.17.1:
+
+- Drop main-context property
+- Fix a small leak from the default-language property.
+- Refactor and clean-up internals of GUPnPContextManager.
+
+Dependency-related changes:
+ - Require gssdp >= 0.11.2.
+
+All contributors:
+Jens Georg <mail@jensge.org>
+
+0.17.1
+======
+
+Changes since 0.17.1:
+
+- Drop deprecated conic support.
+- A Linux context manager. Unlinke the generic static unix context-manger,
+  the Linux context-manager can dynamically react to device and address
+  changes, similar to the NetworkManager-based context-manager, but without
+  depending on DBus or NetworkManager.
+- Fix for a SOAP action parameter validation regression.
+- Updates to the build system such as:
+  - Modernized autotools.
+  - xz tarballs as default.
+- Improved OpenBSD support.
+- More stable RootDevice URIs.
+
+All contributors:
+
+Jens Georg <mail@jensge.org>
+Jasper Lievisse Adriaanse <jasper@humppa.nl>
+Javier Jardón <jjardon@gnome.org>
+Zeeshan Ali (Khattak) <zeeshanak@gnome.org>
+
+0.17.0
+======
+
+Changes since 0.16.1:
+
+- Fix several crashes during initial introspection.
+- Several fixes regarding SOAP action parameter validation.
+- Always append a Content-Language header if the client has an Accept-Language
+  header.
+- Always append an Ext header in SOAP responses.
+- Improve introspection support:
+  * Classes that throw an error during construction implement GInitable.
+  * Update gobject-introspection autotools integration.
+  * Many annotation fixes.
+- Tutorial improvements.
+
+Dependency-related changes:
+ - Require gssdp >= 0.11.0.
+
+All contributors:
+
+Jens Georg <mail@jensge.org>
+Zeeshan Ali (Khattak) <zeeshanak@gnome.org>
+Sven Neumann <s.neumann@raumfeld.com>
+Santakivi Topi <Topi.Santakivi@digia.com>
+
+0.16.1
+======
+
+Changes since 0.16.0:
+
+- Port to new (0.9) NetworkManager APIs.
+- Correction to 'Content-Type' HTTP header values.
+- Satisfy strict compiler checks.
+
+All contributors:
+
+Dan Williams <dcbw@redhat.com>
+Sven Neumann <s.neumann@raumfeld.com>
+Zeeshan Ali (Khattak) <zeeshanak@gnome.org>
+
+0.16.0
+======
+
+Changes since 0.15.1:
+
+- Set the thread context before doing GDBus operations.
+- Use the default timeout on DBus calls.
+- Fix documentation of gupnp_context_manager_new().
+- Remove redundant code.
+- Clear the (obsolete) ChangeLog file.
+- Add some checks on variants.
+- Don't use uninitialized pointer.
+- Some coding-style fixes.
+
+Bugs fixed in this release:
+
+2224 - GUPnP accesses dbus properties without checking that they exist
+2223 - Missing handling of gio-style multi-main-context in GUPnPNetworkManager
+
+All contributors:
+
+Olivier Crête <olivier.crete@collabora.co.uk>
+Zeeshan Ali (Khattak) <zeeshanak@gnome.org>
+Sven Neumann <s.neumann@raumfeld.com>
+Jens Georg <mail@jensge.org>
+Ross Burton <ross@linux.intel.com>
+Luis de Bethencourt <luis@debethencourt.com>
+
+0.15.1
+======
+
+Changes since 0.15.0:
+
+- Set 'ESSID' on WiFi contexts.
+- Fix a crasher bug.
+- Fix some leaks.
+- Remove a cyclic-reference
+- Fix logic to find service from list and therefore the issue of wrongly
+  ignoring new services.
+- Remove all hosted paths from SoupServer before unrefing it.
+
+Dependency related changes:
+
+- Require gssdp >= 0.9.2.
+
+Bugs fixed in this release:
+
+2212 - Leak in gupnp_root_device_construct
+2215 - gupnp-control-point ignores services at startup
+2216 - Leak in gupnp_resource_factory
+2217 - gupnp-unix-context-manager leaks contexts if interfaces are not up
+2218 - gupnp-context creates new SoupServers on shutdown
+
+All contributors:
+
+Zeeshan Ali (Khattak) <zeeshanak@gnome.org>
+Jens Georg <mail@jensge.org>
+
+0.15.0
+======
+
+Changes since 0.14.0 not included in 0.14.1:
+
+- Port from dbus-glib to GDBus.
+- Enable gzip compression for large action response bodies.
+- Fix gupnp-binding-tool to generate headers usable in C++.
+
+Dependency related changes:
+
+- Require glib >= 2.24.0.
+- Require libsoup >= 2.28.2.
+- Require gio >= 2.26 (new dependency).
+- Drop dependency on dbus-glib.
+
+Bugs fixed in this release:
+
+2184 - Migrate from dbus-glib to glib's GDBus
+
+All contributors:
+
+Ross Burton <ross@linux.intel.com>
+Sven Neumann <s.neumann@raumfeld.com>
+Henry Hoegelow <h.hoegelow@raumfeld.com>
+Zeeshan Ali (Khattak) <zeeshanak@gnome.org>
+Fargier Sylvain <fargier.sylvain@free.fr>
+
+0.14.0
+======
+
+Changes since 0.13.5:
+
+- Don't use deprecated glib, gobject and libsoup APIs.
+- Check for libuuid only on platforms where we need it.
+- Explicitly link example apps to needed libraries.
+- Fix some potential crashes and leaks.
+- Fix pointer to/from integer conversion on 64-bit machines.
+- Fix parsing of unsigned integers.
+- Use locale-independent float <-> string conversions.
+- Remove some redundant functions and variables.
+- Remove some unused variables noticed.
+- Use correct mime-type for XML data.
+- Various non-functional improvements.
+
+Bugs fixed in this release:
+
+2192 - 64bit portability issue with *_register_*_type functions
+2190 - Build fails because explicit linking is missing
+2188 - configure.ac should leave out the uuid module check on OSX
+
+All contributors:
+
+Ross Burton <ross@linux.intel.com>
+Sven Neumann <s.neumann@raumfeld.com>
+Jens Georg <mail@jensge.org>
+Zeeshan Ali (Khattak) <zeeshanak@gnome.org>
+Nader Morshed <morshed.nader@gmail.com>
+
+0.13.5
+======
+
+Changes since 0.13.4:
+
+- Chain up in GUPnPXMLDoc's finalize().
+- Correct transfer annotation for gupnp_context_get_session().
+- Prefer g_strcmp0() over strcmp().
+- Check for body length rather than Content-Length in SOAP requests so we
+  can satsify DLNA CTT test 7.2.5.7.
+- Explicitly link test apps to needed libraries.
+
+Bugs fixed in this release:
+
+2186 - Missing annotation for context_get_session
+
+All contributors:
+
+Sven Neumann <s.neumann@raumfeld.com>
+Zeeshan Ali (Khattak) <zeeshanak@gnome.org>
+Zach Goldberg <zgold@corvette.(none)>
+
+0.13.4
+======
+
+Changes since 0.13.3:
+
+- GUPnPService should remove all handlers installed on the shared SoupServer
+  instance when it is disposed.
+- Fixate subscription timeout to be 300s as per DLNA requirement (7.2.22.1).
+- Correct type of action argument of GUPnPService::action-invoked.
+- Remove redundant copying of GValue content in a few places.
+- Handle multiple variables inside property node in event notifications to be
+  compatible with server-side implementations using older GUPnP
+- Fix syntax of event notifications with multiple properties.
+- Add/fix gobject-introspection annotations for various functions.
+- Some non-functional improvements.
+
+Bugs fixed in this release:
+
+2084 - Add scope annotations to various functions
+2131 - GUPnPServiceAction is a boxed, not a pointer
+2086 - Fix gtk-doc format on all functions in public GUPnP API
+
+All contributors:
+
+Sven Neumann <s.neumann@raumfeld.com>
+Zeeshan Ali (Khattak) <zeeshanak@gnome.org>
+Zach Goldberg <zgold@corvette.(none)>
+
+0.13.3
+======
+
+Changes since 0.13.2:
+
+- Include the Content-Type header in the HTTP messages. This satisfies DLNA
+  CTT test cases 7.2.5.9 and 7.2.29.1.
+- Use g_message instead of g_warning if we can't connect to DBus.
+- Make the HTTP server listen on the context's interface only.
+- Fix some potential crashes in GUPnPServiceProxy and GUPnPContextManager code.
+- Fix build issues in jhbuild environment.
+- Fix some gcc warnings.
+- Add new API to host path for specific user-agent(s).
+- Add gobject-introspection support:
+  - Provide gobject-introspection GIR and typelib.
+  - Add needed annotations to doc comments.
+  - Add GList variants of action-related functions to satisfy PyGI.
+- A few non-functional improvments.
+
+Dependency related changes:
+
+- gssdp >= 0.7.1
+
+Bugs fixed in this release:
+
+2054 - Xbox hacks
+1965 - gcc warning fixes
+2039 - GUPnP is hard to use with jhbuild
+1948 - Signal handler are not disconnected when ContextManager is disposed
+2030 - gupnp context listens on 0.0.0.0 instead of the context's ip
+1924 - Content-Type header must contain charset="utf-8" in all HTTP transactions
+2006 - Implement 3 new functions for language bindings (begin_action_list,
+       end_action_list, gupnp_service_action_get_value_type)
+1919 - Add GObject Introspection Annotations and Makefile
+1979 - g_warning make gupnp-igd test fails
+1906 - Tests failed with gupnp 0.13
+
+All contributors:
+
+Zeeshan Ali (Khattak) <zeeshanak@gnome.org>
+Zach Goldberg <zgold@corvette.(none)>
+Ross Burton <ross@linux.intel.com>
+Olivier Crête <olivier.crete@collabora.co.uk>
+Neil Roberts <neil@linux.intel.com>
+Sven Neumann <s.neumann@raumfeld.com>
+Jens Georg <mail@jensge.org>
+Yakup Akbay <yakbay@ubicom.com>
+
+0.13.2
+======
+
+Changes since 0.13.1:
+
+- Utilize libconic (Maemo5) if available.
+- Unix context manager must signal the unavailibility of all contexts when
+  disposed.
+- Enable silent build rules if they are available.
+- Fix race-conditions in client-side notification handling.
+- Unix context manager ignores point-to-point interfaces.
+- Context manager ignores interfaces without IP addresses.
+- Don't require timeouts to be specified in subscription requests.
+- Fix build against gcc 4.[1,2].
+- Make network manager thread-safe.
+- Remove idle source on dispose in context manager implementations.
+- Warn in docs that gupnp_service_info_get_introspection() is evil and why.
+- Service retrieves introspection data in truly async way.
+- Fix some leaks.
+- A bunch of code clean-ups.
+
+All contributors:
+
+Olivier Crête <olivier.crete@collabora.co.uk>
+Zeeshan Ali (Khattak) <zeeshanak@gnome.org>
+Ross Burton <ross@linux.intel.com>
+Jens Georg <mail@jensge.org>
+Cem Eliguzel <celiguzel@ubicom.com>
+
+Bugs fixed:
+
+1890 - Timeout parsing problem with SUBSCRIBE method
+1880 - subscription/notification handling is racy
+1906 - Tests failed with gupnp 0.13
+1849 - Compile error when using gcc 4.[1,2] and strict aliasing
+1494 - Ability to deal with multiple network interfaces
+1881 - networkmanager interaction should use its own dbus connection
+
+0.13.1
+======
+
+Changes since 0.13:
+
+- Use unix context manager if NetworkManager service is not available.
+- Fix some minor leaks.
+
+All contributors:
+
+Zeeshan Ali (Khattak) <zeeshanak@gnome.org>
+Ross Burton <ross@linux.intel.com>
+
+0.13
+====
+
+Changes since 0.12.8:
+
+- Print reason when fail to fetch description doc
+- Support for dynamic/multiple networks through a new class, ContextManager.
+  This class creates/destroys new context as new network interfaces go up/down.
+  It also provides two convenient methods to take care of control point and
+  device reference managment for you. Currently we have two implementations of
+  context manager:
+  * unix: The static but guaranteed to work on Unix, implementation. This is the
+          default if none chosen at configure-time.
+  * network-manager: A NetworkManager based implementation.
+- Idle handlers should use the assigned GMainContext.
+- Gracefully handle 'no root element in description' scenerio.
+- "host-ip" property moved from GUPnPContext to parent GSSDPClient.
+- ControlPoint set itself inactive before getting disposed.
+- New function to retrieve the capabilities of a DLNA device as announced in
+  the device description.
+- New function to retrieve the content of arbitrary elements in the device
+  description.
+- Fixed a crash that happens when service-proxy goes down before subscribtion to
+  it completes.
+- Correct condition for SID being NULL.
+- Don't create redundant proxies.
+- Must not announce earlier versions of resources. This is strictly forbidden
+  according to the latest UPnP specs. Instead GSSDP now handles M-SEARCH
+  requests independent of version requested.
+- Free app developer from hosting of description documents.
+- New API to get SoupMessage associated with ServiceAction.
+- Handle the SOAPAction header being missing.
+- Fixed strrchr result checking.
+- Provide and use a wrapper class for xmlDoc objects, GUPnPXMLDoc that is a
+  first-class gobject.
+- New domains for XML errors.
+- Many other minor fixes.
+
+Bugs fixed:
+
+1626 - Print reason when fail to fetch description doc
+1769 - audit issues
+1760 - missing/invalid SOAPAction header crashes gupnp
+1705 - Provide a public API to get information about a GUPnPServiceAction's HTTP
+       request
+
+Dependencies changed:
+
+- gssdp >= 0.7
+
+All contributors:
+
+Zeeshan Ali (Khattak) <zeeshanak@gnome.org>
+Ross Burton <ross@linux.intel.com>
+Sven Neumann <s.neumann@raumfeld.com>
+Jens Georg <mail@jensge.org>
+Steven Dorigotti <steven.dorigotti@tvblob.com>
+
+WARNING: This release is API and ABI incompatible with previous releases.
+
+0.12.8
+======
+
+Changes since 0.12.7
+
+- Don't crash if device descriptions don't contain a root element.
+- Fix pkg-config paths.
+- Avoid using asserts.
+- Use the closest match instead of using the icon that was last checked.
+- Expect xmlRecoverMemory to fail.
+- Reject action messages with zero content length.
+- Change version in action answer.
+
+Bug fixes in this release:
+
+- bug#1570: gupnp doesn't set the pkgconfig lib dir correctly in 64 bit env.
+- bug#1574: Avoid using asserts.
+- bug#1592: gupnp_device_info_get_icon_url() does not return the closest match.
+- bug#1604: Crash on action without any content.
+
+All contributors to this release:
+
+Ross Burton <ross@linux.intel.com>
+Zeeshan Ali (Khattak) <zeeshanak@gnome.org>
+Steven Dorigotti <steven.dorigotti@tvblob.com>
+Sven Neumann <s.neumann@raumfeld.com>
+Jens Georg <mail@jensge.org>
+
+0.12.7
+======
+
+- Chain up dispose and finalize in GUPnPDeviceInfo [Sven Neumann]
+- Use a dedicated SoupSession [Sven Neumann]
+- Fix device icon fallback logic [Ross Burton]
+- Fix user agent string [Sven Neumann]
+- Sanity check UDN while parsing [Zeeshan Ali]
+
+0.12.6
+======
+
+- Port to FreeBSD. [Romain Tartière]
+- Ship the XML files needed for example app. [Romain Tartière]
+- Keep a reference on the control-point during signal emission. [Sven Neumann]
+- Allow passing NULL to ControlPoint constructor, for default resource factory.
+  [Sven Neumann]
+- Remove debug output that accidentally went in with the last commit.
+  [Sven Neumann]
+
+0.12.5
+======
+
+- Improved error handling. [Sven Neumann, Jorn Baayen]
+- Specify character set (UTF-8) in NOTIFY messages. [Jorn Baayen]
+- Don't export internal functions. [Jorn Baayen]
+- Fix some crasher bugs. [Zeeshan Ali]
+- More lenient handling of xml from external sources. [Jorn Baayen,
+  Jussi Kukkonen]
+- Fix possible reference cycles. [Zeeshan Ali, Jorn Baayen]
+- Better handling of event subscription timeouts. [Zeeshan Ali]
+
+0.12.4
+======
+
+- Set Content Type header correctly in soap messages [Zeeshan Ali]
+- Don't pass arbitrary strings to printf() for security [Sven Neumann]
+- Handle fscanf failing in get_default_host_ip() [Sven Neumann]
+
+0.12.3
+======
+
+- Greatly improved client-side bindings [Jussi Kukkonen]
+- Server-side bindings [JK]
+- Don't use NULL return values from g_get_application_name [Ross Burton]
+- Make gupnp_context_get_session public [Jorn Baayen]
+- Use the specified GMainContext for timeouts [Olivier Crete, Jorn Baayen]
+
+0.12.2
+======
+
+- Support returning actions outside of the 'action-invoked' signal handler
+  in service implementations. [Zeeshan Ali, Jorn Baayen]
+- Add explicit dependency on gthread. [Zeeshan Ali, Jorn Baayen]
+
+0.12.1
+======
+
+- Support Range headers without upper bound. [Jorn Baayen]
+- Fixed memory management in HTTP GET handler. [Jorn Baayen]
+
+0.12
+====
+
+- Add tool for generating convenience C wrappers for GUPnP service definitions.
+  [Ross Burton]
+- Remove xmlDoc argument from gupnp_root_device_new() for simplicity.
+  (xmlDocs can still be passed to gupnp_root_device_new_full())
+  [Jorn Baayen]
+- Better documentation, new tutorials and sample code. [Ross Burton]
+- Improved support for Accept-Language header. [Jorn Baayen]
+- Various internal improvements. [Zeeshan Ali, Jorn Baayen]
+
+0.10.1
+======
+
+- Bump soname.
+
+0.10
+====
+
+- Use libsoup 2.4. [Zeeshan Ali Khattak, Jorn Baayen]
+- Use g_timeout_add_seconds(). [Jorn Baayen]
+- Use GIO instead of xdgmime. [Jorn Baayen]
+- Support HTTP Range header in the HTTP server. [Jorn Baayen]
+- Use GMappedFile to mmap served files of read()ing them. [Jorn Baayen]
+- Improved documentation. [Ross Burton]
+- Spew HTTP messages to console when GUPNP_DEBUG is set. [Ross Burton]
+- Various other fixes. [Ross Burton, Zeeshan Ali Khattak, Jorn Baayen]
+
+0.8
+===
+
+- New API allowing for subclassing of resource types. 
+  [Zeeshan Ali, Jorn Baayen]
+- GUPnPDeviceInfo returns subresources with version greater or equal than
+  requested version. [Jorn Baayen]
+- Servers announce versions less or equal than implemented version.
+  [Jorn Baayen]
+- Make gupnp_context_get_server() public. [Jorn Baayen]
+- GError arguments added to all error signals. [Jorn Baayen]
+- Improved resubscription handling. [Jorn Baayen]
+- Various other fixes and internal improvements
+  [Ross Burton, Zeeshan Ali, Jorn Baayen].
+
+0.6
+===
+
+- Added service signal autoconnection feature in the spirit of
+  glade_xml_signal_autoconnect(). [Zeeshan Ali]
+- Fixed various bugs related to object destruction. Fixes #500, 503.
+  [Jorn Baayen]
+- Accept 'yes' and 'no' boolean values. [Zeeshan Ali]
+- More information in error messages. [Zeeshan Ali, Jorn Baayen]
+- Mark GUPnPServiceIntrospectionCallback() 'error' argument as 'const'.
+  [Jorn Baayen]
+- Fixed gupnp_device_info_get_model_number() to return the right value.
+  [Zeeshan Ali]
+- Moved the uuid dependency to Requires.Private, and removed the
+  shared-mime-data build dependency. [Jorn Baayen]
+- Various other minor fixes. [Zeeshan Ali, Jorn Baayen]
+
+Special thanks to Stéphane Loeuillet for stress-testing the library and
+discovering many bugs. (Which are all fixed in this release. :) )
+
+0.4
+===
+
+- A new series of functions for sending actions taking hash tables of parameter
+  name-GValue pairs. [Jorn Baayen]
+- New introspection methods for state variable and action retrieval by name.
+  [Zeeshan Ali]
+- New pkg-config file for building against an uninstalled libgupnp.
+  [Zeeshan Ali]
+- Improved conversion between GValues and UPnP value types. [Jorn Baayen]
+- Only include evented state variables in initial event message.
+  [Jorn Baayen]
+
+0.3
+===
+
+- Allow embedded devices to have their own UDNs. [Jorn Baayen]
+- Portability fix. [Priit Laes]
+
+0.2
+===
+
+- Fully implemented server-side API. [Jorn Baayen]
+- New service introspection support through SCPD documents. [Zeeshan Ali]
+- M-POST support. [Jorn Baayen]
+- More error codes split out into several error domains. [Jorn Baayen]
+- Use Accept-Language header for internationalisation. [Jorn Baayen]
+- Subresource retreival moved from DeviceProxy to DeviceInfo. [Jorn Baayen]
+- Bug fixes.
+
+GUPnP is now feature complete.
+
+0.1
+===
+
+Initial release. Full client-side API, server side not done yet.

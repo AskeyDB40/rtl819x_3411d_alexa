@@ -1,0 +1,455 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>RygelMediaObject</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="librygel-server Reference Manual">
+<link rel="up" href="ch01.html" title="librygel-server API Reference">
+<link rel="prev" href="RygelVideoItem.html" title="RygelVideoItem">
+<link rel="next" href="RygelSearchExpression.html" title="RygelSearchExpression">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="RygelVideoItem.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">librygel-server Reference Manual</th>
+<td><a accesskey="n" href="RygelSearchExpression.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#RygelMediaObject.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#RygelMediaObject.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#RygelMediaObject.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#RygelMediaObject.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="RygelMediaObject"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="RygelMediaObject.top_of_page"></a>RygelMediaObject</span></h2>
+<p>RygelMediaObject — Represents a media object (container or item).</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="RygelMediaObject.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">#define             <a class="link" href="RygelMediaObject.html#RYGEL-TYPE-MEDIA-OBJECT:CAPS" title="RYGEL_TYPE_MEDIA_OBJECT">RYGEL_TYPE_MEDIA_OBJECT</a>
+<span class="returnvalue">void</span>                <a class="link" href="RygelMediaObject.html#rygel-media-object-get-writable" title="rygel_media_object_get_writable ()">rygel_media_object_get_writable</a>     (<em class="parameter"><code><a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="type">RygelMediaObject</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);
+<a href="../gio/GFile.html"><span class="returnvalue">GFile</span></a> *             <a class="link" href="RygelMediaObject.html#rygel-media-object-get-writable-finish" title="rygel_media_object_get_writable_finish ()">rygel_media_object_get_writable_finish</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="type">RygelMediaObject</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="RygelMediaObject.html#rygel-media-object-get-writables" title="rygel_media_object_get_writables ()">rygel_media_object_get_writables</a>    (<em class="parameter"><code><a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="type">RygelMediaObject</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);
+<span class="returnvalue">GeeArrayList</span> *      <a class="link" href="RygelMediaObject.html#rygel-media-object-get-writables-finish" title="rygel_media_object_get_writables_finish ()">rygel_media_object_get_writables_finish</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="type">RygelMediaObject</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                <a class="link" href="RygelMediaObject.html#rygel-media-object-compare-string-props" title="rygel_media_object_compare_string_props ()">rygel_media_object_compare_string_props</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="type">RygelMediaObject</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *prop1</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *prop2</code></em>);
+<a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                <a class="link" href="RygelMediaObject.html#rygel-media-object-compare-int-props" title="rygel_media_object_compare_int_props ()">rygel_media_object_compare_int_props</a>
+                                                        (<em class="parameter"><code><a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="type">RygelMediaObject</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> prop1</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> prop2</code></em>);
+<a class="link" href="RygelMediaContainer.html" title="RygelMediaContainer"><span class="returnvalue">RygelMediaContainer</span></a> * <a class="link" href="RygelMediaObject.html#rygel-media-object-get-parent-ref" title="rygel_media_object_get_parent_ref ()">rygel_media_object_get_parent_ref</a> (<em class="parameter"><code><a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="type">RygelMediaObject</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="RygelMediaObject.html#rygel-media-object-set-parent-ref" title="rygel_media_object_set_parent_ref ()">rygel_media_object_set_parent_ref</a>   (<em class="parameter"><code><a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="type">RygelMediaObject</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="RygelMediaContainer.html" title="RygelMediaContainer"><span class="type">RygelMediaContainer</span></a> *value</code></em>);
+const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="RygelMediaObject.html#rygel-media-object-get-title" title="rygel_media_object_get_title ()">rygel_media_object_get_title</a>        (<em class="parameter"><code><a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="type">RygelMediaObject</span></a> *self</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="RygelMediaObject.html#rygel-media-object-set-title" title="rygel_media_object_set_title ()">rygel_media_object_set_title</a>        (<em class="parameter"><code><a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="type">RygelMediaObject</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+struct              <a class="link" href="RygelMediaObject.html#RygelMediaObject-struct" title="struct RygelMediaObject">RygelMediaObject</a>;
+struct              <a class="link" href="RygelMediaObject.html#RygelMediaObjectClass" title="struct RygelMediaObjectClass">RygelMediaObjectClass</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelMediaObject.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="../gobject/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----RygelMediaObject
+         +----<a class="link" href="RygelMediaItem.html" title="RygelMediaItem">RygelMediaItem</a>
+         +----<a class="link" href="RygelMediaContainer.html" title="RygelMediaContainer">RygelMediaContainer</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelMediaObject.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="RygelMediaObject.html#RygelMediaObject--ocm-flags" title='The "ocm-flags" property'>ocm-flags</a>"                <a href="../gupnp-av/GUPnPDIDLLiteObject.html#GUPnPOCMFlags"><span class="type">GUPnPOCMFlags</span></a>         : Read
+  "<a class="link" href="RygelMediaObject.html#RygelMediaObject--parent-ref" title='The "parent-ref" property'>parent-ref</a>"               <a class="link" href="RygelMediaContainer.html" title="RygelMediaContainer"><span class="type">RygelMediaContainer</span></a>*  : Read / Write
+  "<a class="link" href="RygelMediaObject.html#RygelMediaObject--restricted" title='The "restricted" property'>restricted</a>"               <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read
+  "<a class="link" href="RygelMediaObject.html#RygelMediaObject--title" title='The "title" property'>title</a>"                    <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write
+</pre>
+</div>
+<div class="refsect1">
+<a name="RygelMediaObject.description"></a><h2>Description</h2>
+<p>
+</p>
+<p>The derived RygelMediaContainer class represents a container, and the derived RygelMediaItem classes (RygelAudioItem, RygelImageItem and RygelVideoItem) represent media items.</p>
+<p>These objects correspond to items and containers in the UPnP ContentDirectory's DIDL-Lite XML.</p>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="RygelMediaObject.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="RYGEL-TYPE-MEDIA-OBJECT:CAPS"></a><h3>RYGEL_TYPE_MEDIA_OBJECT</h3>
+<pre class="programlisting">#define RYGEL_TYPE_MEDIA_OBJECT (rygel_media_object_get_type ())
+</pre>
+<p>
+The type for <a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="type">RygelMediaObject</span></a>.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-media-object-get-writable"></a><h3>rygel_media_object_get_writable ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                rygel_media_object_get_writable     (<em class="parameter"><code><a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="type">RygelMediaObject</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);</pre>
+<p>
+Fetches a File object for any writable URI available for this object.
+</p>
+<p>
+<span class="emphasis"><em>See also</em></span>: <a class="link" href="RygelMediaObject.html#rygel-media-object-get-writable-finish" title="rygel_media_object_get_writable_finish ()"><code class="function"><a class="link" href="RygelMediaObject.html#rygel-media-object-get-writable-finish" title="rygel_media_object_get_writable_finish ()"><code class="function">rygel_media_object_get_writable_finish()</code></a></code></a>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="type">RygelMediaObject</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
+<td>A GLib.Cancellable. <span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_callback_</code></em> :</span></p></td>
+<td>callback to call when the request is satisfied. <span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_user_data_</code></em> :</span></p></td>
+<td>the data to pass to <em class="parameter"><code>_callback_</code></em> function. <span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-media-object-get-writable-finish"></a><h3>rygel_media_object_get_writable_finish ()</h3>
+<pre class="programlisting"><a href="../gio/GFile.html"><span class="returnvalue">GFile</span></a> *             rygel_media_object_get_writable_finish
+                                                        (<em class="parameter"><code><a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="type">RygelMediaObject</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Fetches a File object for any writable URI available for this object.
+</p>
+<p>
+<span class="emphasis"><em>See also</em></span>: <a class="link" href="RygelMediaObject.html#rygel-media-object-get-writable" title="rygel_media_object_get_writable ()"><code class="function"><a class="link" href="RygelMediaObject.html#rygel-media-object-get-writable" title="rygel_media_object_get_writable ()"><code class="function">rygel_media_object_get_writable()</code></a></code></a>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="type">RygelMediaObject</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_res_</code></em> :</span></p></td>
+<td>a <a href="../gio/GAsyncResult.html"><span class="type">GAsyncResult</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-media-object-get-writables"></a><h3>rygel_media_object_get_writables ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                rygel_media_object_get_writables    (<em class="parameter"><code><a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="type">RygelMediaObject</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> _callback_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> _user_data_</code></em>);</pre>
+<p>
+Fetches File objects for all writable URIs available for this object.
+</p>
+<p>
+<span class="emphasis"><em>See also</em></span>: <a class="link" href="RygelMediaObject.html#rygel-media-object-get-writables-finish" title="rygel_media_object_get_writables_finish ()"><code class="function"><a class="link" href="RygelMediaObject.html#rygel-media-object-get-writables-finish" title="rygel_media_object_get_writables_finish ()"><code class="function">rygel_media_object_get_writables_finish()</code></a></code></a>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="type">RygelMediaObject</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
+<td>A GLib.Cancellable. <span class="annotation">[<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_callback_</code></em> :</span></p></td>
+<td>callback to call when the request is satisfied. <span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_user_data_</code></em> :</span></p></td>
+<td>the data to pass to <em class="parameter"><code>_callback_</code></em> function. <span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-media-object-get-writables-finish"></a><h3>rygel_media_object_get_writables_finish ()</h3>
+<pre class="programlisting"><span class="returnvalue">GeeArrayList</span> *      rygel_media_object_get_writables_finish
+                                                        (<em class="parameter"><code><a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="type">RygelMediaObject</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../gio/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *_res_</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Fetches File objects for all writable URIs available for this object.
+</p>
+<p>
+<span class="emphasis"><em>See also</em></span>: <a class="link" href="RygelMediaObject.html#rygel-media-object-get-writables" title="rygel_media_object_get_writables ()"><code class="function"><a class="link" href="RygelMediaObject.html#rygel-media-object-get-writables" title="rygel_media_object_get_writables ()"><code class="function">rygel_media_object_get_writables()</code></a></code></a>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="type">RygelMediaObject</span></a> instance</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>_res_</code></em> :</span></p></td>
+<td>a <a href="../gio/GAsyncResult.html"><span class="type">GAsyncResult</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>location to store the error occuring, or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-media-object-compare-string-props"></a><h3>rygel_media_object_compare_string_props ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                rygel_media_object_compare_string_props
+                                                        (<em class="parameter"><code><a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="type">RygelMediaObject</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *prop1</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *prop2</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="type">RygelMediaObject</span></a> instance</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-media-object-compare-int-props"></a><h3>rygel_media_object_compare_int_props ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                rygel_media_object_compare_int_props
+                                                        (<em class="parameter"><code><a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="type">RygelMediaObject</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> prop1</code></em>,
+                                                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> prop2</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="type">RygelMediaObject</span></a> instance</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-media-object-get-parent-ref"></a><h3>rygel_media_object_get_parent_ref ()</h3>
+<pre class="programlisting"><a class="link" href="RygelMediaContainer.html" title="RygelMediaContainer"><span class="returnvalue">RygelMediaContainer</span></a> * rygel_media_object_get_parent_ref (<em class="parameter"><code><a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="type">RygelMediaObject</span></a> *self</code></em>);</pre>
+<p>
+Get and return the current value of the <a class="link" href="RygelMediaObject.html#RygelMediaObject--parent-ref" title='The "parent-ref" property'><span class="type">"parent-ref"</span></a> property.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="type">RygelMediaObject</span></a> instance to query</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the value of the <a class="link" href="RygelMediaObject.html#RygelMediaObject--parent-ref" title='The "parent-ref" property'><span class="type">"parent-ref"</span></a> property</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-media-object-set-parent-ref"></a><h3>rygel_media_object_set_parent_ref ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                rygel_media_object_set_parent_ref   (<em class="parameter"><code><a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="type">RygelMediaObject</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="RygelMediaContainer.html" title="RygelMediaContainer"><span class="type">RygelMediaContainer</span></a> *value</code></em>);</pre>
+<p>
+Set the value of the <a class="link" href="RygelMediaObject.html#RygelMediaObject--parent-ref" title='The "parent-ref" property'><span class="type">"parent-ref"</span></a> property to <em class="parameter"><code>value</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="type">RygelMediaObject</span></a> instance to modify</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>the new value of the <a class="link" href="RygelMediaObject.html#RygelMediaObject--parent-ref" title='The "parent-ref" property'><span class="type">"parent-ref"</span></a> property</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-media-object-get-title"></a><h3>rygel_media_object_get_title ()</h3>
+<pre class="programlisting">const <a href="../glib/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       rygel_media_object_get_title        (<em class="parameter"><code><a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="type">RygelMediaObject</span></a> *self</code></em>);</pre>
+<p>
+Get and return the current value of the <a class="link" href="RygelMediaObject.html#RygelMediaObject--title" title='The "title" property'><span class="type">"title"</span></a> property.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="type">RygelMediaObject</span></a> instance to query</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the value of the <a class="link" href="RygelMediaObject.html#RygelMediaObject--title" title='The "title" property'><span class="type">"title"</span></a> property</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="rygel-media-object-set-title"></a><h3>rygel_media_object_set_title ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                rygel_media_object_set_title        (<em class="parameter"><code><a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="type">RygelMediaObject</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<p>
+Set the value of the <a class="link" href="RygelMediaObject.html#RygelMediaObject--title" title='The "title" property'><span class="type">"title"</span></a> property to <em class="parameter"><code>value</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="RygelMediaObject.html" title="RygelMediaObject"><span class="type">RygelMediaObject</span></a> instance to modify</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>the new value of the <a class="link" href="RygelMediaObject.html#RygelMediaObject--title" title='The "title" property'><span class="type">"title"</span></a> property</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelMediaObject-struct"></a><h3>struct RygelMediaObject</h3>
+<pre class="programlisting">struct RygelMediaObject;</pre>
+<p>
+Represents a media object (container or item).
+</p>
+<p>
+</p>
+<p>The derived RygelMediaContainer class represents a container, and the derived RygelMediaItem classes (RygelAudioItem, RygelImageItem and RygelVideoItem) represent media items.</p>
+<p>These objects correspond to items and containers in the UPnP ContentDirectory's DIDL-Lite XML.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelMediaObjectClass"></a><h3>struct RygelMediaObjectClass</h3>
+<pre class="programlisting">struct RygelMediaObjectClass {
+	GObjectClass parent_class;
+	GUPnPDIDLLiteObject* (*serialize) (RygelMediaObject* self, GUPnPDIDLLiteWriter* writer, RygelHTTPServer* http_server, GError** error);
+	gint (*compare_by_property) (RygelMediaObject* self, RygelMediaObject* media_object, const gchar* property);
+	GUPnPOCMFlags (*get_ocm_flags) (RygelMediaObject* self);
+};
+</pre>
+<p>
+The class structure for <a class="link" href="RygelMediaObject.html#RYGEL-TYPE-MEDIA-OBJECT:CAPS" title="RYGEL_TYPE_MEDIA_OBJECT"><code class="literal">RYGEL_TYPE_MEDIA_OBJECT</code></a>. All the fields in this structure are private and should never be accessed directly.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><a href="../gobject/gobject-The-Base-Object-Type.html#GObjectClass"><span class="type">GObjectClass</span></a> <em class="structfield"><code><a name="RygelMediaObjectClass.parent-class"></a>parent_class</code></em>;</span></p></td>
+<td>the parent class structure</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelMediaObjectClass.serialize"></a>serialize</code></em> ()</span></p></td>
+<td></td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelMediaObjectClass.compare-by-property"></a>compare_by_property</code></em> ()</span></p></td>
+<td></td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="RygelMediaObjectClass.get-ocm-flags"></a>get_ocm_flags</code></em> ()</span></p></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="RygelMediaObject.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="RygelMediaObject--ocm-flags"></a><h3>The <code class="literal">"ocm-flags"</code> property</h3>
+<pre class="programlisting">  "ocm-flags"                <a href="../gupnp-av/GUPnPDIDLLiteObject.html#GUPnPOCMFlags"><span class="type">GUPnPOCMFlags</span></a>         : Read</pre>
+<p>ocm-flags.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelMediaObject--parent-ref"></a><h3>The <code class="literal">"parent-ref"</code> property</h3>
+<pre class="programlisting">  "parent-ref"               <a class="link" href="RygelMediaContainer.html" title="RygelMediaContainer"><span class="type">RygelMediaContainer</span></a>*  : Read / Write</pre>
+<p>parent-ref.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelMediaObject--restricted"></a><h3>The <code class="literal">"restricted"</code> property</h3>
+<pre class="programlisting">  "restricted"               <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>              : Read</pre>
+<p>restricted.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="RygelMediaObject--title"></a><h3>The <code class="literal">"title"</code> property</h3>
+<pre class="programlisting">  "title"                    <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read / Write</pre>
+<p>title.</p>
+<p>Default value: NULL</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

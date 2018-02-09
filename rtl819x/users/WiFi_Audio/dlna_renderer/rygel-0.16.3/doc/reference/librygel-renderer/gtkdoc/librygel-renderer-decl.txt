@@ -1,0 +1,392 @@
+<MACRO>
+<NAME>RYGEL_TYPE_MEDIA_PLAYER</NAME>
+#define RYGEL_TYPE_MEDIA_PLAYER (rygel_media_player_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_PLAYER</NAME>
+#define RYGEL_MEDIA_PLAYER(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_MEDIA_PLAYER, RygelMediaPlayer))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_MEDIA_PLAYER</NAME>
+#define RYGEL_IS_MEDIA_PLAYER(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_MEDIA_PLAYER))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_PLAYER_GET_INTERFACE</NAME>
+#define RYGEL_MEDIA_PLAYER_GET_INTERFACE(obj) (G_TYPE_INSTANCE_GET_INTERFACE ((obj), RYGEL_TYPE_MEDIA_PLAYER, RygelMediaPlayerIface))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_PLAYBIN_TYPE_PLAYER</NAME>
+#define RYGEL_PLAYBIN_TYPE_PLAYER (rygel_playbin_player_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_PLAYBIN_PLAYER</NAME>
+#define RYGEL_PLAYBIN_PLAYER(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_PLAYBIN_TYPE_PLAYER, RygelPlaybinPlayer))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_PLAYBIN_PLAYER_CLASS</NAME>
+#define RYGEL_PLAYBIN_PLAYER_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_PLAYBIN_TYPE_PLAYER, RygelPlaybinPlayerClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_PLAYBIN_IS_PLAYER</NAME>
+#define RYGEL_PLAYBIN_IS_PLAYER(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_PLAYBIN_TYPE_PLAYER))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_PLAYBIN_IS_PLAYER_CLASS</NAME>
+#define RYGEL_PLAYBIN_IS_PLAYER_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_PLAYBIN_TYPE_PLAYER))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_PLAYBIN_PLAYER_GET_CLASS</NAME>
+#define RYGEL_PLAYBIN_PLAYER_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_PLAYBIN_TYPE_PLAYER, RygelPlaybinPlayerClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_TYPE_MEDIA_RENDERER_PLUGIN</NAME>
+#define RYGEL_TYPE_MEDIA_RENDERER_PLUGIN (rygel_media_renderer_plugin_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_RENDERER_PLUGIN</NAME>
+#define RYGEL_MEDIA_RENDERER_PLUGIN(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_TYPE_MEDIA_RENDERER_PLUGIN, RygelMediaRendererPlugin))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_RENDERER_PLUGIN_CLASS</NAME>
+#define RYGEL_MEDIA_RENDERER_PLUGIN_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_TYPE_MEDIA_RENDERER_PLUGIN, RygelMediaRendererPluginClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_MEDIA_RENDERER_PLUGIN</NAME>
+#define RYGEL_IS_MEDIA_RENDERER_PLUGIN(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_TYPE_MEDIA_RENDERER_PLUGIN))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_IS_MEDIA_RENDERER_PLUGIN_CLASS</NAME>
+#define RYGEL_IS_MEDIA_RENDERER_PLUGIN_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_TYPE_MEDIA_RENDERER_PLUGIN))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_MEDIA_RENDERER_PLUGIN_GET_CLASS</NAME>
+#define RYGEL_MEDIA_RENDERER_PLUGIN_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_TYPE_MEDIA_RENDERER_PLUGIN, RygelMediaRendererPluginClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_PLAYBIN_TYPE_PLUGIN</NAME>
+#define RYGEL_PLAYBIN_TYPE_PLUGIN (rygel_playbin_plugin_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_PLAYBIN_PLUGIN</NAME>
+#define RYGEL_PLAYBIN_PLUGIN(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_PLAYBIN_TYPE_PLUGIN, RygelPlaybinPlugin))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_PLAYBIN_PLUGIN_CLASS</NAME>
+#define RYGEL_PLAYBIN_PLUGIN_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_PLAYBIN_TYPE_PLUGIN, RygelPlaybinPluginClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_PLAYBIN_IS_PLUGIN</NAME>
+#define RYGEL_PLAYBIN_IS_PLUGIN(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_PLAYBIN_TYPE_PLUGIN))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_PLAYBIN_IS_PLUGIN_CLASS</NAME>
+#define RYGEL_PLAYBIN_IS_PLUGIN_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_PLAYBIN_TYPE_PLUGIN))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_PLAYBIN_PLUGIN_GET_CLASS</NAME>
+#define RYGEL_PLAYBIN_PLUGIN_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_PLAYBIN_TYPE_PLUGIN, RygelPlaybinPluginClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_PLAYBIN_TYPE_RENDERER</NAME>
+#define RYGEL_PLAYBIN_TYPE_RENDERER (rygel_playbin_renderer_get_type ())
+</MACRO>
+<MACRO>
+<NAME>RYGEL_PLAYBIN_RENDERER</NAME>
+#define RYGEL_PLAYBIN_RENDERER(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), RYGEL_PLAYBIN_TYPE_RENDERER, RygelPlaybinRenderer))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_PLAYBIN_RENDERER_CLASS</NAME>
+#define RYGEL_PLAYBIN_RENDERER_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), RYGEL_PLAYBIN_TYPE_RENDERER, RygelPlaybinRendererClass))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_PLAYBIN_IS_RENDERER</NAME>
+#define RYGEL_PLAYBIN_IS_RENDERER(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), RYGEL_PLAYBIN_TYPE_RENDERER))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_PLAYBIN_IS_RENDERER_CLASS</NAME>
+#define RYGEL_PLAYBIN_IS_RENDERER_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), RYGEL_PLAYBIN_TYPE_RENDERER))
+</MACRO>
+<MACRO>
+<NAME>RYGEL_PLAYBIN_RENDERER_GET_CLASS</NAME>
+#define RYGEL_PLAYBIN_RENDERER_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), RYGEL_PLAYBIN_TYPE_RENDERER, RygelPlaybinRendererClass))
+</MACRO>
+<STRUCT>
+<NAME>RygelMediaPlayerIface</NAME>
+struct _RygelMediaPlayerIface {
+	GTypeInterface parent_iface;
+	gboolean (*seek) (RygelMediaPlayer* self, GstClockTime time);
+	gchar** (*get_protocols) (RygelMediaPlayer* self, int* result_length1);
+	gchar** (*get_mime_types) (RygelMediaPlayer* self, int* result_length1);
+	gchar* (*get_playback_state) (RygelMediaPlayer* self);
+	void (*set_playback_state) (RygelMediaPlayer* self, const gchar* value);
+	gchar* (*get_uri) (RygelMediaPlayer* self);
+	void (*set_uri) (RygelMediaPlayer* self, const gchar* value);
+	gdouble (*get_volume) (RygelMediaPlayer* self);
+	void (*set_volume) (RygelMediaPlayer* self, gdouble value);
+	gint64 (*get_duration) (RygelMediaPlayer* self);
+	gchar* (*get_metadata) (RygelMediaPlayer* self);
+	void (*set_metadata) (RygelMediaPlayer* self, const gchar* value);
+	gchar* (*get_mime_type) (RygelMediaPlayer* self);
+	void (*set_mime_type) (RygelMediaPlayer* self, const gchar* value);
+	gchar* (*get_content_features) (RygelMediaPlayer* self);
+	void (*set_content_features) (RygelMediaPlayer* self, const gchar* value);
+	gint64 (*get_position) (RygelMediaPlayer* self);
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelPlaybinPlayer</NAME>
+struct _RygelPlaybinPlayer {
+	GObject parent_instance;
+	RygelPlaybinPlayerPrivate * priv;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelPlaybinPlayerClass</NAME>
+struct _RygelPlaybinPlayerClass {
+	GObjectClass parent_class;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelMediaRendererPlugin</NAME>
+struct _RygelMediaRendererPlugin {
+	RygelPlugin parent_instance;
+	RygelMediaRendererPluginPrivate * priv;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelMediaRendererPluginClass</NAME>
+struct _RygelMediaRendererPluginClass {
+	RygelPluginClass parent_class;
+	RygelMediaPlayer* (*get_player) (RygelMediaRendererPlugin* self);
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelPlaybinPlugin</NAME>
+struct _RygelPlaybinPlugin {
+	RygelMediaRendererPlugin parent_instance;
+	RygelPlaybinPluginPrivate * priv;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelPlaybinPluginClass</NAME>
+struct _RygelPlaybinPluginClass {
+	RygelMediaRendererPluginClass parent_class;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelPlaybinRenderer</NAME>
+struct _RygelPlaybinRenderer {
+	RygelMediaDevice parent_instance;
+	RygelPlaybinRendererPrivate * priv;
+};
+</STRUCT>
+<STRUCT>
+<NAME>RygelPlaybinRendererClass</NAME>
+struct _RygelPlaybinRendererClass {
+	RygelMediaDeviceClass parent_class;
+};
+</STRUCT>
+<FUNCTION>
+<NAME>rygel_media_player_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_playbin_player_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_playbin_player_new_wrap</NAME>
+<RETURNS>RygelPlaybinPlayer * </RETURNS>
+GstElement* playbin 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_playbin_player_construct_wrap</NAME>
+<RETURNS>RygelPlaybinPlayer * </RETURNS>
+GType object_type, GstElement* playbin 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_playbin_player_get_default</NAME>
+<RETURNS>RygelPlaybinPlayer * </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_playbin_player_get_playbin</NAME>
+<RETURNS>GstElement * </RETURNS>
+RygelPlaybinPlayer* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_renderer_plugin_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_playbin_plugin_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<MACRO>
+<NAME>RYGEL_PLAYBIN_PLUGIN_NAME</NAME>
+#define RYGEL_PLAYBIN_PLUGIN_NAME "Playbin"
+</MACRO>
+<FUNCTION>
+<NAME>rygel_playbin_plugin_new</NAME>
+<RETURNS>RygelPlaybinPlugin * </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_playbin_plugin_construct</NAME>
+<RETURNS>RygelPlaybinPlugin * </RETURNS>
+GType object_type 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_renderer_plugin_new</NAME>
+<RETURNS>RygelMediaRendererPlugin * </RETURNS>
+const gchar* name, const gchar* title, const gchar* description 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_renderer_plugin_construct</NAME>
+<RETURNS>RygelMediaRendererPlugin * </RETURNS>
+GType object_type, const gchar* name, const gchar* title, const gchar* description 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_renderer_plugin_get_player</NAME>
+<RETURNS>RygelMediaPlayer * </RETURNS>
+RygelMediaRendererPlugin* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_player_seek</NAME>
+<RETURNS>gboolean  </RETURNS>
+RygelMediaPlayer* self, GstClockTime time 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_player_get_protocols</NAME>
+<RETURNS>gchar ** </RETURNS>
+RygelMediaPlayer* self, int* result_length1 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_player_get_mime_types</NAME>
+<RETURNS>gchar ** </RETURNS>
+RygelMediaPlayer* self, int* result_length1 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_player_get_playback_state</NAME>
+<RETURNS>gchar * </RETURNS>
+RygelMediaPlayer* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_player_set_playback_state</NAME>
+<RETURNS>void  </RETURNS>
+RygelMediaPlayer* self, const gchar* value 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_player_get_uri</NAME>
+<RETURNS>gchar * </RETURNS>
+RygelMediaPlayer* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_player_set_uri</NAME>
+<RETURNS>void  </RETURNS>
+RygelMediaPlayer* self, const gchar* value 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_player_get_volume</NAME>
+<RETURNS>gdouble  </RETURNS>
+RygelMediaPlayer* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_player_set_volume</NAME>
+<RETURNS>void  </RETURNS>
+RygelMediaPlayer* self, gdouble value 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_player_get_duration</NAME>
+<RETURNS>gint64  </RETURNS>
+RygelMediaPlayer* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_player_get_metadata</NAME>
+<RETURNS>gchar * </RETURNS>
+RygelMediaPlayer* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_player_set_metadata</NAME>
+<RETURNS>void  </RETURNS>
+RygelMediaPlayer* self, const gchar* value 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_player_get_mime_type</NAME>
+<RETURNS>gchar * </RETURNS>
+RygelMediaPlayer* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_player_set_mime_type</NAME>
+<RETURNS>void  </RETURNS>
+RygelMediaPlayer* self, const gchar* value 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_player_get_content_features</NAME>
+<RETURNS>gchar * </RETURNS>
+RygelMediaPlayer* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_player_set_content_features</NAME>
+<RETURNS>void  </RETURNS>
+RygelMediaPlayer* self, const gchar* value 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_player_get_duration_as_str</NAME>
+<RETURNS>gchar * </RETURNS>
+RygelMediaPlayer* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_player_get_position</NAME>
+<RETURNS>gint64  </RETURNS>
+RygelMediaPlayer* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_media_player_get_position_as_str</NAME>
+<RETURNS>gchar * </RETURNS>
+RygelMediaPlayer* self 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_playbin_renderer_get_type</NAME>
+<RETURNS>GType  </RETURNS>
+void 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_playbin_renderer_new</NAME>
+<RETURNS>RygelPlaybinRenderer * </RETURNS>
+const gchar* title 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_playbin_renderer_construct</NAME>
+<RETURNS>RygelPlaybinRenderer * </RETURNS>
+GType object_type, const gchar* title 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_playbin_renderer_new_wrap</NAME>
+<RETURNS>RygelPlaybinRenderer * </RETURNS>
+GstElement* pipeline, const gchar* title 
+</FUNCTION>
+<FUNCTION>
+<NAME>rygel_playbin_renderer_construct_wrap</NAME>
+<RETURNS>RygelPlaybinRenderer * </RETURNS>
+GType object_type, GstElement* pipeline, const gchar* title 
+</FUNCTION>
+<STRUCT>
+<NAME>RygelMediaRendererPluginPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelPlaybinRendererPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelPlaybinPluginPrivate</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelMediaPlayer</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>RygelPlaybinPlayerPrivate</NAME>
+</STRUCT>

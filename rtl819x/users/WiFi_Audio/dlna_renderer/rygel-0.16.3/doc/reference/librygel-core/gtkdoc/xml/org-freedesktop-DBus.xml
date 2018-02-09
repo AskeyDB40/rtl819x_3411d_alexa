@@ -1,0 +1,77 @@
+<?xml version="1.0"?><!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN" "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[<!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">]>
+<refentry id="docs-org-freedesktop-DBus">
+<refmeta>
+<refentrytitle role="top_of_page" id="docs-org-freedesktop-DBus.top_of_page">org.freedesktop.DBus</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+LIBRYGEL-CORE D-Bus API
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>org.freedesktop.DBus</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+<refsynopsisdiv id="docs-org-freedesktop-DBus.synopsis" role="synopsis">
+<title role="synopsis.title">Methods</title>
+<synopsis>
+<link linkend="org-freedesktop-DBus-RequestName">RequestName</link>              ()
+<link linkend="org-freedesktop-DBus-StartServiceByName">StartServiceByName</link>       ()
+<link linkend="org-freedesktop-DBus-ListNames">ListNames</link>                ()
+<link linkend="org-freedesktop-DBus-ListActivatableNames">ListActivatableNames</link>     ()</synopsis></refsynopsisdiv>
+<refsynopsisdiv id="docs-org-freedesktop-DBus.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<synopsis>
+<link linkend="org-freedesktop-DBus-NameOwnerChanged">NameOwnerChanged</link>     ()</synopsis></refsynopsisdiv>
+<refsect1 id="docs-org-freedesktop-DBus.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="docs-org-freedesktop-DBus.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="org-freedesktop-DBus-RequestName" role="function">
+<title>RequestName ()</title>
+<programlisting>
+RequestName              ()
+</programlisting>
+<variablelist role="params"><varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara> location to store the error occuring, or %NULL to ignore </simpara></listitem></varlistentry></variablelist>
+</refsect2>
+<refsect2 id="org-freedesktop-DBus-StartServiceByName" role="function">
+<title>StartServiceByName ()</title>
+<programlisting>
+StartServiceByName       ()
+</programlisting>
+<variablelist role="params"><varlistentry><term><parameter>error</parameter>&#160;:</term>
+<listitem><simpara> location to store the error occuring, or %NULL to ignore </simpara></listitem></varlistentry></variablelist>
+</refsect2>
+<refsect2 id="org-freedesktop-DBus-ListNames" role="function">
+<title>ListNames ()</title>
+<programlisting>
+ListNames                ()
+</programlisting>
+<variablelist role="params"><varlistentry><term><parameter>_callback_</parameter>&#160;:</term>
+<listitem><simpara> callback to call when the request is satisfied </simpara></listitem></varlistentry><varlistentry><term><parameter>_user_data_</parameter>&#160;:</term>
+<listitem><simpara> the data to pass to @_callback_ function </simpara></listitem></varlistentry></variablelist>
+</refsect2>
+<refsect2 id="org-freedesktop-DBus-ListActivatableNames" role="function">
+<title>ListActivatableNames ()</title>
+<programlisting>
+ListActivatableNames     ()
+</programlisting>
+<variablelist role="params"><varlistentry><term><parameter>_callback_</parameter>&#160;:</term>
+<listitem><simpara> callback to call when the request is satisfied </simpara></listitem></varlistentry><varlistentry><term><parameter>_user_data_</parameter>&#160;:</term>
+<listitem><simpara> the data to pass to @_callback_ function </simpara></listitem></varlistentry></variablelist>
+</refsect2></refsect1>
+<refsect1 id="docs-org-freedesktop-DBus.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="org-freedesktop-DBus-NameOwnerChanged" role="signal">
+<title>The <literal>NameOwnerChanged</literal> signal</title>
+<programlisting>
+NameOwnerChanged     ()
+</programlisting>
+<variablelist role="params"><varlistentry><term><parameter>name</parameter>&#160;:</term>
+<listitem><simpara>  </simpara></listitem></varlistentry><varlistentry><term><parameter>old_owner</parameter>&#160;:</term>
+<listitem><simpara>  </simpara></listitem></varlistentry><varlistentry><term><parameter>new_owner</parameter>&#160;:</term>
+<listitem><simpara>  </simpara></listitem></varlistentry></variablelist>
+</refsect2></refsect1></refentry>

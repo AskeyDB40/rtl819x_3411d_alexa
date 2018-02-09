@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><root xmlns="urn:schemas-upnp-org:device-1-0" xmlns:dlna="urn:sc
+hemas-dlna-org:device-1-0"><specVersion><major>1</major><minor>0</minor></specVersion><device><deviceT
+ype>urn:schemas-upnp-org:device:MediaRenderer:1</deviceType><friendlyName>RTKWiFiSP</friendlyName><man
+ufacturer>RTKWiFiSP Developers</manufacturer><manufacturerURL>http://www.realtek.com/RTKWiFiSP</manufa
+cturerURL><modelName>RTKWiFiSP</modelName><modelNumber>0.1</modelNumber><modelURL>http://www.realtek.c
+om/RTKWiFiSP</modelURL><UDN>uuid:4f4aab15-ffe6-49b0-a0b5-611d8a56dd84</UDN><serviceList><service><serv
+iceType>urn:schemas-upnp-org:service:ConnectionManager:1</serviceType><serviceId>urn:upnp-org:serviceI
+d:ConnectionManager</serviceId><SCPDURL>/xml/ConnectionManager.xml</SCPDURL><eventSubURL>/Event/Playbi
+n/RygelSinkConnectionManager</eventSubURL><controlURL>/Control/Playbin/RygelSinkConnectionManager</con
+trolURL></service><service><serviceType>urn:schemas-upnp-org:service:AVTransport:1</serviceType><servi
+ceId>urn:upnp-org:serviceId:AVTransport</serviceId><SCPDURL>/xml/AVTransport2.xml</SCPDURL><eventSubUR
+L>/Event/Playbin/RygelAVTransport</eventSubURL><controlURL>/Control/Playbin/RygelAVTransport</controlU
+RL></service><service><serviceType>urn:schemas-upnp-org:service:RenderingControl:1</serviceType><servi
+ceId>urn:upnp-org:serviceId:RenderingControl</serviceId><SCPDURL>/xml/RenderingControl2.xml</SCPDURL><
+eventSubURL>/Event/Playbin/RygelRenderingControl</eventSubURL><controlURL>/Control/Playbin/RygelRender
+ingControl</controlURL></service></serviceList><iconList><icon><mimetype>image/png</mimetype><width>12
+0</width><height>120</height><depth>32</depth><url>/Playbin-120x120x32.png</url></icon><icon><mimetype
+>image/png</mimetype><width>48</width><height>48</height><depth>32</depth><url>/Playbin-48x48x32.png</
+url></icon><icon><mimetype>image/jpeg</mimetype><width>120</width><height>120</height><depth>24</depth
+><url>/Playbin-120x120x24.jpg</url></icon><icon><mimetype>image/jpeg</mimetype><width>48</width><heigh
+t>48</height><depth>24</depth><url>/Playbin-48x48x24.jpg</url></icon></iconList></device></root>

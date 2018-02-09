@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+]>
+<refentry id="RygelLogHandler">
+<refmeta>
+<refentrytitle role="top_of_page" id="RygelLogHandler.top_of_page">RygelLogHandler</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>
+  LIBRYGEL-CORE Library
+</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>RygelLogHandler</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsynopsisdiv id="RygelLogHandler.synopsis" role="synopsis">
+<title role="synopsis.title">Synopsis</title>
+<anchor id="RygelLogLevel"/>
+<synopsis>#define             <link linkend="RYGEL-TYPE-LOG-HANDLER:CAPS">RYGEL_TYPE_LOG_HANDLER</link>
+<link linkend="RygelLogHandler"><returnvalue>RygelLogHandler</returnvalue></link> *   <link linkend="rygel-log-handler-get-default">rygel_log_handler_get_default</link>       (<parameter><type>void</type></parameter>);
+struct              <link linkend="RygelLogHandler-struct">RygelLogHandler</link>;
+struct              <link linkend="RygelLogHandlerClass">RygelLogHandlerClass</link>;
+enum                <link linkend="RygelLogLevel-enum">RygelLogLevel</link>;
+</synopsis>
+</refsynopsisdiv>
+<refsect1 id="RygelLogHandler.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<synopsis>
+  <link linkend="GObject">GObject</link>
+   +----RygelLogHandler
+</synopsis>
+<synopsis>
+  <link linkend="GEnum">GEnum</link>
+   +----RygelLogLevel
+</synopsis>
+</refsect1>
+
+<refsect1 id="RygelLogHandler.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="RygelLogHandler.details" role="details">
+<title role="details.title">Details</title>
+<refsect2 id="RYGEL-TYPE-LOG-HANDLER:CAPS" role="macro">
+<title>RYGEL_TYPE_LOG_HANDLER</title>
+<indexterm zone="RYGEL-TYPE-LOG-HANDLER:CAPS"><primary>RYGEL_TYPE_LOG_HANDLER</primary></indexterm>
+<programlisting>#define RYGEL_TYPE_LOG_HANDLER (rygel_log_handler_get_type ())
+</programlisting>
+<para>
+The type for <link linkend="RygelLogHandler"><type>RygelLogHandler</type></link>.
+</para></refsect2>
+<refsect2 id="rygel-log-handler-get-default" role="function">
+<title>rygel_log_handler_get_default ()</title>
+<indexterm zone="rygel-log-handler-get-default"><primary>rygel_log_handler_get_default</primary></indexterm>
+<programlisting><link linkend="RygelLogHandler"><returnvalue>RygelLogHandler</returnvalue></link> *   rygel_log_handler_get_default       (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="RygelLogHandler-struct" role="struct">
+<title>struct RygelLogHandler</title>
+<indexterm zone="RygelLogHandler-struct"><primary>RygelLogHandler</primary></indexterm>
+<programlisting>struct RygelLogHandler;</programlisting>
+</refsect2>
+<refsect2 id="RygelLogHandlerClass" role="struct">
+<title>struct RygelLogHandlerClass</title>
+<indexterm zone="RygelLogHandlerClass"><primary>RygelLogHandlerClass</primary></indexterm>
+<programlisting>struct RygelLogHandlerClass {
+	GObjectClass parent_class;
+};
+</programlisting>
+<para>
+The class structure for <link linkend="RYGEL-TYPE-LOG-HANDLER:CAPS"><literal>RYGEL_TYPE_LOG_HANDLER</literal></link>. All the fields in this structure are private and should never be accessed directly.
+</para><variablelist role="struct">
+<varlistentry><term><link linkend="GObjectClass"><type>GObjectClass</type></link>&#160;<structfield id="RygelLogHandlerClass.parent-class">parent_class</structfield>;</term>
+<listitem><simpara>the parent class structure</simpara></listitem>
+</varlistentry>
+</variablelist></refsect2>
+<refsect2 id="RygelLogLevel-enum" role="enum">
+<title>enum RygelLogLevel</title>
+<indexterm zone="RygelLogLevel-enum"><primary>RygelLogLevel</primary></indexterm>
+<programlisting>typedef enum {
+	RYGEL_LOG_LEVEL_INVALID = 0,
+	RYGEL_LOG_LEVEL_CRITICAL = 1,
+	RYGEL_LOG_LEVEL_ERROR = 2,
+	RYGEL_LOG_LEVEL_WARNING = 3,
+	RYGEL_LOG_LEVEL_INFO = 4,
+	RYGEL_LOG_LEVEL_DEFAULT = 4,
+	RYGEL_LOG_LEVEL_DEBUG = 5
+} RygelLogLevel;
+</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>
